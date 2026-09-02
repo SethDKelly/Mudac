@@ -2,7 +2,7 @@
 
 MUDAC is a documentation-first design effort for a web application that supports live student data competitions, with MinneMUDAC as the initial reference context. The product is intended to replace or augment paper-heavy judging operations while preserving fairness, judge independence, accessibility, auditability, and operational resilience.
 
-The design is being developed using Daniel Jackson's **Concept Design** methodology. Product purpose, Concepts, behavioral specifications, and experience architecture are being stabilized before component, persistence, and cloud architecture.
+The design is being developed using Daniel Jackson's **Concept Design** methodology. Product purpose, Concepts, behavioral specifications, and conceptual UX architecture are now stabilized before system, persistence, component, and cloud architecture.
 
 ## Product intent
 
@@ -22,7 +22,7 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Controlled finality** — authoritative state is correctable through Versioning and Provenance instead of silent overwrite.
 - **Authority preservation** — Organizer/system authority does not silently substitute for Judge judgment.
 - **Process integrity over Organizer score control** — live administration coordinates operations without becoming Judge authorship.
-- **Capture-channel parity** — paper and electronic judging share evaluation semantics.
+- **Capture-channel parity** — paper and electronic judging share evaluation semantics and converge on one logical Judge × Encounter evaluation.
 - **Coverage before outcome confidence** — Aggregate and sufficiency of judging remain separate.
 - **Explainable ranking** — Rank is derived and never directly edited.
 - **Calculated is not official** — a Ranking may exist while not ranking-ready; latest corrected calculations do not silently replace an official outcome.
@@ -41,8 +41,7 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Qualified finality language** — `Ready`, `Complete`, `Finalized`, `Current`, `Official`, `Published`, and `Resolved` are qualified by subject whenever ambiguity is possible.
 - **Privacy by lifecycle and representation** — ordinary Judge private-evaluation access ends with live judging, and every view/export/search result applies its target disclosure context.
 - **Recovery without semantic drift** — recovery preserves work and explains known state without silently overwriting newer authority, relabeling context, or creating duplicate evaluation weight.
-- **Operational resilience** — interruption, device/network loss, mixed-mode operation, unfinished Drafts, shared devices, and paper fallback are expected conditions.
-- **Technology independence during design** — AWS/GitHub Actions are boundary conditions; concrete services remain deferred.
+- **Technology follows semantics** — frameworks, databases, offline libraries, APIs, and AWS services must satisfy the Concept/UX contracts rather than redefine them.
 
 ## Accepted concept catalog
 
@@ -67,7 +66,7 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - Provenance
 - Export
 
-Aggregation, Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, and Team Attribute Definitions remain subordinate/derived/policy/process/metadata mechanisms rather than standalone Concepts.
+Aggregation, Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, Team Attribute Definitions, status, recovery, publication, QR/PDF, and offline mode remain subordinate/derived/policy/process/metadata/representation/implementation mechanisms rather than standalone Concepts.
 
 ## Design status
 
@@ -81,22 +80,22 @@ Canonical exit: [`002-I`](docs/002-concept-specification/002-I-phase-consolidati
 
 Compatible refinement: [`002-A1`](docs/002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md).
 
-**Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model: In Progress.**
+**Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model: Complete.**
+
+Canonical exit: [`003-J`](docs/003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md).
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
-| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
-| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](docs/003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
-| 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](docs/003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
-| 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](docs/003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
-| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
-| 003-G | [Paper Capture, Export, Print & Publication Experience](docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | **Complete** |
-| 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | **Complete** |
-| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](docs/003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | **Complete** |
-| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | **Next** |
-
-See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/003-conceptual-ux-architecture/README.md`](docs/003-conceptual-ux-architecture/README.md) for the Phase 003 plan.
+| 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | Complete |
+| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | Complete |
+| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](docs/003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | Complete |
+| 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](docs/003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | Complete |
+| 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](docs/003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | Complete |
+| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | Complete |
+| 003-G | [Paper Capture, Export, Print & Publication Experience](docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | Complete |
+| 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | Complete |
+| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](docs/003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | Complete |
+| 003-J | [Phase 003 Consolidation & UX Architecture Exit Review](docs/003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md) | Complete |
 
 ## Current experience baseline
 
@@ -141,29 +140,44 @@ Finalization
       ↓
 Official Outcome Revision
       ↓
-Export / publication
+Export / publication / history
 ```
 
 Paper capture uses `physical source → unique source reference → capture Draft → verification → authoritative Scorecard Version`. External representation uses `authoritative source Version/Official Outcome Revision + audience/disclosure + purpose → Export → preview/validation → print/distribute/publish`.
 
-Accessibility/resilience applies across those same journeys. Judge work is fully phone-oriented, Organizer density adapts to narrow `summary → exception → detail → action` workflows, and keyboard/nonvisual interaction, large text, QR alternatives, focus management, non-color-only status, and a reasonable future WCAG 2.2 AA target are architectural requirements.
+Accessibility/resilience applies across those same journeys. Judge work is phone-primary; Organizer density adapts to narrow `summary → exception → detail → action` workflows. Keyboard/nonvisual interaction, large text, QR alternatives, non-color-only status, predictable focus, accessible feedback, and a reasonable future WCAG 2.2 AA target are architectural requirements.
 
-003-I now supplies one cross-cutting UX grammar. A subject may have separate workflow, authority, persistence, readiness, eligibility, freshness, severity, disclosure, and publication states. `Draft — complete` does not imply `Scorecard Finalized`; `Ranking ready` does not imply `Official`; `Competition Finalized` does not imply `Published`.
+Status is multidimensional: workflow, authority, persistence confidence, readiness, eligibility, freshness, severity, disclosure, and publication remain distinct. `Draft complete` does not imply `Scorecard Finalized`; `Ranking Ready` does not imply `Official`; `Competition Finalized` does not imply `Published`.
 
-Readiness distinguishes `Ready`, `Needs attention`, `Warning`, and `Optional / Not configured`, while issue consequence is separately Informational, Warning, Blocking, or Critical. Accepted exceptions preserve the original deviation. High-consequence state is confirmed durably rather than through transient optimistic messages.
+Phase 003 exit review found no blocking contradiction, missing core journey, or need for an additional Concept. Known extensions—formal Stage/Round, student application access/feedback, formal scheduling, notifications, advanced Judge calibration, richer public results, and advanced Award governance—remain explicitly deferred.
 
-Disclosure is based on source + Participation/Access + target audience. Judge-safe, Organizer-sensitive, Ceremony-safe, and Public representations remain purpose-specific. Role switches, deep links, search, previews, exports, and publication all obey the same disclosure boundary.
+## Recommended next phase
 
-Recovery messages identify attempted action, known state, uncertainty, preserved work, and the next safe action. Stale state never silently overwrites newer authority, session/device recovery re-establishes current Access, wrong-context recovery never relabels existing work, and paper/electronic traces converge on one logical evaluation.
+**Phase 004 — System, Application, Data & Synchronization Architecture**
+
+Recommended structure:
+
+1. 004-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Design Authority
+2. 004-B — Application Boundaries, Modules, Domain Services & Dependency Architecture
+3. 004-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture
+4. 004-D — Identity, Authentication, Participation, Access & Session Architecture
+5. 004-E — Commands, Queries, API Contracts, Idempotency & Concurrency
+6. 004-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery
+7. 004-G — Export, Paper Capture, Artifact, Publication & External-Representation Architecture
+8. 004-H — Front-End State, Navigation, Component-System & Responsive Interaction Architecture
+9. 004-I — AWS Runtime, Deployment, Security, Observability, Backup & Operational Architecture
+10. 004-J — Phase 004 Consolidation, Threat/Failure Review & Implementation-Readiness Exit
+
+Phase 004 may select concrete mechanisms and technologies, but the lifecycle, authority, evidence, one-logical-Scorecard, Coverage/Ranking, Finalization, disclosure, accessibility, and recovery contracts from Phases 001–003 are architectural inputs rather than implementation suggestions.
 
 ## Repository documentation convention
 
-The repository—not chat history—is the durable design baseline. Each completed design grouping is added to `/docs` and canonical indexes are advanced immediately.
+The repository—not chat history—is the durable design baseline. See [`docs/README.md`](docs/README.md) for the canonical documentation authority.
 
 ## Architecture boundary condition
 
-The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the behavioral and UX architecture rather than drive it.
+The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept and UX architecture rather than drive it.
 
 ## Status
 
-This repository remains in **design**, not production implementation. **003-J — Phase 003 Consolidation & UX Architecture Exit Review is next.**
+This repository remains in **design**, not production implementation. **Phase 003 is complete; Phase 004 system/application architecture is the recommended next design layer.**
