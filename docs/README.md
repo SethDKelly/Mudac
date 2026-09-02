@@ -50,7 +50,7 @@ The canonical Phase 001 exit baseline is **001-H**.
 14. Provenance
 15. Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Result, PDF, QR, and dashboard/portal structures remain intentionally outside the standalone concept catalog.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Result, Reconciliation, Official Outcome, PDF, QR, and dashboard/portal structures remain intentionally outside the standalone concept catalog.
 
 ## Canonical terminology
 
@@ -70,6 +70,7 @@ Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Member
 - **Rank** — derived Division-scoped ordering of rank-eligible Teams.
 - **Award** — competition recognition with explicit scope/selection semantics; may be rank-derived or discretionary.
 - **Official Outcome Revision** — authoritative reconstructible snapshot/projection of the Competition outcome established at Finalization; not a standalone Result Concept.
+- **Export** — stable audience-specific external representation traceable to identified source state; not the source of truth itself.
 - **Alias / Competition Identity** — the Team representation exposed during blinded judging instead of administrative/institutional identity.
 
 ## Phase 002 — Concept Specification, Policy & Synchronization Refinement
@@ -87,8 +88,8 @@ See the [Phase 002 index](002-concept-specification/README.md).
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
 | 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
 | 002-G | [Awards, Reconciliation, Finalization & Official Outcomes](002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md) | **Complete** |
-| 002-H | Export, Print, Operational Continuity & External Representations | **Next** |
-| 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
+| 002-H | [Export, Print, Operational Continuity & External Representations](002-concept-specification/002-H-export-print-operational-continuity-external-representations.md) | **Complete** |
+| 002-I | Phase 002 Consolidation & Specification Exit Review | **Next** |
 
 ## Important cross-phase decisions
 
@@ -115,13 +116,18 @@ See the [Phase 002 index](002-concept-specification/README.md).
 - True ties are never broken by incidental implementation data; without a declared resolver they remain shared.
 - Evaluation Policy becomes authoritative/reconstructible once judging begins because rule changes can alter outcomes without changing Judge evidence.
 - Reconciliation is an Organizer closeout activity, not another Competition lifecycle state or Concept.
-- A computable Ranking is not automatically ranking ready; unresolved evidence, Coverage, policy, correction, tie, or Award issues may still block closeout.
 - Award remains distinct from Rank and carries explicit scope, selection method, eligibility/cardinality, and conferral history.
-- Rank-derived Award candidates are derived from authoritative Ranking and Organizer-confirmed by default; confirmation cannot arbitrarily contradict the rank rule.
-- Finalization is an explicit high-consequence Organizer action gated by reconciled evidence, ranking-ready Divisions, authoritative policy, resolved required Awards, and absence of unresolved outcome-affecting issues.
-- Finalization creates an Official Outcome Revision that preserves the authoritative basis of the declared outcome rather than only setting a boolean flag.
-- Post-finalization corrections preserve prior official outcome revisions and require explicit successor confirmation; official outcomes never silently migrate.
+- Finalization is gated by reconciled evidence, ranking-ready Divisions, authoritative policy, resolved required Awards, and absence of unresolved outcome-affecting issues.
+- Finalization creates an Official Outcome Revision; post-finalization correction preserves prior revisions and requires explicit successor confirmation.
 - Competition Finalization and public publication/disclosure are separate. Finalization does not automatically expose results or restore Judge access.
+- Export represents identified source state and is not itself the source of truth; source changes produce new representations instead of silently changing prior distributed material.
+- Audience/disclosure profiles apply to exported/printed material independently of the broad Access held by the actor generating it.
+- Printable Rubrics and paper Scorecards remain traceable to their authoritative Rubric Version.
+- Every paper evaluation accepted into official capture acquires a unique paper-source reference and is verified against the source before eligibility.
+- QR/barcode possession never grants authority and should avoid unnecessary sensitive payloads.
+- Degraded, mixed, and paper-fallback judging all converge to the same Scorecard and evaluation-policy model.
+- Offline/recovery behavior must remain duplicate-safe, stale-safe, privacy-aware, and truthful about persistence state.
+- Official/public external representations reference an exact Official Outcome Revision; corrected outcomes generate new representations while prior distributed artifacts remain historically identifiable.
 
 ## Known architectural boundary
 
