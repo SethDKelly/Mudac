@@ -64,6 +64,8 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 - **Criterion** — one scored dimension inside a Rubric; subordinate Rubric state rather than a standalone concept.
 - **Scorecard** — one logical Judge evaluation during one Judging Encounter under one exact Rubric version.
 - **Criterion Note / Overall Note** — qualitative private evaluation evidence inside a Scorecard; not hidden numerical inputs.
+- **Version** — one immutable authoritative snapshot within a versioned subject lineage.
+- **Provenance** — the meaningful origin, actor/author authority, source, reason, and transformation history of authoritative Competition records.
 - **Award** — competition recognition that may be rank-derived or Organizer-conferred.
 - **Alias / Competition Identity** — the Team representation exposed during blinded judging instead of administrative/institutional identity.
 
@@ -88,13 +90,22 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 - Scorecard lifecycle supports Draft, Finalized, and Amendment Draft while preserving the prior authoritative version during amendment.
 - Criterion Notes and overall Notes are versioned private evaluation evidence and do not independently alter numeric scoring.
 - Paper and electronic judging share the same Rubric and Scorecard semantics; capture actor/channel differences belong to Provenance.
+- Committed authoritative Versions are immutable historical snapshots; correction creates a successor rather than editing history in place.
+- Draft/autosave changes are not authoritative Versions.
+- Versioning and Provenance remain distinct: Versioning preserves authoritative states; Provenance explains how, why, and through whose authority those states arose.
+- Evaluation author, acting actor, capture actor, and exceptional authorizer are distinct roles where needed.
+- Authority follows the semantic meaning of correction: Organizer authority does not substitute for Judge evaluation authorship, and technical Administrator authority does not substitute for Competition authority.
+- Judge amendment, paper transcription correction, structural correction, and invalidation are distinct operations.
+- Supersession is not invalidation: a new Version replaces a prior state of the same valid subject, while invalidation means evidence should not count for an official purpose.
+- Structural Scorecard identity such as Judge, Team/Encounter, or Rubric basis is never silently rewritten through ordinary amendment.
+- Corrections after Event Completed require stronger scoped authority and reason; post-Finalization correction additionally requires affected-outcome review.
+- Authoritative source changes cause dependent derived values to recompute or become explicitly affected; official post-finalization Awards/outcomes never silently migrate.
 - Missing scores are never interpreted as zero.
 - Evaluation Coverage is distinct from numeric Aggregation.
 - Rankings are Division-scoped by default and derived from authoritative eligible evaluations.
 - Awards are distinct from Rank and may be discretionary.
 - Judges do not see peer evaluations or competition-wide scoring/standings through the judging experience.
 - Printed/exported materials must be traceable to authoritative source/version information.
-- Authoritative state supports controlled correction through Versioning and Provenance rather than silent overwrite.
 
 ## Phase 002 — Concept Specification, Policy & Synchronization Refinement
 
@@ -108,8 +119,8 @@ See the [Phase 002 index](002-concept-specification/README.md).
 | 002-B | [Identity, Participation & Access Specifications](002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
-| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
+| 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
+| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | **Next** |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
@@ -123,6 +134,8 @@ See the [Phase 002 index](002-concept-specification/README.md).
 **002-C:** Panel describes intended Judge grouping while Encounter preserves actual Team evaluation occurrence. Panel membership changes do not rewrite prior Encounters. Encounter start snapshots Alias, Division, Panel context, and starting Judge participants; later recusal/absence/replacement is an explicit adjustment. Effective Encounter participants drive Scorecard obligations. Duplicate initiation must converge on one Encounter, and rejudging is explicit replacement rather than accidental double influence.
 
 **002-D:** Rubric defines one coherent individual-evaluation model and Scorecard records one Judge's application of an exact authoritative Rubric version. Criteria are required scored dimensions in the initial baseline; arbitrary numeric values and implicit N/A are not accepted. One Judge Participation × one Encounter yields one logical Scorecard. Drafts are non-authoritative, Finalized Scorecards are authoritative, and Amendment Drafts leave the prior version authoritative until replacement finalization. Notes are part of the versioned private evaluation record. Intra-Scorecard calculation is deterministic; cross-Judge aggregation remains separate.
+
+**002-E:** authoritative Versions are immutable reconstructible snapshots with one current Version per lineage and no silent stale-base forks. Provenance records meaningful origin, actor/author/source/reason history rather than UI telemetry. Correction authority follows semantic authority: Judges amend judgment, Organizers correct administration and verifiable capture, and Administrators maintain technical integrity without inheriting Competition judgment. Author amendments, transcription corrections, structural corrections, supersession, and invalidation remain distinct. Event Completed and Finalized progressively increase correction governance, and source changes propagate explicit downstream impact rather than silently rewriting official outcomes.
 
 ## Known architectural boundary
 
