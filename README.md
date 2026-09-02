@@ -21,9 +21,9 @@ Students are currently **participants and beneficiaries, not application actors*
 The current design baseline emphasizes:
 
 - **Independent judgment** — each Judge authors an individual Scorecard; Panel and Team scores are derived.
-- **Traceable aggregation** — official results remain decomposable to the Scorecards, rubric criteria, revisions, and policies that produced them.
+- **Traceable aggregation** — official results remain decomposable to the Scorecards, Rubric criteria, revisions, and policies that produced them.
 - **Controlled identity disclosure** — Judges see a Team's competition identity and Division, not administrative institutional identity.
-- **Configurable competition policy** — Divisions, Rubrics, Awards, panel composition, scoring, coverage, and tie behavior should not be hard-coded as MinneMUDAC constants.
+- **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, coverage, and tie behavior should not be hard-coded as MinneMUDAC constants.
 - **Controlled finality** — Rubrics, Scorecards, Awards, and competition outcomes may become authoritative without making legitimate correction impossible; revisions preserve prior state and provenance.
 - **Capture-channel parity** — paper and electronic judging use the same evaluation semantics. Paper is a supported accessibility and continuity path, not a second-class exception.
 - **Mobile-first judging** — the primary Judge workflow is intended for a personal smartphone under live-event conditions.
@@ -33,7 +33,7 @@ The current design baseline emphasizes:
 
 ## Conceptual model
 
-The current provisional accepted concept catalog is:
+Phase 001 accepts the following initial concept catalog.
 
 ### Core competition concepts
 
@@ -56,11 +56,11 @@ The current provisional accepted concept catalog is:
 - Provenance
 - Export
 
-Several important domain ideas are intentionally **not** standalone concepts at this stage. Judge and Organizer are Participation roles; expertise is Judge Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms; PDF and QR are representations; dashboards and portals are UI projections.
+Several important domain ideas are intentionally **not** standalone concepts at this stage. Judge and Organizer are Participation roles; Expertise is Judge Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms; PDF and QR are representations; dashboards and portals are UI projections.
 
-## Current design phase
+## Design status
 
-Phase 001 establishes the conceptual foundation for the competition UI.
+**Phase 001 — Concept Design Foundation is complete.**
 
 | Group | Topic | Status |
 | --- | --- | --- |
@@ -71,15 +71,19 @@ Phase 001 establishes the conceptual foundation for the competition UI.
 | 001-E | Candidate Concept Discovery | Complete |
 | 001-F | Concept Boundaries, Independence & Synchronization Candidates | Complete |
 | 001-G | Experience Principles, Accessibility & Operational Resilience | Complete |
-| 001-H | Phase 001 Consolidation & Initial Concept Catalog | Next |
+| 001-H | Phase 001 Consolidation & Initial Concept Catalog | Complete |
 
-See [`docs/README.md`](docs/README.md) for the canonical documentation index and the individual Phase 001 design records.
+The Phase 001 exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+
+**Phase 002 — Concept Specification, Policy & Synchronization Refinement is next**, beginning with 002-A — Competition, Division, Team & Alias Specifications.
+
+See [`docs/README.md`](docs/README.md) for the canonical documentation index and phase roadmap.
 
 ## Repository documentation convention
 
-Design work is expected to evolve phase by phase. The repository documentation should be updated as each grouping is completed so that the repository—not chat history—becomes the durable design baseline.
+Design work evolves phase by phase. The repository documentation is updated as each grouping is completed so that the repository—not chat history—remains the durable design baseline.
 
-Current documentation lives under:
+Current Phase 001 documentation lives under:
 
 ```text
 docs/
@@ -92,12 +96,13 @@ docs/
     001-E-candidate-concept-discovery.md
     001-F-concept-boundaries-synchronizations.md
     001-G-experience-accessibility-resilience.md
+    001-H-phase-consolidation-initial-concept-catalog.md
 ```
 
 ## Architecture boundary condition
 
-The intended end state is deployment into an **AWS ecosystem** through **GitHub Actions**. This is an accepted constraint, not yet an architecture decision. Specific choices such as hosting model, identity provider, API style, database, local/offline persistence, audit implementation, and AWS services will be selected after the conceptual and experience requirements are sufficiently stable.
+The intended end state is deployment into an **AWS ecosystem** through **GitHub Actions**. This is an accepted constraint, not yet an architecture decision. Specific choices such as hosting model, identity provider, API style, database, local/offline persistence, audit implementation, and AWS services will be selected after the conceptual and behavioral specifications are sufficiently stable.
 
 ## Status
 
-This repository is currently in **conceptual design**. It is not yet an implementation specification or production application.
+This repository remains in **design**, not production implementation. Phase 001 established the conceptual baseline; Phase 002 will turn that baseline into explicit concept, policy, and synchronization specifications before conceptual UX and cloud architecture are finalized.
