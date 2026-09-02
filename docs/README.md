@@ -99,16 +99,16 @@ See the [Phase 003 index](003-conceptual-ux-architecture/README.md).
 | 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
 | 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
 | 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
-| 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | **Next** |
-| 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
+| 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
+| 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | **Next** |
 | 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
 | 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | Planned |
 | 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | Planned |
 | 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
 
-### 003-A authoritative UX baseline
+### Phase 003 authoritative UX baseline through 003-E
 
-The application experience context is:
+The experience context stack is:
 
 ```text
 Identity
@@ -122,25 +122,15 @@ role-specific operational context
 current task / artifact
 ```
 
-Judge and Organizer are explicit experience modes. Judge experience remains narrow around event context, Panel context, current judging, and temporary own judging history. Organizer experience is organized around Competition operating modes—preparation, live operations, reconciliation, outcomes, and external/material workflows. Current/historical state and source authority must remain unambiguous; Organizer situational awareness is exception-first and drillable to source evidence.
+Judge onboarding establishes a trustworthy current Competition Participation, check-in, Panel context, and derived Ready-to-Judge state. The Judge's live evaluation then confirms Team Alias/Division, preserves a Draft through Rubric scoring/Notes, and uses explicit Finalization and separate amendment semantics. Peer scoring, Aggregate, Coverage, Rank, and standings remain hidden from Judges.
 
-### 003-B authoritative UX baseline
+Organizer preparation is a non-linear workspace with derived configuration readiness and separate operational warnings. Source truth, not manual checklist completion, determines readiness. Team attributes and Team Name remain disclosure-controlled metadata, authoritative Rubric/Policy state is explicit, and Judge-safe previews support anonymity review.
 
-Judge onboarding proceeds from event entry through Identity/reverification, current Competition Participation, expertise/profile confirmation, check-in, Organizer-governed Panel context, and derived `Ready to Judge`. QR/link/code possession never grants authority, and successful login is not equivalent to readiness. Dual-role users enter explicit Judge mode, shared devices clear prior context, and ordinary Judge onboarding closes at Event Completed.
+Organizer live operations are exception-first rather than leaderboard-first. Activation is explicit after Ready remains valid. Judge readiness is derived; Panel composition is explainable; permanent Panel changes remain distinct from one-off Encounter substitutions; and current roster edits never rewrite historical Encounter participants. Encounter operations preserve starting participants plus adjustments, distinguish recusal/absence/substitution, prevent accidental duplicates, and preserve cancellation versus invalidation semantics.
 
-### 003-C authoritative UX baseline
+Organizer evaluation monitoring prioritizes obligation status over Judge content. Complete Drafts are not Finalized, uncertain Finalization remains uncertain, amendment Drafts do not make prior finalized evidence missing, and structural attribution errors route to governed correction rather than casual editing. Mixed electronic/paper operation may occur by Panel or Judge, but capture-channel changes never change evaluation weight. Existing electronic Draft plus paper fallback is a duplicate-risk to reconcile, not another vote.
 
-The Judge evaluation experience confirms Team Alias + Division before scoring, maintains persistent context, embeds Rubric guidance/Notes into a phone-first Draft workflow, and separates presentation end from Scorecard Finalization. Draft persistence is automatic-feeling but truthful; unfinished Drafts may be retained when the event must proceed. Finalization is explicit and retry-safe, and amendment is a separate mode with prior authority preserved until successor Finalization. Peer scoring, aggregates, Coverage, Rank, and standings stay hidden.
-
-### 003-D authoritative UX baseline
-
-Organizer preparation is a non-linear workspace spanning Competition details, Divisions, Teams and attributes, Aliases, Rubric, Evaluation Policy, Awards, Judge/Panel preparation, and materials. One cross-workstream readiness assessment distinguishes hard domain blockers from operational warnings.
-
-Readiness is derived from source truth rather than manual checklist completion. Active Team structural coherence, valid Aliases, a usable authoritative Rubric, valid Evaluation Policy, and configured required Award definitions can act as hard gates. Expected-Judge completeness, day-of-event Panel staffing, and material generation are operational readiness conditions unless policy explicitly promotes them into blockers.
-
-Team setup supports bulk intake with preview/validation/exception handling. Team attributes remain typed and disclosure-controlled; Team Name is optional/non-competitive and hidden from Judges by default. Alias generation validates uniqueness and identity safety. Judge-safe preview allows disclosure review without impersonating Judge authority.
-
-Rubric working Drafts remain distinct from the authoritative judging basis. Evaluation Policy and Coverage/tie semantics are visible, understandable configuration rather than hidden constants. Award definitions distinguish rank-derived from discretionary recognition. `Mark Ready` is an explicit Organizer lifecycle transition only after derived gates pass; warnings persist into event-day operation. Ready-state changes trigger reassessment, and readiness-invalidating changes explicitly return the Competition to Draft rather than leaving stale Ready status.
+Organizer authority runs process integrity rather than Judge judgment. Ordinary live views avoid casual Judge Note exposure and do not center live Rank. `completeEvent` explicitly ends live judging and ordinary Judge private access while unresolved permitted evidence/capture issues remain visible for reconciliation; it does not Finalize Competition results.
 
 ## Canonical terminology
 
@@ -165,4 +155,4 @@ Rubric working Drafts remain distinct from the authoritative judging basis. Eval
 
 ## Known architectural boundary
 
-Target deployment remains **GitHub Actions → AWS**. Front-end framework, component architecture, identity provider, API style, persistence model, offline technology, artifact infrastructure, and AWS services remain downstream decisions that must satisfy the Concept and UX architecture rather than redefine it.
+Target deployment remains **GitHub Actions → AWS**. Front-end framework, component architecture, identity provider, API style, persistence model, offline technology, artifact infrastructure, real-time transport, and AWS services remain downstream decisions that must satisfy the Concept and UX architecture rather than redefine it.
