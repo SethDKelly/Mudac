@@ -29,9 +29,10 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Traceable external representation** — printed/downloaded/published material stays tied to identified source state and audience disclosure rules.
 - **Paper continuity** — paper judging is a first-class continuity/accessibility path and converges onto the same Scorecard/evaluation model.
 - **Role-aware experience** — Identity is not a permanent role; Competition Participation determines Judge/Organizer experience context.
+- **Draft-safe judging** — a Judge's evaluation remains one safely preserved non-authoritative Draft until explicit Finalization; amendment is a separate controlled mode afterward.
 - **Mobile-first judging** — the primary Judge workflow targets personal smartphones under live-event conditions.
 - **Privacy by lifecycle** — ordinary Judge access to private Scorecards, Notes, and judging history ends when live judging ends while Organizer-governed records remain retained.
-- **Operational resilience** — interruption, connectivity loss, device loss, mixed-mode judging, and paper fallback are expected operating conditions.
+- **Operational resilience** — interruption, connectivity loss, device loss, mixed-mode judging, unfinished Drafts, and paper fallback are expected operating conditions.
 - **Technology independence during design** — AWS and GitHub Actions are boundary conditions; specific infrastructure remains deferred.
 
 ## Accepted concept catalog
@@ -77,8 +78,8 @@ A compatible post-exit refinement, [`002-A1`](docs/002-concept-specification/002
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
 | 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
-| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
+| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](docs/003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
+| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | **Next** |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
 | 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
@@ -139,7 +140,7 @@ role-specific operational context
 current task / artifact
 ```
 
-Judge onboarding now follows:
+Judge onboarding follows:
 
 ```text
 entry mechanism
@@ -159,11 +160,35 @@ Organizer-governed Panel context
 Ready to Judge
 ```
 
-A successful login is not equivalent to readiness. QR/link/code possession does not grant authority, returning Judges get new current-event Participation, Panel codes do not silently reassign Judges, and dual-role people enter explicit Judge mode with Judge-safe disclosure. Shared devices clear prior Judge context and ordinary onboarding closes at Event Completed.
+The live Judge evaluation loop now follows:
 
-Judge and Organizer are explicit experience modes rather than one blended navigation tree. Judge experience is deliberately narrow and event-task oriented. Organizer experience follows Competition operating modes—preparation, live operations, reconciliation, outcomes, and materials/external representations—while retaining contextual access to underlying domain collections.
+```text
+Ready to Judge
+      ↓
+resolve / confirm current Encounter
+      ↓
+confirm Team Alias + Division
+      ↓
+Scorecard Draft
+      ↓
+score + Notes
+      ↓
+review
+      ↓
+explicit Finalize
+      ↓
+authoritative Scorecard Version
+      ↓
+return to Panel work
+```
 
-Historical/current state, role context, and Competition context must remain unambiguous. Organizer operational summaries are exception-first and drill down to source evidence. Deep links or QR codes never bypass Participation/Access, navigation visibility never substitutes for authorization, and context changes cannot silently discard meaningful working state.
+A successful login is not equivalent to readiness. QR/link/code possession does not grant authority, returning Judges get new current-event Participation, Panel codes do not silently reassign Judges, and dual-role people enter explicit Judge mode with Judge-safe disclosure.
+
+During evaluation, Team context remains explicit, Alias stays canonical, Rubric guidance and bounded scoring remain close to the Judge's task, and Draft persistence must be truthful. Presentation completion never finalizes a Scorecard. An unfinished Draft may be deliberately carried forward if the live schedule must proceed, while remaining visibly incomplete. Finalization is explicit and retry-safe; peer scores, aggregates, Coverage, Rank, and standings remain hidden.
+
+After Finalization, ordinary fields are read-only and amendment is a separate mode that leaves the prior Version authoritative until a successor is committed. Structural identity errors are escalated rather than edited as judgment. Shared-device handoff, context switching, degraded connectivity, and paper fallback cannot silently discard Draft work or create duplicate evaluation weight. Ordinary Judge history/access ends at Event Completed.
+
+Organizer experience follows Competition operating modes—preparation, live operations, reconciliation, outcomes, and materials/external representations—while retaining contextual access to underlying domain collections. Historical/current state, role context, and Competition context must remain unambiguous. Organizer operational summaries are exception-first and drill down to source evidence.
 
 ## Repository documentation convention
 
@@ -175,4 +200,4 @@ The intended deployment boundary remains **GitHub Actions → AWS**. Front-end f
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 003 is translating the completed Concept specifications into actor-centered UX and information architecture; 003-C is next.
+This repository remains in **design**, not production implementation. Phase 003 is translating the completed Concept specifications into actor-centered UX and information architecture; **003-D is next**.
