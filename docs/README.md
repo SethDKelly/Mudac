@@ -2,7 +2,7 @@
 
 This directory is the canonical design authority for the MUDAC competition application.
 
-The project is being designed using Daniel Jackson's **Concept Design** methodology. Documentation should therefore preserve the distinction between concepts, concept-owned state/actions, synchronizations, invariants, derived mechanisms, competition policy, UI representations, and implementation mechanisms.
+The project is being designed using Daniel Jackson's **Concept Design** methodology. Documentation preserves the distinction between concepts, concept-owned state/actions, synchronizations, invariants, derived mechanisms, competition policy, UI representations, and implementation mechanisms.
 
 The documentation is intentionally written before implementation architecture. AWS hosting and GitHub Actions deployment are known boundary conditions, but specific technologies remain deferred until concept, lifecycle, evaluation, privacy, resilience, and experience requirements are stable.
 
@@ -50,7 +50,7 @@ The canonical Phase 001 exit baseline is **001-H**.
 14. Provenance
 15. Export
 
-Important domain ideas intentionally outside the concept catalog include Criterion, Note, Expertise, Panel Membership, Aggregation, Evaluation Coverage, Rank, Result, PDF, QR, and UI dashboard/portal structures.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Result, PDF, QR, and dashboard/portal structures remain intentionally outside the standalone concept catalog.
 
 ## Canonical terminology
 
@@ -60,52 +60,16 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 - **Judge Participation** — a person's Competition-scoped participation as a Judge; not a permanent global user type.
 - **Expertise** — Judge Participation metadata such as Academic, Business, or Technical; not an access role.
 - **Composition capacity** — the perspective a Judge membership satisfies for a specific Panel; distinct from Expertise.
-- **Rubric** — the structured evaluation definition governing valid Criterion responses and one Judge's Scorecard calculation.
-- **Criterion** — one scored dimension inside a Rubric; subordinate Rubric state rather than a standalone concept.
-- **Scorecard** — one logical Judge evaluation during one Judging Encounter under one exact Rubric version.
-- **Criterion Note / Overall Note** — qualitative private evaluation evidence inside a Scorecard; not hidden numerical inputs.
+- **Rubric** — the evaluation definition governing valid Criterion responses and one Judge's Scorecard calculation.
+- **Criterion** — one scored dimension inside a Rubric; subordinate Rubric state.
+- **Scorecard** — one logical Judge evaluation during one Judging Encounter under one exact Rubric Version.
 - **Version** — one immutable authoritative snapshot within a versioned subject lineage.
-- **Provenance** — the meaningful origin, actor/author authority, source, reason, and transformation history of authoritative Competition records.
+- **Provenance** — meaningful origin, actor/author authority, source, reason, and transformation history of authoritative records.
+- **Coverage** — derived sufficiency of qualifying evaluation; distinct from Aggregate.
+- **Aggregate** — derived numerical combination of eligible authoritative Scorecards.
+- **Rank** — derived Division-scoped ordering of rank-eligible Teams.
 - **Award** — competition recognition that may be rank-derived or Organizer-conferred.
 - **Alias / Competition Identity** — the Team representation exposed during blinded judging instead of administrative/institutional identity.
-
-## Important cross-phase decisions
-
-- A Team belongs to exactly one active Division; changes are corrective rather than ordinary lifecycle behavior.
-- Competition lifecycle is `Draft → Ready → Active → Event Completed → Finalized`.
-- Judge and Organizer are Participation roles; Access is capability-, scope-, lifecycle-, and resource-sensitive.
-- Returning Judges may reuse/reverify Identity but receive new Competition Participation.
-- Ordinary Judge access to private Scorecards, Notes, and judging history expires at Event Completed without deleting records.
-- Panel Membership is current/historical Panel state; it does not itself create Scorecard authority.
-- Expertise and Panel composition capacity are distinct.
-- A Judging Encounter joins one Team and one Panel, snapshots Team Alias/Division and starting participant context, and records later participant adjustments explicitly.
-- Actual effective Encounter participants—not nominal Panel membership—determine ordinary Scorecard obligations.
-- Recusal/absence are never represented as zero or unexplained missing Scorecards.
-- Same Panel + same Team normally yields at most one valid Encounter per Competition; rejudging uses an explicit replacement Encounter.
-- Encounter lifecycle is `Prepared → Open → Complete`, with Cancelled and Invalidated exceptional paths.
-- Every authoritative Scorecard references one exact authoritative Rubric version; existing Scorecards never silently rebind to later Rubrics.
-- Scored Criteria are required in the initial model; missing, zero, and N/A remain distinct and N/A has no implicit semantics.
-- A Rubric uses one coherent scoring model; accidental double weighting is prohibited.
-- Each participating Judge authors at most one logical Scorecard per Encounter; revisions do not create additional evaluation weight.
-- Scorecard lifecycle supports Draft, Finalized, and Amendment Draft while preserving the prior authoritative version during amendment.
-- Criterion Notes and overall Notes are versioned private evaluation evidence and do not independently alter numeric scoring.
-- Paper and electronic judging share the same Rubric and Scorecard semantics; capture actor/channel differences belong to Provenance.
-- Committed authoritative Versions are immutable historical snapshots; correction creates a successor rather than editing history in place.
-- Draft/autosave changes are not authoritative Versions.
-- Versioning and Provenance remain distinct: Versioning preserves authoritative states; Provenance explains how, why, and through whose authority those states arose.
-- Evaluation author, acting actor, capture actor, and exceptional authorizer are distinct roles where needed.
-- Authority follows the semantic meaning of correction: Organizer authority does not substitute for Judge evaluation authorship, and technical Administrator authority does not substitute for Competition authority.
-- Judge amendment, paper transcription correction, structural correction, and invalidation are distinct operations.
-- Supersession is not invalidation: a new Version replaces a prior state of the same valid subject, while invalidation means evidence should not count for an official purpose.
-- Structural Scorecard identity such as Judge, Team/Encounter, or Rubric basis is never silently rewritten through ordinary amendment.
-- Corrections after Event Completed require stronger scoped authority and reason; post-Finalization correction additionally requires affected-outcome review.
-- Authoritative source changes cause dependent derived values to recompute or become explicitly affected; official post-finalization Awards/outcomes never silently migrate.
-- Missing scores are never interpreted as zero.
-- Evaluation Coverage is distinct from numeric Aggregation.
-- Rankings are Division-scoped by default and derived from authoritative eligible evaluations.
-- Awards are distinct from Rank and may be discretionary.
-- Judges do not see peer evaluations or competition-wide scoring/standings through the judging experience.
-- Printed/exported materials must be traceable to authoritative source/version information.
 
 ## Phase 002 — Concept Specification, Policy & Synchronization Refinement
 
@@ -120,23 +84,37 @@ See the [Phase 002 index](002-concept-specification/README.md).
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
-| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | **Next** |
-| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
+| 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
+| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | **Next** |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
-### Authoritative Phase 002 refinements so far
+## Important cross-phase decisions
 
-**002-A:** structural incompleteness is tolerated only during Draft; before Ready each non-withdrawn Team has exactly one active Division and unique active Alias; Division/Alias corrections preserve stable Team identity and history.
-
-**002-B:** Identity, Participation, and Access remain independent; Access is capability-oriented; Event Completed ends ordinary Judge private-data access; post-event correction uses narrow temporary Access; Administrator system authority does not automatically confer Competition authority.
-
-**002-C:** Panel describes intended Judge grouping while Encounter preserves actual Team evaluation occurrence. Panel membership changes do not rewrite prior Encounters. Encounter start snapshots Alias, Division, Panel context, and starting Judge participants; later recusal/absence/replacement is an explicit adjustment. Effective Encounter participants drive Scorecard obligations. Duplicate initiation must converge on one Encounter, and rejudging is explicit replacement rather than accidental double influence.
-
-**002-D:** Rubric defines one coherent individual-evaluation model and Scorecard records one Judge's application of an exact authoritative Rubric version. Criteria are required scored dimensions in the initial baseline; arbitrary numeric values and implicit N/A are not accepted. One Judge Participation × one Encounter yields one logical Scorecard. Drafts are non-authoritative, Finalized Scorecards are authoritative, and Amendment Drafts leave the prior version authoritative until replacement finalization. Notes are part of the versioned private evaluation record. Intra-Scorecard calculation is deterministic; cross-Judge aggregation remains separate.
-
-**002-E:** authoritative Versions are immutable reconstructible snapshots with one current Version per lineage and no silent stale-base forks. Provenance records meaningful origin, actor/author/source/reason history rather than UI telemetry. Correction authority follows semantic authority: Judges amend judgment, Organizers correct administration and verifiable capture, and Administrators maintain technical integrity without inheriting Competition judgment. Author amendments, transcription corrections, structural corrections, supersession, and invalidation remain distinct. Event Completed and Finalized progressively increase correction governance, and source changes propagate explicit downstream impact rather than silently rewriting official outcomes.
+- Competition lifecycle is `Draft → Ready → Active → Event Completed → Finalized`.
+- A Team belongs to exactly one active Division; Division/Alias correction preserves stable Team identity and historical judging context.
+- Judge and Organizer are Participation roles; Access is capability-, scope-, lifecycle-, and resource-sensitive.
+- Ordinary Judge private evaluation access expires at Event Completed without deleting records.
+- Panel describes intended Judge grouping; Encounter preserves the actual judging occurrence and effective participants.
+- Recusal/absence is never represented as zero or unexplained missing evaluation.
+- Every authoritative Scorecard uses one exact Rubric Version and one Judge × Encounter logical identity.
+- Scored Criteria are required in the initial model; missing, zero, and N/A remain distinct.
+- Scorecard Drafts are non-authoritative; finalized Versions are authoritative; Amendment Drafts leave the prior Version authoritative until committed.
+- Notes are versioned private evaluation evidence and do not secretly alter numeric scoring.
+- Paper and electronic judging share evaluation semantics while Provenance preserves authorship/capture distinctions.
+- Committed Versions are immutable historical snapshots; correction creates successor state or explicit invalidation/replacement rather than rewriting history.
+- Correction authority follows semantic authority: Organizer/Administrator authority does not silently substitute for Judge judgment.
+- Coverage and Aggregate are separate derived dimensions.
+- The default Team Aggregate gives equal weight to eligible authoritative individual Judge Scorecards; Encounter means are analytical only.
+- Missing evaluations are never zero; accepted Coverage exceptions never fabricate scores or hide actual shortfall.
+- There is no hidden Judge normalization or automatic outlier removal in the baseline.
+- Scorecards are pooled only across aggregation-compatible Rubric Versions; scoring-semantic changes are incompatible by default and are not implicitly rescaled.
+- Rank is Division-scoped and derived rather than editable.
+- Ranking comparison precision is explicit and distinct from display rounding.
+- True ties are never broken by incidental implementation data; without a declared resolver they remain shared.
+- Evaluation Policy itself becomes authoritative/reconstructible once judging begins because changing aggregation, Coverage, compatibility, precision, or tie rules can change outcomes without changing Judge evidence.
+- Official post-Finalization outcomes never silently migrate after source or policy correction.
 
 ## Known architectural boundary
 
-Target deployment is **GitHub Actions → AWS**. The architecture phase must later choose services and topology that satisfy the conceptual requirements rather than reshape the concepts around a preferred AWS service.
+Target deployment is **GitHub Actions → AWS**. Architecture must later choose services and topology that satisfy these specifications rather than reshape the domain around a preferred AWS service.
