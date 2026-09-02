@@ -60,43 +60,46 @@ Several important domain ideas are intentionally **not** standalone concepts at 
 
 ## Design status
 
-**Phase 001 — Concept Design Foundation is complete.**
+**Phase 001 — Concept Design Foundation is complete.** Its canonical exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+
+**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.** It is logically divided into nine groups so structural concepts, access, judging, evaluation, history, numerical policy, official outcomes, and continuity can be specified without collapsing their boundaries.
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 001-A | Competition Purpose, Product Boundary & Success | Complete |
-| 001-B | Actors, Roles, Authorities & Participation | Complete |
-| 001-C | Competition Lifecycle & Critical Experience Scenarios | Complete |
-| 001-D | Judging Model, Anonymity & Evaluation Semantics | Complete |
-| 001-E | Candidate Concept Discovery | Complete |
-| 001-F | Concept Boundaries, Independence & Synchronization Candidates | Complete |
-| 001-G | Experience Principles, Accessibility & Operational Resilience | Complete |
-| 001-H | Phase 001 Consolidation & Initial Concept Catalog | Complete |
+| 002-A | [Competition, Division, Team & Alias Specifications](docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
+| 002-B | Identity, Participation & Access Specifications | **Next** |
+| 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
+| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
+| 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
+| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
+| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
+| 002-H | Export, Print, Operational Continuity & External Representations | Planned |
+| 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
-The Phase 001 exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 specification plan.
 
-**Phase 002 — Concept Specification, Policy & Synchronization Refinement is next**, beginning with 002-A — Competition, Division, Team & Alias Specifications.
+## Current structural specification
 
-See [`docs/README.md`](docs/README.md) for the canonical documentation index and phase roadmap.
+002-A standardizes the Competition lifecycle as:
+
+```text
+Draft → Ready → Active → Event Completed → Finalized
+```
+
+A Team may be temporarily incomplete while the Competition is Draft, but before Ready every non-withdrawn Team must have exactly one active Division and one unique active Alias. Division changes are corrections, Team identity remains stable across Division/Alias corrections, aliases already used operationally are not recycled to other Teams, and later Judging Encounters should retain the alias representation used when the judging occurred.
 
 ## Repository documentation convention
 
 Design work evolves phase by phase. The repository documentation is updated as each grouping is completed so that the repository—not chat history—remains the durable design baseline.
 
-Current Phase 001 documentation lives under:
-
 ```text
 docs/
   README.md
   001-concept-design/
-    001-A-purpose-boundary-success.md
-    001-B-actors-roles-authorities-participation.md
-    001-C-lifecycle-critical-scenarios.md
-    001-D-judging-anonymity-evaluation-semantics.md
-    001-E-candidate-concept-discovery.md
-    001-F-concept-boundaries-synchronizations.md
-    001-G-experience-accessibility-resilience.md
-    001-H-phase-consolidation-initial-concept-catalog.md
+    ... Phase 001 records ...
+  002-concept-specification/
+    README.md
+    002-A-competition-division-team-alias-specifications.md
 ```
 
 ## Architecture boundary condition
@@ -105,4 +108,4 @@ The intended end state is deployment into an **AWS ecosystem** through **GitHub 
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 001 established the conceptual baseline; Phase 002 will turn that baseline into explicit concept, policy, and synchronization specifications before conceptual UX and cloud architecture are finalized.
+This repository remains in **design**, not production implementation. Phase 001 established the conceptual baseline; Phase 002 is turning that baseline into explicit concept, policy, and synchronization specifications before conceptual UX and cloud architecture are finalized.
