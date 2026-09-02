@@ -92,23 +92,32 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 
 ## Phase 002 — Concept Specification, Policy & Synchronization Refinement
 
-**Status: Next**
+**Status: In Progress**
 
-Recommended groupings established by the Phase 001 exit review:
+See the [Phase 002 index](002-concept-specification/README.md) for the specification template and phase-level rationale.
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 002-A | Competition, Division, Team & Alias Specifications | Next |
-| 002-B | Identity, Participation & Access Specifications | Planned |
-| 002-C | Panel & Judging Encounter Specifications | Planned |
-| 002-D | Rubric & Scorecard Specifications | Planned |
-| 002-E | Versioning & Provenance Specifications | Planned |
+| 002-A | [Competition, Division, Team & Alias Specifications](002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
+| 002-B | Identity, Participation & Access Specifications | **Next** |
+| 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
+| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
+| 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
-| 002-G | Award Specification & Competition Finalization | Planned |
-| 002-H | Export, Print & Operational Continuity Specification | Planned |
+| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
+| 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
-Phase 002 should remain implementation-neutral and turn the Phase 001 catalog into explicit behavioral specifications and synchronization contracts.
+### 002-A refinements now authoritative
+
+- Competition lifecycle: `Draft → Ready → Active → Event Completed → Finalized`.
+- `Historical` is not a separate business lifecycle state; reconciliation is activity between Event Completed and Finalized.
+- Temporary incomplete Team setup is permitted only during Competition Draft.
+- Before Ready, every non-withdrawn Team must have exactly one active Division and one unique active Alias.
+- Division changes are explicit corrections and never rewrite completed Scorecards.
+- Division is explicit state and is never inferred from Alias text.
+- Alias values already used operationally are never reassigned to another Team in the same Competition.
+- Historical Judging Encounters should preserve the Alias presented when judging occurred.
 
 ## Known architectural boundary
 
