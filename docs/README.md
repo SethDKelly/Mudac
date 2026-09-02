@@ -100,13 +100,13 @@ See the [Phase 003 index](003-conceptual-ux-architecture/README.md).
 | 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
 | 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
 | 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
-| 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | **Next** |
-| 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
+| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
+| 003-G | Paper Capture, Export, Print & Publication Experience | **Next** |
 | 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | Planned |
 | 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | Planned |
 | 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
 
-### Phase 003 authoritative UX baseline through 003-E
+### Phase 003 authoritative UX baseline through 003-F
 
 The experience context stack is:
 
@@ -122,15 +122,21 @@ role-specific operational context
 current task / artifact
 ```
 
-Judge onboarding establishes a trustworthy current Competition Participation, check-in, Panel context, and derived Ready-to-Judge state. The Judge's live evaluation then confirms Team Alias/Division, preserves a Draft through Rubric scoring/Notes, and uses explicit Finalization and separate amendment semantics. Peer scoring, Aggregate, Coverage, Rank, and standings remain hidden from Judges.
+Judge onboarding establishes a trustworthy current Competition Participation, check-in, Panel context, and derived Ready-to-Judge state. The Judge's live evaluation confirms Team Alias/Division, preserves a Draft through Rubric scoring/Notes, and uses explicit Finalization and separate amendment semantics. Peer scoring, Aggregate, Coverage, Rank, and standings remain hidden from Judges.
 
 Organizer preparation is a non-linear workspace with derived configuration readiness and separate operational warnings. Source truth, not manual checklist completion, determines readiness. Team attributes and Team Name remain disclosure-controlled metadata, authoritative Rubric/Policy state is explicit, and Judge-safe previews support anonymity review.
 
-Organizer live operations are exception-first rather than leaderboard-first. Activation is explicit after Ready remains valid. Judge readiness is derived; Panel composition is explainable; permanent Panel changes remain distinct from one-off Encounter substitutions; and current roster edits never rewrite historical Encounter participants. Encounter operations preserve starting participants plus adjustments, distinguish recusal/absence/substitution, prevent accidental duplicates, and preserve cancellation versus invalidation semantics.
+Organizer live operations are exception-first rather than leaderboard-first. Activation is explicit after Ready remains valid. Judge readiness is derived; Panel composition is explainable; permanent Panel changes remain distinct from one-off Encounter substitutions; current roster edits never rewrite historical Encounter participants. Encounter operations preserve starting participants plus adjustments and keep evaluation obligation state explicit. Organizer authority runs process integrity rather than Judge judgment.
 
-Organizer evaluation monitoring prioritizes obligation status over Judge content. Complete Drafts are not Finalized, uncertain Finalization remains uncertain, amendment Drafts do not make prior finalized evidence missing, and structural attribution errors route to governed correction rather than casual editing. Mixed electronic/paper operation may occur by Panel or Judge, but capture-channel changes never change evaluation weight. Existing electronic Draft plus paper fallback is a duplicate-risk to reconcile, not another vote.
+After Event Completed, reconciliation is an Organizer work mode rather than a new Competition lifecycle state. The UX begins with unresolved evidence, paper/verification state, amendments, invalidation/replacement, Coverage, Rubric compatibility, Division corrections, ties, and Award readiness rather than a leaderboard. Reconciliation work items remain projections from source truth.
 
-Organizer authority runs process integrity rather than Judge judgment. Ordinary live views avoid casual Judge Note exposure and do not center live Rank. `completeEvent` explicitly ends live judging and ordinary Judge private access while unresolved permitted evidence/capture issues remain visible for reconciliation; it does not Finalize Competition results.
+Coverage remains visually and semantically separate from Aggregate. Accepted Coverage exceptions retain the actual shortfall. Ranking may be continuously calculable without being ranking-ready, ranking readiness is derived, Rank is never directly editable, and every ordering can drill to eligible Scorecards, Criteria, Rubric Version, Coverage/exceptions, Provenance, and Evaluation Policy. True ties use only predeclared resolution semantics.
+
+Rank-derived Awards follow ready Rankings; discretionary Awards remain explicit human decisions. Required/optional status and recipient cardinality remain visible. Ranking changes make earlier Award confirmations affected rather than silently migrating recipients.
+
+Finalization readiness is derived from reconciled evidence, Coverage, ranking-ready Divisions, authoritative policy, resolved required Awards, and absence of unresolved outcome-affecting issues. Finalization is explicit, high consequence, and all-or-nothing in domain meaning. It creates an inspectable Official Outcome Revision but does not publish results.
+
+Post-finalization correction uses an exceptional workflow. Latest corrected calculated outcomes remain distinct from the current official outcome until a successor Official Outcome Revision and any affected Award corrections are explicitly confirmed. Prior official revisions remain historical, and replacement/publication impact is handed to 003-G.
 
 ## Canonical terminology
 
