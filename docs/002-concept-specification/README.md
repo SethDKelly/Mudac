@@ -30,8 +30,8 @@ Splitting further would create artificial micro-phases around subordinate state 
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias Specifications](002-A-competition-division-team-alias-specifications.md) | **Complete** |
 | 002-B | [Identity, Participation & Access Specifications](002-B-identity-participation-access-specifications.md) | **Complete** |
-| 002-C | Panel, Membership & Judging Encounter Specifications | **Next** |
-| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
+| 002-C | [Panel, Membership & Judging Encounter Specifications](002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
+| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | **Next** |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
@@ -65,7 +65,7 @@ Draft → Ready → Active → Event Completed → Finalized
 
 `Historical` is a retained presentation/status rather than another business lifecycle state, and reconciliation is the Organizer activity between Event Completed and Finalized rather than a required lifecycle state.
 
-Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters should snapshot the Alias presented at judging time.
+Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters snapshot the Alias presented at judging time.
 
 ## 002-B human-security baseline
 
@@ -82,6 +82,29 @@ Judge and Organizer are Competition-scoped Participation roles rather than perma
 Access is capability-oriented and may depend on role, Competition lifecycle, resource ownership, sensitivity, scope, purpose, and time. Event Completed ends ordinary Judge access to private Scorecards, Notes, and judging history without deleting the historical records. Legitimate post-event correction uses narrow temporary Access after Judge re-verification rather than restoring broad historical Judge access.
 
 Dual-role identities are supported conceptually through separate Participation/Access contexts. Shared or loaner devices must clear the prior Judge's context, lost-device recovery revokes the compromised session rather than creating duplicate Participation, and system Administrator authority does not automatically imply Competition decision authority.
+
+## 002-C judging-topology baseline
+
+002-C formalizes the distinction:
+
+```text
+Panel              → who is intended to judge together
+Judging Encounter  → who actually evaluated this Team on this occurrence
+```
+
+Panel Membership remains subordinate Panel state and retains historical start/end periods so Judges can be reassigned without rewriting prior judging. Expertise and assigned Panel composition capacity are distinct; by default one Judge satisfies at most one required capacity on a Panel. Panel-size and perspective requirements are configurable Competition policy rather than hard-coded Academic/Business/Technical roles.
+
+Encounter lifecycle is:
+
+```text
+Prepared → Open → Complete
+```
+
+with `Cancelled` for a prepared occurrence that never meaningfully began and `Invalidated` for an occurrence that happened but must not contribute officially. Legitimate rejudging creates an explicit replacement Encounter rather than overwriting or duplicating the original.
+
+When an Encounter opens it snapshots the Team Alias, Division, Panel context, and starting Judge participants. Later absence, recusal, or replacement is recorded as an explicit participant adjustment; the effective participant set drives Scorecard obligations. Recusal is never a zero or an unexplained missing Scorecard. A Judge who already created an authoritative Scorecard cannot have that evaluation silently removed through participant adjustment.
+
+The same Panel-Team pair normally produces at most one valid Encounter per Competition, and duplicate/retried initiation must converge on one logical Encounter. Presentation completion is distinct from Encounter completion: an Encounter remains Open until all effective evaluation obligations are satisfied or explicitly excused.
 
 ## Phase exit target
 
