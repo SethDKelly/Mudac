@@ -28,8 +28,8 @@ Splitting further would create artificial micro-phases around subordinate state 
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 002-A | Competition, Division, Team & Alias Specifications | **In Progress** |
-| 002-B | Identity, Participation & Access Specifications | Planned |
+| 002-A | [Competition, Division, Team & Alias Specifications](002-A-competition-division-team-alias-specifications.md) | **Complete** |
+| 002-B | Identity, Participation & Access Specifications | **Next** |
 | 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
 | 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
@@ -54,6 +54,18 @@ Where applicable, each accepted concept should be specified using:
 - Explicit non-responsibilities
 
 Subordinate state and derived mechanisms should be specified only to the degree required to make concept behavior unambiguous; they should not be promoted into concepts without new behavioral evidence.
+
+## 002-A structural baseline
+
+002-A standardizes the Competition lifecycle as:
+
+```text
+Draft → Ready → Active → Event Completed → Finalized
+```
+
+`Historical` is a retained presentation/status rather than another business lifecycle state, and reconciliation is the Organizer activity between Event Completed and Finalized rather than a required lifecycle state.
+
+It also establishes that Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters should snapshot the Alias presented at judging time.
 
 ## Phase exit target
 
