@@ -32,8 +32,8 @@ Nine groups provide enough separation to keep concept families singular while al
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
 | 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
-| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | **Next** |
-| 002-H | Export, Print, Operational Continuity & External Representations | Planned |
+| 002-G | [Awards, Reconciliation, Finalization & Official Outcomes](002-G-awards-reconciliation-finalization-official-outcomes.md) | **Complete** |
+| 002-H | Export, Print, Operational Continuity & External Representations | **Next** |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
 ## Specification template
@@ -102,34 +102,51 @@ Committed Versions are immutable reconstructible snapshots. Draft edits are not 
 
 ## 002-F derived-evaluation baseline
 
-002-F formalizes the chain:
+002-F formalizes:
 
 ```text
 Authoritative Scorecards
         ↓
 Evidence Eligibility
         ↓
-┌──────────────┬──────────────┐
-│              │              │
-▼              ▼              │
-Coverage    Aggregate          │
-│              │              │
-└───────┬──────┘              │
-        ▼                     │
- Rank Eligibility             │
-        ↓                     │
- Division Ranking             │
+Coverage + Aggregate
+        ↓
+Rank Eligibility
+        ↓
+Division Ranking
 ```
 
-Coverage and Aggregate remain independent. A Team may have a valid numerical Aggregate while still lacking enough qualifying judging to be rank-eligible. Coverage may consider minimum valid Encounters, minimum eligible Scorecards, and composition exceptions; accepted exceptions preserve the actual shortfall rather than fabricating scores.
+Coverage and Aggregate remain independent. A Team may have a valid Aggregate while lacking sufficient qualifying judging. The canonical initial aggregation basis gives every eligible authoritative Judge Scorecard equal weight; Encounter means remain analytical only. Missing evaluation is never zero, Coverage exceptions never fabricate scores, Judge normalization is absent, and statistical outliers are not automatically excluded.
 
-The canonical initial aggregation basis gives every eligible authoritative Judge Scorecard equal weight. Encounter means are analytical projections and are not averaged again. Missing evaluations are never zero. There is no hidden Judge normalization or automatic outlier removal; unusual scores may be flagged for review but remain eligible unless a real error is established through correction/invalidation.
+Scorecards are pooled only across aggregation-compatible Rubric Versions; scoring-semantic revisions are incompatible by default and are not implicitly rescaled. Ranking is Division-scoped and derived, comparison precision is explicit and distinct from display rounding, and ties are never broken by incidental implementation data. Evaluation Policy itself becomes authoritative/reconstructible once judging begins because rule changes can alter outcomes without changing Judge evidence.
 
-Scorecards may be pooled only when their Rubric Versions are aggregation-compatible. Scoring-semantic Rubric changes are incompatible by default and no implicit rescaling occurs. Ranking is Division-scoped, derived rather than editable, and uses explicit comparison precision distinct from display rounding. Ties are never broken by incidental implementation data; with no declared resolver, a true tie remains shared.
+## 002-G official-outcome baseline
 
-Evaluation Policy is authoritative Competition configuration and becomes another Versioning/Provenance consumer once judging begins. Changing aggregation, Coverage, compatibility, precision, or tie semantics after evidence exists is an outcome-affecting policy change that must remain reconstructible and trigger derived-result reconciliation.
+002-G formalizes the closeout chain:
 
-The current baseline assumes one Competition-level judging/ranking scope per Division. A future formal advancement/finalist workflow may justify adding a Stage/Round scope without changing individual Scorecard semantics.
+```text
+Event Completed
+      ↓
+Organizer Reconciliation
+      ↓
+Ranking Ready
+      ↓
+Award Decisions
+      ↓
+Finalization Ready
+      ↓
+Competition Finalized
+      ↓
+Official Outcome Revision
+```
+
+Reconciliation remains an Organizer activity rather than a new lifecycle state or Concept. A computable Ranking is not automatically ranking ready: unresolved paper capture, Coverage, invalidation/replacement, Rubric compatibility, material corrections, Division assignment, tie resolution, and Award decisions may still block official closeout.
+
+Award remains distinct from Rank and supports rank-derived and discretionary selection. Rank-derived candidate recipients are derived from authoritative Ranking but are Organizer-confirmed by default; confirmation cannot arbitrarily deviate from the declared ranking rule. Award scope, recipient cardinality, required/optional closeout status, conferral, correction, and revocation remain explicit and attributable.
+
+Finalization is a high-consequence Organizer action gated by reconciled authoritative evidence, ranking-ready Divisions, resolved required Awards, authoritative Evaluation Policy, and no unresolved outcome-affecting issue. Finalization creates an **Official Outcome Revision** rather than merely a boolean flag. The revision is a reconstructible authoritative snapshot/projection of policy basis, resolved Coverage/exceptions, Division Rankings, Award conferrals, and sufficient source-version references.
+
+Post-finalization correction preserves the prior Official Outcome Revision. Corrected evidence generates affected/provisional results, Organizer reconciliation, Award correction where necessary, and an explicitly confirmed successor Official Outcome Revision. Competition may remain lifecycle-Finalized while an exceptional official-outcome correction is pending. Official status is also separate from publication: Finalization does not automatically disclose results publicly or restore Judge access.
 
 ## Phase exit target
 
@@ -139,7 +156,7 @@ Phase 002 should end with:
 - explicit synchronization contracts across concepts;
 - a defined evaluation/coverage/ranking policy model;
 - clear correction and authority-preservation semantics;
-- defined Competition finalization gates;
+- defined Competition finalization gates and official-outcome history;
 - print/paper continuity specifications;
 - unresolved implementation choices isolated from behavioral requirements;
 - enough stability to begin conceptual UX architecture and later AWS/system architecture without redefining core domain behavior.
