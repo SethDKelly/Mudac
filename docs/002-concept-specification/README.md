@@ -32,8 +32,8 @@ Splitting further would create artificial micro-phases around subordinate state 
 | 002-B | [Identity, Participation & Access Specifications](002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
-| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
+| 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
+| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | **Next** |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
@@ -133,6 +133,23 @@ Draft → Finalized
 One Judge Participation × one Encounter yields at most one logical Scorecard. Drafts do not contribute to official aggregation. Finalization creates authoritative judging evidence; an Amendment Draft does not displace the prior authoritative version until finalized. Scorecard author, Encounter, Team basis, and Rubric basis cannot be silently changed by amendment.
 
 Criterion Notes and overall Notes are private evaluation evidence, do not independently alter numeric scoring, and are versioned with the Scorecard. Paper and electronic Scorecards share identical evaluation semantics; capture actor/channel differences belong to Provenance. Intra-Scorecard calculation is deterministic from Criterion responses plus the exact Rubric; cross-Judge aggregation remains for 002-F.
+
+## 002-E authoritative-history baseline
+
+002-E formalizes:
+
+```text
+Versioning  → what authoritative states existed
+Provenance  → how, why, and through whose authority they arose
+```
+
+Committed Versions are immutable reconstructible snapshots. Draft/autosave activity is not version history. A lineage has one current authoritative Version, prior Versions remain historical, and stale-base successor commits must not silently fork authoritative history.
+
+Correction authority follows the meaning of the change. A Judge may amend their own evaluation judgment when Access permits. An Organizer may correct Competition-administrative facts and verified paper transcription errors, but Organizer authority does not substitute for Judge evaluation authorship. Technical Administrator authority likewise does not substitute for Competition or Judge semantic authority.
+
+002-E distinguishes working edits, author amendments, transcription corrections, structural corrections, and outcome-affecting administrative corrections. Supersession and invalidation are distinct: a newer Version supersedes an older state of the same logical subject, while invalidation means evidence should no longer count for an official purpose. Structural identity errors such as wrong Team, Judge, Encounter, or Rubric basis are not silently repaired by ordinary Scorecard amendment.
+
+Event Completed raises correction requirements: post-event Judge amendments require Organizer-authorized temporary scoped Access, Judge re-verification, and a human-readable reason. Competition Finalized raises them further and requires explicit post-finalization governance plus affected-outcome review. Source changes cause dependent derived values to refresh or become marked affected; official Awards/outcomes never silently migrate after finalization.
 
 ## Phase exit target
 
