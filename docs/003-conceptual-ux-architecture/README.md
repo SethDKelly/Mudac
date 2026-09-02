@@ -14,9 +14,9 @@ Phase 003 is still conceptual design. It may define experience regions, navigati
 
 ## Why ten subgroupings
 
-Ten groups provide enough separation to keep the two primary actor experiences and the cross-cutting operational concerns coherent:
+Ten groups provide enough separation to keep the two primary actor experiences and cross-cutting operational concerns coherent:
 
-1. establish the overall experience architecture, role modes, Competition context, and navigation model;
+1. establish overall experience architecture, role modes, Competition context, and navigation;
 2. design low-friction Judge arrival/participation/Panel onboarding;
 3. design the core Judge Encounter, Rubric, Scorecard, finalization, and amendment experience;
 4. design Organizer Competition setup and readiness;
@@ -27,14 +27,14 @@ Ten groups provide enough separation to keep the two primary actor experiences a
 9. consolidate cross-cutting status language, feedback, disclosure/privacy, confirmation, and recovery patterns;
 10. reconcile the full experience architecture and determine readiness for visual/system architecture.
 
-Combining these further would mix very different cognitive modes such as live Judge scoring and Organizer reconciliation. Splitting them further would create micro-phases around individual screens or controls before the information architecture is stable.
+Combining these further would mix very different cognitive modes such as live Judge scoring and Organizer reconciliation. Splitting them further would create screen/control micro-phases before the information architecture is stable.
 
 ## Phase plan
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 003-A | Experience Architecture, Role Modes & Navigation Model | **Next** |
-| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | Planned |
+| 003-A | [Experience Architecture, Role Modes & Navigation Model](003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
+| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | **Next** |
 | 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | Planned |
 | 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
@@ -46,7 +46,7 @@ Combining these further would mix very different cognitive modes such as live Ju
 
 ## Phase 002 input contract
 
-Phase 003 treats the following Phase 002 semantics as authoritative inputs rather than UX choices:
+Phase 003 treats the following semantics as authoritative inputs rather than UX choices:
 
 - Competition lifecycle is `Draft → Ready → Active → Event Completed → Finalized`.
 - Identity, Participation, Access, and semantic authority remain distinct.
@@ -59,7 +59,7 @@ Phase 003 treats the following Phase 002 semantics as authoritative inputs rathe
 - Draft, Finalized, and Amendment Draft have distinct authority semantics.
 - Judge Notes are private evaluation evidence.
 - ordinary Judge private evaluation Access expires at Event Completed.
-- Versioning preserves authoritative states; Provenance explains their origin/authority.
+- Versioning preserves authoritative states; Provenance explains origin/authority.
 - Coverage and Aggregate are independent.
 - Ranking is Division-scoped and derived.
 - Awards are distinct from Rank.
@@ -69,6 +69,30 @@ Phase 003 treats the following Phase 002 semantics as authoritative inputs rathe
 - operational fallback may change capture channel but never evaluation meaning/weight.
 
 The UX may explain or expose these semantics differently by role, but it must not redefine them.
+
+## 003-A baseline
+
+003-A establishes the experience context stack:
+
+```text
+Identity
+   ↓
+Participation / role mode
+   ↓
+Competition
+   ↓
+role-specific operational context
+   ↓
+current task / artifact
+```
+
+Judge and Organizer are explicit experience modes rather than one blended navigation tree. If an Identity has multiple Participations, switching mode is deliberate and changes disclosure posture as well as available tasks.
+
+Judge experience remains narrow and task-oriented around event context, Panel context, current judging, and temporary own judging history. Organizer experience is organized around Competition operating modes: preparation, live operations, reconciliation, outcomes, and materials/external representations. Domain collections remain available contextually but do not define the whole application as one navigation item per Concept.
+
+Competition lifecycle changes which work is foregrounded. Historical Finalized Competitions default to inspect/trace/export, while exceptional correction is intentionally distinct from ordinary editing. Current state, historical snapshots, authoritative Versions, and superseded Versions must never be visually conflated.
+
+Organizer situational awareness should be exception-first and drillable to source evidence. Competition and role context remain unambiguous for consequential work; deep links or QR codes still resolve Identity/Participation/Access before disclosure. Navigation visibility never substitutes for Access enforcement, and changing context must not silently destroy meaningful working state.
 
 ## Phase exit target
 
