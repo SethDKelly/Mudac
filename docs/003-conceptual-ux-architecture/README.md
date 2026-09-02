@@ -36,8 +36,8 @@ Ten groups provide enough separation to keep the two primary actor experiences a
 | 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
 | 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
 | 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
-| 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | **Next** |
-| 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
+| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
+| 003-G | Paper Capture, Export, Print & Publication Experience | **Next** |
 | 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | Planned |
 | 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | Planned |
 | 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
@@ -122,13 +122,41 @@ Organizer Complete Event
 Event Completed / reconciliation handoff
 ```
 
-The default operational surface prioritizes Judge readiness, Panel composition, Encounter state, Scorecard obligation status, recusal/substitution, uncertain Finalization, paper fallback, and other process-integrity exceptions rather than live Ranking. Judge readiness remains derived. Permanent Panel reassignment and one-off Encounter substitution remain distinct, and current roster edits never rewrite historical Encounter participation or silently change already-open Encounter obligations.
+The default operational surface prioritizes Judge readiness, Panel composition, Encounter state, Scorecard obligation status, recusal/substitution, uncertain Finalization, paper fallback, and other process-integrity exceptions rather than live Ranking. Organizer authority coordinates process integrity without becoming Judge authorship. Mixed paper/electronic operation preserves one logical Judge × Encounter evaluation, and unresolved permitted work carries into reconciliation visibly.
 
-Encounter operations preserve starting participants plus explicit adjustments. Recusal is non-zero, finalized evidence cannot disappear through roster edits, duplicate Encounters are prevented, and cancellation remains distinct from invalidation. Organizer evaluation views prioritize status before score content: `Draft — incomplete`, `Draft — complete`, `Finalized`, `Amendment Draft`, `Finalization uncertain`, and `Paper fallback / capture pending` are operationally distinct.
+## 003-F baseline
 
-Organizer authority coordinates the process rather than replacing Judge judgment. Organizers may prompt, reassign, record valid absence/recusal, manage Encounter state, support recovery, capture paper evidence, and use governed correction/invalidation paths, but cannot casually edit or Finalize an electronic Judge evaluation as though they authored it. Judge Notes and detailed score content remain deeper investigation material rather than default room-status data.
+003-F defines the post-event closeout experience as:
 
-Mixed electronic/paper operation is permitted by Panel or Judge. Existing electronic Draft plus paper fallback is treated as duplicate-risk to reconcile, not two votes. Live exception alerts drill to source state, consequence, and legitimate action; acknowledging a warning does not erase the underlying condition. `completeEvent` explicitly ends live judging and ordinary Judge private access without implying that paper capture, Coverage, Rank, Awards, or Finalization are complete. Unresolved permitted items carry into reconciliation visibly.
+```text
+Event Completed
+      ↓
+reconcile authoritative evidence
+      ↓
+resolve Coverage / eligibility
+      ↓
+review Division Ranking readiness
+      ↓
+resolve declared tie requirements
+      ↓
+confirm / confer Awards
+      ↓
+Finalization readiness
+      ↓
+Organizer Finalize
+      ↓
+Official Outcome Revision
+```
+
+Reconciliation remains an Organizer work mode, not a new Competition state, and reconciliation items are projections from underlying source state rather than generic manually-resolved tasks. Evidence authority is resolved before outcome confidence is implied: uncertain Finalization, paper verification, Scorecard amendments, Encounter invalidation/replacement, electronic/paper duplication, and exclusion reasons remain inspectable.
+
+Coverage remains a first-class dimension separate from Aggregate. Coverage exceptions preserve the actual shortfall and require explicit fairness authority; accepted exceptions never fabricate Scorecards. Current corrected Division may differ from historical presented Division, Rubric incompatibility is not silently normalized, and withdrawn Teams retain history while rank eligibility remains explicit.
+
+Ranking may be continuously calculated while a Division remains `not ranking ready`. Ranking readiness is derived from resolved source state, Rank remains non-editable, and every displayed ordering can drill to eligible Scorecards, Criterion responses, Rubric Version, Coverage/exceptions, Provenance, and Evaluation Policy. True ties remain ties unless a predeclared resolver applies; post-hoc tiebreak selection is prohibited.
+
+Rank-derived Awards follow ready Ranking and Organizer confirmation cannot contradict their declared rule. Discretionary Awards remain visibly human decisions, Award cardinality controls tie handling, and required versus optional Awards remain explicit. A source correction that changes Rank makes prior Award confirmation affected/stale rather than silently migrating the recipient.
+
+Finalization readiness is derived from reconciled authoritative state. Finalization is explicit, high consequence, all-or-nothing in domain meaning, and creates an inspectable Official Outcome Revision without publishing results. Post-finalization correction uses an exceptional path in which latest corrected calculations remain distinct from the current official outcome until a successor Official Outcome Revision and any affected Award corrections are explicitly confirmed. Prior official revisions remain historical and external-representation impacts are handed to 003-G.
 
 ## Team attribute refinement
 
