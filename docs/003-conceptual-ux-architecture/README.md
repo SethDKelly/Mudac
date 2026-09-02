@@ -34,8 +34,8 @@ Combining these further would mix very different cognitive modes such as live Ju
 | Group | Topic | Status |
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
-| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | **Next** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | Planned |
+| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
+| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
 | 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
@@ -52,6 +52,8 @@ Phase 003 treats the following semantics as authoritative inputs rather than UX 
 - Identity, Participation, Access, and semantic authority remain distinct.
 - Judge and Organizer are Participation roles.
 - Team administrative identity and Judge-facing Alias are distinct.
+- Team supports extensible descriptive attributes; `teamName` is a standard optional attribute with no competitive effect by default.
+- Team attributes have explicit disclosure posture; student-created Team names are not Judge-visible by default while blinded judging is active.
 - Panel current membership and historical Encounter participation are distinct.
 - Effective Encounter participation creates Scorecard obligations.
 - One Judge Participation × one Encounter yields one logical Scorecard.
@@ -93,6 +95,38 @@ Judge experience remains narrow and task-oriented around event context, Panel co
 Competition lifecycle changes which work is foregrounded. Historical Finalized Competitions default to inspect/trace/export, while exceptional correction is intentionally distinct from ordinary editing. Current state, historical snapshots, authoritative Versions, and superseded Versions must never be visually conflated.
 
 Organizer situational awareness should be exception-first and drillable to source evidence. Competition and role context remain unambiguous for consequential work; deep links or QR codes still resolve Identity/Participation/Access before disclosure. Navigation visibility never substitutes for Access enforcement, and changing context must not silently destroy meaningful working state.
+
+## 003-B baseline
+
+003-B defines Judge onboarding as a state-driven event journey:
+
+```text
+entry mechanism
+    ↓
+Competition context
+    ↓
+Identity establish/reverify
+    ↓
+current Judge Participation
+    ↓
+current-event expertise/profile
+    ↓
+check-in
+    ↓
+Organizer-governed Panel context
+    ↓
+derived Ready-to-Judge state
+```
+
+QRs, links, event codes, and Panel codes are context/navigation accelerators rather than authority. Returning Judges reuse/reverify Identity but receive a new Competition Participation and reconfirm current-event expertise. Check-in is distinct from registration or authentication, and device changes recover the same Participation rather than creating another Judge.
+
+Panel membership remains Organizer-governed by default. A Panel QR/code may confirm or request an intended Panel context but cannot silently self-reassign a Judge. `Ready to Judge` is derived from verified Identity, valid Participation, check-in, required current-event profile information, resolved Panel membership, active Access, and Competition lifecycle; a successful login alone is insufficient.
+
+Dual-role people enter an explicit Judge mode with Judge-safe disclosure rather than a blended Organizer/Judge interface. Shared devices clear prior Judge context. Ordinary onboarding closes at Event Completed; post-event amendments use the narrow correction-access path rather than reopening the event experience. QR/camera use always has an accessible alternative, and degraded connectivity must never cause the UI to falsely claim authoritative Identity/check-in/Access state.
+
+## Team attribute refinement
+
+The Phase 002 refinement [002-A1 — Team Extensible Attributes & Team Name](../002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md) makes descriptive Team metadata extensible without changing the Concept catalog. `teamName` is optional, need not be unique, is distinct from Alias, and has no scoring/ranking effect by default. Judge-facing display is disabled by default during blinded judging because student-created names may inadvertently reveal identity.
 
 ## Phase exit target
 
