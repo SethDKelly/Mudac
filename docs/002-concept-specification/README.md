@@ -29,8 +29,8 @@ Splitting further would create artificial micro-phases around subordinate state 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias Specifications](002-A-competition-division-team-alias-specifications.md) | **Complete** |
-| 002-B | Identity, Participation & Access Specifications | **Next** |
-| 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
+| 002-B | [Identity, Participation & Access Specifications](002-B-identity-participation-access-specifications.md) | **Complete** |
+| 002-C | Panel, Membership & Judging Encounter Specifications | **Next** |
 | 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
@@ -65,7 +65,23 @@ Draft → Ready → Active → Event Completed → Finalized
 
 `Historical` is a retained presentation/status rather than another business lifecycle state, and reconciliation is the Organizer activity between Event Completed and Finalized rather than a required lifecycle state.
 
-It also establishes that Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters should snapshot the Alias presented at judging time.
+Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters should snapshot the Alias presented at judging time.
+
+## 002-B human-security baseline
+
+002-B formalizes three independent concerns:
+
+```text
+Identity       → who this person is
+Participation  → why/capacity in this Competition
+Access         → what this context may do or see now
+```
+
+Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Administrator remains primarily system-scoped authority. Returning Judges may reuse/reverify Identity but always receive a new Competition Participation. Expertise is Participation state and never independently grants authority.
+
+Access is capability-oriented and may depend on role, Competition lifecycle, resource ownership, sensitivity, scope, purpose, and time. Event Completed ends ordinary Judge access to private Scorecards, Notes, and judging history without deleting the historical records. Legitimate post-event correction uses narrow temporary Access after Judge re-verification rather than restoring broad historical Judge access.
+
+Dual-role identities are supported conceptually through separate Participation/Access contexts. Shared or loaner devices must clear the prior Judge's context, lost-device recovery revokes the compromised session rather than creating duplicate Participation, and system Administrator authority does not automatically imply Competition decision authority.
 
 ## Phase exit target
 
