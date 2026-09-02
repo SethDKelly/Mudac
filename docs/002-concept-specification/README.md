@@ -33,8 +33,8 @@ Nine groups provide enough separation to keep concept families singular while al
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
 | 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
 | 002-G | [Awards, Reconciliation, Finalization & Official Outcomes](002-G-awards-reconciliation-finalization-official-outcomes.md) | **Complete** |
-| 002-H | Export, Print, Operational Continuity & External Representations | **Next** |
-| 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
+| 002-H | [Export, Print, Operational Continuity & External Representations](002-H-export-print-operational-continuity-external-representations.md) | **Complete** |
+| 002-I | Phase 002 Consolidation & Specification Exit Review | **Next** |
 
 ## Specification template
 
@@ -122,7 +122,7 @@ Scorecards are pooled only across aggregation-compatible Rubric Versions; scorin
 
 ## 002-G official-outcome baseline
 
-002-G formalizes the closeout chain:
+002-G formalizes:
 
 ```text
 Event Completed
@@ -140,23 +140,45 @@ Competition Finalized
 Official Outcome Revision
 ```
 
-Reconciliation remains an Organizer activity rather than a new lifecycle state or Concept. A computable Ranking is not automatically ranking ready: unresolved paper capture, Coverage, invalidation/replacement, Rubric compatibility, material corrections, Division assignment, tie resolution, and Award decisions may still block official closeout.
+Reconciliation remains Organizer activity rather than a new lifecycle state or Concept. A computable Ranking is not automatically ranking ready: unresolved paper capture, Coverage, invalidation/replacement, Rubric compatibility, material corrections, Division assignment, tie resolution, and Award decisions may block official closeout.
 
-Award remains distinct from Rank and supports rank-derived and discretionary selection. Rank-derived candidate recipients are derived from authoritative Ranking but are Organizer-confirmed by default; confirmation cannot arbitrarily deviate from the declared ranking rule. Award scope, recipient cardinality, required/optional closeout status, conferral, correction, and revocation remain explicit and attributable.
+Award remains distinct from Rank and supports rank-derived and discretionary selection. Rank-derived candidates follow authoritative Ranking and are Organizer-confirmed by default without permitting arbitrary deviation from the declared rule. Award scope, recipient cardinality, required/optional status, conferral, correction, and revocation remain explicit.
 
-Finalization is a high-consequence Organizer action gated by reconciled authoritative evidence, ranking-ready Divisions, resolved required Awards, authoritative Evaluation Policy, and no unresolved outcome-affecting issue. Finalization creates an **Official Outcome Revision** rather than merely a boolean flag. The revision is a reconstructible authoritative snapshot/projection of policy basis, resolved Coverage/exceptions, Division Rankings, Award conferrals, and sufficient source-version references.
+Finalization is a high-consequence Organizer action gated by reconciled authoritative evidence, ranking-ready Divisions, resolved required Awards, authoritative Evaluation Policy, and no unresolved outcome-affecting issue. Finalization creates an Official Outcome Revision: a reconstructible authoritative snapshot/projection of policy basis, resolved Coverage/exceptions, Division Rankings, Award conferrals, and sufficient source-version references.
 
-Post-finalization correction preserves the prior Official Outcome Revision. Corrected evidence generates affected/provisional results, Organizer reconciliation, Award correction where necessary, and an explicitly confirmed successor Official Outcome Revision. Competition may remain lifecycle-Finalized while an exceptional official-outcome correction is pending. Official status is also separate from publication: Finalization does not automatically disclose results publicly or restore Judge access.
+Post-finalization correction preserves prior Official Outcome Revisions and requires explicit successor confirmation. Competition may remain lifecycle-Finalized while an exceptional outcome correction is pending. Official status is separate from publication: Finalization does not automatically disclose results publicly or restore Judge access.
+
+## 002-H external-representation and continuity baseline
+
+002-H specifies Export and closes the paper/operational-continuity loop:
+
+```text
+authoritative or explicitly identified source state
+        ↓
+      Export
+        ↓
+stable audience-safe external representation
+```
+
+Export remains distinct from Versioning and does not become the source of truth. Consequential representations remain traceable to the source authority/version they represented. A later source change generates a new representation rather than silently changing the historical meaning of previously distributed material. Disclosure profiles enforce least disclosure even when the Organizer generating the material has broader Access.
+
+Printable Rubrics identify their exact Rubric Version. Paper Scorecards share identical evaluation semantics with electronic Scorecards and every physical evaluation accepted for official capture acquires a unique paper-source reference. Organizer transcription preserves Judge authorship and capture provenance. Paper data must be checked against its physical source before it becomes officially eligible evidence; second-person verification is optional unless Competition policy requires it.
+
+QR/barcode mechanisms may accelerate navigation or source identification but do not grant authority. Sensitive identity information should not be embedded unnecessarily in visible or machine-readable representations.
+
+Operational continuity follows a controlled progression from normal electronic operation through degraded/mixed operation and paper fallback to recovery/reconciliation. Connectivity state must be communicated truthfully, retries must be duplicate-safe, stale/offline Drafts cannot silently replace newer authoritative state, shared devices must clear prior Judge context, and recovery cannot create multiple official Scorecards for one Judge × Encounter obligation. Capture channel changes the operational path, never scoring semantics or evaluation weight.
+
+Official/public representations reference one exact Official Outcome Revision. Finalization and publication remain separate, private Judge evidence is excluded from public publication by default, and corrected official outcomes generate new external representations while older distributed material remains historically identifiable as superseded.
 
 ## Phase exit target
 
 Phase 002 should end with:
 
-- explicit behavioral contracts for all accepted concepts;
+- explicit behavioral contracts for all 15 accepted concepts;
 - explicit synchronization contracts across concepts;
 - a defined evaluation/coverage/ranking policy model;
 - clear correction and authority-preservation semantics;
 - defined Competition finalization gates and official-outcome history;
-- print/paper continuity specifications;
+- print/paper continuity and external-representation specifications;
 - unresolved implementation choices isolated from behavioral requirements;
-- enough stability to begin conceptual UX architecture and later AWS/system architecture without redefining core domain behavior.
+- enough stability to begin conceptual UX/application architecture and later AWS/system architecture without redefining core domain behavior.
