@@ -99,8 +99,8 @@ See the [Phase 002 index](002-concept-specification/README.md) for the specifica
 | Group | Topic | Status |
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias Specifications](002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
-| 002-B | Identity, Participation & Access Specifications | **Next** |
-| 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
+| 002-B | [Identity, Participation & Access Specifications](002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
+| 002-C | Panel, Membership & Judging Encounter Specifications | **Next** |
 | 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
@@ -118,6 +118,19 @@ See the [Phase 002 index](002-concept-specification/README.md) for the specifica
 - Division is explicit state and is never inferred from Alias text.
 - Alias values already used operationally are never reassigned to another Team in the same Competition.
 - Historical Judging Encounters should preserve the Alias presented when judging occurred.
+
+### 002-B refinements now authoritative
+
+- Identity, Participation, and Access are separate concepts: continuity, event-scoped capacity, and current capability/disclosure respectively.
+- Judge and Organizer are Competition-scoped Participation roles; Administrator remains primarily system-scoped authority.
+- Returning Judges may reuse/reverify Identity but receive a new Participation for each Competition.
+- Expertise is Judge Participation state, may be plural, and does not independently grant authority.
+- Access is capability-oriented rather than a single broad role grant and may depend on Competition state, ownership, resource sensitivity, scope, purpose, and time.
+- Event Completed ends ordinary Judge access to private Scorecards, Notes, and judging history while retaining the historical records.
+- Post-event Judge correction uses narrow temporary Access after re-verification rather than reopening broad historical access.
+- Dual-role identities remain separable by Participation/Access context.
+- Shared-device and lost-device behavior must revoke/clear the prior access context without creating duplicate Identity or Participation.
+- System Administrator authority does not automatically confer Competition decision authority; exceptional break-glass access must be bounded and attributable.
 
 ## Known architectural boundary
 
