@@ -10,11 +10,14 @@ Student Teams analyze a supplied dataset and present findings and methodology to
 
 Primary human roles are Organizer, Judge, and technical Administrator. Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently Competition participants and beneficiaries, not application actors.
 
+Teams may carry extensible descriptive attributes. The initial standard optional attribute is `teamName`, allowing students to choose a memorable Team name without changing the Team's stable identity, Division, Alias, evaluation, or ranking semantics. Student-created Team names are not Judge-visible by default during blinded judging because they may inadvertently reveal identity; Alias remains the Judge-facing Competition Identity.
+
 ## Core design principles
 
 - **Independent judgment** — each Judge authors an individual Scorecard; Panel and Team results are derived.
 - **Traceable aggregation** — official outcomes remain decomposable to eligible Scorecards, Rubric Criteria, Versions, Provenance, and policy.
-- **Controlled identity disclosure** — Judges see Team Alias and Division rather than institutional identity.
+- **Controlled identity disclosure** — Judges see Team Alias and Division rather than institutional identity; optional Team names remain separately disclosure-controlled.
+- **Extensible Team metadata without hidden rules** — descriptive Team attributes can grow without automatically gaining scoring, ranking, or access semantics.
 - **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, Coverage, precision, and tie behavior are not hard-coded constants.
 - **Controlled finality** — authoritative state may be corrected through explicit Versioning and Provenance rather than silent overwrite.
 - **Authority preservation** — correction rights follow the meaning of the underlying fact; Organizer or technical authority does not silently replace Judge judgment.
@@ -54,7 +57,7 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - Provenance
 - Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, and Official Outcome Revision remain subordinate, derived, policy, process, or projection mechanisms rather than standalone Concepts.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, and Team Attribute Definitions remain subordinate, derived, policy, process, metadata, or projection mechanisms rather than standalone Concepts.
 
 ## Design status
 
@@ -66,15 +69,15 @@ Canonical exit: [`001-H`](docs/001-concept-design/001-H-phase-consolidation-init
 
 Canonical exit: [`002-I`](docs/002-concept-specification/002-I-phase-consolidation-specification-exit-review.md).
 
-All 15 accepted Concepts now have sufficient behavioral specification for the next design layer. Phase 002 also defines Evaluation Policy, Coverage/Aggregation/Ranking semantics, controlled correction, Awards/Finalization, Official Outcome revision history, Export, paper/electronic parity, and operational continuity.
+A compatible post-exit refinement, [`002-A1`](docs/002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md), makes Team descriptive attributes explicitly extensible and introduces optional `teamName` while preserving the Phase 002 concept catalog and exit result.
 
 **Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model: In Progress.**
 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
-| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | **Next** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | Planned |
+| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
+| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
 | 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
@@ -136,6 +139,28 @@ role-specific operational context
 current task / artifact
 ```
 
+Judge onboarding now follows:
+
+```text
+entry mechanism
+    ↓
+Competition context
+    ↓
+Identity establish/reverify
+    ↓
+current Judge Participation
+    ↓
+current-event expertise/profile
+    ↓
+check-in
+    ↓
+Organizer-governed Panel context
+    ↓
+Ready to Judge
+```
+
+A successful login is not equivalent to readiness. QR/link/code possession does not grant authority, returning Judges get new current-event Participation, Panel codes do not silently reassign Judges, and dual-role people enter explicit Judge mode with Judge-safe disclosure. Shared devices clear prior Judge context and ordinary onboarding closes at Event Completed.
+
 Judge and Organizer are explicit experience modes rather than one blended navigation tree. Judge experience is deliberately narrow and event-task oriented. Organizer experience follows Competition operating modes—preparation, live operations, reconciliation, outcomes, and materials/external representations—while retaining contextual access to underlying domain collections.
 
 Historical/current state, role context, and Competition context must remain unambiguous. Organizer operational summaries are exception-first and drill down to source evidence. Deep links or QR codes never bypass Participation/Access, navigation visibility never substitutes for authorization, and context changes cannot silently discard meaningful working state.
@@ -150,4 +175,4 @@ The intended deployment boundary remains **GitHub Actions → AWS**. Front-end f
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 003 is now translating the completed Concept specifications into actor-centered UX and information architecture.
+This repository remains in **design**, not production implementation. Phase 003 is translating the completed Concept specifications into actor-centered UX and information architecture; 003-C is next.
