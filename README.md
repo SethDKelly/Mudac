@@ -56,19 +56,19 @@ Phase 001 accepts the following initial concept catalog.
 - Provenance
 - Export
 
-Several important domain ideas are intentionally **not** standalone concepts at this stage. Judge and Organizer are Participation roles; Expertise is Judge Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms; PDF and QR are representations; dashboards and portals are UI projections.
+Several important domain ideas are intentionally **not** standalone concepts. Judge and Organizer are Participation roles; Expertise is Judge Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms; PDF and QR are representations; dashboards and portals are UI projections.
 
 ## Design status
 
 **Phase 001 — Concept Design Foundation is complete.** Its canonical exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
 
-**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.** It is logically divided into nine groups so structural concepts, access, judging, evaluation, history, numerical policy, official outcomes, and continuity can be specified without collapsing their boundaries.
+**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.** It is divided into nine groups so structural concepts, access, judging, evaluation, history, numerical policy, official outcomes, and continuity can be specified without collapsing their boundaries.
 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias Specifications](docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
-| 002-B | Identity, Participation & Access Specifications | **Next** |
-| 002-C | Panel, Membership & Judging Encounter Specifications | Planned |
+| 002-B | [Identity, Participation & Access Specifications](docs/002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
+| 002-C | Panel, Membership & Judging Encounter Specifications | **Next** |
 | 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
@@ -78,7 +78,7 @@ Several important domain ideas are intentionally **not** standalone concepts at 
 
 See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 specification plan.
 
-## Current structural specification
+## Current structural and access specification
 
 002-A standardizes the Competition lifecycle as:
 
@@ -86,7 +86,17 @@ See [`docs/README.md`](docs/README.md) for the canonical documentation index and
 Draft → Ready → Active → Event Completed → Finalized
 ```
 
-A Team may be temporarily incomplete while the Competition is Draft, but before Ready every non-withdrawn Team must have exactly one active Division and one unique active Alias. Division changes are corrections, Team identity remains stable across Division/Alias corrections, aliases already used operationally are not recycled to other Teams, and later Judging Encounters should retain the alias representation used when the judging occurred.
+A Team may be temporarily incomplete while the Competition is Draft, but before Ready every non-withdrawn Team must have exactly one active Division and one unique active Alias. Division changes are corrections, Team identity remains stable across Division/Alias corrections, aliases already used operationally are not recycled to other Teams, and later Judging Encounters should retain the Alias representation used when the judging occurred.
+
+002-B standardizes the human-security model as:
+
+```text
+Identity       → who the person is
+Participation  → why/capacity in this Competition
+Access         → what the current context may do or see
+```
+
+Judge and Organizer are Competition-scoped Participation roles. A returning Judge can reuse a reverified Identity but receives a new Participation for each Competition. Access is capability-oriented and sensitive to Competition lifecycle, resource ownership, scope, purpose, and time. Event Completed expires ordinary Judge access to Scorecards, Notes, and judging history without deleting those records; legitimate later corrections use narrow temporary access. Administrator technical authority does not automatically confer Competition decision authority.
 
 ## Repository documentation convention
 
@@ -100,6 +110,7 @@ docs/
   002-concept-specification/
     README.md
     002-A-competition-division-team-alias-specifications.md
+    002-B-identity-participation-access-specifications.md
 ```
 
 ## Architecture boundary condition
