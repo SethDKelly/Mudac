@@ -6,7 +6,7 @@ The design is being developed using Daniel Jackson's **Concept Design** methodol
 
 ## Product intent
 
-Student Teams analyze a supplied dataset, perform statistical and/or machine-learning work, and present their findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Those Scorecards are aggregated across repeated Encounters to support Division-scoped ranking and competition Awards.
+Student Teams analyze a supplied dataset and present their findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Those Scorecards are aggregated across repeated Encounters to support Division-scoped ranking and competition Awards.
 
 Primary human roles are Organizer, Judge, and technical Administrator. Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently competition participants and beneficiaries, not application actors.
 
@@ -17,7 +17,8 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - **Controlled identity disclosure** — Judges see Team Alias and Division rather than institutional identity.
 - **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, coverage, and tie behavior are not hard-coded MinneMUDAC constants.
 - **Controlled finality** — authoritative state may be corrected through explicit Versioning and Provenance rather than silent overwrite.
-- **Capture-channel parity** — paper and electronic judging share evaluation semantics.
+- **Authority preservation** — correction rights follow the meaning of the underlying fact; Organizer or technical authority does not silently replace Judge evaluation authorship.
+- **Capture-channel parity** — paper and electronic judging share evaluation semantics while Provenance preserves capture differences.
 - **Mobile-first judging** — the primary Judge workflow targets personal smartphones under live-event conditions.
 - **Privacy by lifecycle** — ordinary Judge access to private Scorecards, Notes, and judging history ends when live judging ends while Organizer-governed records remain retained.
 - **Operational resilience** — interruption, connectivity loss, device loss, and paper fallback are expected operating conditions.
@@ -60,8 +61,8 @@ Judge and Organizer are Participation roles; Expertise is Participation state; C
 | 002-B | [Identity, Participation & Access Specifications](docs/002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](docs/002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](docs/002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
-| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
+| 002-E | [Versioning, Provenance, Correction & Authority Preservation](docs/002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
+| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | **Next** |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
@@ -120,7 +121,22 @@ logical Scorecard
           next Finalized version
 ```
 
-Every Scorecard remains tied to the exact Rubric version under which it was formed. Notes are versioned private evaluation evidence, not hidden scoring inputs. Paper and electronic judging share the same Scorecard semantics. Intra-Scorecard calculation is deterministic from the Rubric and Criterion responses, while cross-Judge aggregation remains a separate policy concern.
+Authoritative-history model:
+
+```text
+working state
+    ↓
+authoritative Version
+    │
+    ├── immutable historical snapshot
+    └── Provenance: who / whose authority / how / why / source
+    ↓
+legitimate correction
+    ↓
+successor Version or explicit invalidation/replacement
+```
+
+Committed Versions are never edited in place. Judge amendments, paper transcription corrections, and structural corrections retain different semantics and provenance. An Organizer can correct a verifiable capture error without becoming the evaluation author, but cannot invent a new Judge judgment. Event Completed and Finalized progressively strengthen correction authority and review requirements, and changes to authoritative sources must propagate explicit downstream impact rather than silently rewriting official outcomes.
 
 ## Repository documentation convention
 
@@ -137,6 +153,7 @@ docs/
     002-B-identity-participation-access-specifications.md
     002-C-panel-membership-judging-encounter-specifications.md
     002-D-rubric-criterion-scorecard-notes-specifications.md
+    002-E-versioning-provenance-correction-authority-preservation.md
 ```
 
 ## Architecture boundary condition
