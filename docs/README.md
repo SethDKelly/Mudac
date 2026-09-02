@@ -16,9 +16,11 @@ The documentation is intentionally written before implementation architecture. A
 
 ## Documentation authority
 
-When design decisions change, update the relevant phase document and this index where status or canonical terminology changes. Conversation history is useful working context, but the repository should become the durable source of truth.
+When design decisions change, update the relevant phase document and this index where status or canonical terminology changes. Conversation history is useful working context, but the repository is the durable source of truth.
 
 ## Phase 001 — Concept Design Foundation
+
+**Status: Complete**
 
 | Group | Document | Status |
 | --- | --- | --- |
@@ -29,9 +31,11 @@ When design decisions change, update the relevant phase document and this index 
 | 001-E | [Candidate Concept Discovery](001-concept-design/001-E-candidate-concept-discovery.md) | Complete |
 | 001-F | [Concept Boundaries, Independence & Synchronization Candidates](001-concept-design/001-F-concept-boundaries-synchronizations.md) | Complete |
 | 001-G | [Experience Principles, Accessibility & Operational Resilience](001-concept-design/001-G-experience-accessibility-resilience.md) | Complete |
-| 001-H | Phase 001 Consolidation & Initial Concept Catalog | **Next** |
+| 001-H | [Phase 001 Consolidation & Initial Concept Catalog](001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md) | Complete |
 
-## Current provisional concept catalog
+The canonical Phase 001 exit baseline is **001-H**. Earlier documents retain the reasoning and decisions that led to that consolidation and should be updated if a later phase intentionally revises one of their decisions.
+
+## Accepted concept catalog
 
 ### Core competition concepts
 
@@ -54,7 +58,7 @@ When design decisions change, update the relevant phase document and this index 
 14. Provenance
 15. Export
 
-These remain provisional until 001-H consolidates the phase.
+Important domain ideas intentionally outside the concept catalog include Criterion, Note, Expertise, Panel Membership, Aggregation, Evaluation Coverage, Rank, Result, PDF, QR, and UI dashboard/portal structures. See 001-H for the authoritative classification and rationale.
 
 ## Canonical terminology
 
@@ -79,10 +83,32 @@ These remain provisional until 001-H consolidates the phase.
 - Rankings are Division-scoped by default and derived from authoritative eligible evaluations.
 - Awards are distinct from Rank and may be discretionary.
 - Judges do not see peer evaluations or competition-wide scoring/standings through the judging experience.
-- Judge Scorecards, Notes, and judging history are private evaluation data. Judge access is event/lifecycle-scoped and should expire after live judging ends; Organizer access persists according to competition governance needs.
+- Judge Scorecards, Notes, and judging history are private evaluation data. Ordinary Judge access is event/lifecycle-scoped and expires after live judging ends; Organizer access persists according to competition governance needs.
+- Event Completed and Competition Finalized are distinct lifecycle states.
 - Paper and electronic judging share the same Rubric and scoring semantics.
 - Printed/exported materials must be traceable to authoritative source/version information.
 - The system must remain operable under mobile, accessibility, network-degradation, device-loss, and paper-fallback scenarios.
+- Authoritative state should support controlled correction through Versioning and Provenance rather than silent overwrite or unnecessary absolute immutability.
+
+## Phase 002 — Concept Specification, Policy & Synchronization Refinement
+
+**Status: Next**
+
+Recommended groupings established by the Phase 001 exit review:
+
+| Group | Topic | Status |
+| --- | --- | --- |
+| 002-A | Competition, Division, Team & Alias Specifications | Next |
+| 002-B | Identity, Participation & Access Specifications | Planned |
+| 002-C | Panel & Judging Encounter Specifications | Planned |
+| 002-D | Rubric & Scorecard Specifications | Planned |
+| 002-E | Versioning & Provenance Specifications | Planned |
+| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
+| 002-G | Award Specification & Competition Finalization | Planned |
+| 002-H | Export, Print & Operational Continuity Specification | Planned |
+| 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
+
+Phase 002 should remain implementation-neutral and turn the Phase 001 catalog into explicit behavioral specifications and synchronization contracts.
 
 ## Known architectural boundary
 
