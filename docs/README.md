@@ -60,8 +60,10 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 - **Judge Participation** — a person's Competition-scoped participation as a Judge; not a permanent global user type.
 - **Expertise** — Judge Participation metadata such as Academic, Business, or Technical; not an access role.
 - **Composition capacity** — the perspective a Judge membership satisfies for a specific Panel; distinct from Expertise.
-- **Scorecard** — one Judge's independent evaluation during one Judging Encounter.
-- **Rubric** — the structured evaluation definition used to create Scorecards.
+- **Rubric** — the structured evaluation definition governing valid Criterion responses and one Judge's Scorecard calculation.
+- **Criterion** — one scored dimension inside a Rubric; subordinate Rubric state rather than a standalone concept.
+- **Scorecard** — one logical Judge evaluation during one Judging Encounter under one exact Rubric version.
+- **Criterion Note / Overall Note** — qualitative private evaluation evidence inside a Scorecard; not hidden numerical inputs.
 - **Award** — competition recognition that may be rank-derived or Organizer-conferred.
 - **Alias / Competition Identity** — the Team representation exposed during blinded judging instead of administrative/institutional identity.
 
@@ -79,13 +81,18 @@ Important domain ideas intentionally outside the concept catalog include Criteri
 - Recusal/absence are never represented as zero or unexplained missing Scorecards.
 - Same Panel + same Team normally yields at most one valid Encounter per Competition; rejudging uses an explicit replacement Encounter.
 - Encounter lifecycle is `Prepared → Open → Complete`, with Cancelled and Invalidated exceptional paths.
+- Every authoritative Scorecard references one exact authoritative Rubric version; existing Scorecards never silently rebind to later Rubrics.
+- Scored Criteria are required in the initial model; missing, zero, and N/A remain distinct and N/A has no implicit semantics.
+- A Rubric uses one coherent scoring model; accidental double weighting is prohibited.
 - Each participating Judge authors at most one logical Scorecard per Encounter; revisions do not create additional evaluation weight.
+- Scorecard lifecycle supports Draft, Finalized, and Amendment Draft while preserving the prior authoritative version during amendment.
+- Criterion Notes and overall Notes are versioned private evaluation evidence and do not independently alter numeric scoring.
+- Paper and electronic judging share the same Rubric and Scorecard semantics; capture actor/channel differences belong to Provenance.
 - Missing scores are never interpreted as zero.
 - Evaluation Coverage is distinct from numeric Aggregation.
 - Rankings are Division-scoped by default and derived from authoritative eligible evaluations.
 - Awards are distinct from Rank and may be discretionary.
 - Judges do not see peer evaluations or competition-wide scoring/standings through the judging experience.
-- Paper and electronic judging share the same Rubric and scoring semantics.
 - Printed/exported materials must be traceable to authoritative source/version information.
 - Authoritative state supports controlled correction through Versioning and Provenance rather than silent overwrite.
 
@@ -100,8 +107,8 @@ See the [Phase 002 index](002-concept-specification/README.md).
 | 002-A | [Competition, Division, Team & Alias Specifications](002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
 | 002-B | [Identity, Participation & Access Specifications](002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
-| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | **Next** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
+| 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
+| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
@@ -114,6 +121,8 @@ See the [Phase 002 index](002-concept-specification/README.md).
 **002-B:** Identity, Participation, and Access remain independent; Access is capability-oriented; Event Completed ends ordinary Judge private-data access; post-event correction uses narrow temporary Access; Administrator system authority does not automatically confer Competition authority.
 
 **002-C:** Panel describes intended Judge grouping while Encounter preserves actual Team evaluation occurrence. Panel membership changes do not rewrite prior Encounters. Encounter start snapshots Alias, Division, Panel context, and starting Judge participants; later recusal/absence/replacement is an explicit adjustment. Effective Encounter participants drive Scorecard obligations. Duplicate initiation must converge on one Encounter, and rejudging is explicit replacement rather than accidental double influence.
+
+**002-D:** Rubric defines one coherent individual-evaluation model and Scorecard records one Judge's application of an exact authoritative Rubric version. Criteria are required scored dimensions in the initial baseline; arbitrary numeric values and implicit N/A are not accepted. One Judge Participation × one Encounter yields one logical Scorecard. Drafts are non-authoritative, Finalized Scorecards are authoritative, and Amendment Drafts leave the prior version authoritative until replacement finalization. Notes are part of the versioned private evaluation record. Intra-Scorecard calculation is deterministic; cross-Judge aggregation remains separate.
 
 ## Known architectural boundary
 
