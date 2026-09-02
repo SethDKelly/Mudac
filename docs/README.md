@@ -97,8 +97,8 @@ See the [Phase 003 index](003-conceptual-ux-architecture/README.md).
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
 | 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
-| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
+| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
+| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | **Next** |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
 | 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
@@ -151,6 +151,38 @@ Ready to Judge
 A successful login is not enough to establish readiness. QR/link/code possession does not grant authority. Returning Judges receive a new Competition Participation and reconfirm current-event expertise. Check-in is separate from registration/authentication. Panel membership remains Organizer-governed by default; Panel codes confirm/request context but do not silently self-reassign Judges.
 
 Dual-role people enter explicit Judge mode with Judge-safe disclosure. Shared devices clear prior Judge private context. Ordinary onboarding ends at Event Completed, while post-event amendment uses narrow correction access. QR/camera use has accessible alternatives, and degraded connectivity must never cause false claims that Identity, check-in, membership, or Access is authoritative.
+
+### 003-C authoritative UX baseline
+
+The core Judge evaluation flow is:
+
+```text
+Ready to Judge
+      ↓
+resolve / confirm current Encounter
+      ↓
+confirm Team Alias + Division
+      ↓
+Scorecard Draft
+      ↓
+score + Notes
+      ↓
+review
+      ↓
+explicit Finalize
+      ↓
+authoritative Scorecard Version
+      ↓
+return to Panel judging context
+```
+
+Wrong-Team prevention uses deliberate context confirmation before meaningful scoring and persistent Team/Division context thereafter rather than repeated confirmation fatigue. Alias remains the Judge-facing identity; Team Name stays hidden by default during blinded judging. Same-Panel/same-Team concurrent entry converges on one Encounter, and recusal is an explicit non-zero path.
+
+Rubric guidance, bounded score choices, Criterion Notes, and Overall Note are embedded in the evaluation task. Draft changes are lightweight thought formation and should feel automatically preserved, while persistence confidence remains truthful. Presentation completion does not imply Scorecard Finalization. If the event must move on, an unfinished Draft may be deliberately retained and finished later rather than hard-blocking the next presentation or losing the evaluation.
+
+`My judging` is a temporary own-work view showing completion/amendment state without peer scores, Panel/Team aggregates, Coverage, Rank, or standings. Finalization is an explicit validated commitment and uncertain Finalization remains visibly uncertain until authoritative state is known. Retrying cannot create another vote.
+
+Finalized Scorecards are visibly read-only; amendment is a separate mode with the prior Version remaining authoritative until the successor is finalized. Wrong Team/Encounter/Rubric identity is a structural problem escalated to Organizer correction rather than ordinary amendment. Event Completed removes ordinary Judge history/amendment access; post-event correction uses the narrow authorization path. Shared-device handoff, role switching, degraded connectivity, and paper fallback cannot silently discard Draft work or create duplicate evaluation weight.
 
 ## Canonical terminology
 
