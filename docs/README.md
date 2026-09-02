@@ -35,7 +35,7 @@ Canonical exit baseline: [001-H — Phase 001 Consolidation & Initial Concept Ca
 14. Provenance
 15. Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, PDF, QR, and dashboard/portal structures remain subordinate, derived, policy, process, or representation mechanisms rather than standalone Concepts.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, Team Attribute Definitions, PDF, QR, and dashboard/portal structures remain subordinate, derived, policy, process, metadata, or representation mechanisms rather than standalone Concepts.
 
 ## Phase 002 — Concept Specification, Policy & Synchronization Refinement
 
@@ -46,6 +46,7 @@ Canonical exit baseline: [002-I — Phase 002 Consolidation & Specification Exit
 | Group | Topic | Status |
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias](002-concept-specification/002-A-competition-division-team-alias-specifications.md) | Complete |
+| 002-A1 | [Team Extensible Attributes & Team Name Refinement](002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md) | Complete refinement |
 | 002-B | [Identity, Participation & Access](002-concept-specification/002-B-identity-participation-access-specifications.md) | Complete |
 | 002-C | [Panel, Membership & Judging Encounter](002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | Complete |
 | 002-D | [Rubric, Criterion, Scorecard & Notes](002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | Complete |
@@ -62,6 +63,8 @@ Canonical exit baseline: [002-I — Phase 002 Consolidation & Specification Exit
 - Identity, Participation, Access, and semantic authority are distinct.
 - Judge and Organizer are Competition-scoped Participation roles.
 - ordinary Judge access to private evaluation data expires at Event Completed without deleting records.
+- Team supports extensible descriptive attributes; `teamName` is a standard optional attribute distinct from Alias and carries no competitive effect by default.
+- Team-attribute disclosure is explicit; student-created Team names are not Judge-visible by default during blinded judging.
 - Panel current membership and historical Encounter participation are distinct.
 - effective Encounter participants create Scorecard obligations.
 - one Judge Participation × one Encounter yields at most one logical Scorecard.
@@ -93,8 +96,8 @@ See the [Phase 003 index](003-conceptual-ux-architecture/README.md).
 | Group | Topic | Status |
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
-| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | **Next** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | Planned |
+| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
+| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
 | 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
@@ -123,9 +126,36 @@ Judge and Organizer are explicit experience modes. Judge experience remains narr
 
 Lifecycle changes which work is foregrounded. Historical Finalized Competitions default to inspect/trace/export. Current state and historical snapshots/Versions are never silently conflated. Organizer situational awareness is exception-first and must drill down to source evidence. Competition and role context remain explicit, deep links/QRs never bypass Participation/Access, and context switching cannot silently destroy meaningful working state.
 
+### 003-B authoritative UX baseline
+
+Judge onboarding is a state-driven journey from Competition entry to derived readiness:
+
+```text
+entry mechanism
+    ↓
+Competition context
+    ↓
+Identity establish/reverify
+    ↓
+current Judge Participation
+    ↓
+current-event expertise/profile
+    ↓
+check-in
+    ↓
+Organizer-governed Panel context
+    ↓
+Ready to Judge
+```
+
+A successful login is not enough to establish readiness. QR/link/code possession does not grant authority. Returning Judges receive a new Competition Participation and reconfirm current-event expertise. Check-in is separate from registration/authentication. Panel membership remains Organizer-governed by default; Panel codes confirm/request context but do not silently self-reassign Judges.
+
+Dual-role people enter explicit Judge mode with Judge-safe disclosure. Shared devices clear prior Judge private context. Ordinary onboarding ends at Event Completed, while post-event amendment uses narrow correction access. QR/camera use has accessible alternatives, and degraded connectivity must never cause false claims that Identity, check-in, membership, or Access is authoritative.
+
 ## Canonical terminology
 
-- **Team** — student group being evaluated.
+- **Team** — student group being evaluated; supports extensible descriptive attributes including optional `teamName`.
+- **Team Name** — optional descriptive/student-facing Team attribute; distinct from Alias and non-competitive by default.
 - **Panel** — current group of Judge Participations intended to evaluate Teams together.
 - **Judging Encounter** — one bounded actual Panel–Team evaluation occurrence.
 - **Judge Participation** — Competition-scoped Judge capacity, not a permanent user type.
