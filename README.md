@@ -2,13 +2,13 @@
 
 MUDAC is a documentation-first design effort for a web application that supports live student data competitions, with MinneMUDAC as the initial reference context. The product is intended to replace or augment paper-heavy judging operations while preserving fairness, judge independence, accessibility, auditability, and operational resilience.
 
-The design is being developed using Daniel Jackson's **Concept Design** methodology. The repository intentionally begins with product and conceptual design before UI component design or cloud architecture so implementation choices are derived from stable behavioral concepts rather than screens, database tables, or framework conventions.
+The design is being developed using Daniel Jackson's **Concept Design** methodology. The repository intentionally establishes product purpose, Concepts, behavioral specifications, and experience architecture before component or cloud architecture so implementation choices are derived from stable behavior rather than screens, tables, or framework conventions.
 
 ## Product intent
 
-Student Teams analyze a supplied dataset and present findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Eligible authoritative Scorecards are combined under explicit Evaluation Policy to support Coverage assessment, Division-scoped ranking, competition Awards, and an explicit official closeout process.
+Student Teams analyze a supplied dataset and present findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Eligible authoritative Scorecards are combined under explicit Evaluation Policy to support Coverage assessment, Division-scoped ranking, competition Awards, and controlled official closeout.
 
-Primary human roles are Organizer, Judge, and technical Administrator. Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently competition participants and beneficiaries, not application actors.
+Primary human roles are Organizer, Judge, and technical Administrator. Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently Competition participants and beneficiaries, not application actors.
 
 ## Core design principles
 
@@ -17,18 +17,19 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - **Controlled identity disclosure** — Judges see Team Alias and Division rather than institutional identity.
 - **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, Coverage, precision, and tie behavior are not hard-coded constants.
 - **Controlled finality** — authoritative state may be corrected through explicit Versioning and Provenance rather than silent overwrite.
-- **Authority preservation** — correction rights follow the meaning of the fact; Organizer or technical authority does not silently replace Judge evaluation authorship.
+- **Authority preservation** — correction rights follow the meaning of the underlying fact; Organizer or technical authority does not silently replace Judge judgment.
 - **Capture-channel parity** — paper and electronic judging share evaluation semantics while Provenance preserves capture differences.
 - **Coverage before outcome confidence** — numerical Aggregate and sufficiency of judging remain separate.
-- **Explainable ranking** — Ranking is derived from eligible evidence under an identifiable Evaluation Policy, never directly edited.
-- **Explicit official closeout** — Finalization is a reconciled Organizer decision producing a reconstructible Official Outcome Revision, not merely an event-end flag.
+- **Explainable ranking** — Ranking is derived from eligible evidence under identifiable Evaluation Policy, never directly edited.
+- **Explicit official closeout** — Finalization is a reconciled Organizer decision producing a reconstructible Official Outcome Revision.
 - **Official is not automatically public** — result publication/disclosure is separate from internal Finalization.
-- **Traceable external representation** — printed/downloaded/published material remains tied to identified source state and audience disclosure rules rather than becoming an independent truth.
-- **Paper continuity** — paper judging is a first-class continuity/accessibility path and converges onto the same Scorecard semantics and evaluation policy as electronic judging.
+- **Traceable external representation** — printed/downloaded/published material stays tied to identified source state and audience disclosure rules.
+- **Paper continuity** — paper judging is a first-class continuity/accessibility path and converges onto the same Scorecard/evaluation model.
+- **Role-aware experience** — Identity is not a permanent role; Competition Participation determines Judge/Organizer experience context.
 - **Mobile-first judging** — the primary Judge workflow targets personal smartphones under live-event conditions.
 - **Privacy by lifecycle** — ordinary Judge access to private Scorecards, Notes, and judging history ends when live judging ends while Organizer-governed records remain retained.
 - **Operational resilience** — interruption, connectivity loss, device loss, mixed-mode judging, and paper fallback are expected operating conditions.
-- **Technology independence during specification** — AWS and GitHub Actions are boundary conditions; specific infrastructure remains deferred.
+- **Technology independence during design** — AWS and GitHub Actions are boundary conditions; specific infrastructure remains deferred.
 
 ## Accepted concept catalog
 
@@ -53,29 +54,38 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - Provenance
 - Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, and Official Outcome remain subordinate/derived/process mechanisms rather than standalone concepts.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, and Official Outcome Revision remain subordinate, derived, policy, process, or projection mechanisms rather than standalone Concepts.
 
 ## Design status
 
-**Phase 001 — Concept Design Foundation is complete.** Its canonical exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+**Phase 001 — Concept Design Foundation: Complete.**
 
-**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.** Eight of nine subgroupings are complete.
+Canonical exit: [`001-H`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+
+**Phase 002 — Concept Specification, Policy & Synchronization Refinement: Complete.**
+
+Canonical exit: [`002-I`](docs/002-concept-specification/002-I-phase-consolidation-specification-exit-review.md).
+
+All 15 accepted Concepts now have sufficient behavioral specification for the next design layer. Phase 002 also defines Evaluation Policy, Coverage/Aggregation/Ranking semantics, controlled correction, Awards/Finalization, Official Outcome revision history, Export, paper/electronic parity, and operational continuity.
+
+**Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model: In Progress.**
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 002-A | [Competition, Division, Team & Alias Specifications](docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
-| 002-B | [Identity, Participation & Access Specifications](docs/002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
-| 002-C | [Panel, Membership & Judging Encounter Specifications](docs/002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
-| 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](docs/002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
-| 002-E | [Versioning, Provenance, Correction & Authority Preservation](docs/002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
-| 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](docs/002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
-| 002-G | [Awards, Reconciliation, Finalization & Official Outcomes](docs/002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md) | **Complete** |
-| 002-H | [Export, Print, Operational Continuity & External Representations](docs/002-concept-specification/002-H-export-print-operational-continuity-external-representations.md) | **Complete** |
-| 002-I | Phase 002 Consolidation & Specification Exit Review | **Next** |
+| 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
+| 003-B | Judge Entry, Identity, Participation & Panel Onboarding | **Next** |
+| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | Planned |
+| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
+| 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
+| 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
+| 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
+| 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | Planned |
+| 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | Planned |
+| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
 
-See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 plan.
+See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/003-conceptual-ux-architecture/README.md`](docs/003-conceptual-ux-architecture/README.md) for the Phase 003 plan.
 
-## Current specification baseline
+## Current behavioral baseline
 
 ```text
 Competition:
@@ -99,8 +109,6 @@ eligible authoritative evidence
         ↓
 Coverage + Aggregate
         ↓
-Rank eligibility
-        ↓
 Division Ranking
         ↓
 Organizer reconciliation
@@ -114,22 +122,32 @@ Official Outcome Revision
 Export / approved external representation
 ```
 
-The default aggregation policy gives each eligible authoritative Judge Scorecard equal weight. Encounter means are analytical only. Missing judgments are never zero, Coverage exceptions never fabricate scores, outliers are not automatically discarded, Judges are not silently normalized, and incompatible Rubric Versions are not pooled or implicitly rescaled. Rank is Division-scoped and derived under explicit precision/tie rules. Evaluation Policy is authoritative/reconstructible once judging begins because changing rules can change outcomes without changing Judge evidence.
+## Current experience baseline
 
-After Event Completed, Organizers reconcile evidence, Coverage, policy, ties, and Awards. A computable Rank is not automatically ranking-ready. Finalization requires all mandatory closeout gates and creates a reconstructible Official Outcome Revision. Post-finalization corrections preserve prior official revisions and require explicit successor confirmation rather than silently migrating Rank or Awards. Finalization remains separate from later publication.
+```text
+Identity
+   ↓
+Participation / role mode
+   ↓
+Competition
+   ↓
+role-specific operational context
+   ↓
+current task / artifact
+```
 
-Export produces stable audience-specific representations of identified source state. Previously distributed forms/results do not silently change meaning when the source changes; newer source state produces a newer representation. Printable Rubrics and paper Scorecards are traceable to their Rubric Version, paper evaluations acquire unique source references and are checked against the physical source before eligibility, and QR/barcode mechanisms remain identification/navigation aids rather than authority.
+Judge and Organizer are explicit experience modes rather than one blended navigation tree. Judge experience is deliberately narrow and event-task oriented. Organizer experience follows Competition operating modes—preparation, live operations, reconciliation, outcomes, and materials/external representations—while retaining contextual access to underlying domain collections.
 
-Operational degradation may move judging from electronic to mixed or paper fallback and later recovery, but every path converges on the same logical Scorecard, Provenance, Coverage, Aggregation, and Ranking model. Recovery must be duplicate-safe, stale-state-safe, privacy-aware, and truthful about what has actually been saved or finalized.
+Historical/current state, role context, and Competition context must remain unambiguous. Organizer operational summaries are exception-first and drill down to source evidence. Deep links or QR codes never bypass Participation/Access, navigation visibility never substitutes for authorization, and context changes cannot silently discard meaningful working state.
 
 ## Repository documentation convention
 
-The repository—not chat history—is the durable design baseline. Completed design groupings are added to `/docs` as they are completed.
+The repository—not chat history—is the durable design baseline. Each completed design grouping is added to `/docs` and the canonical indexes are advanced immediately.
 
 ## Architecture boundary condition
 
-The intended end state is deployment into an **AWS ecosystem** through **GitHub Actions**. This is an accepted constraint, not yet an architecture decision. Hosting model, identity provider, API style, database, offline persistence, artifact generation/storage, audit implementation, and AWS service choices will follow the behavioral specifications.
+The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component system, identity provider, API style, database, offline persistence, artifact generation/storage, audit implementation, and AWS service choices will follow the behavioral and UX architecture rather than drive it.
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 002 now has only its consolidation/exit review remaining before the project advances into the next design layer.
+This repository remains in **design**, not production implementation. Phase 003 is now translating the completed Concept specifications into actor-centered UX and information architecture.
