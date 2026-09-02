@@ -6,7 +6,7 @@ Status: **In Progress**
 
 Phase 001 established MUDAC's initial 15-concept catalog and the principal invariants that shape competition judging. Phase 002 turns that conceptual baseline into explicit behavioral specifications.
 
-The phase remains implementation-neutral. It should define concept state, actions, queries, operational principles, invariants, failure/exception behavior, policy boundaries, and synchronization contracts before UI architecture, persistence design, authentication technology, or AWS service selection.
+The phase remains implementation-neutral. It defines concept state, actions, queries, operational principles, invariants, failure/exception behavior, policy boundaries, and synchronization contracts before UI architecture, persistence design, authentication technology, or AWS service selection.
 
 ## Why nine subgroupings
 
@@ -22,8 +22,6 @@ Nine groups provide enough separation to keep concept families singular while al
 8. define printable/external representations and operational continuity;
 9. consolidate and test the whole specification.
 
-Splitting further would create artificial micro-phases around subordinate state such as Criteria, Notes, or Panel Membership. Combining further would mix concept specification with derived scoring policy or operational continuity and make boundary testing harder.
-
 ## Phase plan
 
 | Group | Topic | Status |
@@ -33,14 +31,14 @@ Splitting further would create artificial micro-phases around subordinate state 
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
-| 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | **Next** |
-| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
+| 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
+| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | **Next** |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
 ## Specification template
 
-Where applicable, each accepted concept should be specified using:
+Where applicable, each accepted concept is specified using:
 
 - Purpose
 - State
@@ -53,23 +51,19 @@ Where applicable, each accepted concept should be specified using:
 - Policy/configuration boundaries
 - Explicit non-responsibilities
 
-Subordinate state and derived mechanisms should be specified only to the degree required to make concept behavior unambiguous; they should not be promoted into concepts without new behavioral evidence.
+Subordinate state and derived mechanisms are specified only as required to make concept behavior unambiguous; they are not promoted into concepts without new behavioral evidence.
 
 ## 002-A structural baseline
 
-002-A standardizes the Competition lifecycle as:
+Competition lifecycle is:
 
 ```text
 Draft → Ready → Active → Event Completed → Finalized
 ```
 
-`Historical` is a retained presentation/status rather than another business lifecycle state, and reconciliation is the Organizer activity between Event Completed and Finalized rather than a required lifecycle state.
-
-Team setup may be temporarily incomplete only while a Competition is Draft. Before Ready, every non-withdrawn Team must have exactly one active Division assignment and one unique active Alias. Division changes are corrections, Alias values used operationally are never recycled to another Team in the same Competition, and later Encounters snapshot the Alias presented at judging time.
+`Historical` is a retained presentation/status rather than another business lifecycle state, and reconciliation is activity between Event Completed and Finalized. Team setup may be temporarily incomplete only during Draft. Before Ready, every non-withdrawn Team has exactly one active Division and one unique active Alias. Division changes are corrections, operationally used Alias values are never recycled, and Encounters snapshot the Alias/Division presented during judging.
 
 ## 002-B human-security baseline
-
-002-B formalizes three independent concerns:
 
 ```text
 Identity       → who this person is
@@ -77,79 +71,65 @@ Participation  → why/capacity in this Competition
 Access         → what this context may do or see now
 ```
 
-Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Administrator remains primarily system-scoped authority. Returning Judges may reuse/reverify Identity but always receive a new Competition Participation. Expertise is Participation state and never independently grants authority.
-
-Access is capability-oriented and may depend on role, Competition lifecycle, resource ownership, sensitivity, scope, purpose, and time. Event Completed ends ordinary Judge access to private Scorecards, Notes, and judging history without deleting the historical records. Legitimate post-event correction uses narrow temporary Access after Judge re-verification rather than restoring broad historical Judge access.
-
-Dual-role identities are supported conceptually through separate Participation/Access contexts. Shared or loaner devices must clear the prior Judge's context, lost-device recovery revokes the compromised session rather than creating duplicate Participation, and system Administrator authority does not automatically imply Competition decision authority.
+Judge and Organizer are Competition-scoped Participation roles. Returning Judges may reuse/reverify Identity but receive new Competition Participation. Expertise is Participation state and does not grant authority. Access is capability-oriented and sensitive to lifecycle, ownership, resource sensitivity, scope, purpose, and time. Event Completed ends ordinary Judge access to private Scorecards, Notes, and judging history without deleting the records. Later Judge correction uses narrow temporary Access after re-verification. Administrator technical authority does not automatically confer Competition decision authority.
 
 ## 002-C judging-topology baseline
-
-002-C formalizes the distinction:
 
 ```text
 Panel              → who is intended to judge together
 Judging Encounter  → who actually evaluated this Team on this occurrence
 ```
 
-Panel Membership remains subordinate Panel state and retains historical start/end periods so Judges can be reassigned without rewriting prior judging. Expertise and assigned Panel composition capacity are distinct; by default one Judge satisfies at most one required capacity on a Panel. Panel-size and perspective requirements are configurable Competition policy rather than hard-coded Academic/Business/Technical roles.
-
-Encounter lifecycle is:
-
-```text
-Prepared → Open → Complete
-```
-
-with `Cancelled` for a prepared occurrence that never meaningfully began and `Invalidated` for an occurrence that happened but must not contribute officially. Legitimate rejudging creates an explicit replacement Encounter rather than overwriting or duplicating the original.
-
-When an Encounter opens it snapshots the Team Alias, Division, Panel context, and starting Judge participants. Later absence, recusal, or replacement is recorded as an explicit participant adjustment; the effective participant set drives Scorecard obligations. Recusal is never a zero or an unexplained missing Scorecard. A Judge who already created an authoritative Scorecard cannot have that evaluation silently removed through participant adjustment.
-
-The same Panel-Team pair normally produces at most one valid Encounter per Competition, and duplicate/retried initiation must converge on one logical Encounter. Presentation completion is distinct from Encounter completion: an Encounter remains Open until all effective evaluation obligations are satisfied or explicitly excused.
+Panel Membership is subordinate Panel state. Expertise and assigned Panel composition capacity are distinct. Encounter lifecycle is `Prepared → Open → Complete`, with Cancelled and Invalidated exceptional paths. When an Encounter opens it snapshots Team Alias, Division, Panel context, and starting Judge participants; later absence, recusal, or replacement is an explicit participant adjustment. Effective Encounter participants drive Scorecard obligations. Same Panel + same Team normally yields one valid Encounter, and legitimate rejudging creates an explicit replacement.
 
 ## 002-D evaluation-instrument baseline
-
-002-D formalizes:
 
 ```text
 Rubric     → defines valid individual judgment
 Scorecard  → records one Judge's judgment
 ```
 
-Criterion and Note remain subordinate state. Every authoritative Scorecard references exactly one authoritative Rubric version, and later Rubric versions never silently rebind existing Scorecards. Scored Criteria are required in the initial baseline; missing, zero, and N/A remain distinct, and N/A has no implicit semantics.
-
-A Rubric uses one coherent scoring model. The specification permits additive-points or weighted-rating semantics but prohibits accidental double weighting. Weighted scales must define an explicit rating-to-contribution mapping rather than relying on an unstated interpretation of a 1–5 or similar scale.
-
-Scorecard lifecycle is:
-
-```text
-Draft → Finalized
-           │
-           ▼
-     Amendment Draft
-       ├── abandon → prior Finalized remains authoritative
-       └── finalize → new Finalized version
-```
-
-One Judge Participation × one Encounter yields at most one logical Scorecard. Drafts do not contribute to official aggregation. Finalization creates authoritative judging evidence; an Amendment Draft does not displace the prior authoritative version until finalized. Scorecard author, Encounter, Team basis, and Rubric basis cannot be silently changed by amendment.
-
-Criterion Notes and overall Notes are private evaluation evidence, do not independently alter numeric scoring, and are versioned with the Scorecard. Paper and electronic Scorecards share identical evaluation semantics; capture actor/channel differences belong to Provenance. Intra-Scorecard calculation is deterministic from Criterion responses plus the exact Rubric; cross-Judge aggregation remains for 002-F.
+Every authoritative Scorecard references one exact authoritative Rubric Version. Scored Criteria are required in the initial baseline; missing, zero, and N/A remain distinct. A Rubric uses one coherent scoring model and cannot hide double weighting. Scorecard lifecycle supports Draft, Finalized, and Amendment Draft while the prior finalized Version remains authoritative until a successor is committed. Notes are versioned private evaluation evidence. Paper/electronic capture share the same Scorecard semantics. Intra-Scorecard calculation is deterministic; cross-Judge aggregation is separate.
 
 ## 002-E authoritative-history baseline
-
-002-E formalizes:
 
 ```text
 Versioning  → what authoritative states existed
 Provenance  → how, why, and through whose authority they arose
 ```
 
-Committed Versions are immutable reconstructible snapshots. Draft/autosave activity is not version history. A lineage has one current authoritative Version, prior Versions remain historical, and stale-base successor commits must not silently fork authoritative history.
+Committed Versions are immutable reconstructible snapshots. Draft edits are not Versions. Correction authority follows semantic authority: Judges amend judgment, Organizers correct administration and verified capture, and technical Administrators do not inherit Competition or Judge semantic authority. Supersession and invalidation are distinct. Event Completed and Finalized progressively increase correction governance. Source changes cause dependent derived values to refresh or become explicitly affected; official post-finalization outcomes never silently migrate.
 
-Correction authority follows the meaning of the change. A Judge may amend their own evaluation judgment when Access permits. An Organizer may correct Competition-administrative facts and verified paper transcription errors, but Organizer authority does not substitute for Judge evaluation authorship. Technical Administrator authority likewise does not substitute for Competition or Judge semantic authority.
+## 002-F derived-evaluation baseline
 
-002-E distinguishes working edits, author amendments, transcription corrections, structural corrections, and outcome-affecting administrative corrections. Supersession and invalidation are distinct: a newer Version supersedes an older state of the same logical subject, while invalidation means evidence should no longer count for an official purpose. Structural identity errors such as wrong Team, Judge, Encounter, or Rubric basis are not silently repaired by ordinary Scorecard amendment.
+002-F formalizes the chain:
 
-Event Completed raises correction requirements: post-event Judge amendments require Organizer-authorized temporary scoped Access, Judge re-verification, and a human-readable reason. Competition Finalized raises them further and requires explicit post-finalization governance plus affected-outcome review. Source changes cause dependent derived values to refresh or become marked affected; official Awards/outcomes never silently migrate after finalization.
+```text
+Authoritative Scorecards
+        ↓
+Evidence Eligibility
+        ↓
+┌──────────────┬──────────────┐
+│              │              │
+▼              ▼              │
+Coverage    Aggregate          │
+│              │              │
+└───────┬──────┘              │
+        ▼                     │
+ Rank Eligibility             │
+        ↓                     │
+ Division Ranking             │
+```
+
+Coverage and Aggregate remain independent. A Team may have a valid numerical Aggregate while still lacking enough qualifying judging to be rank-eligible. Coverage may consider minimum valid Encounters, minimum eligible Scorecards, and composition exceptions; accepted exceptions preserve the actual shortfall rather than fabricating scores.
+
+The canonical initial aggregation basis gives every eligible authoritative Judge Scorecard equal weight. Encounter means are analytical projections and are not averaged again. Missing evaluations are never zero. There is no hidden Judge normalization or automatic outlier removal; unusual scores may be flagged for review but remain eligible unless a real error is established through correction/invalidation.
+
+Scorecards may be pooled only when their Rubric Versions are aggregation-compatible. Scoring-semantic Rubric changes are incompatible by default and no implicit rescaling occurs. Ranking is Division-scoped, derived rather than editable, and uses explicit comparison precision distinct from display rounding. Ties are never broken by incidental implementation data; with no declared resolver, a true tie remains shared.
+
+Evaluation Policy is authoritative Competition configuration and becomes another Versioning/Provenance consumer once judging begins. Changing aggregation, Coverage, compatibility, precision, or tie semantics after evidence exists is an outcome-affecting policy change that must remain reconstructible and trigger derived-result reconciliation.
+
+The current baseline assumes one Competition-level judging/ranking scope per Division. A future formal advancement/finalist workflow may justify adding a Stage/Round scope without changing individual Scorecard semantics.
 
 ## Phase exit target
 
