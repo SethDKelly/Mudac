@@ -21,6 +21,8 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - **Capture-channel parity** — paper and electronic judging share evaluation semantics while Provenance preserves capture differences.
 - **Coverage before outcome confidence** — numerical Aggregate and sufficiency of judging remain separate.
 - **Explainable ranking** — Ranking is derived from eligible evidence under an identifiable Evaluation Policy, never directly edited.
+- **Explicit official closeout** — Finalization is a reconciled Organizer decision producing a reconstructible Official Outcome Revision, not merely an event-end flag.
+- **Official is not automatically public** — result publication/disclosure is separate from internal Finalization.
 - **Mobile-first judging** — the primary Judge workflow targets personal smartphones under live-event conditions.
 - **Privacy by lifecycle** — ordinary Judge access to private Scorecards, Notes, and judging history ends when live judging ends while Organizer-governed records remain retained.
 - **Operational resilience** — interruption, connectivity loss, device loss, and paper fallback are expected operating conditions.
@@ -49,7 +51,7 @@ Primary human roles are Organizer, Judge, and technical Administrator. Judge and
 - Provenance
 - Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, and Panel Membership remain subordinate or derived mechanisms rather than standalone concepts.
+Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, and Official Outcome remain subordinate/derived/process mechanisms rather than standalone concepts.
 
 ## Design status
 
@@ -65,8 +67,8 @@ Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, and Panel Me
 | 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](docs/002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
 | 002-E | [Versioning, Provenance, Correction & Authority Preservation](docs/002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md) | **Complete** |
 | 002-F | [Aggregation, Coverage, Ranking & Evaluation Policy](docs/002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md) | **Complete** |
-| 002-G | Awards, Reconciliation, Finalization & Official Outcomes | **Next** |
-| 002-H | Export, Print, Operational Continuity & External Representations | Planned |
+| 002-G | [Awards, Reconciliation, Finalization & Official Outcomes](docs/002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md) | **Complete** |
+| 002-H | Export, Print, Operational Continuity & External Representations | **Next** |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
 See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 plan.
@@ -98,9 +100,19 @@ Coverage + Aggregate
 Rank eligibility
         ↓
 Division Ranking
+        ↓
+Organizer reconciliation
+        ↓
+Award decisions
+        ↓
+Competition Finalization
+        ↓
+Official Outcome Revision
 ```
 
-The default aggregation policy gives each eligible authoritative individual Judge Scorecard equal weight. Encounter means are analytical only. Missing judgments are never zero, Coverage exceptions never fabricate scores, outliers are not automatically discarded, Judges are not silently normalized, and incompatible Rubric Versions are not pooled or implicitly rescaled. Rank is Division-scoped and derived under explicit precision/tie rules. Evaluation Policy is itself authoritative/reconstructible once judging begins because changing the rules can change outcomes without changing Judge evidence.
+The default aggregation policy gives each eligible authoritative Judge Scorecard equal weight. Encounter means are analytical only. Missing judgments are never zero, Coverage exceptions never fabricate scores, outliers are not automatically discarded, Judges are not silently normalized, and incompatible Rubric Versions are not pooled or implicitly rescaled. Rank is Division-scoped and derived under explicit precision/tie rules. Evaluation Policy is authoritative/reconstructible once judging begins because changing rules can change outcomes without changing Judge evidence.
+
+After Event Completed, Organizers reconcile evidence, Coverage, policy, ties, and Awards. A computable Rank is not automatically ranking-ready. Rank-derived Awards use transparent ranking rules and Organizer confirmation by default, while discretionary Awards remain explicit human recognition decisions. Finalization requires all mandatory closeout gates and creates a reconstructible Official Outcome Revision. Post-finalization corrections preserve prior official revisions and require explicit successor confirmation rather than silently migrating Rank or Awards. Finalization remains separate from later publication or external representation.
 
 ## Repository documentation convention
 
@@ -112,4 +124,4 @@ The intended end state is deployment into an **AWS ecosystem** through **GitHub 
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 002 is converting the accepted concept catalog into explicit behavioral, policy, and synchronization contracts before conceptual UX and cloud architecture are finalized.
+This repository remains in **design**, not production implementation. Phase 002 is converting the accepted concept catalog into explicit behavioral, policy, synchronization, and official-closeout contracts before conceptual UX and cloud architecture are finalized.
