@@ -22,6 +22,14 @@ The canonical Phase 002 exit baseline is **[002-I — Phase 002 Consolidation & 
 | 002-H | [Export, Print, Operational Continuity & External Representations](002-H-export-print-operational-continuity-external-representations.md) | **Complete** |
 | 002-I | [Phase 002 Consolidation & Specification Exit Review](002-I-phase-consolidation-specification-exit-review.md) | **Complete** |
 
+## Post-exit compatible refinement
+
+[002-A1 — Team Extensible Attributes & Team Name Refinement](002-A1-team-extensible-attributes-team-name-refinement.md) extends the Team specification without changing the Phase 002 concept catalog or exit result.
+
+Team now explicitly supports extensible descriptive attributes under Competition-defined metadata rules. `teamName` is the initial standard optional attribute. Team Name is distinct from Alias, need not be unique, and has no scoring, Coverage, Ranking, or Award effect by default. Attribute definitions carry explicit disclosure and competitive-significance posture so generic metadata cannot become a hidden rules engine. Because a student-created Team name could reveal school or identity clues, it is Organizer-visible but not Judge-visible by default while blinded judging is active; public/ceremony use is an explicit disclosure decision.
+
+This refinement is compatible with 002-I because it adds subordinate Team state rather than a new Concept or synchronization dependency.
+
 ## Exit result
 
 All 15 accepted Concepts now have sufficient behavioral specification for the next design layer:
@@ -59,7 +67,8 @@ Important non-concept mechanisms remain explicit rather than being promoted into
 - Official Outcome Revision;
 - paper verification;
 - publication/disclosure;
-- operational fallback/recovery.
+- operational fallback/recovery;
+- Team Attribute Definitions / descriptive metadata policy.
 
 ## Canonical behavioral chain
 
@@ -119,6 +128,7 @@ Export / external representation
 - Export represents identified source state and does not become source truth.
 - Paper and electronic capture share evaluation semantics.
 - Operational degradation may change capture channel but never evaluation meaning or weight.
+- Team descriptive attributes are extensible but do not acquire competitive effect or disclosure merely by existing.
 
 ## Deliberate extension points
 
