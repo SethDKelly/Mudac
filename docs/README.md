@@ -81,10 +81,10 @@ See the [Phase 003 index](003-conceptual-ux-architecture/README.md).
 | 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
 | 003-G | [Paper Capture, Export, Print & Publication Experience](003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | **Complete** |
 | 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | **Complete** |
-| 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | **Next** |
-| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
+| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | **Complete** |
+| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | **Next** |
 
-### Phase 003 authoritative UX baseline through 003-H
+### Phase 003 authoritative UX baseline through 003-I
 
 Judge onboarding establishes verified current-event Participation, check-in, Panel context, and derived readiness. Judge evaluation confirms Team Alias/Division, preserves one Draft through scoring/Notes, uses explicit Finalization, and treats amendment as a separate authority mode. Peer scoring and standings remain hidden.
 
@@ -94,13 +94,21 @@ Reconciliation begins with evidence authority, Coverage/eligibility, Rubric comp
 
 Paper capture preserves `physical source → capture Draft → verification → authoritative Scorecard Version`, with Judge authorship distinct from Organizer capture. External representation preserves `source Version/revision + audience/disclosure + purpose → Export → preview → print/distribute/publish`. Artifacts may become stale/superseded without rewriting source history.
 
-Accessibility and degraded operation are now cross-journey architecture requirements rather than later polish. Core journeys must support keyboard/nonvisual operation, meaningful structure, text enlargement, non-color-only status, alternatives to QR/camera-only entry, sufficiently large interaction targets, predictable focus, accessible status/error feedback, and reasonable future conformance to WCAG 2.2 AA.
+Accessibility and degraded operation are cross-journey architecture requirements. Core journeys support keyboard/nonvisual operation, meaningful structure, text enlargement, non-color-only status, QR/camera alternatives, sufficiently large interaction targets, predictable focus, accessible feedback, and a reasonable future WCAG 2.2 AA target. Judge work is phone-primary; Organizer narrow views preserve `summary → exception → detail → action` semantics.
 
-Judge work is phone-primary; Organizer work may use dense wide-screen layouts but must preserve coherent narrow-screen `summary → exception → detail → action` access. Interruption/session/device changes recover the same Competition/Participation/resource context instead of duplicating records. Shared-device handoff clears prior Judge private context.
+Persistence confidence is truthful. Disconnected Draft continuation may be supported later only if local working state remains distinct from server-confirmed authority. Finalization, lifecycle transitions, invalidation, Coverage exceptions, official closeout, and publication cannot be represented as successful when authority state is unknown. Safe retry converges and stale state does not silently overwrite newer authority.
 
-Persistence confidence must be truthful. Disconnected Draft continuation may be supported later only if local working state remains distinguishable from server-confirmed authority. Finalization, lifecycle transitions, invalidation, Coverage exception, official closeout, and publication cannot be represented as successful when authority state is unknown. Safe retry must converge on the same logical operation; stale state must not silently overwrite newer authority.
+003-I consolidates the cross-cutting UX grammar. Domain/workflow state, authority, persistence confidence, readiness, validity/eligibility, version/freshness, issue consequence, disclosure posture, and publication state remain separate dimensions. Ambiguous terms such as `Ready`, `Complete`, `Finalized`, `Current`, `Official`, `Published`, and `Resolved` are qualified by subject where ambiguity exists.
 
-Normal, partially degraded, and full-paper operation remain one Competition model. Full fallback preserves Team Alias/Division, Judge, Encounter, exact Rubric Version, Criterion/Note semantics, and evaluation weight through an identified paper capture channel. Accessibility assistance may change capture actor but never Judge authorship. Publication infrastructure failure may leave official results unpublished without weakening Finalization.
+Readiness consistently distinguishes `Ready`, `Needs attention`, `Warning`, and `Optional / Not configured`; issue consequence is separately Informational, Warning, Blocking, or Critical. Acknowledgement never resolves source state, accepted exceptions retain the underlying shortfall/deviation, and high-consequence authoritative success is reflected in durable subject state rather than only transient messaging.
+
+Current and historical facts are explicitly labeled. Artifact freshness describes the representation without changing source history, and `Affected` identifies downstream review need without silently applying correction. Missing, recused/excused, invalidated, excluded, superseded, and withdrawn remain semantically distinct.
+
+Confirmation friction scales with consequence. Routine Draft changes remain low-friction; authoritative commitments use deliberate confirmation; exceptional/post-finalization actions use stronger authority/reason patterns. Corrective domain verbs such as `Withdraw`, `Invalidate`, `Supersede`, `Revoke`, and `Correct` are preferred over ambiguous destructive labels when history is preserved.
+
+Disclosure remains source + context + Access + target audience. Judge-safe, Organizer-sensitive, Ceremony-safe, and Public profiles are purpose-specific; role switching changes disclosure context as well as navigation; search, deep links, previews, exports, and metadata obey the same rules. Team attributes do not inherit visibility merely by existing, and Judge private evaluation evidence is not public by default.
+
+Recovery messaging states the attempted action, known current state, uncertainty, preserved work, safest next action, and escalation path. Stale conflicts do not overwrite newer authority, session/device recovery re-establishes Access, wrong-context recovery never relabels existing work, paper/electronic duplication converges on one logical evaluation, and publication failure never weakens Competition Finalization.
 
 ## Canonical terminology
 
@@ -123,4 +131,4 @@ Normal, partially degraded, and full-paper operation remain one Competition mode
 
 ## Known architectural boundary
 
-Target deployment remains **GitHub Actions → AWS**. Front-end framework, component architecture, identity provider, API style, persistence model, offline technology, synchronization/conflict strategy, artifact infrastructure, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS services remain downstream decisions that must satisfy the Concept and UX architecture rather than redefine it.
+Target deployment remains **GitHub Actions → AWS**. Front-end framework, component architecture, design system, identity provider, API style, persistence model, offline technology, synchronization/conflict strategy, artifact infrastructure, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS services remain downstream decisions that must satisfy the Concept and UX architecture rather than redefine it.
