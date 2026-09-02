@@ -31,8 +31,8 @@ Splitting further would create artificial micro-phases around subordinate state 
 | 002-A | [Competition, Division, Team & Alias Specifications](002-A-competition-division-team-alias-specifications.md) | **Complete** |
 | 002-B | [Identity, Participation & Access Specifications](002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
-| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | **Next** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
+| 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
+| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
@@ -105,6 +105,34 @@ with `Cancelled` for a prepared occurrence that never meaningfully began and `In
 When an Encounter opens it snapshots the Team Alias, Division, Panel context, and starting Judge participants. Later absence, recusal, or replacement is recorded as an explicit participant adjustment; the effective participant set drives Scorecard obligations. Recusal is never a zero or an unexplained missing Scorecard. A Judge who already created an authoritative Scorecard cannot have that evaluation silently removed through participant adjustment.
 
 The same Panel-Team pair normally produces at most one valid Encounter per Competition, and duplicate/retried initiation must converge on one logical Encounter. Presentation completion is distinct from Encounter completion: an Encounter remains Open until all effective evaluation obligations are satisfied or explicitly excused.
+
+## 002-D evaluation-instrument baseline
+
+002-D formalizes:
+
+```text
+Rubric     → defines valid individual judgment
+Scorecard  → records one Judge's judgment
+```
+
+Criterion and Note remain subordinate state. Every authoritative Scorecard references exactly one authoritative Rubric version, and later Rubric versions never silently rebind existing Scorecards. Scored Criteria are required in the initial baseline; missing, zero, and N/A remain distinct, and N/A has no implicit semantics.
+
+A Rubric uses one coherent scoring model. The specification permits additive-points or weighted-rating semantics but prohibits accidental double weighting. Weighted scales must define an explicit rating-to-contribution mapping rather than relying on an unstated interpretation of a 1–5 or similar scale.
+
+Scorecard lifecycle is:
+
+```text
+Draft → Finalized
+           │
+           ▼
+     Amendment Draft
+       ├── abandon → prior Finalized remains authoritative
+       └── finalize → new Finalized version
+```
+
+One Judge Participation × one Encounter yields at most one logical Scorecard. Drafts do not contribute to official aggregation. Finalization creates authoritative judging evidence; an Amendment Draft does not displace the prior authoritative version until finalized. Scorecard author, Encounter, Team basis, and Rubric basis cannot be silently changed by amendment.
+
+Criterion Notes and overall Notes are private evaluation evidence, do not independently alter numeric scoring, and are versioned with the Scorecard. Paper and electronic Scorecards share identical evaluation semantics; capture actor/channel differences belong to Provenance. Intra-Scorecard calculation is deterministic from Criterion responses plus the exact Rubric; cross-Judge aggregation remains for 002-F.
 
 ## Phase exit target
 
