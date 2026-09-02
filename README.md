@@ -6,34 +6,24 @@ The design is being developed using Daniel Jackson's **Concept Design** methodol
 
 ## Product intent
 
-Student Teams analyze a supplied dataset, perform statistical and/or machine-learning work, and present their findings and methodology to Panels of volunteer Judges. Judges typically bring different perspectives such as academic, business, and technical expertise. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Those Scorecards are aggregated across repeated Encounters to support Division-scoped ranking and competition Awards.
+Student Teams analyze a supplied dataset, perform statistical and/or machine-learning work, and present their findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Those Scorecards are aggregated across repeated Encounters to support Division-scoped ranking and competition Awards.
 
-The application is intended to support three primary human roles:
-
-- **Organizer** — configures and operates a Competition, establishes Divisions and Teams, defines Rubrics and Awards, coordinates Judges and Panels, monitors judging, reconciles paper and electronic Scorecards, reviews scoring, and finalizes results.
-- **Judge** — participates in a specific Competition, joins a Panel, evaluates Teams independently, records criterion scores and Notes, and finalizes their own Scorecards.
-- **Administrator** — operates the technical system without automatically inheriting competition decision authority.
-
-Students are currently **participants and beneficiaries, not application actors**. A Team is represented to Judges through a competition-safe identity rather than institutional identity so the application does not unnecessarily reveal school/college affiliation during judging.
+Primary human roles are Organizer, Judge, and technical Administrator. Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently competition participants and beneficiaries, not application actors.
 
 ## Core design principles
 
-The current design baseline emphasizes:
-
 - **Independent judgment** — each Judge authors an individual Scorecard; Panel and Team scores are derived.
-- **Traceable aggregation** — official results remain decomposable to the Scorecards, Rubric criteria, revisions, and policies that produced them.
-- **Controlled identity disclosure** — Judges see a Team's competition identity and Division, not administrative institutional identity.
-- **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, coverage, and tie behavior should not be hard-coded as MinneMUDAC constants.
-- **Controlled finality** — Rubrics, Scorecards, Awards, and competition outcomes may become authoritative without making legitimate correction impossible; revisions preserve prior state and provenance.
-- **Capture-channel parity** — paper and electronic judging use the same evaluation semantics. Paper is a supported accessibility and continuity path, not a second-class exception.
-- **Mobile-first judging** — the primary Judge workflow is intended for a personal smartphone under live-event conditions.
-- **Privacy by lifecycle** — Judge access to private Scorecards, Notes, and judging history exists for operational need during the event and expires after live participation; the authoritative competition record remains available to authorized Organizers.
-- **Operational resilience** — interruptions, network degradation, device loss, and temporary system failure must not silently destroy valid judging work.
-- **Technology independence during concept design** — AWS and GitHub Actions are known deployment boundary conditions, but specific AWS services, frameworks, databases, and authentication mechanisms remain intentionally deferred.
+- **Traceable aggregation** — official outcomes remain decomposable to Scorecards, Rubric criteria, revisions, and policy.
+- **Controlled identity disclosure** — Judges see Team Alias and Division rather than institutional identity.
+- **Configurable competition policy** — Divisions, Rubrics, Awards, Panel composition, scoring, coverage, and tie behavior are not hard-coded MinneMUDAC constants.
+- **Controlled finality** — authoritative state may be corrected through explicit Versioning and Provenance rather than silent overwrite.
+- **Capture-channel parity** — paper and electronic judging share evaluation semantics.
+- **Mobile-first judging** — the primary Judge workflow targets personal smartphones under live-event conditions.
+- **Privacy by lifecycle** — ordinary Judge access to private Scorecards, Notes, and judging history ends when live judging ends while Organizer-governed records remain retained.
+- **Operational resilience** — interruption, connectivity loss, device loss, and paper fallback are expected operating conditions.
+- **Technology independence during specification** — AWS and GitHub Actions are boundary conditions; specific infrastructure remains deferred.
 
-## Conceptual model
-
-Phase 001 accepts the following initial concept catalog.
+## Accepted concept catalog
 
 ### Core competition concepts
 
@@ -56,39 +46,37 @@ Phase 001 accepts the following initial concept catalog.
 - Provenance
 - Export
 
-Several important domain ideas are intentionally **not** standalone concepts. Judge and Organizer are Participation roles; Expertise is Judge Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms; PDF and QR are representations; dashboards and portals are UI projections.
+Judge and Organizer are Participation roles; Expertise is Participation state; Criteria belong to Rubrics; Notes belong to Scorecards; Panel Membership belongs to Panel state; Aggregation, Evaluation Coverage, and Rank are derived mechanisms.
 
 ## Design status
 
 **Phase 001 — Concept Design Foundation is complete.** Its canonical exit baseline is [`docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md`](docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
 
-**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.** It is divided into nine groups so structural concepts, access, judging, evaluation, history, numerical policy, official outcomes, and continuity can be specified without collapsing their boundaries.
+**Phase 002 — Concept Specification, Policy & Synchronization Refinement is in progress.**
 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 002-A | [Competition, Division, Team & Alias Specifications](docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
 | 002-B | [Identity, Participation & Access Specifications](docs/002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
-| 002-C | Panel, Membership & Judging Encounter Specifications | **Next** |
-| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | Planned |
+| 002-C | [Panel, Membership & Judging Encounter Specifications](docs/002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
+| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | **Next** |
 | 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
 | 002-I | Phase 002 Consolidation & Specification Exit Review | Planned |
 
-See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 specification plan.
+See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/002-concept-specification/README.md`](docs/002-concept-specification/README.md) for the Phase 002 plan.
 
-## Current structural and access specification
+## Current specification baseline
 
-002-A standardizes the Competition lifecycle as:
+Competition lifecycle:
 
 ```text
 Draft → Ready → Active → Event Completed → Finalized
 ```
 
-A Team may be temporarily incomplete while the Competition is Draft, but before Ready every non-withdrawn Team must have exactly one active Division and one unique active Alias. Division changes are corrections, Team identity remains stable across Division/Alias corrections, aliases already used operationally are not recycled to other Teams, and later Judging Encounters should retain the Alias representation used when the judging occurred.
-
-002-B standardizes the human-security model as:
+Human-security model:
 
 ```text
 Identity       → who the person is
@@ -96,11 +84,30 @@ Participation  → why/capacity in this Competition
 Access         → what the current context may do or see
 ```
 
-Judge and Organizer are Competition-scoped Participation roles. A returning Judge can reuse a reverified Identity but receives a new Participation for each Competition. Access is capability-oriented and sensitive to Competition lifecycle, resource ownership, scope, purpose, and time. Event Completed expires ordinary Judge access to Scorecards, Notes, and judging history without deleting those records; legitimate later corrections use narrow temporary access. Administrator technical authority does not automatically confer Competition decision authority.
+Judging-topology model:
+
+```text
+Judge Participation
+        ↓
+      Panel
+        │
+        │ intended grouping
+        ▼
+Panel + Team
+        ↓
+Judging Encounter
+        │
+        ├── presented Alias / Division snapshot
+        ├── starting participant snapshot
+        ├── explicit participant adjustments
+        └── effective evaluation obligations
+```
+
+Panel membership may change without rewriting historical judging. Expertise and assigned Panel composition capacity are distinct. Encounter initiation is duplicate-safe, same Panel + same Team normally produces one valid Encounter, and legitimate rejudging creates an explicit replacement. Recusal or absence changes evaluation obligations without creating zero scores, while an already-authoritative Scorecard cannot be silently removed through participant adjustment.
 
 ## Repository documentation convention
 
-Design work evolves phase by phase. The repository documentation is updated as each grouping is completed so that the repository—not chat history—remains the durable design baseline.
+The repository—not chat history—is the durable design baseline. Completed design groupings are added to `/docs` as they are completed.
 
 ```text
 docs/
@@ -111,12 +118,13 @@ docs/
     README.md
     002-A-competition-division-team-alias-specifications.md
     002-B-identity-participation-access-specifications.md
+    002-C-panel-membership-judging-encounter-specifications.md
 ```
 
 ## Architecture boundary condition
 
-The intended end state is deployment into an **AWS ecosystem** through **GitHub Actions**. This is an accepted constraint, not yet an architecture decision. Specific choices such as hosting model, identity provider, API style, database, local/offline persistence, audit implementation, and AWS services will be selected after the conceptual and behavioral specifications are sufficiently stable.
+The intended end state is deployment into an **AWS ecosystem** through **GitHub Actions**. This is an accepted constraint, not yet an architecture decision. Hosting model, identity provider, API style, database, offline persistence, audit implementation, and AWS service choices will follow the behavioral specifications.
 
 ## Status
 
-This repository remains in **design**, not production implementation. Phase 001 established the conceptual baseline; Phase 002 is turning that baseline into explicit concept, policy, and synchronization specifications before conceptual UX and cloud architecture are finalized.
+This repository remains in **design**, not production implementation. Phase 002 is converting the accepted concept catalog into explicit behavioral and synchronization contracts before conceptual UX and cloud architecture are finalized.
