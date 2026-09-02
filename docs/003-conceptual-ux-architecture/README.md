@@ -27,16 +27,14 @@ Ten groups provide enough separation to keep the two primary actor experiences a
 9. consolidate cross-cutting status language, feedback, disclosure/privacy, confirmation, and recovery patterns;
 10. reconcile the full experience architecture and determine readiness for visual/system architecture.
 
-Combining these further would mix very different cognitive modes such as live Judge scoring and Organizer reconciliation. Splitting them further would create screen/control micro-phases before the information architecture is stable.
-
 ## Phase plan
 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
 | 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
-| 003-C | Judge Encounter, Rubric, Scorecard & Amendment Experience | **Next** |
-| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | Planned |
+| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
+| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | **Next** |
 | 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
 | 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
@@ -123,6 +121,40 @@ QRs, links, event codes, and Panel codes are context/navigation accelerators rat
 Panel membership remains Organizer-governed by default. A Panel QR/code may confirm or request an intended Panel context but cannot silently self-reassign a Judge. `Ready to Judge` is derived from verified Identity, valid Participation, check-in, required current-event profile information, resolved Panel membership, active Access, and Competition lifecycle; a successful login alone is insufficient.
 
 Dual-role people enter an explicit Judge mode with Judge-safe disclosure rather than a blended Organizer/Judge interface. Shared devices clear prior Judge context. Ordinary onboarding closes at Event Completed; post-event amendments use the narrow correction-access path rather than reopening the event experience. QR/camera use always has an accessible alternative, and degraded connectivity must never cause the UI to falsely claim authoritative Identity/check-in/Access state.
+
+## 003-C baseline
+
+003-C defines the Judge's core live evaluation loop:
+
+```text
+Ready to Judge
+      ↓
+resolve / confirm current Encounter
+      ↓
+confirm Team Alias + Division
+      ↓
+Scorecard Draft
+      ↓
+score + Notes
+      ↓
+finish / review
+      ↓
+explicit Finalize
+      ↓
+authoritative Scorecard Version
+      ↓
+return to Panel work
+```
+
+Encounter selection may originate from prepared assignments, current Panel context, Team selection, or QR/code entry, but same-Panel/same-Team entry converges on one logical Encounter. Team context is deliberately confirmed before scoring and remains legible throughout; Alias is canonical and `teamName` stays hidden by default during blinded judging.
+
+The Rubric is embedded in the evaluation task: Criterion guidance, valid bounded scoring choices, and Criterion Notes remain semantically close. Draft work is non-authoritative, may be incomplete, and should feel automatically preserved while persistence confidence remains truthful. Presentation end does not finalize a Scorecard. If live operations require the Panel to move on, a Judge may deliberately retain an unfinished Draft and complete it later rather than blocking the next presentation or losing work.
+
+The Judge's temporary `My judging` view exists to answer what they have judged and what remains incomplete; it never exposes peer scores, Panel/Team aggregates, Coverage, Rank, or standings. The Judge may inspect their own deterministic Scorecard value, particularly at final review, without confusing it with a Team Aggregate.
+
+Finalization is an explicit validated commitment, never a side effect of autosave, presentation end, or navigation. Uncertain Finalization responses remain explicitly uncertain and safe retries resolve the same logical Scorecard. A Finalized Scorecard is read-only in ordinary presentation; amendment is a distinct mode in which the prior Version remains authoritative until a successor is finalized. Structural errors such as wrong Team/Encounter/Rubric are escalated rather than repaired as ordinary amendments.
+
+Recusal is explicit and never represented as zero. Shared-device handoff, role/Competition switching, degraded connectivity, and paper fallback cannot silently discard Draft work or create a second evaluation. Event Completed removes ordinary Judge history/amendment access; later correction uses the narrow post-event authorization path.
 
 ## Team attribute refinement
 
