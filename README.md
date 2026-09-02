@@ -6,7 +6,7 @@ The design is being developed using Daniel Jackson's **Concept Design** methodol
 
 ## Product intent
 
-Student Teams analyze a supplied dataset and present findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Eligible authoritative Scorecards are combined under explicit Evaluation Policy to support Coverage assessment, Division-scoped ranking, competition Awards, and controlled official closeout.
+Student Teams analyze a supplied dataset and present findings and methodology to Panels of volunteer Judges. Each Judge independently completes a Rubric-based Scorecard for a Team during a Judging Encounter. Eligible authoritative Scorecards are combined under explicit Evaluation Policy to support Coverage assessment, Division-scoped ranking, Awards, and controlled official closeout.
 
 Judge and Organizer are Competition-scoped Participation roles rather than permanent Identity types. Students are currently Competition participants and beneficiaries, not application actors.
 
@@ -29,14 +29,16 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Explicit official closeout** — Finalization produces a reconstructible Official Outcome Revision.
 - **Official is not automatically public** — result publication remains a separate release action.
 - **Traceable external representation** — printed/downloaded/published artifacts stay tied to exact source state and audience disclosure.
+- **Accessibility as semantic parity** — alternate input, assistive technology, viewport, device, or capture channel must preserve the same Competition meaning and authority.
 - **Paper continuity** — paper is a first-class accessibility/continuity path and converges on the same Scorecard model.
 - **Role-aware experience** — Participation context determines Judge/Organizer mode and disclosure posture.
 - **Derived readiness** — Competition, Ranking, and Finalization readiness come from source state and policy, not checkboxes.
 - **Exception-first operations** — Organizer live/reconciliation views prioritize unresolved process/evidence/fairness conditions over leaderboard spectacle.
 - **Draft-safe judging** — evaluation remains a non-authoritative Draft until explicit Finalization; amendment is separate afterward.
 - **Mobile-first judging** — Judge workflow targets personal smartphones under live-event conditions.
+- **Truthful persistence and authority** — connectivity uncertainty is never presented as confirmed Finalization, lifecycle transition, correction, or publication.
 - **Privacy by lifecycle** — ordinary Judge private-evaluation access ends when live judging ends.
-- **Operational resilience** — interruption, device/network loss, mixed-mode operation, unfinished Drafts, and paper fallback are expected conditions.
+- **Operational resilience** — interruption, device/network loss, mixed-mode operation, unfinished Drafts, shared devices, and paper fallback are expected conditions.
 - **Technology independence during design** — AWS/GitHub Actions are boundary conditions; concrete services remain deferred.
 
 ## Accepted concept catalog
@@ -87,8 +89,8 @@ Compatible refinement: [`002-A1`](docs/002-concept-specification/002-A1-team-ext
 | 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](docs/003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
 | 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
 | 003-G | [Paper Capture, Export, Print & Publication Experience](docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | **Complete** |
-| 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | **Next** |
-| 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | Planned |
+| 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | **Complete** |
+| 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | **Next** |
 | 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
 
 See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/003-conceptual-ux-architecture/README.md`](docs/003-conceptual-ux-architecture/README.md) for the Phase 003 plan.
@@ -153,8 +155,6 @@ verification
 authoritative Scorecard Version
 ```
 
-The Judge remains evaluation author while the Organizer is capture actor. Paper ambiguity is never resolved by Organizer guesswork, and electronic/paper artifacts for one Judge × Encounter converge onto one logical Scorecard.
-
 External representation uses:
 
 ```text
@@ -171,7 +171,11 @@ preview / validation
 print / distribute / publish
 ```
 
-Artifacts may become stale/superseded without changing source history. Generating an artifact is distinct from releasing or publishing it. Official result publication requires an Official Outcome Revision. Corrected official outcomes mark prior publications affected and require deliberate successor release rather than silent rewrite.
+Accessibility/resilience now applies across those same journeys. Judge work must remain fully usable on small touch devices and through keyboard/nonvisual interaction; Organizer wide-screen density must degrade into coherent narrow-screen exception/detail workflows. QR/camera use has alternatives, status is not color-only, and future implementation should reasonably target WCAG 2.2 AA across core flows.
+
+Interruption, session expiry, device replacement, and shared-device handoff preserve the same Participation and logical Scorecard where authorized. Persistence confidence is explicit: disconnected local Draft continuation may be supported later, but it remains distinct from authoritative persistence, and Finalization or other high-consequence actions cannot be claimed successful while server authority is unknown. Safe retries converge rather than duplicating votes or lifecycle actions.
+
+Normal, partially degraded, and full-paper operation remain one Competition model. Full fallback preserves Team Alias/Division, Judge, Encounter, exact Rubric Version, Criterion/Note semantics, and evaluation weight. Assistance may change capture actor but never Judge authorship. Publication infrastructure failure can leave a Competition Finalized with publication pending rather than weakening official-outcome semantics.
 
 ## Repository documentation convention
 
@@ -179,8 +183,8 @@ The repository—not chat history—is the durable design baseline. Each complet
 
 ## Architecture boundary condition
 
-The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component system, identity provider, API style, database, offline persistence, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, and AWS service choices follow the behavioral and UX architecture rather than drive it.
+The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the behavioral and UX architecture rather than drive it.
 
 ## Status
 
-This repository remains in **design**, not production implementation. **003-H — Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture is next.**
+This repository remains in **design**, not production implementation. **003-I — Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns is next.**
