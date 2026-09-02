@@ -34,8 +34,8 @@ Ten groups provide enough separation to keep the two primary actor experiences a
 | 003-A | [Experience Architecture, Role Modes & Navigation Model](003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
 | 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
 | 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
-| 003-D | Organizer Competition Setup, Configuration & Readiness Experience | **Next** |
-| 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | Planned |
+| 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
+| 003-E | Organizer Judge, Panel, Encounter & Live Operations Experience | **Next** |
 | 003-F | Reconciliation, Coverage, Ranking, Awards & Finalization Experience | Planned |
 | 003-G | Paper Capture, Export, Print & Publication Experience | Planned |
 | 003-H | Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture | Planned |
@@ -86,17 +86,11 @@ role-specific operational context
 current task / artifact
 ```
 
-Judge and Organizer are explicit experience modes rather than one blended navigation tree. If an Identity has multiple Participations, switching mode is deliberate and changes disclosure posture as well as available tasks.
-
-Judge experience remains narrow and task-oriented around event context, Panel context, current judging, and temporary own judging history. Organizer experience is organized around Competition operating modes: preparation, live operations, reconciliation, outcomes, and materials/external representations. Domain collections remain available contextually but do not define the whole application as one navigation item per Concept.
-
-Competition lifecycle changes which work is foregrounded. Historical Finalized Competitions default to inspect/trace/export, while exceptional correction is intentionally distinct from ordinary editing. Current state, historical snapshots, authoritative Versions, and superseded Versions must never be visually conflated.
-
-Organizer situational awareness should be exception-first and drillable to source evidence. Competition and role context remain unambiguous for consequential work; deep links or QR codes still resolve Identity/Participation/Access before disclosure. Navigation visibility never substitutes for Access enforcement, and changing context must not silently destroy meaningful working state.
+Judge and Organizer are explicit experience modes rather than one blended navigation tree. Judge experience remains narrow and task-oriented around event context, Panel context, current judging, and temporary own judging history. Organizer experience is organized around Competition operating modes: preparation, live operations, reconciliation, outcomes, and materials/external representations. Current state, historical snapshots, authoritative Versions, and superseded Versions must never be visually conflated. Organizer situational awareness is exception-first and drillable to source evidence.
 
 ## 003-B baseline
 
-003-B defines Judge onboarding as a state-driven event journey:
+Judge onboarding is a state-driven event journey:
 
 ```text
 entry mechanism
@@ -116,15 +110,11 @@ Organizer-governed Panel context
 derived Ready-to-Judge state
 ```
 
-QRs, links, event codes, and Panel codes are context/navigation accelerators rather than authority. Returning Judges reuse/reverify Identity but receive a new Competition Participation and reconfirm current-event expertise. Check-in is distinct from registration or authentication, and device changes recover the same Participation rather than creating another Judge.
-
-Panel membership remains Organizer-governed by default. A Panel QR/code may confirm or request an intended Panel context but cannot silently self-reassign a Judge. `Ready to Judge` is derived from verified Identity, valid Participation, check-in, required current-event profile information, resolved Panel membership, active Access, and Competition lifecycle; a successful login alone is insufficient.
-
-Dual-role people enter an explicit Judge mode with Judge-safe disclosure rather than a blended Organizer/Judge interface. Shared devices clear prior Judge context. Ordinary onboarding closes at Event Completed; post-event amendments use the narrow correction-access path rather than reopening the event experience. QR/camera use always has an accessible alternative, and degraded connectivity must never cause the UI to falsely claim authoritative Identity/check-in/Access state.
+QRs, links, event codes, and Panel codes accelerate context but do not grant authority. Returning Judges receive new Competition Participation, check-in remains distinct from registration/authentication, and Panel membership remains Organizer-governed by default. Dual-role people enter explicit Judge mode; shared devices clear prior Judge context; ordinary onboarding closes at Event Completed.
 
 ## 003-C baseline
 
-003-C defines the Judge's core live evaluation loop:
+The Judge's live evaluation loop is:
 
 ```text
 Ready to Judge
@@ -146,15 +136,43 @@ authoritative Scorecard Version
 return to Panel work
 ```
 
-Encounter selection may originate from prepared assignments, current Panel context, Team selection, or QR/code entry, but same-Panel/same-Team entry converges on one logical Encounter. Team context is deliberately confirmed before scoring and remains legible throughout; Alias is canonical and `teamName` stays hidden by default during blinded judging.
+Same-Panel/same-Team entry converges on one Encounter. Alias remains canonical and `teamName` is hidden by default during blinded judging. Draft changes are lightweight thought formation with truthful persistence feedback. Presentation end does not finalize the Scorecard; unfinished Drafts may be retained if live operations need to proceed. Finalization is explicit and retry-safe. Amendment is a separate mode with the prior Version authoritative until a successor is finalized. Peer scores, aggregates, Coverage, Rank, and standings remain hidden.
 
-The Rubric is embedded in the evaluation task: Criterion guidance, valid bounded scoring choices, and Criterion Notes remain semantically close. Draft work is non-authoritative, may be incomplete, and should feel automatically preserved while persistence confidence remains truthful. Presentation end does not finalize a Scorecard. If live operations require the Panel to move on, a Judge may deliberately retain an unfinished Draft and complete it later rather than blocking the next presentation or losing work.
+## 003-D baseline
 
-The Judge's temporary `My judging` view exists to answer what they have judged and what remains incomplete; it never exposes peer scores, Panel/Team aggregates, Coverage, Rank, or standings. The Judge may inspect their own deterministic Scorecard value, particularly at final review, without confusing it with a Team Aggregate.
+003-D defines Organizer preparation as parallel workstreams coordinated by one derived readiness model:
 
-Finalization is an explicit validated commitment, never a side effect of autosave, presentation end, or navigation. Uncertain Finalization responses remain explicitly uncertain and safe retries resolve the same logical Scorecard. A Finalized Scorecard is read-only in ordinary presentation; amendment is a distinct mode in which the prior Version remains authoritative until a successor is finalized. Structural errors such as wrong Team/Encounter/Rubric are escalated rather than repaired as ordinary amendments.
+```text
+Competition Draft
+      ↓
+Competition details
+Divisions
+Teams + Team attributes / Team Names
+Aliases
+Rubric
+Evaluation Policy
+Awards
+Judge / Panel preparation
+Materials / continuity preparation
+      ↓
+continuous validation
+      ↓
+Configuration readiness + Operational warnings
+      ↓
+Organizer `Mark Ready`
+      ↓
+Competition Ready
+```
 
-Recusal is explicit and never represented as zero. Shared-device handoff, role/Competition switching, degraded connectivity, and paper fallback cannot silently discard Draft work or create a second evaluation. Event Completed removes ordinary Judge history/amendment access; later correction uses the narrow post-event authorization path.
+Preparation is non-linear rather than a mandatory one-pass wizard. Readiness may look checklist-like but is derived from actual authoritative source state; manually checking a task never substitutes for Team/Division/Alias coherence, a usable authoritative Rubric, valid Evaluation Policy, or other configured gates.
+
+Blocking conditions and operational warnings remain distinct. Structural/evaluation blockers prevent `markReady`; day-of-event risks such as incomplete expected Judge expertise, provisional Panel staffing, or ungenerated paper materials remain warnings unless explicit Competition policy promotes them into hard gates. Configuration readiness and operational staffing readiness are therefore visible together without being conflated.
+
+Team preparation supports bulk intake with preview/validation/exception handling. Extensible Team attributes remain typed/disclosure-controlled metadata; `teamName` is optional, non-unique, non-competitive, and hidden from Judges by default. Alias setup supports safe generation/validation and may surface stale Export impact after corrections. A Judge-safe preview lets Organizers inspect what Judges would see without impersonating Judge authority.
+
+Rubric Drafts and authoritative Rubric Versions remain visually distinct. Evaluation Policy is first-class visible configuration with clear standard defaults, Coverage requirements, ranking precision, and tie semantics rather than hidden constants. Award definitions distinguish rank-derived versus discretionary behavior. Expected Judge preparation and actual event-day check-in remain separate, and final Panel staffing may legitimately remain a live-operation concern.
+
+`Mark Ready` is an explicit lifecycle action only after derived hard gates pass. Non-blocking warnings carry into live-operation handoff. Ready-state changes trigger readiness reassessment; changes that would make readiness invalid explicitly return the Competition to Draft rather than silently leaving a stale Ready state. Working future Draft configurations do not replace the authoritative configuration that Ready currently depends upon.
 
 ## Team attribute refinement
 
