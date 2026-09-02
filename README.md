@@ -59,8 +59,8 @@ Judge and Organizer are Participation roles; Expertise is Participation state; C
 | 002-A | [Competition, Division, Team & Alias Specifications](docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md) | **Complete** |
 | 002-B | [Identity, Participation & Access Specifications](docs/002-concept-specification/002-B-identity-participation-access-specifications.md) | **Complete** |
 | 002-C | [Panel, Membership & Judging Encounter Specifications](docs/002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md) | **Complete** |
-| 002-D | Rubric, Criterion, Scorecard & Notes Specifications | **Next** |
-| 002-E | Versioning, Provenance, Correction & Authority Preservation | Planned |
+| 002-D | [Rubric, Criterion, Scorecard & Notes Specifications](docs/002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md) | **Complete** |
+| 002-E | Versioning, Provenance, Correction & Authority Preservation | **Next** |
 | 002-F | Aggregation, Coverage, Ranking & Evaluation Policy | Planned |
 | 002-G | Awards, Reconciliation, Finalization & Official Outcomes | Planned |
 | 002-H | Export, Print, Operational Continuity & External Representations | Planned |
@@ -84,15 +84,13 @@ Participation  → why/capacity in this Competition
 Access         → what the current context may do or see
 ```
 
-Judging-topology model:
+Judging topology:
 
 ```text
 Judge Participation
         ↓
       Panel
         │
-        │ intended grouping
-        ▼
 Panel + Team
         ↓
 Judging Encounter
@@ -103,7 +101,26 @@ Judging Encounter
         └── effective evaluation obligations
 ```
 
-Panel membership may change without rewriting historical judging. Expertise and assigned Panel composition capacity are distinct. Encounter initiation is duplicate-safe, same Panel + same Team normally produces one valid Encounter, and legitimate rejudging creates an explicit replacement. Recusal or absence changes evaluation obligations without creating zero scores, while an already-authoritative Scorecard cannot be silently removed through participant adjustment.
+Evaluation model:
+
+```text
+Authoritative Rubric Version
+        ↓
+required scored Criteria
+        ↓
+one Judge × one Encounter
+        ↓
+logical Scorecard
+        │
+        ├── Draft
+        └── Finalized authoritative version
+                ↓
+          optional Amendment Draft
+                ↓
+          next Finalized version
+```
+
+Every Scorecard remains tied to the exact Rubric version under which it was formed. Notes are versioned private evaluation evidence, not hidden scoring inputs. Paper and electronic judging share the same Scorecard semantics. Intra-Scorecard calculation is deterministic from the Rubric and Criterion responses, while cross-Judge aggregation remains a separate policy concern.
 
 ## Repository documentation convention
 
@@ -119,6 +136,7 @@ docs/
     002-A-competition-division-team-alias-specifications.md
     002-B-identity-participation-access-specifications.md
     002-C-panel-membership-judging-encounter-specifications.md
+    002-D-rubric-criterion-scorecard-notes-specifications.md
 ```
 
 ## Architecture boundary condition
