@@ -29,7 +29,7 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Explicit official closeout** — Finalization produces a reconstructible Official Outcome Revision.
 - **Official is not automatically public** — result publication remains a separate release action.
 - **Traceable external representation** — printed/downloaded/published artifacts stay tied to exact source state and audience disclosure.
-- **Accessibility as semantic parity** — alternate input, assistive technology, viewport, device, or capture channel must preserve the same Competition meaning and authority.
+- **Accessibility as semantic parity** — alternate input, assistive technology, viewport, device, or capture channel preserves Competition meaning and authority.
 - **Paper continuity** — paper is a first-class accessibility/continuity path and converges on the same Scorecard model.
 - **Role-aware experience** — Participation context determines Judge/Organizer mode and disclosure posture.
 - **Derived readiness** — Competition, Ranking, and Finalization readiness come from source state and policy, not checkboxes.
@@ -37,7 +37,10 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Draft-safe judging** — evaluation remains a non-authoritative Draft until explicit Finalization; amendment is separate afterward.
 - **Mobile-first judging** — Judge workflow targets personal smartphones under live-event conditions.
 - **Truthful persistence and authority** — connectivity uncertainty is never presented as confirmed Finalization, lifecycle transition, correction, or publication.
-- **Privacy by lifecycle** — ordinary Judge private-evaluation access ends when live judging ends.
+- **Multidimensional status** — workflow, authority, readiness, validity, freshness, severity, disclosure, and publication remain distinct even when visually summarized.
+- **Qualified finality language** — `Ready`, `Complete`, `Finalized`, `Current`, `Official`, `Published`, and `Resolved` are qualified by subject whenever ambiguity is possible.
+- **Privacy by lifecycle and representation** — ordinary Judge private-evaluation access ends with live judging, and every view/export/search result applies its target disclosure context.
+- **Recovery without semantic drift** — recovery preserves work and explains known state without silently overwriting newer authority, relabeling context, or creating duplicate evaluation weight.
 - **Operational resilience** — interruption, device/network loss, mixed-mode operation, unfinished Drafts, shared devices, and paper fallback are expected conditions.
 - **Technology independence during design** — AWS/GitHub Actions are boundary conditions; concrete services remain deferred.
 
@@ -90,8 +93,8 @@ Compatible refinement: [`002-A1`](docs/002-concept-specification/002-A1-team-ext
 | 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
 | 003-G | [Paper Capture, Export, Print & Publication Experience](docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | **Complete** |
 | 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | **Complete** |
-| 003-I | Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns | **Next** |
-| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | Planned |
+| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](docs/003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | **Complete** |
+| 003-J | Phase 003 Consolidation & UX Architecture Exit Review | **Next** |
 
 See [`docs/README.md`](docs/README.md) for the canonical documentation index and [`docs/003-conceptual-ux-architecture/README.md`](docs/003-conceptual-ux-architecture/README.md) for the Phase 003 plan.
 
@@ -141,41 +144,17 @@ Official Outcome Revision
 Export / publication
 ```
 
-Paper capture uses:
+Paper capture uses `physical source → unique source reference → capture Draft → verification → authoritative Scorecard Version`. External representation uses `authoritative source Version/Official Outcome Revision + audience/disclosure + purpose → Export → preview/validation → print/distribute/publish`.
 
-```text
-physical source
-      ↓
-unique source reference
-      ↓
-capture Draft
-      ↓
-verification
-      ↓
-authoritative Scorecard Version
-```
+Accessibility/resilience applies across those same journeys. Judge work is fully phone-oriented, Organizer density adapts to narrow `summary → exception → detail → action` workflows, and keyboard/nonvisual interaction, large text, QR alternatives, focus management, non-color-only status, and a reasonable future WCAG 2.2 AA target are architectural requirements.
 
-External representation uses:
+003-I now supplies one cross-cutting UX grammar. A subject may have separate workflow, authority, persistence, readiness, eligibility, freshness, severity, disclosure, and publication states. `Draft — complete` does not imply `Scorecard Finalized`; `Ranking ready` does not imply `Official`; `Competition Finalized` does not imply `Published`.
 
-```text
-authoritative source Version / Official Outcome Revision
-      +
-audience / disclosure profile
-      +
-purpose
-      ↓
-Export
-      ↓
-preview / validation
-      ↓
-print / distribute / publish
-```
+Readiness distinguishes `Ready`, `Needs attention`, `Warning`, and `Optional / Not configured`, while issue consequence is separately Informational, Warning, Blocking, or Critical. Accepted exceptions preserve the original deviation. High-consequence state is confirmed durably rather than through transient optimistic messages.
 
-Accessibility/resilience now applies across those same journeys. Judge work must remain fully usable on small touch devices and through keyboard/nonvisual interaction; Organizer wide-screen density must degrade into coherent narrow-screen exception/detail workflows. QR/camera use has alternatives, status is not color-only, and future implementation should reasonably target WCAG 2.2 AA across core flows.
+Disclosure is based on source + Participation/Access + target audience. Judge-safe, Organizer-sensitive, Ceremony-safe, and Public representations remain purpose-specific. Role switches, deep links, search, previews, exports, and publication all obey the same disclosure boundary.
 
-Interruption, session expiry, device replacement, and shared-device handoff preserve the same Participation and logical Scorecard where authorized. Persistence confidence is explicit: disconnected local Draft continuation may be supported later, but it remains distinct from authoritative persistence, and Finalization or other high-consequence actions cannot be claimed successful while server authority is unknown. Safe retries converge rather than duplicating votes or lifecycle actions.
-
-Normal, partially degraded, and full-paper operation remain one Competition model. Full fallback preserves Team Alias/Division, Judge, Encounter, exact Rubric Version, Criterion/Note semantics, and evaluation weight. Assistance may change capture actor but never Judge authorship. Publication infrastructure failure can leave a Competition Finalized with publication pending rather than weakening official-outcome semantics.
+Recovery messages identify attempted action, known state, uncertainty, preserved work, and the next safe action. Stale state never silently overwrites newer authority, session/device recovery re-establishes current Access, wrong-context recovery never relabels existing work, and paper/electronic traces converge on one logical evaluation.
 
 ## Repository documentation convention
 
@@ -183,8 +162,8 @@ The repository—not chat history—is the durable design baseline. Each complet
 
 ## Architecture boundary condition
 
-The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the behavioral and UX architecture rather than drive it.
+The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the behavioral and UX architecture rather than drive it.
 
 ## Status
 
-This repository remains in **design**, not production implementation. **003-I — Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns is next.**
+This repository remains in **design**, not production implementation. **003-J — Phase 003 Consolidation & UX Architecture Exit Review is next.**
