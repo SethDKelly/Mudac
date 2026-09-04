@@ -13,7 +13,7 @@ Start here:
 * [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain and conceptual UX knowledge.
-* [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, lineage, and stable-rule governance.
+* [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, metadata/trust/lifecycle, lineage, and stable-rule governance.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
 Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while phase `index.md` files map forward to current canonical successors.
@@ -30,7 +30,8 @@ Numbered phase directories remain preserved as rationale and design provenance. 
   * 004-D Complete
   * 004-E Complete
   * 004-F Complete
-  * **004-G Next — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions**
+  * 004-G Complete
+  * **004-H Next — Validation Tooling, Link/Authority Checks & CI Enforcement**
 
 System, Application, Data & Synchronization Architecture follows as **Phase 005**.
 
