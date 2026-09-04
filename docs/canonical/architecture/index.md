@@ -1,9 +1,19 @@
 # Architecture
 
-This directory is reserved for current accepted system/application architecture contracts and decisions.
+Current accepted MUDAC system/application architecture contracts and decisions.
 
-It remains intentionally sparse until architecture decisions are accepted. System, application, data, synchronization, security, front-end, deployment, and AWS architecture are downstream design concerns rather than Phase 004 knowledge-migration requirements.
+Architecture remains downstream of canonical product, UX, invariant, policy, and governance knowledge. Architecture owners describe how those upstream contracts are realized; they do not redefine product meaning for implementation convenience.
 
-Future architecture knowledge must reference and satisfy upstream canonical Concepts, mechanisms, policies, invariants, experience contracts, and governance rules rather than redefining them for implementation convenience.
+# Foundation
 
-Accepted architecture documents should become current owners for architecture meaning in this subtree while their numbered design-phase records preserve rationale, alternatives, and decision history.
+* [Architectural Foundation, Quality Attributes & Trust Boundaries](architectural-foundation.md) — `ARCH-*` architecture-wide constraints for authoritative transitions, client/local state, projections, attribution, retry/failure behavior, disclosure enforcement, freshness/uncertainty, trust boundaries, and architecture decision quality.
+
+# Planned architecture areas
+
+Phase 005 will add accepted current owners here as system/application boundaries, persistence/data, identity/access, command/API/concurrency, synchronization/degraded operation, external representation, front-end, and AWS/runtime decisions become stable.
+
+# Authority rule
+
+Accepted architecture documents are current owners for architecture meaning in this subtree while numbered Phase 005 records preserve alternatives, rationale, tradeoffs, and decision lineage.
+
+Architecture must cite task-relevant upstream stable rules and state local consequences rather than recreating complete upstream rule bodies. Knowledge topology does not dictate source-code topology.
