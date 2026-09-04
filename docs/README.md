@@ -122,24 +122,38 @@ Status is multidimensional. Workflow/lifecycle, authority, persistence confidenc
 
 Known extensions such as formal Stage/Round, student application access/feedback, formal scheduling, notifications, advanced Judge calibration, richer public results, and advanced Award governance remain explicit future work rather than baseline gaps.
 
-## Recommended Phase 004
+## Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance
 
-The next design layer is recommended as **Phase 004 — System, Application, Data & Synchronization Architecture**.
+**Status: In Progress**
 
-Proposed groups:
+See the [Phase 004 index](004-knowledge-architecture/README.md).
 
-- 004-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Design Authority
-- 004-B — Application Boundaries, Modules, Domain Services & Dependency Architecture
-- 004-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture
-- 004-D — Identity, Authentication, Participation, Access & Session Architecture
-- 004-E — Commands, Queries, API Contracts, Idempotency & Concurrency
-- 004-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery
-- 004-G — Export, Paper Capture, Artifact, Publication & External-Representation Architecture
-- 004-H — Front-End State, Navigation, Component-System & Responsive Interaction Architecture
-- 004-I — AWS Runtime, Deployment, Security, Observability, Backup & Operational Architecture
-- 004-J — Phase 004 Consolidation, Threat/Failure Review & Implementation-Readiness Exit
+| Group | Topic | Status |
+| --- | --- | --- |
+| 004-A | [OKF Adoption Authority, Methodology Compatibility & Terminology Contract](004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md) | **Complete** |
+| 004-B | Knowledge Bundle Topology, Canonical Authority Layers & Progressive Disclosure | **Next** |
+| 004-C | Canonical Concept, Policy, Invariant & Experience Knowledge Extraction | Planned |
+| 004-D | Historical Phase Migration, Provenance & Source-Lineage Retrofit | Planned |
+| 004-E | Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit | Planned |
+| 004-F | Documentation Governance, Agent Context & Anti-Drift Rules | Planned |
+| 004-G | OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions | Planned |
+| 004-H | Validation Tooling, Link/Authority Checks & CI Enforcement | Planned |
+| 004-I | Repository-Wide Knowledge Graph / Drift Audit & Migration Closure | Planned |
+| 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | Planned |
 
-Phase 004 may choose technologies and mechanisms, but must treat the Phase 001–003 lifecycle, authority, evidence, disclosure, accessibility, finality, and recovery semantics as fixed architectural input unless deliberately revisited through the canonical design process.
+### 004-A knowledge-authority baseline
+
+MUDAC adopts the dedicated [GoogleCloudPlatform/open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format) repository as upstream OKF authority and initially targets [OKF v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md). The old `knowledge-catalog/okf` copy is a frozen historical snapshot.
+
+Daniel Jackson Concept Design remains the product-design methodology authority. OKF governs knowledge representation/navigation and does not redefine MUDAC Concepts, domain state, architecture, or source-code structure. `MUDAC Concept` and OKF's generic knowledge-document `Concept` meaning must remain distinct.
+
+Phase 004 separates canonical current knowledge from historical phase provenance. Normative rules should have one canonical owner; downstream documents should prefer cross-reference over restatement, with necessary auditable restatement linked back to canonical authority. OKF knowledge provenance/verification/lifecycle metadata remains distinct from the MUDAC Provenance Concept and Competition/Scorecard lifecycle semantics.
+
+Knowledge restructuring may change representation/location but may not silently change established product meaning. Any contradiction exposed by migration becomes an explicit design refinement. Future agents should traverse progressive indexes to canonical knowledge and only load historical phase records when rationale/provenance is needed.
+
+## Planned Phase 005
+
+System, Application, Data & Synchronization Architecture moves to **Phase 005**. It may choose implementation mechanisms and technologies only after Phase 004 establishes the knowledge/governance baseline, and it must treat Phases 001–003 semantics plus the Phase 004 canonical knowledge contracts as architectural input.
 
 ## Canonical terminology
 
@@ -159,7 +173,8 @@ Phase 004 may choose technologies and mechanisms, but must treat the Phase 001�
 - **Official Outcome Revision** — reconstructible authoritative Competition outcome snapshot.
 - **Export** — audience-specific external representation tied to identified source state.
 - **Alias / Competition Identity** — Judge-facing Team identity used instead of administrative/institutional identity.
+- **OKF knowledge document** — independently addressable knowledge document represented according to the adopted OKF convention; not automatically a MUDAC Concept.
 
 ## Known architectural boundary
 
-Target deployment remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept and UX architecture rather than drive it.
+Target deployment remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept/UX and knowledge-governance architecture rather than drive it.
