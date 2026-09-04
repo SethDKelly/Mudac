@@ -1,14 +1,14 @@
 # Phase 005 — System, Application, Data & Synchronization Architecture
 
-Architecture-design history and decision lineage for MUDAC. Use [docs/index.md](../index.md) and [Canonical Architecture](../canonical/architecture/) for ordinary current-architecture retrieval once an architecture owner has been accepted.
+Architecture-design history and decision lineage for MUDAC. Use [docs/index.md](../index.md) and [Canonical Architecture](../canonical/architecture/) for ordinary current-architecture retrieval.
 
 # Records and Current Outputs
 
-* **005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles** — in progress. Establishes the architecture-wide constraints and evaluation criteria that later architecture decisions must satisfy.
+* [005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles](005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md) — **Complete**. Establishes the architecture-wide quality/trust/failure foundation; current authority lives in the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) with `ARCH-001` through `ARCH-008`.
 
 # Planned Work
 
-* 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture.
+* **005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture** — Next.
 * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture.
 * 005-D — Identity, Authentication, Participation, Access & Session Architecture.
 * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture.
