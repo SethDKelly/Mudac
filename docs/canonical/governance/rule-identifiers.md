@@ -10,7 +10,8 @@ sources:
   - resource: ../../004-knowledge-architecture/004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:30:09Z }
+  - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:35:40Z }
 ---
 
 # Canonical contract
@@ -138,6 +139,17 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [META-008 — Legacy Records Are Not Speculatively Backfilled](metadata-trust-lifecycle.md#meta-008)
 * [META-009 — Metadata Updates Preserve Semantic and Historical Distinctions](metadata-trust-lifecycle.md#meta-009)
 
+# Validation and CI enforcement
+
+* [VAL-001 — Validation Proves Structural Conformance, Not Semantic Verification](validation-enforcement.md#val-001)
+* [VAL-002 — Current Canonical/Reference Knowledge Receives Deterministic Metadata-Shape Checks](validation-enforcement.md#val-002)
+* [VAL-003 — Stable Rule IDs Are Globally Unique, Explicitly Anchored, and Registry-Resolvable](validation-enforcement.md#val-003)
+* [VAL-004 — Current Authority Links and Local Source Edges Must Resolve](validation-enforcement.md#val-004)
+* [VAL-005 — Progressive-Disclosure Routing Surfaces Are Structural Requirements](validation-enforcement.md#val-005)
+* [VAL-006 — Legacy Exemptions Are Explicit and Must Not Become Blanket Validation Bypasses](validation-enforcement.md#val-006)
+* [VAL-007 — Knowledge Validation Is a Blocking, Read-Only CI Check](validation-enforcement.md#val-007)
+* [VAL-008 — Validator Evolution Is Governed Because It Encodes Repository Policy](validation-enforcement.md#val-008)
+
 # Change impact
 
-A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. [Canonical Change & Conflict Governance](change-governance.md) defines the workflow; [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) governs knowledge-artifact metadata; 004-H will validate structural conformance, ID uniqueness, and link resolution mechanically.
+A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. [Canonical Change & Conflict Governance](change-governance.md) defines the workflow; [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) governs knowledge-artifact metadata; [Knowledge Validation & CI Enforcement](validation-enforcement.md) governs deterministic CI enforcement.
