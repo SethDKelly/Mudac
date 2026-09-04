@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:36:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:42:00Z }
 ---
 
 # Canonical contract
@@ -159,6 +159,24 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [AUTH-012 — System Administration and Break-Glass Authority Remain Separate From Competition Authority](../architecture/identity-access-session.md#auth-012)
 * [AUTH-013 — Step-Up Authentication Strengthens Proof but Never Creates Capability](../architecture/identity-access-session.md#auth-013)
 * [AUTH-014 — Authentication-Provider Implementation Remains Replaceable Behind an Adapter](../architecture/identity-access-session.md#auth-014)
+
+# Commands, queries, API, transactions and concurrency
+
+* [API-001 — Commands and Queries Are Distinct Application Contracts](../architecture/commands-api-concurrency.md#api-001)
+* [API-002 — The Primary Browser Application Contract Is Versioned HTTPS/JSON](../architecture/commands-api-concurrency.md#api-002)
+* [API-003 — Transport Adapters Do Not Own Domain Authority](../architecture/commands-api-concurrency.md#api-003)
+* [API-004 — A Successful Authoritative Command Is Confirmed Only After Transaction Commit](../architecture/commands-api-concurrency.md#api-004)
+* [API-005 — Single-Module Commands Use One Owning Transaction Boundary](../architecture/commands-api-concurrency.md#api-005)
+* [API-006 — Cross-Module Atomic Transactions Are Narrow and Coordinator-Owned](../architecture/commands-api-concurrency.md#api-006)
+* [API-007 — Optimistic Concurrency Is the Default Mutable-State Strategy](../architecture/commands-api-concurrency.md#api-007)
+* [API-008 — Pessimistic Locking and Stronger Isolation Are Targeted Tools, Not Global Defaults](../architecture/commands-api-concurrency.md#api-008)
+* [API-009 — Externally Retryable Commands Have Durable Idempotency Semantics](../architecture/commands-api-concurrency.md#api-009)
+* [API-010 — Lost Responses Reconcile to Committed Authority Instead of Inviting Blind Repetition](../architecture/commands-api-concurrency.md#api-010)
+* [API-011 — Query Freshness Is Explicit and Never Becomes Command Authority](../architecture/commands-api-concurrency.md#api-011)
+* [API-012 — Application Results Distinguish Semantic Failure Classes](../architecture/commands-api-concurrency.md#api-012)
+* [API-013 — Command Responses Return Authoritative Identity/Revision, Not Assumed Projection Freshness](../architecture/commands-api-concurrency.md#api-013)
+* [API-014 — Public API DTOs Remain Separate From Internal Module/Domain Models](../architecture/commands-api-concurrency.md#api-014)
+* [API-015 — Cookie-Authenticated Mutations Require Deliberate Request-Forgery Protection](../architecture/commands-api-concurrency.md#api-015)
 
 # Documentation authority
 
