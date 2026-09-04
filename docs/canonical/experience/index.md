@@ -1,6 +1,6 @@
 # Conceptual Experience Contracts
 
-Current user-facing interaction semantics extracted from Phase 003.
+Current user-facing interaction semantics for MUDAC.
 
 * [Experience Context & Role Modes](context-role-modes.md) - Identity → Participation/role → Competition → operational context → task.
 * [Judge Onboarding](judge-onboarding.md) - Event entry through derived Ready to Judge.
@@ -12,4 +12,4 @@ Current user-facing interaction semantics extracted from Phase 003.
 * [Accessibility & Resilience](accessibility-resilience.md) - Semantic parity across input, viewport, device, connectivity, and paper fallback.
 * [Status, Feedback & Recovery](status-feedback-recovery.md) - Cross-cutting status dimensions, authority feedback, privacy, and recovery grammar.
 
-These are conceptual UX contracts, not component, route, API, or framework specifications.
+These are conceptual UX contracts, not component, route, API, or framework specifications. Follow each contract's `sources` when historical UX rationale is needed.
