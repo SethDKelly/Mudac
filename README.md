@@ -2,7 +2,7 @@
 
 MUDAC is a documentation-first design effort for a web application that supports live student data competitions, with MinneMUDAC as the initial reference context. The product is intended to replace or augment paper-heavy judging operations while preserving fairness, judge independence, accessibility, auditability, and operational resilience.
 
-The design is being developed using Daniel Jackson's **Concept Design** methodology. Product purpose, Concepts, behavioral specifications, and conceptual UX architecture are now stabilized before system, persistence, component, and cloud architecture.
+The design is being developed using Daniel Jackson's **Concept Design** methodology. Product purpose, Concepts, behavioral specifications, and conceptual UX architecture are stabilized. Phase 004 now establishes the repository knowledge architecture and documentation-governance layer before system/application architecture proceeds.
 
 ## Product intent
 
@@ -41,7 +41,9 @@ Teams may carry extensible descriptive attributes. The initial standard optional
 - **Qualified finality language** — `Ready`, `Complete`, `Finalized`, `Current`, `Official`, `Published`, and `Resolved` are qualified by subject whenever ambiguity is possible.
 - **Privacy by lifecycle and representation** — ordinary Judge private-evaluation access ends with live judging, and every view/export/search result applies its target disclosure context.
 - **Recovery without semantic drift** — recovery preserves work and explains known state without silently overwriting newer authority, relabeling context, or creating duplicate evaluation weight.
-- **Technology follows semantics** — frameworks, databases, offline libraries, APIs, and AWS services must satisfy the Concept/UX contracts rather than redefine them.
+- **Canonical knowledge over duplicated restatement** — normative rules should have one canonical owner; dependent knowledge should cross-reference that authority unless a bounded restatement is needed for independent auditability.
+- **Progressive knowledge retrieval** — humans and agents should navigate indexes to canonical knowledge and load historical phase records only when rationale/provenance is needed.
+- **Technology follows semantics** — frameworks, databases, offline libraries, APIs, and AWS services must satisfy the Concept/UX/knowledge contracts rather than redefine them.
 
 ## Accepted concept catalog
 
@@ -84,100 +86,47 @@ Compatible refinement: [`002-A1`](docs/002-concept-specification/002-A1-team-ext
 
 Canonical exit: [`003-J`](docs/003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md).
 
+**Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: In Progress.**
+
 | Group | Topic | Status |
 | --- | --- | --- |
-| 003-A | [Experience Architecture, Role Modes & Navigation Model](docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | Complete |
-| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | Complete |
-| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](docs/003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | Complete |
-| 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](docs/003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | Complete |
-| 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](docs/003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | Complete |
-| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | Complete |
-| 003-G | [Paper Capture, Export, Print & Publication Experience](docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | Complete |
-| 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | Complete |
-| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](docs/003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | Complete |
-| 003-J | [Phase 003 Consolidation & UX Architecture Exit Review](docs/003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md) | Complete |
+| 004-A | [OKF Adoption Authority, Methodology Compatibility & Terminology Contract](docs/004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md) | **Complete** |
+| 004-B | Knowledge Bundle Topology, Canonical Authority Layers & Progressive Disclosure | **Next** |
+| 004-C | Canonical Concept, Policy, Invariant & Experience Knowledge Extraction | Planned |
+| 004-D | Historical Phase Migration, Provenance & Source-Lineage Retrofit | Planned |
+| 004-E | Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit | Planned |
+| 004-F | Documentation Governance, Agent Context & Anti-Drift Rules | Planned |
+| 004-G | OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions | Planned |
+| 004-H | Validation Tooling, Link/Authority Checks & CI Enforcement | Planned |
+| 004-I | Repository-Wide Knowledge Graph / Drift Audit & Migration Closure | Planned |
+| 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | Planned |
 
-## Current experience baseline
+See [`docs/004-knowledge-architecture/README.md`](docs/004-knowledge-architecture/README.md) for the Phase 004 plan and [`docs/README.md`](docs/README.md) for canonical documentation authority.
 
-Judge experience:
+## Phase 004 knowledge baseline
 
-```text
-Competition entry
-      ↓
-Identity / current Participation
-      ↓
-check-in / Panel context
-      ↓
-Ready to Judge
-      ↓
-Encounter + Team Alias/Division
-      ↓
-Scorecard Draft
-      ↓
-explicit Finalize
-      ↓
-optional controlled Amendment
-```
+MUDAC adopts the dedicated [GoogleCloudPlatform/open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format) repository as upstream OKF authority and initially targets [OKF v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md). The historical `knowledge-catalog/okf` copy is frozen and is not the implementation baseline.
 
-Organizer experience:
+Daniel Jackson Concept Design remains the product-design methodology authority. OKF is used to structure, type, link, attribute, and progressively expose repository knowledge; it does not redefine MUDAC Concepts, application state, or source-code architecture.
 
-```text
-Preparation / derived readiness
-      ↓
-Live exception-first operations
-      ↓
-Event Completed
-      ↓
-Evidence reconciliation
-      ↓
-Coverage / eligibility
-      ↓
-Ranking readiness
-      ↓
-Awards
-      ↓
-Finalization
-      ↓
-Official Outcome Revision
-      ↓
-Export / publication / history
-```
+`MUDAC Concept` and OKF's generic knowledge-document `Concept` meaning are explicitly distinct. Phase 004 will establish canonical-current-knowledge versus historical-phase-provenance layers, stable cross-reference conventions, agent context rules, metadata/verification conventions, and automated drift checks.
 
-Paper capture uses `physical source → unique source reference → capture Draft → verification → authoritative Scorecard Version`. External representation uses `authoritative source Version/Official Outcome Revision + audience/disclosure + purpose → Export → preview/validation → print/distribute/publish`.
+The repository-wide documentation direction is **reference first**: one canonical owner for normative rules, cross-reference from dependent documents, and bounded restatement only where needed for comprehension or independent auditability.
 
-Accessibility/resilience applies across those same journeys. Judge work is phone-primary; Organizer density adapts to narrow `summary → exception → detail → action` workflows. Keyboard/nonvisual interaction, large text, QR alternatives, non-color-only status, predictable focus, accessible feedback, and a reasonable future WCAG 2.2 AA target are architectural requirements.
+## Planned next architecture layer
 
-Status is multidimensional: workflow, authority, persistence confidence, readiness, eligibility, freshness, severity, disclosure, and publication remain distinct. `Draft complete` does not imply `Scorecard Finalized`; `Ranking Ready` does not imply `Official`; `Competition Finalized` does not imply `Published`.
+The previously proposed System, Application, Data & Synchronization Architecture becomes **Phase 005** after the knowledge architecture retrofit is complete.
 
-Phase 003 exit review found no blocking contradiction, missing core journey, or need for an additional Concept. Known extensions—formal Stage/Round, student application access/feedback, formal scheduling, notifications, advanced Judge calibration, richer public results, and advanced Award governance—remain explicitly deferred.
-
-## Recommended next phase
-
-**Phase 004 — System, Application, Data & Synchronization Architecture**
-
-Recommended structure:
-
-1. 004-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Design Authority
-2. 004-B — Application Boundaries, Modules, Domain Services & Dependency Architecture
-3. 004-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture
-4. 004-D — Identity, Authentication, Participation, Access & Session Architecture
-5. 004-E — Commands, Queries, API Contracts, Idempotency & Concurrency
-6. 004-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery
-7. 004-G — Export, Paper Capture, Artifact, Publication & External-Representation Architecture
-8. 004-H — Front-End State, Navigation, Component-System & Responsive Interaction Architecture
-9. 004-I — AWS Runtime, Deployment, Security, Observability, Backup & Operational Architecture
-10. 004-J — Phase 004 Consolidation, Threat/Failure Review & Implementation-Readiness Exit
-
-Phase 004 may select concrete mechanisms and technologies, but the lifecycle, authority, evidence, one-logical-Scorecard, Coverage/Ranking, Finalization, disclosure, accessibility, and recovery contracts from Phases 001–003 are architectural inputs rather than implementation suggestions.
+Phase 005 may select concrete mechanisms and technologies, but lifecycle, authority, evidence, one-logical-Scorecard, Coverage/Ranking, Finalization, disclosure, accessibility, recovery, and canonical knowledge contracts remain architectural inputs rather than implementation suggestions.
 
 ## Repository documentation convention
 
-The repository—not chat history—is the durable design baseline. See [`docs/README.md`](docs/README.md) for the canonical documentation authority.
+The repository—not chat history—is the durable design baseline. Phase 004 is evolving the current phase-centric corpus into an OKF-aligned canonical knowledge graph while preserving historical design records as provenance and rationale.
 
 ## Architecture boundary condition
 
-The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept and UX architecture rather than drive it.
+The intended deployment boundary remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept/UX and knowledge-governance architecture rather than drive it.
 
 ## Status
 
-This repository remains in **design**, not production implementation. **Phase 003 is complete; Phase 004 system/application architecture is the recommended next design layer.**
+This repository remains in **design**, not production implementation. **004-A is complete; 004-B — Knowledge Bundle Topology, Canonical Authority Layers & Progressive Disclosure is next.**
