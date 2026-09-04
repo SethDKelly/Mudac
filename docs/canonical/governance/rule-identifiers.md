@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:33:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:36:00Z }
 ---
 
 # Canonical contract
@@ -142,6 +142,23 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [DATA-012 — Outbox/Events Do Not Replace Authoritative State or Require Primary Event Sourcing](../architecture/data-persistence.md#data-012)
 * [DATA-013 — Database Constraints Reinforce Owner Invariants but Do Not Replace Domain Authority Checks](../architecture/data-persistence.md#data-013)
 * [DATA-014 — Core Semantic Fields Remain Explicit; Semi-Structured Storage Is Reserved for Genuinely Extensible Data](../architecture/data-persistence.md#data-014)
+
+# Identity, authentication, access and sessions
+
+* [AUTH-001 — Authentication Establishes Principal Continuity, Not Competition Authority](../architecture/identity-access-session.md#auth-001)
+* [AUTH-002 — External Subjects Link Explicitly to Stable MUDAC Identity](../architecture/identity-access-session.md#auth-002)
+* [AUTH-003 — Participation Context Is Explicit and Never Inferred as a Permanent Identity Role](../architecture/identity-access-session.md#auth-003)
+* [AUTH-004 — Access Is Evaluated From Current Authoritative Context at Protected Boundaries](../architecture/identity-access-session.md#auth-004)
+* [AUTH-005 — Browser Authentication Terminates in a First-Party Opaque Server Session](../architecture/identity-access-session.md#auth-005)
+* [AUTH-006 — Session Context Is Convenience State, Not Authorization Authority](../architecture/identity-access-session.md#auth-006)
+* [AUTH-007 — Event Completion Expires Judge Capability Through Source-State Authorization](../architecture/identity-access-session.md#auth-007)
+* [AUTH-008 — Event Invitations and QR/Codes Accelerate Entry but Do Not Confer Identity or Access](../architecture/identity-access-session.md#auth-008)
+* [AUTH-009 — Dual-Role Capability Sets Remain Isolated by Explicit Participation Context](../architecture/identity-access-session.md#auth-009)
+* [AUTH-010 — Post-Event Judge Correction Uses Narrow Temporary Access Plus Reverification](../architecture/identity-access-session.md#auth-010)
+* [AUTH-011 — Device Loss or Handoff Revokes Session State Without Changing Semantic Identity](../architecture/identity-access-session.md#auth-011)
+* [AUTH-012 — System Administration and Break-Glass Authority Remain Separate From Competition Authority](../architecture/identity-access-session.md#auth-012)
+* [AUTH-013 — Step-Up Authentication Strengthens Proof but Never Creates Capability](../architecture/identity-access-session.md#auth-013)
+* [AUTH-014 — Authentication-Provider Implementation Remains Replaceable Behind an Adapter](../architecture/identity-access-session.md#auth-014)
 
 # Documentation authority
 
