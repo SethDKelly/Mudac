@@ -1,16 +1,17 @@
 # MUDAC Repository Agent Rules
 
-This file is a **bootstrap adapter**, not the canonical source of MUDAC product or documentation rules.
+This file is a **bootstrap adapter**, not the canonical source of MUDAC product, architecture, or documentation rules.
 
 Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/governance/).
 
 ## Required start
 
 1. Start at [`docs/index.md`](docs/index.md).
-2. For current product/UX meaning, use [`docs/canonical/`](docs/canonical/).
-3. Read only the category/owner documents materially relevant to the task.
-4. Follow stable rule IDs and linked dependencies as needed.
-5. Use numbered phase history only for rationale, chronology, rejected alternatives, or source audit.
+2. For current product/UX/governance/accepted architecture meaning, use [`docs/canonical/`](docs/canonical/).
+3. For architecture work, load the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus only the upstream canonical constraints materially relevant to the decision.
+4. Read only the category/owner documents materially relevant to the task.
+5. Follow stable rule IDs and linked dependencies as needed.
+6. Use numbered phase history only for rationale, chronology, rejected alternatives, or source audit.
 
 Governed by:
 
@@ -19,13 +20,14 @@ Governed by:
 - [`CHG-*` — Canonical Change & Conflict Governance](docs/canonical/governance/change-governance.md)
 - [`META-*` — OKF Metadata, Trust, Lifecycle & Freshness](docs/canonical/governance/metadata-trust-lifecycle.md)
 - [`VAL-*` — Knowledge Validation & CI Enforcement](docs/canonical/governance/validation-enforcement.md)
+- [`ARCH-*` — Architectural Foundation](docs/canonical/architecture/architectural-foundation.md)
 - [Stable Rule Identifiers](docs/canonical/governance/rule-identifiers.md)
 - [Source Lineage](docs/canonical/governance/source-lineage.md)
 
 ## Do not
 
 - recursively preload all of `docs/` for ordinary work;
-- reconstruct current rules from Phase 001–003 when a canonical owner exists;
+- reconstruct current rules from Phase 001–004 when a canonical owner exists;
 - copy complete canonical rules into architecture/implementation documents when a link/stable ID plus local consequence is sufficient;
 - let README/index/traceability/agent files become competing rule stores;
 - silently resolve canonical contradictions by choosing convenient wording;
@@ -34,15 +36,16 @@ Governed by:
 - infer source-code package/service/database structure from the knowledge-directory layout;
 - create new MUDAC Concepts merely because a subject has its own OKF document;
 - fabricate `generated`, `verified`, source credibility, or `stale_after` metadata for cosmetic completeness;
-- treat CI or validator conformance as semantic verification.
+- treat CI or validator conformance as semantic verification;
+- select architecture technology before identifying the upstream contracts, trust boundaries, failure behavior, and quality-attribute driver that justify it.
 
 ## Canonical changes
 
 If the human explicitly asks to change MUDAC design meaning, follow [`Canonical Change & Conflict Governance`](docs/canonical/governance/change-governance.md): update the canonical owner, preserve rationale/source lineage, review stable-rule compatibility/dependents, and keep history reconstructible.
 
-If implementation conflicts with canonical meaning and no redesign was requested, the implementation must adapt.
+If implementation or architecture conflicts with canonical meaning and no redesign was requested, the downstream mechanism must adapt.
 
-Meaningful edits to OKF concept documents follow the [`META-*` profile](docs/canonical/governance/metadata-trust-lifecycle.md): record real generation provenance prospectively, preserve only verification that actually covers current content, and keep lifecycle/freshness metadata semantically accurate.
+Meaningful edits to OKF concept/architecture documents follow the [`META-*` profile](docs/canonical/governance/metadata-trust-lifecycle.md): record real generation provenance prospectively, preserve only verification that actually covers current content, and keep lifecycle/freshness metadata semantically accurate.
 
 ## Validation
 
