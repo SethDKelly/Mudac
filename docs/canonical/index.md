@@ -1,6 +1,6 @@
 # Canonical MUDAC Knowledge
 
-This subtree is the preferred source for current MUDAC product, conceptual UX, documentation-governance, and accepted architecture meaning.
+This subtree is the preferred source for current MUDAC product, conceptual UX, documentation-governance, accepted architecture, and accepted implementation meaning.
 
 # Current Knowledge
 
@@ -10,10 +10,11 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, d
 * [Invariants](invariants/) - Cross-cutting normative constraints with stable `INV-*` identifiers.
 * [Experience](experience/) - Current conceptual UX contracts.
 
-# Governance and Architecture
+# Governance, Architecture and Implementation
 
 * [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change (`CHG-*`), metadata/trust/lifecycle (`META-*`), validation/CI (`VAL-*`), source lineage, and stable rule IDs.
 * [Architecture](architecture/) - Current accepted system/application architecture contracts, beginning with the [Architectural Foundation](architecture/architectural-foundation.md) and `ARCH-*` rules. Knowledge topology does not dictate source-code topology.
+* [Implementation](implementation/) - Current accepted implementation/toolchain/delivery contracts, beginning with [Implementation Authority, Toolchain & Delivery Governance](implementation/implementation-foundation.md) and `IMPL-*` rules. Implementation remains downstream of architecture and may not redefine product meaning.
 
 # Retrieval Rule
 
@@ -27,6 +28,8 @@ For knowledge metadata, [OKF Metadata, Trust, Verification, Lifecycle & Freshnes
 
 For deterministic conformance checks, [Knowledge Validation & CI Enforcement](governance/validation-enforcement.md) governs the validator and CI boundary. Passing validation is not semantic verification.
 
-For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical/design phase, enter through that phase's `index.md` and follow current-successor links rather than recursively loading the phase corpus.
+For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical/design/implementation phase, enter through that phase's `index.md` and follow current-successor links rather than recursively loading the phase corpus.
 
 For architecture work, load the current architecture owner(s) and only the task-relevant upstream product/UX/governance constraints they depend on.
+
+For implementation work, load the relevant [Implementation](implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially required by the task.
