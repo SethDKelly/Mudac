@@ -24,12 +24,6 @@ Current governance lives under [canonical/governance/](canonical/governance/), i
 
 These owners govern the details. This README routes to them and does not reproduce their rule bodies.
 
-Daniel Jackson Concept Design remains the product-design methodology; OKF structures and exposes the resulting knowledge. Canonical current knowledge constrains later architecture/implementation, and downstream artifacts cannot override it merely by restating different behavior.
-
-Knowledge CI checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
-
-The Phase 004 migration and exit review are complete. Phase 001–003 historical records remain intentionally preserved without bulk metadata rewrite; ordinary retrieval should use canonical owners and follow history only when rationale/provenance is needed.
-
 ## Design status
 
 * Phase 001 — Concept Design Foundation: **Complete**
@@ -38,6 +32,11 @@ The Phase 004 migration and exit review are complete. Phase 001–003 historical
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
 * Phase 005 — System, Application, Data & Synchronization Architecture: **In Progress**
   * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: **Complete**
-  * **005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Next**
+  * 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: **Complete**
+  * **005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Next**
 
-Current accepted architecture begins at [Architectural Foundation](canonical/architecture/architectural-foundation.md), which defines `ARCH-001` through `ARCH-008`. Later accepted architecture decisions belong under [canonical/architecture/](canonical/architecture/); numbered Phase 005 records preserve alternatives, rationale, and source lineage.
+Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/): the [Architectural Foundation](canonical/architecture/architectural-foundation.md) owns `ARCH-*`, and [Application Boundaries](canonical/architecture/application-boundaries.md) owns `MOD-*`.
+
+The current application posture is modular-monolith-first with explicit semantic module ownership, non-authoritative cross-module projections, thin coordination above owners, and infrastructure dependency inversion. No database, API protocol, identity provider, front-end framework, or AWS service has yet been selected.
+
+Knowledge CI checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
