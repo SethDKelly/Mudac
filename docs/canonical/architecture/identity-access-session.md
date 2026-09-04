@@ -13,7 +13,7 @@ sources:
   - resource: ../concepts/participation.md
   - resource: ../concepts/access.md
   - resource: ../experience/judge-onboarding.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:36:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
 
 # Purpose
@@ -150,10 +150,12 @@ The Identity/Participation/Access module owns identity/security facts, but resou
 
 # Session posture
 
-Server session state may include session ID, Identity ID, authentication/assurance timestamps, selected Participation ID, created/last-seen/absolute-expiry data, revocation state, and a security/session version. Exact storage and duration are runtime configuration choices.
+Server session state may include session ID, Identity ID, authentication/assurance timestamps, selected Participation ID, created/last-seen/absolute-expiry data, revocation state, and a security/session version. Exact storage and duration remain implementation/configuration choices governed by the current runtime/security architecture.
 
 Client-side state may improve UX but cannot extend server-side session or Access authority.
 
 # Provider posture
 
-005-D selects **managed, standards-compatible, provider-adapted authentication** but does not yet select Cognito, Auth0, Entra ID, Okta, or another vendor, nor a single passwordless/federated/passkey mechanism. Vendor/runtime selection belongs to later architecture once deployment, cost, federation, and operations are evaluated.
+Concrete provider selection is owned downstream by [AWS-006](aws-runtime-operations.md#aws-006), which currently selects Amazon Cognito User Pools behind the MUDAC authentication adapter. The `AUTH-*` owner remains authoritative for provider-independent Identity, Participation, Access, session, role-isolation, revocation, and break-glass semantics.
+
+Future provider replacement or federation must continue to satisfy [AUTH-014](#auth-014) rather than changing historical MUDAC identity or authority semantics.
