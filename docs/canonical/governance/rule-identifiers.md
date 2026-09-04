@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:42:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:00:00Z }
 ---
 
 # Canonical contract
@@ -177,6 +177,23 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [API-013 — Command Responses Return Authoritative Identity/Revision, Not Assumed Projection Freshness](../architecture/commands-api-concurrency.md#api-013)
 * [API-014 — Public API DTOs Remain Separate From Internal Module/Domain Models](../architecture/commands-api-concurrency.md#api-014)
 * [API-015 — Cookie-Authenticated Mutations Require Deliberate Request-Forgery Protection](../architecture/commands-api-concurrency.md#api-015)
+
+# Draft synchronization, offline and recovery
+
+* [SYNC-001 — Local Persistence Is Bounded to Non-Authoritative Continuity State](../architecture/synchronization-recovery.md#sync-001)
+* [SYNC-002 — Local Draft State Is Bound to Stable Semantic Identity and a Confirmed Server Base](../architecture/synchronization-recovery.md#sync-002)
+* [SYNC-003 — Server Draft Revision Remains Authoritative and Synchronization Is Revision-Aware](../architecture/synchronization-recovery.md#sync-003)
+* [SYNC-004 — Stale Draft Conflicts Preserve Both Server and Local Judge Work](../architecture/synchronization-recovery.md#sync-004)
+* [SYNC-005 — Automatic Merge Is Permitted Only When Semantic Safety Is Demonstrable](../architecture/synchronization-recovery.md#sync-005)
+* [SYNC-006 — Multiple Devices Converge on One Logical Scorecard](../architecture/synchronization-recovery.md#sync-006)
+* [SYNC-007 — Finalization and Other Authoritative Transitions Require Reachable Server Authority](../architecture/synchronization-recovery.md#sync-007)
+* [SYNC-008 — Uncertain Consequential Outcomes Are Reconciled Before Another Transition Is Attempted](../architecture/synchronization-recovery.md#sync-008)
+* [SYNC-009 — Reconnect Re-Establishes Authentication, Access, Identity, and Current Server State Before Applying Queued Work](../architecture/synchronization-recovery.md#sync-009)
+* [SYNC-010 — Cached Reads Remain Explicitly Stale-Capable and Disclosure-Bounded](../architecture/synchronization-recovery.md#sync-010)
+* [SYNC-011 — Access Expiry or Revocation Blocks Automatic Synchronization of Private Pending Work](../architecture/synchronization-recovery.md#sync-011)
+* [SYNC-012 — Paper and Electronic Traces Converge on One Logical Evaluation With Preserved Provenance](../architecture/synchronization-recovery.md#sync-012)
+* [SYNC-013 — Synchronization Status Preserves Authority, Freshness, Conflict, and Uncertainty as Distinct Dimensions](../architecture/synchronization-recovery.md#sync-013)
+* [SYNC-014 — Degraded Digital Operation Yields to Paper When Authoritative Continuity Cannot Be Trusted](../architecture/synchronization-recovery.md#sync-014)
 
 # Documentation authority
 
