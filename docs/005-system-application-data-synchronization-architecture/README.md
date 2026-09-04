@@ -19,8 +19,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | 005-C | [Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture](005-C-data-model-persistence-versioning-provenance-derived-projection-architecture.md) | **Complete** |
 | 005-D | [Identity, Authentication, Participation, Access & Session Architecture](005-D-identity-authentication-participation-access-session-architecture.md) | **Complete** |
 | 005-E | [Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture](005-E-commands-queries-api-contracts-transactions-idempotency-concurrency-architecture.md) | **Complete** |
-| 005-F | Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery | **Next** |
-| 005-G | Paper Capture, Export, Artifact, Publication & External-Representation Architecture | Planned |
+| 005-F | [Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery](005-F-draft-persistence-synchronization-offline-degraded-operation-conflict-recovery.md) | **Complete** |
+| 005-G | Paper Capture, Export, Artifact, Publication & External-Representation Architecture | **Next** |
 | 005-H | Front-End State, Navigation, Component-System & Responsive Interaction Architecture | Planned |
 | 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | Planned |
 | 005-J | Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit | Planned |
@@ -45,7 +45,7 @@ runtime/AWS/operations
 integrated failure/threat/readiness review
 ```
 
-## Authoritative baseline through 005-E
+## Authoritative baseline through 005-F
 
 005-A establishes the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
 
@@ -57,27 +57,27 @@ integrated failure/threat/readiness review
 
 005-E establishes the canonical [Commands, Queries, API, Transaction & Concurrency Architecture](../canonical/architecture/commands-api-concurrency.md) and `API-001` through `API-015`.
 
-The current request/authority baseline is:
+005-F establishes the canonical [Draft Synchronization, Offline & Recovery Architecture](../canonical/architecture/synchronization-recovery.md) and `SYNC-001` through `SYNC-014`.
 
-- the primary browser contract is versioned HTTPS/JSON;
-- queries are side-effect-free and may use explicit non-authoritative projections;
-- meaningful state changes are intent-bearing commands rather than generic status-field mutation;
-- transport adapters map requests but do not own domain authority;
-- current Access/resource/lifecycle preconditions are rechecked at protected application/module boundaries;
-- confirmed command success is reported only after transaction commit;
-- single-module commands use one owning transaction; narrow cross-module atomic transitions may use a coordinator-owned shared-database transaction while the modular monolith remains local;
-- optimistic revision/precondition checks are the default mutable-state concurrency strategy;
-- targeted row locks and stronger isolation are command-specific tools rather than global defaults;
-- PostgreSQL `READ COMMITTED` is the baseline expectation combined with explicit concurrency controls and constraints;
-- externally retryable commands use durable idempotency semantics and reject key reuse for different intent;
-- lost responses reconcile to committed authority rather than inviting blind repetition;
-- successful responses return authoritative resource/revision information without pretending projections have already caught up;
-- application result contracts distinguish validation, authorization, concurrency, idempotency, infrastructure, and uncertain-outcome classes;
-- public API DTOs remain separate from internal module/domain models;
-- cookie-authenticated mutations require deliberate CSRF protection appropriate to final deployment topology.
+The current continuity baseline is:
 
-The concrete web framework, OpenAPI/code-generation strategy, route hierarchy, ORM/unit-of-work implementation, exact idempotency storage/retention, per-command lock SQL, queue/broker, WebSocket/SSE mechanics, offline synchronization protocol, and AWS API/runtime services remain deliberately open.
+- local/browser persistence may preserve eligible non-authoritative Draft working content and last-known read context;
+- local Drafts bind to stable Identity/Participation/Competition/Encounter/Scorecard/Rubric identities and a last-confirmed server revision;
+- synchronization is revision-aware and idempotent against the server-owned Draft rather than transparent multi-master replication;
+- stale conflicts preserve both current server Draft and unsynchronized local Judge work; silent last-write-wins is prohibited;
+- automatic merge is permitted only where semantic safety is demonstrable; otherwise Judge reconciliation is explicit;
+- multiple devices converge on one logical Scorecard and never create duplicate evaluation weight to escape conflict;
+- Finalization, Amendment Finalization, exceptional Access changes, Competition lifecycle, official outcomes, and publication require reachable server authority;
+- lost/uncertain consequential responses reconcile using original idempotency/command context before another transition;
+- reconnect re-establishes current authentication, Participation, Access, logical identity, and server revision before applying queued work;
+- cached reads remain stale-capable/non-authoritative and disclosure-bounded;
+- Access expiry/revocation blocks automatic upload of pending private work;
+- paper/electronic overlap converges on one logical Scorecard while preserving Judge authorship, capture actor, physical source, and conflict evidence;
+- sync status separately represents server confirmation, local pending work, conflict, uncertainty, Finalization, and recovery-required states;
+- when digital authority cannot be trusted and the event must continue, paper is the preferred authoritative continuity fallback.
+
+The exact browser persistence API, local encryption mechanism, service-worker/background-sync strategy, autosave cadence, WebSocket/SSE transport, merge UI, local retention period, queue/broker, and AWS connectivity/failover services remain deliberately open.
 
 ## Next
 
-005-F — **Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery** will define how Judge Draft work survives intermittent connectivity/device loss, how local and server state synchronize against the `API-*` revision/idempotency contract, which operations are permitted while disconnected, how conflicts are surfaced/recovered, and where digital authority must stop rather than simulate offline Finalization.
+005-G — **Paper Capture, Export, Artifact, Publication & External-Representation Architecture** will define how physical evidence enters the authoritative system, how generated artifacts bind to source Versions/revisions, how disclosure profiles are applied, and how generation/publication/republication remain distinct and historically traceable.
