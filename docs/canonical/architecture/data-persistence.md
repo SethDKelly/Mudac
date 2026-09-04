@@ -13,7 +13,7 @@ sources:
   - resource: ../concepts/scorecard.md
   - resource: ../mechanisms/official-outcome-revision.md
   - resource: ../policies/correction-authority.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:30:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
 
 # Purpose
@@ -27,7 +27,7 @@ The initial persistence model is a single PostgreSQL-compatible relational autho
 
 MUDAC's primary authoritative data store uses a PostgreSQL-compatible relational model because the system requires explicit identity relationships, uniqueness, transactionality, constrained lifecycle state, stable Version references, and event-day concurrency integrity.
 
-AWS hosting remains a later runtime decision; this rule selects the database-family contract, not RDS/Aurora topology.
+Concrete AWS hosting is owned by [AWS-005](aws-runtime-operations.md#aws-005), which currently realizes this contract with Amazon RDS for PostgreSQL Multi-AZ. `DATA-001` remains the database-family/semantic persistence owner rather than duplicating runtime topology here.
 
 <a id="data-002"></a>
 ## DATA-002 — One logical authority database initially; storage ownership remains module-scoped
