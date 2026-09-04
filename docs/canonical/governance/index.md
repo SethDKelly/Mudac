@@ -12,15 +12,16 @@ Current repository/design-governance knowledge for MUDAC.
 * [Agent Context & Progressive Retrieval](agent-context.md) - `CTX-*` rules for minimum-sufficient context, progressive disclosure, historical retrieval, and anti-bloat behavior.
 * [Canonical Change & Conflict Governance](change-governance.md) - `CHG-*` rules for semantic changes, stable-rule impact review, contradiction handling, and implementation/design mismatch.
 
-# Lineage and reference governance
+# Lineage, metadata and reference governance
 
 * [Source Lineage and Historical Design Records](source-lineage.md) - Backward `sources` provenance, forward phase-to-canonical lineage, historical preservation, and material-source selection.
+* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) - `META-*` rules for frontmatter profile, generation attribution, real verification, lifecycle status, freshness, trust-tier boundaries, and legacy metadata handling.
 * [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md) - Durable rule IDs, explicit anchors, reference-first reuse, bounded restatement, and the rule registry.
 
 # Agent adapter
 
 Repository agents receive a concise bootstrap through [`AGENTS.md`](../../../AGENTS.md). That adapter routes to these canonical governance owners and is not an independent authority layer.
 
-# Pending governance work
+# Remaining Phase 004 governance work
 
-004-G will finalize OKF generation/verification/trust, knowledge lifecycle/status, and freshness conventions. 004-H will add structural validation/CI enforcement. Until then, the governance owners above define repository authority, retrieval, and change behavior.
+004-H will add structural validation/CI enforcement for the contracts above. 004-I will perform the repository-wide graph/drift audit and migration closure before the Phase 004 exit review.
