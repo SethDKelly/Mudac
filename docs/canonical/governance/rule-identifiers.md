@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:35:40Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:09:23Z }
 ---
 
 # Canonical contract
@@ -101,6 +101,17 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 
 * [EXPORT-001 — Export Represents Source Truth; It Does Not Replace It](../concepts/export.md#export-001)
 * [EXPORT-002 — Generation and Publication Are Distinct](../concepts/export.md#export-002)
+
+# Architecture foundation
+
+* [ARCH-001 — Upstream Canonical Semantics Constrain Architecture](../architecture/architectural-foundation.md#arch-001)
+* [ARCH-002 — Authoritative Transitions Are Validated and Confirmed at the Authoritative Boundary](../architecture/architectural-foundation.md#arch-002)
+* [ARCH-003 — Client, Device, and Local State Are Not Final Authority](../architecture/architectural-foundation.md#arch-003)
+* [ARCH-004 — Derived Projections Are Not Write Authority](../architecture/architectural-foundation.md#arch-004)
+* [ARCH-005 — Actor, Author, Authorizer, and Capture Attribution Survive Boundaries](../architecture/architectural-foundation.md#arch-005)
+* [ARCH-006 — Failure and Retry Preserve Logical Identity and Evidence](../architecture/architectural-foundation.md#arch-006)
+* [ARCH-007 — Security and Disclosure Are Enforced Beyond Presentation Code](../architecture/architectural-foundation.md#arch-007)
+* [ARCH-008 — Freshness and Uncertainty Remain Representable](../architecture/architectural-foundation.md#arch-008)
 
 # Documentation authority
 
