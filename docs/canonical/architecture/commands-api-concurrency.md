@@ -12,7 +12,7 @@ sources:
   - resource: identity-access-session.md
   - resource: ../concepts/scorecard.md
   - resource: ../invariants/truthful-authority-under-uncertainty.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:42:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
 
 # Purpose
@@ -167,6 +167,8 @@ Cross-module dashboards, search, readiness, reconciliation queues, and similar o
 - A commit succeeds but the response is lost: retry with the same idempotency key returns the committed result.
 - A projection consumer fails after commit: the durable outbox fact retries independently; command authority remains committed and projection lag is represented honestly.
 
-# Deliberate deferrals
+# Selected downstream mechanisms and remaining implementation detail
 
-This contract does not select the web framework, router, OpenAPI generation strategy, ORM/unit-of-work library, exact route hierarchy, exact idempotency-key format/retention, lock SQL for each command, Redis/cache use, WebSocket/SSE mechanics, queue/broker, offline synchronization protocol, or AWS API gateway/runtime service.
+Concrete downstream architecture now realizes parts of this contract: [FE-001](frontend-interaction.md#fe-001) and [FE-002](frontend-interaction.md#fe-002) establish the browser framework/router boundary, while [AWS-003](aws-runtime-operations.md#aws-003) selects ECS/Fargate for the authoritative application runtime and [AWS-008](aws-runtime-operations.md#aws-008) selects SQS for retryable asynchronous work.
+
+OpenAPI generation strategy, server-side web framework, ORM/unit-of-work library, exact route hierarchy, idempotency-key format/retention, command-specific lock SQL, CSRF mechanism, optional cache use, and optional push mechanics remain implementation choices. They must preserve the `API-*` command/query, authority, retry, concurrency, and uncertainty semantics defined here.
