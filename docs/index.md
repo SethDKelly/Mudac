@@ -24,15 +24,17 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundl
 
 * [References](references/) - External methodologies, standards, specifications, and MUDAC adoption/profile context, including the pinned [Open Knowledge Format v0.2](references/open-knowledge-format.md) reference.
 
-# Design History and Active Design Work
+# Design History and Next Work
 
-Each phase directory has an `index.md` that routes phase records toward current canonical successors.
+Each completed phase directory has an `index.md` that routes phase records toward current canonical successors.
 
-* [Phase 001 — Concept Design Foundation](001-concept-design/) - Concept discovery and initial catalog history.
-* [Phase 002 — Concept Specification](002-concept-specification/) - Behavioral, policy, authority, and evidence specification history.
-* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - UX architecture and exit history.
+* [Phase 001 — Concept Design Foundation](001-concept-design/) - Completed Concept discovery and initial-catalog history.
+* [Phase 002 — Concept Specification](002-concept-specification/) - Completed behavioral, policy, authority, and evidence specification history.
+* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - Completed UX architecture and exit history.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
-* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Active** architecture design. 005-A through 005-I are complete; 005-J is next.
+* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Complete**. Architecture owners, AWS realization, integrated threat/failure review, and implementation-readiness exit are closed.
+
+Next logical work is **Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy**. Phase 006 should be divided into dependency-safe implementation subgroups before code construction begins.
 
 # Navigation Guidance
 
@@ -44,6 +46,6 @@ For external standards/methodology authority, use [References](references/).
 
 For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
 
-For architecture work, begin with the relevant current architecture owner plus the task-specific upstream product/UX/governance constraints. Do not infer application topology from the knowledge-directory tree.
+For architecture or implementation planning, begin with the relevant current architecture owner plus the task-specific upstream product/UX/governance constraints. Use [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) for Phase 005 exit gates and implementation-readiness handoff. Do not infer application topology from the knowledge-directory tree.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
