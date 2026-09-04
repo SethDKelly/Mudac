@@ -11,12 +11,16 @@ sources:
 
 # Canonical contract
 
-Rank is derived from rank-eligible Teams and their [Aggregates](aggregate.md) within a [Division](../concepts/division.md), under [Evaluation Policy](../policies/evaluation-policy.md).
+Rank consumes rank-eligible Teams, their [Aggregates](aggregate.md), Division scope, and [Evaluation Policy](../policies/evaluation-policy.md).
 
-Rank is never directly edited. Full authoritative precision determines comparison unless policy explicitly says otherwise. Display rounding does not silently determine Rank.
+<a id="rank-001"></a>
+## RANK-001 — Rank is derived and non-editable
 
-True ties remain ties unless a predeclared resolver applies. Baseline shared-rank behavior is compatible with `1, 2, 2, 4`.
+Rank is calculated from authoritative inputs and is never directly authored or edited in normal operation. If an ordering is wrong, its evidence, eligibility, Division, or governing policy must be corrected.
 
-A calculated Rank may exist while Ranking readiness is blocked; calculated does not mean official.
+<a id="rank-002"></a>
+## RANK-002 — Precision and ties follow declared policy
 
-See [Calculated Is Not Official](../invariants/calculated-not-official.md).
+Authoritative comparison precision and tie behavior come from Evaluation Policy. Display rounding, Team ID, insertion order, random order, or other hidden implementation behavior must not silently resolve a tie.
+
+A calculated Rank may exist before ranking readiness or official outcome authority; that distinction is owned by [INV-006 — Calculated Is Not Official](../invariants/calculated-not-official.md#inv-006).
