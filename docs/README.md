@@ -26,7 +26,9 @@ These owners govern the details. This README routes to them and does not reprodu
 
 Daniel Jackson Concept Design remains the product-design methodology; OKF structures and exposes the resulting knowledge. Canonical current knowledge constrains later architecture/implementation, and downstream artifacts cannot override it merely by restating different behavior.
 
-Knowledge CI now checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
+Knowledge CI checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
+
+The repository-wide 004-I audit has closed the OKF migration structurally. Phase 001–003 historical records remain intentionally preserved without bulk metadata rewrite; ordinary retrieval should use canonical owners and follow history only when rationale/provenance is needed.
 
 ## Phase 004 status
 
@@ -38,6 +40,7 @@ Knowledge CI now checks deterministic structure, links, stable IDs, source edges
 * 004-F — Complete
 * 004-G — Complete
 * 004-H — Complete
-* **004-I — Next: Repository-Wide Knowledge Graph / Drift Audit & Migration Closure**
+* 004-I — Complete
+* **004-J — Next: Phase 004 Consolidation & Knowledge-Architecture Exit Review**
 
-System/Application/Data/Synchronization Architecture is planned as Phase 005 after the knowledge-governance retrofit is complete.
+System/Application/Data/Synchronization Architecture is planned as Phase 005 after the Phase 004 exit review.
