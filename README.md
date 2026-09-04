@@ -14,7 +14,7 @@ Start here:
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain, conceptual UX, governance, architecture, and implementation knowledge.
 * [`docs/canonical/architecture/`](docs/canonical/architecture/) — accepted current system/application architecture contracts.
-* [`docs/canonical/implementation/`](docs/canonical/implementation/) — accepted current implementation/toolchain/verification/delivery contracts.
+* [`docs/canonical/implementation/`](docs/canonical/implementation/) — accepted current implementation/toolchain/verification/source-topology/delivery contracts.
 * [`docs/006-implementation-planning/`](docs/006-implementation-planning/) — active dependency-safe implementation planning and delivery sequencing.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
@@ -32,8 +32,9 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
 * **Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy:** In Progress
   * 006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement: Complete
   * 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates: Complete
-  * **006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: Next**
-  * 006-D–006-H — remaining implementation foundations
+  * 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: Complete
+  * **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap: Next**
+  * 006-E–006-H — remaining implementation foundations
   * 006-I–006-L — dependency-ordered vertical delivery slices
   * 006-M — integrated hardening/readiness/exit
 
@@ -49,6 +50,8 @@ Production architecture is single-active `us-east-2` and Multi-AZ: CloudFront fr
 
 006-B establishes the current [verification strategy](docs/canonical/implementation/verification-strategy.md): evidence uses the smallest trustworthy boundary, PostgreSQL-dependent behavior is tested against real PostgreSQL, external adapters use deterministic fakes plus targeted real-service integration where vendor behavior matters, fixtures remain synthetic/module-owned, critical browser/accessibility/security/concurrency/recovery behavior receives explicit evidence, coverage is diagnostic rather than a correctness oracle, flaky failures remain visible, and evidence traces existing canonical rule IDs without creating a parallel test-rule namespace.
 
-The repository remains documentation/planning-only at this point; broad production code construction has not begun. Actual package/source/test topology is intentionally deferred to 006-C and executable environment/IaC/bootstrap plus GitHub branch/environment protection to 006-D.
+006-C establishes the current [source topology and dependency boundary](docs/canonical/implementation/source-topology.md): `apps/api`, `apps/worker`, and `apps/web` are composition roots; the six authoritative semantic modules are separate workspace packages inside the modular monolith; cross-module coordination and projections are isolated; shared foundation remains business-neutral; package exports prohibit private/deep coupling; the browser cannot import server implementation; test helpers preserve module ownership; and dependency-cruiser will enforce the acyclic/public-only source graph when 006-D instantiates the workspace.
+
+The repository remains documentation/planning-only at this point; broad production code construction has not begun. 006-D is now responsible for creating the executable pnpm workspace, TypeScript/static/test/dependency configuration, API/worker/web skeletons, local runtime, OpenTofu structure, implementation CI, and repository/environment enforcement.
 
 The [Phase 005 exit review](docs/005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) found no blocking cross-layer authority contradiction. MUDAC is **implementation-planning ready, not production certified**.
