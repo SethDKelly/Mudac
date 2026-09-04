@@ -18,14 +18,14 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 4. **Vertical slices over layer completion.** Once foundations exist, delivery proceeds through user-visible, authority-complete slices rather than finishing every backend or frontend layer independently.
 5. **Verification is part of each slice.** Unit, integration, contract, security, accessibility, concurrency, recovery, and provenance evidence are planned with the behavior they protect.
 6. **Production readiness is evidence-based.** Load, restore, recovery, migration, security, accessibility, and event-day readiness claims require exercised evidence rather than architecture prose.
-7. **No speculative platform bloat.** New frameworks/services/helpers require a demonstrated implementation need and must preserve `MOD-*`, `DATA-*`, `AUTH-*`, `API-*`, `SYNC-*`, `REP-*`, `FE-*`, and `AWS-*` ownership boundaries.
+7. **No speculative platform bloat.** New frameworks/services/helpers require a demonstrated implementation need and must preserve `MOD-*`, `DATA-*`, `AUTH-*`, `API-*`, `SYNC-*`, `REP-*`, `FE-*`, `AWS-*`, and `IMPL-*` ownership boundaries.
 
 ## Dependency-safe phase plan
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 006-A | **Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement** | **Next** |
-| 006-B | Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates | Planned |
+| 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete** |
+| 006-B | **Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates** | **Next** |
 | 006-C | Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement | Planned |
 | 006-D | Environment, IaC, CI/CD, Local Development & Runtime Bootstrap | Planned |
 | 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | Planned |
@@ -70,26 +70,27 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 
 The sequence is the default dependency order, not a ban on all parallel work. A later group may begin preparatory work only when its required contracts from preceding groups are stable enough that parallelism cannot create competing foundations.
 
-# 006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement
+## Accepted implementation baseline through 006-A
 
-Resolve the implementation-level decisions that every later subgroup would otherwise make inconsistently.
+Current implementation authority lives in [Canonical Implementation](../canonical/implementation/) and [Implementation Authority, Toolchain & Delivery Governance](../canonical/implementation/implementation-foundation.md) with `IMPL-001` through `IMPL-016`.
 
-Expected scope:
+006-A establishes:
 
-- implementation authority and change-escalation rules under `DOC-*`, `CHG-*`, and `ARCH-001`;
-- backend language/runtime and web/application framework selection;
-- package manager, build/test runner, formatting/lint/static-analysis baseline;
-- ORM/query/migration tooling family;
-- OpenAPI/schema-generation posture;
-- IaC tool selection;
-- dependency/container/IaC/security-scanning baseline;
-- branch/ruleset protection so required CI is actually enforced before merge;
-- GitHub environment and production-approval posture;
-- generated-code/lockfile/dependency-update policy;
-- implementation ADR/decision-record convention and canonical-architecture escalation boundary;
-- exact meaning of "done" for a Phase 006 subgroup.
+- Node.js 24 LTS + TypeScript 6.x as the primary server/browser implementation toolchain;
+- pnpm workspaces and committed lockfile, without Nx/Turborepo at baseline;
+- Fastify 5.x as the thin server transport/application host rather than a domain framework;
+- Kysely + node-postgres for typed PostgreSQL access and explicit version-controlled migrations;
+- explicit transport schemas that generate OpenAPI outward rather than serializing domain/persistence models;
+- Vitest and Playwright as verification tool families, with the detailed evidence matrix deferred to 006-B;
+- strict TypeScript, ESLint flat configuration, and Prettier as mandatory static-quality gates;
+- OpenTofu for persistent AWS infrastructure;
+- layered dependency/static/container/IaC security scanning;
+- committed/reviewed dependency lockfiles and reproducible generated-code policy;
+- intended PR/check-gated `main` and separately protected production deployment authority;
+- implementation decision records that remain subordinate to canonical architecture;
+- a common Phase 006 definition of done.
 
-006-A must not create module/package topology in detail; that belongs to 006-C after the toolchain and enforcement mechanisms are known.
+The current design-session GitHub connection cannot administer repository rulesets/branch protection, so actual protection configuration and verification remain a named 006-D gate rather than being falsely claimed complete.
 
 # 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates
 
@@ -133,9 +134,10 @@ Expected scope:
 
 - local development topology and developer bootstrap;
 - production/nonproduction AWS account/environment mapping;
-- selected IaC repository/module structure;
+- OpenTofu repository/module/state/backend structure;
 - VPC/subnet/NAT/S3-endpoint/CloudFront/internal-ALB/ECS/ECR/RDS/S3/SQS/Cognito/CloudWatch skeleton sequencing;
 - GitHub Actions OIDC deployment roles and protected environments;
+- actual `main` ruleset/branch protection and required-check verification;
 - secret/configuration injection and local equivalents;
 - immutable backend/frontend release packaging;
 - migration execution identity and deployment ordering;
@@ -147,12 +149,13 @@ Expected scope:
 
 # 006-E — Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation
 
-Turn `DATA-*` into the shared authoritative persistence substrate used by later domain slices.
+Turn `DATA-*` and `IMPL-005` into the shared authoritative persistence substrate used by later domain slices.
 
 Expected scope:
 
 - PostgreSQL schema/namespace conventions by module owner;
 - stable identifier representation;
+- Kysely database-type generation/ownership convention;
 - transaction/unit-of-work conventions;
 - revision/concurrency-token representation;
 - committed Version and Provenance persistence primitives without centralizing their semantics;
@@ -189,7 +192,7 @@ Establish the transport/application execution model used by all subsequent domai
 Expected scope:
 
 - versioned HTTPS/JSON API conventions and route/command style;
-- DTO/schema/OpenAPI generation and compatibility policy;
+- JSON-schema-compatible DTO/schema and OpenAPI generation/compatibility policy;
 - server-derived actor/Participation context propagation;
 - command/query handler boundary;
 - semantic error/result envelope;
@@ -199,7 +202,7 @@ Expected scope:
 - cross-module transaction coordinator mechanics while the shared database is local;
 - pagination/order conventions;
 - outbox publication after authoritative commit;
-- client-generated API adapter strategy.
+- generated browser API adapter strategy.
 
 # 006-H — Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation
 
@@ -207,7 +210,7 @@ Establish the React client substrate before domain screens are multiplied.
 
 Expected scope:
 
-- React/TypeScript project/build structure;
+- React/TypeScript project/build structure under the pnpm workspace;
 - React Router Data-mode route/layout/error-boundary conventions;
 - TanStack Query client/cache ownership and context partitioning;
 - authenticated shell, Competition/Participation mode selection, and protected-route behavior;
@@ -312,17 +315,11 @@ Expected scope:
 
 The phase is intentionally serial at major authority seams, but limited parallel execution is safe after prerequisite contracts stabilize:
 
-- portions of 006-B and 006-C may proceed in parallel after 006-A if test/tooling decisions do not conflict;
+- portions of 006-B and 006-C may proceed in parallel now that 006-A is stable if test/tooling decisions do not conflict;
 - IaC scaffolding in 006-D may proceed alongside late 006-C documentation once package/runtime boundaries are stable;
 - frontend primitive/accessibility work in 006-H may begin while late 006-G API details finish if generated/public contracts are stable;
 - artifact-renderer prototyping for 006-L may occur before 006-K completes, but authoritative Publication integration waits for real source/outcome contracts;
 - 006-M evidence work is accumulated throughout the phase, but its integrated exit decision waits for 006-I through 006-L.
-
-## Non-goals of Phase 006 decomposition
-
-This plan does not yet choose the backend framework, ORM, IaC tool, component primitive library, IndexedDB wrapper, renderer, or exact package layout. Those are deliberately assigned to the subgroup that can evaluate them with the right prerequisites.
-
-This plan also does not create production code, schemas, cloud infrastructure, or a new canonical implementation rule namespace by itself.
 
 ## Exit target
 
@@ -336,4 +333,4 @@ Phase 006 should exit only when:
 
 ## Next
 
-Proceed to **006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**.
+Proceed to **006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates**.
