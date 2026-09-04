@@ -23,6 +23,4 @@ Current repository/design-governance knowledge for MUDAC.
 
 Repository agents receive a concise bootstrap through [`AGENTS.md`](../../../AGENTS.md). That adapter routes to these canonical governance owners and is not an independent authority layer.
 
-# Remaining Phase 004 governance work
-
-004-I performs the repository-wide knowledge-graph/drift audit and migration closure. 004-J then performs the Phase 004 consolidation and knowledge-architecture exit review.
+The numbered [Phase 004 history](../../004-knowledge-architecture/) preserves the rationale, rollout, strict audit, and migration-closure record for this governance system.
