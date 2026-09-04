@@ -13,10 +13,11 @@ Architecture remains downstream of canonical product, UX, invariant, policy, and
 * [Commands, Queries, API, Transaction & Concurrency Architecture](commands-api-concurrency.md) — `API-*` request/transaction contracts; HTTPS/JSON command-query separation, current-context authorization, confirmed-after-commit semantics, optimistic concurrency, targeted locking/isolation, durable idempotency, lost-response recovery, and explicit projection freshness.
 * [Draft Synchronization, Offline & Recovery Architecture](synchronization-recovery.md) — `SYNC-*` continuity contracts; bounded local Draft persistence, revision-aware synchronization, conflict preservation, online-only authoritative transitions, reconnect/Access revalidation, truthful sync state, and paper/electronic convergence.
 * [External Representation, Artifact & Publication Architecture](external-representation.md) — `REP-*` externalization contracts; paper-source/capture authority boundaries, exact source/disclosure binding, immutable artifact bytes and digests, object-storage separation, idempotent generation, validation, explicit publication, supersession, and end-to-end representation provenance.
+* [Front-End State, Navigation & Interaction Architecture](frontend-interaction.md) — `FE-*` browser contracts; React/TypeScript baseline, React Router route boundaries, TanStack Query remote cache, IndexedDB Draft continuity, explicit role/context and command states, accessible component layering, phone-primary Judge interaction, exception-first Organizer responsiveness, and failure/recovery containment.
 
 # Planned architecture areas
 
-Phase 005 will add accepted current owners here as front-end and AWS/runtime decisions become stable.
+Phase 005 will add the accepted AWS/runtime/operations owner here when 005-I becomes stable.
 
 # Authority rule
 
