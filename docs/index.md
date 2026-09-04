@@ -12,9 +12,9 @@ Current product/domain, conceptual UX, documentation-governance, and accepted ar
 
 * [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, governance knowledge, and accepted architecture.
 * [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict, source lineage, methodology/terminology, metadata/trust/lifecycle, validation/CI, and stable IDs.
-* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry, including current `ARCH-*` and `MOD-*` architecture rules.
+* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry, including current `ARCH-*`, `MOD-*`, and `DATA-*` architecture rules.
 * [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) - `VAL-*` contract for deterministic structural checks and read-only CI.
-* [Architecture](canonical/architecture/) - Current accepted architecture contracts, including the [Architectural Foundation](canonical/architecture/architectural-foundation.md) and [Application Boundaries](canonical/architecture/application-boundaries.md).
+* [Architecture](canonical/architecture/) - Current accepted architecture contracts, including the [Architectural Foundation](canonical/architecture/architectural-foundation.md), [Application Boundaries](canonical/architecture/application-boundaries.md), and [Data & Persistence Architecture](canonical/architecture/data-persistence.md).
 
 # Agent bootstrap
 
@@ -32,7 +32,7 @@ Each phase directory has an `index.md` that routes phase records toward current 
 * [Phase 002 — Concept Specification](002-concept-specification/) - Behavioral, policy, authority, and evidence specification history.
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - UX architecture and exit history.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
-* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Active** architecture design. 005-A and 005-B are complete; 005-C is next.
+* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Active** architecture design. 005-A, 005-B, and 005-C are complete; 005-D is next.
 
 # Navigation Guidance
 
