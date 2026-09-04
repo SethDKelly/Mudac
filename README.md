@@ -34,7 +34,8 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
   * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture: Complete
   * 005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery: Complete
   * 005-G — Paper Capture, Export, Artifact, Publication & External-Representation Architecture: Complete
-  * **005-H — Front-End State, Navigation, Component-System & Responsive Interaction Architecture: Next**
+  * 005-H — Front-End State, Navigation, Component-System & Responsive Interaction Architecture: Complete
+  * **005-I — AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture: Next**
 
 ## Current architecture posture
 
@@ -50,6 +51,8 @@ The [Architectural Foundation](docs/canonical/architecture/architectural-foundat
 
 [External Representation, Artifact & Publication Architecture](docs/canonical/architecture/external-representation.md) defines `REP-*` rules. Paper-origin Scorecard authority remains inside Evaluation with source/capture provenance preserved; durable Export/Artifact identity binds exact source revision, purpose, and disclosure profile; binary scans/PDFs/packages live in immutable object/blob storage behind relational authority metadata; artifact integrity is digest-addressable; generation, validation, Publication, and delivery remain distinct; source changes produce affected/successor representations rather than overwriting historical bytes; and URLs/QR/signed links/object/CDN locations remain delivery mechanisms rather than authority.
 
-Concrete web/client framework, browser persistence API, local encryption/background-sync mechanism, OpenAPI tooling, ORM/unit-of-work implementation, identity-provider vendor, exact session/idempotency stores and timings, queue/broker, WebSocket/SSE mechanics, object-storage/CDN product, PDF/rendering/template stack, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
+[Front-End State, Navigation & Interaction Architecture](docs/canonical/architecture/frontend-interaction.md) defines `FE-*` rules. The browser baseline is React + TypeScript with React Router Data mode for navigation/layout/error boundaries, TanStack Query for remote server/projection caching, and an IndexedDB-backed adapter for non-authoritative Draft continuity. Client state remains partitioned by ownership; high-consequence command outcomes remain explicit and non-optimistic; Judge interaction is phone-primary; Organizer interaction remains exception-first and responsively equivalent; component layering preserves semantic ownership; core workflows target WCAG 2.2 AA; and push transport is optional latency optimization rather than correctness authority.
+
+Concrete package manager/build/CSS/component-library choices, IndexedDB wrapper/service-worker implementation, telemetry/testing stack, OpenAPI tooling, ORM/unit-of-work implementation, identity-provider vendor, exact session/idempotency stores and timings, queue/broker, push transport, object-storage/CDN product, PDF/rendering/template stack, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
 
 This repository remains in design; production implementation has not begun.
