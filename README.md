@@ -31,7 +31,8 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
   * 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Complete
   * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Complete
   * 005-D — Identity, Authentication, Participation, Access & Session Architecture: Complete
-  * **005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture: Next**
+  * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture: Complete
+  * **005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery: Next**
 
 ## Current architecture posture
 
@@ -41,6 +42,8 @@ The [Architectural Foundation](docs/canonical/architecture/architectural-foundat
 
 [Identity, Authentication, Access & Session Architecture](docs/canonical/architecture/identity-access-session.md) defines `AUTH-*` rules. Authentication is provider-backed but does not grant Competition authority; external subjects map explicitly to stable MUDAC Identity; Competition Participation/context remains MUDAC-owned; Access is capability-oriented and reevaluated from current authoritative state; browsers use opaque first-party server sessions; Event Completed expires ordinary Judge private-evaluation capability even for stale sessions; dual-role capability sets remain isolated; correction grants are narrow/reverified; and routine Administrator/break-glass authority remains distinct from Competition decision authority.
 
-The concrete identity provider, authentication factor defaults, exact session durations/store, transaction isolation/locking, API protocol, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
+[Commands, Queries, API, Transaction & Concurrency Architecture](docs/canonical/architecture/commands-api-concurrency.md) defines `API-*` rules. The primary browser boundary is versioned HTTPS/JSON; commands and queries are distinct; high-consequence transitions use explicit intent-bearing commands; confirmed success occurs only after authoritative commit; optimistic revision/precondition checks are the default concurrency mechanism with targeted locking/stronger isolation where demonstrated; durable idempotency plus logical uniqueness makes retries converge; and projection-backed reads expose freshness without becoming write authority.
+
+Concrete web framework/router, OpenAPI tooling, ORM/unit-of-work implementation, identity-provider vendor, exact session/idempotency stores and timings, queue/broker, WebSocket/SSE mechanics, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
 
 This repository remains in design; production implementation has not begun.
