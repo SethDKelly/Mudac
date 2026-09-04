@@ -15,7 +15,7 @@ sources:
   - resource: ../experience/judge-evaluation.md
   - resource: ../experience/status-feedback-recovery.md
   - resource: ../invariants/capture-channel-parity.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:00:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
 
 # Purpose
@@ -160,6 +160,8 @@ compare server revision with local base
 
 MUDAC distinguishes at least no-conflict synchronization, idempotent replay, stale-revision conflict, server-already-Finalized, Access-expired/revoked, structural-basis mismatch, uncertain consequential command, and paper/electronic overlap.
 
-# Deliberate deferrals
+# Selected mechanisms and remaining implementation detail
 
-This contract does not select IndexedDB or another browser persistence API, client-side encryption library, service worker/background-sync mechanics, autosave cadence, WebSocket/SSE transport, offline cache library, merge UI, exact local-retention limits, queue/broker, or AWS connectivity/failover services. These mechanisms must satisfy the `SYNC-*` semantics when selected.
+Concrete downstream selections now realize parts of this contract without changing `SYNC-*` ownership: [FE-005](frontend-interaction.md#fe-005) selects an IndexedDB-backed local Draft adapter, while [AWS-008](aws-runtime-operations.md#aws-008) selects SQS for retryable asynchronous work and [AWS-017](aws-runtime-operations.md#aws-017) defines regional recovery posture.
+
+Exact IndexedDB wrapper, client-side encryption/retention mechanics, service worker/background synchronization, autosave cadence, push transport, conflict UI, and local cleanup policy remain implementation choices. Those mechanisms must preserve the authority, conflict, privacy, and recovery semantics owned here.
