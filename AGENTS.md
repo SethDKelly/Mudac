@@ -18,6 +18,7 @@ Governed by:
 - [`CTX-*` — Agent Context](docs/canonical/governance/agent-context.md)
 - [`CHG-*` — Canonical Change & Conflict Governance](docs/canonical/governance/change-governance.md)
 - [`META-*` — OKF Metadata, Trust, Lifecycle & Freshness](docs/canonical/governance/metadata-trust-lifecycle.md)
+- [`VAL-*` — Knowledge Validation & CI Enforcement](docs/canonical/governance/validation-enforcement.md)
 - [Stable Rule Identifiers](docs/canonical/governance/rule-identifiers.md)
 - [Source Lineage](docs/canonical/governance/source-lineage.md)
 
@@ -33,7 +34,7 @@ Governed by:
 - infer source-code package/service/database structure from the knowledge-directory layout;
 - create new MUDAC Concepts merely because a subject has its own OKF document;
 - fabricate `generated`, `verified`, source credibility, or `stale_after` metadata for cosmetic completeness;
-- treat CI conformance as semantic verification.
+- treat CI or validator conformance as semantic verification.
 
 ## Canonical changes
 
@@ -42,6 +43,17 @@ If the human explicitly asks to change MUDAC design meaning, follow [`Canonical 
 If implementation conflicts with canonical meaning and no redesign was requested, the implementation must adapt.
 
 Meaningful edits to OKF concept documents follow the [`META-*` profile](docs/canonical/governance/metadata-trust-lifecycle.md): record real generation provenance prospectively, preserve only verification that actually covers current content, and keep lifecycle/freshness metadata semantically accurate.
+
+## Validation
+
+After changes to governed knowledge, routing, rule IDs, validation tooling, or related documentation, run:
+
+```text
+python -m pip install -r requirements-docs.txt
+python scripts/validate_knowledge.py
+```
+
+The validator checks deterministic structure only. A passing result is **not** an OKF `verified` event and does not replace semantic/design review.
 
 ## Context stopping rule
 
