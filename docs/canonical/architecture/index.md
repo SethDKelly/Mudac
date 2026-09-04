@@ -11,10 +11,11 @@ Architecture remains downstream of canonical product, UX, invariant, policy, and
 * [Data, Persistence, Versioning, Provenance & Projection Architecture](data-persistence.md) — `DATA-*` persistence contracts; one PostgreSQL-compatible relational authority store with module-owned namespaces, stable IDs, append-stable Versions/Provenance, reconstructible derived state, rebuildable projections, and transactional change propagation without primary event sourcing.
 * [Identity, Authentication, Access & Session Architecture](identity-access-session.md) — `AUTH-*` identity/security contracts; provider-backed authentication mapped to stable MUDAC Identity, explicit Participation context, contextual Access, opaque first-party server sessions, event-completion expiry, role-context isolation, revocation, narrow correction grants, and break-glass separation.
 * [Commands, Queries, API, Transaction & Concurrency Architecture](commands-api-concurrency.md) — `API-*` request/transaction contracts; HTTPS/JSON command-query separation, current-context authorization, confirmed-after-commit semantics, optimistic concurrency, targeted locking/isolation, durable idempotency, lost-response recovery, and explicit projection freshness.
+* [Draft Synchronization, Offline & Recovery Architecture](synchronization-recovery.md) — `SYNC-*` continuity contracts; bounded local Draft persistence, revision-aware synchronization, conflict preservation, online-only authoritative transitions, reconnect/Access revalidation, truthful sync state, and paper/electronic convergence.
 
 # Planned architecture areas
 
-Phase 005 will add accepted current owners here as synchronization/degraded operation, external representation, front-end, and AWS/runtime decisions become stable.
+Phase 005 will add accepted current owners here as external representation, front-end, and AWS/runtime decisions become stable.
 
 # Authority rule
 
