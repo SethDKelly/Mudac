@@ -6,7 +6,7 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and architecture knowledge.
 
-Phase 004 has established canonical product/UX knowledge, bidirectional historical lineage, stable high-value rule IDs, repository/agent governance, the MUDAC OKF metadata/trust/lifecycle profile, and deterministic knowledge validation. The repository-wide migration/drift audit remains before Phase 004 exit.
+Current product/domain, conceptual UX, and documentation-governance meaning is organized under canonical knowledge. Numbered phase directories preserve design history and material provenance. The OKF migration is structurally closed; legacy Phase 001–003 records remain intentionally preserved rather than bulk-rewritten for cosmetic metadata conformity.
 
 # Current Canonical Knowledge
 
@@ -30,7 +30,7 @@ Each phase directory has an `index.md` that routes historical records toward cur
 * [Phase 001 — Concept Design Foundation](001-concept-design/) - Concept discovery and initial catalog history.
 * [Phase 002 — Concept Specification](002-concept-specification/) - Behavioral, policy, authority, and evidence specification history.
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - UX architecture and exit history.
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Active OKF retrofit/documentation-governance work; 004-I is the next migration-closure audit.
+* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - OKF retrofit, documentation-governance, validation, and migration-closure history.
 
 # Navigation Guidance
 
