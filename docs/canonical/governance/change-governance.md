@@ -80,4 +80,4 @@ Editorial changes do not require a design phase or new rule ID when semantics ar
 
 Impact review is proportional to consequence. A typo does not require a repository-wide audit. A change to `INV-*`, Scorecard authority, Competition lifecycle, Evaluation Policy, disclosure, or official-outcome semantics may affect many later contracts and warrants broader review.
 
-004-H will automate structural checks such as duplicate IDs and broken links; semantic compatibility remains a design-review responsibility.
+The repository validator automates deterministic structural checks such as duplicate stable IDs, broken current links, local source resolution, and routing requirements. Semantic compatibility remains a design-review responsibility; passing validation is not semantic verification.
