@@ -14,16 +14,20 @@ sources:
 
 Produce a stable external representation of identified authoritative information for distribution, printing, or publication.
 
-# Canonical contract
+<a id="export-001"></a>
+## EXPORT-001 — Export represents source truth; it does not replace it
 
-Export is tied to a source Version/revision, purpose, and audience/disclosure profile. It may produce paper, files, encoded identifiers, or publication artifacts without becoming source truth.
+An Export is tied to identified source Version/revision, purpose, and audience/disclosure profile. It may produce paper, files, encoded identifiers, or publication artifacts without becoming the authoritative source it represents.
 
-An Export may later be Current, Stale, Superseded, Affected, or withdrawn from current distribution while remaining historically attributable to the source it represented.
+An Export may later be Current, Stale, Superseded, Affected, or withdrawn from current distribution while remaining historically attributable to its source.
 
-Generation and publication are distinct operations.
+<a id="export-002"></a>
+## EXPORT-002 — Generation and publication are distinct
+
+Generating an Export does not itself publish or release it. External release remains a deliberate operation under the relevant audience/disclosure contract.
+
+The broader Finalization/publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007). Audience disclosure is governed by [DISC-002](../policies/anonymity-disclosure.md#disc-002).
 
 # Boundaries
 
 PDF, QR, barcode, and similar encodings are representations/mechanisms, not Concepts. Possession of an exported identifier does not grant authority.
-
-See [Anonymity & Disclosure](../policies/anonymity-disclosure.md), [Official Outcome Revision](../mechanisms/official-outcome-revision.md), and [Paper, Export & Publication](../experience/paper-export-publication.md).
