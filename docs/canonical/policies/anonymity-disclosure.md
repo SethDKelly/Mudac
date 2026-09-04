@@ -15,10 +15,18 @@ sources:
 
 MUDAC provides controlled identity disclosure, not absolute real-world anonymity.
 
-During blinded judging, the Judge-facing Team representation is [Alias](../concepts/alias.md) + Division. Institution/admin identity and optional Team Name are hidden by default. Team attributes require explicit audience/lifecycle disclosure classification.
+<a id="disc-001"></a>
+## DISC-001 — Blinded Judge Team identity
 
-Judges see their own Scorecards/Notes while ordinary Access remains active, but not peer Scorecards/Notes, live Team Aggregate, Coverage, Rank, or standings.
+During blinded judging, the Judge-facing Team representation is [Alias](../concepts/alias.md) + Division. Institution/administrative identity and optional Team Name are hidden by default. Team attributes require explicit audience/lifecycle disclosure classification.
 
-Representation profiles such as Judge-safe, Organizer-sensitive, Ceremony-safe, and Public are purpose-specific. Organizer visibility does not imply inclusion in an Export/public artifact.
+Peer-result non-disclosure during ordinary judging is owned by [INV-001 — Judge Independence](../invariants/judge-independence.md#inv-001), rather than restated here as a separate fairness rule.
 
-Disclosure rules apply to views, search, deep links, QR payloads, filenames/metadata, print, and publication—not only page bodies.
+<a id="disc-002"></a>
+## DISC-002 — Disclosure is audience and purpose specific
+
+Representation profiles such as Judge-safe, Organizer-sensitive, Ceremony-safe, and Public are purpose-specific. Organizer visibility does not imply inclusion in an Export or public artifact.
+
+Disclosure rules apply to interactive views, search, deep links, QR payloads, filenames/metadata, print, and publication—not only page bodies.
+
+See [Access](../concepts/access.md#acc-001) and [Export](../concepts/export.md#export-001).
