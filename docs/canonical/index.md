@@ -14,7 +14,7 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, d
 
 * [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change (`CHG-*`), metadata/trust/lifecycle (`META-*`), validation/CI (`VAL-*`), source lineage, and stable rule IDs.
 * [Architecture](architecture/) - Current accepted system/application architecture contracts, beginning with the [Architectural Foundation](architecture/architectural-foundation.md) and `ARCH-*` rules. Knowledge topology does not dictate source-code topology.
-* [Implementation](implementation/) - Current accepted implementation contracts, including [Implementation Authority, Toolchain & Delivery Governance](implementation/implementation-foundation.md) with `IMPL-*` rules and [Verification Strategy, Evidence & Quality Gates](implementation/verification-strategy.md). Implementation remains downstream of architecture and may not redefine product meaning.
+* [Implementation](implementation/) - Current accepted implementation contracts, including [Implementation Authority, Toolchain & Delivery Governance](implementation/implementation-foundation.md) with `IMPL-*` rules, [Verification Strategy, Evidence & Quality Gates](implementation/verification-strategy.md), and [Source Topology, Package Boundaries & Dependency Enforcement](implementation/source-topology.md). Implementation remains downstream of architecture and may not redefine product meaning.
 
 # Retrieval Rule
 
@@ -32,4 +32,4 @@ For rationale or design evolution, follow a canonical document's `sources` links
 
 For architecture work, load the current architecture owner(s) and only the task-relevant upstream product/UX/governance constraints they depend on.
 
-For implementation work, load the relevant [Implementation](implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially required by the task. Verification work additionally uses [Verification Strategy, Evidence & Quality Gates](implementation/verification-strategy.md) and traces evidence to the existing canonical stable rule IDs being proven.
+For implementation work, load the relevant [Implementation](implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially required by the task. Verification work additionally uses [Verification Strategy, Evidence & Quality Gates](implementation/verification-strategy.md). Source/package/dependency work additionally uses [Source Topology, Package Boundaries & Dependency Enforcement](implementation/source-topology.md). Evidence and source enforcement should trace existing canonical stable rules rather than create parallel rule bodies.
