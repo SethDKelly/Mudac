@@ -5,6 +5,7 @@ Current repository/design-governance knowledge is being extracted incrementally 
 # Current Governance
 
 * [Source Lineage and Historical Design Records](source-lineage.md) - Canonical contract for backward `sources` provenance, forward phase-to-canonical lineage, historical preservation, and material-source selection.
+* [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md) - Canonical contract for durable rule IDs, explicit anchors, reference-first reuse, bounded restatement, and ID stability.
 
 # Pending Governance Extraction
 
@@ -14,7 +15,6 @@ Later Phase 004 groups will establish concise canonical owners for:
 * MUDAC OKF adoption profile and version policy.
 * Documentation authority and precedence.
 * Terminology and knowledge-type conventions.
-* Canonical ownership, stable rule IDs, and cross-reference/restatement rules.
 * Agent retrieval/context and anti-drift rules.
 * Knowledge change, verification, lifecycle, and freshness governance.
 
