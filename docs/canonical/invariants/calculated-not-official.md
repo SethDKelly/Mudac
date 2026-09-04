@@ -9,7 +9,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
 ---
 
-# Invariant
+<a id="inv-006"></a>
+# INV-006 — Calculated Is Not Official
 
 MUDAC preserves the sequence:
 
