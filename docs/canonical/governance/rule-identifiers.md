@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:18:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:28:35Z }
 ---
 
 # Canonical contract
@@ -233,6 +233,27 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [FE-016 — Real-Time Push Is an Accelerator, Not a Correctness Dependency](../architecture/frontend-interaction.md#fe-016)
 * [FE-017 — Dense/Tabular Information May Transform Responsively Without Semantic Loss](../architecture/frontend-interaction.md#fe-017)
 * [FE-018 — Client Error Boundaries Contain Failure Without Inventing Source-State Loss](../architecture/frontend-interaction.md#fe-018)
+
+# AWS runtime, deployment, security and operations
+
+* [AWS-001 — Production Is Single-Active-Region, Multi-AZ, With Explicit Cold Regional Recovery](../architecture/aws-runtime-operations.md#aws-001)
+* [AWS-002 — CloudFront Is the Public Application/Data Edge; Origins Remain Private](../architecture/aws-runtime-operations.md#aws-002)
+* [AWS-003 — The Authoritative Application Runs on ECS/Fargate as API and Bounded Worker Roles](../architecture/aws-runtime-operations.md#aws-003)
+* [AWS-004 — Production Capacity Favors Event Continuity Over Reactive-Only Scaling](../architecture/aws-runtime-operations.md#aws-004)
+* [AWS-005 — RDS for PostgreSQL Multi-AZ Is the Production Authority Database](../architecture/aws-runtime-operations.md#aws-005)
+* [AWS-006 — Cognito Authenticates; MUDAC Still Owns Identity, Participation, Access and Sessions](../architecture/aws-runtime-operations.md#aws-006)
+* [AWS-007 — Private Evidence and Artifact Bytes Use Versioned, Encrypted S3 Behind Relational Authority Metadata](../architecture/aws-runtime-operations.md#aws-007)
+* [AWS-008 — SQS Carries Retryable Asynchronous Work, Not Domain Authority](../architecture/aws-runtime-operations.md#aws-008)
+* [AWS-009 — Application and Database Tiers Remain Private; Outbound Egress Is Explicit and Availability-Aware](../architecture/aws-runtime-operations.md#aws-009)
+* [AWS-010 — IAM, Secrets and Encryption Preserve Least Privilege and Actor Separation](../architecture/aws-runtime-operations.md#aws-010)
+* [AWS-011 — Production and Nonproduction Deployment Authority Is Account/Environment Separated and GitHub-OIDC Federated](../architecture/aws-runtime-operations.md#aws-011)
+* [AWS-012 — Infrastructure and Releases Are Reproducible, Immutable and Rollback-Aware](../architecture/aws-runtime-operations.md#aws-012)
+* [AWS-013 — Frontend Release Promotion Is Content-Addressed and API-Compatible](../architecture/aws-runtime-operations.md#aws-013)
+* [AWS-014 — Edge/Infrastructure Security Complements but Never Replaces Application Authority](../architecture/aws-runtime-operations.md#aws-014)
+* [AWS-015 — Observability Includes MUDAC Semantic Health, Not Only Infrastructure Utilization](../architecture/aws-runtime-operations.md#aws-015)
+* [AWS-016 — Backups Are Multi-Layered, Cross-Region Where Material, and Trusted Only After Restore Testing](../architecture/aws-runtime-operations.md#aws-016)
+* [AWS-017 — Regional Disaster Recovery Restores One Authority and Uses Paper for Live Continuity](../architecture/aws-runtime-operations.md#aws-017)
+* [AWS-018 — Cost Optimization Removes Unjustified Infrastructure, Not Trust Guarantees](../architecture/aws-runtime-operations.md#aws-018)
 
 # Documentation authority
 
