@@ -30,7 +30,8 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
   * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: Complete
   * 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Complete
   * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Complete
-  * **005-D — Identity, Authentication, Participation, Access & Session Architecture: Next**
+  * 005-D — Identity, Authentication, Participation, Access & Session Architecture: Complete
+  * **005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture: Next**
 
 ## Current architecture posture
 
@@ -38,8 +39,8 @@ The [Architectural Foundation](docs/canonical/architecture/architectural-foundat
 
 [Data & Persistence Architecture](docs/canonical/architecture/data-persistence.md) defines `DATA-*` rules and selects one PostgreSQL-compatible relational authority database with module-owned logical namespaces. Durable resource identities are storage-independent; working/current state is distinct from immutable committed Versions; meaningful Provenance is append-stable; referenced authoritative evidence is not removed by ordinary destructive cascades; derived calculations retain a reconstructible basis; projections are rebuildable/non-authoritative; and transactional outbox/change records prevent authoritative commits from silently diverging from asynchronous projection/integration propagation.
 
-MUDAC does **not** adopt primary event sourcing as its baseline persistence architecture. PostgreSQL compatibility is now an architectural database-family constraint, while AWS RDS/Aurora topology, ORM/migration tooling, transaction isolation/locking, identity provider, API protocol, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions.
+[Identity, Authentication, Access & Session Architecture](docs/canonical/architecture/identity-access-session.md) defines `AUTH-*` rules. Authentication is provider-backed but does not grant Competition authority; external subjects map explicitly to stable MUDAC Identity; Competition Participation/context remains MUDAC-owned; Access is capability-oriented and reevaluated from current authoritative state; browsers use opaque first-party server sessions; Event Completed expires ordinary Judge private-evaluation capability even for stale sessions; dual-role capability sets remain isolated; correction grants are narrow/reverified; and routine Administrator/break-glass authority remains distinct from Competition decision authority.
 
-The intended delivery boundary remains **GitHub Actions → AWS**.
+The concrete identity provider, authentication factor defaults, exact session durations/store, transaction isolation/locking, API protocol, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
 
 This repository remains in design; production implementation has not begun.
