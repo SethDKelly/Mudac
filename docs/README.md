@@ -6,9 +6,9 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root.
 
-For current product/domain and conceptual UX meaning, use [Canonical Knowledge](canonical/). Repository agents use root [`AGENTS.md`](../AGENTS.md) as a thin bootstrap into the same canonical governance.
+For current product/domain, conceptual UX, governance, and accepted architecture meaning, use [Canonical Knowledge](canonical/). Repository agents use root [`AGENTS.md`](../AGENTS.md) as a thin bootstrap into the same canonical governance.
 
-Use numbered phase directories for rationale, design evolution, and source provenance. Each numbered phase has an OKF `index.md` that maps historical records forward to current canonical successors.
+Use numbered phase directories for rationale, design evolution, architecture alternatives, and source provenance. Each numbered phase has an OKF `index.md` that maps records forward to current canonical successors.
 
 ## Governance
 
@@ -36,6 +36,8 @@ The Phase 004 migration and exit review are complete. Phase 001–003 historical
 * Phase 002 — Concept Specification, Policy & Synchronization Refinement: **Complete**
 * Phase 003 — Conceptual UX Architecture: **Complete**
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
-* **Phase 005 — System, Application, Data & Synchronization Architecture: Next**
+* Phase 005 — System, Application, Data & Synchronization Architecture: **In Progress**
+  * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: **Complete**
+  * **005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Next**
 
-Phase 005 should start from task-relevant canonical product/UX/governance owners and stable rules. Accepted architecture decisions belong under [canonical/architecture/](canonical/architecture/); numbered Phase 005 records should preserve alternatives, rationale, and source lineage.
+Current accepted architecture begins at [Architectural Foundation](canonical/architecture/architectural-foundation.md), which defines `ARCH-001` through `ARCH-008`. Later accepted architecture decisions belong under [canonical/architecture/](canonical/architecture/); numbered Phase 005 records preserve alternatives, rationale, and source lineage.
