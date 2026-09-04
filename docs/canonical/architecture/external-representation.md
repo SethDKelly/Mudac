@@ -16,7 +16,7 @@ sources:
   - resource: ../policies/correction-authority.md
   - resource: ../experience/paper-export-publication.md
   - resource: ../mechanisms/official-outcome-revision.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:08:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
 
 # Purpose
@@ -150,9 +150,11 @@ Publication record
 channel / public or controlled distribution
 ```
 
-# Storage posture
+# Storage/runtime posture
 
-Relational authority stores semantic metadata and lifecycle/provenance. Object/blob storage stores large immutable binary payloads behind application-owned ports. Concrete AWS object storage, encryption, CDN, signed-URL, lifecycle, malware-scanning, and generator runtime choices belong to 005-I.
+Relational authority stores semantic metadata and lifecycle/provenance. Object/blob storage stores large immutable binary payloads behind application-owned ports. Concrete AWS realization is owned by [AWS-007](aws-runtime-operations.md#aws-007) for private versioned/encrypted S3 Artifact/evidence storage, [AWS-008](aws-runtime-operations.md#aws-008) for retryable asynchronous work, and [AWS-002](aws-runtime-operations.md#aws-002) for the CloudFront/private-origin delivery boundary.
+
+Exact renderer/template stack, signed-delivery implementation, malware/content-scanning mechanism, retention automation, and print integration remain implementation details constrained by `REP-*` and the applicable `AWS-*` contracts.
 
 # Failure posture
 
