@@ -20,18 +20,20 @@ Preferred bundle entry: [docs/index.md](../index.md). Historical/phase navigatio
 | 004-F | [Documentation Governance, Agent Context & Anti-Drift Rules](004-F-documentation-governance-agent-context-anti-drift-rules.md) | **Complete** |
 | 004-G | [OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) | **Complete** |
 | 004-H | [Validation Tooling, Link/Authority Checks & CI Enforcement](004-H-validation-tooling-link-authority-checks-ci-enforcement.md) | **Complete** |
-| 004-I | Repository-Wide Knowledge Graph / Drift Audit & Migration Closure | **Next** |
-| 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | Planned |
+| 004-I | [Repository-Wide Knowledge Graph / Drift Audit & Migration Closure](004-I-repository-wide-knowledge-graph-drift-audit-migration-closure.md) | **Complete** |
+| 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | **Next** |
 
-## Authoritative baseline through 004-H
+## Authoritative baseline through 004-I
 
 004-A through 004-G establish the Concept Design/OKF boundary, bundle topology, canonical product/UX owners, historical lineage, stable rule IDs, repository/agent governance, and the `META-*` trust/lifecycle profile.
 
 004-H establishes [Knowledge Validation & CI Enforcement](../canonical/governance/validation-enforcement.md) — `VAL-*` — plus the deterministic [`scripts/validate_knowledge.py`](../../scripts/validate_knowledge.py) validator and read-only GitHub Actions workflow.
 
-The validator enforces machine-checkable structure such as current frontmatter shape, lifecycle/timestamp/actor syntax, stable-ID uniqueness/registry ownership, current internal links/local sources, and progressive-disclosure routing. Passing validation is structural evidence only and is never an OKF `verified` event.
+004-I performs the repository-wide graph/drift audit and records **migration closure passed**. Strict validation completed with zero errors and zero warnings; canonical inventory, backward source lineage, forward phase routing, stable-ID ownership, reference-first composition, metadata asymmetries, and legacy exemptions were reviewed without identifying a blocking migration defect.
 
-No Concept split/merge/addition or product/UX semantic correction was required through 004-H.
+The remaining asymmetries are deliberate governance choices rather than unfinished retrofit work: Phase 001–003 may remain without modern frontmatter, historical prose may retain independently auditable repetition, `verified` metadata remains sparse unless a real verification event occurs, and the canonical `architecture/` category remains reserved until Phase 005.
+
+No Concept split/merge/addition or product/UX semantic correction was required through 004-I.
 
 ## Governing operating principles
 
@@ -39,6 +41,8 @@ No Concept split/merge/addition or product/UX semantic correction was required t
 
 Future architecture and implementation consume canonical contracts rather than recreate or override them. Agents use minimum-sufficient progressive context. Semantic changes update canonical owners and lineage explicitly. CI validates deterministic structure without claiming semantic authority.
 
+The OKF migration is structurally closed; further bulk Phase 001–003 migration is not a prerequisite for architecture design.
+
 ## Next
 
-004-I will perform the repository-wide knowledge-graph/drift audit, exercise strict validation across the corpus, inspect remaining historical/current asymmetries and exemptions, and determine whether the OKF migration is structurally closed before the Phase 004 exit review.
+004-J will consolidate Phase 004, test the methodology/authority/governance/validation system as one knowledge architecture, confirm the 004-I migration-closure decision, and determine readiness to begin Phase 005 system/application/data/synchronization architecture.
