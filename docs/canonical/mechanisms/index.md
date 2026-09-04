@@ -1,18 +1,15 @@
-# Derived and Subordinate Mechanisms
+# Derived and Supporting Mechanisms
 
-This directory will contain important MUDAC constructs that deserve direct canonical retrieval while deliberately remaining non-Concepts unless a later Concept Design refinement says otherwise.
+Important directly retrievable MUDAC knowledge that intentionally remains outside the accepted Concept catalog.
 
-Canonical extraction is pending 004-C.
+* [Team Attributes](team-attributes.md) - Disclosure-controlled descriptive Team metadata, including optional Team Name.
+* [Criterion & Notes](criterion-notes.md) - Rubric/Scorecard subordinate evaluation structure.
+* [Panel Membership & Composition](panel-membership-composition.md) - Current Panel relational state and composition capacity.
+* [Readiness](readiness.md) - Derived permission-to-proceed projections for Competition, Ranking, and Finalization.
+* [Coverage](coverage.md) - Sufficiency of qualifying evaluation evidence.
+* [Aggregate](aggregate.md) - Numerical combination of eligible authoritative Judge Scorecards.
+* [Rank](rank.md) - Derived Division ordering of rank-eligible Teams.
+* [Reconciliation](reconciliation.md) - Organizer process for resolving outcome-affecting exceptions after live judging.
+* [Official Outcome Revision](official-outcome-revision.md) - Reconstructible snapshot of declared official Competition outcomes.
 
-Expected subjects may include:
-
-* Coverage
-* Aggregate
-* Rank
-* Official Outcome Revision
-* Team Attribute Definition
-* Panel Membership
-* Criterion and Note where separate retrieval is useful
-* readiness and reconciliation projections where stable ownership is warranted
-
-Each document should state its relationship to the accepted Concept catalog when ambiguity is possible.
+These documents do not promote their subjects into Daniel Jackson MUDAC Concepts.

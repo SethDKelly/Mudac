@@ -1,19 +1,12 @@
-# Policies
+# Governing Policies
 
-This directory will contain current governing and configurable MUDAC competition semantics.
+Canonical current policy semantics that configure or constrain how MUDAC Concepts compose.
 
-Canonical extraction is pending 004-C.
+* [Evaluation Policy](evaluation-policy.md) - Evidence eligibility, Coverage, aggregation, Rubric compatibility, ranking, precision, and tie semantics.
+* [Anonymity & Disclosure](anonymity-disclosure.md) - Audience-specific identity and private-evidence disclosure rules.
+* [Panel Composition](panel-composition.md) - Expertise/capacity expectations and composition-exception semantics.
+* [Correction & Authority](correction-authority.md) - Judge amendment, transcription repair, structural correction, invalidation, and post-finalization authority.
+* [Awards & Finalization](awards-finalization.md) - Award selection/conferral and official closeout gates.
+* [Continuity & Paper](continuity-paper.md) - Electronic/paper capture parity, fallback, verification, and recovery.
 
-Expected subjects include:
-
-* Evaluation Policy
-* Coverage and eligibility policy
-* Aggregation policy
-* Ranking and tie policy
-* Anonymity and disclosure policy
-* Panel composition policy
-* Award and Finalization policy
-* Correction and authority policy
-* Continuity and paper policy
-
-Policy documents should link to the Concepts and mechanisms they govern rather than duplicating their full definitions.
+Policy documents govern Concepts/mechanisms through references; they are not additional MUDAC Concepts.
