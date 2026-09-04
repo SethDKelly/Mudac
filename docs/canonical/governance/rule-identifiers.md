@@ -9,6 +9,8 @@ sources:
   - resource: ../../004-knowledge-architecture/004-C-canonical-concept-policy-invariant-experience-knowledge-extraction.md
   - resource: ../../004-knowledge-architecture/004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
+  - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:30:09Z }
 ---
 
 # Canonical contract
@@ -124,6 +126,18 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
 
+# OKF metadata, trust, lifecycle and freshness
+
+* [META-001 — Canonical Knowledge Uses a Deliberate MUDAC Frontmatter Profile](metadata-trust-lifecycle.md#meta-001)
+* [META-002 — `generated` Records the Actual Producer of Current Meaningful Content](metadata-trust-lifecycle.md#meta-002)
+* [META-003 — `verified` Records an Actual Content/Source Confirmation Event](metadata-trust-lifecycle.md#meta-003)
+* [META-004 — OKF `status` Describes Knowledge-Artifact Lifecycle, Not MUDAC Domain State](metadata-trust-lifecycle.md#meta-004)
+* [META-005 — `stale_after` Is Used Only for a Real Absolute Freshness Boundary](metadata-trust-lifecycle.md#meta-005)
+* [META-006 — Source Credibility Metadata Must Remain Factual and Material](metadata-trust-lifecycle.md#meta-006)
+* [META-007 — OKF Trust Signals Do Not Replace MUDAC Authority or Access](metadata-trust-lifecycle.md#meta-007)
+* [META-008 — Legacy Records Are Not Speculatively Backfilled](metadata-trust-lifecycle.md#meta-008)
+* [META-009 — Metadata Updates Preserve Semantic and Historical Distinctions](metadata-trust-lifecycle.md#meta-009)
+
 # Change impact
 
-A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. [Canonical Change & Conflict Governance](change-governance.md) defines the workflow; 004-H will validate uniqueness and link resolution mechanically.
+A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. [Canonical Change & Conflict Governance](change-governance.md) defines the workflow; [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) governs knowledge-artifact metadata; 004-H will validate structural conformance, ID uniqueness, and link resolution mechanically.
