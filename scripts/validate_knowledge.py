@@ -26,6 +26,10 @@ ACTOR_RE = re.compile(
 STABLE_ID_RE = re.compile(r"^[a-z][a-z0-9]*-\d{3}$")
 ANCHOR_RE = re.compile(r'<a\s+id=["\']([^"\']+)["\']\s*>\s*</a>', re.IGNORECASE)
 MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+REGISTRY_ENTRY_RE = re.compile(
+    r"^\s*[*-]\s+\[([A-Z][A-Z0-9]*-\d{3})[^\]]*\]\(([^)]+)\)\s*$",
+    re.MULTILINE,
+)
 PHASE_DIR_RE = re.compile(r"^\d{3}-")
 
 
@@ -138,6 +142,7 @@ class Validator:
             self.docs / "references" / "index.md",
             self.docs / "canonical" / "governance" / "rule-identifiers.md",
             self.docs / "canonical" / "governance" / "metadata-trust-lifecycle.md",
+            self.docs / "canonical" / "governance" / "validation-enforcement.md",
         ]
         categories = [
             "architecture",
@@ -201,9 +206,8 @@ class Validator:
             if key in fm and (not isinstance(fm[key], str) or not fm[key].strip()):
                 self.error(path, f"{key} must be a non-empty string when present.")
 
-        if "status" in fm:
-            if fm["status"] not in ALLOWED_STATUS:
-                self.error(path, f"status must be one of {sorted(ALLOWED_STATUS)}; got {fm['status']!r}.")
+        if "status" in fm and fm["status"] not in ALLOWED_STATUS:
+            self.error(path, f"status must be one of {sorted(ALLOWED_STATUS)}; got {fm['status']!r}.")
 
         if "tags" in fm:
             tags = fm["tags"]
@@ -308,8 +312,9 @@ class Validator:
     def collect_stable_anchors(self, path: Path, body: str) -> None:
         if not path.is_relative_to(self.docs / "canonical"):
             return
-        for match in ANCHOR_RE.finditer(body):
-            anchor = match.group(1)
+        clean_body = self.strip_fenced_code(body)
+        for match in ANCHOR_RE.finditer(clean_body):
+            anchor = match.group(1).lower()
             if not STABLE_ID_RE.match(anchor):
                 continue
             if anchor in self.stable_anchor_locations:
@@ -318,24 +323,30 @@ class Validator:
             else:
                 self.stable_anchor_locations[anchor] = path
 
-            tail = body[match.end() :]
+            tail = clean_body[match.end() :]
             heading = next((line.strip() for line in tail.splitlines() if line.strip()), "")
             expected = anchor.upper()
-            if not re.match(rf"^##+\s+{re.escape(expected)}\b", heading):
+            if not re.match(rf"^#+\s+{re.escape(expected)}\b", heading):
                 self.error(path, f"Stable anchor {anchor!r} must be followed by a heading beginning {expected}.")
 
     def validate_rule_registry(self, parsed: dict[Path, tuple[dict | None, str, str]]) -> None:
         registry = self.docs / "canonical" / "governance" / "rule-identifiers.md"
         if registry not in parsed:
             return
-        body = parsed[registry][1]
+        body = self.strip_fenced_code(parsed[registry][1])
         registry_ids: dict[str, tuple[Path, str]] = {}
 
-        for raw_target in self.extract_markdown_targets(body):
+        for match in REGISTRY_ENTRY_RE.finditer(body):
+            visible_id = match.group(1)
+            raw_target = match.group(2).strip()
             target_path_text, fragment = self.split_target(raw_target)
-            if not fragment or not STABLE_ID_RE.match(fragment.lower()):
+            stable_id = visible_id.lower()
+            if not fragment or fragment.lower() != stable_id:
+                self.error(
+                    registry,
+                    f"Registry entry {visible_id!r} must link to matching fragment #{stable_id}; got {raw_target!r}.",
+                )
                 continue
-            stable_id = fragment.lower()
             if stable_id in registry_ids:
                 self.error(registry, f"Stable rule {stable_id!r} appears more than once in the registry.")
                 continue
@@ -475,11 +486,7 @@ class Validator:
 
     def looks_like_local_path(self, value: str) -> bool:
         path_part, _ = self.split_target(value)
-        return (
-            path_part.startswith((".", "/"))
-            or path_part.endswith(".md")
-            or "/" in path_part
-        )
+        return path_part.startswith((".", "/")) or path_part.endswith(".md") or "/" in path_part
 
     def resolve_local_target(self, source_file: Path, target_text: str) -> Path | None:
         if not target_text or self.is_external_or_nonfile(target_text):
