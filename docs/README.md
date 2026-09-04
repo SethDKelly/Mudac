@@ -1,18 +1,20 @@
 # MUDAC Design Documentation
 
-This directory is the canonical design authority for the MUDAC competition application.
+This directory is the durable design authority for the MUDAC competition application.
 
-The project is being designed using Daniel Jackson's **Concept Design** methodology. Conversation history is working context; the repository is the durable source of truth.
+The project uses Daniel Jackson's **Concept Design** methodology for product/domain design and is adopting the **Open Knowledge Format (OKF)** for knowledge structure, metadata, provenance, progressive disclosure, and agent/human navigation.
 
-## Phase 001 — Concept Design Foundation
+## Preferred navigation
 
-**Status: Complete**
+Start with [`docs/index.md`](index.md), the MUDAC OKF bundle root and preferred progressive-disclosure entry point.
 
-Canonical exit baseline: [001-H — Phase 001 Consolidation & Initial Concept Catalog](001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
+Current knowledge is being extracted into [`docs/canonical/`](canonical/). External standards/methodologies are represented under [`docs/references/`](references/). Numbered phase directories remain at their existing paths as design history, rationale, and provenance.
 
-## Accepted concept catalog
+During Phase 004 migration, canonical extraction is partial. Where a subject does not yet have an accepted canonical owner, the accepted Phase 001–003 exits and refinements remain authoritative.
 
-### Core competition concepts
+## Accepted MUDAC Concept catalog
+
+### Core Concepts
 
 1. Competition
 2. Division
@@ -23,7 +25,7 @@ Canonical exit baseline: [001-H — Phase 001 Consolidation & Initial Concept Ca
 7. Scorecard
 8. Award
 
-### Supporting concepts
+### Supporting Concepts
 
 9. Identity
 10. Participation
@@ -33,96 +35,31 @@ Canonical exit baseline: [001-H — Phase 001 Consolidation & Initial Concept Ca
 14. Provenance
 15. Export
 
-Aggregation, Evaluation Coverage, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, Team Attribute Definitions, PDF, QR, dashboard/portal structures, status, recovery, and offline mode remain subordinate, derived, policy, process, metadata, representation, UX, or implementation mechanisms rather than standalone Concepts.
+Coverage, Aggregate, Rank, Criterion, Note, Expertise, Panel Membership, Reconciliation, Evaluation Policy, Official Outcome Revision, Team Attribute Definitions, status, recovery, publication, QR/PDF, and offline mode remain subordinate, derived, policy, process, metadata, representation, UX, or implementation mechanisms rather than standalone MUDAC Concepts unless explicitly refined through Concept Design.
 
-## Phase 002 — Concept Specification, Policy & Synchronization Refinement
+## Phase status
 
-**Status: Complete**
-
-Canonical exit baseline: [002-I — Phase 002 Consolidation & Specification Exit Review](002-concept-specification/002-I-phase-consolidation-specification-exit-review.md).
-
-Compatible post-exit refinement: [002-A1 — Team Extensible Attributes & Team Name](002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md).
-
-### Phase 002 authoritative baseline
-
-- Competition lifecycle is `Draft → Ready → Active → Event Completed → Finalized`.
-- Identity, Participation, Access, and semantic authority are distinct.
-- Team supports disclosure-controlled extensible descriptive attributes; optional `teamName` remains distinct from Alias and non-competitive by default.
-- Panel current membership and historical Encounter participation are distinct.
-- effective Encounter participants create Scorecard obligations.
-- one Judge Participation × one Encounter yields at most one logical Scorecard.
-- every Scorecard uses one exact Rubric Version.
-- Drafts are non-authoritative; committed Versions are immutable historical snapshots.
-- Judge amendment, transcription correction, structural correction, supersession, and invalidation remain distinct.
-- Coverage and Aggregate remain independent.
-- default Team Aggregate equally weights eligible authoritative individual Judge Scorecards.
-- Rank is Division-scoped and derived.
-- Evaluation Policy is reconstructible once judging begins.
-- Award remains distinct from Rank.
-- Finalization creates an Official Outcome Revision and remains separate from publication.
-- Export represents identified source state and does not replace source truth.
-- paper and electronic judging share evaluation semantics.
-- paper-origin capture is verified against its physical source before official eligibility.
-- operational fallback changes capture channel, never evaluation meaning or weight.
-
-## Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model
+### Phase 001 — Concept Design Foundation
 
 **Status: Complete**
 
-Canonical exit baseline: [003-J — Phase 003 Consolidation & UX Architecture Exit Review](003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md).
+Canonical exit: [001-H — Phase 001 Consolidation & Initial Concept Catalog](001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md).
 
-| Group | Topic | Status |
-| --- | --- | --- |
-| 003-A | [Experience Architecture, Role Modes & Navigation Model](003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md) | **Complete** |
-| 003-B | [Judge Entry, Identity, Participation & Panel Onboarding](003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md) | **Complete** |
-| 003-C | [Judge Encounter, Rubric, Scorecard & Amendment Experience](003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md) | **Complete** |
-| 003-D | [Organizer Competition Setup, Configuration & Readiness Experience](003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md) | **Complete** |
-| 003-E | [Organizer Judge, Panel, Encounter & Live Operations Experience](003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md) | **Complete** |
-| 003-F | [Reconciliation, Coverage, Ranking, Awards & Finalization Experience](003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) | **Complete** |
-| 003-G | [Paper Capture, Export, Print & Publication Experience](003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md) | **Complete** |
-| 003-H | [Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) | **Complete** |
-| 003-I | [Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) | **Complete** |
-| 003-J | [Phase 003 Consolidation & UX Architecture Exit Review](003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md) | **Complete** |
+### Phase 002 — Concept Specification, Policy & Synchronization Refinement
 
-### Phase 003 authoritative UX baseline
+**Status: Complete**
 
-The experience context is:
+Canonical exit: [002-I — Phase 002 Consolidation & Specification Exit Review](002-concept-specification/002-I-phase-consolidation-specification-exit-review.md).
 
-```text
-Identity
-   ↓
-Participation / role mode
-   ↓
-Competition
-   ↓
-role-specific operational context
-   ↓
-current task / artifact
-```
+Compatible refinement: [002-A1 — Team Extensible Attributes & Team Name](002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md).
 
-Judge onboarding establishes current-event Participation, check-in, Organizer-governed Panel context, and derived readiness. Judge evaluation confirms Team Alias/Division, preserves one Draft through scoring/Notes, uses explicit Finalization, and treats amendment as a separate authority mode. Peer scores and standings remain hidden.
+### Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model
 
-Organizer preparation is non-linear with derived configuration readiness and separate operational warnings. Live operations and reconciliation are exception-first rather than leaderboard-first. Organizer authority manages process integrity without becoming Judge authorship.
+**Status: Complete**
 
-Panel membership and historical Encounter participation remain distinct. Paper and electronic traces for the same Judge × Encounter converge on one logical Scorecard. Paper capture preserves `physical source → capture Draft → verification → authoritative Scorecard Version` while Judge authorship remains distinct from Organizer capture.
+Canonical exit: [003-J — Phase 003 Consolidation & UX Architecture Exit Review](003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md).
 
-Coverage remains independent from Aggregate. Ranking may be calculated without being ranking-ready; Rank is never directly edited. Rank-derived and discretionary Award semantics remain distinct. Finalization creates an Official Outcome Revision but does not publish it, and corrected calculations never silently replace a current official revision.
-
-External representation preserves `source Version/revision + audience/disclosure + purpose → Export → preview → print/distribute/publish`. Artifacts may become stale, superseded, affected, or withdrawn without rewriting source history.
-
-Accessibility is semantic parity. Judge work is phone-primary; Organizer work remains coherent on narrow screens through `summary → exception → detail → action`. Keyboard/nonvisual interaction, large text, non-color-only status, QR alternatives, predictable focus, accessible feedback, and a reasonable future WCAG 2.2 AA target are architectural requirements.
-
-Persistence confidence is truthful. Disconnected Draft continuation may be supported later only if local working state remains distinct from authoritative confirmation. High-consequence actions cannot be presented as successful when authority state is unknown. Safe retries converge and stale state does not overwrite newer authority.
-
-Status is multidimensional. Workflow/lifecycle, authority, persistence confidence, readiness, validity/eligibility, freshness, issue consequence, disclosure, and publication remain independent dimensions. Canonical distinctions include `Draft complete ≠ Scorecard Finalized`, `Encounter Complete ≠ Event Completed`, `Ranking Ready ≠ Official Outcome`, and `Competition Finalized ≠ Published`.
-
-### Phase 003 exit result
-
-003-J found no blocking contradiction, missing core journey, or need for another core Concept. Major seams between current/historical state, Panel/Encounter state, Judge Access/authorship, Draft/Finalized/amendment authority, paper capture, Coverage/Aggregate, calculated/official results, Finalization/publication, accessibility/disclosure, and degraded-operation/authority all pass.
-
-Known extensions such as formal Stage/Round, student application access/feedback, formal scheduling, notifications, advanced Judge calibration, richer public results, and advanced Award governance remain explicit future work rather than baseline gaps.
-
-## Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance
+### Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance
 
 **Status: In Progress**
 
@@ -131,8 +68,8 @@ See the [Phase 004 index](004-knowledge-architecture/README.md).
 | Group | Topic | Status |
 | --- | --- | --- |
 | 004-A | [OKF Adoption Authority, Methodology Compatibility & Terminology Contract](004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md) | **Complete** |
-| 004-B | Knowledge Bundle Topology, Canonical Authority Layers & Progressive Disclosure | **Next** |
-| 004-C | Canonical Concept, Policy, Invariant & Experience Knowledge Extraction | Planned |
+| 004-B | [Knowledge Bundle Topology, Canonical Authority Layers & Progressive Disclosure](004-knowledge-architecture/004-B-knowledge-bundle-topology-canonical-authority-layers-progressive-disclosure.md) | **Complete** |
+| 004-C | Canonical Concept, Policy, Invariant & Experience Knowledge Extraction | **Next** |
 | 004-D | Historical Phase Migration, Provenance & Source-Lineage Retrofit | Planned |
 | 004-E | Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit | Planned |
 | 004-F | Documentation Governance, Agent Context & Anti-Drift Rules | Planned |
@@ -141,40 +78,64 @@ See the [Phase 004 index](004-knowledge-architecture/README.md).
 | 004-I | Repository-Wide Knowledge Graph / Drift Audit & Migration Closure | Planned |
 | 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | Planned |
 
-### 004-A knowledge-authority baseline
+## Current stable product/UX baseline
 
-MUDAC adopts the dedicated [GoogleCloudPlatform/open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format) repository as upstream OKF authority and initially targets [OKF v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md). The old `knowledge-catalog/okf` copy is a frozen historical snapshot.
+The detailed current rules remain in the accepted Phase 001–003 exits until 004-C extracts canonical owners. Key stable distinctions include:
 
-Daniel Jackson Concept Design remains the product-design methodology authority. OKF governs knowledge representation/navigation and does not redefine MUDAC Concepts, domain state, architecture, or source-code structure. `MUDAC Concept` and OKF's generic knowledge-document `Concept` meaning must remain distinct.
+- Competition lifecycle: `Draft → Ready → Active → Event Completed → Finalized`.
+- Identity, Participation, Access, and semantic authority are distinct.
+- Team supports disclosure-controlled descriptive attributes; optional `teamName` remains distinct from Alias and non-competitive by default.
+- current Panel membership and historical Encounter participation are distinct.
+- one Judge Participation × one Encounter yields at most one logical Scorecard.
+- every Scorecard is bound to one exact Rubric Version.
+- Draft, Finalized, and Amendment Draft have distinct authority semantics.
+- Organizer authority manages process integrity without becoming Judge authorship.
+- Coverage remains independent from Aggregate; missing evaluation is never zero.
+- Rank is derived and Division-scoped.
+- calculated Ranking is not automatically ranking-ready or official.
+- Finalization creates an Official Outcome Revision and remains separate from publication.
+- paper and electronic traces converge onto the same logical evaluation semantics.
+- accessibility is semantic parity; alternate device/input/capture paths do not change authority or evidence meaning.
+- connectivity uncertainty cannot be represented as confirmed authoritative success.
+- status dimensions such as lifecycle, authority, readiness, freshness, disclosure, and publication remain distinct.
 
-Phase 004 separates canonical current knowledge from historical phase provenance. Normative rules should have one canonical owner; downstream documents should prefer cross-reference over restatement, with necessary auditable restatement linked back to canonical authority. OKF knowledge provenance/verification/lifecycle metadata remains distinct from the MUDAC Provenance Concept and Competition/Scorecard lifecycle semantics.
+## Phase 004 knowledge architecture baseline
 
-Knowledge restructuring may change representation/location but may not silently change established product meaning. Any contradiction exposed by migration becomes an explicit design refinement. Future agents should traverse progressive indexes to canonical knowledge and only load historical phase records when rationale/provenance is needed.
+MUDAC adopts [GoogleCloudPlatform/open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format) as upstream OKF authority and initially targets OKF v0.2. The former `knowledge-catalog/okf` copy is frozen and is not an implementation baseline.
+
+Daniel Jackson Concept Design remains authoritative for deciding what qualifies as a MUDAC Concept and what MUDAC means. OKF governs how knowledge is represented, linked, attributed, versioned, and navigated.
+
+The approved bundle topology is:
+
+```text
+docs/
+├── index.md                 # OKF root / preferred navigation
+├── README.md                # human compatibility/authority summary
+├── canonical/
+│   ├── governance/
+│   ├── concepts/
+│   ├── mechanisms/
+│   ├── policies/
+│   ├── invariants/
+│   ├── experience/
+│   └── architecture/
+├── references/
+├── 001-concept-design/
+├── 002-concept-specification/
+├── 003-conceptual-ux-architecture/
+└── 004-knowledge-architecture/
+```
+
+Existing numbered phase folders are intentionally **not moved**. They remain stable design-history/provenance paths. Current meaning is extracted into `canonical/` rather than trying to make chronological phase records serve permanently as the knowledge graph.
+
+Repository documentation follows a **reference-first** direction: normative rules should have one canonical owner; dependent documents should cross-reference that owner rather than fully restating it, except where a bounded linked restatement is necessary for comprehension or independent auditability.
 
 ## Planned Phase 005
 
-System, Application, Data & Synchronization Architecture moves to **Phase 005**. It may choose implementation mechanisms and technologies only after Phase 004 establishes the knowledge/governance baseline, and it must treat Phases 001–003 semantics plus the Phase 004 canonical knowledge contracts as architectural input.
+System, Application, Data & Synchronization Architecture moves to **Phase 005** after the Phase 004 knowledge/governance retrofit.
 
-## Canonical terminology
+Phase 005 may choose implementation mechanisms and technologies, but the lifecycle, authority, evidence, disclosure, accessibility, recovery, and canonical knowledge contracts remain architectural inputs rather than implementation suggestions.
 
-- **Team** — student group being evaluated; supports extensible descriptive attributes including optional `teamName`.
-- **Team Name** — optional descriptive Team attribute; distinct from Alias and non-competitive by default.
-- **Panel** — group of Judge Participations intended to evaluate together.
-- **Judging Encounter** — one bounded actual Panel–Team evaluation occurrence.
-- **Judge Participation** — Competition-scoped Judge capacity.
-- **Rubric** — evaluation definition.
-- **Scorecard** — one logical Judge evaluation for one Encounter under one Rubric Version.
-- **Version** — immutable authoritative snapshot.
-- **Provenance** — meaningful origin/authority/change history.
-- **Coverage** — sufficiency of qualifying evaluation.
-- **Aggregate** — numerical combination of eligible authoritative Scorecards.
-- **Rank** — derived Division ordering.
-- **Award** — explicit Competition recognition.
-- **Official Outcome Revision** — reconstructible authoritative Competition outcome snapshot.
-- **Export** — audience-specific external representation tied to identified source state.
-- **Alias / Competition Identity** — Judge-facing Team identity used instead of administrative/institutional identity.
-- **OKF knowledge document** — independently addressable knowledge document represented according to the adopted OKF convention; not automatically a MUDAC Concept.
+## Architecture boundary
 
-## Known architectural boundary
-
-Target deployment remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS service choices follow the completed Concept/UX and knowledge-governance architecture rather than drive it.
+The deployment target remains **GitHub Actions → AWS**. Front-end framework, component/design system, identity provider, API style, database, offline persistence, synchronization/conflict strategy, artifact generation/storage, audit implementation, real-time transport, OCR/scanning, publication infrastructure, accessibility tooling, and AWS services remain downstream choices that must satisfy the canonical design contracts rather than redefine them.
