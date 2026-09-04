@@ -10,13 +10,15 @@ MUDAC uses Daniel Jackson's **Concept Design** methodology to determine product 
 
 Start here:
 
-* [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance.
+* [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance and validation expectations.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain and conceptual UX knowledge.
-* [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, metadata/trust/lifecycle, lineage, and stable-rule governance.
+* [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, metadata/trust/lifecycle, validation/CI, lineage, and stable-rule governance.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
 Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while phase `index.md` files map forward to current canonical successors.
+
+Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/validate_knowledge.py) and read-only GitHub Actions CI. Passing that validator confirms deterministic repository structure only; it is not semantic verification.
 
 ## Design status
 
@@ -31,7 +33,8 @@ Numbered phase directories remain preserved as rationale and design provenance. 
   * 004-E Complete
   * 004-F Complete
   * 004-G Complete
-  * **004-H Next — Validation Tooling, Link/Authority Checks & CI Enforcement**
+  * 004-H Complete
+  * **004-I Next — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure**
 
 System, Application, Data & Synchronization Architecture follows as **Phase 005**.
 
