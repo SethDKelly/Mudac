@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:09:23Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:20:00Z }
 ---
 
 # Canonical contract
@@ -112,6 +112,19 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [ARCH-006 — Failure and Retry Preserve Logical Identity and Evidence](../architecture/architectural-foundation.md#arch-006)
 * [ARCH-007 — Security and Disclosure Are Enforced Beyond Presentation Code](../architecture/architectural-foundation.md#arch-007)
 * [ARCH-008 — Freshness and Uncertainty Remain Representable](../architecture/architectural-foundation.md#arch-008)
+
+# Application modules and dependencies
+
+* [MOD-001 — The Initial Authoritative Application Is a Modular Monolith](../architecture/application-boundaries.md#mod-001)
+* [MOD-002 — Each Authoritative Fact and Command Has One Module Owner](../architecture/application-boundaries.md#mod-002)
+* [MOD-003 — Cross-Module Interaction Cannot Bypass Public Ownership Boundaries](../architecture/application-boundaries.md#mod-003)
+* [MOD-004 — Cross-Module Workflows Coordinate Above Module Owners](../architecture/application-boundaries.md#mod-004)
+* [MOD-005 — Dependency Direction Remains Acyclic and Downstream-Oriented](../architecture/application-boundaries.md#mod-005)
+* [MOD-006 — Projection/Query Composition Is Non-Authoritative](../architecture/application-boundaries.md#mod-006)
+* [MOD-007 — Cross-Cutting Technical Reuse Does Not Centralize Semantic Ownership](../architecture/application-boundaries.md#mod-007)
+* [MOD-008 — Shared Foundation Remains Small and Business-Neutral](../architecture/application-boundaries.md#mod-008)
+* [MOD-009 — Infrastructure Depends Inward Through Application/Module Ports](../architecture/application-boundaries.md#mod-009)
+* [MOD-010 — Deployment Boundaries May Evolve Without Changing Semantic Boundaries](../architecture/application-boundaries.md#mod-010)
 
 # Documentation authority
 
