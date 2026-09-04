@@ -22,8 +22,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | 005-F | [Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery](005-F-draft-persistence-synchronization-offline-degraded-operation-conflict-recovery.md) | **Complete** |
 | 005-G | [Paper Capture, Export, Artifact, Publication & External-Representation Architecture](005-G-paper-capture-export-artifact-publication-external-representation-architecture.md) | **Complete** |
 | 005-H | [Front-End State, Navigation, Component-System & Responsive Interaction Architecture](005-H-front-end-state-navigation-component-system-responsive-interaction-architecture.md) | **Complete** |
-| 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | **Next** |
-| 005-J | Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit | Planned |
+| 005-I | [AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture](005-I-aws-runtime-deployment-security-observability-backup-cost-architecture.md) | **Complete** |
+| 005-J | Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit | **Next** |
 
 ## Architecture sequence
 
@@ -45,7 +45,7 @@ runtime/AWS/operations
 integrated failure/threat/readiness review
 ```
 
-## Authoritative baseline through 005-H
+## Authoritative baseline through 005-I
 
 005-A establishes [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
 
@@ -63,25 +63,32 @@ integrated failure/threat/readiness review
 
 005-H establishes [Front-End State, Navigation & Interaction Architecture](../canonical/architecture/frontend-interaction.md) and `FE-001` through `FE-018`.
 
-The current browser baseline is:
+005-I establishes [AWS Runtime, Security & Operations Architecture](../canonical/architecture/aws-runtime-operations.md) and `AWS-001` through `AWS-018`.
 
-- React + TypeScript is the initial browser implementation family;
-- React Router Data mode owns route/layout/navigation/error boundaries without becoming domain authority;
-- TanStack Query owns remote client caching; route loaders may prefetch but do not create a second remote-data cache;
-- client state is partitioned across session/Participation context, remote state, command state, IndexedDB-backed local Draft continuity, and ephemeral view state;
-- a general-purpose global application store is not part of the baseline;
-- local Draft persistence remains non-authoritative and degrades safely when unavailable;
-- high-consequence commands expose confirmed/rejected/conflict/uncertain states and are never optimistically declared final;
-- Judge UI remains phone-primary/task-centered; Organizer UI remains exception-first with semantic narrow-screen drill-down;
-- component architecture layers design tokens, accessible primitives, semantic patterns, domain feature components, and route/workspace compositions;
-- responsive changes may alter composition/density but not semantics, Access, disclosure, or legitimate recovery paths;
-- core workflows target WCAG 2.2 AA semantic parity;
-- context/role/logout/shared-device transitions partition or clear private query/local state appropriately;
-- real-time push is optional latency optimization; correctness remains based on authoritative query/command/revalidation paths;
-- route/feature error boundaries contain client failure without implying authoritative source-state loss.
+The current production/cloud baseline is:
 
-Concrete package manager/build tool, CSS implementation, component primitive library, IndexedDB wrapper, service-worker library, telemetry/testing stack, and push transport remain implementation choices constrained by `FE-*`.
+- one active production Region, `us-east-2`, with at least two Availability Zones and explicit cold recovery to `us-east-1` rather than active-active cross-Region authority;
+- CloudFront is the public MUDAC application/data edge, serving the private S3 React origin through OAC and reaching an internal ALB through CloudFront VPC origins;
+- the modular monolith runs as immutable ECR releases on ECS/Fargate, with a redundant API service and bounded worker execution for retryable asynchronous work;
+- RDS for PostgreSQL Multi-AZ is the production authority database; Aurora, RDS Proxy, read replicas and ElastiCache remain non-baseline until measured requirements justify them;
+- Cognito User Pools is the initial authentication provider behind the MUDAC adapter, while Identity/Participation/Access and opaque sessions remain MUDAC-owned;
+- SQS plus DLQs carries durable retryable asynchronous work and never replaces PostgreSQL authority or transactional-outbox semantics;
+- private evidence/Artifact S3 storage uses versioning, encryption and immutable object identities behind authoritative relational metadata;
+- production ALB/ECS/RDS remain private; AZ-local NAT provides required public-domain egress while a free S3 gateway endpoint removes S3 traffic from NAT;
+- runtime, worker, migration, deployment and other AWS capabilities use distinct least-privilege IAM roles, Secrets Manager and KMS where appropriate;
+- production/nonproduction workloads are account/environment separated and GitHub Actions deploys through OIDC-federated IAM roles rather than long-lived AWS keys;
+- infrastructure is reproducible through IaC; ECS rolling deployments use immutable image releases and circuit-breaker rollback; database migrations are separately privileged and expand/contract compatible;
+- production observes a live-event deployment freeze except for necessary incident response;
+- frontend release assets are content-addressed and promoted only after complete upload, with backend/API compatibility maintained across rolling/cached clients;
+- CloudFront/ACM/WAF/Shield/S3 OAC/CloudTrail/security groups complement but never replace MUDAC Access, CSRF, command or disclosure enforcement;
+- CloudWatch structured logs/metrics/alarms plus AWS Distro for OpenTelemetry/Application Signals cover both infrastructure and MUDAC-semantic health;
+- RDS keeps 35 days of PITR and cross-Region automated-backup replication; critical S3 evidence/Artifact bytes receive versioning and cross-Region recovery protection where loss would defeat reconstruction;
+- backup existence is insufficient—restore exercises and application validation establish actual recovery confidence;
+- a whole-Region outage during judging falls back to identified paper continuity until one restored digital authority is explicitly validated/promoted;
+- cost optimization removes unjustified services and scales nonproduction down, but does not remove production Multi-AZ authority, API redundancy, required NAT availability, evidence protection, backup or security logging.
+
+Concrete IaC tool, backend implementation language/framework, exact container/database sizes, CSS/component-primitive implementation, queue worker library, signed-delivery implementation, and numeric SLO/RTO/RPO commitments remain implementation details or measured outputs rather than unresolved architecture authority.
 
 ## Next
 
-005-I — **AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture** will bind the accepted modular-monolith, PostgreSQL, server-session, artifact, browser, synchronization, and CI/CD contracts to a concrete AWS production topology. It will choose runtime/database/object/CDN/auth/network/secret/monitoring/backup mechanisms, define environment/deployment and failure boundaries, establish security/operations posture, and model cost without allowing AWS services to redefine upstream MUDAC authority.
+005-J — **Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit** will exercise the complete architecture against authority, privacy, concurrency, degraded-network, database/AZ/Region failure, deployment/migration rollback, artifact/publication, identity-provider, backup/restore and cost-failure scenarios; reconcile any cross-owner contradictions; and decide whether MUDAC has enough stable system architecture to proceed into implementation design without reopening product semantics.
