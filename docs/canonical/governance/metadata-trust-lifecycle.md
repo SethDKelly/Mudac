@@ -9,7 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-D-historical-phase-migration-provenance-source-lineage-retrofit.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../references/open-knowledge-format.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:26:36Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:30:09Z }
 ---
 
 # Purpose
@@ -151,6 +151,14 @@ Examples:
 
 Metadata is part of the knowledge contract and is subject to [Canonical Change & Conflict Governance](change-governance.md) where the change affects authority, provenance, or interpretation.
 
+# `log.md` convention
+
+OKF reserves optional `log.md` files for chronological update history. MUDAC does **not** create a bundle-level `docs/log.md` merely for formal completeness.
+
+Git history plus numbered phase records already provide detailed chronology and attribution. A manually duplicated bundle changelog would create another maintenance surface and drift risk.
+
+A future `log.md` may be added if a concrete consumer needs a curated knowledge-update feed that Git/phase history cannot provide. If introduced, it should summarize and link changes rather than become another semantic authority layer.
+
 # Prospective canonical example
 
 ```yaml
@@ -162,7 +170,7 @@ status: stable
 tags: [policy]
 sources:
   - resource: ../../005-system-architecture/example-source.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:26:36Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:30:09Z }
 ---
 ```
 
