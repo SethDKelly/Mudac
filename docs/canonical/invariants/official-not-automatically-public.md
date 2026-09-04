@@ -9,7 +9,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md
 ---
 
-# Invariant
+<a id="inv-007"></a>
+# INV-007 — Official Is Not Automatically Public
 
 `Competition Finalized ≠ Results Published`.
 
