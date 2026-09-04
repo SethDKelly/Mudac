@@ -10,12 +10,14 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
 ---
 
-# Canonical contract
+<a id="out-001"></a>
+## OUT-001 — Finalization establishes an Official Outcome Revision
 
-Competition Finalization establishes an immutable/reconstructible Official Outcome Revision containing the policy/evidence basis needed to explain declared Rankings, Coverage/exceptions, and Award conferrals.
+Explicit Competition Finalization establishes an immutable/reconstructible Official Outcome Revision containing the policy/evidence basis needed to explain declared Rankings, Coverage/exceptions, and Award conferrals.
 
-A later verified correction may make the current revision Affected and change the latest calculations. Those calculations do not silently replace the current official outcome.
+<a id="out-002"></a>
+## OUT-002 — Official correction requires explicit successor confirmation
 
-After reconciliation, explicit confirmation creates a successor revision; prior revisions remain historical.
+A verified source or policy correction may affect the current revision and change latest calculations. Official authority changes only after reconciliation and explicit confirmation of a successor revision; prior revisions remain historical.
 
-Publication is separate from official authority. See [Official Is Not Automatically Public](../invariants/official-not-automatically-public.md).
+The distinction between calculations and official authority is owned by [INV-006](../invariants/calculated-not-official.md#inv-006). Publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007).
