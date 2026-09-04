@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:28:35Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T12:45:00Z }
 ---
 
 # Canonical contract
@@ -254,6 +254,25 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [AWS-016 — Backups Are Multi-Layered, Cross-Region Where Material, and Trusted Only After Restore Testing](../architecture/aws-runtime-operations.md#aws-016)
 * [AWS-017 — Regional Disaster Recovery Restores One Authority and Uses Paper for Live Continuity](../architecture/aws-runtime-operations.md#aws-017)
 * [AWS-018 — Cost Optimization Removes Unjustified Infrastructure, Not Trust Guarantees](../architecture/aws-runtime-operations.md#aws-018)
+
+# Implementation authority, toolchain and delivery
+
+* [IMPL-001 — Upstream Canonical Meaning Outranks Implementation Convenience](../implementation/implementation-foundation.md#impl-001)
+* [IMPL-002 — Application Implementation Uses One Primary TypeScript/Node Toolchain](../implementation/implementation-foundation.md#impl-002)
+* [IMPL-003 — Fastify Is the Server Transport Host, Not the Domain Architecture](../implementation/implementation-foundation.md#impl-003)
+* [IMPL-004 — pnpm Workspaces Are the Initial Repository Package/Workspace Mechanism](../implementation/implementation-foundation.md#impl-004)
+* [IMPL-005 — PostgreSQL Access Uses Kysely Over node-postgres With Explicit Migrations](../implementation/implementation-foundation.md#impl-005)
+* [IMPL-006 — API Schemas Are Explicit Transport Contracts and Generate OpenAPI Outward](../implementation/implementation-foundation.md#impl-006)
+* [IMPL-007 — Verification Uses Vitest and Playwright Families With Evidence Defined Before Feature Scale](../implementation/implementation-foundation.md#impl-007)
+* [IMPL-008 — Type, Lint and Formatting Checks Are Mandatory Implementation Gates](../implementation/implementation-foundation.md#impl-008)
+* [IMPL-009 — Persistent AWS Infrastructure Is Implemented With OpenTofu](../implementation/implementation-foundation.md#impl-009)
+* [IMPL-010 — Dependency Versions and Lockfiles Are Deliberate, Reproducible Inputs](../implementation/implementation-foundation.md#impl-010)
+* [IMPL-011 — Generated Code Is Identifiable, Reproducible, and Not Hand-Owned](../implementation/implementation-foundation.md#impl-011)
+* [IMPL-012 — Security and Supply-Chain Scanning Is Layered and Dispositioned](../implementation/implementation-foundation.md#impl-012)
+* [IMPL-013 — `main` Is Intended to Be PR-Gated by Required Current Checks Before Implementation Merges](../implementation/implementation-foundation.md#impl-013)
+* [IMPL-014 — Merge Does Not Imply Production Deployment Authority](../implementation/implementation-foundation.md#impl-014)
+* [IMPL-015 — Material Implementation Decisions Are Recorded Without Becoming Upstream Redesign](../implementation/implementation-foundation.md#impl-015)
+* [IMPL-016 — Phase 006 Subgroup Completion Requires Implementation and Evidence Closure](../implementation/implementation-foundation.md#impl-016)
 
 # Documentation authority
 
