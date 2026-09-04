@@ -1,6 +1,6 @@
 # Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance
 
-Status: **In Progress**
+Status: **Complete**
 
 ## Purpose
 
@@ -21,28 +21,42 @@ Preferred bundle entry: [docs/index.md](../index.md). Historical/phase navigatio
 | 004-G | [OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) | **Complete** |
 | 004-H | [Validation Tooling, Link/Authority Checks & CI Enforcement](004-H-validation-tooling-link-authority-checks-ci-enforcement.md) | **Complete** |
 | 004-I | [Repository-Wide Knowledge Graph / Drift Audit & Migration Closure](004-I-repository-wide-knowledge-graph-drift-audit-migration-closure.md) | **Complete** |
-| 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | **Next** |
+| 004-J | [Phase 004 Consolidation & Knowledge-Architecture Exit Review](004-J-phase-004-consolidation-knowledge-architecture-exit-review.md) | **Complete** |
 
-## Authoritative baseline through 004-I
+## Phase 004 exit baseline
 
-004-A through 004-G establish the Concept Design/OKF boundary, bundle topology, canonical product/UX owners, historical lineage, stable rule IDs, repository/agent governance, and the `META-*` trust/lifecycle profile.
+Phase 004 establishes a complete current-knowledge operating model:
 
-004-H establishes [Knowledge Validation & CI Enforcement](../canonical/governance/validation-enforcement.md) — `VAL-*` — plus the deterministic [`scripts/validate_knowledge.py`](../../scripts/validate_knowledge.py) validator and read-only GitHub Actions workflow.
+- Concept Design determines product meaning while OKF v0.2 structures and exposes that knowledge;
+- `docs/index.md` and nested indexes provide progressive disclosure;
+- canonical Concepts, mechanisms, policies, invariants, experience contracts, and governance owners provide current meaning;
+- numbered phase records preserve append-stable rationale and source history;
+- canonical `sources` and phase indexes provide bidirectional lineage;
+- stable rule IDs provide durable references without turning registries into rule stores;
+- `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, and `VAL-*` govern authority, agent context, change, trust metadata, and deterministic enforcement;
+- `AGENTS.md` provides a thin repository-agent bootstrap into canonical governance;
+- `scripts/validate_knowledge.py` and read-only GitHub Actions CI protect deterministic structure without claiming semantic verification.
 
-004-I performs the repository-wide graph/drift audit and records **migration closure passed**. Strict validation completed with zero errors and zero warnings; canonical inventory, backward source lineage, forward phase routing, stable-ID ownership, reference-first composition, metadata asymmetries, and legacy exemptions were reviewed without identifying a blocking migration defect.
+004-I recorded migration closure with strict validation at zero errors and zero warnings. 004-J confirms that methodology, current/history authority, progressive retrieval, rule identifiers, lineage, metadata/trust semantics, change governance, and validation compose without an unresolved exit blocker.
 
-The remaining asymmetries are deliberate governance choices rather than unfinished retrofit work: Phase 001–003 may remain without modern frontmatter, historical prose may retain independently auditable repetition, `verified` metadata remains sparse unless a real verification event occurs, and the canonical `architecture/` category remains reserved until Phase 005.
-
-No Concept split/merge/addition or product/UX semantic correction was required through 004-I.
+The accepted fifteen-Concept catalog and Phase 001–003 product/UX semantics remain intact. Phase 004 required no product redesign.
 
 ## Governing operating principles
 
 `knowledge architecture ≠ application source-code architecture`.
 
-Future architecture and implementation consume canonical contracts rather than recreate or override them. Agents use minimum-sufficient progressive context. Semantic changes update canonical owners and lineage explicitly. CI validates deterministic structure without claiming semantic authority.
+Current canonical product/UX/governance knowledge constrains architecture. Accepted architecture will become current architecture knowledge under `docs/canonical/architecture/`, while its numbered architecture-phase records preserve rationale and alternatives. Architecture cannot redefine upstream product semantics merely for implementation convenience.
 
-The OKF migration is structurally closed; further bulk Phase 001–003 migration is not a prerequisite for architecture design.
+Agents use minimum-sufficient progressive context. Semantic changes update canonical owners and lineage explicitly. CI validates deterministic structure without claiming semantic authority.
+
+Further bulk Phase 001–003 migration is not a prerequisite for architecture design.
+
+## Exit decision
+
+**Phase 004 passes its exit review and is Complete.**
 
 ## Next
 
-004-J will consolidate Phase 004, test the methodology/authority/governance/validation system as one knowledge architecture, confirm the 004-I migration-closure decision, and determine readiness to begin Phase 005 system/application/data/synchronization architecture.
+Proceed to **Phase 005 — System, Application, Data & Synchronization Architecture**.
+
+Phase 005 should consume task-relevant canonical owners and stable rules as design constraints, evaluate architecture alternatives before locking implementation technologies, and publish accepted architecture contracts under `docs/canonical/architecture/` while preserving Phase 005 records as their design-history/source-lineage layer.
