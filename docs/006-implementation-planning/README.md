@@ -25,8 +25,8 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 | Group | Topic | Status |
 | --- | --- | --- |
 | 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete** |
-| 006-B | **Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates** | **Next** |
-| 006-C | Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement | Planned |
+| 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | **Complete** |
+| 006-C | **Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement** | **Next** |
 | 006-D | Environment, IaC, CI/CD, Local Development & Runtime Bootstrap | Planned |
 | 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | Planned |
 | 006-F | Identity, Session, Access, Security & Invitation Foundation | Planned |
@@ -70,48 +70,35 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 
 The sequence is the default dependency order, not a ban on all parallel work. A later group may begin preparatory work only when its required contracts from preceding groups are stable enough that parallelism cannot create competing foundations.
 
-## Accepted implementation baseline through 006-A
+## Accepted implementation baseline through 006-B
 
-Current implementation authority lives in [Canonical Implementation](../canonical/implementation/) and [Implementation Authority, Toolchain & Delivery Governance](../canonical/implementation/implementation-foundation.md) with `IMPL-001` through `IMPL-016`.
+Current implementation authority lives in [Canonical Implementation](../canonical/implementation/).
 
-006-A establishes:
+[Implementation Authority, Toolchain & Delivery Governance](../canonical/implementation/implementation-foundation.md) owns `IMPL-001` through `IMPL-016` and establishes Node.js 24 LTS + TypeScript 6.x, pnpm workspaces, Fastify, Kysely + node-postgres, explicit migrations, outward-generated OpenAPI transport contracts, Vitest/Playwright tool families, strict static-quality gates, OpenTofu, security scanning, lockfile/generated-code policy, delivery governance, and the Phase 006 definition of done.
 
-- Node.js 24 LTS + TypeScript 6.x as the primary server/browser implementation toolchain;
-- pnpm workspaces and committed lockfile, without Nx/Turborepo at baseline;
-- Fastify 5.x as the thin server transport/application host rather than a domain framework;
-- Kysely + node-postgres for typed PostgreSQL access and explicit version-controlled migrations;
-- explicit transport schemas that generate OpenAPI outward rather than serializing domain/persistence models;
-- Vitest and Playwright as verification tool families, with the detailed evidence matrix deferred to 006-B;
-- strict TypeScript, ESLint flat configuration, and Prettier as mandatory static-quality gates;
-- OpenTofu for persistent AWS infrastructure;
-- layered dependency/static/container/IaC security scanning;
-- committed/reviewed dependency lockfiles and reproducible generated-code policy;
-- intended PR/check-gated `main` and separately protected production deployment authority;
-- implementation decision records that remain subordinate to canonical architecture;
-- a common Phase 006 definition of done.
+[Verification Strategy, Evidence & Quality Gates](../canonical/implementation/verification-strategy.md) establishes the current evidence model without creating another stable-rule namespace. It requires:
 
-The current design-session GitHub connection cannot administer repository rulesets/branch protection, so actual protection configuration and verification remain a named 006-D gate rather than being falsely claimed complete.
+- the smallest trustworthy evidence layer for the material authority/failure boundary;
+- real PostgreSQL for database/concurrency/migration semantics;
+- deterministic synthetic fixtures and explicit time/ID/external-service seams;
+- module-owned fixture builders that do not bypass `MOD-*`/`DATA-*`;
+- Fastify transport tests and Testing Library-style React interaction tests;
+- Playwright critical-journey E2E;
+- automated axe-compatible accessibility checks plus manual assistive-technology evidence before production readiness;
+- application security/authority/disclosure tests in addition to scanners;
+- explicit idempotency/concurrency/lost-response/recovery evidence;
+- narrow golden fixtures for intentional external/historical fidelity;
+- coverage as diagnostic evidence rather than a correctness oracle;
+- a future stable aggregate `Implementation Verification` CI gate plus deeper scheduled/release evidence;
+- flaky-test failures remaining visible rather than being normalized by retries;
+- privacy-minimized synthetic CI artifacts;
+- traceability from evidence to existing canonical stable rule IDs without copying rule bodies.
 
-# 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates
-
-Design the verification system before feature implementation proliferates.
-
-Expected scope:
-
-- unit, module integration, database integration, API contract, browser integration, end-to-end, security, accessibility, concurrency, recovery, migration, and operational test layers;
-- canonical rule-ID-to-test traceability convention without creating a duplicate rule store;
-- deterministic fixtures/factories for Competition, Participation, Encounter, Rubric, Scorecard, Versions, Outcomes, Artifacts, and paper capture;
-- golden/contract fixtures where historical or representation fidelity matters;
-- test database and migration-test strategy;
-- fake/adapter boundaries for Cognito, S3, SQS, time, IDs, email/invitation delivery, and artifact generation;
-- accessibility automation plus required manual assistive-technology evidence;
-- threat/security test catalog seeded from 005-J;
-- CI quality gates and evidence retention;
-- criteria for distinguishing structural CI success from semantic/product verification.
+006-B intentionally leaves physical test/package placement to 006-C and executable workflow/ruleset implementation to 006-D.
 
 # 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement
 
-Translate `MOD-*` into enforceable source-code structure without mirroring the documentation tree mechanically.
+Translate `MOD-*`, `IMPL-*`, and the verification owner into enforceable source-code structure without mirroring the documentation tree mechanically.
 
 Expected scope:
 
@@ -122,9 +109,9 @@ Expected scope:
 - business-neutral shared-foundation contents;
 - import/dependency direction rules and automated enforcement;
 - module public contracts and cross-module stable-ID/reference conventions;
-- prohibition of repository/table/ORM-entity leakage across module owners;
+- prohibition of repository/table/query-model leakage across module owners;
 - generated API/client contracts and where they may live;
-- test package boundaries and fixture ownership.
+- test package boundaries, fixture ownership, and machine-readable evidence-traceability placement.
 
 # 006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap
 
@@ -138,6 +125,7 @@ Expected scope:
 - VPC/subnet/NAT/S3-endpoint/CloudFront/internal-ALB/ECS/ECR/RDS/S3/SQS/Cognito/CloudWatch skeleton sequencing;
 - GitHub Actions OIDC deployment roles and protected environments;
 - actual `main` ruleset/branch protection and required-check verification;
+- executable `Implementation Verification` workflow/gate from 006-B;
 - secret/configuration injection and local equivalents;
 - immutable backend/frontend release packaging;
 - migration execution identity and deployment ordering;
@@ -164,7 +152,7 @@ Expected scope:
 - idempotency record substrate where appropriate;
 - transactional outbox schema/dispatcher boundary;
 - projection watermark/rebuild conventions;
-- RDS-compatible local/integration testing;
+- real-PostgreSQL integration and migration compatibility evidence;
 - backup-sensitive migration verification.
 
 # 006-F — Identity, Session, Access, Security & Invitation Foundation
@@ -183,7 +171,7 @@ Expected scope:
 - correction grant and step-up hooks;
 - shared/lost-device logout/revocation behavior;
 - break-glass/operator separation implementation boundary;
-- security/audit test gates.
+- security/audit evidence required by the verification owner.
 
 # 006-G — API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation
 
@@ -202,7 +190,8 @@ Expected scope:
 - cross-module transaction coordinator mechanics while the shared database is local;
 - pagination/order conventions;
 - outbox publication after authoritative commit;
-- generated browser API adapter strategy.
+- generated browser API adapter strategy;
+- transport/idempotency/concurrency evidence required by 006-B.
 
 # 006-H — Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation
 
@@ -219,7 +208,7 @@ Expected scope:
 - design tokens and accessible primitive/component strategy;
 - semantic status/recovery patterns;
 - responsive phone-primary Judge and exception-first Organizer layout conventions;
-- WCAG 2.2 AA automated/manual verification hooks;
+- Testing Library/Playwright/axe/manual accessibility hooks from 006-B;
 - frontend telemetry/error boundary posture.
 
 # 006-I — Competition Setup, Participation & Judging Operations Vertical Slice
@@ -235,7 +224,7 @@ Expected scope:
 - readiness/precondition surfaces needed for judging;
 - Judge onboarding/check-in/assigned-work navigation;
 - Organizer preparation/live-operations exception views for this slice;
-- provenance, Access, responsive/accessibility, and failure tests;
+- provenance, Access, responsive/accessibility, and failure evidence;
 - no scoring/ranking implementation beyond what this slice requires.
 
 # 006-J — Evaluation, Scorecard, Draft Synchronization, Conflict & Paper-Capture Vertical Slice
@@ -315,7 +304,7 @@ Expected scope:
 
 The phase is intentionally serial at major authority seams, but limited parallel execution is safe after prerequisite contracts stabilize:
 
-- portions of 006-B and 006-C may proceed in parallel now that 006-A is stable if test/tooling decisions do not conflict;
+- 006-C may now proceed with both 006-A toolchain and 006-B evidence contracts stable;
 - IaC scaffolding in 006-D may proceed alongside late 006-C documentation once package/runtime boundaries are stable;
 - frontend primitive/accessibility work in 006-H may begin while late 006-G API details finish if generated/public contracts are stable;
 - artifact-renderer prototyping for 006-L may occur before 006-K completes, but authoritative Publication integration waits for real source/outcome contracts;
@@ -333,4 +322,4 @@ Phase 006 should exit only when:
 
 ## Next
 
-Proceed to **006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates**.
+Proceed to **006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**.
