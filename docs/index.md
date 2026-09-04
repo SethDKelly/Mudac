@@ -6,14 +6,14 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and architecture knowledge.
 
-Phase 004 has established baseline canonical product/UX knowledge, bidirectional historical lineage, stable high-value rule IDs, repository/agent governance, and the MUDAC OKF metadata/trust/lifecycle profile. Structural validation and final migration audit remain in progress.
+Phase 004 has established canonical product/UX knowledge, bidirectional historical lineage, stable high-value rule IDs, repository/agent governance, the MUDAC OKF metadata/trust/lifecycle profile, and deterministic knowledge validation. The repository-wide migration/drift audit remains before Phase 004 exit.
 
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, and governance knowledge.
-* [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict rules, source lineage, methodology/terminology, metadata/trust/lifecycle, and stable IDs.
+* [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict, source lineage, methodology/terminology, metadata/trust/lifecycle, validation/CI, and stable IDs.
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry.
-* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](canonical/governance/metadata-trust-lifecycle.md) - `META-*` profile for truthful generation/verification/lifecycle/freshness metadata.
+* [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) - `VAL-*` contract for deterministic structural checks and read-only CI.
 
 # Agent bootstrap
 
@@ -30,7 +30,7 @@ Each phase directory has an `index.md` that routes historical records toward cur
 * [Phase 001 — Concept Design Foundation](001-concept-design/) - Concept discovery and initial catalog history.
 * [Phase 002 — Concept Specification](002-concept-specification/) - Behavioral, policy, authority, and evidence specification history.
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - UX architecture and exit history.
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Active OKF retrofit/documentation-governance work.
+* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Active OKF retrofit/documentation-governance work; 004-I is the next migration-closure audit.
 
 # Navigation Guidance
 
@@ -40,6 +40,6 @@ For rationale/chronology, follow material `sources` or enter history through a p
 
 For external standards/methodology authority, use [References](references/).
 
-For OKF trust/lifecycle interpretation, use the canonical `META-*` profile rather than inferring meaning from field names.
+For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
