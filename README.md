@@ -12,7 +12,7 @@ Start here:
 
 * [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance and validation expectations.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/`](docs/canonical/) — current canonical product/domain and conceptual UX knowledge.
+* [`docs/canonical/`](docs/canonical/) — current canonical product/domain, conceptual UX, governance, and accepted architecture knowledge.
 * [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, metadata/trust/lifecycle, validation/CI, lineage, and stable-rule governance.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
@@ -20,29 +20,20 @@ Numbered phase directories remain preserved as rationale and design provenance. 
 
 Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/validate_knowledge.py) and read-only GitHub Actions CI. Passing that validator confirms deterministic repository structure only; it is not semantic verification.
 
-The repository-wide Phase 004 migration audit has passed. The OKF retrofit is structurally closed; preserved Phase 001–003 records remain historical evidence rather than an unfinished metadata migration.
+Phase 004 completed the repository-wide OKF retrofit, documentation-governance model, migration audit, and knowledge-architecture exit review. The migration is structurally closed; preserved Phase 001–003 records remain historical evidence rather than unfinished metadata work.
 
 ## Design status
 
 * **Phase 001 — Concept Design Foundation:** Complete
 * **Phase 002 — Concept Specification, Policy & Synchronization Refinement:** Complete
 * **Phase 003 — Conceptual UX Architecture:** Complete
-* **Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance:** In Progress
-  * 004-A Complete
-  * 004-B Complete
-  * 004-C Complete
-  * 004-D Complete
-  * 004-E Complete
-  * 004-F Complete
-  * 004-G Complete
-  * 004-H Complete
-  * 004-I Complete
-  * **004-J Next — Phase 004 Consolidation & Knowledge-Architecture Exit Review**
-
-System, Application, Data & Synchronization Architecture follows as **Phase 005** after the Phase 004 exit review.
+* **Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance:** Complete
+* **Phase 005 — System, Application, Data & Synchronization Architecture:** Next
 
 ## Architecture boundary
 
-The intended deployment boundary remains **GitHub Actions → AWS**, but front-end framework, component system, identity provider, API style, persistence, offline/synchronization technology, artifact infrastructure, observability, and concrete AWS services remain downstream architecture choices. Those choices must satisfy canonical product/UX/governance contracts rather than redefine them.
+The intended delivery boundary remains **GitHub Actions → AWS**, but front-end framework, component system, identity provider, API style, persistence, offline/synchronization technology, artifact infrastructure, observability, and concrete AWS services remain architecture choices rather than assumptions inherited from the knowledge tree.
+
+Phase 005 should begin from task-relevant canonical product/UX/governance owners and stable rules, evaluate architecture alternatives before locking technologies, and place accepted architecture contracts under [`docs/canonical/architecture/`](docs/canonical/architecture/) while preserving Phase 005 records as rationale and source lineage.
 
 This repository remains in design; production implementation has not begun.
