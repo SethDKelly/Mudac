@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:20:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T04:33:00Z }
 ---
 
 # Canonical contract
@@ -125,6 +125,23 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [MOD-008 — Shared Foundation Remains Small and Business-Neutral](../architecture/application-boundaries.md#mod-008)
 * [MOD-009 — Infrastructure Depends Inward Through Application/Module Ports](../architecture/application-boundaries.md#mod-009)
 * [MOD-010 — Deployment Boundaries May Evolve Without Changing Semantic Boundaries](../architecture/application-boundaries.md#mod-010)
+
+# Data, persistence, versioning, provenance and projections
+
+* [DATA-001 — Authoritative Persistence Is Relational and PostgreSQL-Compatible](../architecture/data-persistence.md#data-001)
+* [DATA-002 — One Logical Authority Database Initially; Storage Ownership Remains Module-Scoped](../architecture/data-persistence.md#data-002)
+* [DATA-003 — Durable Identities Are Stable and Independent of Storage/Business Labels](../architecture/data-persistence.md#data-003)
+* [DATA-004 — Physical Co-Location Does Not Permit Cross-Module Storage Bypass](../architecture/data-persistence.md#data-004)
+* [DATA-005 — Working/Current State and Committed Versions Remain Structurally Distinct](../architecture/data-persistence.md#data-005)
+* [DATA-006 — Committed Versions and Meaningful Provenance Are Append-Stable](../architecture/data-persistence.md#data-006)
+* [DATA-007 — Referenced Authoritative Evidence Is Not Erased Through Ordinary Destructive Cascade](../architecture/data-persistence.md#data-007)
+* [DATA-008 — Persisted Derived Calculations Remain Reconstructible From an Identified Basis](../architecture/data-persistence.md#data-008)
+* [DATA-009 — Read Projections Are Disposable, Rebuildable, and Non-Authoritative](../architecture/data-persistence.md#data-009)
+* [DATA-010 — Projection Freshness and Authority Basis Remain Observable](../architecture/data-persistence.md#data-010)
+* [DATA-011 — Asynchronous Change Propagation Is Transactionally Coupled to the Source Change](../architecture/data-persistence.md#data-011)
+* [DATA-012 — Outbox/Events Do Not Replace Authoritative State or Require Primary Event Sourcing](../architecture/data-persistence.md#data-012)
+* [DATA-013 — Database Constraints Reinforce Owner Invariants but Do Not Replace Domain Authority Checks](../architecture/data-persistence.md#data-013)
+* [DATA-014 — Core Semantic Fields Remain Explicit; Semi-Structured Storage Is Reserved for Genuinely Extensible Data](../architecture/data-persistence.md#data-014)
 
 # Documentation authority
 
