@@ -10,10 +10,11 @@ Architecture remains downstream of canonical product, UX, invariant, policy, and
 * [Application Boundaries, Modules & Dependency Architecture](application-boundaries.md) — `MOD-*` ownership/dependency contracts; six authoritative semantic modules, non-authoritative projection/query composition, thin cross-module coordination, and modular-monolith-first deployment posture.
 * [Data, Persistence, Versioning, Provenance & Projection Architecture](data-persistence.md) — `DATA-*` persistence contracts; one PostgreSQL-compatible relational authority store with module-owned namespaces, stable IDs, append-stable Versions/Provenance, reconstructible derived state, rebuildable projections, and transactional change propagation without primary event sourcing.
 * [Identity, Authentication, Access & Session Architecture](identity-access-session.md) — `AUTH-*` identity/security contracts; provider-backed authentication mapped to stable MUDAC Identity, explicit Participation context, contextual Access, opaque first-party server sessions, event-completion expiry, role-context isolation, revocation, narrow correction grants, and break-glass separation.
+* [Commands, Queries, API, Transaction & Concurrency Architecture](commands-api-concurrency.md) — `API-*` request/transaction contracts; HTTPS/JSON command-query separation, current-context authorization, confirmed-after-commit semantics, optimistic concurrency, targeted locking/isolation, durable idempotency, lost-response recovery, and explicit projection freshness.
 
 # Planned architecture areas
 
-Phase 005 will add accepted current owners here as command/API/concurrency, synchronization/degraded operation, external representation, front-end, and AWS/runtime decisions become stable.
+Phase 005 will add accepted current owners here as synchronization/degraded operation, external representation, front-end, and AWS/runtime decisions become stable.
 
 # Authority rule
 
