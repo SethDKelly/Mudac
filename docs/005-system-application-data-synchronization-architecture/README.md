@@ -18,8 +18,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | 005-B | [Application Boundaries, Modules, Domain Services & Dependency Architecture](005-B-application-boundaries-modules-domain-services-dependency-architecture.md) | **Complete** |
 | 005-C | [Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture](005-C-data-model-persistence-versioning-provenance-derived-projection-architecture.md) | **Complete** |
 | 005-D | [Identity, Authentication, Participation, Access & Session Architecture](005-D-identity-authentication-participation-access-session-architecture.md) | **Complete** |
-| 005-E | Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture | **Next** |
-| 005-F | Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery | Planned |
+| 005-E | [Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture](005-E-commands-queries-api-contracts-transactions-idempotency-concurrency-architecture.md) | **Complete** |
+| 005-F | Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery | **Next** |
 | 005-G | Paper Capture, Export, Artifact, Publication & External-Representation Architecture | Planned |
 | 005-H | Front-End State, Navigation, Component-System & Responsive Interaction Architecture | Planned |
 | 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | Planned |
@@ -45,7 +45,7 @@ runtime/AWS/operations
 integrated failure/threat/readiness review
 ```
 
-## Authoritative baseline through 005-D
+## Authoritative baseline through 005-E
 
 005-A establishes the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
 
@@ -55,25 +55,29 @@ integrated failure/threat/readiness review
 
 005-D establishes the canonical [Identity, Authentication, Access & Session Architecture](../canonical/architecture/identity-access-session.md) and `AUTH-001` through `AUTH-014`.
 
-The current structural/security baseline is:
+005-E establishes the canonical [Commands, Queries, API, Transaction & Concurrency Architecture](../canonical/architecture/commands-api-concurrency.md) and `API-001` through `API-015`.
 
-- one authoritative server-side application begins as a modular monolith with module-owned relational state;
-- authentication is provider-backed and standards-compatible but does not grant Competition authority;
-- external authenticated subjects map explicitly to stable MUDAC Identity rather than email/name/device;
-- Competition Participation remains MUDAC-owned current-event state and dual-role contexts remain explicit;
-- capability-oriented Access is recomputed from current authoritative context at protected application/module boundaries;
-- the browser uses an opaque first-party server session rather than long-lived script-readable bearer credentials;
-- session/selected Participation context improves continuity but cannot extend revoked/expired Access;
-- Event Completed expires ordinary Judge private-evaluation capability through source-state authorization, even if a stale session remains authenticated;
-- invitation/QR/event-code possession alone never establishes Identity or Access;
-- post-event Judge correction uses narrow temporary Access plus Identity reverification;
-- lost/shared device handling revokes/clears session context without changing semantic Identity/Participation/Scorecard identity;
-- step-up authentication increases proof confidence but does not create capability;
-- routine system administration and break-glass remain distinct from Competition decision authority;
-- provider replacement/federation expansion is isolated behind an authentication adapter and cannot rewrite MUDAC authorship/history.
+The current request/authority baseline is:
 
-The concrete identity provider, default passwordless/federated/passkey mechanism, exact session durations/store, CSRF mechanics, transaction/locking rules, API protocol, queue/broker, offline Draft storage, and AWS security/runtime services remain deliberately open.
+- the primary browser contract is versioned HTTPS/JSON;
+- queries are side-effect-free and may use explicit non-authoritative projections;
+- meaningful state changes are intent-bearing commands rather than generic status-field mutation;
+- transport adapters map requests but do not own domain authority;
+- current Access/resource/lifecycle preconditions are rechecked at protected application/module boundaries;
+- confirmed command success is reported only after transaction commit;
+- single-module commands use one owning transaction; narrow cross-module atomic transitions may use a coordinator-owned shared-database transaction while the modular monolith remains local;
+- optimistic revision/precondition checks are the default mutable-state concurrency strategy;
+- targeted row locks and stronger isolation are command-specific tools rather than global defaults;
+- PostgreSQL `READ COMMITTED` is the baseline expectation combined with explicit concurrency controls and constraints;
+- externally retryable commands use durable idempotency semantics and reject key reuse for different intent;
+- lost responses reconcile to committed authority rather than inviting blind repetition;
+- successful responses return authoritative resource/revision information without pretending projections have already caught up;
+- application result contracts distinguish validation, authorization, concurrency, idempotency, infrastructure, and uncertain-outcome classes;
+- public API DTOs remain separate from internal module/domain models;
+- cookie-authenticated mutations require deliberate CSRF protection appropriate to final deployment topology.
+
+The concrete web framework, OpenAPI/code-generation strategy, route hierarchy, ORM/unit-of-work implementation, exact idempotency storage/retention, per-command lock SQL, queue/broker, WebSocket/SSE mechanics, offline synchronization protocol, and AWS API/runtime services remain deliberately open.
 
 ## Next
 
-005-E — **Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture** will define how authenticated/authorized requests cross module boundaries, how transaction and optimistic-concurrency rules protect authoritative state, how idempotent retries converge, and how query/API contracts expose fresh/stale state without turning transport semantics into product authority.
+005-F — **Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery** will define how Judge Draft work survives intermittent connectivity/device loss, how local and server state synchronize against the `API-*` revision/idempotency contract, which operations are permitted while disconnected, how conflicts are surfaced/recovered, and where digital authority must stop rather than simulate offline Finalization.
