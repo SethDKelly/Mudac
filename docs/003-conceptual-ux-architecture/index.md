@@ -1,0 +1,20 @@
+# Phase 003 — Conceptual UX Architecture, Information Architecture & Interaction Model
+
+Historical UX-architecture phase. Current experience meaning now lives under [Canonical Experience Contracts](../canonical/experience/); use these records for detailed interaction rationale, pressure tests, and lifecycle/disclosure seam history.
+
+# Records and Current Successors
+
+* [003-A — Experience Architecture, Role Modes & Navigation Model](003-A-experience-architecture-role-modes-navigation-model.md) — primary source for [Experience Context & Role Modes](../canonical/experience/context-role-modes.md).
+* [003-B — Judge Entry, Identity, Participation & Panel Onboarding](003-B-judge-entry-identity-participation-panel-onboarding.md) — primary source for [Judge Onboarding](../canonical/experience/judge-onboarding.md).
+* [003-C — Judge Encounter, Rubric, Scorecard & Amendment Experience](003-C-judge-encounter-rubric-scorecard-amendment-experience.md) — primary source for [Judge Evaluation & Amendment](../canonical/experience/judge-evaluation.md), with dependencies on [Scorecard](../canonical/concepts/scorecard.md) and [Judge Independence](../canonical/invariants/judge-independence.md).
+* [003-D — Organizer Competition Setup, Configuration & Readiness Experience](003-D-organizer-competition-setup-configuration-readiness-experience.md) — primary source for [Organizer Preparation](../canonical/experience/organizer-preparation.md) and an important source for [Readiness](../canonical/mechanisms/readiness.md).
+* [003-E — Organizer Judge, Panel, Encounter & Live Operations Experience](003-E-organizer-judge-panel-encounter-live-operations-experience.md) — primary source for [Live Operations](../canonical/experience/live-operations.md).
+* [003-F — Reconciliation, Coverage, Ranking, Awards & Finalization Experience](003-F-reconciliation-coverage-ranking-awards-finalization-experience.md) — primary source for [Reconciliation & Finalization](../canonical/experience/reconciliation-finalization.md) and UX refinement of [Reconciliation](../canonical/mechanisms/reconciliation.md), [Coverage](../canonical/mechanisms/coverage.md), [Rank](../canonical/mechanisms/rank.md), and [Official Outcome Revision](../canonical/mechanisms/official-outcome-revision.md).
+* [003-G — Paper Capture, Export, Print & Publication Experience](003-G-paper-capture-export-print-publication-experience.md) — primary source for [Paper / Export / Publication](../canonical/experience/paper-export-publication.md), with related [Export](../canonical/concepts/export.md) and [Continuity & Paper](../canonical/policies/continuity-paper.md) contracts.
+* [003-H — Accessibility, Mobile, Responsive & Degraded-Mode Interaction Architecture](003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md) — primary source for [Accessibility & Resilience](../canonical/experience/accessibility-resilience.md), [Accessibility Is Semantic Parity](../canonical/invariants/accessibility-semantic-parity.md), and [Truthful Authority Under Uncertainty](../canonical/invariants/truthful-authority-under-uncertainty.md).
+* [003-I — Cross-Cutting Status, Feedback, Privacy, Disclosure & Recovery Patterns](003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md) — primary source for [Status / Feedback / Recovery](../canonical/experience/status-feedback-recovery.md) and cross-cutting uncertainty/currentness semantics.
+* [003-J — Phase 003 Consolidation & UX Architecture Exit Review](003-J-phase-consolidation-ux-architecture-exit-review.md) — phase-level confirmation across all current [Experience Contracts](../canonical/experience/) and their Concept/policy/invariant seams.
+
+# Authority Note
+
+Phase 003 remains the detailed UX rationale and pressure-test layer. Current interaction semantics should be read from the linked canonical experience owners and their dependencies.
