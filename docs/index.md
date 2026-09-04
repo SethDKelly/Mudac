@@ -6,13 +6,14 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and architecture knowledge.
 
-Phase 004 has established baseline canonical product/UX knowledge, bidirectional historical lineage, stable high-value rule IDs, and repository/agent governance. Metadata trust/lifecycle conventions and automated validation remain in progress.
+Phase 004 has established baseline canonical product/UX knowledge, bidirectional historical lineage, stable high-value rule IDs, repository/agent governance, and the MUDAC OKF metadata/trust/lifecycle profile. Structural validation and final migration audit remain in progress.
 
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, and governance knowledge.
-* [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict rules, source lineage, methodology/terminology, and stable IDs.
+* [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict rules, source lineage, methodology/terminology, metadata/trust/lifecycle, and stable IDs.
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry.
+* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](canonical/governance/metadata-trust-lifecycle.md) - `META-*` profile for truthful generation/verification/lifecycle/freshness metadata.
 
 # Agent bootstrap
 
@@ -20,7 +21,7 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundl
 
 # External Authorities and References
 
-* [References](references/) - External methodologies, standards, specifications, and MUDAC adoption/profile context.
+* [References](references/) - External methodologies, standards, specifications, and MUDAC adoption/profile context, including the pinned [Open Knowledge Format v0.2](references/open-knowledge-format.md) reference.
 
 # Design History and Active Design Work
 
@@ -38,5 +39,7 @@ For current meaning, start with [Canonical Knowledge](canonical/) and load only 
 For rationale/chronology, follow material `sources` or enter history through a phase `index.md`. Do not recursively load the historical corpus by default.
 
 For external standards/methodology authority, use [References](references/).
+
+For OKF trust/lifecycle interpretation, use the canonical `META-*` profile rather than inferring meaning from field names.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
