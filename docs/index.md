@@ -15,7 +15,7 @@ Current product/domain, conceptual UX, documentation-governance, accepted archit
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry, including current `ARCH-*`, `MOD-*`, `DATA-*`, `AUTH-*`, `API-*`, `SYNC-*`, `REP-*`, `FE-*`, `AWS-*`, and `IMPL-*` rules.
 * [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) - `VAL-*` contract for deterministic structural checks and read-only CI.
 * [Architecture](canonical/architecture/) - Current accepted system/application architecture contracts.
-* [Implementation](canonical/implementation/) - Current accepted implementation contracts, including [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md) and [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md).
+* [Implementation](canonical/implementation/) - Current accepted implementation contracts, including [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md), [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md), and [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md).
 
 # Agent bootstrap
 
@@ -34,7 +34,7 @@ Each completed phase directory has an `index.md` that routes phase records towar
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - Completed UX architecture and exit history.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Complete**. Architecture owners, AWS realization, integrated threat/failure review, and implementation-readiness exit are closed.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) - **In Progress**. 006-A and 006-B are complete; **006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement is next**.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) - **In Progress**. 006-A through 006-C are complete; **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap is next**.
 
 # Navigation Guidance
 
@@ -46,6 +46,6 @@ For external standards/methodology authority, use [References](references/).
 
 For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
 
-For implementation work, begin with the relevant [Canonical Implementation](canonical/implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially relevant to the task. Verification work should also load [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md) and trace evidence to existing canonical rule IDs rather than copying rule text. Do not infer package/source topology from the knowledge-directory tree.
+For implementation work, begin with the relevant [Canonical Implementation](canonical/implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially relevant to the task. Verification work should also load [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md); source/package work should load [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md). Evidence and dependency checks should trace existing canonical rules rather than copying their rule bodies. Do not infer package/source topology from the knowledge-directory tree.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
