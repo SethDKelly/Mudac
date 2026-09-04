@@ -10,7 +10,8 @@ sources:
   - resource: ../../002-concept-specification/002-H-export-print-operational-continuity-external-representations.md
 ---
 
-# Invariant
+<a id="inv-002"></a>
+# INV-002 — One Logical Scorecard per Judge × Encounter
 
 `Judge Participation × Judging Encounter → at most one logical Scorecard`.
 
