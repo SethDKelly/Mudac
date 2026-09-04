@@ -6,11 +6,11 @@ Architecture-design history and decision lineage for MUDAC. Use [docs/index.md](
 
 * [005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles](005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md) — **Complete**. Establishes the architecture-wide quality/trust/failure foundation; current authority lives in the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) with `ARCH-001` through `ARCH-008`.
 * [005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture](005-B-application-boundaries-modules-domain-services-dependency-architecture.md) — **Complete**. Establishes semantic module ownership, projection/query non-authority, coordination/dependency rules, and modular-monolith-first posture; current authority lives in [Application Boundaries](../canonical/architecture/application-boundaries.md) with `MOD-001` through `MOD-010`.
+* [005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture](005-C-data-model-persistence-versioning-provenance-derived-projection-architecture.md) — **Complete**. Establishes the PostgreSQL-compatible relational authority model, module-owned storage boundaries, stable identity references, immutable Version/Provenance history, rebuildable projections, and transactional outbox posture; current authority lives in [Data & Persistence Architecture](../canonical/architecture/data-persistence.md) with `DATA-001` through `DATA-014`.
 
 # Planned Work
 
-* **005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture** — Next.
-* 005-D — Identity, Authentication, Participation, Access & Session Architecture.
+* **005-D — Identity, Authentication, Participation, Access & Session Architecture** — Next.
 * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture.
 * 005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery.
 * 005-G — Paper Capture, Export, Artifact, Publication & External-Representation Architecture.
