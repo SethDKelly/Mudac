@@ -9,7 +9,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md
 ---
 
-# Invariant
+<a id="inv-001"></a>
+# INV-001 — Judge Independence
 
 During ordinary judging, a Judge may access their own evaluation work but not peer Scorecards/Notes, Panel mean, Team Aggregate, Coverage, Rank, or standings.
 
