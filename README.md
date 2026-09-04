@@ -29,14 +29,17 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
 * **Phase 005 — System, Application, Data & Synchronization Architecture:** In Progress
   * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: Complete
   * 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Complete
-  * **005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Next**
+  * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Complete
+  * **005-D — Identity, Authentication, Participation, Access & Session Architecture: Next**
 
 ## Current architecture posture
 
 The [Architectural Foundation](docs/canonical/architecture/architectural-foundation.md) defines architecture-wide `ARCH-*` rules. [Application Boundaries](docs/canonical/architecture/application-boundaries.md) defines `MOD-*` rules and selects a **modular-monolith-first** authoritative application with six semantic modules: Competition Governance, Identity/Participation/Access, Judging Operations, Evaluation, Outcomes/Closeout, and External Representation.
 
-Cross-module read projections are explicitly non-authoritative; cross-module workflows coordinate above module owners; modules interact through public contracts rather than repository/table/ORM shortcuts; infrastructure depends inward through application/module ports. Independent services remain an evolutionary option only when a concrete scale, isolation, availability, ownership, or runtime driver justifies the additional distributed-system complexity.
+[Data & Persistence Architecture](docs/canonical/architecture/data-persistence.md) defines `DATA-*` rules and selects one PostgreSQL-compatible relational authority database with module-owned logical namespaces. Durable resource identities are storage-independent; working/current state is distinct from immutable committed Versions; meaningful Provenance is append-stable; referenced authoritative evidence is not removed by ordinary destructive cascades; derived calculations retain a reconstructible basis; projections are rebuildable/non-authoritative; and transactional outbox/change records prevent authoritative commits from silently diverging from asynchronous projection/integration propagation.
 
-The intended delivery boundary remains **GitHub Actions → AWS**, but database, API protocol, identity provider, offline/synchronization technology, front-end framework, artifact infrastructure, observability, and concrete AWS services remain later architecture decisions.
+MUDAC does **not** adopt primary event sourcing as its baseline persistence architecture. PostgreSQL compatibility is now an architectural database-family constraint, while AWS RDS/Aurora topology, ORM/migration tooling, transaction isolation/locking, identity provider, API protocol, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions.
+
+The intended delivery boundary remains **GitHub Actions → AWS**.
 
 This repository remains in design; production implementation has not begun.
