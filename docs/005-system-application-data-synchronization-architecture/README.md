@@ -21,8 +21,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | 005-E | [Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture](005-E-commands-queries-api-contracts-transactions-idempotency-concurrency-architecture.md) | **Complete** |
 | 005-F | [Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery](005-F-draft-persistence-synchronization-offline-degraded-operation-conflict-recovery.md) | **Complete** |
 | 005-G | [Paper Capture, Export, Artifact, Publication & External-Representation Architecture](005-G-paper-capture-export-artifact-publication-external-representation-architecture.md) | **Complete** |
-| 005-H | Front-End State, Navigation, Component-System & Responsive Interaction Architecture | **Next** |
-| 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | Planned |
+| 005-H | [Front-End State, Navigation, Component-System & Responsive Interaction Architecture](005-H-front-end-state-navigation-component-system-responsive-interaction-architecture.md) | **Complete** |
+| 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | **Next** |
 | 005-J | Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit | Planned |
 
 ## Architecture sequence
@@ -45,13 +45,13 @@ runtime/AWS/operations
 integrated failure/threat/readiness review
 ```
 
-## Authoritative baseline through 005-G
+## Authoritative baseline through 005-H
 
-005-A establishes the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
+005-A establishes [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
 
-005-B establishes [Application Boundaries, Modules & Dependency Architecture](../canonical/architecture/application-boundaries.md) and `MOD-001` through `MOD-010`.
+005-B establishes [Application Boundaries](../canonical/architecture/application-boundaries.md) and `MOD-001` through `MOD-010`.
 
-005-C establishes [Data, Persistence, Versioning, Provenance & Projection Architecture](../canonical/architecture/data-persistence.md) and `DATA-001` through `DATA-014`.
+005-C establishes [Data & Persistence Architecture](../canonical/architecture/data-persistence.md) and `DATA-001` through `DATA-014`.
 
 005-D establishes [Identity, Authentication, Access & Session Architecture](../canonical/architecture/identity-access-session.md) and `AUTH-001` through `AUTH-014`.
 
@@ -61,25 +61,27 @@ integrated failure/threat/readiness review
 
 005-G establishes [External Representation, Artifact & Publication Architecture](../canonical/architecture/external-representation.md) and `REP-001` through `REP-015`.
 
-The current external-representation baseline is:
+005-H establishes [Front-End State, Navigation & Interaction Architecture](../canonical/architecture/frontend-interaction.md) and `FE-001` through `FE-018`.
 
-- paper-origin evaluation remains Evaluation-module authority; Organizer capture does not become Judge authorship;
-- each physical source has stable source reference and capture/verification provenance;
-- verification confirms transcription fidelity and does not invent ambiguous Judge intent;
-- relational storage owns semantic artifact/capture/publication metadata while large scans/PDFs/packages live in immutable object/blob storage behind a port;
-- every durable Export/Artifact binds an exact source revision/basis, purpose, and audience/disclosure profile;
-- disclosure applies to visible content plus metadata, filenames, links, QR/barcode payloads, machine-readable layers, accessibility text, manifests, previews, and delivery surfaces;
-- retained Artifact bytes are immutable and carry stable identity plus cryptographic integrity digest;
-- generation, validation/preview, publication, and delivery are distinct states;
-- artifact generation is idempotent/retryable and may be asynchronous;
-- Publication is an explicit authoritative distribution record bound to one exact Artifact;
-- source corrections affect/supersede dependent representations but never rewrite historical artifact bytes;
-- corrected/revised publication is successor-based and explicit;
-- URLs, signed links, QR codes, printer jobs, CDN/object locations, and delivery channels are transport, not authority;
-- external-representation provenance remains reconstructible end-to-end.
+The current browser baseline is:
 
-Concrete object-storage/CDN product, encryption policy implementation, artifact-rendering runtime/library, template technology, image/PDF scanning tools, malware/content scanning, signed-URL mechanism, retention/lifecycle automation, and AWS delivery topology remain open for 005-I.
+- React + TypeScript is the initial browser implementation family;
+- React Router Data mode owns route/layout/navigation/error boundaries without becoming domain authority;
+- TanStack Query owns remote client caching; route loaders may prefetch but do not create a second remote-data cache;
+- client state is partitioned across session/Participation context, remote state, command state, IndexedDB-backed local Draft continuity, and ephemeral view state;
+- a general-purpose global application store is not part of the baseline;
+- local Draft persistence remains non-authoritative and degrades safely when unavailable;
+- high-consequence commands expose confirmed/rejected/conflict/uncertain states and are never optimistically declared final;
+- Judge UI remains phone-primary/task-centered; Organizer UI remains exception-first with semantic narrow-screen drill-down;
+- component architecture layers design tokens, accessible primitives, semantic patterns, domain feature components, and route/workspace compositions;
+- responsive changes may alter composition/density but not semantics, Access, disclosure, or legitimate recovery paths;
+- core workflows target WCAG 2.2 AA semantic parity;
+- context/role/logout/shared-device transitions partition or clear private query/local state appropriately;
+- real-time push is optional latency optimization; correctness remains based on authoritative query/command/revalidation paths;
+- route/feature error boundaries contain client failure without implying authoritative source-state loss.
+
+Concrete package manager/build tool, CSS implementation, component primitive library, IndexedDB wrapper, service-worker library, telemetry/testing stack, and push transport remain implementation choices constrained by `FE-*`.
 
 ## Next
 
-005-H — **Front-End State, Navigation, Component-System & Responsive Interaction Architecture** will translate the established domain/UX and `ARCH-*`/`AUTH-*`/`API-*`/`SYNC-*`/`REP-*` boundaries into client application state ownership, route/navigation topology, server-state/local-Draft distinctions, component-system boundaries, responsive/accessibility behavior, and truthful command/synchronization/publication feedback without choosing UI convenience over semantic authority.
+005-I — **AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture** will bind the accepted modular-monolith, PostgreSQL, server-session, artifact, browser, synchronization, and CI/CD contracts to a concrete AWS production topology. It will choose runtime/database/object/CDN/auth/network/secret/monitoring/backup mechanisms, define environment/deployment and failure boundaries, establish security/operations posture, and model cost without allowing AWS services to redefine upstream MUDAC authority.
