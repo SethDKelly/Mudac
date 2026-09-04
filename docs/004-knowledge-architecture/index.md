@@ -1,6 +1,6 @@
 # Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance
 
-Active knowledge-architecture phase. This index is the OKF navigation surface for Phase 004 records; the existing [README](README.md) remains the human phase summary.
+Completed knowledge-architecture phase. This index is the OKF navigation surface for Phase 004 records; the existing [README](README.md) is the human phase summary.
 
 # Records and Current Outputs
 
@@ -13,11 +13,18 @@ Active knowledge-architecture phase. This index is the OKF navigation surface fo
 * [004-G — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) — establishes the canonical [`META-*` metadata/trust/lifecycle profile](../canonical/governance/metadata-trust-lifecycle.md) and pinned [OKF v0.2 reference](../references/open-knowledge-format.md).
 * [004-H — Validation Tooling, Link/Authority Checks & CI Enforcement](004-H-validation-tooling-link-authority-checks-ci-enforcement.md) — establishes [`VAL-*` validation governance](../canonical/governance/validation-enforcement.md), the deterministic [`scripts/validate_knowledge.py`](../../scripts/validate_knowledge.py) validator, and read-only GitHub Actions enforcement.
 * [004-I — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure](004-I-repository-wide-knowledge-graph-drift-audit-migration-closure.md) — audits the complete retrofit, records a clean strict-validation result, classifies deliberate legacy/current asymmetries, removes migration-progress framing from current routing, and closes the repository migration without further bulk Phase 001–003 rewrite.
+* [004-J — Phase 004 Consolidation & Knowledge-Architecture Exit Review](004-J-phase-004-consolidation-knowledge-architecture-exit-review.md) — confirms the methodology, authority, retrieval, lineage, stable-rule, metadata/trust, change-governance, and validation layers compose as one knowledge architecture and approves the handoff to Phase 005.
 
-# Planned Work
+# Exit Result
 
-* **004-J — Phase 004 Consolidation & Knowledge-Architecture Exit Review** — Next.
+Phase 004 is **Complete**.
+
+The OKF migration is structurally closed and the knowledge architecture is ready to constrain downstream architecture work. No Concept split/merge/addition or product/UX semantic correction was required by the retrofit or exit review.
 
 # Retrieval Rule
 
-Use [docs/index.md](../index.md) for ordinary current knowledge retrieval. Repository agents begin with [`AGENTS.md`](../../AGENTS.md), which routes to canonical governance rather than competing with it. Use this phase index only when the task concerns the knowledge-architecture migration, rationale, governance evolution, validation rollout, or migration-closure audit.
+Use [docs/index.md](../index.md) for ordinary current knowledge retrieval. Repository agents begin with [`AGENTS.md`](../../AGENTS.md), which routes to canonical governance rather than competing with it. Use this phase index only when the task concerns the knowledge-architecture migration, rationale, governance evolution, validation rollout, closure audit, or Phase 004 exit decision.
+
+# Downstream Handoff
+
+The next design phase is **Phase 005 — System, Application, Data & Synchronization Architecture**. Accepted architecture knowledge belongs under [Canonical Architecture](../canonical/architecture/) and must reference/satisfy upstream product, UX, invariant, policy, and governance authority rather than duplicate or redefine it.
