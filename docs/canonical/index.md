@@ -1,6 +1,6 @@
 # Canonical MUDAC Knowledge
 
-This subtree is the preferred source for current MUDAC product, conceptual UX, and documentation-governance meaning.
+This subtree is the preferred source for current MUDAC product, conceptual UX, documentation-governance, and accepted architecture meaning.
 
 # Current Knowledge
 
@@ -13,7 +13,7 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, a
 # Governance and Architecture
 
 * [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change (`CHG-*`), metadata/trust/lifecycle (`META-*`), validation/CI (`VAL-*`), source lineage, and stable rule IDs.
-* [Architecture](architecture/) - Accepted system/application architecture contracts when established; this category does not dictate source-code topology.
+* [Architecture](architecture/) - Current accepted system/application architecture contracts, beginning with the [Architectural Foundation](architecture/architectural-foundation.md) and `ARCH-*` rules. Knowledge topology does not dictate source-code topology.
 
 # Retrieval Rule
 
@@ -27,4 +27,6 @@ For knowledge metadata, [OKF Metadata, Trust, Verification, Lifecycle & Freshnes
 
 For deterministic conformance checks, [Knowledge Validation & CI Enforcement](governance/validation-enforcement.md) governs the validator and CI boundary. Passing validation is not semantic verification.
 
-For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical phase, enter through that phase's `index.md` and follow current-successor links rather than recursively loading the phase corpus.
+For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical/design phase, enter through that phase's `index.md` and follow current-successor links rather than recursively loading the phase corpus.
+
+For architecture work, load the current architecture owner(s) and only the task-relevant upstream product/UX/governance constraints they depend on.
