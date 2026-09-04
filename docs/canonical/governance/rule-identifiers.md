@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:08:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:18:00Z }
 ---
 
 # Canonical contract
@@ -95,7 +95,7 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 # Disclosure
 
 * [DISC-001 — Blinded Judge Team Identity](../policies/anonymity-disclosure.md#disc-001)
-* [DISC-002 — Disclosure Is Audience/Purpose Specific](../policies/anonymity-disclosure.md#disc-002)
+* [DISC-002 — Disclosure Is Audience and Purpose Specific](../policies/anonymity-disclosure.md#disc-002)
 
 # Export
 
@@ -212,6 +212,27 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [REP-013 — Replacement Publication Is Explicit and Successor-Based](../architecture/external-representation.md#rep-013)
 * [REP-014 — URLs, QR Codes, Signed Links, Print Jobs, and Delivery Channels Do Not Confer Authority](../architecture/external-representation.md#rep-014)
 * [REP-015 — External-Representation Provenance Remains Reconstructible End-to-End](../architecture/external-representation.md#rep-015)
+
+# Front-end state, navigation and interaction
+
+* [FE-001 — The Browser Baseline Is React + TypeScript With Explicit Architectural Adapters](../architecture/frontend-interaction.md#fe-001)
+* [FE-002 — React Router Owns Route/Navigation Boundaries, Not Domain Authority](../architecture/frontend-interaction.md#fe-002)
+* [FE-003 — Client State Is Partitioned by Semantic Ownership](../architecture/frontend-interaction.md#fe-003)
+* [FE-004 — TanStack Query Owns Remote Client Cache and Never Becomes Authoritative State](../architecture/frontend-interaction.md#fe-004)
+* [FE-005 — Durable Local Draft Continuity Uses an IndexedDB-Backed Adapter and Remains Non-Authoritative](../architecture/frontend-interaction.md#fe-005)
+* [FE-006 — High-Consequence Command State Is Explicit and Never Optimistically Final](../architecture/frontend-interaction.md#fe-006)
+* [FE-007 — Role/Participation Mode Is Explicit and Changes Disclosure as Well as Navigation](../architecture/frontend-interaction.md#fe-007)
+* [FE-008 — Context Transitions Partition or Clear Private Client State](../architecture/frontend-interaction.md#fe-008)
+* [FE-009 — Judge Interaction Is Phone-Primary and Task-Centered](../architecture/frontend-interaction.md#fe-009)
+* [FE-010 — Organizer Interaction Is Exception-First and Responsively Composable](../architecture/frontend-interaction.md#fe-010)
+* [FE-011 — Component Architecture Separates Primitives, Semantic Patterns, Domain Features, and Route Compositions](../architecture/frontend-interaction.md#fe-011)
+* [FE-012 — Semantic Status Presentation Preserves Independent State Dimensions](../architecture/frontend-interaction.md#fe-012)
+* [FE-013 — Core Browser Workflows Target WCAG 2.2 AA Semantic Parity](../architecture/frontend-interaction.md#fe-013)
+* [FE-014 — Client Validation Assists; Server Validation Remains Authoritative](../architecture/frontend-interaction.md#fe-014)
+* [FE-015 — Conflict/Recovery UI Preserves Evidence Instead of Reducing Failure to a Toast](../architecture/frontend-interaction.md#fe-015)
+* [FE-016 — Real-Time Push Is an Accelerator, Not a Correctness Dependency](../architecture/frontend-interaction.md#fe-016)
+* [FE-017 — Dense/Tabular Information May Transform Responsively Without Semantic Loss](../architecture/frontend-interaction.md#fe-017)
+* [FE-018 — Client Error Boundaries Contain Failure Without Inventing Source-State Loss](../architecture/frontend-interaction.md#fe-018)
 
 # Documentation authority
 
