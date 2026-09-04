@@ -33,10 +33,11 @@ These owners govern the details. This README routes to them and does not reprodu
 * Phase 005 — System, Application, Data & Synchronization Architecture: **In Progress**
   * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: **Complete**
   * 005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: **Complete**
-  * **005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Next**
+  * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: **Complete**
+  * **005-D — Identity, Authentication, Participation, Access & Session Architecture: Next**
 
-Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/): the [Architectural Foundation](canonical/architecture/architectural-foundation.md) owns `ARCH-*`, and [Application Boundaries](canonical/architecture/application-boundaries.md) owns `MOD-*`.
+Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/): the [Architectural Foundation](canonical/architecture/architectural-foundation.md) owns `ARCH-*`, [Application Boundaries](canonical/architecture/application-boundaries.md) owns `MOD-*`, and [Data & Persistence Architecture](canonical/architecture/data-persistence.md) owns `DATA-*`.
 
-The current application posture is modular-monolith-first with explicit semantic module ownership, non-authoritative cross-module projections, thin coordination above owners, and infrastructure dependency inversion. No database, API protocol, identity provider, front-end framework, or AWS service has yet been selected.
+The current application posture is modular-monolith-first with explicit semantic module ownership and one PostgreSQL-compatible relational authority database with module-owned namespaces. Mutable working/current state remains distinct from immutable committed Versions, meaningful Provenance is append-stable, projections are rebuildable/non-authoritative, and asynchronous change propagation uses transactional outbox/change records where needed. AWS database hosting, ORM/migration tooling, API protocol, identity provider, offline/sync implementation, and concrete AWS services remain open.
 
 Knowledge CI checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
