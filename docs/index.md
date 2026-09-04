@@ -10,10 +10,11 @@ Current product/domain, conceptual UX, and documentation-governance meaning is o
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, and governance knowledge.
+* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, governance knowledge, and accepted architecture as it is established.
 * [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict, source lineage, methodology/terminology, metadata/trust/lifecycle, validation/CI, and stable IDs.
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry.
 * [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) - `VAL-*` contract for deterministic structural checks and read-only CI.
+* [Architecture](canonical/architecture/) - Current accepted architecture contracts as downstream architecture decisions are established.
 
 # Agent bootstrap
 
@@ -23,14 +24,16 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundl
 
 * [References](references/) - External methodologies, standards, specifications, and MUDAC adoption/profile context, including the pinned [Open Knowledge Format v0.2](references/open-knowledge-format.md) reference.
 
-# Design History and Active Design Work
+# Design History
 
-Each phase directory has an `index.md` that routes historical records toward current canonical successors.
+Each completed phase directory has an `index.md` that routes historical records toward current canonical successors.
 
 * [Phase 001 — Concept Design Foundation](001-concept-design/) - Concept discovery and initial catalog history.
 * [Phase 002 — Concept Specification](002-concept-specification/) - Behavioral, policy, authority, and evidence specification history.
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - UX architecture and exit history.
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - OKF retrofit, documentation-governance, validation, and migration-closure history.
+* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
+
+The next design phase is **Phase 005 — System, Application, Data & Synchronization Architecture**. Its numbered records will preserve architecture rationale/history, while accepted architecture contracts will become current owners under [Canonical Architecture](canonical/architecture/).
 
 # Navigation Guidance
 
@@ -41,5 +44,7 @@ For rationale/chronology, follow material `sources` or enter history through a p
 For external standards/methodology authority, use [References](references/).
 
 For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
+
+For downstream architecture, begin with the architecture problem and its task-relevant upstream canonical constraints; do not infer application topology from the knowledge-directory tree.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
