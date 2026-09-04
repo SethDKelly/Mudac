@@ -1,8 +1,6 @@
 # Canonical MUDAC Knowledge
 
-This subtree is the preferred source for current MUDAC product and conceptual UX meaning.
-
-004-C established baseline canonical product/UX owners; 004-D established bidirectional historical lineage; 004-E added stable rule IDs/reference-first reuse; 004-F established documentation authority, agent-context, and canonical-change governance; 004-G established the MUDAC OKF metadata/trust/lifecycle profile; 004-H added deterministic knowledge validation and CI enforcement.
+This subtree is the preferred source for current MUDAC product, conceptual UX, and documentation-governance meaning.
 
 # Current Knowledge
 
@@ -15,11 +13,11 @@ This subtree is the preferred source for current MUDAC product and conceptual UX
 # Governance and Architecture
 
 * [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change (`CHG-*`), metadata/trust/lifecycle (`META-*`), validation/CI (`VAL-*`), source lineage, and stable rule IDs.
-* [Architecture](architecture/) - Reserved for accepted system/application architecture beginning after Phase 004.
+* [Architecture](architecture/) - Accepted system/application architecture contracts when established; this category does not dictate source-code topology.
 
 # Retrieval Rule
 
-For current product/UX meaning, start at the relevant category index and open only the specific documents and linked dependencies required by the task.
+For current meaning, start at the relevant category index and open only the specific documents and linked dependencies required by the task.
 
 Repository agents follow [Agent Context & Progressive Retrieval](governance/agent-context.md): progressive disclosure, task-relevant dependencies only, history on demand, and stop context expansion when authority is sufficient.
 
