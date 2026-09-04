@@ -32,7 +32,8 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
   * 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture: Complete
   * 005-D — Identity, Authentication, Participation, Access & Session Architecture: Complete
   * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture: Complete
-  * **005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery: Next**
+  * 005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery: Complete
+  * **005-G — Paper Capture, Export, Artifact, Publication & External-Representation Architecture: Next**
 
 ## Current architecture posture
 
@@ -44,6 +45,8 @@ The [Architectural Foundation](docs/canonical/architecture/architectural-foundat
 
 [Commands, Queries, API, Transaction & Concurrency Architecture](docs/canonical/architecture/commands-api-concurrency.md) defines `API-*` rules. The primary browser boundary is versioned HTTPS/JSON; commands and queries are distinct; high-consequence transitions use explicit intent-bearing commands; confirmed success occurs only after authoritative commit; optimistic revision/precondition checks are the default concurrency mechanism with targeted locking/stronger isolation where demonstrated; durable idempotency plus logical uniqueness makes retries converge; and projection-backed reads expose freshness without becoming write authority.
 
-Concrete web framework/router, OpenAPI tooling, ORM/unit-of-work implementation, identity-provider vendor, exact session/idempotency stores and timings, queue/broker, WebSocket/SSE mechanics, offline/synchronization technology, front-end framework, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
+[Draft Synchronization, Offline & Recovery Architecture](docs/canonical/architecture/synchronization-recovery.md) defines `SYNC-*` rules. Local persistence protects eligible non-authoritative Judge Draft work; synchronization is revision-aware against server authority; stale conflicts preserve both local and server traces; multi-device work converges on one logical Scorecard; authoritative transitions remain online/server-confirmed; reconnect re-establishes current Identity/Participation/Access before queued work is applied; uncertain command outcomes reconcile before retry; and paper remains the preferred event-continuity fallback when authoritative digital operation cannot be trusted.
+
+Concrete web/client framework, browser persistence API, local encryption/background-sync mechanism, OpenAPI tooling, ORM/unit-of-work implementation, identity-provider vendor, exact session/idempotency stores and timings, queue/broker, WebSocket/SSE mechanics, artifact infrastructure, observability, backup policy, and concrete AWS services remain later architecture decisions. The intended delivery boundary remains **GitHub Actions → AWS**.
 
 This repository remains in design; production implementation has not begun.
