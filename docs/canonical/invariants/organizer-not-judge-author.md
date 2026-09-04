@@ -10,7 +10,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md
 ---
 
-# Invariant
+<a id="inv-004"></a>
+# INV-004 — Organizer Authority Does Not Become Judge Authorship
 
 Organizer/Admin capability to view, coordinate, capture, recover, invalidate, or correct process state does not make that actor the author of Judge judgment.
 
