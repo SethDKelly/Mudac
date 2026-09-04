@@ -14,6 +14,7 @@ Start here:
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain, conceptual UX, governance, and accepted architecture knowledge.
 * [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, metadata/trust/lifecycle, validation/CI, lineage, and stable-rule governance.
+* [`docs/canonical/architecture/`](docs/canonical/architecture/) — accepted current system/application architecture contracts.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
 Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while phase `index.md` files map forward to current canonical successors.
@@ -28,12 +29,16 @@ Phase 004 completed the repository-wide OKF retrofit, documentation-governance m
 * **Phase 002 — Concept Specification, Policy & Synchronization Refinement:** Complete
 * **Phase 003 — Conceptual UX Architecture:** Complete
 * **Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance:** Complete
-* **Phase 005 — System, Application, Data & Synchronization Architecture:** Next
+* **Phase 005 — System, Application, Data & Synchronization Architecture:** In Progress
+  * 005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles: Complete
+  * **005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture: Next**
 
 ## Architecture boundary
 
 The intended delivery boundary remains **GitHub Actions → AWS**, but front-end framework, component system, identity provider, API style, persistence, offline/synchronization technology, artifact infrastructure, observability, and concrete AWS services remain architecture choices rather than assumptions inherited from the knowledge tree.
 
-Phase 005 should begin from task-relevant canonical product/UX/governance owners and stable rules, evaluate architecture alternatives before locking technologies, and place accepted architecture contracts under [`docs/canonical/architecture/`](docs/canonical/architecture/) while preserving Phase 005 records as rationale and source lineage.
+The current [Architectural Foundation](docs/canonical/architecture/architectural-foundation.md) establishes `ARCH-001` through `ARCH-008`: upstream semantic authority, authoritative transition confirmation, client/local non-authority, projection boundaries, attribution preservation, retry/failure identity, disclosure enforcement, and freshness/uncertainty representation.
+
+Phase 005 proceeds from that foundation, evaluates architecture alternatives before locking technologies, and places accepted architecture contracts under [`docs/canonical/architecture/`](docs/canonical/architecture/) while preserving Phase 005 records as rationale and source lineage.
 
 This repository remains in design; production implementation has not begun.
