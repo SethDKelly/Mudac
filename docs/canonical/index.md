@@ -2,7 +2,7 @@
 
 This subtree is the preferred source for current MUDAC product and conceptual UX meaning.
 
-004-C has completed baseline extraction of the accepted Concepts, supporting mechanisms, governing policies, cross-cutting invariants, and Phase 003 experience contracts. Historical phase records remain linked source/rationale and will receive fuller provenance/source-lineage retrofit in 004-D.
+004-C completed baseline extraction of accepted Concepts, supporting mechanisms, governing policies, cross-cutting invariants, and Phase 003 experience contracts. 004-D established bidirectional lineage between these current owners and preserved numbered phase records.
 
 # Current Knowledge
 
@@ -14,11 +14,11 @@ This subtree is the preferred source for current MUDAC product and conceptual UX
 
 # Governance and Architecture
 
-* [Governance](governance/) - Knowledge authority/governance extraction continues in later Phase 004 groups; current accepted Phase 004 records remain authoritative where no canonical governance owner exists yet.
+* [Governance](governance/) - Current knowledge-governance owners, including [Source Lineage and Historical Design Records](governance/source-lineage.md); additional governance extraction continues in later Phase 004 groups.
 * [Architecture](architecture/) - Reserved for accepted system/application architecture beginning after Phase 004.
 
 # Retrieval Rule
 
 For current product/UX meaning, start at the relevant category index and open only the specific documents and linked dependencies required by the task.
 
-Use numbered phase records when rationale, design evolution, or source provenance is needed—not as the default way to reconstruct current truth.
+For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical phase, enter through that phase's `index.md` and follow its current-successor links rather than recursively loading the full phase corpus.
