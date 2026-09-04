@@ -14,16 +14,16 @@ sources:
 
 Permit or deny actions and information disclosure according to current context.
 
-# Canonical contract
+<a id="acc-001"></a>
+## ACC-001 — Access is contextual
 
 Access depends on Identity/Participation, role, scope, target resource, lifecycle state, relationship, purpose, and time. Identity or role alone is insufficient.
 
-Ordinary Judge Access is limited to Judge-safe event context and the Judge's own evaluation work. At Event Completed, ordinary Judge private-evaluation Access expires while records remain retained.
+Ordinary Judge Access is limited to Judge-safe event context and the Judge's own evaluation work. At Event Completed, ordinary Judge private-evaluation Access expires while records remain retained. Post-event Judge correction uses narrow temporary reactivation for the specific authorized evaluation.
 
-Post-event Judge correction uses narrow temporary reactivation for the specific authorized evaluation.
-
-# Boundaries
+<a id="acc-002"></a>
+## ACC-002 — Access does not transfer semantic authority
 
 Access grants capability; it does not transfer semantic authorship or decision authority. Navigation, URLs, QR codes, and device possession never substitute for Access.
 
-See [Anonymity & Disclosure](../policies/anonymity-disclosure.md) and [Organizer Does Not Become Judge Author](../invariants/organizer-not-judge-author.md).
+For the Judge-authorship consequence, see [INV-004](../invariants/organizer-not-judge-author.md#inv-004). See also [Anonymity & Disclosure](../policies/anonymity-disclosure.md).
