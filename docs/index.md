@@ -4,9 +4,9 @@ okf_version: "0.2"
 
 # MUDAC Knowledge Bundle
 
-Preferred progressive-disclosure entry point for MUDAC design and architecture knowledge.
+Preferred progressive-disclosure entry point for MUDAC design, architecture, and implementation-planning knowledge.
 
-Current product/domain, conceptual UX, documentation-governance, and accepted architecture meaning is organized under canonical knowledge. Numbered phase directories preserve design history and material provenance. The OKF migration is structurally closed; legacy Phase 001–003 records remain intentionally preserved rather than bulk-rewritten for cosmetic metadata conformity.
+Current product/domain, conceptual UX, documentation-governance, and accepted architecture meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. The OKF migration is structurally closed; legacy Phase 001–003 records remain intentionally preserved rather than bulk-rewritten for cosmetic metadata conformity.
 
 # Current Canonical Knowledge
 
@@ -24,17 +24,16 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundl
 
 * [References](references/) - External methodologies, standards, specifications, and MUDAC adoption/profile context, including the pinned [Open Knowledge Format v0.2](references/open-knowledge-format.md) reference.
 
-# Design History and Next Work
+# Design History and Active Implementation Planning
 
-Each completed phase directory has an `index.md` that routes phase records toward current canonical successors.
+Each completed phase directory has an `index.md` that routes phase records toward current canonical successors. Active Phase 006 planning remains subordinate to those canonical owners.
 
 * [Phase 001 — Concept Design Foundation](001-concept-design/) - Completed Concept discovery and initial-catalog history.
 * [Phase 002 — Concept Specification](002-concept-specification/) - Completed behavioral, policy, authority, and evidence specification history.
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - Completed UX architecture and exit history.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Complete**. Architecture owners, AWS realization, integrated threat/failure review, and implementation-readiness exit are closed.
-
-Next logical work is **Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy**. Phase 006 should be divided into dependency-safe implementation subgroups before code construction begins.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) - **In Progress**. Dependency-safe subgroup plan established; **006-A is next**.
 
 # Navigation Guidance
 
@@ -46,6 +45,6 @@ For external standards/methodology authority, use [References](references/).
 
 For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
 
-For architecture or implementation planning, begin with the relevant current architecture owner plus the task-specific upstream product/UX/governance constraints. Use [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) for Phase 005 exit gates and implementation-readiness handoff. Do not infer application topology from the knowledge-directory tree.
+For implementation planning, begin with the relevant current product/UX/architecture owners plus [Phase 006](006-implementation-planning/). Use [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) for implementation-entry and production-readiness gates. Do not infer package/source topology from the knowledge-directory tree.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
