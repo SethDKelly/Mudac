@@ -10,11 +10,11 @@ Active knowledge-architecture phase. This index is the OKF navigation surface fo
 * [004-D — Historical Phase Migration, Provenance & Source-Lineage Retrofit](004-D-historical-phase-migration-provenance-source-lineage-retrofit.md) — establishes bidirectional lineage and [Source Lineage](../canonical/governance/source-lineage.md) governance.
 * [004-E — Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit](004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md) — establishes owner-based stable normative IDs and the canonical [Rule-ID Registry](../canonical/governance/rule-identifiers.md).
 * [004-F — Documentation Governance, Agent Context & Anti-Drift Rules](004-F-documentation-governance-agent-context-anti-drift-rules.md) — establishes [Documentation Authority](../canonical/governance/documentation-authority.md), [Agent Context](../canonical/governance/agent-context.md), [Canonical Change Governance](../canonical/governance/change-governance.md), methodology/terminology governance, and root [`AGENTS.md`](../../AGENTS.md).
+* [004-G — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) — establishes the canonical [`META-*` metadata/trust/lifecycle profile](../canonical/governance/metadata-trust-lifecycle.md), a pinned [OKF v0.2 reference](../references/open-knowledge-format.md), prospective generation metadata, conservative verification semantics, lifecycle/freshness boundaries, and non-destructive legacy handling.
 
 # Planned Work
 
-* **004-G — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions** — Next.
-* 004-H — Validation Tooling, Link/Authority Checks & CI Enforcement.
+* **004-H — Validation Tooling, Link/Authority Checks & CI Enforcement** — Next.
 * 004-I — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure.
 * 004-J — Phase 004 Consolidation & Knowledge-Architecture Exit Review.
 
