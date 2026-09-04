@@ -13,20 +13,27 @@ sources:
 
 # Purpose
 
-Capture one evaluator's independent judgment within one [Judging Encounter](judging-encounter.md).
+Capture one evaluator's independent judgment within one [Judging Encounter](judging-encounter.md), under one exact [Rubric](rubric.md) Version.
 
-# Canonical contract
+Logical uniqueness and evaluation weight are owned by [INV-002](../invariants/one-logical-scorecard.md#inv-002). Judge semantic authorship is owned by [INV-004](../invariants/organizer-not-judge-author.md#inv-004).
 
-Logical identity is one Judge Participation × one Encounter. The Scorecard owns criterion responses, Criterion/overall Notes, Judge attribution, Encounter basis, exact [Rubric](rubric.md) Version, and Draft/Finalized/amendment state.
+The Scorecard owns criterion responses, Criterion/overall Notes, Judge attribution, Encounter basis, Rubric-Version basis, and Draft/Finalized/amendment state.
 
-`Draft → Finalized v1 → Amendment Draft → Finalized v2 ...`
+<a id="sc-001"></a>
+## SC-001 — Draft is non-authoritative
 
-A complete Draft is still non-authoritative. While an Amendment Draft exists, the prior Finalized Version remains authoritative. A successor Version replaces authority without adding another unit of evaluation weight.
+A Scorecard Draft may be complete enough for Finalization while remaining non-authoritative. Only explicit successful Finalization establishes an authoritative Scorecard Version.
 
-# Authority boundary
+<a id="sc-002"></a>
+## SC-002 — Amendment preserves prior authority until successor Finalization
 
-The Judge remains semantic evaluation author. Organizer capture of paper does not transfer judgment authorship, and ordinary Organizer authority cannot edit an electronic evaluation as if authored by the Judge.
+Beginning an Amendment creates an Amendment Draft without displacing the current Finalized Version. The prior Version remains authoritative until the amendment is explicitly Finalized; the successor then becomes current under [Versioning](versioning.md).
 
-Structural identity such as author, Team/Encounter basis, or Rubric basis cannot be changed through ordinary amendment.
+Successor Versions do not create additional evaluation weight; that cross-cutting rule remains [INV-002](../invariants/one-logical-scorecard.md#inv-002).
 
-See [One Logical Scorecard](../invariants/one-logical-scorecard.md), [Judge Independence](../invariants/judge-independence.md), [Versioning](versioning.md), and [Correction & Authority](../policies/correction-authority.md).
+<a id="sc-003"></a>
+## SC-003 — Structural Scorecard identity is not amended
+
+Ordinary amendment may change Judge-authored evaluation content such as Criterion responses and Notes, but it cannot silently change semantic author, Team/Encounter basis, or Rubric-Version basis. Structural errors require the explicit correction/invalidation paths in [Correction & Authority](../policies/correction-authority.md).
+
+See [Judge Independence](../invariants/judge-independence.md#inv-001).
