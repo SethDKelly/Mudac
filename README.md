@@ -20,6 +20,8 @@ Numbered phase directories remain preserved as rationale and design provenance. 
 
 Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/validate_knowledge.py) and read-only GitHub Actions CI. Passing that validator confirms deterministic repository structure only; it is not semantic verification.
 
+The repository-wide Phase 004 migration audit has passed. The OKF retrofit is structurally closed; preserved Phase 001–003 records remain historical evidence rather than an unfinished metadata migration.
+
 ## Design status
 
 * **Phase 001 — Concept Design Foundation:** Complete
@@ -34,9 +36,10 @@ Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/va
   * 004-F Complete
   * 004-G Complete
   * 004-H Complete
-  * **004-I Next — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure**
+  * 004-I Complete
+  * **004-J Next — Phase 004 Consolidation & Knowledge-Architecture Exit Review**
 
-System, Application, Data & Synchronization Architecture follows as **Phase 005**.
+System, Application, Data & Synchronization Architecture follows as **Phase 005** after the Phase 004 exit review.
 
 ## Architecture boundary
 
