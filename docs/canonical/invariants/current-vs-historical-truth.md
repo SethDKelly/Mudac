@@ -8,7 +8,8 @@ sources:
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
 ---
 
-# Invariant
+<a id="inv-005"></a>
+# INV-005 — Current and Historical Truth Remain Distinct
 
 Current operational truth and historical observed truth may legitimately differ; both remain explicit.
 
