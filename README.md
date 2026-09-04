@@ -6,7 +6,7 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 
 ## Knowledge-first design
 
-MUDAC uses Daniel Jackson's **Concept Design** methodology to determine product meaning. The repository is now being organized as an **Open Knowledge Format (OKF) v0.2** knowledge bundle so humans and agents can retrieve current authority without recursively loading historical design phases.
+MUDAC uses Daniel Jackson's **Concept Design** methodology to determine product meaning. The repository is organized as an **Open Knowledge Format (OKF) v0.2** knowledge bundle so humans and agents can retrieve current authority without recursively loading historical design phases.
 
 Start here:
 
@@ -14,7 +14,7 @@ Start here:
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain and conceptual UX knowledge.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
-Numbered phase directories remain preserved as rationale and design provenance.
+Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while each phase `index.md` maps forward to current canonical successors.
 
 ## Design status
 
@@ -25,7 +25,8 @@ Numbered phase directories remain preserved as rationale and design provenance.
   * 004-A Complete
   * 004-B Complete
   * 004-C Complete
-  * **004-D Next — Historical Phase Migration, Provenance & Source-Lineage Retrofit**
+  * 004-D Complete
+  * **004-E Next — Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit**
 
 System, Application, Data & Synchronization Architecture follows as **Phase 005**.
 
