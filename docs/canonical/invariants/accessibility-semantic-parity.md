@@ -8,7 +8,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md
 ---
 
-# Invariant
+<a id="inv-009"></a>
+# INV-009 — Accessibility Is Semantic Parity
 
 Touch, keyboard, nonvisual interaction, large text, alternate input, responsive layout, assistance, and paper accommodations must preserve the same Competition semantics and authority boundaries.
 
@@ -16,4 +17,4 @@ No core operation may require mouse, hover, camera/QR, color, one orientation, o
 
 Accessibility assistance does not transfer Judge authorship or broaden disclosure.
 
-See [Accessibility & Resilience Experience](../experience/accessibility-resilience.md).
+See [Accessibility & Resilience Experience](../experience/accessibility-resilience.md) and [INV-004](organizer-not-judge-author.md#inv-004).
