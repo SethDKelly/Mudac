@@ -14,8 +14,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 005-A | Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles | **In Progress** |
-| 005-B | Application Boundaries, Modules, Domain Services & Dependency Architecture | Planned |
+| 005-A | [Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles](005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md) | **Complete** |
+| 005-B | Application Boundaries, Modules, Domain Services & Dependency Architecture | **Next** |
 | 005-C | Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture | Planned |
 | 005-D | Identity, Authentication, Participation, Access & Session Architecture | Planned |
 | 005-E | Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture | Planned |
@@ -61,6 +61,25 @@ Phase 005 work must follow:
 
 Architecture documents should cite upstream stable rules and state local consequences rather than copy full product/UX rule bodies.
 
+## Authoritative baseline through 005-A
+
+005-A establishes the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
+
+The architecture-wide baseline is now:
+
+- upstream canonical product/UX/governance semantics constrain architecture;
+- authoritative transitions are validated/confirmed at the authoritative boundary;
+- client/device/local state is not final authority;
+- derived read projections are not write authority;
+- actor/author/authorizer/capture attribution survives architectural boundaries;
+- retries/failures preserve logical identity and evidence;
+- disclosure/security is enforced beyond presentation code;
+- freshness and uncertainty remain representable;
+- quality tradeoffs prioritize semantic/trust integrity before apparent availability or speculative performance;
+- paper/accessibility/degraded operation are architecture concerns, not UI-only exceptions.
+
+005-A intentionally does **not** select a framework, service topology, database, identity provider, API style, synchronization mechanism, front-end stack, or AWS service.
+
 ## Phase boundary
 
 The intended deployment direction remains **GitHub Actions → AWS**, but Phase 005 begins without assuming a front-end framework, API style, service decomposition, database, identity provider, synchronization library/protocol, artifact stack, observability platform, or concrete AWS service set.
@@ -69,4 +88,4 @@ Those choices must emerge from the architectural drivers and later subgroup deci
 
 ## Next
 
-Complete 005-A by establishing the architectural quality/trust foundation that all later groups must satisfy.
+005-B — **Application Boundaries, Modules, Domain Services & Dependency Architecture** will determine semantic responsibility boundaries and allowed dependency direction before persistence/API/runtime implementation choices are made.
