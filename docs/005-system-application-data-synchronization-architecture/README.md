@@ -15,8 +15,8 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | Group | Topic | Status |
 | --- | --- | --- |
 | 005-A | [Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles](005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md) | **Complete** |
-| 005-B | Application Boundaries, Modules, Domain Services & Dependency Architecture | **Next** |
-| 005-C | Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture | Planned |
+| 005-B | [Application Boundaries, Modules, Domain Services & Dependency Architecture](005-B-application-boundaries-modules-domain-services-dependency-architecture.md) | **Complete** |
+| 005-C | Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture | **Next** |
 | 005-D | Identity, Authentication, Participation, Access & Session Architecture | Planned |
 | 005-E | Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture | Planned |
 | 005-F | Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery | Planned |
@@ -25,9 +25,7 @@ Preferred current authority remains [Canonical Knowledge](../canonical/). Accept
 | 005-I | AWS Runtime, Deployment, Security, Observability, Backup & Cost Architecture | Planned |
 | 005-J | Phase 005 Consolidation, Threat/Failure Review & Implementation-Readiness Exit | Planned |
 
-## Why this decomposition
-
-The sequence follows architectural dependency rather than UI or technology categories:
+## Architecture sequence
 
 ```text
 architectural drivers / trust / quality attributes
@@ -47,45 +45,27 @@ runtime/AWS/operations
 integrated failure/threat/readiness review
 ```
 
-This ordering keeps high-consequence domain semantics upstream of technology choices while still allowing later groups to refine earlier architecture through explicit governed change when evidence requires it.
-
-## Architecture authority rules
-
-Phase 005 work must follow:
-
-- [DOC-003](../canonical/governance/documentation-authority.md#doc-003) — downstream architecture cannot override upstream canonical meaning;
-- [CTX-002](../canonical/governance/agent-context.md#ctx-002) and [CTX-004](../canonical/governance/agent-context.md#ctx-004) — load only relevant canonical authority and stop when sufficient;
-- [CHG-005](../canonical/governance/change-governance.md#chg-005) — implementation/architecture mismatch is resolved downstream unless product design is deliberately changed;
-- [META-*](../canonical/governance/metadata-trust-lifecycle.md) — accepted canonical architecture knowledge uses prospective, truthful metadata;
-- [VAL-*](../canonical/governance/validation-enforcement.md) — governed documentation changes must preserve deterministic knowledge integrity.
-
-Architecture documents should cite upstream stable rules and state local consequences rather than copy full product/UX rule bodies.
-
-## Authoritative baseline through 005-A
+## Authoritative baseline through 005-B
 
 005-A establishes the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) and `ARCH-001` through `ARCH-008`.
 
-The architecture-wide baseline is now:
+005-B establishes the canonical [Application Boundaries, Modules & Dependency Architecture](../canonical/architecture/application-boundaries.md) and `MOD-001` through `MOD-010`.
 
-- upstream canonical product/UX/governance semantics constrain architecture;
-- authoritative transitions are validated/confirmed at the authoritative boundary;
-- client/device/local state is not final authority;
-- derived read projections are not write authority;
-- actor/author/authorizer/capture attribution survives architectural boundaries;
-- retries/failures preserve logical identity and evidence;
-- disclosure/security is enforced beyond presentation code;
-- freshness and uncertainty remain representable;
-- quality tradeoffs prioritize semantic/trust integrity before apparent availability or speculative performance;
-- paper/accessibility/degraded operation are architecture concerns, not UI-only exceptions.
+The current structural baseline is:
 
-005-A intentionally does **not** select a framework, service topology, database, identity provider, API style, synchronization mechanism, front-end stack, or AWS service.
+- one authoritative server-side application deployment begins as a modular monolith;
+- six semantic authority modules own Competition Governance, Identity/Participation/Access, Judging Operations, Evaluation, Outcomes/Closeout, and External Representation;
+- cross-module projection/query composition is explicitly non-authoritative;
+- cross-module use cases coordinate above module owners rather than merging ownership;
+- modules communicate through explicit public contracts/stable identities/published facts, not repository/table/ORM shortcuts;
+- dependency direction should remain acyclic and downstream-oriented;
+- shared foundation code remains small and business-neutral;
+- Versioning/Provenance may share technical primitives without becoming a central semantic god-module;
+- infrastructure depends inward through module/application ports;
+- later service extraction requires a concrete scaling/isolation/availability/ownership/runtime driver and preserves semantic boundaries.
 
-## Phase boundary
-
-The intended deployment direction remains **GitHub Actions → AWS**, but Phase 005 begins without assuming a front-end framework, API style, service decomposition, database, identity provider, synchronization library/protocol, artifact stack, observability platform, or concrete AWS service set.
-
-Those choices must emerge from the architectural drivers and later subgroup decisions.
+No database, ORM, API protocol, queue, identity provider, front-end framework, or AWS service has been selected yet.
 
 ## Next
 
-005-B — **Application Boundaries, Modules, Domain Services & Dependency Architecture** will determine semantic responsibility boundaries and allowed dependency direction before persistence/API/runtime implementation choices are made.
+005-C — **Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture** will define how authoritative module-owned state, immutable/reconstructible history, cross-module identities, and non-authoritative read projections are physically/logically persisted without violating the 005-B ownership boundaries.
