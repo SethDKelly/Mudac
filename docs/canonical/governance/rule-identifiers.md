@@ -11,7 +11,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:00:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:08:00Z }
 ---
 
 # Canonical contract
@@ -194,6 +194,24 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [SYNC-012 — Paper and Electronic Traces Converge on One Logical Evaluation With Preserved Provenance](../architecture/synchronization-recovery.md#sync-012)
 * [SYNC-013 — Synchronization Status Preserves Authority, Freshness, Conflict, and Uncertainty as Distinct Dimensions](../architecture/synchronization-recovery.md#sync-013)
 * [SYNC-014 — Degraded Digital Operation Yields to Paper When Authoritative Continuity Cannot Be Trusted](../architecture/synchronization-recovery.md#sync-014)
+
+# Paper capture, external representation, artifacts and publication
+
+* [REP-001 — Paper-Origin Scorecard Authority Remains Owned by Evaluation](../architecture/external-representation.md#rep-001)
+* [REP-002 — Physical Evidence Has a Stable Source Reference and Preserved Capture Provenance](../architecture/external-representation.md#rep-002)
+* [REP-003 — Paper Verification Establishes Transcription Fidelity, Not Invented Judge Intent](../architecture/external-representation.md#rep-003)
+* [REP-004 — Binary Evidence and Generated Artifacts Use Immutable Object/Blob Storage Behind Authoritative Metadata](../architecture/external-representation.md#rep-004)
+* [REP-005 — Every Durable Export/Artifact Binds an Exact Source Basis, Purpose, and Disclosure Profile](../architecture/external-representation.md#rep-005)
+* [REP-006 — Disclosure Applies to the Complete Artifact Surface](../architecture/external-representation.md#rep-006)
+* [REP-007 — Durable Artifact Bytes Are Immutable and Integrity-Addressable](../architecture/external-representation.md#rep-007)
+* [REP-008 — Generation, Validation, Publication, and Delivery Are Distinct States](../architecture/external-representation.md#rep-008)
+* [REP-009 — Artifact Generation Is Idempotent/Retryable and May Be Asynchronous](../architecture/external-representation.md#rep-009)
+* [REP-010 — Artifact Validation Is Purpose-Specific and Does Not Create Source Authority](../architecture/external-representation.md#rep-010)
+* [REP-011 — Publication Is an Explicit Authoritative Distribution Record Bound to One Artifact](../architecture/external-representation.md#rep-011)
+* [REP-012 — Source Changes Affect Dependent Representations Without Rewriting Historical Artifacts](../architecture/external-representation.md#rep-012)
+* [REP-013 — Replacement Publication Is Explicit and Successor-Based](../architecture/external-representation.md#rep-013)
+* [REP-014 — URLs, QR Codes, Signed Links, Print Jobs, and Delivery Channels Do Not Confer Authority](../architecture/external-representation.md#rep-014)
+* [REP-015 — External-Representation Provenance Remains Reconstructible End-to-End](../architecture/external-representation.md#rep-015)
 
 # Documentation authority
 
