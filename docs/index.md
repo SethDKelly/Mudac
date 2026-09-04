@@ -6,15 +6,16 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design, architecture, and implementation-planning knowledge.
 
-Current product/domain, conceptual UX, documentation-governance, and accepted architecture meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. The OKF migration is structurally closed; legacy Phase 001–003 records remain intentionally preserved rather than bulk-rewritten for cosmetic metadata conformity.
+Current product/domain, conceptual UX, documentation-governance, accepted architecture, and accepted implementation meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. The OKF migration is structurally closed; legacy Phase 001–003 records remain intentionally preserved rather than bulk-rewritten for cosmetic metadata conformity.
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, governance knowledge, and accepted architecture.
+* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, governance knowledge, architecture, and accepted implementation contracts.
 * [Governance](canonical/governance/) - Documentation authority, agent context, canonical change/conflict, source lineage, methodology/terminology, metadata/trust/lifecycle, validation/CI, and stable IDs.
-* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry, including current `ARCH-*`, `MOD-*`, `DATA-*`, `AUTH-*`, `API-*`, `SYNC-*`, `REP-*`, `FE-*`, and `AWS-*` architecture rules.
+* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference registry, including current `ARCH-*`, `MOD-*`, `DATA-*`, `AUTH-*`, `API-*`, `SYNC-*`, `REP-*`, `FE-*`, `AWS-*`, and `IMPL-*` rules.
 * [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) - `VAL-*` contract for deterministic structural checks and read-only CI.
-* [Architecture](canonical/architecture/) - Current accepted architecture contracts, including the [Architectural Foundation](canonical/architecture/architectural-foundation.md), [Application Boundaries](canonical/architecture/application-boundaries.md), [Data & Persistence Architecture](canonical/architecture/data-persistence.md), [Identity, Authentication, Access & Session Architecture](canonical/architecture/identity-access-session.md), [Commands, Queries, API, Transaction & Concurrency Architecture](canonical/architecture/commands-api-concurrency.md), [Draft Synchronization, Offline & Recovery Architecture](canonical/architecture/synchronization-recovery.md), [External Representation, Artifact & Publication Architecture](canonical/architecture/external-representation.md), [Front-End State, Navigation & Interaction Architecture](canonical/architecture/frontend-interaction.md), and [AWS Runtime, Security & Operations Architecture](canonical/architecture/aws-runtime-operations.md).
+* [Architecture](canonical/architecture/) - Current accepted system/application architecture contracts.
+* [Implementation](canonical/implementation/) - Current accepted implementation/toolchain/delivery contracts, beginning with [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md).
 
 # Agent bootstrap
 
@@ -33,7 +34,7 @@ Each completed phase directory has an `index.md` that routes phase records towar
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) - Completed UX architecture and exit history.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) - Completed OKF retrofit, documentation-governance, validation, migration-closure, and knowledge-architecture exit history.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) - **Complete**. Architecture owners, AWS realization, integrated threat/failure review, and implementation-readiness exit are closed.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) - **In Progress**. Dependency-safe subgroup plan established; **006-A is next**.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) - **In Progress**. 006-A is complete; **006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates is next**.
 
 # Navigation Guidance
 
@@ -45,6 +46,6 @@ For external standards/methodology authority, use [References](references/).
 
 For validation semantics, use the canonical `VAL-*` contract. Passing CI is structural evidence only and is never an OKF verification event.
 
-For implementation planning, begin with the relevant current product/UX/architecture owners plus [Phase 006](006-implementation-planning/). Use [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) for implementation-entry and production-readiness gates. Do not infer package/source topology from the knowledge-directory tree.
+For implementation work, begin with the relevant [Canonical Implementation](canonical/implementation/) owner(s), the architecture owner(s) they realize, and only the product/UX/governance constraints materially relevant to the task. Use [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) for implementation-entry and production-readiness gates. Do not infer package/source topology from the knowledge-directory tree.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
