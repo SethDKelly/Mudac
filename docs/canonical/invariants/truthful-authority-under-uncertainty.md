@@ -9,7 +9,8 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md
 ---
 
-# Invariant
+<a id="inv-010"></a>
+# INV-010 — Truthful Authority Under Uncertainty
 
 Where disconnected Draft continuation is later supported, local working state remains distinguishable from server-confirmed persistence.
 
