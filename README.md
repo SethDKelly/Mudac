@@ -10,12 +10,13 @@ MUDAC uses Daniel Jackson's **Concept Design** methodology to determine product 
 
 Start here:
 
+* [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current canonical product/domain and conceptual UX knowledge.
-* [`docs/canonical/governance/rule-identifiers.md`](docs/canonical/governance/rule-identifiers.md) — stable normative rule-ID and cross-reference contract.
+* [`docs/canonical/governance/`](docs/canonical/governance/) — documentation authority, agent-context, change/conflict, lineage, and stable-rule governance.
 * [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
 
-Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while each phase `index.md` maps forward to current canonical successors.
+Numbered phase directories remain preserved as rationale and design provenance. Canonical documents point backward to material historical `sources`, while phase `index.md` files map forward to current canonical successors.
 
 ## Design status
 
@@ -28,12 +29,13 @@ Numbered phase directories remain preserved as rationale and design provenance. 
   * 004-C Complete
   * 004-D Complete
   * 004-E Complete
-  * **004-F Next — Documentation Governance, Agent Context & Anti-Drift Rules**
+  * 004-F Complete
+  * **004-G Next — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions**
 
 System, Application, Data & Synchronization Architecture follows as **Phase 005**.
 
 ## Architecture boundary
 
-The intended deployment boundary remains **GitHub Actions → AWS**, but front-end framework, component system, identity provider, API style, persistence, offline/synchronization technology, artifact infrastructure, observability, and concrete AWS services remain downstream architecture choices. Those choices must satisfy the canonical Concept, policy, invariant, experience, authority, privacy, evidence, accessibility, recovery, and stable rule-ID contracts rather than redefine them.
+The intended deployment boundary remains **GitHub Actions → AWS**, but front-end framework, component system, identity provider, API style, persistence, offline/synchronization technology, artifact infrastructure, observability, and concrete AWS services remain downstream architecture choices. Those choices must satisfy canonical product/UX/governance contracts rather than redefine them.
 
 This repository remains in design; production implementation has not begun.
