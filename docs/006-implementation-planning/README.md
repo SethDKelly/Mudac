@@ -26,8 +26,8 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 | --- | --- | --- |
 | 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete** |
 | 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | **Complete** |
-| 006-C | **Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement** | **Next** |
-| 006-D | Environment, IaC, CI/CD, Local Development & Runtime Bootstrap | Planned |
+| 006-C | [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | **Complete** |
+| 006-D | **Environment, IaC, CI/CD, Local Development & Runtime Bootstrap** | **Next** |
 | 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | Planned |
 | 006-F | Identity, Session, Access, Security & Invitation Foundation | Planned |
 | 006-G | API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation | Planned |
@@ -70,7 +70,7 @@ The Phase 005 exit review is the immediate upstream handoff: [005-J — Phase 00
 
 The sequence is the default dependency order, not a ban on all parallel work. A later group may begin preparatory work only when its required contracts from preceding groups are stable enough that parallelism cannot create competing foundations.
 
-## Accepted implementation baseline through 006-B
+## Accepted implementation baseline through 006-C
 
 Current implementation authority lives in [Canonical Implementation](../canonical/implementation/).
 
@@ -94,24 +94,54 @@ Current implementation authority lives in [Canonical Implementation](../canonica
 - privacy-minimized synthetic CI artifacts;
 - traceability from evidence to existing canonical stable rule IDs without copying rule bodies.
 
-006-B intentionally leaves physical test/package placement to 006-C and executable workflow/ruleset implementation to 006-D.
+[Source Topology, Package Boundaries & Dependency Enforcement](../canonical/implementation/source-topology.md) now fixes the physical implementation graph without creating a parallel package-rule namespace:
+
+- `apps/api`, `apps/worker`, and `apps/web` are deployable composition roots rather than semantic owners;
+- the six accepted authoritative modules are separate pnpm workspace packages;
+- `@mudac/application` coordinates cross-module use cases above owners;
+- `@mudac/projections` owns non-authoritative cross-module read models;
+- `@mudac/foundation` remains small, business-neutral, runtime-neutral, and browser-safe by default;
+- owner infrastructure adapters remain owner-local rather than forming a central all-powerful data-access package;
+- package root exports are explicit and deep/private imports are prohibited;
+- module dependencies follow the acyclic `MOD-*` authority direction and are declared only when needed;
+- `apps/web` cannot import server modules/persistence implementations and follows `app/routes → features → patterns → primitives` plus explicit adapter boundaries;
+- module-owned `./testing` exports and technical `@mudac/test-support` preserve test ownership without creating production backdoors;
+- internal workspace dependencies use pnpm `workspace:` references and cannot bypass exports through cross-root relative paths or path aliases;
+- dependency-cruiser plus package exports provides blocking graph enforcement in the future `Implementation Verification` aggregate.
+
+006-D is therefore free to instantiate the workspace/runtime/IaC/CI skeleton without rediscovering package ownership or dependency direction.
 
 # 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement
 
-Translate `MOD-*`, `IMPL-*`, and the verification owner into enforceable source-code structure without mirroring the documentation tree mechanically.
+**Complete.** Current authority lives in [Source Topology, Package Boundaries & Dependency Enforcement](../canonical/implementation/source-topology.md). The historical decision record is [006-C](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md).
 
-Expected scope:
+The accepted top-level implementation shape is:
 
-- backend module/package boundaries for the six authoritative modules;
-- application-coordination and projection/query placement;
-- transport/infrastructure adapter boundaries;
-- frontend feature, semantic-pattern, primitive, route, and adapter boundaries;
-- business-neutral shared-foundation contents;
-- import/dependency direction rules and automated enforcement;
-- module public contracts and cross-module stable-ID/reference conventions;
-- prohibition of repository/table/query-model leakage across module owners;
-- generated API/client contracts and where they may live;
-- test package boundaries, fixture ownership, and machine-readable evidence-traceability placement.
+```text
+apps/
+  api/
+  worker/
+  web/
+packages/
+  modules/
+    competition/
+    identity-access/
+    judging-operations/
+    evaluation/
+    outcomes/
+    external-representation/
+  application/
+  projections/
+  foundation/
+  test-support/
+  api-client/      # introduced only once 006-G establishes generation
+infra/
+scripts/
+tests/
+docs/
+```
+
+006-D will create executable manifests/configuration and dependency checks for this graph; 006-C intentionally does not create empty placeholder packages/directories merely to make the repository resemble the diagram.
 
 # 006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap
 
@@ -120,6 +150,8 @@ Plan the executable platform skeleton before domain persistence and services dep
 Expected scope:
 
 - local development topology and developer bootstrap;
+- pnpm workspace/root TypeScript/ESLint/Prettier/Vitest/Playwright configuration and package manifests/exports from 006-C;
+- executable dependency-cruiser enforcement of module/browser/test boundaries;
 - production/nonproduction AWS account/environment mapping;
 - OpenTofu repository/module/state/backend structure;
 - VPC/subnet/NAT/S3-endpoint/CloudFront/internal-ALB/ECS/ECR/RDS/S3/SQS/Cognito/CloudWatch skeleton sequencing;
@@ -304,8 +336,7 @@ Expected scope:
 
 The phase is intentionally serial at major authority seams, but limited parallel execution is safe after prerequisite contracts stabilize:
 
-- 006-C may now proceed with both 006-A toolchain and 006-B evidence contracts stable;
-- IaC scaffolding in 006-D may proceed alongside late 006-C documentation once package/runtime boundaries are stable;
+- 006-D may now instantiate workspace/CI/IaC scaffolding because 006-A through 006-C are stable; persistence-specific schema behavior remains 006-E;
 - frontend primitive/accessibility work in 006-H may begin while late 006-G API details finish if generated/public contracts are stable;
 - artifact-renderer prototyping for 006-L may occur before 006-K completes, but authoritative Publication integration waits for real source/outcome contracts;
 - 006-M evidence work is accumulated throughout the phase, but its integrated exit decision waits for 006-I through 006-L.
@@ -322,4 +353,4 @@ Phase 006 should exit only when:
 
 ## Next
 
-Proceed to **006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**.
+Proceed to **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap**.
