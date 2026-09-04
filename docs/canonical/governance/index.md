@@ -12,10 +12,11 @@ Current repository/design-governance knowledge for MUDAC.
 * [Agent Context & Progressive Retrieval](agent-context.md) - `CTX-*` rules for minimum-sufficient context, progressive disclosure, historical retrieval, and anti-bloat behavior.
 * [Canonical Change & Conflict Governance](change-governance.md) - `CHG-*` rules for semantic changes, stable-rule impact review, contradiction handling, and implementation/design mismatch.
 
-# Lineage, metadata and reference governance
+# Lineage, metadata, validation and reference governance
 
 * [Source Lineage and Historical Design Records](source-lineage.md) - Backward `sources` provenance, forward phase-to-canonical lineage, historical preservation, and material-source selection.
 * [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) - `META-*` rules for frontmatter profile, generation attribution, real verification, lifecycle status, freshness, trust-tier boundaries, and legacy metadata handling.
+* [Knowledge Validation & CI Enforcement](validation-enforcement.md) - `VAL-*` rules for deterministic structural validation, stable-ID/link checks, routing requirements, legacy exemptions, and read-only CI enforcement.
 * [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md) - Durable rule IDs, explicit anchors, reference-first reuse, bounded restatement, and the rule registry.
 
 # Agent adapter
@@ -24,4 +25,4 @@ Repository agents receive a concise bootstrap through [`AGENTS.md`](../../../AGE
 
 # Remaining Phase 004 governance work
 
-004-H will add structural validation/CI enforcement for the contracts above. 004-I will perform the repository-wide graph/drift audit and migration closure before the Phase 004 exit review.
+004-I performs the repository-wide knowledge-graph/drift audit and migration closure. 004-J then performs the Phase 004 consolidation and knowledge-architecture exit review.
