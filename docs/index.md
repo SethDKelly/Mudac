@@ -6,11 +6,12 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and architecture knowledge.
 
-Phase 004 is converting the repository from phase-centric retrieval to canonical OKF-aligned knowledge. Baseline current product/domain and conceptual UX extraction is complete, and 004-D has established bidirectional lineage between canonical knowledge and preserved numbered design history.
+Phase 004 is converting the repository from phase-centric retrieval to canonical OKF-aligned knowledge. Baseline current product/domain and conceptual UX extraction is complete; bidirectional historical lineage and stable high-value rule IDs are now established.
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, and emerging governance knowledge.
+* [Canonical Knowledge](canonical/) - Current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, and governance knowledge.
+* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) - Durable normative IDs and cross-reference contract for architecture, implementation, tests, and agents.
 
 # External Authorities and References
 
@@ -27,7 +28,7 @@ Each phase directory has an `index.md` that routes historical records toward the
 
 # Navigation Guidance
 
-For current product/UX meaning, start with [Canonical Knowledge](canonical/) and follow only linked dependencies needed for the task.
+For current product/UX meaning, start with [Canonical Knowledge](canonical/) and follow only linked dependencies needed for the task. When a stable rule ID exists, link to that exact owner/anchor instead of creating another full normative restatement.
 
 For rationale or chronology, prefer a canonical document's `sources` links. When starting from design history, enter through that phase's `index.md` rather than recursively loading the entire phase corpus.
 
