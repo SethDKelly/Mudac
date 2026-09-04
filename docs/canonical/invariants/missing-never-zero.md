@@ -9,7 +9,8 @@ sources:
   - resource: ../../002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md
 ---
 
-# Invariant
+<a id="inv-003"></a>
+# INV-003 — Missing Is Never Zero
 
 Missing evaluation is absence of evidence, not a Judge judgment of zero.
 
