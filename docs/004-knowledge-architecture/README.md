@@ -18,12 +18,12 @@ Preferred bundle entry: [docs/index.md](../index.md). Historical/phase navigatio
 | 004-D | [Historical Phase Migration, Provenance & Source-Lineage Retrofit](004-D-historical-phase-migration-provenance-source-lineage-retrofit.md) | **Complete** |
 | 004-E | [Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit](004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md) | **Complete** |
 | 004-F | [Documentation Governance, Agent Context & Anti-Drift Rules](004-F-documentation-governance-agent-context-anti-drift-rules.md) | **Complete** |
-| 004-G | OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions | **Next** |
-| 004-H | Validation Tooling, Link/Authority Checks & CI Enforcement | Planned |
+| 004-G | [OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) | **Complete** |
+| 004-H | Validation Tooling, Link/Authority Checks & CI Enforcement | **Next** |
 | 004-I | Repository-Wide Knowledge Graph / Drift Audit & Migration Closure | Planned |
 | 004-J | Phase 004 Consolidation & Knowledge-Architecture Exit Review | Planned |
 
-## Authoritative baseline through 004-F
+## Authoritative baseline through 004-G
 
 004-A establishes the Concept Design/OKF methodology and terminology boundary.
 
@@ -43,7 +43,9 @@ Preferred bundle entry: [docs/index.md](../index.md). Historical/phase navigatio
 * [Canonical Change & Conflict Governance](../canonical/governance/change-governance.md) — `CHG-*`;
 * root [`AGENTS.md`](../../AGENTS.md) as a thin agent bootstrap adapter.
 
-No Concept split/merge/addition or product/UX semantic correction was required through 004-F.
+004-G establishes [OKF Metadata, Trust, Verification, Lifecycle & Freshness](../canonical/governance/metadata-trust-lifecycle.md) — `META-*`. The profile keeps generation, verification, lifecycle, freshness, and MUDAC authority distinct; avoids speculative metadata backfill; preserves legacy phase records without bulk rewrite; and pins the adopted [OKF v0.2 reference](../references/open-knowledge-format.md).
+
+No Concept split/merge/addition or product/UX semantic correction was required through 004-G.
 
 ## Governing operating principles
 
@@ -51,6 +53,8 @@ No Concept split/merge/addition or product/UX semantic correction was required t
 
 Future architecture and implementation consume canonical contracts rather than recreate or override them. Agents use minimum-sufficient progressive context instead of recursively loading the corpus. Semantic changes update canonical owners and lineage explicitly; conflicts are surfaced rather than silently normalized.
 
+OKF trust metadata is advisory rather than a substitute for current MUDAC authority. `status: stable` does not imply human verification, historical does not imply deprecated, and structural CI validation must not manufacture `verified` events.
+
 ## Next
 
-004-G will define how OKF metadata communicates generation provenance, verification/trust, knowledge lifecycle/status, deprecation/supersession, and freshness without confusing documentation metadata with MUDAC domain state.
+004-H will turn these contracts into deterministic repository tooling and CI checks for applicable frontmatter, timestamp/actor shapes, source/link resolution, stable IDs/anchors, canonical routing, and other structural anti-drift properties without pretending structural validation is semantic verification.
