@@ -5,11 +5,11 @@ Architecture-design history and decision lineage for MUDAC. Use [docs/index.md](
 # Records and Current Outputs
 
 * [005-A — Architectural Drivers, Quality Attributes, Trust Boundaries & Decision Principles](005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md) — **Complete**. Establishes the architecture-wide quality/trust/failure foundation; current authority lives in the canonical [Architectural Foundation](../canonical/architecture/architectural-foundation.md) with `ARCH-001` through `ARCH-008`.
+* [005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture](005-B-application-boundaries-modules-domain-services-dependency-architecture.md) — **Complete**. Establishes semantic module ownership, projection/query non-authority, coordination/dependency rules, and modular-monolith-first posture; current authority lives in [Application Boundaries](../canonical/architecture/application-boundaries.md) with `MOD-001` through `MOD-010`.
 
 # Planned Work
 
-* **005-B — Application Boundaries, Modules, Domain Services & Dependency Architecture** — Next.
-* 005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture.
+* **005-C — Data Model, Persistence, Versioning, Provenance & Derived-Projection Architecture** — Next.
 * 005-D — Identity, Authentication, Participation, Access & Session Architecture.
 * 005-E — Commands, Queries, API Contracts, Transactions, Idempotency & Concurrency Architecture.
 * 005-F — Draft Persistence, Synchronization, Offline/Degraded Operation & Conflict Recovery.
