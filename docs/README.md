@@ -34,20 +34,23 @@ These owners govern the details. This README routes to them and does not reprodu
 * Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **In Progress**
   * 006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement: **Complete**
   * 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates: **Complete**
-  * **006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: Next**
-  * 006-D through 006-H — remaining implementation foundations: Planned
+  * 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: **Complete**
+  * **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap: Next**
+  * 006-E through 006-H — remaining implementation foundations: Planned
   * 006-I through 006-L — dependency-ordered end-to-end domain slices: Planned
   * 006-M — integrated hardening, operational readiness and phase exit: Planned
 
 The complete Phase 006 subgroup plan and dependency graph live in [006-implementation-planning/README.md](006-implementation-planning/README.md).
 
-Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/). Current accepted implementation meaning is routed through [canonical/implementation/](canonical/implementation/): [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md) owns `IMPL-001` through `IMPL-016`, while [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md) owns the current evidence/test/CI model without creating a duplicate stable-rule namespace.
+Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/). Current accepted implementation meaning is routed through [canonical/implementation/](canonical/implementation/): [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md) owns `IMPL-001` through `IMPL-016`; [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md) owns the current evidence/test/CI model; and [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md) owns the current workspace/package/import graph. Verification and source topology intentionally realize existing canonical rules rather than creating parallel testing/package rule namespaces.
 
 The implementation baseline uses Node.js 24 LTS + TypeScript, pnpm workspaces, Fastify, Kysely + node-postgres with explicit migrations, transport schemas generating OpenAPI outward, Vitest/Playwright, strict TypeScript + ESLint + Prettier, OpenTofu, layered scanning, committed lockfiles/reproducible generation, intended PR/check-gated `main`, and separately gated production deployment authority.
 
+The accepted source graph uses three deployable composition roots (`apps/api`, `apps/worker`, `apps/web`), six authoritative module workspace packages, thin `application` coordination, non-authoritative `projections`, a small browser-safe business-neutral `foundation`, and technical-only test support. Package root exports are explicit, cross-module dependencies remain acyclic/public-only, browser source cannot import server implementation, front-end layers preserve the `FE-*` component direction, internal dependencies use pnpm `workspace:` declarations, and dependency-cruiser is the selected graph-level enforcement mechanism.
+
 The verification baseline requires real PostgreSQL for database/concurrency semantics, deterministic synthetic fixtures and explicit external/nondeterministic seams, module-owned test builders, critical Playwright journeys, Testing Library-style semantic component tests, automated axe-compatible accessibility checks plus manual accessibility evidence before production readiness, behavioral security/authority/disclosure testing in addition to scanners, explicit retry/conflict/uncertainty/recovery evidence, narrow golden fixtures, coverage as diagnostic evidence, visible treatment of flakiness, and privacy-minimized CI artifacts. Evidence traces existing canonical rule IDs rather than copying rule bodies.
 
-Actual implementation workflow/ruleset enforcement remains a 006-D action because the repository has not yet been bootstrapped with application CI and this design-session GitHub connection cannot administer branch protection/rulesets.
+Actual workspace/runtime/IaC/CI bootstrap and repository ruleset enforcement remain 006-D actions. The current design-session GitHub connection cannot administer branch protection/rulesets, so that control remains explicitly unclaimed until verified.
 
 The [005-J exit review](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) confirms that the architecture owners compose without a blocking authority contradiction. MUDAC is **implementation-planning ready, not production certified**. Phase 006 converts those contracts and exit gates into enforceable tooling, tests, package/source boundaries, foundations, vertical delivery slices, and measured readiness evidence without silently changing accepted semantics.
 
