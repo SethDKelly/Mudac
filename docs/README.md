@@ -8,12 +8,7 @@ Start at [index.md](index.md), the OKF v0.2 bundle root.
 
 For current product/domain and conceptual UX meaning, use [Canonical Knowledge](canonical/). Baseline extraction completed in 004-C, so normal consumers should prefer canonical owners over reconstructing current truth from Phase 001–003 records.
 
-Use numbered phase directories for rationale, design evolution, and source provenance. Each numbered phase now has an OKF `index.md` that maps its records forward to current canonical successors:
-
-* [Phase 001 — Concept Design Foundation](001-concept-design/)
-* [Phase 002 — Concept Specification](002-concept-specification/)
-* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/)
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — **In Progress**
+Use numbered phase directories for rationale, design evolution, and source provenance. Each numbered phase has an OKF `index.md` that maps its records forward to current canonical successors.
 
 External methodology/standards adoption context lives under [references/](references/).
 
@@ -21,9 +16,9 @@ External methodology/standards adoption context lives under [references/](refere
 
 Daniel Jackson Concept Design remains the methodology used to determine MUDAC product meaning. OKF is the knowledge representation/navigation convention and does not redefine the accepted Concept catalog or application semantics.
 
-Canonical current knowledge constrains later architecture/implementation. Historical phase records preserve rationale and lineage. Canonical documents point backward through material `sources`; phase indexes point forward to the current owners those records materially produced or refined. See [Source Lineage and Historical Design Records](canonical/governance/source-lineage.md).
+Canonical current knowledge constrains later architecture/implementation. Historical phase records preserve rationale and lineage. Canonical documents point backward through material `sources`; phase indexes point forward to current successors. See [Source Lineage and Historical Design Records](canonical/governance/source-lineage.md).
 
-Downstream implementation documentation cannot override a canonical product rule by restating it differently.
+High-value normative contracts now use stable owner-based IDs governed by [Stable Rule Identifiers & Cross-Reference Contract](canonical/governance/rule-identifiers.md). Downstream documentation should link to an identified owner and state its local consequence rather than recreate the complete upstream rule body.
 
 ## Phase 004 status
 
@@ -31,6 +26,7 @@ Downstream implementation documentation cannot override a canonical product rule
 * 004-B — Complete
 * 004-C — Complete
 * 004-D — Complete
-* **004-E — Next: Cross-Reference, Stable Rule-ID & Restatement Reduction Retrofit**
+* 004-E — Complete
+* **004-F — Next: Documentation Governance, Agent Context & Anti-Drift Rules**
 
 System/Application/Data/Synchronization Architecture is planned as Phase 005 after the knowledge-governance retrofit is complete.
