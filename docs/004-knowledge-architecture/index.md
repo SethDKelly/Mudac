@@ -12,12 +12,12 @@ Active knowledge-architecture phase. This index is the OKF navigation surface fo
 * [004-F — Documentation Governance, Agent Context & Anti-Drift Rules](004-F-documentation-governance-agent-context-anti-drift-rules.md) — establishes [Documentation Authority](../canonical/governance/documentation-authority.md), [Agent Context](../canonical/governance/agent-context.md), [Canonical Change Governance](../canonical/governance/change-governance.md), methodology/terminology governance, and root [`AGENTS.md`](../../AGENTS.md).
 * [004-G — OKF Metadata, Trust, Verification, Lifecycle & Freshness Conventions](004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md) — establishes the canonical [`META-*` metadata/trust/lifecycle profile](../canonical/governance/metadata-trust-lifecycle.md) and pinned [OKF v0.2 reference](../references/open-knowledge-format.md).
 * [004-H — Validation Tooling, Link/Authority Checks & CI Enforcement](004-H-validation-tooling-link-authority-checks-ci-enforcement.md) — establishes [`VAL-*` validation governance](../canonical/governance/validation-enforcement.md), the deterministic [`scripts/validate_knowledge.py`](../../scripts/validate_knowledge.py) validator, and read-only GitHub Actions enforcement.
+* [004-I — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure](004-I-repository-wide-knowledge-graph-drift-audit-migration-closure.md) — audits the complete retrofit, records a clean strict-validation result, classifies deliberate legacy/current asymmetries, removes migration-progress framing from current routing, and closes the repository migration without further bulk Phase 001–003 rewrite.
 
 # Planned Work
 
-* **004-I — Repository-Wide Knowledge Graph / Drift Audit & Migration Closure** — Next.
-* 004-J — Phase 004 Consolidation & Knowledge-Architecture Exit Review.
+* **004-J — Phase 004 Consolidation & Knowledge-Architecture Exit Review** — Next.
 
 # Retrieval Rule
 
-Use [docs/index.md](../index.md) for ordinary current knowledge retrieval. Repository agents begin with [`AGENTS.md`](../../AGENTS.md), which routes to canonical governance rather than competing with it. Use this phase index only when the task concerns the knowledge-architecture migration, rationale, governance evolution, or validation rollout.
+Use [docs/index.md](../index.md) for ordinary current knowledge retrieval. Repository agents begin with [`AGENTS.md`](../../AGENTS.md), which routes to canonical governance rather than competing with it. Use this phase index only when the task concerns the knowledge-architecture migration, rationale, governance evolution, validation rollout, or migration-closure audit.
