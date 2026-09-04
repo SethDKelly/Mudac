@@ -2,7 +2,7 @@
 
 This subtree is the preferred source for current MUDAC product and conceptual UX meaning.
 
-004-C established baseline canonical product/UX owners; 004-D established bidirectional historical lineage; 004-E added stable rule IDs/reference-first reuse; 004-F established documentation authority, agent-context, and canonical-change governance; 004-G established the MUDAC OKF metadata/trust/lifecycle profile.
+004-C established baseline canonical product/UX owners; 004-D established bidirectional historical lineage; 004-E added stable rule IDs/reference-first reuse; 004-F established documentation authority, agent-context, and canonical-change governance; 004-G established the MUDAC OKF metadata/trust/lifecycle profile; 004-H added deterministic knowledge validation and CI enforcement.
 
 # Current Knowledge
 
@@ -14,7 +14,7 @@ This subtree is the preferred source for current MUDAC product and conceptual UX
 
 # Governance and Architecture
 
-* [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change governance (`CHG-*`), metadata/trust/lifecycle (`META-*`), source lineage, and stable rule IDs.
+* [Governance](governance/) - Methodology/terminology, documentation authority (`DOC-*`), agent context (`CTX-*`), canonical change (`CHG-*`), metadata/trust/lifecycle (`META-*`), validation/CI (`VAL-*`), source lineage, and stable rule IDs.
 * [Architecture](architecture/) - Reserved for accepted system/application architecture beginning after Phase 004.
 
 # Retrieval Rule
@@ -26,5 +26,7 @@ Repository agents follow [Agent Context & Progressive Retrieval](governance/agen
 When a stable rule ID exists, downstream knowledge should link that owner/anchor and state only the local consequence rather than recreating the complete rule body.
 
 For knowledge metadata, [OKF Metadata, Trust, Verification, Lifecycle & Freshness](governance/metadata-trust-lifecycle.md) governs `generated`, `verified`, `status`, `stale_after`, source credibility, trust-tier interpretation, and legacy handling.
+
+For deterministic conformance checks, [Knowledge Validation & CI Enforcement](governance/validation-enforcement.md) governs the validator and CI boundary. Passing validation is not semantic verification.
 
 For rationale or design evolution, follow a canonical document's `sources` links. When starting from a historical phase, enter through that phase's `index.md` and follow current-successor links rather than recursively loading the phase corpus.
