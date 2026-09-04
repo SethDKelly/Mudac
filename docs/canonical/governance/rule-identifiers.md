@@ -8,6 +8,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md
   - resource: ../../004-knowledge-architecture/004-C-canonical-concept-policy-invariant-experience-knowledge-extraction.md
   - resource: ../../004-knowledge-architecture/004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md
+  - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
 ---
 
 # Canonical contract
@@ -98,6 +99,31 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [EXPORT-001 — Export Represents Source Truth; It Does Not Replace It](../concepts/export.md#export-001)
 * [EXPORT-002 — Generation and Publication Are Distinct](../concepts/export.md#export-002)
 
+# Documentation authority
+
+* [DOC-001 — Canonical Owner Controls Current Meaning](documentation-authority.md#doc-001)
+* [DOC-002 — One Normative Rule Has One Canonical Owner](documentation-authority.md#doc-002)
+* [DOC-003 — Downstream Artifacts Cannot Override Upstream Canonical Meaning](documentation-authority.md#doc-003)
+* [DOC-004 — Historical Phase Records Are Append-Stable Provenance](documentation-authority.md#doc-004)
+* [DOC-005 — Routing/Summary/Agent Artifacts Do Not Become Rule Owners](documentation-authority.md#doc-005)
+* [DOC-006 — Knowledge Topology Does Not Dictate Source-Code Topology](documentation-authority.md#doc-006)
+
+# Agent context
+
+* [CTX-001 — Start With Progressive Disclosure](agent-context.md#ctx-001)
+* [CTX-002 — Load Only Task-Relevant Owners and Dependencies](agent-context.md#ctx-002)
+* [CTX-003 — Historical Context Is On-Demand Through Lineage](agent-context.md#ctx-003)
+* [CTX-004 — Stop Context Expansion When Authority Is Sufficient](agent-context.md#ctx-004)
+* [CTX-005 — Recursive Corpus Loading Is Not the Default](agent-context.md#ctx-005)
+
+# Canonical change governance
+
+* [CHG-001 — Semantic Change Updates the Canonical Owner Explicitly](change-governance.md#chg-001)
+* [CHG-002 — Stable-Rule Semantic Change Requires Dependent Impact Review](change-governance.md#chg-002)
+* [CHG-003 — Contradictions Are Surfaced, Not Silently Normalized](change-governance.md#chg-003)
+* [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
+* [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
+
 # Change impact
 
-A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. 004-F defines the governance workflow; 004-H will validate uniqueness and link resolution mechanically.
+A proposed semantic change to an identified rule must trigger review of known canonical dependents and, once present, architecture/tests that cite the ID. [Canonical Change & Conflict Governance](change-governance.md) defines the workflow; 004-H will validate uniqueness and link resolution mechanically.
