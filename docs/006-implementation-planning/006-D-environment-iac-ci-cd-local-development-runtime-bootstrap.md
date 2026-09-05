@@ -13,7 +13,7 @@ sources:
   - resource: ../canonical/architecture/frontend-interaction.md
   - resource: https://opentofu.org/docs/language/settings/backends/s3/
   - resource: https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:09:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:29:00Z }
 ---
 
 # Purpose
@@ -149,6 +149,20 @@ OpenTofu format + backend-disabled root validation
 Deeper database, browser E2E, accessibility, security, concurrency, migration and operational evidence is added by later groups to the verification strategy rather than pretending empty suites prove those behaviors today.
 
 Knowledge Validation remains separate under `VAL-*`.
+
+## Bootstrap gate exercise
+
+The new executable gate was run repeatedly while 006-D was being built rather than treated as decorative configuration. It exposed and forced correction of bootstrap incompatibilities including:
+
+- pnpm 11 rejecting an unapproved `esbuild` install script until the required build was explicitly allowlisted;
+- an early Node 24 type-definition pin that conflicted with the TypeScript 6 configuration;
+- use of a removed Vitest workspace helper instead of the current root-project configuration;
+- formatter scope that initially reached non-implementation files with different ownership/parser assumptions;
+- ESLint invocation/configuration issues around empty test paths and type-aware project discovery.
+
+The corrections preserve the intended controls: frozen installation, safer dependency builds, strict TypeScript, typed ESLint rules, package-boundary checks, and current Vitest behavior remain enabled rather than being suppressed to obtain a green build.
+
+The final exact revision still must pass both Knowledge Validation and Implementation Verification before promotion; this record does not treat a successful earlier/intermediate revision as evidence for a later commit.
 
 # Source dependency enforcement
 
