@@ -16,7 +16,8 @@ The current freeze is owned by [Design / Implementation Boundary](../canonical/g
 | --- | --- | --- |
 | 007-A | [Design Re-entry, Implementation Freeze & Jackson Completion Criteria](007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) | **Complete** |
 | 007-B | [Concept Completeness, Independence & Genericity Audit](007-B-concept-completeness-independence-genericity-audit.md) | **Complete** |
-| 007-C | **Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit** | **Next** |
+| 007-C | [Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit](007-C-cross-concept-synchronization-completeness-authority-seam-audit.md) | **Complete** |
+| 007-D | **Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure** | **Next** |
 
 Later Phase 007 subdivisions and subsequent design phases continue to be derived from audit findings rather than fixed to an arbitrary phase count in advance.
 
@@ -44,28 +45,52 @@ One later-discovered Concept was promoted:
 
 - **Publication** — deliberate distribution/public release of an identified Export representation to a declared audience/channel.
 
-The current catalog therefore contains **sixteen Concepts**. Export remains representation generation/currency; Publication now owns deliberate release/withdrawal/successor distribution state.
+The current catalog therefore contains **sixteen Concepts**. Export remains representation generation/currency; Publication owns deliberate release/withdrawal/successor distribution state.
 
-Artifact, Paper Source, authentication/session, Invitation/QR, Panel Membership, Criterion/Notes, Readiness, Coverage, Aggregate, Rank, Reconciliation, Official Outcome Revision, Evaluation Policy, and Finalization remain deliberately non-Concepts for the reasons recorded in 007-B.
+## 007-C result
 
-## 007-C objective
+Cross-concept composition is now current canonical knowledge under [Synchronizations](../canonical/synchronizations/).
 
-Catalog completeness does not prove that independent concepts synchronize correctly.
+007-C consolidated sixteen synchronization contracts covering:
 
-007-C will consolidate the cross-concept synchronization families identified by 007-B and test each for:
+- Identity proof → Participation/context;
+- readiness → Competition Ready/Active;
+- Event Completed → Judge Access expiry/Participation completion;
+- exceptional resume without automatic authority restoration;
+- Team/Division/Alias readiness and Encounter snapshots;
+- Participation/Panel → effective Encounter participants;
+- authoritative Rubric Version establishment;
+- Encounter + Rubric Version → one logical Scorecard obligation;
+- Scorecard Finalization/Amendment → Versioning + Provenance + derived refresh;
+- verified paper capture → the same Scorecard authority without authorship transfer;
+- Coverage/Aggregate/Rank derivation;
+- correction impact propagation;
+- Rank-derived Award conferral;
+- Competition Finalization → Official Outcome Revision;
+- Export → Publication;
+- dual-role Participation-context switching → Access/disclosure isolation.
 
-- participating Concepts/mechanisms/policies;
-- trigger/initiating action;
-- preconditions and authority basis;
-- required postconditions/convergence state;
-- temporal ordering and current-versus-historical effects;
-- failure/partial-success behavior;
-- idempotent/retry meaning where conceptually relevant;
-- provenance/version consequences;
-- whether any synchronization currently hides another missing Concept or incorrectly transfers authority between Concepts.
+The audit distinguished authority-establishing synchronizations from derived/convergent refresh, clarified retry/uncertain-outcome meaning, and found **no additional missing Concept**.
 
-The audit should preserve concept independence: synchronizations coordinate accepted owners rather than moving cross-cutting workflow state into a catch-all Concept.
+## 007-D objective
+
+007-C makes the major synchronization seams explicit, but temporal overlay semantics still require dedicated closure.
+
+007-D will test how the current model represents and composes:
+
+- Draft versus authoritative state;
+- current versus historical truth;
+- affected/stale state after source change;
+- invalidation versus supersession;
+- replacement/rejudge relationships;
+- amendment/correction windows;
+- Event Completed/Finalized boundaries;
+- successor Scorecard/Rubric/Official Outcome/Export/Publication authority;
+- source corrections whose downstream effects converge later;
+- whether any lifecycle overlay is currently hidden as an implementation-only status.
+
+The goal is to ensure correction never depends on destructive rewrite and that historical truth remains explainable while current authority legitimately changes.
 
 ## Next
 
-Proceed to **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit**.
+Proceed to **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure**.

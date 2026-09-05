@@ -7,11 +7,12 @@ tags: [governance, methodology, design, implementation, freeze, jackson]
 sources:
   - resource: ../../007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md
   - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../007-design-refinement/007-C-cross-concept-synchronization-completeness-authority-seam-audit.md
   - resource: change-governance.md
   - resource: methodology-terminology.md
+  - resource: ../synchronizations/concept-synchronizations.md
   - resource: ../implementation/runtime-delivery-bootstrap.md
   - resource: ../implementation/implementation-foundation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T02:12:00Z }
 ---
 
 # Purpose
@@ -68,11 +69,13 @@ Toolchain churn, architecture expansion, infrastructure provisioning, schema wor
 
 # Design work is now authoritative work
 
-Current work should return to product/concept/design refinement. Existing canonical concepts, mechanisms, policies, invariants, experience contracts and architecture remain inputs, not assumptions that the methodology has conclusively exited.
+Current work should return to product/concept/design refinement. Existing canonical concepts, synchronizations, mechanisms, policies, invariants, experience contracts and architecture remain inputs, not assumptions that the methodology has conclusively exited.
 
 Where the renewed design finds a semantic defect or incomplete concept boundary, use `CHG-*` and update current canonical owners explicitly. Historical phase records remain append-stable provenance.
 
 # Current design-progress evidence
+
+## 007-B — Concept catalog evidence
 
 [007-B](../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md) completed the post-architecture Concept catalog audit:
 
@@ -81,7 +84,18 @@ Where the renewed design finds a semantic defect or incomplete concept boundary,
 - Publication was promoted as the sixteenth Concept after later UX/architecture proved it independent from Export;
 - subordinate/derived candidates were re-tested without being promoted merely because implementation architecture gives them technical state.
 
-This closes the catalog-form completeness and current independence/genericity portion of the gate, but **does not authorize implementation**. Synchronization, temporal/correction, scenario/adversarial, experience-traceability, policy/representation, and formal-exit evidence remain open.
+## 007-C — Synchronization evidence
+
+[007-C](../../007-design-refinement/007-C-cross-concept-synchronization-completeness-authority-seam-audit.md) consolidated current cross-concept composition into [Concept Synchronization Contracts](../synchronizations/concept-synchronizations.md):
+
+- material triggers, preconditions, authority seams and postconditions are explicit;
+- authority-establishing versus derived/convergent effects are distinguished;
+- duplicate/lost-response/uncertain-outcome meaning is explicit at the design level;
+- exceptional event resume requires explicit capability reactivation rather than automatic authority restoration;
+- Scorecard Finalization, verified paper capture, Competition Finalization and Publication have explicit authority-establishment boundaries;
+- no synchronization revealed another missing Concept.
+
+These close substantial portions of the methodology gate but **do not authorize implementation**. Temporal/correction, scenario/adversarial, experience-traceability, policy/representation and formal-exit evidence remain open.
 
 # Jackson-methodology completion gate
 
@@ -89,7 +103,7 @@ Implementation may resume only after an explicit later exit review demonstrates,
 
 1. **Concept completeness** — every accepted Concept has a current, traceable Purpose, State, Actions and Operational Principle, with subordinate state/mechanisms distinguished deliberately. **007-B evidence exists; final exit must confirm it remains valid after later refinements.**
 2. **Concept independence and genericity** — concept boundaries have been re-tested after later UX/architecture discoveries, with accidental application/UI/storage coupling removed. **007-B evidence exists; Publication was added from this pressure test.**
-3. **Synchronization completeness** — cross-concept synchronizations are consolidated with participating concepts, triggers, preconditions, postconditions, authority and failure/temporal consequences explicit.
+3. **Synchronization completeness** — cross-concept synchronizations are consolidated with participating concepts, triggers, preconditions, postconditions, authority and failure/temporal consequences explicit. **007-C evidence exists; final exit must confirm it survives later temporal/scenario refinement.**
 4. **Temporal and correction closure** — Draft/finalized/current/historical/successor/invalidation/correction semantics compose without hidden state transitions.
 5. **Scenario and adversarial pressure** — ordinary event-day, degraded, recovery, dual-role, paper/electronic, correction and authority-abuse scenarios do not expose missing concepts or contradictory synchronizations.
 6. **Experience traceability** — Judge and Organizer experiences expose accepted concept actions/synchronizations rather than inventing semantics in interaction design.

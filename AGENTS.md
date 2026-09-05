@@ -1,6 +1,6 @@
 # MUDAC Repository Agent Rules
 
-This file is a **bootstrap adapter**, not the canonical source of MUDAC product, architecture, implementation, verification, source-topology, runtime, or documentation rules.
+This file is a **bootstrap adapter**, not the canonical source of MUDAC product, synchronization, architecture, implementation, verification, source-topology, runtime, or documentation rules.
 
 Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/governance/).
 
@@ -8,15 +8,16 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 
 1. Start at [`docs/index.md`](docs/index.md).
 2. For current meaning, use [`docs/canonical/`](docs/canonical/).
-3. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
-4. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-5. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
-6. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
-7. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
-8. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
-9. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
+3. For behavior spanning more than one Concept, load the relevant owner under [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) rather than reconstructing coordination from old phase history.
+4. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
+5. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
+6. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
+7. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
+8. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
+9. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
+10. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
 
-Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
+Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonical synchronization/architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
 
 ## Current design-reentry freeze
 
@@ -37,6 +38,7 @@ Permitted executable changes are narrow maintenance needed to keep the existing 
 
 - recursively preload all of `docs/` for ordinary work;
 - reconstruct current rules from old phase history when a canonical owner exists;
+- duplicate synchronization semantics independently inside multiple Concept/architecture/implementation documents when the canonical synchronization owner can be referenced;
 - copy complete canonical rules into downstream docs/tests/configuration when a rule ID/link plus local consequence is sufficient;
 - let README/index/traceability/agent/test-fixture files become competing rule stores;
 - silently resolve canonical contradictions by choosing convenient implementation wording;

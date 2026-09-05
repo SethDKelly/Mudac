@@ -10,8 +10,9 @@ Current product/domain, conceptual UX, documentation-governance, accepted archit
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) — current MUDAC Concepts, mechanisms, policies, invariants, experience contracts, governance, architecture, and retained implementation contracts.
-* [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog after 007-B, including the newly promoted [Publication](canonical/concepts/publication.md).
+* [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and retained implementation contracts.
+* [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog after 007-B, including [Publication](canonical/concepts/publication.md).
+* [Synchronizations](canonical/synchronizations/) — current cross-concept trigger, precondition/postcondition, authority-seam, failure/retry and historical coordination contracts established by 007-C.
 * [Governance](canonical/governance/) — documentation authority, agent context, change/conflict, source lineage, metadata/trust/lifecycle, validation/CI, stable IDs, and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) — durable normative IDs and cross-reference registry.
 * [Architecture](canonical/architecture/) — current accepted system/application architecture contracts.
@@ -35,11 +36,11 @@ Before any executable implementation task, load [Design / Implementation Boundar
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
 * [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — **Frozen after 006-D**. 006-E through 006-M are deferred.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A design re-entry/freeze and 007-B Concept audit are complete; **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit is next**.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A design re-entry/freeze, 007-B Concept audit, and 007-C synchronization audit are complete; **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure is next**.
 
 # Navigation Guidance
 
-For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. Use phase records for rationale, chronology, rejected alternatives, implementation lineage, and design-evolution provenance.
+For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For behavior spanning Concepts, load [Synchronizations](canonical/synchronizations/) instead of reconstructing coordination from historical phase prose. Use phase records for rationale, chronology, rejected alternatives, implementation lineage, and design-evolution provenance.
 
 Current work is design refinement. The executable 006-D workspace may receive only narrowly necessary non-domain maintenance while the freeze is active.
 

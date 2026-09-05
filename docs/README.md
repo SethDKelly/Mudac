@@ -4,7 +4,7 @@ The repository is the durable design and implementation authority; conversation 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
 Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
@@ -24,7 +24,8 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
   * 007-A — design re-entry, implementation freeze & Jackson completion criteria: Complete
   * 007-B — Concept Completeness, Independence & Genericity Audit: **Complete**
-  * **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: Next**
+  * 007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
+  * **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: Next**
 
 ## Current design posture
 
@@ -32,7 +33,9 @@ MUDAC has deliberately returned to design refinement before any domain schema, p
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-007-B has now re-audited the post-architecture Concept system. All fifteen prior Concepts remain accepted; current owners expose Purpose/State/Actions/Operational Principle; and [Publication](canonical/concepts/publication.md) is promoted as the sixteenth Concept because later UX/architecture proved deliberate release/distribution independent from [Export](canonical/concepts/export.md) generation.
+007-B re-audited the post-architecture Concept system. All fifteen prior Concepts remain accepted; current owners expose Purpose/State/Actions/Operational Principle; and [Publication](canonical/concepts/publication.md) is promoted as the sixteenth Concept because later UX/architecture proved deliberate release/distribution independent from [Export](canonical/concepts/export.md) generation.
+
+007-C now provides a current [Synchronization](canonical/synchronizations/) layer for the major cross-concept composition seams. It distinguishes authority-establishing transitions from derived/convergent refresh, makes retry/uncertain-outcome meaning explicit, clarifies exceptional event resume without automatic Access restoration, and confirms no additional Concept is needed merely to own workflow coordination.
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin: pinned workspace/tooling, minimal API/worker/web composition roots, package seams, local PostgreSQL service bootstrap, CI/static/dependency checks, and OpenTofu root scaffolding. It is **not** authority to continue 006-E onward.
 
@@ -46,4 +49,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.

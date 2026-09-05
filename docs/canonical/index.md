@@ -5,6 +5,7 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, d
 # Current Knowledge
 
 * [Concepts](concepts/) — accepted MUDAC Concepts.
+* [Synchronizations](synchronizations/) — current cross-concept trigger, authority, precondition/postcondition, failure/retry, and temporal/history coordination contracts.
 * [Mechanisms](mechanisms/) — derived/supporting subjects that intentionally remain non-Concepts.
 * [Policies](policies/) — governing/configurable Competition semantics.
 * [Invariants](invariants/) — cross-cutting normative constraints.
@@ -24,7 +25,7 @@ Current design work proceeds through [Phase 007 — Jackson Design Refinement & 
 
 # Retrieval Rule
 
-Load only the specific owner documents and linked dependencies required by the task. Use stable rule IDs for normative cross-reference and phase history only when rationale/chronology is needed.
+Load only the specific owner documents and linked dependencies required by the task. For behavior spanning more than one Concept, prefer the relevant [Synchronization](synchronizations/) owner rather than reconstructing coordination from scattered phase history. Use stable rule IDs for normative cross-reference and phase history only when rationale/chronology is needed.
 
 Before any code, schema, authentication, API, feature, or application-IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). While the freeze is active, implementation owners are used only for understanding the retained prototype or performing narrowly permitted maintenance.
 

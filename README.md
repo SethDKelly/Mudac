@@ -8,8 +8,9 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current implementation freeze routing.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/`](docs/canonical/) — current product/domain, UX, governance, architecture, and retained implementation authority.
+* [`docs/canonical/`](docs/canonical/) — current product/domain, synchronization, UX, governance, architecture, and retained implementation authority.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current sixteen-Concept Jackson catalog.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current cross-concept synchronization contracts.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current design-reentry and executable-work freeze.
 * [`docs/007-design-refinement/`](docs/007-design-refinement/) — active deliberate design-refinement phase.
 
@@ -31,13 +32,16 @@ Numbered phase directories preserve rationale and planning history; canonical ow
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
   * 007-A design re-entry/freeze/completion criteria: Complete
   * 007-B Concept Completeness, Independence & Genericity Audit: **Complete**
-  * **007-C Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: Next**
+  * 007-C Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
+  * **007-D Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: Next**
 
 ## Current Concept Design result
 
-007-B retained all fifteen prior Concepts and promoted **Publication** as the sixteenth Concept. Publication owns deliberate release/distribution of an identified Export representation; Export remains responsible for creating the stable purpose/audience-specific representation. Every current Concept owner now exposes concise Purpose, State, Actions, and Operational Principle sections for Jackson-methodology review.
+007-B retained all fifteen prior Concepts and promoted **Publication** as the sixteenth Concept. Publication owns deliberate release/distribution of an identified Export representation; Export remains responsible for creating the stable purpose/audience-specific representation. Every current Concept owner exposes concise Purpose, State, Actions, and Operational Principle sections for Jackson-methodology review.
 
-Catalog completeness does not close Concept Design. Cross-concept synchronization, temporal/correction composition, scenario/adversarial pressure, experience traceability, policy/representation closure, and a formal methodology exit remain required.
+007-C then consolidated the current cross-concept composition model under [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/). Authority-establishing transitions are separated from derived/convergent refresh, retry/uncertain-outcome meaning is explicit, and no additional workflow/catch-all Concept was required.
+
+Catalog and synchronization completeness still do not close Concept Design. Temporal/correction composition, scenario/adversarial pressure, experience traceability, policy/representation closure, and a formal methodology exit remain required.
 
 ## Frozen executable bootstrap
 
@@ -74,4 +78,4 @@ Narrow security/compatibility maintenance needed to keep the existing bootstrap 
 
 ## Current direction
 
-MUDAC remains in deliberate design refinement. The next work is **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit**.
+MUDAC remains in deliberate design refinement. The next work is **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure**.
