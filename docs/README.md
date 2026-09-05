@@ -4,7 +4,7 @@ The repository is the durable design and implementation authority; conversation 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, temporal/correction, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
 Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
@@ -25,19 +25,20 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 007-A — design re-entry, implementation freeze & Jackson completion criteria: Complete
   * 007-B — Concept Completeness, Independence & Genericity Audit: **Complete**
   * 007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
-  * **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: Next**
+  * 007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
+  * **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: Next**
 
 ## Current design posture
 
-MUDAC has deliberately returned to design refinement before any domain schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation proceeds.
+MUDAC remains in deliberate design refinement before any domain schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation proceeds.
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-007-B re-audited the post-architecture Concept system. All fifteen prior Concepts remain accepted; current owners expose Purpose/State/Actions/Operational Principle; and [Publication](canonical/concepts/publication.md) is promoted as the sixteenth Concept because later UX/architecture proved deliberate release/distribution independent from [Export](canonical/concepts/export.md) generation.
+007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D adds [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
 
-007-C now provides a current [Synchronization](canonical/synchronizations/) layer for the major cross-concept composition seams. It distinguishes authority-establishing transitions from derived/convergent refresh, makes retry/uncertain-outcome meaning explicit, clarifies exceptional event resume without automatic Access restoration, and confirms no additional Concept is needed merely to own workflow coordination.
+007-D also distinguishes what MUDAC considered authoritative at a past time from what later verified evidence establishes as the current best-known account of that past occurrence. Corrections remain append-stable and explainable rather than destructive rewrite.
 
-The 006-D executable substrate remains in the repository because it is intentionally semantically thin: pinned workspace/tooling, minimal API/worker/web composition roots, package seams, local PostgreSQL service bootstrap, CI/static/dependency checks, and OpenTofu root scaffolding. It is **not** authority to continue 006-E onward.
+The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
 
 While frozen, executable changes are limited to narrow maintenance required to keep that prototype safe/buildable and must not encode MUDAC domain semantics.
 
@@ -49,4 +50,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
