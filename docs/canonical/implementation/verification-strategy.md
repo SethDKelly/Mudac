@@ -7,6 +7,7 @@ tags: [implementation, verification, testing, evidence, fixtures, quality-gates]
 sources:
   - resource: ../../006-implementation-planning/006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md
   - resource: implementation-foundation.md
+  - resource: runtime-delivery-bootstrap.md
   - resource: ../governance/validation-enforcement.md
   - resource: ../architecture/architectural-foundation.md
   - resource: ../architecture/application-boundaries.md
@@ -17,7 +18,7 @@ sources:
   - resource: ../architecture/external-representation.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T15:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:20:00Z }
 ---
 
 # Purpose
@@ -40,7 +41,7 @@ Pure logic uses unit/module evidence; PostgreSQL semantics use real PostgreSQL; 
 
 ## Stable-rule traceability references identifiers, not copied rule text
 
-Executable/manual/operational evidence may map to canonical stable rule IDs through a machine-readable traceability index once source topology exists.
+Executable/manual/operational evidence may map to canonical stable rule IDs through a machine-readable traceability index once relevant source/evidence locations exist.
 
 Traceability records rule IDs, evidence identifiers/types/locations, and cadence/gate information without becoming a duplicate normative rule store.
 
@@ -106,9 +107,11 @@ Package-specific floors may be introduced once implementation exists and they de
 
 ## CI uses stable blocking gates plus deeper scheduled/release evidence
 
-Ordinary implementation pull requests eventually require a stable aggregate **Implementation Verification** check plus separate Knowledge Validation. Internal jobs may evolve without forcing branch-protection churn.
+The executable **Implementation Verification** workflow now provides the stable application/IaC check identity established by 006-D, while Knowledge Validation remains separate. Internal checks may evolve without forcing a new semantic meaning for the gate.
 
-Fast PR gates cover reproducibility/static/unit/applicable integration/component/generated/security checks; deeper browser/concurrency/recovery/scanner suites may run on main/schedule; migration/load/restore/DR/manual-accessibility/event-day evidence belongs to release/operational readiness as appropriate.
+The current bootstrap gate covers reproducible installation, formatting, type checking, lint, source dependency rules, current unit tests/builds, local Compose configuration, and OpenTofu formatting/root validation. Later groups add applicable database/API/component/generated/security evidence behind the same verification posture. Deeper browser/concurrency/recovery/scanner suites may run on main/schedule; migration/load/restore/DR/manual-accessibility/event-day evidence belongs to release/operational readiness as appropriate.
+
+Workflow existence does not prove GitHub branch protection currently requires the check; repository-admin enforcement remains explicitly tracked by the runtime/delivery owner.
 
 ## Flaky evidence is a defect and retries cannot silently convert failure into trust
 
@@ -140,6 +143,6 @@ operational readiness   load/restore/DR/paper/runbook exercises
 
 # Current CI posture
 
-006-B defines the verification contract before the TypeScript repository bootstrap exists. 006-C determines test/source package placement; 006-D implements workflows, the stable aggregate `Implementation Verification` check, branch-protection requirements, environment gates, and executable local/CI bootstrap.
+006-D has instantiated the pinned workspace and the stable **Implementation Verification** workflow. 006-E onward add real persistence/domain/browser evidence as their behavior appears; empty test categories are not treated as proof before the corresponding implementation exists.
 
-Knowledge Validation remains its own `VAL-*`-governed read-only structural check and is not absorbed into the application test runner.
+Knowledge Validation remains its own `VAL-*`-governed read-only structural check and is not absorbed into the application test runner. Repository ruleset/environment administration remains an external GitHub administration gate until independently configured and verified.
