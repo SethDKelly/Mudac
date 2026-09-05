@@ -1,16 +1,16 @@
 # MUDAC Competition Demo
 
-MUDAC is a design- and implementation-governed web application effort for fair, traceable, resilient judging at live student data competitions.
+MUDAC is a design-governed web application effort for fair, traceable, resilient judging at live student data competitions.
 
 Student Teams present analyses to Panels of volunteer Judges. Each Judge independently authors a Rubric-based Scorecard in a Judging Encounter; authoritative Scorecards feed explicit Coverage, aggregation, ranking, Awards, and controlled official-closeout semantics while preserving Judge independence, provenance, anonymity, accessibility, and paper continuity.
 
 ## Start here
 
-* [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap.
+* [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current implementation freeze routing.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/`](docs/canonical/) — current product/domain, UX, governance, architecture, and implementation authority.
-* [`docs/canonical/implementation/`](docs/canonical/implementation/) — current implementation contracts.
-* [`docs/006-implementation-planning/`](docs/006-implementation-planning/) — active implementation sequence/history.
+* [`docs/canonical/`](docs/canonical/) — current product/domain, UX, governance, architecture, and retained implementation authority.
+* [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current design-reentry and executable-work freeze.
+* [`docs/007-design-refinement/`](docs/007-design-refinement/) — active deliberate design-refinement phase.
 
 Numbered phase directories preserve rationale and planning history; canonical owners govern current meaning.
 
@@ -20,21 +20,22 @@ Numbered phase directories preserve rationale and planning history; canonical ow
 * Phase 002 — Concept Specification: **Complete**
 * Phase 003 — Conceptual UX Architecture: **Complete**
 * Phase 004 — Knowledge Architecture / OKF Governance: **Complete**
-* Phase 005 — System/Application/Data/Synchronization Architecture: **Complete**
-* Phase 006 — Implementation Planning & Delivery: **In Progress**
+* Phase 005 — System/Application/Data/Synchronization Architecture: **Complete as historical architecture exit**
+* Phase 006 — Implementation Planning & Delivery: **Frozen after 006-D**
   * 006-A toolchain/governance: Complete
   * 006-B verification/evidence: Complete
   * 006-C source/package boundaries: Complete
-  * 006-D environment/IaC/CI/local/runtime bootstrap: Complete
-  * **006-E Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation: Next**
+  * 006-D environment/IaC/CI/local/runtime bootstrap: Complete and frozen
+  * 006-E through 006-M: **Deferred**
+* Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
+  * 007-A design re-entry/freeze/completion criteria: Complete
+  * **007-B Concept Completeness, Independence & Genericity Audit: Next**
 
-The full Phase 006 decomposition lives in [`docs/006-implementation-planning/README.md`](docs/006-implementation-planning/README.md).
+## Frozen executable bootstrap
 
-## Executable implementation bootstrap
+006-D moved the repository beyond documentation-only planning, but only at a deliberately non-domain substrate level.
 
-006-D has moved the repository beyond documentation-only planning while keeping domain features intentionally absent.
-
-The repository now contains:
+The retained prototype includes:
 
 ```text
 apps/
@@ -57,14 +58,12 @@ infra/
     recovery/us-east-1/
 ```
 
-The pinned workspace uses Node.js 24, TypeScript 6, pnpm, Fastify, React, Vite, Vitest, Playwright, ESLint, Prettier, dependency-cruiser, and OpenTofu. A generated `pnpm-lock.yaml` is committed and frozen installs are required.
+The pinned workspace, CI, dependency checks, local PostgreSQL service and OpenTofu roots are retained for future use. They do **not** authorize continued implementation.
 
-Local development runs API/worker/web processes on the host and PostgreSQL through Docker Compose. External AWS/provider behavior is introduced behind deterministic fakes locally and tested against real nonproduction services when vendor semantics matter.
+Until a later explicit Jackson-methodology exit, do not advance domain schema/persistence, authentication/session/Access, production command/query APIs, IndexedDB Draft semantics, MUDAC feature behavior, or real application AWS provisioning/deployment.
 
-GitHub Actions now contains the stable **Implementation Verification** aggregate plus CodeQL; Dependabot covers npm and GitHub Actions updates. Implementation Verification checks formatting, strict TypeScript, lint, dependency graph rules, tests, builds, Compose configuration, and OpenTofu formatting/root validation. Knowledge Validation remains separate.
+Narrow security/compatibility maintenance needed to keep the existing bootstrap safe/buildable is permitted only when it does not encode domain semantics.
 
-OpenTofu separates nonproduction, production, and cold-recovery root/state identities. Production remains single-active `us-east-2`; `us-east-1` is cold recovery, not a second active writer.
+## Current direction
 
-Actual GitHub branch/ruleset and protected production-environment administration remains an explicit external repository-admin action because the current connected GitHub capability cannot configure those controls. Workflow existence is not represented as enforced merge/deployment policy.
-
-This bootstrap is **not production certification**. Persistence/security/API/browser foundations and domain vertical slices remain downstream Phase 006 work.
+MUDAC has returned to deliberate design refinement. Phase 007 will re-audit the current concept system after the later UX and architecture work, beginning with **Concept Completeness, Independence & Genericity** and continuing until an explicit methodology exit establishes that implementation can safely resume.
