@@ -1,57 +1,70 @@
 # MUDAC Competition Demo
 
-MUDAC is a documentation-first design effort for a web application supporting fair, traceable, resilient judging for live student data competitions.
+MUDAC is a design- and implementation-governed web application effort for fair, traceable, resilient judging at live student data competitions.
 
-Student Teams present analyses to Panels of volunteer Judges. Each Judge independently authors a Rubric-based Scorecard for a Team in a Judging Encounter. Authoritative Scorecards feed explicit Coverage, aggregation, ranking, Award, and controlled official-closeout semantics while preserving Judge independence, provenance, anonymity boundaries, accessibility, and paper continuity.
+Student Teams present analyses to Panels of volunteer Judges. Each Judge independently authors a Rubric-based Scorecard in a Judging Encounter; authoritative Scorecards feed explicit Coverage, aggregation, ranking, Awards, and controlled official-closeout semantics while preserving Judge independence, provenance, anonymity, accessibility, and paper continuity.
 
-## Knowledge-first design
+## Start here
 
-MUDAC uses Daniel Jackson's **Concept Design** methodology to determine product meaning. The repository is organized as an **Open Knowledge Format (OKF) v0.2** knowledge bundle so humans and agents can retrieve current authority without recursively loading historical design phases.
-
-Start here:
-
-* [`AGENTS.md`](AGENTS.md) — concise repository-agent bootstrap into canonical governance, architecture, implementation authority, and validation expectations.
+* [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/`](docs/canonical/) — current canonical product/domain, conceptual UX, governance, architecture, and implementation knowledge.
-* [`docs/canonical/architecture/`](docs/canonical/architecture/) — accepted current system/application architecture contracts.
-* [`docs/canonical/implementation/`](docs/canonical/implementation/) — accepted current implementation/toolchain/verification/source-topology/delivery contracts.
-* [`docs/006-implementation-planning/`](docs/006-implementation-planning/) — active dependency-safe implementation planning and delivery sequencing.
-* [`docs/README.md`](docs/README.md) — human-oriented documentation authority summary.
+* [`docs/canonical/`](docs/canonical/) — current product/domain, UX, governance, architecture, and implementation authority.
+* [`docs/canonical/implementation/`](docs/canonical/implementation/) — current implementation contracts.
+* [`docs/006-implementation-planning/`](docs/006-implementation-planning/) — active implementation sequence/history.
 
-Numbered phase directories remain preserved as rationale, design provenance, and implementation-planning history. Canonical documents remain the authority for current product/UX/architecture/implementation meaning.
+Numbered phase directories preserve rationale and planning history; canonical owners govern current meaning.
 
-Knowledge structure is validated by [`scripts/validate_knowledge.py`](scripts/validate_knowledge.py) and read-only GitHub Actions CI. Passing that validator confirms deterministic repository structure only; it is not semantic verification.
+## Status
 
-## Design status
+* Phase 001 — Concept Design Foundation: **Complete**
+* Phase 002 — Concept Specification: **Complete**
+* Phase 003 — Conceptual UX Architecture: **Complete**
+* Phase 004 — Knowledge Architecture / OKF Governance: **Complete**
+* Phase 005 — System/Application/Data/Synchronization Architecture: **Complete**
+* Phase 006 — Implementation Planning & Delivery: **In Progress**
+  * 006-A toolchain/governance: Complete
+  * 006-B verification/evidence: Complete
+  * 006-C source/package boundaries: Complete
+  * 006-D environment/IaC/CI/local/runtime bootstrap: Complete
+  * **006-E Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation: Next**
 
-* **Phase 001 — Concept Design Foundation:** Complete
-* **Phase 002 — Concept Specification, Policy & Synchronization Refinement:** Complete
-* **Phase 003 — Conceptual UX Architecture:** Complete
-* **Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance:** Complete
-* **Phase 005 — System, Application, Data & Synchronization Architecture:** Complete
-* **Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy:** In Progress
-  * 006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement: Complete
-  * 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates: Complete
-  * 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: Complete
-  * **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap: Next**
-  * 006-E–006-H — remaining implementation foundations
-  * 006-I–006-L — dependency-ordered vertical delivery slices
-  * 006-M — integrated hardening/readiness/exit
+The full Phase 006 decomposition lives in [`docs/006-implementation-planning/README.md`](docs/006-implementation-planning/README.md).
 
-The full Phase 006 decomposition is in [`docs/006-implementation-planning/README.md`](docs/006-implementation-planning/README.md).
+## Executable implementation bootstrap
 
-## Current architecture and implementation posture
+006-D has moved the repository beyond documentation-only planning while keeping domain features intentionally absent.
 
-MUDAC's canonical architecture is a **modular-monolith-first** system with six semantic modules, a PostgreSQL authority store with append-stable Version/Provenance history, explicit command/query and idempotency/concurrency semantics, provider-adapted Identity/Participation/Access, bounded IndexedDB Draft continuity, immutable artifact/evidence storage, React + TypeScript browser architecture, and a concrete AWS runtime.
+The repository now contains:
 
-Production architecture is single-active `us-east-2` and Multi-AZ: CloudFront fronts private origins; ECS/Fargate runs the API and bounded workers; RDS PostgreSQL Multi-AZ is authoritative persistence; Cognito User Pools authenticates while MUDAC retains application authority; SQS carries retryable async work; private evidence/Artifacts use encrypted/versioned S3; GitHub Actions deploys through OIDC-federated AWS roles; CloudWatch/ADOT/Application Signals cover infrastructure and semantic health; and whole-Region live-event failure falls back to paper until one restored digital authority is explicitly validated and promoted.
+```text
+apps/
+  api/       Fastify bootstrap + /healthz
+  worker/    worker lifecycle bootstrap
+  web/       React + React Router + TanStack Query shell
 
-006-A establishes the initial implementation family: **Node.js 24 LTS + TypeScript**, **pnpm workspaces**, **Fastify 5.x**, **Kysely + node-postgres** with explicit migrations, transport schemas generating **OpenAPI** outward, **Vitest + Playwright** verification families, strict TypeScript + **ESLint + Prettier**, and **OpenTofu** for persistent AWS IaC. These are governed by [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), not by framework defaults.
+packages/
+  modules/   six authoritative module package seams
+  application/
+  projections/
+  foundation/
+  test-support/
 
-006-B establishes the current [verification strategy](docs/canonical/implementation/verification-strategy.md): evidence uses the smallest trustworthy boundary, PostgreSQL-dependent behavior is tested against real PostgreSQL, external adapters use deterministic fakes plus targeted real-service integration where vendor behavior matters, fixtures remain synthetic/module-owned, critical browser/accessibility/security/concurrency/recovery behavior receives explicit evidence, coverage is diagnostic rather than a correctness oracle, flaky failures remain visible, and evidence traces existing canonical rule IDs without creating a parallel test-rule namespace.
+infra/
+  bootstrap/state/
+  environments/
+    nonproduction/us-east-2/
+    production/us-east-2/
+    recovery/us-east-1/
+```
 
-006-C establishes the current [source topology and dependency boundary](docs/canonical/implementation/source-topology.md): `apps/api`, `apps/worker`, and `apps/web` are composition roots; the six authoritative semantic modules are separate workspace packages inside the modular monolith; cross-module coordination and projections are isolated; shared foundation remains business-neutral; package exports prohibit private/deep coupling; the browser cannot import server implementation; test helpers preserve module ownership; and dependency-cruiser will enforce the acyclic/public-only source graph when 006-D instantiates the workspace.
+The pinned workspace uses Node.js 24, TypeScript 6, pnpm, Fastify, React, Vite, Vitest, Playwright, ESLint, Prettier, dependency-cruiser, and OpenTofu. A generated `pnpm-lock.yaml` is committed and frozen installs are required.
 
-The repository remains documentation/planning-only at this point; broad production code construction has not begun. 006-D is now responsible for creating the executable pnpm workspace, TypeScript/static/test/dependency configuration, API/worker/web skeletons, local runtime, OpenTofu structure, implementation CI, and repository/environment enforcement.
+Local development runs API/worker/web processes on the host and PostgreSQL through Docker Compose. External AWS/provider behavior is introduced behind deterministic fakes locally and tested against real nonproduction services when vendor semantics matter.
 
-The [Phase 005 exit review](docs/005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) found no blocking cross-layer authority contradiction. MUDAC is **implementation-planning ready, not production certified**.
+GitHub Actions now contains the stable **Implementation Verification** aggregate plus CodeQL; Dependabot covers npm and GitHub Actions updates. Implementation Verification checks formatting, strict TypeScript, lint, dependency graph rules, tests, builds, Compose configuration, and OpenTofu formatting/root validation. Knowledge Validation remains separate.
+
+OpenTofu separates nonproduction, production, and cold-recovery root/state identities. Production remains single-active `us-east-2`; `us-east-1` is cold recovery, not a second active writer.
+
+Actual GitHub branch/ruleset and protected production-environment administration remains an explicit external repository-admin action because the current connected GitHub capability cannot configure those controls. Workflow existence is not represented as enforced merge/deployment policy.
+
+This bootstrap is **not production certification**. Persistence/security/API/browser foundations and domain vertical slices remain downstream Phase 006 work.
