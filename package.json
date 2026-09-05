@@ -16,7 +16,7 @@
     "build:server": "tsc -p apps/api/tsconfig.json && tsc -p apps/worker/tsconfig.json",
     "build:web": "pnpm --filter @mudac/web build",
     "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
-    "lint": "eslint apps packages tests *.ts *.mjs *.cjs --max-warnings=0",
+    "lint": "eslint 'apps/**/*.{ts,tsx}' 'packages/**/*.{ts,tsx}' 'tests/**/*.{ts,tsx}' '*.ts' '*.mjs' '*.cjs' --no-error-on-unmatched-pattern --max-warnings=0",
     "format:check": "prettier --check .github/workflows/implementation-verification.yml .github/workflows/codeql.yml .github/dependabot.yml apps packages tests package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.node.json playwright.config.ts vitest.config.ts eslint.config.mjs prettier.config.mjs .dependency-cruiser.cjs docker-compose.yml",
     "format": "pnpm exec prettier --write .github/workflows/implementation-verification.yml .github/workflows/codeql.yml .github/dependabot.yml apps packages tests package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.node.json playwright.config.ts vitest.config.ts eslint.config.mjs prettier.config.mjs .dependency-cruiser.cjs docker-compose.yml",
     "deps:check": "depcruise apps packages --config .dependency-cruiser.cjs",
