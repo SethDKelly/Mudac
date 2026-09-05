@@ -22,13 +22,17 @@ module.exports = {
       name: 'competition-has-no-downstream-module-dependencies',
       severity: 'error',
       from: { path: '^packages/modules/competition/' },
-      to: { path: '^packages/modules/(identity-access|judging-operations|evaluation|outcomes|external-representation)/' },
+      to: {
+        path: '^packages/modules/(identity-access|judging-operations|evaluation|outcomes|external-representation)/',
+      },
     },
     {
       name: 'identity-access-has-no-downstream-module-dependencies',
       severity: 'error',
       from: { path: '^packages/modules/identity-access/' },
-      to: { path: '^packages/modules/(judging-operations|evaluation|outcomes|external-representation)/' },
+      to: {
+        path: '^packages/modules/(judging-operations|evaluation|outcomes|external-representation)/',
+      },
     },
     {
       name: 'judging-operations-has-no-downstream-module-dependencies',
@@ -52,18 +56,24 @@ module.exports = {
       name: 'foundation-remains-business-neutral',
       severity: 'error',
       from: { path: '^packages/foundation/' },
-      to: { path: '^(apps|packages/(modules|application|projections|test-support))/' },
+      to: {
+        path: '^(apps|packages/(modules|application|projections|test-support))/',
+      },
     },
     {
       name: 'web-does-not-import-server-implementation',
       severity: 'error',
       from: { path: '^apps/web/' },
-      to: { path: '^(apps/(api|worker)|packages/(modules|application|projections|test-support))/' },
+      to: {
+        path: '^(apps/(api|worker)|packages/(modules|application|projections|test-support))/',
+      },
     },
     {
       name: 'production-does-not-import-test-support',
       severity: 'error',
-      from: { path: '^(apps/(api|worker)|packages/(modules|application|projections|foundation))/' },
+      from: {
+        path: '^(apps/(api|worker)|packages/(modules|application|projections|foundation))/',
+      },
       to: { path: '^packages/test-support/' },
     },
   ],
