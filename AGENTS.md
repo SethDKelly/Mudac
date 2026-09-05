@@ -8,14 +8,30 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 
 1. Start at [`docs/index.md`](docs/index.md).
 2. For current meaning, use [`docs/canonical/`](docs/canonical/).
-3. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-4. For implementation work, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
-5. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
-6. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
-7. Runtime/environment/CI/IaC/deployment work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
-8. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
+3. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
+4. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
+5. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
+6. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
+7. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
+8. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
+9. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
 
-Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), and the task-relevant canonical implementation owners.
+Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
+
+## Current design-reentry freeze
+
+The executable work created through 006-D is retained as a **frozen non-domain bootstrap/prototype**.
+
+Until an explicit later Jackson-methodology exit authorizes implementation to resume, agents must not advance into:
+
+- domain PostgreSQL schema/migrations/repositories;
+- Cognito/session/Participation/Access/invitation implementation;
+- production command/query API or idempotency/transaction implementation;
+- IndexedDB Draft semantics;
+- Competition, Judging, Evaluation, Outcome, Award, Export, Artifact or Publication feature implementation;
+- real AWS application provisioning/deployment intended to support those deferred domain paths.
+
+Permitted executable changes are narrow maintenance needed to keep the existing bootstrap safe/buildable and must not introduce domain semantics. Current work should default to deliberate design refinement under Phase 007+.
 
 ## Do not
 
@@ -33,24 +49,27 @@ Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant architec
 - let Fastify routes, Kysely rows, OpenAPI DTOs, React components, OpenTofu modules, mocks, fixtures, or snapshots become alternate domain owners;
 - substitute SQLite/in-memory evidence for real PostgreSQL when PostgreSQL semantics matter;
 - hide flaky consequential tests behind retries or indefinite quarantine;
-- treat CI, coverage, scanners, workflow existence, IaC validation, or deployment configuration as semantic verification or production certification.
+- treat CI, coverage, scanners, workflow existence, IaC validation, or deployment configuration as semantic verification or production certification;
+- infer that green implementation checks or the historical 005-J exit authorize implementation beyond 006-D while the design freeze is active.
 
-## Current executable implementation baseline
+## Frozen executable baseline
 
-The implementation family remains Node.js 24 LTS + TypeScript, pnpm workspaces, Fastify, Kysely + node-postgres, explicit migrations, outward-generated OpenAPI, Vitest/Playwright, strict TypeScript + ESLint + Prettier, and OpenTofu.
+The selected implementation family remains Node.js 24 LTS + TypeScript, pnpm workspaces, Fastify, Kysely + node-postgres, explicit migrations, outward-generated OpenAPI, Vitest/Playwright, strict TypeScript + ESLint + Prettier, and OpenTofu.
 
-Current source/runtime consequences:
+Current source/runtime consequences retained from 006-D:
 
 - `apps/api`, `apps/worker`, and `apps/web` are composition roots;
-- six authoritative module packages remain semantic owners within the modular monolith;
+- six authoritative module packages remain empty/minimal semantic seams within the modular monolith;
 - `@mudac/application` coordinates above owners and `@mudac/projections` is non-authoritative;
 - `@mudac/foundation` remains business-neutral;
 - package exports, dependency-cruiser, and ESLint enforce the dependency graph;
 - local development uses host Node processes plus Docker Compose PostgreSQL;
-- external AWS/provider behavior uses deterministic fakes locally and targeted real-service evidence in nonproduction when needed;
+- external AWS/provider behavior uses deterministic fakes locally and targeted real-service evidence in nonproduction when later authorized;
 - `Implementation Verification` is the stable executable CI check surface;
 - OpenTofu has separate nonproduction `us-east-2`, production `us-east-2`, and cold-recovery `us-east-1` roots/state identities;
 - actual GitHub branch/ruleset and protected production-environment administration remains an external repository-admin gate until independently configured.
+
+These are preserved substrate choices, not authorization to implement their deferred domain use.
 
 ## Validation
 
@@ -61,14 +80,14 @@ python -m pip install -r requirements-docs.txt
 python scripts/validate_knowledge.py
 ```
 
-Implementation changes:
+Permitted executable-maintenance changes:
 
 ```text
 pnpm install --frozen-lockfile
 pnpm verify
 ```
 
-CI additionally validates current OpenTofu roots. Passing checks are evidence for the tested revision, not OKF verification or production certification.
+CI additionally validates current OpenTofu roots. Passing checks are evidence for the tested revision, not OKF verification, design-methodology closure, implementation-resume authority, or production certification.
 
 ## Canonical changes
 
