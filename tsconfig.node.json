@@ -11,6 +11,6 @@
     "apps/worker/**/*.ts",
     "packages/**/*.ts",
     "playwright.config.ts",
-    "vitest.workspace.ts"
+    "vitest.config.ts"
   ]
 }
