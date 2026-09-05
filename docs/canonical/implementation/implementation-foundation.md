@@ -6,6 +6,7 @@ status: stable
 tags: [implementation, authority, toolchain, delivery, repository, security]
 sources:
   - resource: ../../006-implementation-planning/006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md
+  - resource: runtime-delivery-bootstrap.md
   - resource: ../governance/documentation-authority.md
   - resource: ../governance/change-governance.md
   - resource: ../governance/validation-enforcement.md
@@ -14,7 +15,7 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T12:45:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:20:00Z }
 ---
 
 # Purpose
@@ -82,7 +83,7 @@ Suppressions are narrow and explained. Repository/module dependency enforcement 
 
 OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
 
-006-D owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
+The runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
 
 <a id="impl-010"></a>
 ## IMPL-010 — Dependency versions and lockfiles are deliberate, reproducible inputs
@@ -112,14 +113,14 @@ Once implementation work begins, ordinary changes reach `main` through pull requ
 
 A mandatory reviewer count is not required while the repository is effectively single-maintainer; review requirements should strengthen when independent maintainers exist rather than create ceremonial self-approval.
 
-Repository ruleset administration is an explicit 006-D configuration gate because the current design-session connector cannot write those settings.
+The required workflow checks now exist, but repository ruleset/branch-protection administration remains an external repository-admin gate because the current connected GitHub capability cannot configure or verify all protection settings. Workflow existence must not be represented as enforced merge policy until those controls are independently configured and confirmed.
 
 <a id="impl-014"></a>
 ## IMPL-014 — Merge does not imply production deployment authority
 
 Production deployment is independently gated through the protected GitHub environment and OIDC-federated AWS deployment role required by `AWS-011`. Merge success does not itself authorize or prove a production release.
 
-Production workflow execution uses immutable release identity and does not rely on long-lived AWS keys.
+Production workflow execution uses immutable release identity and does not rely on long-lived AWS keys. The protected environment and AWS role must be actually provisioned/configured before production deployment authority is claimed.
 
 <a id="impl-015"></a>
 ## IMPL-015 — Material implementation decisions are recorded without becoming upstream redesign
@@ -151,8 +152,10 @@ AWS IaC              OpenTofu
 security baseline    GitHub dependency/CodeQL + package audit + Trivy + IaC checks
 ```
 
-Exact implementation versions are pinned when manifests/configuration are created; package/library patch numbers are not permanent canonical semantics.
+Exact implementation versions are pinned in manifests/lockfiles and are not permanent canonical semantics.
 
 # Delivery posture
 
-006-A establishes the common toolchain and governance only. 006-B defines verification/evidence, 006-C defines source/package boundaries, and 006-D creates executable repository/runtime/IaC bootstrap plus actual GitHub protection/environment configuration.
+006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap. The next implementation substrate is 006-E persistence.
+
+The stable Knowledge Validation and Implementation Verification workflows are executable. Actual repository protection and protected production-environment administration remains explicitly external until independently configured and verified; this owner does not conflate workflow availability with enforced GitHub policy.
