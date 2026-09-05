@@ -8,22 +8,39 @@ sources:
   - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
+  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
 ---
 
 # Purpose
 
 Preserve the meaningful origin and transformation history needed to explain authoritative application state.
 
+# State
+
+Provenance owns append-stable meaningful domain events identifying the target subject/Version, event classification, acting Identity/Participation, represented semantic author or authority when different, time, Competition scope, prior/resulting authoritative state where applicable, capture/source channel/reference, exceptional authorizer, reason, and correction/replacement/invalidation relationships as needed.
+
+# Actions
+
+Conceptual actions are `record`, `historyFor`, `originOf`, `traceVersion`, `traceCorrection`, and `traceReplacement`.
+
+An incorrect provenance statement is corrected by attributable successor evidence rather than silent historical rewrite.
+
+# Operational Principle
+
+When a meaningful domain action establishes, changes, invalidates, or replaces authoritative state, the application records enough provenance to reconstruct who acted, whose authority the resulting content represents, why the action occurred when material, and what prior state or source it depended on.
+
 # Canonical contract
 
-Provenance records meaningful domain transitions: who acted, what changed, when, under which origin/capture path, under what authority, and where material why.
+Provenance distinguishes semantic author, acting/capture actor, and exceptional authorizer. For example, a Judge may remain evaluation author while an Organizer is the paper capture actor.
 
-It distinguishes semantic author, capture actor, and authorizer. For example, a Judge may remain evaluation author while an Organizer is the paper capture actor.
-
-Provenance is not an obligation to log every keystroke or read.
+Provenance is not an obligation to log every keystroke, read, or UI interaction.
 
 # Boundary with OKF
 
 This MUDAC Concept concerns Competition-domain authority lineage. OKF `sources`, `generated`, and `verified` metadata describe documentation lineage and trust; they do not replace this Concept.
 
-See [Versioning](versioning.md) and [Correction & Authority](../policies/correction-authority.md).
+# Boundaries
+
+Provenance explains meaningful origin/authority history; it does not preserve the content snapshots themselves ([Versioning](versioning.md)) and is distinct from low-level security/observability telemetry.
+
+See [Correction & Authority](../policies/correction-authority.md).
