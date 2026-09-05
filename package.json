@@ -1,0 +1,41 @@
+{
+  "name": "mudac",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=11.25 <12"
+  },
+  "scripts": {
+    "dev:api": "tsx apps/api/src/main.ts",
+    "dev:worker": "tsx apps/worker/src/main.ts",
+    "dev:web": "pnpm --filter @mudac/web dev",
+    "build": "pnpm build:server && pnpm build:web",
+    "build:server": "tsc -p apps/api/tsconfig.json && tsc -p apps/worker/tsconfig.json",
+    "build:web": "pnpm --filter @mudac/web build",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
+    "lint": "eslint apps packages tests *.ts *.mjs *.cjs --max-warnings=0",
+    "format:check": "prettier --check .github/workflows apps packages tests package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.node.json playwright.config.ts vitest.workspace.ts eslint.config.mjs prettier.config.mjs .dependency-cruiser.cjs docker-compose.yml .env.example",
+    "format": "pnpm exec prettier --write .github/workflows apps packages tests package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.node.json playwright.config.ts vitest.workspace.ts eslint.config.mjs prettier.config.mjs .dependency-cruiser.cjs docker-compose.yml .env.example",
+    "deps:check": "depcruise apps packages --config .dependency-cruiser.cjs",
+    "test": "vitest run --passWithNoTests",
+    "test:e2e": "playwright test",
+    "compose:check": "docker compose config --quiet",
+    "verify": "pnpm format:check && pnpm typecheck && pnpm lint && pnpm deps:check && pnpm test && pnpm build && pnpm compose:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.1.0",
+    "dependency-cruiser": "18.2.0",
+    "eslint": "10.8.1",
+    "globals": "17.12.0",
+    "prettier": "3.9.6",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0",
+    "vitest": "4.1.11"
+  }
+}

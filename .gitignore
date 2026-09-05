@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+.pnpm-store/
+*.log
+.DS_Store
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
