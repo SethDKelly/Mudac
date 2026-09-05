@@ -8,9 +8,9 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current implementation freeze routing.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/`](docs/canonical/) — current product/domain, synchronization, UX, governance, architecture, and retained implementation authority.
+* [`docs/canonical/`](docs/canonical/) — current product/domain, synchronization, temporal/correction, UX, governance, architecture, and retained implementation authority.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current sixteen-Concept Jackson catalog.
-* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current cross-concept synchronization contracts.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current cross-concept and temporal/historical synchronization contracts.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current design-reentry and executable-work freeze.
 * [`docs/007-design-refinement/`](docs/007-design-refinement/) — active deliberate design-refinement phase.
 
@@ -33,44 +33,35 @@ Numbered phase directories preserve rationale and planning history; canonical ow
   * 007-A design re-entry/freeze/completion criteria: Complete
   * 007-B Concept Completeness, Independence & Genericity Audit: **Complete**
   * 007-C Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
-  * **007-D Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: Next**
+  * 007-D Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
+  * **007-E End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: Next**
 
 ## Current Concept Design result
 
-007-B retained all fifteen prior Concepts and promoted **Publication** as the sixteenth Concept. Publication owns deliberate release/distribution of an identified Export representation; Export remains responsible for creating the stable purpose/audience-specific representation. Every current Concept owner exposes concise Purpose, State, Actions, and Operational Principle sections for Jackson-methodology review.
+007-B retained all fifteen prior Concepts and promoted **Publication** as the sixteenth Concept. 007-C consolidated the cross-concept synchronization model. 007-D now closes the shared temporal grammar under [`Temporal Truth, Correction & Historical Authority`](docs/canonical/synchronizations/temporal-truth-correction.md).
 
-007-C then consolidated the current cross-concept composition model under [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/). Authority-establishing transitions are separated from derived/convergent refresh, retry/uncertain-outcome meaning is explicit, and no additional workflow/catch-all Concept was required.
+The current model explicitly keeps these meanings separate:
 
-Catalog and synchronization completeness still do not close Concept Design. Temporal/correction composition, scenario/adversarial pressure, experience traceability, policy/representation closure, and a formal methodology exit remain required.
+```text
+lifecycle
+working vs committed authority
+current vs superseded lineage
+valid vs invalidated eligibility
+affected vs stale dependency currency
+replacement of distinct occurrences
+distribution state
+historical observation
+```
+
+A later correction can therefore change current authority without erasing what Judges authored, what an Encounter actually presented, what was previously declared official, or what was previously published.
+
+Concept Design is not yet closed. End-to-end scenario/adversarial pressure, experience traceability, policy/representation closure, and a formal methodology exit remain required.
 
 ## Frozen executable bootstrap
 
 006-D moved the repository beyond documentation-only planning, but only at a deliberately non-domain substrate level.
 
-The retained prototype includes:
-
-```text
-apps/
-  api/       Fastify bootstrap + /healthz
-  worker/    worker lifecycle bootstrap
-  web/       React + React Router + TanStack Query shell
-
-packages/
-  modules/   six authoritative module package seams
-  application/
-  projections/
-  foundation/
-  test-support/
-
-infra/
-  bootstrap/state/
-  environments/
-    nonproduction/us-east-2/
-    production/us-east-2/
-    recovery/us-east-1/
-```
-
-The pinned workspace, CI, dependency checks, local PostgreSQL service and OpenTofu roots are retained for future use. They do **not** authorize continued implementation.
+The retained prototype includes minimal API/worker/web composition roots, six module seams, local PostgreSQL bootstrap, CI/dependency checks, and OpenTofu environment roots. These remain frozen future substrate, not authority to continue domain implementation.
 
 Until a later explicit Jackson-methodology exit, do not advance domain schema/persistence, authentication/session/Access, production command/query APIs, IndexedDB Draft semantics, MUDAC feature behavior, or real application AWS provisioning/deployment.
 
@@ -78,4 +69,4 @@ Narrow security/compatibility maintenance needed to keep the existing bootstrap 
 
 ## Current direction
 
-MUDAC remains in deliberate design refinement. The next work is **007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure**.
+MUDAC remains in deliberate design refinement. The next work is **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation**.
