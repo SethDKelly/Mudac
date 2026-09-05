@@ -8,6 +8,7 @@ sources:
   - resource: ../../002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
   - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
+  - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
 ---
 
 <a id="out-001"></a>
@@ -18,6 +19,8 @@ Explicit Competition Finalization establishes an immutable/reconstructible Offic
 <a id="out-002"></a>
 ## OUT-002 — Official correction requires explicit successor confirmation
 
-A verified source or policy correction may affect the current revision and change latest calculations. Official authority changes only after reconciliation and explicit confirmation of a successor revision; prior revisions remain historical.
+A verified source or policy correction may affect the latest declared official revision and change latest calculations. Until reconciliation and explicit successor confirmation, the prior revision remains the **latest declared official revision** while being identifiable as **Affected** when its source basis has changed.
 
-The distinction between calculations and official authority is owned by [INV-006](../invariants/calculated-not-official.md#inv-006). Publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007).
+Official authority changes only after explicit successor confirmation; the predecessor then becomes Superseded official history and remains reconstructible. Competition remains Finalized throughout this correction path.
+
+The distinction between calculations and official authority is owned by [INV-006](../invariants/calculated-not-official.md#inv-006). Publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007). Temporal meanings are owned by [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
