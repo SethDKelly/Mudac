@@ -23,13 +23,16 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 006-E through 006-M: **Deferred**
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
   * 007-A — design re-entry, implementation freeze & Jackson completion criteria: Complete
-  * **007-B — Concept Completeness, Independence & Genericity Audit: Next**
+  * 007-B — Concept Completeness, Independence & Genericity Audit: **Complete**
+  * **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: Next**
 
 ## Current design posture
 
 MUDAC has deliberately returned to design refinement before any domain schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation proceeds.
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
+
+007-B has now re-audited the post-architecture Concept system. All fifteen prior Concepts remain accepted; current owners expose Purpose/State/Actions/Operational Principle; and [Publication](canonical/concepts/publication.md) is promoted as the sixteenth Concept because later UX/architecture proved deliberate release/distribution independent from [Export](canonical/concepts/export.md) generation.
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin: pinned workspace/tooling, minimal API/worker/web composition roots, package seams, local PostgreSQL service bootstrap, CI/static/dependency checks, and OpenTofu root scaffolding. It is **not** authority to continue 006-E onward.
 
@@ -43,4 +46,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/), beginning with **007-B — Concept Completeness, Independence & Genericity Audit**. The renewed design runway will continue until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.

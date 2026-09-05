@@ -6,22 +6,24 @@ status: stable
 tags: [architecture, paper, export, artifact, publication, representation, disclosure]
 sources:
   - resource: ../../005-system-application-data-synchronization-architecture/005-G-paper-capture-export-artifact-publication-external-representation-architecture.md
+  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: application-boundaries.md
   - resource: data-persistence.md
   - resource: commands-api-concurrency.md
   - resource: synchronization-recovery.md
   - resource: ../concepts/export.md
+  - resource: ../concepts/publication.md
   - resource: ../policies/continuity-paper.md
   - resource: ../policies/anonymity-disclosure.md
   - resource: ../policies/correction-authority.md
   - resource: ../experience/paper-export-publication.md
   - resource: ../mechanisms/official-outcome-revision.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T02:12:00Z }
 ---
 
 # Purpose
 
-Define how MUDAC ingests physical evidence and produces/distributes external representations without allowing transcription, binary storage, generated artifacts, URLs, or publication infrastructure to replace the authoritative source state they represent.
+Define how MUDAC ingests physical evidence and realizes [Export](../concepts/export.md) and [Publication](../concepts/publication.md) without allowing transcription, binary storage, generated artifacts, URLs, or publication infrastructure to replace the authoritative source state they represent.
 
 <a id="rep-001"></a>
 ## REP-001 — Paper-origin Scorecard authority remains owned by Evaluation
@@ -73,9 +75,9 @@ An Artifact receives a stable application ID and records immutable byte identity
 Regeneration creates a new Artifact record/object rather than overwriting published/retained historical bytes in place.
 
 <a id="rep-008"></a>
-## REP-008 — Generation, validation, publication, and delivery are distinct states
+## REP-008 — Generation, validation, Publication, and delivery are distinct states
 
-Generating durable bytes means only that an Artifact was produced and registered. Preview/validation, publication authorization, print dispatch, CDN propagation, download, or other delivery are separate operations/states and must not be inferred from generation success.
+Generating durable bytes means only that an Artifact was produced and registered. Preview/validation, [Publication](../concepts/publication.md), print dispatch, CDN propagation, download, or other delivery are separate operations/states and must not be inferred from generation success.
 
 This realizes [EXPORT-002](../concepts/export.md#export-002) and [INV-007](../invariants/official-not-automatically-public.md#inv-007).
 
@@ -96,7 +98,7 @@ Validation/preview does not change the underlying source Version or automaticall
 <a id="rep-011"></a>
 ## REP-011 — Publication is an explicit authoritative distribution record bound to one Artifact
 
-Publication/distribution is a deliberate command/state transition that identifies the exact Artifact, inherited source/disclosure basis, audience, channel/destination, actor/authorizer, publication time, and current distribution state.
+The [Publication](../concepts/publication.md) Concept owns the deliberate domain act of release/distribution. This architecture realizes it as an authoritative record that identifies the exact Artifact/Export representation, inherited source/disclosure basis, audience, channel/destination, actor/authorizer, publication time, and current distribution state.
 
 A generated or official artifact is not public until an applicable Publication transition succeeds after authoritative commit.
 
@@ -108,16 +110,16 @@ When an identified source basis changes or receives a successor Version/revision
 A source correction never silently rewrites an old artifact.
 
 <a id="rep-013"></a>
-## REP-013 — Replacement publication is explicit and successor-based
+## REP-013 — Replacement Publication is explicit and successor-based
 
-A corrected/revised representation is generated as a new Artifact and requires an explicit publication/republication transition. Prior Publications retain predecessor/successor history and are marked superseded/withdrawn/current as applicable rather than being repointed invisibly.
+A corrected/revised representation is generated as a new Export/Artifact and requires an explicit successor [Publication](../concepts/publication.md). Prior Publications retain predecessor/successor history and are marked superseded/withdrawn/current as applicable rather than being repointed invisibly.
 
 This mirrors successor-based authority in [OUT-002](../mechanisms/official-outcome-revision.md#out-002) without making Publication itself an Official Outcome Revision.
 
 <a id="rep-014"></a>
 ## REP-014 — URLs, QR codes, signed links, print jobs, and delivery channels do not confer authority
 
-External references and delivery mechanisms can locate or transport an artifact but do not establish Access, Judge authorship, source Version authority, official outcome authority, or current publication status.
+External references and delivery mechanisms can locate or transport an artifact but do not establish Access, Judge authorship, source Version authority, official outcome authority, or current Publication status.
 
 Private/unpublished retrieval re-evaluates current Access; truly public availability follows an explicit public Publication.
 
@@ -145,7 +147,7 @@ generation request/job
     ↓
 Artifact metadata ──→ immutable object/blob bytes
     ↓ validation/preview
-Publication record
+Publication
     ↓
 channel / public or controlled distribution
 ```
@@ -154,7 +156,7 @@ channel / public or controlled distribution
 
 Relational authority stores semantic metadata and lifecycle/provenance. Object/blob storage stores large immutable binary payloads behind application-owned ports. Concrete AWS realization is owned by [AWS-007](aws-runtime-operations.md#aws-007) for private versioned/encrypted S3 Artifact/evidence storage, [AWS-008](aws-runtime-operations.md#aws-008) for retryable asynchronous work, and [AWS-002](aws-runtime-operations.md#aws-002) for the CloudFront/private-origin delivery boundary.
 
-Exact renderer/template stack, signed-delivery implementation, malware/content-scanning mechanism, retention automation, and print integration remain implementation details constrained by `REP-*` and the applicable `AWS-*` contracts.
+Exact renderer/template stack, signed-delivery implementation, malware/content-scanning mechanism, retention automation, and print integration remain implementation details constrained by `REP-*`, the Publication Concept, and the applicable `AWS-*` contracts.
 
 # Failure posture
 
