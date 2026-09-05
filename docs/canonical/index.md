@@ -23,9 +23,13 @@ MUDAC has re-entered deliberate design refinement. Executable work is frozen at 
 
 Current design work proceeds through [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/).
 
+007-B established the current sixteen-Concept catalog. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale, official-outcome and Publication-history semantics.
+
 # Retrieval Rule
 
 Load only the specific owner documents and linked dependencies required by the task. For behavior spanning more than one Concept, prefer the relevant [Synchronization](synchronizations/) owner rather than reconstructing coordination from scattered phase history. Use stable rule IDs for normative cross-reference and phase history only when rationale/chronology is needed.
+
+For correction/current-vs-historical/invalidation/official-outcome/Publication-timeline questions, also load [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md).
 
 Before any code, schema, authentication, API, feature, or application-IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). While the freeze is active, implementation owners are used only for understanding the retained prototype or performing narrowly permitted maintenance.
 
