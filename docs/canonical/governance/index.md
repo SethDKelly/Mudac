@@ -6,6 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) - Concept Design versus OKF authority, adopted terminology, provenance distinction, and knowledge/source-code topology boundary.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) - `DOC-*` rules for current-owner precedence, one-owner discipline, downstream constraints, historical preservation, and routing-artifact boundaries.
+* [Design / Implementation Boundary](design-implementation-boundary.md) - current design-reentry state, the 006-D non-domain implementation freeze, permitted maintenance, prohibited domain implementation, and the evidence required before implementation may resume.
 
 # Retrieval and change governance
 
@@ -23,4 +24,4 @@ Current repository/design-governance knowledge for MUDAC.
 
 Repository agents receive a concise bootstrap through [`AGENTS.md`](../../../AGENTS.md). That adapter routes to these canonical governance owners and is not an independent authority layer.
 
-The numbered [Phase 004 history](../../004-knowledge-architecture/) preserves the rationale, rollout, strict audit, and migration-closure record for this governance system.
+The numbered [Phase 004 history](../../004-knowledge-architecture/) preserves the rationale, rollout, strict audit, and migration-closure record for the documentation-governance system. The current design-reentry decision is preserved in [Phase 007](../../007-design-refinement/).
