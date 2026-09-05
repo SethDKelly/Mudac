@@ -1,12 +1,13 @@
 ---
 type: Implementation Contract
 title: Implementation Authority, Toolchain & Delivery Governance
-description: Defines MUDAC's current implementation authority, common runtime/toolchain, repository delivery controls, dependency/version policy, security-scanning posture, and Phase 006 completion contract.
+description: Defines MUDAC's accepted implementation authority, common runtime/toolchain, repository delivery controls, dependency/version policy, security-scanning posture, and the current design-reentry freeze on implementation advancement.
 status: stable
-tags: [implementation, authority, toolchain, delivery, repository, security]
+tags: [implementation, authority, toolchain, delivery, repository, security, frozen]
 sources:
   - resource: ../../006-implementation-planning/006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md
   - resource: runtime-delivery-bootstrap.md
+  - resource: ../governance/design-implementation-boundary.md
   - resource: ../governance/documentation-authority.md
   - resource: ../governance/change-governance.md
   - resource: ../governance/validation-enforcement.md
@@ -15,12 +16,14 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:20:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T01:23:00Z }
 ---
 
 # Purpose
 
 Define the durable implementation-level rules established at Phase 006 entry. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
+
+The selected implementation family remains accepted, but implementation advancement is currently frozen by [Design / Implementation Boundary](../governance/design-implementation-boundary.md) at the 006-D non-domain bootstrap boundary. These rules therefore govern the retained prototype and future implementation when explicitly resumed; they do not authorize 006-E+ work now.
 
 <a id="impl-001"></a>
 ## IMPL-001 — Upstream canonical meaning outranks implementation convenience
@@ -53,21 +56,21 @@ Nx, Turborepo, Bazel, or another task-graph/cache platform requires measured bui
 <a id="impl-005"></a>
 ## IMPL-005 — PostgreSQL access uses Kysely over node-postgres with explicit migrations
 
-Application persistence adapters use Kysely with `pg`/node-postgres for typed, inspectable SQL access. Production schema evolution uses version-controlled explicit migrations; automatic schema push/synchronization is not a production migration mechanism.
+When persistence implementation is later authorized, application persistence adapters use Kysely with `pg`/node-postgres for typed, inspectable SQL access. Production schema evolution uses version-controlled explicit migrations; automatic schema push/synchronization is not a production migration mechanism.
 
-Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities. 006-E owns detailed schema, migration, generated-type, transaction, and projection conventions.
+Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities. Detailed schema, migration, generated-type, transaction, and projection conventions remain deferred while the design freeze is active.
 
 <a id="impl-006"></a>
 ## IMPL-006 — API schemas are explicit transport contracts and generate OpenAPI outward
 
-Fastify transport adapters register explicit JSON-schema-compatible request/response contracts. The published OpenAPI representation is generated from the accepted transport boundary and may feed generated clients.
+When API implementation is later authorized, Fastify transport adapters register explicit JSON-schema-compatible request/response contracts. The published OpenAPI representation is generated from the accepted transport boundary and may feed generated clients.
 
-Domain or persistence objects are not serialized as the public contract merely to reduce mapping code. Exact type-provider/client-generator packages remain 006-G implementation details.
+Domain or persistence objects are not serialized as the public contract merely to reduce mapping code. Exact type-provider/client-generator packages remain deferred implementation details.
 
 <a id="impl-007"></a>
 ## IMPL-007 — Verification uses Vitest and Playwright families with evidence defined before feature scale
 
-Vitest is the baseline TypeScript test-runner family; Playwright is the browser end-to-end family. 006-B defines the complete test/evidence matrix, fixtures, database integration strategy, accessibility/security layers, and blocking CI gates before broad feature implementation.
+Vitest is the baseline TypeScript test-runner family; Playwright is the browser end-to-end family. The verification strategy defines the complete test/evidence matrix, fixtures, database integration strategy, accessibility/security layers, and blocking CI gates before broad feature implementation.
 
 A newly released major is adopted only after compatibility evidence rather than because it is latest.
 
@@ -76,14 +79,14 @@ A newly released major is adopted only after compatibility evidence rather than 
 
 TypeScript strict type checking, ESLint flat configuration with TypeScript-aware rules, and Prettier deterministic formatting form the baseline static-quality gate.
 
-Suppressions are narrow and explained. Repository/module dependency enforcement is added explicitly in 006-C rather than assumed from directory naming.
+Suppressions are narrow and explained. Repository/module dependency enforcement is explicit rather than assumed from directory naming.
 
 <a id="impl-009"></a>
 ## IMPL-009 — Persistent AWS infrastructure is implemented with OpenTofu
 
-OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
+When application infrastructure implementation is later authorized, OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
 
-The runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
+The retained runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
 
 <a id="impl-010"></a>
 ## IMPL-010 — Dependency versions and lockfiles are deliberate, reproducible inputs
@@ -109,7 +112,7 @@ Findings are fixed, shown to be inapplicable, or explicitly accepted with reason
 <a id="impl-013"></a>
 ## IMPL-013 — `main` is intended to be PR-gated by required current checks before implementation merges
 
-Once implementation work begins, ordinary changes reach `main` through pull requests with required current Knowledge Validation and applicable implementation-CI checks. Force pushes and branch deletion are prohibited.
+When executable implementation work is authorized, ordinary changes reach `main` through pull requests with required current Knowledge Validation and applicable implementation-CI checks. Force pushes and branch deletion are prohibited.
 
 A mandatory reviewer count is not required while the repository is effectively single-maintainer; review requirements should strengthen when independent maintainers exist rather than create ceremonial self-approval.
 
@@ -130,11 +133,11 @@ Cross-cutting/reversible implementation choices that affect multiple delivery gr
 An implementation decision record cannot override canonical architecture. A choice that would change product/architecture semantics escalates through `CHG-*` first.
 
 <a id="impl-016"></a>
-## IMPL-016 — Phase 006 subgroup completion requires implementation and evidence closure
+## IMPL-016 — Implementation subgroup completion requires implementation and evidence closure
 
-A Phase 006 subgroup is complete only when its material decisions are explicit, current implementation routing is updated, applicable quality/security/tests pass, relevant stable-rule traceability exists, compatibility/migration implications are addressed, unresolved risks are assigned to named later gates, documentation validation remains green, and the next dependency-safe handoff is identified.
+When a later implementation subgroup is authorized, it is complete only when its material decisions are explicit, current implementation routing is updated, applicable quality/security/tests pass, relevant stable-rule traceability exists, compatibility/migration implications are addressed, unresolved risks are assigned to named later gates, documentation validation remains green, and the next dependency-safe handoff is identified.
 
-Passing CI is evidence for the tested revision, not semantic verification metadata or production certification.
+Passing CI is evidence for the tested revision, not semantic verification metadata, design-methodology closure, implementation-resume authority, or production certification.
 
 # Selected toolchain summary
 
@@ -154,8 +157,10 @@ security baseline    GitHub dependency/CodeQL + package audit + Trivy + IaC chec
 
 Exact implementation versions are pinned in manifests/lockfiles and are not permanent canonical semantics.
 
-# Delivery posture
+# Current delivery posture
 
-006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap. The next implementation substrate is 006-E persistence.
+006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap.
 
-The stable Knowledge Validation and Implementation Verification workflows are executable. Actual repository protection and protected production-environment administration remains explicitly external until independently configured and verified; this owner does not conflate workflow availability with enforced GitHub policy.
+That substrate is now **frozen as a non-domain prototype**. 006-E through 006-M are deferred. Current work has returned to [Phase 007 — Jackson Design Refinement & Methodology Closure](../../007-design-refinement/) and implementation may advance only after a later explicit design exit authorizes resume.
+
+The stable Knowledge Validation and Implementation Verification workflows remain executable for the retained substrate. Actual repository protection and protected production-environment administration remains explicitly external until independently configured and verified; this owner does not conflate workflow availability with enforced GitHub policy.
