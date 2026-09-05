@@ -1,30 +1,14 @@
 # MUDAC Design Documentation
 
-The repository is the durable design authority; conversation history is working context.
+The repository is the durable design and implementation authority; conversation history is working context.
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, UX, governance, architecture, and implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
-For current product/domain, conceptual UX, governance, accepted architecture, and accepted implementation meaning, use [Canonical Knowledge](canonical/). Repository agents use root [`AGENTS.md`](../AGENTS.md) as a thin bootstrap into the same canonical governance.
+Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
-Use numbered phase directories for rationale, design evolution, architecture alternatives, implementation planning, and source provenance. Each numbered phase has an `index.md` that routes history/planning toward current canonical authority where applicable.
-
-## Governance
-
-Current governance lives under [canonical/governance/](canonical/governance/), including:
-
-* [Documentation Authority & Canonical Ownership](canonical/governance/documentation-authority.md) — `DOC-*`;
-* [Agent Context & Progressive Retrieval](canonical/governance/agent-context.md) — `CTX-*`;
-* [Canonical Change & Conflict Governance](canonical/governance/change-governance.md) — `CHG-*`;
-* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](canonical/governance/metadata-trust-lifecycle.md) — `META-*`;
-* [Knowledge Validation & CI Enforcement](canonical/governance/validation-enforcement.md) — `VAL-*`;
-* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md);
-* [Source Lineage](canonical/governance/source-lineage.md).
-
-These owners govern the details. This README routes to them and does not reproduce their rule bodies.
-
-## Design / implementation-planning status
+## Status
 
 * Phase 001 — Concept Design Foundation: **Complete**
 * Phase 002 — Concept Specification, Policy & Synchronization Refinement: **Complete**
@@ -32,26 +16,28 @@ These owners govern the details. This README routes to them and does not reprodu
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
 * Phase 005 — System, Application, Data & Synchronization Architecture: **Complete**
 * Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **In Progress**
-  * 006-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement: **Complete**
-  * 006-B — Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates: **Complete**
-  * 006-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement: **Complete**
-  * **006-D — Environment, IaC, CI/CD, Local Development & Runtime Bootstrap: Next**
-  * 006-E through 006-H — remaining implementation foundations: Planned
-  * 006-I through 006-L — dependency-ordered end-to-end domain slices: Planned
-  * 006-M — integrated hardening, operational readiness and phase exit: Planned
+  * 006-A — implementation authority/toolchain: **Complete**
+  * 006-B — verification/evidence strategy: **Complete**
+  * 006-C — source/package/dependency topology: **Complete**
+  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: **Complete**
+  * **006-E — Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation: Next**
+  * 006-F through 006-M: Planned
 
-The complete Phase 006 subgroup plan and dependency graph live in [006-implementation-planning/README.md](006-implementation-planning/README.md).
+The complete Phase 006 dependency plan lives in [006-implementation-planning/README.md](006-implementation-planning/README.md).
 
-Current accepted architecture is routed through [canonical/architecture/](canonical/architecture/). Current accepted implementation meaning is routed through [canonical/implementation/](canonical/implementation/): [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md) owns `IMPL-001` through `IMPL-016`; [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md) owns the current evidence/test/CI model; and [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md) owns the current workspace/package/import graph. Verification and source topology intentionally realize existing canonical rules rather than creating parallel testing/package rule namespaces.
+## Current implementation posture
 
-The implementation baseline uses Node.js 24 LTS + TypeScript, pnpm workspaces, Fastify, Kysely + node-postgres with explicit migrations, transport schemas generating OpenAPI outward, Vitest/Playwright, strict TypeScript + ESLint + Prettier, OpenTofu, layered scanning, committed lockfiles/reproducible generation, intended PR/check-gated `main`, and separately gated production deployment authority.
+Current implementation owners are under [canonical/implementation/](canonical/implementation/):
 
-The accepted source graph uses three deployable composition roots (`apps/api`, `apps/worker`, `apps/web`), six authoritative module workspace packages, thin `application` coordination, non-authoritative `projections`, a small browser-safe business-neutral `foundation`, and technical-only test support. Package root exports are explicit, cross-module dependencies remain acyclic/public-only, browser source cannot import server implementation, front-end layers preserve the `FE-*` component direction, internal dependencies use pnpm `workspace:` declarations, and dependency-cruiser is the selected graph-level enforcement mechanism.
+* [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md);
+* [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md);
+* [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md);
+* [Runtime, Environment & Delivery Bootstrap](canonical/implementation/runtime-delivery-bootstrap.md).
 
-The verification baseline requires real PostgreSQL for database/concurrency semantics, deterministic synthetic fixtures and explicit external/nondeterministic seams, module-owned test builders, critical Playwright journeys, Testing Library-style semantic component tests, automated axe-compatible accessibility checks plus manual accessibility evidence before production readiness, behavioral security/authority/disclosure testing in addition to scanners, explicit retry/conflict/uncertainty/recovery evidence, narrow golden fixtures, coverage as diagnostic evidence, visible treatment of flakiness, and privacy-minimized CI artifacts. Evidence traces existing canonical rule IDs rather than copying rule bodies.
+The repository now contains an executable pinned pnpm/TypeScript workspace with `apps/api`, `apps/worker`, and `apps/web`; six authoritative module package seams; application/projection/foundation/test-support packages; dependency-cruiser enforcement; Docker Compose PostgreSQL for local development; a committed generated lockfile; **Implementation Verification**, CodeQL, and Dependabot workflows; and separate OpenTofu nonproduction, production, and cold-recovery roots.
 
-Actual workspace/runtime/IaC/CI bootstrap and repository ruleset enforcement remain 006-D actions. The current design-session GitHub connection cannot administer branch protection/rulesets, so that control remains explicitly unclaimed until verified.
+This is a bootstrap substrate, not a production-readiness claim. The domain persistence/security/API/browser feature foundations remain 006-E through 006-H, and user-visible vertical slices begin at 006-I.
 
-The [005-J exit review](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) confirms that the architecture owners compose without a blocking authority contradiction. MUDAC is **implementation-planning ready, not production certified**. Phase 006 converts those contracts and exit gates into enforceable tooling, tests, package/source boundaries, foundations, vertical delivery slices, and measured readiness evidence without silently changing accepted semantics.
+Actual GitHub branch/ruleset and protected production-environment administration remains explicitly unclaimed because the current connected GitHub capability cannot configure those controls. Workflow existence must not be treated as enforced merge or deployment policy.
 
-Knowledge CI checks deterministic structure, links, stable IDs, source edges, and routing. A green validation run is structural evidence only and never creates `verified` metadata or replaces semantic review.
+Knowledge Validation checks deterministic knowledge structure. Implementation Verification checks the executable workspace/IaC substrate. Neither creates semantic verification metadata or production certification.
