@@ -4,7 +4,7 @@ The repository is the durable design and implementation authority; conversation 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, UX, governance, architecture, and implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
 Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
@@ -14,30 +14,33 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 002 — Concept Specification, Policy & Synchronization Refinement: **Complete**
 * Phase 003 — Conceptual UX Architecture: **Complete**
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
-* Phase 005 — System, Application, Data & Synchronization Architecture: **Complete**
-* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **In Progress**
-  * 006-A — implementation authority/toolchain: **Complete**
-  * 006-B — verification/evidence strategy: **Complete**
-  * 006-C — source/package/dependency topology: **Complete**
-  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: **Complete**
-  * **006-E — Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation: Next**
-  * 006-F through 006-M: Planned
+* Phase 005 — System, Application, Data & Synchronization Architecture: **Complete as historical architecture exit**
+* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **Frozen after 006-D**
+  * 006-A — implementation authority/toolchain: Complete
+  * 006-B — verification/evidence strategy: Complete
+  * 006-C — source/package/dependency topology: Complete
+  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: Complete and retained as a frozen non-domain prototype
+  * 006-E through 006-M: **Deferred**
+* Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
+  * 007-A — design re-entry, implementation freeze & Jackson completion criteria: Complete
+  * **007-B — Concept Completeness, Independence & Genericity Audit: Next**
 
-The complete Phase 006 dependency plan lives in [006-implementation-planning/README.md](006-implementation-planning/README.md).
+## Current design posture
 
-## Current implementation posture
+MUDAC has deliberately returned to design refinement before any domain schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation proceeds.
 
-Current implementation owners are under [canonical/implementation/](canonical/implementation/):
+The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-* [Implementation Authority, Toolchain & Delivery Governance](canonical/implementation/implementation-foundation.md);
-* [Verification Strategy, Evidence & Quality Gates](canonical/implementation/verification-strategy.md);
-* [Source Topology, Package Boundaries & Dependency Enforcement](canonical/implementation/source-topology.md);
-* [Runtime, Environment & Delivery Bootstrap](canonical/implementation/runtime-delivery-bootstrap.md).
+The 006-D executable substrate remains in the repository because it is intentionally semantically thin: pinned workspace/tooling, minimal API/worker/web composition roots, package seams, local PostgreSQL service bootstrap, CI/static/dependency checks, and OpenTofu root scaffolding. It is **not** authority to continue 006-E onward.
 
-The repository now contains an executable pinned pnpm/TypeScript workspace with `apps/api`, `apps/worker`, and `apps/web`; six authoritative module package seams; application/projection/foundation/test-support packages; dependency-cruiser enforcement; Docker Compose PostgreSQL for local development; a committed generated lockfile; **Implementation Verification**, CodeQL, and Dependabot workflows; and separate OpenTofu nonproduction, production, and cold-recovery roots.
+While frozen, executable changes are limited to narrow maintenance required to keep that prototype safe/buildable and must not encode MUDAC domain semantics.
 
-This is a bootstrap substrate, not a production-readiness claim. The domain persistence/security/API/browser feature foundations remain 006-E through 006-H, and user-visible vertical slices begin at 006-I.
+## Why Phase 005 was not erased
 
-Actual GitHub branch/ruleset and protected production-environment administration remains explicitly unclaimed because the current connected GitHub capability cannot configure those controls. Workflow existence must not be treated as enforced merge or deployment policy.
+[005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier conclusion that architecture was implementation-planning ready. The later human decision recorded in [007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) supersedes the assumption that implementation should continue immediately.
 
-Knowledge Validation checks deterministic knowledge structure. Implementation Verification checks the executable workspace/IaC substrate. Neither creates semantic verification metadata or production certification.
+Historical records are preserved rather than rewritten to make earlier decisions appear never to have happened.
+
+## Current next work
+
+Proceed through [Phase 007](007-design-refinement/), beginning with **007-B — Concept Completeness, Independence & Genericity Audit**. The renewed design runway will continue until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
