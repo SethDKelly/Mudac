@@ -1,6 +1,6 @@
 # Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness
 
-Status: **In Progress — 008-A/B/C complete; 008-D next**
+Status: **In Progress — 008-A/B/C/D complete; 008-E next**
 
 ## Purpose
 
@@ -25,26 +25,32 @@ Phase 009
 new domain implementation begins
 ```
 
-No Phase 008 subgroup implements new domain behavior. The retained 006-D workspace remains a protected non-domain implementation baseline.
+No Phase 008 subgroup implements new domain behavior. The retained 006-D workspace remains a qualified protected non-domain implementation baseline.
 
-## Completed entry and reconciliation gates
+## Completed entry, reconciliation and persistence-planning gates
 
 [008-A](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) is **Complete** and establishes current authority, `CHG-*` escalation, planning-versus-execution states, and progressive-disclosure/anti-bloat rules.
 
-[008-B](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) is **Complete — PASS AFTER NARROW REMEDIATION** and qualifies the retained 006-D executable substrate for use by later Phase 008 planning.
+[008-B](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) is **Complete — PASS AFTER NARROW REMEDIATION** and qualifies the retained 006-D executable substrate.
 
-[008-C](008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) is **Complete — PASS** and closes residual/historical-plan ownership before detailed mechanism planning begins.
+[008-C](008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) is **Complete — PASS** and closes residual/historical-plan ownership.
 
-008-C establishes that:
+[008-D](008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) is **Complete — PASS** and establishes the concrete downstream persistence/history substrate without creating domain schema.
 
-- all six 007-H Class 2 architecture details have current Phase 008 planning owners;
-- all twelve 007-H Class 3 implementation/evidence questions have current owners and downstream gates;
-- all seven Class 4 future-scope items remain explicitly excluded from the current baseline;
-- the 008-B repository-administration and dependency-alert evidence limitations are owned by 008-K/008-L rather than forgotten;
-- historical 006-E through 006-M is fully superseded as an executable queue, with each old group explicitly preserved, expanded, split, merged, renamed, or reassigned;
-- open implementation choices remain deliberately deferred to their dependency-safe subgroup rather than being guessed in 008-C.
+008-D fixes these implementation-planning choices:
 
-The major historical-plan changes are intentional: browser Draft/synchronization foundation moves from old 006-J into 008-G; old 006-L externalization planning merges into 008-J with outcomes/finalization; and old 006-M splits into 008-K evidence/readiness planning plus 008-L authorization/exit.
+- one PostgreSQL authority database with six module-owned schemas plus non-authoritative `projection` and narrow technical `platform` schemas;
+- stable UUID resource identity, per-root monotonic `bigint` revision, and explicit `timestamptz` temporal fields;
+- mutable current/root state distinct from semantic Versioning and append-stable history;
+- owner-local immutable Version lineage, Provenance, invalidation/replacement/correction records;
+- policy-specific governed-exception records rather than a universal override table;
+- immutable Official Outcome Revision physical substrate with a separate latest-declared pointer;
+- a transactional at-least-once outbox whose message ordering is not treated as authority ordering;
+- explicit-basis projections with idempotent/out-of-order convergence and generation-based rebuild by default;
+- SQL-first owner-scoped forward migrations with checksum ledger, advisory locking, no runtime auto-migrate, and expand/migrate/contract deployment posture;
+- conservative non-destructive retention until 008-K establishes applicable retention requirements.
+
+Durable current implementation ownership for these choices lives in [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](../canonical/implementation/persistence-history-projection.md).
 
 ## Dependency-safe subgroup plan
 
@@ -53,8 +59,8 @@ The major historical-plan changes are intentional: browser Draft/synchronization
 | 008-A | [Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) | **Complete** |
 | 008-B | [Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) | **Complete — PASS** |
 | 008-C | [Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix](008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) | **Complete — PASS** |
-| 008-D | **Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan** | **Next** |
-| 008-E | **Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan** | Planned |
+| 008-D | [Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan](008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) | **Complete — PASS** |
+| 008-E | **Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan** | **Next** |
 | 008-F | **Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan** | Planned |
 | 008-G | **Browser Shell, Routing, Remote State, Draft Continuity, Synchronization, Recovery, Responsive & Accessibility Implementation Plan** | Planned |
 | 008-H | **Competition Configuration, Team/Division/Alias, Rubric, Participation, Panel & Encounter Operations Slice Plan** | Planned |
@@ -72,9 +78,9 @@ The major historical-plan changes are intentional: browser Draft/synchronization
    ↓
 008-C residual + historical-plan reconciliation        COMPLETE
    ↓
-008-D durable data / temporal authority plan           NEXT
+008-D durable data / temporal authority plan           COMPLETE
    ↓
-008-E identity / access / session plan
+008-E identity / access / session plan                 NEXT
    ↓
 008-F command / API / concurrency plan
    ↓
@@ -93,13 +99,13 @@ The major historical-plan changes are intentional: browser Draft/synchronization
 Phase 009 implementation
 ```
 
-008-D is next because the accepted residual map requires the durable relational/history/outbox substrate to be planned before Identity, transport, browser, or vertical-slice mechanisms depend on a physical authority model.
+008-E follows 008-D because Identity/Participation/Access/session persistence can now rely on a fixed owner-local relational/history/migration substrate without inventing its own database conventions.
 
 ## Planning guardrails
 
 Phase 008 still does not create domain tables, migrations, repositories, authentication/session behavior, domain APIs, IndexedDB domain state, product features, or domain-purpose AWS application resources.
 
-A qualified baseline or completed planning decision is not first-slice authorization. Green CI is not implementation authorization, merge authority, deployment authority, or production certification. Historical 006-E–M labels remain non-executable provenance.
+A completed persistence plan is not persistence implementation. Green CI is not implementation authorization, merge authority, deployment authority, or production certification.
 
 If planning exposes a genuine semantic contradiction or missing semantic owner, use `CHG-*`; implementation convenience does not silently weaken current design.
 
@@ -111,11 +117,11 @@ Phase 008 subdivision: COMPLETE
 implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
 008-C: COMPLETE — PASS
-residual ownership: CLOSED FOR CURRENT BASELINE
+008-D: COMPLETE — PASS
+protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
 historical 006-E–M executable queue: SUPERSEDED / MAPPED
-008-D: NEXT / NOT STARTED
+008-E: NEXT / NOT STARTED
 new domain implementation after 006-D: NOT STARTED
 first executable slice: NOT YET AUTHORIZED
 production readiness: NOT ESTABLISHED
@@ -123,4 +129,4 @@ production readiness: NOT ESTABLISHED
 
 ## Next
 
-Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
+Proceed to **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan**.
