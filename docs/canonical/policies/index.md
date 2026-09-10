@@ -8,5 +8,6 @@ Canonical current policy semantics that configure or constrain how MUDAC Concept
 * [Correction & Authority](correction-authority.md) - Judge amendment, transcription repair, structural correction, invalidation, and post-finalization authority.
 * [Awards & Finalization](awards-finalization.md) - Award selection/conferral and official closeout gates.
 * [Continuity & Paper](continuity-paper.md) - Electronic/paper capture parity, fallback, verification, and recovery.
+* [Operational Exception & Override Governance](operational-exception-governance.md) - Cross-cutting rules for explicit scoped exceptions, preserved shortfalls, acknowledgement versus resolution, non-overridable invariants, and separation of technical emergency power from Competition semantic authority.
 
-Policy documents govern Concepts/mechanisms through references; they are not additional MUDAC Concepts.
+Policy documents govern Concepts/mechanisms through references; they are not additional MUDAC Concepts. A policy-specific exception changes only the consequence explicitly permitted by that policy and does not silently waive unrelated canonical constraints.
