@@ -11,13 +11,15 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 3. For behavior spanning more than one Concept, load the relevant owner under [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) rather than reconstructing coordination from old phase history.
 4. For correction, invalidation, supersession, replacement, current-vs-historical truth, affected/stale state, official-outcome succession, or Publication timeline work, additionally load [`Temporal Truth, Correction & Historical Authority`](docs/canonical/synchronizations/temporal-truth-correction.md).
 5. For Judge/Organizer interaction, route, status, exception, confirmation, recovery, or UI-authority design, additionally load [`Experience Action, State & Authority Traceability`](docs/canonical/experience/action-authority-traceability.md) plus only the task-relevant experience owner(s).
-6. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
-7. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-8. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
-9. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
-10. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
-11. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
-12. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
+6. For exception, waiver, override, acknowledgement/suppression, policy-bypass, or technical-emergency-versus-semantic-authority work, additionally load [`Operational Exception & Override Governance`](docs/canonical/policies/operational-exception-governance.md) plus the specific governing policy/Concept owner.
+7. For Export/Publication or external representation work, preserve exact source authority and load the relevant [`Export`](docs/canonical/concepts/export.md), [`Publication`](docs/canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners as needed. A representation cannot promote its source's authority.
+8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
+9. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
+10. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
+11. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
+12. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
+13. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
+14. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
 
 Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonical synchronization/architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
 
@@ -43,6 +45,9 @@ Permitted executable changes are narrow maintenance needed to keep the existing 
 - duplicate synchronization or temporal semantics independently inside multiple Concept/architecture/implementation documents when the canonical synchronization owner can be referenced;
 - collapse lifecycle, currentness, validity, affected/stale currency, replacement, distribution state, and historical observation into one convenience status merely for implementation ease;
 - let a screen, route, work mode, status badge, exception row, confirmation dialog, recovery affordance, or enabled control become an alternate domain-action or authority owner;
+- create a generic `override`/`force` path that can bypass policy-specific preconditions, source truth, authorship, official-outcome, disclosure, uncertainty, or historical-retention semantics;
+- treat acknowledgement, dismissal, suppression, or closing of an exception presentation as repair of its authoritative source condition;
+- let Export/Publication labeling or formatting promote provisional/calculated/Affected state into stronger authority than its identified source basis;
 - copy complete canonical rules into downstream docs/tests/configuration when a rule ID/link plus local consequence is sufficient;
 - let README/index/traceability/agent/test-fixture files become competing rule stores;
 - silently resolve canonical contradictions by choosing convenient implementation wording;
