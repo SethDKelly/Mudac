@@ -24,7 +24,7 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **Complete — formal methodology exit passed**
   * 007-A through 007-H: Complete
   * 007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: **Complete — PASS**
-* Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **Next — not started**
+* Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **In Progress — subdivision complete; 008-A next**
 
 ## Current posture
 
@@ -32,9 +32,7 @@ MUDAC has formally exited the renewed Jackson Concept Design methodology for the
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-Phase 007 established the current sixteen-Concept catalog, cross-Concept synchronization model, temporal/correction/historical-truth semantics, adversarial and degraded-operation closure, Judge/Organizer experience-to-authority traceability, operational-exception governance, and representation/outcome/disclosure closure. 007-H then found no known unresolved baseline semantic/design blocker across the current semantic, experience, architecture, and deferred implementation layers.
-
-007-I formally accepts that evidence and exits the methodology for the current baseline.
+Phase 008 has now been divided into twelve dependency-safe planning/qualification groups. The active phase begins with implementation authority and canonical-baseline reset, then qualifies the retained 006-D substrate, ingests residual/historical planning work, refreshes durable data/security/API/client plans, derives domain vertical-slice ordering, defines cross-cutting evidence gates, and ends with an explicit first-slice authorization review.
 
 The current status is:
 
@@ -42,24 +40,60 @@ The current status is:
 Jackson Concept Design methodology: COMPLETE / EXITED
 baseline semantic design: COMPLETE
 known baseline semantic blockers: NONE OPEN
-implementation planning: READY TO RESUME
-Phase 008 plan refresh: NEXT / NOT STARTED
+Phase 008 subdivision: COMPLETE
+implementation planning: ACTIVE
+008-A: NEXT / NOT STARTED
+first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
-This means implementation planning may now resume, but the old 006-E through 006-M queue is not executable authority. The retained 006-D substrate is a protected baseline until Phase 008 refreshes the plan against the completed design and explicitly authorizes a first domain implementation slice.
+The retained 006-D substrate remains a protected non-domain baseline. The old 006-E through 006-M queue is not executable authority.
+
+## Phase 008 structure
+
+[Phase 008](008-implementation-reentry/) proceeds through:
+
+```text
+008-A authority / canonical baseline / change control
+   ↓
+008-B protected substrate qualification
+   ↓
+008-C residual-risk + historical-plan reconciliation
+   ↓
+008-D persistence / temporal / provenance / exception plan
+   ↓
+008-E Identity / Participation / Access / session plan
+   ↓
+008-F commands / API / transaction / concurrency plan
+   ↓
+008-G browser / Draft / sync / recovery / accessibility plan
+   ↓
+008-H Competition + judging-operations slice plan
+   ↓
+008-I Scorecard + evaluation-evidence + paper slice plan
+   ↓
+008-J outcomes + finalization + representation slice plan
+   ↓
+008-K cross-cutting verification / operational evidence plan
+   ↓
+008-L consolidated roadmap + first-slice authorization
+   ↓
+Phase 009 implementation
+```
+
+No Phase 008 subgroup implements new domain behavior. If 008-L passes, Phase 009 will begin the first explicitly authorized domain implementation slice.
 
 ## Why Phase 005 and Phase 006 were not erased
 
 [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier conclusion that architecture was implementation-planning ready.
 
-[007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) later superseded the assumption that implementation should continue immediately, froze domain implementation, and reopened deliberate Concept Design. [007-I](007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md) now closes that renewed methodology after the intervening evidence gates passed.
+[007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) later superseded the assumption that implementation should continue immediately, froze domain implementation, and reopened deliberate Concept Design. [007-I](007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md) closed that renewed methodology after the intervening evidence gates passed.
 
-Historical records are preserved rather than rewritten to make earlier decisions appear never to have happened.
+Historical records are preserved rather than rewritten to make earlier decisions appear never to have happened. Phase 008 uses them as lineage while deriving a current plan from the completed canonical design.
 
 ## Current next work
 
-Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
+Proceed to **008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails**.
 
-Phase 008 starts with implementation planning/re-entry. New domain implementation remains **not started** until that refreshed plan explicitly reaches and authorizes its first executable slice.
+New domain implementation remains **not started** until 008-L explicitly authorizes the first executable slice.
