@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's current post-Concept-Design posture, Phase 008 planning authority, qualified protected 006-D baseline, reconciled residual/historical-plan ownership, and the explicit gate before new domain implementation begins.
+description: Defines MUDAC's current post-Concept-Design posture, active Phase 008 planning authority, qualified protected 006-D baseline, accepted persistence-plan contract, and the explicit gate before new domain implementation begins.
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, planning]
 sources:
@@ -10,6 +10,7 @@ sources:
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
+  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
   - resource: change-governance.md
   - resource: methodology-terminology.md
   - resource: ../synchronizations/concept-synchronizations.md
@@ -18,7 +19,8 @@ sources:
   - resource: ../experience/action-authority-traceability.md
   - resource: ../implementation/runtime-delivery-bootstrap.md
   - resource: ../implementation/implementation-foundation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:04:00Z }
+  - resource: ../implementation/persistence-history-projection.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
 ---
 
 # Purpose
@@ -27,7 +29,7 @@ Keep the boundary between completed MUDAC Concept Design, active implementation 
 
 # Current state
 
-MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline. 008-A established implementation-planning authority and guardrails. 008-B qualified the retained 006-D executable substrate. 008-C has now reconciled the accepted residual register and historical 006-E through 006-M plan into explicit current Phase 008 ownership.
+MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline. 008-A established implementation-planning authority and guardrails. 008-B qualified the retained 006-D executable substrate. 008-C reconciled accepted residuals and historical 006-E–M into current owners. 008-D has now accepted the first detailed implementation contract for persistence, temporal/history, Versioning, Provenance, governed exceptions, outbox, projections and migrations.
 
 The governing status is:
 
@@ -39,11 +41,11 @@ Phase 008 subdivision: COMPLETE
 implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
 008-C: COMPLETE — PASS
-residual ownership: CLOSED FOR CURRENT BASELINE
-historical 006-E–M executable queue: SUPERSEDED / MAPPED
-008-D: NEXT / NOT STARTED
+008-D: COMPLETE — PASS
+protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
+persistence/history implementation plan: ACCEPTED / NOT IMPLEMENTED
+008-E: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
@@ -76,7 +78,7 @@ Historical phase records provide rationale/provenance. Routing artifacts route. 
 
 008-B audited the retained non-domain workspace against current authority and found no semantic, architectural, or accidental-domain-implementation blocker.
 
-The baseline is qualified for later Phase 008 planning and contains only the accepted bootstrap class:
+The baseline remains qualified for later Phase 008 planning and contains only the accepted bootstrap class:
 
 - pinned Node/pnpm/TypeScript/application-tool manifests and committed lockfile;
 - minimal API, worker and browser composition roots;
@@ -92,17 +94,31 @@ Qualification means the substrate may be relied upon as **planning input**. It d
 
 008-C closes the ambiguity around accepted downstream uncertainty.
 
-All six 007-H Class 2 architecture details and all twelve Class 3 implementation/evidence questions now have current Phase 008 planning owners. The two 008-B administration/evidence limitations are carried to 008-K/008-L. All seven Class 4 future-scope items remain outside the current baseline unless `CHG-*` deliberately reopens them.
+All six 007-H Class 2 architecture details and all twelve Class 3 implementation/evidence questions have current Phase 008 owners. The two 008-B administration/evidence limitations are carried to 008-K/008-L. All seven Class 4 future-scope items remain outside the current baseline unless `CHG-*` deliberately reopens them.
 
-Historical 006-E through 006-M is now fully superseded as an executable roadmap. Its useful dependency rationale remains provenance, but current planning routes only through 008-D through 008-L.
+Historical 006-E through 006-M is fully superseded as an executable roadmap. Its useful dependency rationale remains provenance, but current planning routes only through 008-D through 008-L.
 
-The material decomposition changes include:
+# Accepted 008-D persistence implementation contract
 
-- browser Draft/synchronization/conflict foundation moves from old 006-J into 008-G;
-- old 006-L externalization work merges into 008-J so outcomes, Finalization, Official Outcome Revision, Export, Publication and disclosure stay in one downstream authority chain without collapsing their meanings;
-- old 006-M splits into 008-K cross-cutting evidence/readiness planning and 008-L consolidated authorization/exit.
+008-D resolves the physical persistence choices needed by downstream planning while remaining non-executable.
 
-008-C does not decide the physical mechanisms assigned to later groups. It makes those decisions visible, owned and dependency-ordered.
+Current implementation planning may now assume:
+
+- one PostgreSQL authority database with module-owned `competition`, `identity_access`, `judging_operations`, `evaluation`, `outcomes`, and `external_representation` schemas plus non-authoritative `projection` and narrow technical `platform` schemas;
+- stable UUID resource identities and monotonic per-root `bigint` concurrency revisions;
+- mutable current/root rows distinct from immutable semantic Version history;
+- module-local Provenance with compatible actor/author/authorizer/source/time structure;
+- explicit correction/invalidation/replacement records rather than universal status/soft-delete semantics;
+- policy-specific immutable governed-exception records rather than a universal override table;
+- immutable Official Outcome Revision substrate with a separate latest-declared pointer;
+- transactionally coupled at-least-once outbox messages and basis-aware idempotent projections;
+- generation-based rebuild for non-trivial cross-module projections by default;
+- SQL-first owner-scoped forward migrations with checksum verification/advisory locking and no application-startup auto-migration;
+- conservative non-destructive historical retention until 008-K resolves applicable retention requirements.
+
+Durable detail is owned by [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](../implementation/persistence-history-projection.md).
+
+These are **accepted planning constraints, not created database objects**.
 
 # What Phase 008 planning authority permits
 
@@ -110,21 +126,22 @@ Current work may:
 
 - use the qualified 006-D substrate as a concrete starting assumption;
 - consume the 008-C residual/historical-plan ownership map;
-- define concrete downstream mechanisms where accepted architecture and semantics leave implementation latitude;
+- consume the accepted 008-D persistence/history implementation contract;
+- define concrete downstream Identity/Access, transaction/API, browser, vertical-slice, outcome/externalization and evidence mechanisms where upstream authority leaves implementation latitude;
 - create implementation decision records where `IMPL-015` warrants them;
-- update canonical architecture/implementation owners when durable downstream contracts change;
+- update canonical implementation owners when durable downstream contracts change;
 - define verification/evidence gates and explicit implementation-entry criteria;
 - prepare a specifically bounded first domain implementation slice for 008-L authorization.
 
-008-D is next and owns the detailed persistence, temporal-history, Versioning, Provenance, governed-exception, outbox, projection and migration implementation plan.
+008-E is next and owns Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority implementation planning.
 
 # What Phase 008 does not authorize
 
-Completion of 008-A through 008-C does **not** authorize domain implementation.
+Completion of 008-A through 008-D does **not** authorize domain implementation.
 
 Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** explicitly authorizes a first executable slice, do not create new:
 
-- authoritative domain PostgreSQL schemas, migrations, repositories, outbox or projections;
+- authoritative domain PostgreSQL schemas, migrations, repositories, outbox or projections described by 008-D;
 - Cognito/session/Identity/Participation/Access/invitation behavior;
 - production domain commands, queries, APIs, transactions or idempotency behavior;
 - IndexedDB domain Draft/synchronization behavior;
@@ -136,7 +153,7 @@ The status distinctions remain:
 ```text
 qualified bootstrap
     ≠
-planning decision
+accepted implementation plan
     ≠
 first executable slice authorized
     ≠
@@ -157,7 +174,7 @@ Phase 006 remains historical implementation-planning/bootstrap provenance.
 
 006-A through 006-D accurately record prior planning/bootstrap work. The executable portion of 006-D was re-qualified by 008-B rather than silently resumed.
 
-006-E through 006-M remain preserved historical planning lineage but are **fully superseded as current executable authority**. Their explicit preserve/split/merge/rename/reorder disposition is owned by 008-C.
+006-E through 006-M remain preserved historical planning lineage but are fully superseded as current executable authority. Their explicit disposition is owned by 008-C. The persistence-planning substance historically assigned to 006-E is now superseded by the current 008-D record and canonical implementation contract.
 
 # Open evidence and administration limits
 
@@ -166,7 +183,7 @@ Phase 006 remains historical implementation-planning/bootstrap provenance.
 1. repository rulesets/branch-protection enforcement remains an 008-K evidence/admin item and an 008-L authorization consideration; workflow existence must not be represented as enforced merge policy;
 2. Dependabot alert inventory remains unavailable through the current connector and is assigned to 008-K security evidence; zero open dependency findings must not be inferred.
 
-Neither limit blocks continued Phase 008 planning. Both become consequential when later gates rely on them.
+008-D additionally leaves actual retention periods, backup/restore objectives, production RDS sizing, migration deployment evidence and projection recovery exercises to 008-K rather than claiming planning equals operational readiness.
 
 # Change control during implementation planning
 
@@ -183,14 +200,14 @@ Implementation inconvenience, framework preference, storage convenience, UI conv
 Phase 008 follows `DOC-*` and `CTX-*`:
 
 - canonical owners control durable current meaning;
-- numbered Phase 008 records preserve planning rationale and evidence without becoming a parallel rule store;
-- 008-C is the provenance owner for residual/historical-plan mapping rather than a new canonical rule namespace;
+- numbered Phase 008 records preserve planning rationale/evidence without becoming a parallel rule store;
+- `persistence-history-projection.md` owns the durable implementation result from 008-D;
 - historical phases are loaded only when rationale, chronology, or supersession requires them;
 - routing artifacts summarize and link rather than own rules;
 - agents stop expanding context once the material authority set is sufficient.
 
 # Current handoff
 
-Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan** under [Phase 008](../../008-implementation-reentry/).
+Proceed to **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan** under [Phase 008](../../008-implementation-reentry/).
 
-008-D may rely on the qualified bootstrap and 008-C ownership map as planning inputs. New domain implementation remains **NOT STARTED** and no first executable slice is authorized until 008-L explicitly changes this boundary.
+008-E may rely on the accepted 008-D persistence contract as planning input. New domain implementation remains **NOT STARTED** and no first executable slice is authorized until 008-L explicitly changes this boundary.
