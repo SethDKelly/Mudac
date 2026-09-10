@@ -26,7 +26,8 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 007-B — Concept Completeness, Independence & Genericity Audit: **Complete**
   * 007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
   * 007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
-  * **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: Next**
+  * 007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: **Complete**
+  * **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: Next**
 
 ## Current design posture
 
@@ -34,9 +35,11 @@ MUDAC remains in deliberate design refinement before any domain schema, persiste
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D adds [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
+007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D added [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
 
-007-D also distinguishes what MUDAC considered authoritative at a past time from what later verified evidence establishes as the current best-known account of that past occurrence. Corrections remain append-stable and explainable rather than destructive rewrite.
+007-E then pressure-tested the model through end-to-end ordinary operation, Judge/Panel exceptions, dual-role behavior, lost/shared devices, interrupted authoritative transitions, paper recovery, duplicate/concurrent inputs, invalid Encounter/rejudge, post-event amendments, post-Finalization correction, disclosure failures, Administrator/break-glass misuse, stale derived state, and regional infrastructure failure.
+
+The sixteen-Concept catalog survives that pressure without a generic Workflow, Recovery, Incident, Conflict, Break-glass, or Reconciliation Concept. The only canonical refinements required were to clarify that technical/system emergency capability does not create Competition semantic authority, and that actual protected-information exposure is a historical occurrence that later revocation cannot erase.
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
 
@@ -50,4 +53,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
