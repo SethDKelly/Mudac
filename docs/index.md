@@ -39,17 +39,11 @@ Before any implementation/code/IaC task, load [Design / Implementation Boundary]
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
 * [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — Historical/frozen after 006-D; 006-E through 006-M are superseded as the current execution queue and remain planning lineage.
 * [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **Complete — formal methodology exit passed**.
-* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **In Progress — subdivision complete; 008-A next**.
-
-# Formal design-exit result
-
-Phase 007 deliberately reopened and then closed the full current semantic system after the earlier implementation bootstrap moved ahead of an explicit final methodology exit.
-
-007-I formally exits the renewed Jackson Concept Design methodology for the current MUDAC baseline with no known baseline semantic blocker.
+* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **In Progress — 008-A complete; 008-B next**.
 
 # Active Phase 008 planning posture
 
-Phase 008 subdivision is complete. It contains twelve dependency-safe planning/qualification groups from implementation-authority reset through first-slice authorization.
+[008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) has established the current implementation-planning authority model.
 
 The current boundary is:
 
@@ -58,16 +52,20 @@ Jackson Concept Design methodology: COMPLETE / EXITED
 baseline semantic design: COMPLETE
 known baseline semantic blockers: NONE OPEN
 Phase 008 subdivision: COMPLETE
-implementation planning: ACTIVE
-008-A: NEXT / NOT STARTED
+implementation planning authority: ESTABLISHED
+008-A: COMPLETE
+008-B: NEXT / NOT STARTED
+protected 006-D baseline: NOT YET QUALIFIED BY PHASE 008
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
-Phase 008 is not a coding phase. It refreshes the implementation plan against the completed design, accepted architecture, 007-H residual register, and protected 006-D baseline. The old 006-E–M sequence remains planning lineage rather than automatic execution authority.
+Phase 008 is not a coding phase. It refreshes the implementation plan against completed semantic design, accepted architecture, the 007-H residual register, and the retained 006-D baseline. The old 006-E–M sequence remains planning lineage rather than automatic execution authority.
 
-If the Phase 008 exit passes, 008-L will explicitly authorize a dependency-safe first executable slice and hand off to Phase 009. Until then, new domain implementation remains not started.
+008-A establishes that current semantic/governance owners constrain architecture, architecture constrains implementation, and implementation plans/code remain downstream. The Design / Implementation Boundary separately owns whether execution is authorized. Semantic contradictions route through `CHG-*`; implementation inconvenience does not silently weaken upstream meaning.
+
+If the Phase 008 exit passes, 008-L may explicitly authorize a dependency-safe first executable slice and hand off to Phase 009. Until then, new domain implementation remains not started.
 
 # Navigation Guidance
 
@@ -77,6 +75,8 @@ For external representation/publication work, preserve exact source authority th
 
 For implementation planning, load the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), [Phase 008 routing](008-implementation-reentry/), task-relevant architecture, and accepted implementation contracts. Use historical Phase 006 only when its rationale or prior dependency reasoning materially helps the current subgroup.
 
-Passing Knowledge Validation or Implementation Verification is evidence for the checked revision; neither creates OKF verification metadata, implementation correctness, production certification, or authority to skip the Phase 008 first-slice boundary.
+The immediate next task is **008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation**.
+
+Passing Knowledge Validation or Implementation Verification is evidence for the checked revision; neither creates OKF verification metadata, implementation correctness, executable-slice authorization, deployment authority, or production certification.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
