@@ -1,18 +1,20 @@
 ---
 type: Implementation Contract
 title: Source Topology, Package Boundaries & Dependency Enforcement
-description: Defines MUDAC's current workspace/source topology, authoritative module packages, public/private package seams, coordination/projection placement, browser layering, shared-foundation limits, test ownership, and dependency-graph enforcement.
+description: Defines MUDAC's current workspace/source topology, authoritative module packages, public/private package seams, coordination/projection placement, browser layering, shared-foundation limits, test ownership, persistence/migration placement, and dependency-graph enforcement.
 status: stable
 tags: [implementation, source-topology, packages, modules, dependencies, monorepo, enforcement]
 sources:
   - resource: ../../006-implementation-planning/006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md
+  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
+  - resource: persistence-history-projection.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/data-persistence.md
   - resource: ../architecture/commands-api-concurrency.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T15:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
 ---
 
 # Purpose
@@ -80,9 +82,11 @@ A downstream module may consume an upstream public contract/reference without ac
 
 It owns no domain entity/table/invariant and never becomes a generic service layer imported by authoritative modules.
 
+008-D permits a narrowly technical migration area under `packages/application/migrations/platform/` for shared one-database mechanics such as migration bookkeeping and transactional outbox infrastructure. That exception does not authorize application-owned domain tables.
+
 ## Cross-module projections are isolated and non-authoritative
 
-`@mudac/projections` owns projection/read shapes, projection handlers, and projection-owned storage/query adapters. It may consume public module snapshots/queries/change facts but cannot mutate authoritative module storage or become the sole precondition source for consequential commands.
+`@mudac/projections` owns projection/read shapes, projection handlers, generation/freshness metadata, and projection-owned storage/query adapters. It may consume public module snapshots/queries/change facts but cannot mutate authoritative module storage or become the sole precondition source for consequential commands.
 
 Authoritative modules do not depend on projections.
 
@@ -98,7 +102,7 @@ Foundation is browser-safe by default; Node/vendor-specific dependencies require
 
 Persistence/provider/queue/object-store implementations normally live inside the module whose ports they implement. Deployable roots supply environment/runtime dependencies and compose module factories.
 
-A central infrastructure package with unrestricted access to every module/table is not the default. Reusable technical adapters become shared only after demonstrated business-neutral reuse.
+A central infrastructure package with unrestricted access to every module/table is not the default. 008-D explicitly found no need for a new generic persistence/infrastructure workspace package.
 
 ## Browser source cannot import server semantic or persistence implementation
 
@@ -116,7 +120,7 @@ Primitives do not depend on patterns/features/routes; patterns do not depend on 
 
 Accepted HTTP transport schemas remain at the API transport boundary and generate OpenAPI outward under `IMPL-006`/`IMPL-011`.
 
-When 006-G introduces a browser client, generated transport code lives behind one `@mudac/api-client`-style boundary. Generated DTOs do not become domain entities, and feature code may wrap them with browser semantic/recovery adapters.
+When 008-F later plans a browser client boundary, generated transport code lives behind one `@mudac/api-client`-style boundary. Generated DTOs do not become domain entities, and feature code may wrap them with browser semantic/recovery adapters.
 
 ## Test/source boundaries preserve production ownership
 
@@ -134,7 +138,7 @@ Cross-workspace imports use package names/public exports. Relative traversal acr
 
 Restrictive package exports form the first physical public/private seam. `dependency-cruiser` is the repository dependency-graph rule engine for cross-package/module/browser/test/layer restrictions and undeclared/unresolvable dependency checks; ESLint restrictions may provide faster local feedback but are not the sole architecture control.
 
-The executable rule configuration is introduced with the workspace/bootstrap in 006-D and runs inside the stable **Implementation Verification** aggregate.
+The executable rule configuration was introduced with the 006-D workspace/bootstrap and remains part of stable **Implementation Verification**.
 
 ## Circular production dependencies and boundary violations are blocking defects
 
@@ -162,7 +166,7 @@ packages/
   projections/
   foundation/
   test-support/
-  api-client/              # only once 006-G creates the generated client boundary
+  api-client/              # only once later authorized transport implementation needs it
 
 infra/
 scripts/
@@ -188,7 +192,26 @@ src/
 migrations/
 ```
 
-Do not create empty layers merely to satisfy the diagram. `migrations/` ownership/order/details remain governed by 006-E.
+Do not create empty layers merely to satisfy the diagram.
+
+008-D now owns the migration placement/ordering contract: authoritative module migrations remain owner-local, projection migrations remain under `@mudac/projections`, narrow one-database technical migrations may live under `packages/application/migrations/platform/`, and repository-level `scripts/db/` performs orchestration without becoming semantic ownership.
+
+# Persistence/migration source placement
+
+When an authorized Phase 009 slice actually introduces persistence, the planned layout is:
+
+```text
+packages/modules/<owner>/migrations/
+packages/modules/<owner>/src/adapters/postgres/
+packages/projections/migrations/
+packages/projections/src/adapters/postgres/
+packages/application/migrations/platform/
+scripts/db/migrate.ts
+```
+
+Each module defines its own Kysely table/row mappings privately. Cross-module code consumes public contracts, not another package's persistence types.
+
+Shared PostgreSQL pool/transaction composition is supplied at application/runtime composition boundaries. 008-F owns the exact transaction-context interface; it does not alter owner-local storage access.
 
 # Allowed module dependency matrix
 
@@ -222,4 +245,6 @@ One API/worker deployment may contain code from many packages while semantic own
 
 # Handoff
 
-006-D instantiates this topology: pnpm/root TypeScript configuration, package manifests/exports, dependency-cruiser rules, executable API/worker/web skeletons, local runtime/IaC layout, and CI enforcement. Later groups fill these boundaries without redefining them implicitly.
+The protected 006-D baseline instantiates the package/application skeleton and dependency enforcement without domain behavior. 008-D has now fixed the downstream persistence/migration placement for future authorized work.
+
+008-E may plan Identity/Participation/Access/session storage inside the `identity_access` owner boundary. 008-F may plan shared transaction composition without exposing owner-private tables. No new domain implementation is authorized before 008-L.
