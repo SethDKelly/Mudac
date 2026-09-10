@@ -2,7 +2,7 @@
 
 Active design-refinement history for the renewed Jackson Concept Design runway.
 
-Current design/implementation boundary authority lives in [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md). Use current canonical product/UX/governance/synchronization owners for present-day meaning; use these Phase 007 records for audit rationale, design changes, completeness findings, and methodology-exit evidence.
+Current design/implementation boundary authority lives in [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md). Use current canonical product/UX/governance/synchronization owners for present-day meaning; use these Phase 007 records for audit rationale, design changes, completeness findings, residual-risk classification, and methodology-exit evidence.
 
 # Status
 
@@ -17,13 +17,26 @@ Phase 007 is **In Progress**.
 * [007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation](007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md) — **Complete**. Pressure-tests ordinary, exceptional, degraded, concurrent, malicious, and recovery scenarios; retains the sixteen-Concept catalog; clarifies technical/break-glass versus semantic authority and irreversible disclosure exposure.
 * [007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit](007-F-judge-organizer-experience-concept-action-synchronization-authority-traceability-audit.md) — **Complete**. Traces material Judge/Organizer interactions to Concept actions, queries, synchronizations, projections, working state and current authority; adds a canonical experience action/authority traceability contract without adding another Concept.
 * [007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit](007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md) — **Complete**. Integrates Evaluation/exception/correction/finalization/disclosure/continuity policies with Coverage/Aggregate/Rank, Official Outcome Revision, Export and Publication; adds cross-cutting operational-exception governance plus narrow representation/source-authority clarifications without adding another Concept.
+* [007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit](007-H-cross-layer-design-completeness-residual-semantic-risk-jackson-methodology-exit-readiness-audit.md) — **Complete**. Reconciles Concepts, synchronizations, temporal/correction semantics, policy/mechanism/invariant layers, experience, Phase 005 architecture and deferred Phase 006 work; finds no known baseline semantic blocker and classifies remaining work as downstream architecture detail, implementation/evidence, or future scope.
+
+# Current decision posture
+
+007-H establishes:
+
+```text
+semantic exit readiness: PASS
+formal Jackson methodology exit: NOT YET PERFORMED
+implementation resume: NOT AUTHORIZED
+```
+
+The implementation freeze therefore remains in force. 007-H is evidence for the formal exit decision, not a substitute for it.
 
 # Next
 
-**007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit**.
+**007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision**.
 
-The next audit should stop adding local detail and test the current canonical knowledge set as one design: Concepts, synchronizations, temporal/correction semantics, policies/invariants/mechanisms, experience contracts, accepted architecture constraints, explicit deferrals, and Phase 007 evidence should be reconciled into an exit-readiness judgment. Any residual issue must be classified as a semantic blocker, adequately constrained architecture detail, implementation-planning deferral, or future-scope backlog item.
+007-I should explicitly decide the methodology exit for the current baseline, identify accepted residual uncertainty, update the canonical post-exit governance posture if approved, and state whether/how implementation planning may resume before any domain coding begins.
 
 # Authority note
 
-Historical Phase 005/006 exit and planning records remain append-stable provenance. Later Phase 007 refinements update current canonical owners explicitly when design meaning changes. Passing 007-H would still not authorize implementation; methodology exit and implementation resume remain explicit later decisions.
+Historical Phase 005/006 exit and planning records remain append-stable provenance. Later Phase 007 refinements update current canonical owners explicitly when design meaning changes.
