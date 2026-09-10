@@ -8,6 +8,7 @@ sources:
   - resource: ../../006-implementation-planning/006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md
   - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
+  - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: runtime-delivery-bootstrap.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: ../governance/documentation-authority.md
@@ -18,14 +19,14 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T15:04:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T17:23:00Z }
 ---
 
 # Purpose
 
 Define the durable implementation-level rules established at Phase 006 entry and retained after the formal Jackson Concept Design exit. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
 
-Implementation **planning** is now active under Phase 008. New domain implementation remains not started beyond the protected 006-D non-domain baseline, and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
+Implementation **planning** is active under Phase 008. 008-B has qualified the protected 006-D non-domain substrate, but new domain implementation remains not started and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
 
 <a id="impl-001"></a>
 ## IMPL-001 — Upstream canonical meaning outranks implementation convenience
@@ -88,7 +89,7 @@ Suppressions are narrow and explained. Repository/module dependency enforcement 
 
 When application infrastructure implementation is explicitly authorized, OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
 
-The retained runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
+The qualified runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
 
 <a id="impl-010"></a>
 ## IMPL-010 — Dependency versions and lockfiles are deliberate, reproducible inputs
@@ -111,6 +112,8 @@ The implementation baseline uses layered dependency, static-code, container and 
 
 Findings are fixed, shown to be inapplicable, or explicitly accepted with reason/owner/expiry-equivalent handling. Broad permanent suppression is not the default resolution.
 
+008-B qualified the currently configured lockfile/Dependabot/CodeQL/bootstrap controls but could not read the Dependabot alert inventory through the current connector; configured controls must not be restated as proof of zero open dependency findings.
+
 <a id="impl-013"></a>
 ## IMPL-013 — `main` is intended to be PR-gated by required current checks before implementation merges
 
@@ -118,7 +121,7 @@ When executable implementation work is authorized, ordinary changes reach `main`
 
 A mandatory reviewer count is not required while the repository is effectively single-maintainer; review requirements should strengthen when independent maintainers exist rather than create ceremonial self-approval.
 
-The required workflow checks now exist, but repository ruleset/branch-protection administration remains an external repository-admin gate because the current connected GitHub capability cannot configure or verify all protection settings. Workflow existence must not be represented as enforced merge policy until those controls are independently configured and confirmed.
+The required workflow checks exist, but repository ruleset/branch-protection administration remains an external repository-admin gate. 008-B revalidated that the repository rulesets endpoint exposes no rulesets and the current integration cannot read branch-protection state. Workflow existence must not be represented as enforced merge policy until those controls are independently configured and confirmed.
 
 <a id="impl-014"></a>
 ## IMPL-014 — Merge does not imply production deployment authority
@@ -159,16 +162,16 @@ AWS IaC              OpenTofu
 security baseline    GitHub dependency/CodeQL + package audit + Trivy + IaC checks
 ```
 
-Exact implementation versions are pinned in manifests/lockfiles and are not permanent canonical semantics.
+Exact implementation versions are pinned in manifests/lockfiles and are not permanent canonical semantics. 008-B verified that the current pins/lockfile still align with the retained 006-D baseline.
 
 # Current delivery posture
 
 006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap.
 
-007-A later froze execution and reopened deliberate design. Phase 007 has now formally exited through 007-I. The 006-D substrate is retained as a **protected non-domain implementation baseline**, while 006-E through 006-M remain historical planning lineage rather than the current execution queue.
+007-A later froze execution and reopened deliberate design. Phase 007 formally exited through 007-I. Phase 008 is now active: 008-A established implementation-planning authority, and 008-B qualified the retained 006-D substrate after narrow remediation.
 
-Phase 008 implementation planning is active. 008-A establishes the authority hierarchy and planning guardrails; 008-B next qualifies the retained 006-D baseline before later implementation plans depend on it.
+008-C is next and will ingest the residual register and explicitly dispose the historical 006-E–M planning queue against the qualified baseline.
 
 No first executable domain slice is authorized until 008-L. The first new domain implementation belongs to Phase 009 after explicit authorization.
 
-The stable Knowledge Validation and Implementation Verification workflows remain executable for the retained substrate. Actual repository protection and protected production-environment administration remains explicitly external until independently configured and verified; this owner does not conflate workflow availability with enforced GitHub policy.
+The stable Knowledge Validation and Implementation Verification workflows remain executable. Actual repository protection and protected production-environment administration remain external until independently configured and verified; workflow availability is not enforced GitHub policy.
