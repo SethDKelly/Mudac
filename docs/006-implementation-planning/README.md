@@ -1,12 +1,14 @@
 # Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy
 
-Status: **Frozen after 006-D**
+Status: **Historical planning/bootstrap phase — execution interrupted after 006-D**
 
 ## Current authority
 
-Phase 006 began implementation planning and then crossed into executable bootstrap work at 006-D. A later human design decision freezes that executable substrate and returns MUDAC to deliberate Jackson Concept Design refinement before any domain implementation continues.
+Phase 006 began implementation planning and crossed into executable non-domain bootstrap work at 006-D. 007-A later froze further domain implementation and reopened deliberate Jackson Concept Design. Phase 007 has now formally exited that renewed methodology through 007-I.
 
-The current freeze is owned by [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md) and recorded by [007-A — Design Re-entry, Implementation Freeze & Jackson Completion Criteria](../007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md).
+The current boundary is owned by [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md).
+
+Phase 006 is **not reopened as the active execution queue**. Its records remain planning/bootstrap provenance and useful dependency rationale for the Phase 008 refresh.
 
 005-J remains historical provenance for the earlier architecture-exit decision; it is not retroactively rewritten.
 
@@ -14,38 +16,38 @@ The current freeze is owned by [Design / Implementation Boundary](../canonical/g
 
 | Group | Topic | Status |
 | --- | --- | --- |
-| 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete** |
-| 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | **Complete** |
-| 006-C | [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | **Complete** |
-| 006-D | [Environment, IaC, CI/CD, Local Development & Runtime Bootstrap](006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md) | **Complete — frozen prototype boundary** |
-| 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | **Deferred** |
-| 006-F | Identity, Session, Access, Security & Invitation Foundation | **Deferred** |
-| 006-G | API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation | **Deferred** |
-| 006-H | Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation | **Deferred** |
-| 006-I | Competition Setup, Participation & Judging Operations Vertical Slice | **Deferred** |
-| 006-J | Evaluation, Scorecard, Draft Synchronization, Conflict & Paper-Capture Vertical Slice | **Deferred** |
-| 006-K | Reconciliation, Coverage, Ranking, Awards, Finalization & Official Outcome Vertical Slice | **Deferred** |
-| 006-L | Export, Artifact, Publication, Print & External Representation Vertical Slice | **Deferred** |
-| 006-M | Integrated Security, Observability, Performance, Recovery, Operational Readiness & Phase Exit | **Deferred** |
+| 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete — historical planning** |
+| 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | **Complete — historical planning** |
+| 006-C | [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | **Complete — historical planning** |
+| 006-D | [Environment, IaC, CI/CD, Local Development & Runtime Bootstrap](006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md) | **Complete — retained protected non-domain baseline** |
+| 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | **Not executed — historical plan lineage** |
+| 006-F | Identity, Session, Access, Security & Invitation Foundation | **Not executed — historical plan lineage** |
+| 006-G | API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation | **Not executed — historical plan lineage** |
+| 006-H | Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation | **Not executed — historical plan lineage** |
+| 006-I | Competition Setup, Participation & Judging Operations Vertical Slice | **Not executed — historical plan lineage** |
+| 006-J | Evaluation, Scorecard, Draft Synchronization, Conflict & Paper-Capture Vertical Slice | **Not executed — historical plan lineage** |
+| 006-K | Reconciliation, Coverage, Ranking, Awards, Finalization & Official Outcome Vertical Slice | **Not executed — historical plan lineage** |
+| 006-L | Export, Artifact, Publication, Print & External Representation Vertical Slice | **Not executed — historical plan lineage** |
+| 006-M | Integrated Security, Observability, Performance, Recovery, Operational Readiness & Phase Exit | **Not executed — historical plan lineage** |
 
-## Frozen executable baseline
+## Retained 006-D implementation baseline
 
-006-D remains in the repository as a deliberately non-domain prototype containing:
+006-D remains in the repository as a deliberately non-domain implementation substrate containing:
 
-- the pinned pnpm/TypeScript workspace and lockfile;
+- pinned pnpm/TypeScript workspace and lockfile;
 - minimal API, worker and browser composition roots;
 - package/module seams without MUDAC domain behavior;
 - local PostgreSQL service bootstrap without authoritative domain schema;
 - CI/static/dependency checks;
-- OpenTofu environment/root scaffolding without production provisioning.
+- OpenTofu environment/root scaffolding without production application provisioning.
 
-The bootstrap may receive narrow security/compatibility maintenance needed to remain buildable, but it must not advance persistence, authentication, API semantics, IndexedDB Draft behavior, domain features or real application AWS provisioning.
+It is now a **protected baseline**, not a design-incomplete freeze marker.
 
-## Deferred implementation plan
+Until Phase 008 explicitly authorizes the first domain implementation slice, executable changes remain limited to narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current design.
 
-The original 006-E through 006-M decomposition is preserved as planning lineage. It may be revised or superseded after the renewed design runway reaches a formal methodology exit.
+## Original dependency intent
 
-Its original dependency intent remains useful context:
+The earlier dependency chain remains useful planning evidence:
 
 ```text
 006-E persistence
@@ -67,40 +69,36 @@ Its original dependency intent remains useful context:
 006-M integrated readiness
 ```
 
-But this chain is **not executable authority while the design freeze is active**.
+However, **this chain is no longer current executable authority**.
 
-## Phase 007 reconciliation requirement
+Phase 007 materially refined the semantics that those slices must implement. Phase 008 may preserve, split, merge, rename, reorder, or replace the old slices after deliberate dependency review.
 
-007-H has completed the cross-layer semantic exit-readiness audit and found no known baseline semantic blocker. That result does **not** resume this phase.
+## Phase 007 reconciliation requirements
 
-Before any later implementation execution, the deferred plan must be refreshed against the Phase 007 refinements, including:
+Any refreshed implementation plan must incorporate at least:
 
 - temporal/correction/invalidation/replacement and latest-declared-official + Affected semantics;
 - explicit authority-establishing versus derived/convergent synchronization effects;
-- adversarial technical/break-glass and disclosure-exposure findings;
+- adversarial technical/break-glass and irreversible disclosure-exposure findings;
 - Judge/Organizer experience action/authority traceability;
 - Operational Exception & Override Governance;
 - Export representation-authority monotonicity;
-- purpose/source-specific Publication prerequisites.
+- purpose/source-specific Publication prerequisites;
+- the 007-H architecture/implementation/evidence residual register.
 
-The refresh may preserve, reorder, split, merge, rename, or supersede 006-E through 006-M. Historical plan records remain provenance rather than automatic execution instructions.
-
-## Resume condition
-
-Implementation resumes only after a dedicated formal Jackson-methodology exit and explicit implementation-resume decision.
-
-The current canonical posture is:
+## Current post-exit posture
 
 ```text
-semantic exit readiness: PASS
-formal Jackson methodology exit: NOT YET PERFORMED
-implementation resume: NOT AUTHORIZED
+Jackson Concept Design methodology: COMPLETE / EXITED
+implementation planning: READY TO RESUME
+Phase 008 plan refresh: NEXT / NOT STARTED
+new domain implementation after 006-D: NOT STARTED
 ```
 
-Green CI, the existence of 006-E plans, 007-H exit readiness, or the prior 005-J conclusion does not independently authorize continuation.
+Green CI, historical 006 plans, or the prior 005-J architecture exit do not authorize bypassing Phase 008 plan refresh.
 
 ## Next
 
-Current work remains in [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/).
+Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
 
-Proceed to **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision**. If that decision later authorizes implementation planning to resume, refresh this Phase 006 plan against Phase 007 before executing domain work.
+Use Phase 006 as lineage and input, not as an automatically resumed work queue.
