@@ -1,13 +1,15 @@
 ---
 type: Implementation Contract
 title: Verification Strategy, Evidence & Quality Gates
-description: Defines MUDAC's current verification layers, deterministic evidence/fixture rules, stable-rule traceability, external-adapter testing, accessibility/security/concurrency/recovery evidence, and CI quality-gate semantics.
+description: Defines MUDAC's current verification layers, deterministic evidence/fixture rules, stable-rule traceability, external-adapter testing, persistence/migration evidence, accessibility/security/concurrency/recovery evidence, and CI quality-gate semantics.
 status: stable
 tags: [implementation, verification, testing, evidence, fixtures, quality-gates]
 sources:
   - resource: ../../006-implementation-planning/006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md
+  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
   - resource: implementation-foundation.md
   - resource: runtime-delivery-bootstrap.md
+  - resource: persistence-history-projection.md
   - resource: ../governance/validation-enforcement.md
   - resource: ../architecture/architectural-foundation.md
   - resource: ../architecture/application-boundaries.md
@@ -18,7 +20,7 @@ sources:
   - resource: ../architecture/external-representation.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T00:20:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
 ---
 
 # Purpose
@@ -56,6 +58,8 @@ Sleep timing, test-order dependence, uncontrolled network calls, and shared muta
 When correctness depends on SQL constraints, transactions, isolation/locking, migrations, concurrency, PostgreSQL types, or other production database semantics, tests use disposable real PostgreSQL environments such as Testcontainers rather than SQLite, in-memory maps, or query-layer mocks.
 
 Database integration starts from explicit migrations except when intentionally testing migration from a prior release state.
+
+008-D additionally requires persistence evidence for migration checksum/order/locking behavior, owner-local constraint boundaries, immutable Version lineage, no-current-authority states, Provenance correction, policy-specific exception records, atomic authority+outbox writes, outbox duplicate/out-of-order convergence, and projection generation rebuilds as those mechanisms are implemented.
 
 ## External adapters have deterministic contract fakes plus real-service evidence where vendor semantics matter
 
@@ -107,9 +111,11 @@ Package-specific floors may be introduced once implementation exists and they de
 
 ## CI uses stable blocking gates plus deeper scheduled/release evidence
 
-The executable **Implementation Verification** workflow now provides the stable application/IaC check identity established by 006-D, while Knowledge Validation remains separate. Internal checks may evolve without forcing a new semantic meaning for the gate.
+The executable **Implementation Verification** workflow provides the stable application/IaC check identity established by 006-D, while Knowledge Validation remains separate. Internal checks may evolve without forcing a new semantic meaning for the gate.
 
-The current bootstrap gate covers reproducible installation, formatting, type checking, lint, source dependency rules, current unit tests/builds, local Compose configuration, and OpenTofu formatting/root validation. Later groups add applicable database/API/component/generated/security evidence behind the same verification posture. Deeper browser/concurrency/recovery/scanner suites may run on main/schedule; migration/load/restore/DR/manual-accessibility/event-day evidence belongs to release/operational readiness as appropriate.
+The qualified bootstrap gate covers reproducible installation, formatting, type checking, lint, source dependency rules, current unit tests/builds, local Compose configuration, and OpenTofu formatting/root validation. Later authorized Phase 009 slices add applicable database/API/component/generated/security evidence behind the same verification posture. Deeper browser/concurrency/recovery/scanner suites may run on main/schedule; migration/load/restore/DR/manual-accessibility/event-day evidence belongs to release/operational readiness as appropriate.
+
+Phase 008 planning documents may define future evidence but do not create empty executable test categories merely to make unimplemented work appear verified.
 
 Workflow existence does not prove GitHub branch protection currently requires the check; repository-admin enforcement remains explicitly tracked by the runtime/delivery owner.
 
@@ -141,8 +147,10 @@ migration/deployment    prior/current schema compatibility + rollout evidence
 operational readiness   load/restore/DR/paper/runbook exercises
 ```
 
-# Current CI posture
+# Current CI and planning posture
 
-006-D has instantiated the pinned workspace and the stable **Implementation Verification** workflow. 006-E onward add real persistence/domain/browser evidence as their behavior appears; empty test categories are not treated as proof before the corresponding implementation exists.
+006-D instantiated the pinned workspace and stable **Implementation Verification** workflow. 008-B re-qualified that bootstrap. 008-D has now defined the persistence/migration evidence contract that future authorized persistence implementation must add when the corresponding behavior exists.
 
 Knowledge Validation remains its own `VAL-*`-governed read-only structural check and is not absorbed into the application test runner. Repository ruleset/environment administration remains an external GitHub administration gate until independently configured and verified.
+
+No Phase 008 planning result, including 008-D, authorizes creating the database test harness, migrations, or domain persistence before 008-L selects the Phase 009 entry slice.
