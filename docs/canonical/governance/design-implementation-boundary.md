@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's current post-Concept-Design posture, Phase 008 planning authority, qualified protected 006-D baseline, and the explicit gate before new domain implementation begins.
+description: Defines MUDAC's current post-Concept-Design posture, Phase 008 planning authority, qualified protected 006-D baseline, reconciled residual/historical-plan ownership, and the explicit gate before new domain implementation begins.
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, planning]
 sources:
@@ -9,6 +9,7 @@ sources:
   - resource: ../../008-implementation-reentry/README.md
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
+  - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
   - resource: change-governance.md
   - resource: methodology-terminology.md
   - resource: ../synchronizations/concept-synchronizations.md
@@ -17,7 +18,7 @@ sources:
   - resource: ../experience/action-authority-traceability.md
   - resource: ../implementation/runtime-delivery-bootstrap.md
   - resource: ../implementation/implementation-foundation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T17:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:04:00Z }
 ---
 
 # Purpose
@@ -26,7 +27,7 @@ Keep the boundary between completed MUDAC Concept Design, active implementation 
 
 # Current state
 
-MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline. 008-A established current implementation-planning authority and guardrails. 008-B has now qualified the retained 006-D executable substrate after narrow non-domain remediation.
+MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline. 008-A established implementation-planning authority and guardrails. 008-B qualified the retained 006-D executable substrate. 008-C has now reconciled the accepted residual register and historical 006-E through 006-M plan into explicit current Phase 008 ownership.
 
 The governing status is:
 
@@ -39,7 +40,10 @@ implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
 protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-008-C: NEXT / NOT STARTED
+008-C: COMPLETE — PASS
+residual ownership: CLOSED FOR CURRENT BASELINE
+historical 006-E–M executable queue: SUPERSEDED / MAPPED
+008-D: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
@@ -72,7 +76,7 @@ Historical phase records provide rationale/provenance. Routing artifacts route. 
 
 008-B audited the retained non-domain workspace against current authority and found no semantic, architectural, or accidental-domain-implementation blocker.
 
-The baseline is now qualified for later Phase 008 planning and contains only the accepted bootstrap class:
+The baseline is qualified for later Phase 008 planning and contains only the accepted bootstrap class:
 
 - pinned Node/pnpm/TypeScript/application-tool manifests and committed lockfile;
 - minimal API, worker and browser composition roots;
@@ -82,26 +86,41 @@ The baseline is now qualified for later Phase 008 planning and contains only the
 - CI/static/dependency enforcement and supply-chain configuration;
 - separate OpenTofu nonproduction/production/recovery roots without AWS application resources.
 
-008-B repaired stale browser phase guidance and removed the historical `phase-006-*` special push trigger from Implementation Verification. Those were non-domain maintenance changes within the permitted boundary.
-
 Qualification means the substrate may be relied upon as **planning input**. It does not authorize domain extension of that substrate.
+
+# Reconciled residual and historical-plan ownership
+
+008-C closes the ambiguity around accepted downstream uncertainty.
+
+All six 007-H Class 2 architecture details and all twelve Class 3 implementation/evidence questions now have current Phase 008 planning owners. The two 008-B administration/evidence limitations are carried to 008-K/008-L. All seven Class 4 future-scope items remain outside the current baseline unless `CHG-*` deliberately reopens them.
+
+Historical 006-E through 006-M is now fully superseded as an executable roadmap. Its useful dependency rationale remains provenance, but current planning routes only through 008-D through 008-L.
+
+The material decomposition changes include:
+
+- browser Draft/synchronization/conflict foundation moves from old 006-J into 008-G;
+- old 006-L externalization work merges into 008-J so outcomes, Finalization, Official Outcome Revision, Export, Publication and disclosure stay in one downstream authority chain without collapsing their meanings;
+- old 006-M splits into 008-K cross-cutting evidence/readiness planning and 008-L consolidated authorization/exit.
+
+008-C does not decide the physical mechanisms assigned to later groups. It makes those decisions visible, owned and dependency-ordered.
 
 # What Phase 008 planning authority permits
 
 Current work may:
 
 - use the qualified 006-D substrate as a concrete starting assumption;
-- map 007-H/007-I residuals and historical 006-E–M work into current planning owners;
-- refresh implementation slices and dependency ordering;
+- consume the 008-C residual/historical-plan ownership map;
 - define concrete downstream mechanisms where accepted architecture and semantics leave implementation latitude;
 - create implementation decision records where `IMPL-015` warrants them;
 - update canonical architecture/implementation owners when durable downstream contracts change;
 - define verification/evidence gates and explicit implementation-entry criteria;
 - prepare a specifically bounded first domain implementation slice for 008-L authorization.
 
+008-D is next and owns the detailed persistence, temporal-history, Versioning, Provenance, governed-exception, outbox, projection and migration implementation plan.
+
 # What Phase 008 does not authorize
 
-Completion of 008-A or 008-B does **not** authorize domain implementation.
+Completion of 008-A through 008-C does **not** authorize domain implementation.
 
 Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** explicitly authorizes a first executable slice, do not create new:
 
@@ -136,18 +155,18 @@ production ready
 
 Phase 006 remains historical implementation-planning/bootstrap provenance.
 
-006-A through 006-D accurately record the prior planning/bootstrap work. The executable portion of 006-D has now been re-qualified by 008-B rather than silently resumed.
+006-A through 006-D accurately record prior planning/bootstrap work. The executable portion of 006-D was re-qualified by 008-B rather than silently resumed.
 
-006-E through 006-M remain useful dependency reasoning but are superseded as current executable authority. 008-C owns their explicit preserve/split/merge/reorder/rename/supersede disposition against the current residual register and qualified baseline.
+006-E through 006-M remain preserved historical planning lineage but are **fully superseded as current executable authority**. Their explicit preserve/split/merge/rename/reorder disposition is owned by 008-C.
 
 # Open evidence and administration limits
 
-008-B revalidated two important limits:
+008-C carries the 008-B limitations forward to named owners:
 
-1. the repository rulesets endpoint currently exposes no rulesets, while branch-protection status is unreadable by the current integration; therefore intended `IMPL-013` protection must not be claimed as enforced;
-2. Dependabot configuration is visible, but the current connector does not expose its alert inventory for this audit; therefore zero open dependency findings must not be inferred.
+1. repository rulesets/branch-protection enforcement remains an 008-K evidence/admin item and an 008-L authorization consideration; workflow existence must not be represented as enforced merge policy;
+2. Dependabot alert inventory remains unavailable through the current connector and is assigned to 008-K security evidence; zero open dependency findings must not be inferred.
 
-Neither limit blocks continued Phase 008 planning. Both must remain visible to later planning/evidence gates where they become consequential.
+Neither limit blocks continued Phase 008 planning. Both become consequential when later gates rely on them.
 
 # Change control during implementation planning
 
@@ -165,14 +184,13 @@ Phase 008 follows `DOC-*` and `CTX-*`:
 
 - canonical owners control durable current meaning;
 - numbered Phase 008 records preserve planning rationale and evidence without becoming a parallel rule store;
+- 008-C is the provenance owner for residual/historical-plan mapping rather than a new canonical rule namespace;
 - historical phases are loaded only when rationale, chronology, or supersession requires them;
 - routing artifacts summarize and link rather than own rules;
 - agents stop expanding context once the material authority set is sufficient.
 
-No Phase 008-specific stable-rule namespace is created merely to restate existing governance.
-
 # Current handoff
 
-Proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix** under [Phase 008](../../008-implementation-reentry/).
+Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan** under [Phase 008](../../008-implementation-reentry/).
 
-008-C may rely on the qualified bootstrap as planning input, but new domain implementation remains **NOT STARTED** and no first executable slice is authorized until 008-L explicitly changes this boundary.
+008-D may rely on the qualified bootstrap and 008-C ownership map as planning inputs. New domain implementation remains **NOT STARTED** and no first executable slice is authorized until 008-L explicitly changes this boundary.
