@@ -4,7 +4,7 @@ The repository is the durable design and implementation authority; conversation 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, temporal/correction, policy, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, temporal/correction, policy, UX, governance, architecture, and implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
 Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
@@ -15,57 +15,51 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 003 — Conceptual UX Architecture: **Complete**
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
 * Phase 005 — System, Application, Data & Synchronization Architecture: **Complete as historical architecture exit**
-* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **Frozen after 006-D**
+* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **Historical/frozen after 006-D; 006-E–M superseded as current execution queue**
   * 006-A — implementation authority/toolchain: Complete
   * 006-B — verification/evidence strategy: Complete
   * 006-C — source/package/dependency topology: Complete
-  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: Complete and retained as a frozen non-domain prototype
-  * 006-E through 006-M: **Deferred**
-* Phase 007 — Jackson Design Refinement & Methodology Closure: **In Progress**
-  * 007-A — design re-entry, implementation freeze & Jackson completion criteria: Complete
-  * 007-B — Concept Completeness, Independence & Genericity Audit: **Complete**
-  * 007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
-  * 007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
-  * 007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: **Complete**
-  * 007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: **Complete**
-  * 007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit: **Complete**
-  * 007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit: **Complete**
-  * **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: Next**
+  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: Complete and retained as a protected non-domain implementation baseline
+  * 006-E through 006-M: historical deferred planning lineage; must be refreshed before execution
+* Phase 007 — Jackson Design Refinement & Methodology Closure: **Complete — formal methodology exit passed**
+  * 007-A through 007-H: Complete
+  * 007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: **Complete — PASS**
+* Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **Next — not started**
 
-## Current design posture
+## Current posture
 
-MUDAC remains in deliberate design refinement before any domain schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation proceeds.
+MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline.
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D added [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
+Phase 007 established the current sixteen-Concept catalog, cross-Concept synchronization model, temporal/correction/historical-truth semantics, adversarial and degraded-operation closure, Judge/Organizer experience-to-authority traceability, operational-exception governance, and representation/outcome/disclosure closure. 007-H then found no known unresolved baseline semantic/design blocker across the current semantic, experience, architecture, and deferred implementation layers.
 
-007-E pressure-tested the model through ordinary, exceptional, degraded, concurrent, malicious and recovery scenarios. 007-F then re-audited Judge/Organizer experience architecture against the refined Concept/action/synchronization model and established [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
+007-I formally accepts that evidence and exits the methodology for the current baseline.
 
-007-G closed the integrated policy/representation plane. Evaluation Policy, Coverage/Aggregate/Rank, Panel composition, correction authority, Awards/finalization, paper continuity, Official Outcome Revision, disclosure, Export and Publication compose without another Concept. [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) owns the cross-cutting rule that exceptions preserve source truth, remain explicit/scoped/attributable, and cannot become generic invariant-bypassing overrides.
-
-007-H then reconciled those current semantics against experience, Phase 005 architecture and the frozen Phase 006 plan. It found **no known unresolved baseline semantic/design blocker**. Remaining questions are classified as adequately constrained architecture details, implementation/evidence work, or explicit future product scope. That is semantic exit-readiness evidence—not formal methodology exit or implementation-resume authority.
-
-The current posture is therefore:
+The current status is:
 
 ```text
-semantic exit readiness: PASS
-formal Jackson methodology exit: NOT YET PERFORMED
-implementation resume: NOT AUTHORIZED
+Jackson Concept Design methodology: COMPLETE / EXITED
+baseline semantic design: COMPLETE
+known baseline semantic blockers: NONE OPEN
+implementation planning: READY TO RESUME
+Phase 008 plan refresh: NEXT / NOT STARTED
+new domain implementation after 006-D: NOT STARTED
+production readiness: NOT ESTABLISHED
 ```
 
-The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
+This means implementation planning may now resume, but the old 006-E through 006-M queue is not executable authority. The retained 006-D substrate is a protected baseline until Phase 008 refreshes the plan against the completed design and explicitly authorizes a first domain implementation slice.
 
-While frozen, executable changes are limited to narrow maintenance required to keep that prototype safe/buildable and must not encode MUDAC domain semantics.
+## Why Phase 005 and Phase 006 were not erased
 
-## Why Phase 005 was not erased
+[005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier conclusion that architecture was implementation-planning ready.
 
-[005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier conclusion that architecture was implementation-planning ready. The later human decision recorded in [007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) supersedes the assumption that implementation should continue immediately.
+[007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) later superseded the assumption that implementation should continue immediately, froze domain implementation, and reopened deliberate Concept Design. [007-I](007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md) now closes that renewed methodology after the intervening evidence gates passed.
 
 Historical records are preserved rather than rewritten to make earlier decisions appear never to have happened.
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision**.
+Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
 
-007-I is the dedicated methodology-exit decision required by 007-A. Until that decision explicitly changes the boundary, the 006-D freeze remains in force.
+Phase 008 starts with implementation planning/re-entry. New domain implementation remains **not started** until that refreshed plan explicitly reaches and authorizes its first executable slice.
