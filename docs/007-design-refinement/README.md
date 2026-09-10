@@ -6,7 +6,7 @@ Status: **In Progress**
 
 Resume deliberate Concept Design refinement after freezing executable work at the 006-D non-domain bootstrap boundary.
 
-Phase 007 does not continue implementation. It re-tests the current post-architecture concept system for Jackson-style completeness, independence, genericity, synchronization integrity, temporal/correction closure, scenario pressure, experience traceability, and integrated policy/representation closure before any schema, persistence, authentication, API, or feature implementation resumes.
+Phase 007 does not continue implementation. It re-tests the current post-architecture concept system for Jackson-style completeness, independence, genericity, synchronization integrity, temporal/correction closure, scenario pressure, experience traceability, integrated policy/representation closure, and cross-layer methodology-exit readiness before any schema, persistence, authentication, API, or feature implementation resumes.
 
 The current freeze is owned by [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md).
 
@@ -20,7 +20,8 @@ The current freeze is owned by [Design / Implementation Boundary](../canonical/g
 | 007-D | [Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure](007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md) | **Complete** |
 | 007-E | [End-to-End Scenario, Exception, Failure & Adversarial Authority Validation](007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md) | **Complete** |
 | 007-F | [Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit](007-F-judge-organizer-experience-concept-action-synchronization-authority-traceability-audit.md) | **Complete** |
-| 007-G | **Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit** | **Next** |
+| 007-G | [Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit](007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md) | **Complete** |
+| 007-H | **Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit** | **Next** |
 
 Later Phase 007 subdivisions and subsequent design phases continue to be derived from audit findings rather than fixed to an arbitrary phase count in advance.
 
@@ -58,41 +59,53 @@ The sixteen-Concept model passes ordinary, exceptional, degraded, concurrent, ma
 
 ## 007-F result
 
-Judge and Organizer experience architecture remains traceable to the current Concept system.
+Judge and Organizer experience architecture remains traceable to the current Concept system. Consequential interactions map to Concept actions/queries, synchronization consequences, derived projections, non-authoritative working state, or implementation-only interaction state. The cross-cutting owner is [Experience Action, State & Authority Traceability](../canonical/experience/action-authority-traceability.md).
 
-007-F confirms that:
+## 007-G result
 
-- Judge entry/onboarding traces to Competition context, Identity, Participation and Access rather than QR/link/device authority;
-- `Ready to Judge`, readiness workspaces, exceptions, Coverage, Rank and finalization readiness remain derived projections;
-- Encounter navigation, presentation completion and Encounter completion remain distinct;
-- Scorecard Draft, Finalization and Amendment map to explicit Scorecard actions and Versioning/Provenance synchronization;
-- Organizer Panel replacement remains distinct from one-Encounter participant adjustment;
-- paper capture remains transcription/verification without Organizer authorship transfer;
-- exception rows and acknowledgement controls cannot repair source truth themselves;
-- confirmation dialogs establish deliberate intent, not domain success or authority;
-- Competition `completeEvent`, Competition `finalize`, Export generation and Publication remain separate actions;
-- role modes organize interaction but do not create lifecycle or union Access;
-- accessible/responsive/degraded variants preserve the same semantic actions and authority boundaries.
+The integrated policy/representation/outcome/disclosure model passes without adding another Concept.
 
-A new current cross-cutting experience owner, [Experience Action, State & Authority Traceability](../canonical/experience/action-authority-traceability.md), now consolidates those constraints. No new Concept or Concept action family was required.
+007-G confirms that:
 
-## 007-G objective
+- policies constrain Concept/mechanism composition rather than replacing source authority;
+- Evaluation Policy remains reconstructible and cannot be changed as a hidden implementation side effect after judging begins;
+- Coverage and Panel-composition exceptions preserve the actual observed shortfall;
+- correction authority remains family-specific rather than one generic edit/override path;
+- calculated, official, represented, published and delivered states remain distinct;
+- Competition Finalization establishes an Official Outcome Revision but does not publish results;
+- audience/disclosure rules continue to apply after an outcome becomes official;
+- Export cannot promote provisional/calculated/Affected source state into stronger authority through formatting or labeling;
+- Publication prerequisites follow the purpose/source represented: operational materials may be distributed pre-Finalization where otherwise permitted, while official-results Publication must bind to an identified Official Outcome Revision;
+- paper continuity preserves the same evaluation/authorship/policy semantics;
+- technical emergency power cannot accept Competition policy exceptions or substitute Judge/Organizer authority;
+- acknowledgement, suppression or dismissal of an exception view does not resolve its source condition.
 
-Six Jackson completion gates now have substantive evidence. 007-G should perform the remaining integrated policy/representation closure from 007-A by re-testing, as one system:
+A new cross-cutting policy owner, [Operational Exception & Override Governance](../canonical/policies/operational-exception-governance.md), now owns explicit/scoped exception semantics and prohibits generic invariant-bypassing override behavior. Export and Publication received narrow stable clarifications for representation truthfulness and purpose/source authority.
 
-- Evaluation Policy, Coverage, aggregation, Rank, precision and tie semantics;
-- anonymity/disclosure across Judge, Organizer, ceremony and public representations;
-- Panel composition and accepted exception authority;
-- correction/invalidation/replacement and post-Finalization authority;
-- Award selection/conferral and Competition Finalization;
-- paper continuity and capture parity;
-- Official Outcome Revision semantics;
-- Export currency, audience validation and external representation;
-- Publication release/withdrawal/supersession;
-- operational/technical governance boundaries where they intersect semantic authority.
+## 007-H objective
 
-The audit should look specifically for policy contradictions, representation paths that bypass source authority, implicit exception authority, or public/official semantics that still require hidden state.
+Seven Jackson completion gates now have substantive evidence. 007-H should perform a cross-layer exit-readiness audit rather than another local refinement pass.
+
+It should test whether current canonical knowledge is mutually complete and contradiction-free across:
+
+- the sixteen Concepts and their independent actions/state;
+- cross-Concept synchronizations;
+- temporal/correction/historical authority;
+- policies, mechanisms and invariants;
+- Judge/Organizer experience contracts;
+- accepted architecture constraints from Phase 005;
+- explicit deferred implementation questions/non-goals;
+- methodology-exit evidence from 007-B through 007-G.
+
+The audit should classify every remaining issue as either:
+
+1. unresolved semantic/design blocker requiring another Phase 007 subgroup;
+2. architecture detail already adequately constrained by design;
+3. implementation-planning question safe to defer until after methodology exit; or
+4. operational/product future scope that should remain backlog rather than block the current design.
+
+007-H must **not** itself authorize implementation. If it finds the design semantically exit-ready, a dedicated subsequent methodology-exit/implementation-resume decision should remain explicit.
 
 ## Next
 
-Proceed to **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit**.
+Proceed to **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit**.
