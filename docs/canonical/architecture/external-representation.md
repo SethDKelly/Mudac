@@ -7,6 +7,8 @@ tags: [architecture, paper, export, artifact, publication, representation, discl
 sources:
   - resource: ../../005-system-application-data-synchronization-architecture/005-G-paper-capture-export-artifact-publication-external-representation-architecture.md
   - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
+  - resource: ../../007-design-refinement/007-H-cross-layer-design-completeness-residual-semantic-risk-jackson-methodology-exit-readiness-audit.md
   - resource: application-boundaries.md
   - resource: data-persistence.md
   - resource: commands-api-concurrency.md
@@ -16,9 +18,10 @@ sources:
   - resource: ../policies/continuity-paper.md
   - resource: ../policies/anonymity-disclosure.md
   - resource: ../policies/correction-authority.md
+  - resource: ../policies/operational-exception-governance.md
   - resource: ../experience/paper-export-publication.md
   - resource: ../mechanisms/official-outcome-revision.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T02:12:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T08:12:00Z }
 ---
 
 # Purpose
@@ -58,7 +61,7 @@ Bucket/object names, paths, URLs, and CDN keys are locators, not semantic identi
 
 A durable external representation records the exact source Version/revision/basis it represents, the representation purpose, and the audience/disclosure profile applied. It never means merely "the latest current state."
 
-Different audience/disclosure profiles over the same source are distinct representations under [EXPORT-001](../concepts/export.md#export-001) and [DISC-002](../policies/anonymity-disclosure.md#disc-002).
+Different audience/disclosure profiles over the same source are distinct representations under [EXPORT-001](../concepts/export.md#export-001) and [DISC-002](../policies/anonymity-disclosure.md#disc-002). Representation labeling/transformation must also preserve [EXPORT-003](../concepts/export.md#export-003): an artifact cannot make provisional, incomplete, Affected, historical, or calculated source state appear to hold stronger current/official authority than its actual basis.
 
 <a id="rep-006"></a>
 ## REP-006 — Disclosure applies to the complete artifact surface
@@ -100,7 +103,7 @@ Validation/preview does not change the underlying source Version or automaticall
 
 The [Publication](../concepts/publication.md) Concept owns the deliberate domain act of release/distribution. This architecture realizes it as an authoritative record that identifies the exact Artifact/Export representation, inherited source/disclosure basis, audience, channel/destination, actor/authorizer, publication time, and current distribution state.
 
-A generated or official artifact is not public until an applicable Publication transition succeeds after authoritative commit.
+Publication eligibility follows [PUB-001](../concepts/publication.md#pub-001): operational/event representations may be released before Competition Finalization when their own source/lifecycle/disclosure constraints permit, while a Publication claiming official Competition outcomes must bind through its Export to an identified [Official Outcome Revision](../mechanisms/official-outcome-revision.md). A generated or official artifact is not public until an applicable Publication transition succeeds after authoritative commit.
 
 <a id="rep-012"></a>
 ## REP-012 — Source changes affect dependent representations without rewriting historical artifacts
@@ -156,7 +159,7 @@ channel / public or controlled distribution
 
 Relational authority stores semantic metadata and lifecycle/provenance. Object/blob storage stores large immutable binary payloads behind application-owned ports. Concrete AWS realization is owned by [AWS-007](aws-runtime-operations.md#aws-007) for private versioned/encrypted S3 Artifact/evidence storage, [AWS-008](aws-runtime-operations.md#aws-008) for retryable asynchronous work, and [AWS-002](aws-runtime-operations.md#aws-002) for the CloudFront/private-origin delivery boundary.
 
-Exact renderer/template stack, signed-delivery implementation, malware/content-scanning mechanism, retention automation, and print integration remain implementation details constrained by `REP-*`, the Publication Concept, and the applicable `AWS-*` contracts.
+Exact renderer/template stack, signed-delivery implementation, malware/content-scanning mechanism, retention automation, and print integration remain implementation details constrained by `REP-*`, the Export/Publication Concepts, [Operational Exception & Override Governance](../policies/operational-exception-governance.md), and the applicable `AWS-*` contracts.
 
 # Failure posture
 
