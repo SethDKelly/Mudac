@@ -38,7 +38,7 @@ Before any executable implementation task, load [Design / Implementation Boundar
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
 * [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — **Frozen after 006-D**. 006-E through 006-M are deferred.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-G are complete; **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit is next**.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-H are complete; **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision is next**.
 
 # Design-refinement progress
 
@@ -48,7 +48,9 @@ Before any executable implementation task, load [Design / Implementation Boundar
 
 007-F validated the Judge/Organizer experience layer against that current model. Consequential interactions trace to accepted Concept actions, synchronization boundaries, derived projections or non-authoritative working state; work modes, confirmation dialogs, status/exception views, route visibility and enabled controls do not establish domain authority.
 
-007-G validates the integrated policy/representation plane. Policy-specific exceptions preserve source truth and are governed by [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md); calculated, official, represented, published, and delivered states remain distinct; [Export](canonical/concepts/export.md#export-003) cannot promote source authority; and [Publication](canonical/concepts/publication.md#pub-001) prerequisites follow representation purpose/source authority.
+007-G validated the integrated policy/representation plane. Policy-specific exceptions preserve source truth and are governed by [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md); calculated, official, represented, published, and delivered states remain distinct; [Export](canonical/concepts/export.md#export-003) cannot promote source authority; and [Publication](canonical/concepts/publication.md#pub-001) prerequisites follow representation purpose/source authority.
+
+007-H reconciled the complete current semantic system against experience, Phase 005 architecture and the frozen Phase 006 plan. It found no known unresolved baseline semantic/design blocker and classified all remaining issues as downstream architecture detail, implementation/evidence work, or future product scope. The canonical boundary now records semantic exit-readiness as passed while formal methodology exit and implementation resume remain pending.
 
 These are methodology-exit evidence, not implementation-resume authority.
 
