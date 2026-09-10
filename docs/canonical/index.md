@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, d
 * [Concepts](concepts/) — accepted MUDAC Concepts.
 * [Synchronizations](synchronizations/) — current cross-concept trigger, authority, precondition/postcondition, failure/retry, and temporal/history coordination contracts.
 * [Mechanisms](mechanisms/) — derived/supporting subjects that intentionally remain non-Concepts.
-* [Policies](policies/) — governing/configurable Competition semantics.
+* [Policies](policies/) — governing/configurable Competition semantics, including [Operational Exception & Override Governance](policies/operational-exception-governance.md) for cross-cutting exception/override boundaries.
 * [Invariants](invariants/) — cross-cutting normative constraints.
 * [Experience](experience/) — current conceptual UX contracts, including [Experience Action, State & Authority Traceability](experience/action-authority-traceability.md) for consequential interaction-to-domain ownership.
 
@@ -23,7 +23,7 @@ MUDAC has re-entered deliberate design refinement. Executable work is frozen at 
 
 Current design work proceeds through [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/).
 
-007-B established the current sixteen-Concept catalog. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale, official-outcome and Publication-history semantics. 007-E validated those semantics under end-to-end, exceptional, adversarial and degraded scenarios. 007-F revalidated Judge/Organizer experience semantics against the current Concept/action/synchronization/authority model and established the cross-cutting experience action/authority traceability owner.
+007-B established the current sixteen-Concept catalog. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale, official-outcome and Publication-history semantics. 007-E validated those semantics under end-to-end, exceptional, adversarial and degraded scenarios. 007-F revalidated Judge/Organizer experience semantics against the current Concept/action/synchronization/authority model. 007-G closes integrated policy, outcome, disclosure, representation and operational-exception governance while preserving the sixteen-Concept catalog.
 
 # Retrieval Rule
 
@@ -32,6 +32,10 @@ Load only the specific owner documents and linked dependencies required by the t
 For correction/current-vs-historical/invalidation/official-outcome/Publication-timeline questions, also load [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md).
 
 For Judge/Organizer interaction, route, action visibility, status/exception, confirmation, recovery, or UI-authority design, load [Experience Action, State & Authority Traceability](experience/action-authority-traceability.md) plus only the relevant experience owner(s).
+
+For exception, waiver, override, acknowledgement/suppression, policy bypass, or technical-emergency-versus-semantic-authority questions, load [Operational Exception & Override Governance](policies/operational-exception-governance.md) plus the specific policy/Concept owner involved.
+
+For external representation/publication questions, preserve the chain from source authority through [Export](concepts/export.md) to [Publication](concepts/publication.md); a representation may not promote its source's authority and official-result Publication must bind to an identified Official Outcome Revision.
 
 Before any code, schema, authentication, API, feature, or application-IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). While the freeze is active, implementation owners are used only for understanding the retained prototype or performing narrowly permitted maintenance.
 
