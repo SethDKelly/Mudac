@@ -15,12 +15,13 @@ Phase 007 is **In Progress**.
 * [007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit](007-C-cross-concept-synchronization-completeness-authority-seam-audit.md) — **Complete**. Consolidates current synchronization semantics, distinguishes authority-establishing from derived/convergent effects, clarifies failure/retry meaning, and confirms no additional workflow Concept is needed.
 * [007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure](007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md) — **Complete**. Separates temporal dimensions, closes correction/invalidation/replacement semantics, establishes no-silent-fallback after invalidation, and distinguishes as-known historical authority from later corrected best-known occurrence truth.
 * [007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation](007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md) — **Complete**. Pressure-tests ordinary, exceptional, degraded, concurrent, malicious, and recovery scenarios; retains the sixteen-Concept catalog; clarifies technical/break-glass versus semantic authority and irreversible disclosure exposure.
+* [007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit](007-F-judge-organizer-experience-concept-action-synchronization-authority-traceability-audit.md) — **Complete**. Traces material Judge/Organizer interactions to Concept actions, queries, synchronizations, projections, working state and current authority; adds a canonical experience action/authority traceability contract without adding another Concept.
 
 # Next
 
-**007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit**.
+**007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit**.
 
-The next audit should map material Judge/Organizer interactions, status/recovery behaviors, and exceptional UX paths back to accepted Concept Actions, synchronizations, temporal semantics, Access/disclosure rules, and authority boundaries. UI architecture must not invent product semantics absent from the current Concept model.
+The next audit should integrate the remaining policy/representation evidence gate: Evaluation Policy, anonymity/disclosure, Panel composition, correction authority, Awards/finalization, paper continuity, Official Outcome Revision, Export/Publication, and operational governance should be pressure-tested together for contradiction, hidden exception authority, or representation paths that bypass semantic source truth.
 
 # Authority note
 
