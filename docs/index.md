@@ -13,6 +13,7 @@ Current meaning is organized under canonical knowledge. Numbered phase directori
 * [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and retained implementation contracts.
 * [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog.
 * [Synchronizations](canonical/synchronizations/) — current cross-concept coordination plus temporal/correction/historical-truth contracts.
+* [Experience](canonical/experience/) — current Judge/Organizer interaction semantics, including [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
 * [Governance](canonical/governance/) — documentation authority, agent context, change/conflict, source lineage, metadata/trust/lifecycle, validation/CI, stable IDs, and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) — durable normative IDs and cross-reference registry.
 * [Architecture](canonical/architecture/) — current accepted system/application architecture contracts.
@@ -36,19 +37,21 @@ Before any executable implementation task, load [Design / Implementation Boundar
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
 * [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — **Frozen after 006-D**. 006-E through 006-M are deferred.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-E are complete; **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit is next**.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-F are complete; **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit is next**.
 
 # Design-refinement progress
 
 007-B closed current Concept-form completeness/independence evidence. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale state, historical query meaning, official-outcome succession, and Export/Publication timelines.
 
-007-E validates the resulting model across ordinary end-to-end competition operation, event-day exceptions, device/role authority pressure, interrupted and concurrent writes, paper/degraded operation, invalidation/rejudge, post-Finalization correction, disclosure failures, technical/break-glass misuse, stale derived state, malicious replay, and regional infrastructure failure. The sixteen-Concept catalog survives; current canonical Access/disclosure wording now explicitly separates technical emergency capability from Competition semantic authority and treats actual disclosure as irreversible historical exposure.
+007-E validates the resulting model across ordinary end-to-end competition operation, event-day exceptions, device/role authority pressure, interrupted and concurrent writes, paper/degraded operation, invalidation/rejudge, post-Finalization correction, disclosure failures, technical/break-glass misuse, stale derived state, malicious replay, and regional infrastructure failure. The sixteen-Concept catalog survives.
+
+007-F validates the Judge/Organizer experience layer against that current model. Consequential interactions trace to accepted Concept actions, synchronization boundaries, derived projections or non-authoritative working state; work modes, confirmation dialogs, status/exception views, route visibility and enabled controls do not establish domain authority. The current cross-cutting UX owner is [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
 
 These are methodology-exit evidence, not implementation-resume authority.
 
 # Navigation Guidance
 
-For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For cross-Concept coordination and temporal/correction questions, load [Synchronizations](canonical/synchronizations/) instead of reconstructing semantics from phase history.
+For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For cross-Concept coordination and temporal/correction questions, load [Synchronizations](canonical/synchronizations/) instead of reconstructing semantics from phase history. For material Judge/Organizer interaction or UI-authority design, load the experience action/authority traceability contract plus only the relevant experience owner(s).
 
 Current work is design refinement. The executable 006-D workspace may receive only narrowly necessary non-domain maintenance while the freeze is active.
 
