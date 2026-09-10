@@ -1,12 +1,14 @@
 ---
 type: Implementation Contract
 title: Runtime, Environment & Delivery Bootstrap
-description: Defines the retained executable MUDAC workspace/runtime bootstrap, environment classes, verification gate, OpenTofu root/state separation, supply-chain posture, deployment-authority boundary, and current protected-baseline status.
+description: Defines the qualified retained MUDAC workspace/runtime bootstrap, environment classes, verification gate, OpenTofu root/state separation, supply-chain posture, deployment-authority boundary, and protected-baseline status.
 status: stable
-tags: [implementation, runtime, environment, local-development, ci-cd, iac, delivery, protected-baseline]
+tags: [implementation, runtime, environment, local-development, ci-cd, iac, delivery, protected-baseline, qualified]
 sources:
   - resource: ../../006-implementation-planning/006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md
   - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
+  - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
+  - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
@@ -14,49 +16,71 @@ sources:
   - resource: ../architecture/aws-runtime-operations.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T14:31:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T17:23:00Z }
 ---
 
 # Purpose
 
-Define the retained executable environment/runtime/delivery substrate established by 006-D. This owner realizes accepted architecture and implementation contracts; it does not create product/domain authority or claim that production infrastructure has been provisioned.
+Define the retained executable environment/runtime/delivery substrate established by 006-D and re-qualified by 008-B. This owner realizes accepted architecture and implementation contracts; it does not create product/domain authority or claim production infrastructure has been provisioned.
 
-The current [Design / Implementation Boundary](../governance/design-implementation-boundary.md) treats this substrate as a protected non-domain implementation baseline while Phase 008 refreshes the implementation plan after formal Concept Design exit.
+The current [Design / Implementation Boundary](../governance/design-implementation-boundary.md) treats this substrate as a **qualified protected non-domain implementation baseline** while Phase 008 refreshes the implementation plan.
 
-This owner intentionally introduces no new stable-rule namespace. Runtime/bootstrap configuration cites the upstream `AWS-*`, `IMPL-*`, `MOD-*`, `FE-*`, and other rules it implements rather than creating a parallel deployment-rule universe.
+This owner introduces no new stable-rule namespace. Runtime/bootstrap configuration cites upstream `AWS-*`, `IMPL-*`, `MOD-*`, `FE-*`, and related rules rather than creating a parallel deployment-rule universe.
 
-# Current status — protected non-domain baseline
+# Current status — qualified protected baseline
 
-The renewed Jackson Concept Design methodology has formally exited for the current baseline, and implementation planning may resume. New domain implementation has **not** yet started beyond this retained bootstrap.
+008-B audited the retained workspace, package topology, toolchain pins, lockfile, application roots, local PostgreSQL, dependency enforcement, CI, supply-chain configuration, and OpenTofu roots against current authority.
 
-Until Phase 008 explicitly authorizes the first domain implementation slice, the repository may retain and narrowly maintain the 006-D substrate but must not use it to advance new MUDAC domain behavior.
+**Result: qualified for Phase 008 planning after narrow non-domain remediation.**
 
-Permitted retained substrate includes:
+The qualification does not authorize domain implementation. Until 008-L explicitly authorizes the first executable domain slice, this substrate may be retained and narrowly maintained but not extended into new MUDAC domain behavior.
 
-- pinned pnpm/Node/TypeScript manifests and lockfile;
-- minimal `apps/api`, `apps/worker`, and `apps/web` composition roots;
-- package/module seams without MUDAC domain behavior;
-- Docker Compose PostgreSQL as a local service without authoritative MUDAC schema;
-- Implementation Verification, CodeQL, Dependabot and dependency-boundary checks;
-- OpenTofu environment/state-root scaffolding without application production provisioning.
+# Qualified executable workspace
 
-Narrow security/compatibility maintenance is allowed when needed to keep this baseline safe/buildable and when it does not encode domain semantics before first-slice authorization.
+The root pnpm workspace retains:
 
-# Executable workspace
+- Node.js 24 runtime family;
+- pnpm 11.25.0;
+- TypeScript 6.0.3;
+- Fastify 5.12.1;
+- React/React DOM 19.2.8;
+- React Router 8.3.1;
+- TanStack Query 5.102.8;
+- Vite 8.2.2;
+- Vitest 4.1.11;
+- Playwright 1.62.1;
+- ESLint 10.8.1;
+- Prettier 3.9.6;
+- dependency-cruiser 18.2.0;
+- OpenTofu 1.12.0 in CI with roots constrained to the 1.12 family.
 
-The root pnpm workspace pins the accepted Node/TypeScript/tool families and commits the generated `pnpm-lock.yaml`. Frozen installs are the reproducibility baseline.
+The committed lockfile agrees with the inspected manifest pins. Frozen installs remain the reproducibility baseline.
 
-pnpm dependency build scripts remain deny-by-default under its safer-build behavior; required build packages are explicitly approved rather than globally disabling the control.
+pnpm dependency build scripts remain deny-by-default under safer-build behavior; required `esbuild` execution is explicitly allowlisted instead of globally disabling the control.
 
-`apps/api`, `apps/worker`, and `apps/web` are executable composition roots under the accepted source topology. The API proves Fastify process/health startup only; the worker proves lifecycle startup only; the browser proves React/Router/Query composition only.
+No upgrade is required merely because a newer release exists. Material upgrades remain deliberate under `IMPL-010` and require compatibility evidence when consequential.
 
-A bootstrap shell does not claim persistence, security, API-domain, local-Draft, or feature behavior exists.
+# Composition roots and domain boundary
+
+`apps/api`, `apps/worker`, and `apps/web` remain executable composition roots under the accepted source topology.
+
+- API: Fastify startup plus `/healthz` only.
+- Worker: process lifecycle/signal handling only.
+- Browser: React/Router/Query bootstrap only.
+
+The six authoritative module packages remain minimal public seams. `@mudac/application` and `@mudac/projections` remain non-domain placeholders, and `@mudac/foundation` remains business-neutral.
+
+008-B found no authoritative domain schema, migration, repository, authentication/session behavior, domain API, IndexedDB Draft behavior, Competition/Judging/Evaluation/Outcome/Export/Publication implementation, or domain-purpose AWS resource.
+
+Therefore new domain implementation after 006-D remains **NOT STARTED**.
 
 # Local development
 
 Routine local development runs Node application processes on the host and PostgreSQL through Docker Compose.
 
-External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. Deterministic local fakes support normal development/testing; targeted real-service smoke/integration evidence uses nonproduction when provider semantics matter and when the refreshed implementation plan authorizes the affected work.
+The current local service uses `postgres:17-alpine` with development-only default credentials and a named local volume. This is a qualified local bootstrap dependency, not a production PostgreSQL-version contract and not an authoritative MUDAC schema.
+
+External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. Deterministic local fakes support normal development/testing; targeted real-service evidence belongs to later authorized work when provider semantics matter.
 
 Normal local development does not require long-lived AWS credentials.
 
@@ -67,7 +91,7 @@ MUDAC distinguishes:
 - `local` — developer host + local PostgreSQL + deterministic provider fakes;
 - `CI` — ephemeral verification runners with no ordinary production authority;
 - `nonproduction` — separate AWS account in `us-east-2`, synthetic/test data and reduced redundancy where allowed;
-- `production` — separate AWS account in `us-east-2`, governed by the accepted Multi-AZ `AWS-*` topology;
+- `production` — separate AWS account in `us-east-2`, governed by accepted Multi-AZ `AWS-*` topology;
 - `recovery` — cold-recovery root in `us-east-1`, never an independently writable active MUDAC authority.
 
 Environment naming, config, state, and deployment roles must not collapse these classes.
@@ -85,41 +109,45 @@ infra/environments/
 
 OpenTofu workspaces are not used as a substitute for account/environment authority separation.
 
-Each environment uses its own remote state identity. The accepted backend is encrypted/versioned private S3 with least-privilege access and S3-native locking (`use_lockfile = true`). Account-specific backend coordinates are supplied as partial configuration rather than committed credentials.
+Each environment uses its own S3 remote-state identity. Example partial backend configuration retains encryption and S3-native locking (`use_lockfile = true`). Account-specific backend coordinates and credentials are not committed.
 
 State-storage bootstrap remains administratively separate because an environment backend cannot safely create itself.
 
-OpenTofu modules may group concrete infrastructure capabilities such as networking, edge, compute, data, identity, messaging, storage, observability, and backup/recovery. Those groupings are implementation conveniences under `AWS-*`; they do not create or replace MUDAC semantic module ownership.
+008-B confirmed the environment roots remain scaffolding-only: their current `main.tf` files identify environment/Region and do not provision AWS application resources. Reusable infrastructure modules also remain placeholders.
 
 # Verification and supply-chain posture
 
 The GitHub Actions workflow named **Implementation Verification** remains the stable executable check surface for the retained bootstrap.
 
-Its current checks include frozen install, formatting, TypeScript, ESLint, dependency-cruiser, Vitest, builds, Docker Compose configuration, and OpenTofu formatting/backend-disabled validation.
+It covers frozen install, formatting, TypeScript, ESLint, dependency-cruiser, Vitest, application builds, Docker Compose configuration, OpenTofu formatting, and backend-disabled root validation.
 
-Knowledge Validation remains separate and retains its `VAL-*` meaning.
+The workflow covers all pull requests and pushes to `main`. 008-B removed the obsolete historical `phase-006-*` direct-push special case.
 
-The bootstrap also retains a committed lockfile, explicit pnpm dependency-build approval, Dependabot for npm/GitHub Actions, CodeQL JavaScript/TypeScript analysis, and ignored secret/state/build-output paths.
+Knowledge Validation remains separate under `VAL-*`. CodeQL remains configured for JavaScript/TypeScript analysis. Dependabot remains configured weekly for npm and GitHub Actions.
 
-Scanner or CI success is evidence about the tested revision, not application authority, implementation correctness, first-slice authorization, or production certification.
+The baseline also retains ignored local secrets/state/output, restrictive package exports, and source dependency enforcement.
+
+The current connector does not expose the Dependabot alert inventory used for a complete vulnerability-state assertion. Therefore configured controls and successful CI may be claimed; zero open dependency vulnerabilities may not be inferred.
+
+Scanner or CI success is evidence about a tested revision, not application authority, implementation correctness, first-slice authorization, deployment authority, or production certification.
 
 # Repository and deployment authority
 
-Ordinary implementation merge policy is intended to require pull requests plus current Knowledge Validation and Implementation Verification checks on `main` in accordance with `IMPL-013`.
+Ordinary implementation merge policy is intended to require pull requests plus current Knowledge Validation and applicable Implementation Verification checks on `main` under `IMPL-013`.
 
-Production deployment remains separately authorized through a protected GitHub environment and OIDC-federated AWS role under `IMPL-014`/`AWS-011`. A merge does not implicitly deploy production.
+008-B revalidated that the repository rulesets endpoint currently returns no rulesets. Branch-protection state cannot be read by the connected integration. Documentation therefore must not claim the intended merge controls are enforced.
 
-The current GitHub integration cannot administer repository rulesets/branch protection or GitHub environments. Those settings remain a visible repository-admin gate until independently configured and verified; documentation must not claim enforcement merely because workflows exist.
+Production deployment remains separately authorized through a protected GitHub environment and OIDC-federated AWS role under `IMPL-014`/`AWS-011`. Those controls and actual production resources are not established by this baseline.
 
-Real local secret files are ignored. AWS runtime secrets/configuration use environment/runtime mechanisms and Secrets Manager when the relevant implementation slice is authorized. Long-lived AWS deployment keys do not belong in GitHub or repository configuration.
+Real local secret files are ignored. Long-lived AWS deployment keys do not belong in GitHub or repository configuration.
 
 # Release posture retained for future implementation
 
-When the refreshed implementation plan authorizes the affected slices, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
+When later implementation is authorized, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
 
 Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
 
-CI may format/validate OpenTofu without backend credentials. Real plan/apply occurs only under intended environment/account deployment authority and an exact reviewed revision.
+CI may validate OpenTofu without backend credentials. Real plan/apply occurs only under intended environment/account deployment authority and an exact reviewed revision.
 
 A syntactically valid IaC root does not prove AWS resources exist, are secure, can recover, or satisfy production SLOs.
 
@@ -128,8 +156,8 @@ A syntactically valid IaC root does not prove AWS resources exist, are secure, c
 ```text
 GitHub repository
   ├── pnpm workspace
-  │    ├── apps/api        Fastify bootstrap
-  │    ├── apps/worker     worker bootstrap
+  │    ├── apps/api        Fastify health bootstrap
+  │    ├── apps/worker     lifecycle bootstrap
   │    ├── apps/web        React/Router/Query bootstrap
   │    └── packages/*      accepted module/application/projection/foundation seams
   ├── Docker Compose
@@ -149,12 +177,14 @@ GitHub repository
 
 # Deliberate limitations
 
-This protected bootstrap does not implement PostgreSQL domain schemas/migrations, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
+This qualified bootstrap still does not implement PostgreSQL domain schemas/migrations, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
 
-Those items are not prohibited because Concept Design remains incomplete; the methodology has exited. They remain unstarted because Phase 008 must first refresh dependency order, verification gates, and first-slice implementation authority against the completed design.
+These are later implementation-planning/evidence concerns, not defects in the 006-D bootstrap.
 
 # Handoff
 
-Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
+The protected baseline is now qualified as current planning input.
 
-This bootstrap remains the protected starting substrate until that phase explicitly authorizes the first new domain implementation slice.
+Proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**.
+
+No first executable domain slice is authorized before 008-L; new domain implementation remains not started.
