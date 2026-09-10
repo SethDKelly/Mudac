@@ -9,6 +9,7 @@ sources:
   - resource: ../../002-concept-specification/002-B-identity-participation-access-specifications.md
   - resource: ../../002-concept-specification/002-H-export-print-operational-continuity-external-representations.md
   - resource: ../../003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md
+  - resource: ../../007-design-refinement/007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md
 ---
 
 # Canonical contract
@@ -29,4 +30,8 @@ Representation profiles such as Judge-safe, Organizer-sensitive, Ceremony-safe, 
 
 Disclosure rules apply to interactive views, search, deep links, QR payloads, filenames/metadata, print, and publication—not only page bodies.
 
-See [Access](../concepts/access.md#acc-001) and [Export](../concepts/export.md#export-001).
+A denied disclosure attempt creates no authority merely because a user possesses a URL, route, device, prior rendering, or other navigation artifact.
+
+If protected information is actually exposed, later Access revocation can prevent further disclosure but cannot retroactively make the exposure not have happened. The occurrence must remain attributable enough for integrity/correction review. Material impact on blinded or independent evaluation is determined explicitly; it may require invalidating affected Encounter/evidence and establishing a replacement/rejudge, but exposure does not automatically invalidate unrelated evaluation and must not be erased through silent rewrite.
+
+See [Access](../concepts/access.md#acc-001), [Correction & Authority](correction-authority.md), and [Export](../concepts/export.md#export-001).
