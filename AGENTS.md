@@ -12,10 +12,10 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 4. For correction, invalidation, supersession, replacement, current-vs-historical truth, affected/stale state, official-outcome succession, or Publication timeline work, additionally load [`Temporal Truth, Correction & Historical Authority`](docs/canonical/synchronizations/temporal-truth-correction.md).
 5. For Judge/Organizer interaction, route, status, exception, confirmation, recovery, or UI-authority design, additionally load [`Experience Action, State & Authority Traceability`](docs/canonical/experience/action-authority-traceability.md) plus only the task-relevant experience owner(s).
 6. For exception, waiver, override, acknowledgement/suppression, policy-bypass, or technical-emergency-versus-semantic-authority work, additionally load [`Operational Exception & Override Governance`](docs/canonical/policies/operational-exception-governance.md) plus the specific governing policy/Concept owner.
-7. For Export/Publication or external representation work, preserve exact source authority and load the relevant [`Export`](docs/canonical/concepts/export.md), [`Publication`](docs/canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners as needed. A representation cannot promote its source's authority.
-8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). MUDAC is currently in design re-entry and executable work is frozen at the 006-D non-domain prototype boundary.**
+7. For Export/Publication or external representation work, preserve exact source authority and load the relevant [`Export`](docs/canonical/concepts/export.md), [`Publication`](docs/canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners as needed. A representation cannot promote its source authority.
+8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). The Jackson Concept Design methodology is complete for the current baseline, but new domain implementation is not yet started; Phase 008 plan refresh must explicitly authorize the first executable domain slice.**
 9. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-10. For implementation-maintenance work that is permitted by the freeze, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), the architecture owner(s) they realize, and materially relevant product/UX/governance constraints.
+10. For implementation-planning work, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), task-relevant architecture, and materially relevant product/UX/governance/synchronization constraints.
 11. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
 12. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
 13. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
@@ -23,20 +23,33 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 
 Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonical synchronization/architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
 
-## Current design-reentry freeze
+## Current post-methodology implementation boundary
 
-The executable work created through 006-D is retained as a **frozen non-domain bootstrap/prototype**.
+The renewed Jackson Concept Design methodology formally exited through Phase 007-I for the current MUDAC baseline.
 
-Until an explicit later Jackson-methodology exit authorizes implementation to resume, agents must not advance into:
+Current status:
+
+```text
+Jackson Concept Design methodology: COMPLETE / EXITED
+implementation planning: READY TO RESUME
+Phase 008 plan refresh: NEXT / NOT STARTED
+new domain implementation after 006-D: NOT STARTED
+```
+
+The executable work created through 006-D is retained as a **protected non-domain implementation baseline**.
+
+Until Phase 008 explicitly authorizes the first domain implementation slice, agents must not advance into new:
 
 - domain PostgreSQL schema/migrations/repositories;
 - Cognito/session/Participation/Access/invitation implementation;
 - production command/query API or idempotency/transaction implementation;
 - IndexedDB Draft semantics;
 - Competition, Judging, Evaluation, Outcome, Award, Export, Artifact or Publication feature implementation;
-- real AWS application provisioning/deployment intended to support those deferred domain paths.
+- real AWS application provisioning/deployment intended to support those domain paths.
 
-Permitted executable changes are narrow maintenance needed to keep the existing bootstrap safe/buildable and must not introduce domain semantics. Current work should default to deliberate design refinement under Phase 007+.
+Permitted executable changes before first-slice authorization are narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current design.
+
+Current work should default to **Phase 008 implementation re-entry and plan refresh**, not immediate domain coding.
 
 ## Do not
 
@@ -61,9 +74,9 @@ Permitted executable changes are narrow maintenance needed to keep the existing 
 - substitute SQLite/in-memory evidence for real PostgreSQL when PostgreSQL semantics matter;
 - hide flaky consequential tests behind retries or indefinite quarantine;
 - treat CI, coverage, scanners, workflow existence, IaC validation, or deployment configuration as semantic verification or production certification;
-- infer that green implementation checks or the historical 005-J exit authorize implementation beyond 006-D while the design freeze is active.
+- infer that completion of Concept Design, green implementation checks, historical 005-J readiness, or old 006-E–M plans authorize skipping the Phase 008 plan-refresh and first-slice boundary.
 
-## Frozen executable baseline
+## Protected executable baseline
 
 The selected implementation family remains Node.js 24 LTS + TypeScript, pnpm workspaces, Fastify, Kysely + node-postgres, explicit migrations, outward-generated OpenAPI, Vitest/Playwright, strict TypeScript + ESLint + Prettier, and OpenTofu.
 
@@ -80,7 +93,7 @@ Current source/runtime consequences retained from 006-D:
 - OpenTofu has separate nonproduction `us-east-2`, production `us-east-2`, and cold-recovery `us-east-1` roots/state identities;
 - actual GitHub branch/ruleset and protected production-environment administration remains an external repository-admin gate until independently configured.
 
-These are preserved substrate choices, not authorization to implement their deferred domain use.
+These are preserved substrate choices. They do not themselves authorize the first domain implementation slice.
 
 ## Validation
 
@@ -91,18 +104,18 @@ python -m pip install -r requirements-docs.txt
 python scripts/validate_knowledge.py
 ```
 
-Permitted executable-maintenance changes:
+Permitted executable-maintenance changes before first-slice authorization:
 
 ```text
 pnpm install --frozen-lockfile
 pnpm verify
 ```
 
-CI additionally validates current OpenTofu roots. Passing checks are evidence for the tested revision, not OKF verification, design-methodology closure, implementation-resume authority, or production certification.
+CI additionally validates current OpenTofu roots. Passing checks are evidence for the tested revision, not OKF verification, implementation correctness, authority to skip the Phase 008 boundary, or production certification.
 
 ## Canonical changes
 
-If the human requests a semantic change, use [`CHG-*`](docs/canonical/governance/change-governance.md). If implementation/test/architecture conflicts with canonical meaning and redesign was not requested, the downstream mechanism adapts.
+If implementation or planning discovers a genuine semantic contradiction or the human requests a semantic change, use [`CHG-*`](docs/canonical/governance/change-governance.md). If implementation/test/architecture conflicts with canonical meaning and redesign was not requested, the downstream mechanism adapts.
 
 ## Context stopping rule
 
