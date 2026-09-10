@@ -7,6 +7,7 @@ tags: [mechanism, evaluation, eligibility]
 sources:
   - resource: ../../002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
+  - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
 ---
 
 # Canonical contract
@@ -15,7 +16,7 @@ Coverage answers whether enough qualifying judging has occurred under [Evaluatio
 
 Coverage considers eligible Encounters/Scorecards, composition requirements/exceptions, and declared thresholds. Baseline statuses include Satisfied, Incomplete, and Exception Accepted.
 
-An accepted exception changes permission/eligibility; it never fabricates missing evidence or rewrites the actual shortfall.
+An accepted exception changes permission/eligibility; it never fabricates missing evidence or rewrites the actual shortfall. Material exception authority is governed by [Operational Exception & Override Governance](../policies/operational-exception-governance.md#opg-001).
 
 Coverage remains independent from [Aggregate](aggregate.md). A Team may have a valid numeric Aggregate while still being non-rank-eligible because Coverage is incomplete.
 
