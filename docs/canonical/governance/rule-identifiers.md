@@ -101,6 +101,19 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 
 * [EXPORT-001 — Export Represents Source Truth; It Does Not Replace It](../concepts/export.md#export-001)
 * [EXPORT-002 — Generation and Publication Are Distinct](../concepts/export.md#export-002)
+* [EXPORT-003 — Representation Cannot Promote Source Authority](../concepts/export.md#export-003)
+
+# Publication
+
+* [PUB-001 — Publication Prerequisites Follow Representation Purpose and Source Authority](../concepts/publication.md#pub-001)
+
+# Operational exception and override governance
+
+* [OPG-001 — Governed Exceptions Preserve Source Truth](../policies/operational-exception-governance.md#opg-001)
+* [OPG-002 — Exception Authority Is Explicit, Scoped, Attributable, and Reasoned](../policies/operational-exception-governance.md#opg-002)
+* [OPG-003 — Generic Override Cannot Bypass Semantic Invariants](../policies/operational-exception-governance.md#opg-003)
+* [OPG-004 — Acknowledgement, Suppression, and Presentation State Are Not Resolution](../policies/operational-exception-governance.md#opg-004)
+* [OPG-005 — Technical Emergency Capability Does Not Create Policy Authority](../policies/operational-exception-governance.md#opg-005)
 
 # Architecture foundation
 
