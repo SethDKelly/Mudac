@@ -4,7 +4,7 @@ The repository is the durable design and implementation authority; conversation 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, temporal/correction, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
+Start at [index.md](index.md), the OKF v0.2 bundle root. Current product/domain, synchronization, temporal/correction, policy, UX, governance, architecture, and retained implementation meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is only a bootstrap adapter into those owners.
 
 Use numbered phase directories for rationale, design evolution, alternatives, implementation planning, and provenance.
 
@@ -28,7 +28,8 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
   * 007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: **Complete**
   * 007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: **Complete**
-  * **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit: Next**
+  * 007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit: **Complete**
+  * **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit: Next**
 
 ## Current design posture
 
@@ -38,9 +39,9 @@ The current execution boundary is owned by [Design / Implementation Boundary](ca
 
 007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D added [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
 
-007-E pressure-tested the model through end-to-end ordinary operation, Judge/Panel exceptions, dual-role behavior, lost/shared devices, interrupted authoritative transitions, paper recovery, duplicate/concurrent inputs, invalid Encounter/rejudge, post-event amendments, post-Finalization correction, disclosure failures, Administrator/break-glass misuse, stale derived state, and regional infrastructure failure. The sixteen-Concept catalog survived without a generic Workflow/Recovery/Incident/Conflict/Break-glass/Reconciliation Concept.
+007-E pressure-tested the model through ordinary, exceptional, degraded, concurrent, malicious and recovery scenarios. 007-F then re-audited Judge/Organizer experience architecture against the refined Concept/action/synchronization model and established [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
 
-007-F then re-audited the Phase 003 Judge/Organizer experience architecture against that refined current model. Material interactions remain traceable to Concept actions, queries, synchronizations, derived projections, working state, or implementation-only interaction state. UI modes, confirmations, exception rows, readiness indicators, and enabled controls do not create semantic authority. Current cross-cutting UX authority now lives in [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
+007-G now closes the integrated policy/representation plane. Evaluation Policy, Coverage/Aggregate/Rank, Panel composition, correction authority, Awards/finalization, paper continuity, Official Outcome Revision, disclosure, Export and Publication compose without another Concept. [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) now owns the cross-cutting rule that exceptions preserve source truth, remain explicit/scoped/attributable, and cannot become generic invariant-bypassing overrides. Export cannot promote its source's authority through representation, and official-results Publication must bind to an identified Official Outcome Revision even though other legitimate operational materials may be distributed before Finalization.
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
 
@@ -54,4 +55,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
