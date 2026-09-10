@@ -10,7 +10,9 @@ sources:
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
+  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
   - resource: runtime-delivery-bootstrap.md
+  - resource: persistence-history-projection.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: ../governance/documentation-authority.md
   - resource: ../governance/change-governance.md
@@ -20,14 +22,14 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:08:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
 ---
 
 # Purpose
 
 Define the durable implementation-level rules established at Phase 006 entry and retained after the formal Jackson Concept Design exit. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
 
-Implementation **planning** is active under Phase 008. 008-B qualified the protected 006-D non-domain substrate, and 008-C has reconciled residual/historical-plan ownership. New domain implementation remains not started and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
+Implementation **planning** is active under Phase 008. 008-B qualified the protected 006-D non-domain substrate, 008-C reconciled residual/historical-plan ownership, and 008-D has now established the durable persistence/history/outbox/projection/migration implementation contract. New domain implementation remains not started and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
 
 <a id="impl-001"></a>
 ## IMPL-001 — Upstream canonical meaning outranks implementation convenience
@@ -62,7 +64,11 @@ Nx, Turborepo, Bazel, or another task-graph/cache platform requires measured bui
 
 When persistence implementation is explicitly authorized, application persistence adapters use Kysely with `pg`/node-postgres for typed, inspectable SQL access. Production schema evolution uses version-controlled explicit migrations; automatic schema push/synchronization is not a production migration mechanism.
 
-Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities. Detailed schema, migration, generated-type, transaction, temporal-history, governed-exception, and projection conventions are implementation-planning work under Phase 008 until their executable slice is authorized.
+Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities.
+
+008-D now defines the accepted downstream physical contract in [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](persistence-history-projection.md): one PostgreSQL authority database with module-owned schemas plus narrow `projection`/`platform` schemas, owner-local Kysely mappings, current-state plus append-stable history, immutable Version lineages, module-local Provenance, policy-specific governed-exception records, immutable Official Outcome Revision substrate, transactional outbox, basis-aware rebuildable projections, SQL-first forward migrations, and conservative retention defaults.
+
+Those accepted planning decisions remain non-executable until 008-L authorizes a Phase 009 slice.
 
 <a id="impl-006"></a>
 ## IMPL-006 — API schemas are explicit transport contracts and generate OpenAPI outward
@@ -140,7 +146,7 @@ An implementation decision record cannot override canonical architecture. A choi
 
 During Phase 008, a planning decision or implementation decision record is still **planning authority**, not executable-slice authorization. Durable accepted implementation choices should be reflected in the applicable canonical implementation owner before Phase 009 execution depends on them.
 
-008-C intentionally keeps its residual/supersession matrix as Phase 008 planning provenance rather than creating a generic parallel canonical decision store. Later groups promote only durable implementation choices into their applicable canonical owners.
+008-C intentionally keeps its residual/supersession matrix as Phase 008 planning provenance rather than creating a generic parallel canonical decision store. 008-D follows that rule by promoting durable persistence decisions into `persistence-history-projection.md` instead of turning the phase record into a competing canonical implementation tree.
 
 <a id="impl-016"></a>
 ## IMPL-016 — Implementation subgroup completion requires implementation and evidence closure
@@ -156,7 +162,7 @@ runtime/language     Node.js 24 LTS + TypeScript 6.x
 workspace/package    pnpm workspaces
 server transport     Fastify 5.x
 PostgreSQL access    Kysely + node-postgres
-schema evolution     explicit version-controlled migrations
+schema evolution     explicit SQL-first forward migrations
 API description      explicit transport schemas → OpenAPI
 unit/integration     Vitest family
 browser E2E          Playwright family
@@ -171,9 +177,9 @@ Exact implementation versions are pinned in manifests/lockfiles and are not perm
 
 006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap.
 
-007-A later froze execution and reopened deliberate design. Phase 007 formally exited through 007-I. Phase 008 is active: 008-A established implementation-planning authority, 008-B qualified the retained 006-D substrate, and 008-C reconciled all accepted Class 2/3 residuals, Class 4 exclusions, 008-B evidence limitations, and historical 006-E–M dispositions into current planning owners.
+007-A later froze execution and reopened deliberate design. Phase 007 formally exited through 007-I. Phase 008 is active: 008-A established implementation-planning authority, 008-B qualified the retained 006-D substrate, 008-C reconciled residual/historical ownership, and **008-D has accepted the persistence/temporal/history/Provenance/exception/outbox/projection/migration implementation plan**.
 
-Historical 006-E through 006-M is fully superseded as an executable roadmap. 008-D is next and owns detailed persistence/temporal/Versioning/Provenance/governed-exception/outbox/projection/migration planning.
+008-E is next and owns Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority implementation planning using the 008-D persistence substrate.
 
 No first executable domain slice is authorized until 008-L. The first new domain implementation belongs to Phase 009 after explicit authorization.
 
