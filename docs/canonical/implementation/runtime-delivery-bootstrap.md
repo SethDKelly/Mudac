@@ -1,11 +1,12 @@
 ---
 type: Implementation Contract
 title: Runtime, Environment & Delivery Bootstrap
-description: Defines the retained executable MUDAC workspace/runtime bootstrap, environment classes, verification gate, OpenTofu root/state separation, supply-chain posture, deployment-authority boundary, and current frozen-prototype status.
+description: Defines the retained executable MUDAC workspace/runtime bootstrap, environment classes, verification gate, OpenTofu root/state separation, supply-chain posture, deployment-authority boundary, and current protected-baseline status.
 status: stable
-tags: [implementation, runtime, environment, local-development, ci-cd, iac, delivery, frozen]
+tags: [implementation, runtime, environment, local-development, ci-cd, iac, delivery, protected-baseline]
 sources:
   - resource: ../../006-implementation-planning/006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md
+  - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
@@ -13,20 +14,22 @@ sources:
   - resource: ../architecture/aws-runtime-operations.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T01:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T14:31:00Z }
 ---
 
 # Purpose
 
 Define the retained executable environment/runtime/delivery substrate established by 006-D. This owner realizes accepted architecture and implementation contracts; it does not create product/domain authority or claim that production infrastructure has been provisioned.
 
-The current [Design / Implementation Boundary](../governance/design-implementation-boundary.md) freezes advancement beyond this bootstrap while MUDAC returns to deliberate design refinement.
+The current [Design / Implementation Boundary](../governance/design-implementation-boundary.md) treats this substrate as a protected non-domain implementation baseline while Phase 008 refreshes the implementation plan after formal Concept Design exit.
 
 This owner intentionally introduces no new stable-rule namespace. Runtime/bootstrap configuration cites the upstream `AWS-*`, `IMPL-*`, `MOD-*`, `FE-*`, and other rules it implements rather than creating a parallel deployment-rule universe.
 
-# Current status — frozen non-domain prototype
+# Current status — protected non-domain baseline
 
-The repository may retain and narrowly maintain the 006-D substrate, but must not use it to advance deferred domain implementation until an explicit later design-methodology exit authorizes resume.
+The renewed Jackson Concept Design methodology has formally exited for the current baseline, and implementation planning may resume. New domain implementation has **not** yet started beyond this retained bootstrap.
+
+Until Phase 008 explicitly authorizes the first domain implementation slice, the repository may retain and narrowly maintain the 006-D substrate but must not use it to advance new MUDAC domain behavior.
 
 Permitted retained substrate includes:
 
@@ -37,7 +40,7 @@ Permitted retained substrate includes:
 - Implementation Verification, CodeQL, Dependabot and dependency-boundary checks;
 - OpenTofu environment/state-root scaffolding without application production provisioning.
 
-Narrow security/compatibility maintenance is allowed when needed to keep this prototype safe/buildable and when it does not encode deferred domain semantics.
+Narrow security/compatibility maintenance is allowed when needed to keep this baseline safe/buildable and when it does not encode domain semantics before first-slice authorization.
 
 # Executable workspace
 
@@ -53,7 +56,7 @@ A bootstrap shell does not claim persistence, security, API-domain, local-Draft,
 
 Routine local development runs Node application processes on the host and PostgreSQL through Docker Compose.
 
-External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports when later authorized. Deterministic local fakes support normal development/testing; targeted real-service smoke/integration evidence uses nonproduction when provider semantics matter.
+External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. Deterministic local fakes support normal development/testing; targeted real-service smoke/integration evidence uses nonproduction when provider semantics matter and when the refreshed implementation plan authorizes the affected work.
 
 Normal local development does not require long-lived AWS credentials.
 
@@ -98,7 +101,7 @@ Knowledge Validation remains separate and retains its `VAL-*` meaning.
 
 The bootstrap also retains a committed lockfile, explicit pnpm dependency-build approval, Dependabot for npm/GitHub Actions, CodeQL JavaScript/TypeScript analysis, and ignored secret/state/build-output paths.
 
-Scanner or CI success is evidence about the tested revision, not application authority, design-methodology closure, implementation-resume authority, or production certification.
+Scanner or CI success is evidence about the tested revision, not application authority, implementation correctness, first-slice authorization, or production certification.
 
 # Repository and deployment authority
 
@@ -108,13 +111,13 @@ Production deployment remains separately authorized through a protected GitHub e
 
 The current GitHub integration cannot administer repository rulesets/branch protection or GitHub environments. Those settings remain a visible repository-admin gate until independently configured and verified; documentation must not claim enforcement merely because workflows exist.
 
-Real local secret files are ignored. AWS runtime secrets/configuration use environment/runtime mechanisms and Secrets Manager when future implementation is authorized. Long-lived AWS deployment keys do not belong in GitHub or repository configuration.
+Real local secret files are ignored. AWS runtime secrets/configuration use environment/runtime mechanisms and Secrets Manager when the relevant implementation slice is authorized. Long-lived AWS deployment keys do not belong in GitHub or repository configuration.
 
 # Release posture retained for future implementation
 
-When implementation eventually resumes, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
+When the refreshed implementation plan authorizes the affected slices, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
 
-Database migration remains a separately privileged deployment step once schema work is re-authorized, and application rollback must not assume destructive schema rollback.
+Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
 
 CI may format/validate OpenTofu without backend credentials. Real plan/apply occurs only under intended environment/account deployment authority and an exact reviewed revision.
 
@@ -146,12 +149,12 @@ GitHub repository
 
 # Deliberate limitations
 
-This frozen bootstrap does not implement PostgreSQL domain schemas/migrations, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
+This protected bootstrap does not implement PostgreSQL domain schemas/migrations, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
 
-Those items are deferred by the current design re-entry decision rather than merely waiting in the immediate implementation queue.
+Those items are not prohibited because Concept Design remains incomplete; the methodology has exited. They remain unstarted because Phase 008 must first refresh dependency order, verification gates, and first-slice implementation authority against the completed design.
 
 # Handoff
 
-Current work proceeds to [Phase 007 — Jackson Design Refinement & Methodology Closure](../../007-design-refinement/), beginning with **007-B — Concept Completeness, Independence & Genericity Audit**.
+Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
 
-006-E persistence work remains deferred until a later explicit design exit authorizes implementation to resume.
+This bootstrap remains the protected starting substrate until that phase explicitly authorizes the first new domain implementation slice.
