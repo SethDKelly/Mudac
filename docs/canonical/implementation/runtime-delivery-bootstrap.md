@@ -9,6 +9,7 @@ sources:
   - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
+  - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
@@ -16,7 +17,7 @@ sources:
   - resource: ../architecture/aws-runtime-operations.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T17:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:12:00Z }
 ---
 
 # Purpose
@@ -33,7 +34,9 @@ This owner introduces no new stable-rule namespace. Runtime/bootstrap configurat
 
 **Result: qualified for Phase 008 planning after narrow non-domain remediation.**
 
-The qualification does not authorize domain implementation. Until 008-L explicitly authorizes the first executable domain slice, this substrate may be retained and narrowly maintained but not extended into new MUDAC domain behavior.
+008-C has since assigned the remaining repository-administration/dependency-evidence limits to later Phase 008 owners and fully superseded the historical 006-E through 006-M execution queue. The qualification does not authorize domain implementation.
+
+Until 008-L explicitly authorizes the first executable domain slice, this substrate may be retained and narrowly maintained but not extended into new MUDAC domain behavior.
 
 # Qualified executable workspace
 
@@ -125,9 +128,11 @@ The workflow covers all pull requests and pushes to `main`. 008-B removed the ob
 
 Knowledge Validation remains separate under `VAL-*`. CodeQL remains configured for JavaScript/TypeScript analysis. Dependabot remains configured weekly for npm and GitHub Actions.
 
+The final 008-B bootstrap head passed Implementation Verification and CodeQL. That is evidence for the tested revision, not implementation or production authority.
+
 The baseline also retains ignored local secrets/state/output, restrictive package exports, and source dependency enforcement.
 
-The current connector does not expose the Dependabot alert inventory used for a complete vulnerability-state assertion. Therefore configured controls and successful CI may be claimed; zero open dependency vulnerabilities may not be inferred.
+The current connector does not expose the Dependabot alert inventory used for a complete vulnerability-state assertion. 008-C assigns that evidence limitation to 008-K. Therefore configured controls and successful CI may be claimed; zero open dependency vulnerabilities may not be inferred.
 
 Scanner or CI success is evidence about a tested revision, not application authority, implementation correctness, first-slice authorization, deployment authority, or production certification.
 
@@ -135,7 +140,7 @@ Scanner or CI success is evidence about a tested revision, not application autho
 
 Ordinary implementation merge policy is intended to require pull requests plus current Knowledge Validation and applicable Implementation Verification checks on `main` under `IMPL-013`.
 
-008-B revalidated that the repository rulesets endpoint currently returns no rulesets. Branch-protection state cannot be read by the connected integration. Documentation therefore must not claim the intended merge controls are enforced.
+008-B revalidated that the repository rulesets endpoint currently returns no rulesets. Branch-protection state cannot be read by the connected integration. 008-C assigns this administration/evidence residual to 008-K with 008-L authorization-gate responsibility. Documentation therefore must not claim the intended merge controls are enforced.
 
 Production deployment remains separately authorized through a protected GitHub environment and OIDC-federated AWS role under `IMPL-014`/`AWS-011`. Those controls and actual production resources are not established by this baseline.
 
@@ -183,8 +188,8 @@ These are later implementation-planning/evidence concerns, not defects in the 00
 
 # Handoff
 
-The protected baseline is now qualified as current planning input.
+The protected baseline remains qualified as current planning input. 008-C has reconciled its downstream residuals and historical-plan dependencies.
 
-Proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**.
+Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
 
 No first executable domain slice is authorized before 008-L; new domain implementation remains not started.
