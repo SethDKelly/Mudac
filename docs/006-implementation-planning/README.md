@@ -1,34 +1,36 @@
 # Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy
 
-Status: **Historical planning/bootstrap phase — execution interrupted after 006-D**
+Status: **Historical planning/bootstrap phase — execution interrupted after 006-D; deferred queue now explicitly superseded by Phase 008**
 
 ## Current authority
 
-Phase 006 began implementation planning and crossed into executable non-domain bootstrap work at 006-D. 007-A later froze further domain implementation and reopened deliberate Jackson Concept Design. Phase 007 has now formally exited that renewed methodology through 007-I.
+Phase 006 began implementation planning and crossed into executable non-domain bootstrap work at 006-D. 007-A later froze further domain implementation and reopened deliberate Jackson Concept Design. Phase 007 subsequently exited that renewed methodology through 007-I.
 
 The current boundary is owned by [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md).
 
-Phase 006 is **not reopened as the active execution queue**. Its records remain planning/bootstrap provenance and useful dependency rationale for the Phase 008 refresh.
+Phase 006 is **not reopened as the active execution queue**. Its records remain planning/bootstrap provenance and dependency rationale. [008-C](../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) now owns the explicit current disposition of 006-E through 006-M.
 
 005-J remains historical provenance for the earlier architecture-exit decision; it is not retroactively rewritten.
 
 ## Status of the original dependency-safe plan
 
-| Group | Topic | Status |
-| --- | --- | --- |
-| 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **Complete — historical planning** |
-| 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | **Complete — historical planning** |
-| 006-C | [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | **Complete — historical planning** |
-| 006-D | [Environment, IaC, CI/CD, Local Development & Runtime Bootstrap](006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md) | **Complete — retained protected non-domain baseline** |
-| 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | **Not executed — historical plan lineage** |
-| 006-F | Identity, Session, Access, Security & Invitation Foundation | **Not executed — historical plan lineage** |
-| 006-G | API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation | **Not executed — historical plan lineage** |
-| 006-H | Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation | **Not executed — historical plan lineage** |
-| 006-I | Competition Setup, Participation & Judging Operations Vertical Slice | **Not executed — historical plan lineage** |
-| 006-J | Evaluation, Scorecard, Draft Synchronization, Conflict & Paper-Capture Vertical Slice | **Not executed — historical plan lineage** |
-| 006-K | Reconciliation, Coverage, Ranking, Awards, Finalization & Official Outcome Vertical Slice | **Not executed — historical plan lineage** |
-| 006-L | Export, Artifact, Publication, Print & External Representation Vertical Slice | **Not executed — historical plan lineage** |
-| 006-M | Integrated Security, Observability, Performance, Recovery, Operational Readiness & Phase Exit | **Not executed — historical plan lineage** |
+| Group | Original topic | Historical status | Current disposition |
+| --- | --- | --- | --- |
+| 006-A | [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | Complete — historical planning | Durable current rules live in canonical implementation/governance owners. |
+| 006-B | [Verification Strategy, Test Harness, Evidence Fixtures & Quality Gates](006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md) | Complete — historical planning | Durable verification contracts remain canonical; 008-K later refreshes evidence/readiness planning. |
+| 006-C | [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | Complete — historical planning | Current source-topology contract remains canonical. |
+| 006-D | [Environment, IaC, CI/CD, Local Development & Runtime Bootstrap](006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md) | Complete — retained non-domain bootstrap | **Qualified by 008-B** as the protected Phase 008 planning baseline. |
+| 006-E | Persistence, Schema, Migration, Provenance, Outbox & Projection Foundation | Not executed | **Preserve + expand → 008-D**. |
+| 006-F | Identity, Session, Access, Security & Invitation Foundation | Not executed | **Preserve + expand/rename → 008-E**; cross-cutting security evidence → 008-K. |
+| 006-G | API, Commands, Queries, Transactions, Idempotency & Concurrency Foundation | Not executed | **Preserve + expand → 008-F**. |
+| 006-H | Browser Shell, Routing, Remote/Local State, Component Primitives & Accessibility Foundation | Not executed | **Preserve + refine → 008-G**; cross-cutting accessibility evidence → 008-K. |
+| 006-I | Competition Setup, Participation & Judging Operations Vertical Slice | Not executed | **Preserve + expand → 008-H**. |
+| 006-J | Evaluation, Scorecard, Draft Synchronization, Conflict & Paper-Capture Vertical Slice | Not executed | **Split → 008-G + 008-I**. Generic browser Draft/conflict moves to 008-G; Scorecard/evaluation/paper stays in 008-I. |
+| 006-K | Reconciliation, Coverage, Ranking, Awards, Finalization & Official Outcome Vertical Slice | Not executed | **Preserve + expand → 008-J**. |
+| 006-L | Export, Artifact, Publication, Print & External Representation Vertical Slice | Not executed | **Merge → 008-J** with outcomes/finalization/externalization authority chain. |
+| 006-M | Integrated Security, Observability, Performance, Recovery, Operational Readiness & Phase Exit | Not executed | **Split → 008-K + 008-L**. Evidence/readiness planning in 008-K; roadmap/authorization/exit in 008-L. |
+
+The historical 006-E through 006-M sequence is therefore **fully superseded as an executable roadmap**. Preserve it for provenance; do not resume it mechanically.
 
 ## Retained 006-D implementation baseline
 
@@ -41,41 +43,63 @@ Phase 006 is **not reopened as the active execution queue**. Its records remain 
 - CI/static/dependency checks;
 - OpenTofu environment/root scaffolding without production application provisioning.
 
-It is now a **protected baseline**, not a design-incomplete freeze marker.
+008-B audited and qualified this substrate after narrow non-domain remediation. Qualification is planning evidence, not permission to begin domain implementation.
 
-Until Phase 008 explicitly authorizes the first domain implementation slice, executable changes remain limited to narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current design.
+Until 008-L explicitly authorizes the first domain implementation slice, executable changes remain limited to narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current design.
 
-## Original dependency intent
+## Original dependency intent retained as provenance
 
-The earlier dependency chain remains useful planning evidence:
+The earlier dependency direction remains useful evidence:
 
 ```text
-006-E persistence
+persistence
    ↓
-006-F identity/access
+identity/access
    ↓
-006-G API/concurrency
+API/concurrency
    ↓
-006-H browser foundation
+browser foundation
    ↓
-006-I competition/judging ops
+competition/judging ops
    ↓
-006-J evaluation/sync/paper
+evaluation/paper
    ↓
-006-K outcomes/finalization
+outcomes/finalization
    ↓
-006-L representation/publication
+representation/publication
    ↓
-006-M integrated readiness
+integrated readiness
 ```
 
-However, **this chain is no longer current executable authority**.
+008-C preserves that dependency intent while changing boundaries where the completed Phase 007 design requires cleaner ownership.
 
-Phase 007 materially refined the semantics that those slices must implement. Phase 008 may preserve, split, merge, rename, reorder, or replace the old slices after deliberate dependency review.
+The current Phase 008 planning chain is:
 
-## Phase 007 reconciliation requirements
+```text
+008-D persistence / temporal / history / provenance / exception / outbox
+   ↓
+008-E Identity / Participation / Access / session
+   ↓
+008-F commands / queries / transactions / CAS / idempotency / API
+   ↓
+008-G browser / Draft / synchronization / recovery
+   ↓
+008-H Competition + Judging Operations
+   ↓
+008-I Scorecard + evaluation evidence + amendment + paper
+   ↓
+008-J outcomes + Finalization + official outcome + Export + Publication
+   ↓
+008-K cross-cutting evidence / operations / retention
+   ↓
+008-L roadmap + first-slice authorization
+```
 
-Any refreshed implementation plan must incorporate at least:
+This is planning order, not execution authority.
+
+## Phase 007/008 reconciliation requirements
+
+The refreshed implementation plan must preserve:
 
 - temporal/correction/invalidation/replacement and latest-declared-official + Affected semantics;
 - explicit authority-establishing versus derived/convergent synchronization effects;
@@ -84,21 +108,24 @@ Any refreshed implementation plan must incorporate at least:
 - Operational Exception & Override Governance;
 - Export representation-authority monotonicity;
 - purpose/source-specific Publication prerequisites;
-- the 007-H architecture/implementation/evidence residual register.
+- the 007-H architecture/implementation/evidence residual register;
+- the 008-C ownership and supersession decisions.
 
-## Current post-exit posture
+## Current post-reconciliation posture
 
 ```text
 Jackson Concept Design methodology: COMPLETE / EXITED
-implementation planning: READY TO RESUME
-Phase 008 plan refresh: NEXT / NOT STARTED
+008-A: COMPLETE
+008-B: COMPLETE — protected 006-D baseline qualified
+008-C: COMPLETE — residual/historical-plan ownership closed
+008-D: NEXT / NOT STARTED
+historical 006-E–M executable queue: SUPERSEDED / MAPPED
 new domain implementation after 006-D: NOT STARTED
+first executable slice: NOT YET AUTHORIZED
 ```
 
-Green CI, historical 006 plans, or the prior 005-J architecture exit do not authorize bypassing Phase 008 plan refresh.
+Green CI, historical 006 plans, or the prior 005-J architecture exit do not authorize bypassing Phase 008 or the 008-L first-slice gate.
 
 ## Next
 
-Proceed by defining **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness** into dependency-safe subgroups.
-
-Use Phase 006 as lineage and input, not as an automatically resumed work queue.
+Use [Phase 008](../008-implementation-reentry/) for current implementation planning. The next dependency-safe subgroup is **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
