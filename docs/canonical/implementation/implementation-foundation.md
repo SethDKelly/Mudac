@@ -1,11 +1,13 @@
 ---
 type: Implementation Contract
 title: Implementation Authority, Toolchain & Delivery Governance
-description: Defines MUDAC's accepted implementation authority, common runtime/toolchain, repository delivery controls, dependency/version policy, security-scanning posture, and the current design-reentry freeze on implementation advancement.
+description: Defines MUDAC's accepted implementation authority, common runtime/toolchain, repository delivery controls, dependency/version policy, security-scanning posture, and current Phase 008 planning-versus-execution boundary.
 status: stable
-tags: [implementation, authority, toolchain, delivery, repository, security, frozen]
+tags: [implementation, authority, toolchain, delivery, repository, security, planning]
 sources:
   - resource: ../../006-implementation-planning/006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md
+  - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
+  - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: runtime-delivery-bootstrap.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: ../governance/documentation-authority.md
@@ -16,14 +18,14 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-05T01:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T15:04:00Z }
 ---
 
 # Purpose
 
-Define the durable implementation-level rules established at Phase 006 entry. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
+Define the durable implementation-level rules established at Phase 006 entry and retained after the formal Jackson Concept Design exit. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
 
-The selected implementation family remains accepted, but implementation advancement is currently frozen by [Design / Implementation Boundary](../governance/design-implementation-boundary.md) at the 006-D non-domain bootstrap boundary. These rules therefore govern the retained prototype and future implementation when explicitly resumed; they do not authorize 006-E+ work now.
+Implementation **planning** is now active under Phase 008. New domain implementation remains not started beyond the protected 006-D non-domain baseline, and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
 
 <a id="impl-001"></a>
 ## IMPL-001 — Upstream canonical meaning outranks implementation convenience
@@ -56,16 +58,16 @@ Nx, Turborepo, Bazel, or another task-graph/cache platform requires measured bui
 <a id="impl-005"></a>
 ## IMPL-005 — PostgreSQL access uses Kysely over node-postgres with explicit migrations
 
-When persistence implementation is later authorized, application persistence adapters use Kysely with `pg`/node-postgres for typed, inspectable SQL access. Production schema evolution uses version-controlled explicit migrations; automatic schema push/synchronization is not a production migration mechanism.
+When persistence implementation is explicitly authorized, application persistence adapters use Kysely with `pg`/node-postgres for typed, inspectable SQL access. Production schema evolution uses version-controlled explicit migrations; automatic schema push/synchronization is not a production migration mechanism.
 
-Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities. Detailed schema, migration, generated-type, transaction, and projection conventions remain deferred while the design freeze is active.
+Persistence rows/query models remain adapter concerns and cannot become shared cross-module domain entities. Detailed schema, migration, generated-type, transaction, temporal-history, governed-exception, and projection conventions are implementation-planning work under Phase 008 until their executable slice is authorized.
 
 <a id="impl-006"></a>
 ## IMPL-006 — API schemas are explicit transport contracts and generate OpenAPI outward
 
-When API implementation is later authorized, Fastify transport adapters register explicit JSON-schema-compatible request/response contracts. The published OpenAPI representation is generated from the accepted transport boundary and may feed generated clients.
+When API implementation is explicitly authorized, Fastify transport adapters register explicit JSON-schema-compatible request/response contracts. The published OpenAPI representation is generated from the accepted transport boundary and may feed generated clients.
 
-Domain or persistence objects are not serialized as the public contract merely to reduce mapping code. Exact type-provider/client-generator packages remain deferred implementation details.
+Domain or persistence objects are not serialized as the public contract merely to reduce mapping code. Exact type-provider/client-generator packages remain downstream implementation details.
 
 <a id="impl-007"></a>
 ## IMPL-007 — Verification uses Vitest and Playwright families with evidence defined before feature scale
@@ -84,7 +86,7 @@ Suppressions are narrow and explained. Repository/module dependency enforcement 
 <a id="impl-009"></a>
 ## IMPL-009 — Persistent AWS infrastructure is implemented with OpenTofu
 
-When application infrastructure implementation is later authorized, OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
+When application infrastructure implementation is explicitly authorized, OpenTofu is the baseline IaC tool for the accepted AWS topology. Infrastructure plans/state/modules remain separate from application semantic modules and are reviewed as infrastructure changes.
 
 The retained runtime/delivery bootstrap owns environment/state/backend/module layout and deployment sequencing. Application code does not create unmanaged long-lived production infrastructure as an ordinary runtime side effect.
 
@@ -132,12 +134,14 @@ Cross-cutting/reversible implementation choices that affect multiple delivery gr
 
 An implementation decision record cannot override canonical architecture. A choice that would change product/architecture semantics escalates through `CHG-*` first.
 
+During Phase 008, a planning decision or implementation decision record is still **planning authority**, not executable-slice authorization. Durable accepted implementation choices should be reflected in the applicable canonical implementation owner before Phase 009 execution depends on them.
+
 <a id="impl-016"></a>
 ## IMPL-016 — Implementation subgroup completion requires implementation and evidence closure
 
-When a later implementation subgroup is authorized, it is complete only when its material decisions are explicit, current implementation routing is updated, applicable quality/security/tests pass, relevant stable-rule traceability exists, compatibility/migration implications are addressed, unresolved risks are assigned to named later gates, documentation validation remains green, and the next dependency-safe handoff is identified.
+When an implementation subgroup is authorized, it is complete only when its material decisions are explicit, current implementation routing is updated, applicable quality/security/tests pass, relevant stable-rule traceability exists, compatibility/migration implications are addressed, unresolved risks are assigned to named later gates, documentation validation remains green, and the next dependency-safe handoff is identified.
 
-Passing CI is evidence for the tested revision, not semantic verification metadata, design-methodology closure, implementation-resume authority, or production certification.
+Passing CI is evidence for the tested revision, not semantic verification metadata, design-methodology closure, executable-slice authorization, deployment authority, or production certification.
 
 # Selected toolchain summary
 
@@ -161,6 +165,10 @@ Exact implementation versions are pinned in manifests/lockfiles and are not perm
 
 006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap.
 
-That substrate is now **frozen as a non-domain prototype**. 006-E through 006-M are deferred. Current work has returned to [Phase 007 — Jackson Design Refinement & Methodology Closure](../../007-design-refinement/) and implementation may advance only after a later explicit design exit authorizes resume.
+007-A later froze execution and reopened deliberate design. Phase 007 has now formally exited through 007-I. The 006-D substrate is retained as a **protected non-domain implementation baseline**, while 006-E through 006-M remain historical planning lineage rather than the current execution queue.
+
+Phase 008 implementation planning is active. 008-A establishes the authority hierarchy and planning guardrails; 008-B next qualifies the retained 006-D baseline before later implementation plans depend on it.
+
+No first executable domain slice is authorized until 008-L. The first new domain implementation belongs to Phase 009 after explicit authorization.
 
 The stable Knowledge Validation and Implementation Verification workflows remain executable for the retained substrate. Actual repository protection and protected production-environment administration remains explicitly external until independently configured and verified; this owner does not conflate workflow availability with enforced GitHub policy.
