@@ -10,6 +10,7 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current product/domain, synchronization, temporal/correction, UX, governance, architecture, and implementation authority.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current planning/execution authority boundary.
+* [`docs/canonical/implementation/persistence-history-projection.md`](docs/canonical/implementation/persistence-history-projection.md) — accepted 008-D persistence/history/outbox/projection/migration implementation contract.
 * [`docs/008-implementation-reentry/`](docs/008-implementation-reentry/) — active implementation re-entry, plan refresh, and execution-readiness phase.
 
 Numbered phase directories preserve rationale and planning history; canonical owners govern current meaning.
@@ -30,13 +31,14 @@ Numbered phase directories preserve rationale and planning history; canonical ow
   * 008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails: **Complete**
   * 008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation: **Complete — PASS AFTER NARROW REMEDIATION**
   * 008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix: **Complete — PASS**
-  * 008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan: **Next**
+  * 008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan: **Complete — PASS**
+  * 008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan: **Next**
 
 ## Current posture
 
 The renewed Jackson Concept Design methodology is complete for the current MUDAC baseline. Implementation planning is active, but no executable domain slice has yet been authorized.
 
-008-B qualified the retained 006-D executable substrate for use as Phase 008 planning input. 008-C has now assigned every accepted Class 2/3 residual and 008-B evidence limitation to a current planning owner, preserved every Class 4 future-scope item outside the baseline, and explicitly superseded/mapped historical 006-E through 006-M.
+008-B qualified the retained 006-D executable substrate. 008-C reconciled every accepted residual/historical-plan item. 008-D now establishes the first detailed implementation contract while leaving the executable baseline unchanged and schema-free.
 
 The current boundary is:
 
@@ -45,25 +47,46 @@ Jackson Concept Design methodology: COMPLETE / EXITED
 implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
 008-C: COMPLETE — PASS
-historical 006-E–M executable queue: SUPERSEDED / MAPPED
-008-D: NEXT / NOT STARTED
+008-D: COMPLETE — PASS
+protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
+persistence/history implementation plan: ACCEPTED / NOT IMPLEMENTED
+008-E: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
-A qualified bootstrap or completed planning subgroup is not implementation authorization. Phase 008 remains planning, qualification, reconciliation, and authorization work. Only 008-L may authorize a first executable domain slice, and actual new domain implementation then begins in Phase 009.
+A qualified bootstrap or accepted implementation plan is not implementation authorization. Phase 008 remains planning, qualification, reconciliation, and authorization work. Only 008-L may authorize a first executable domain slice, and actual new domain implementation then begins in Phase 009.
+
+## Accepted persistence direction
+
+008-D fixes the downstream database mechanics before Identity/API/browser/domain slice planning can depend on them:
+
+```text
+PostgreSQL authority database
+  ├── 6 module-owned authoritative schemas
+  ├── projection              non-authoritative
+  └── platform                narrow shared technical records
+
+current state       mutable owner roots + bigint revision
+Version history     immutable owner-local lineage snapshots
+Provenance          append-stable, module-local actor/author/authorizer history
+exceptions          policy-specific immutable decisions
+outbox              transactionally coupled, at-least-once
+projections         explicit basis + idempotent convergence/rebuild
+migrations          SQL-first forward, checksum/advisory-lock protected
+retention           authoritative history preserved pending 008-K policy
+```
+
+Technical root revision is not a semantic Version. Queue/outbox ordering is not authoritative commit ordering. No generic soft-delete, catch-all status, central Provenance god-table, or universal override table is introduced.
 
 ## Reconciled implementation-plan direction
 
-008-C preserves the useful historical dependency intent while changing slice boundaries where Phase 007 established stronger authority requirements:
-
 ```text
-008-D persistence / temporal / history / provenance / exception / outbox
+008-D persistence / temporal / history / provenance / exception / outbox   COMPLETE
    ↓
-008-E Identity / Participation / Access / session
+008-E Identity / Participation / Access / session                          NEXT
    ↓
 008-F commands / queries / transactions / CAS / idempotency / API
    ↓
@@ -82,12 +105,10 @@ A qualified bootstrap or completed planning subgroup is not implementation autho
 Phase 009 implementation
 ```
 
-Historical 006-J is split between 008-G and 008-I; historical 006-L is merged into 008-J; historical 006-M is split between 008-K and 008-L.
-
-Repository protection remains an external administration/evidence limit: no repository rulesets are currently visible and branch-protection state cannot be read through the connected integration. Dependabot is configured, but its alert inventory is unavailable through the current connector. 008-C assigns those limitations to later 008-K/008-L gates rather than treating them as clean/enforced.
+Repository protection remains an external administration/evidence limit: no repository rulesets are currently visible and branch-protection state cannot be read through the connected integration. Dependabot is configured, but its alert inventory is unavailable through the current connector. Those limitations remain assigned to 008-K/008-L.
 
 ## Current direction
 
-Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
+Proceed to **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan**.
 
-008-D remains planning only. New domain persistence/schema implementation is not authorized until 008-L explicitly authorizes a Phase 009 entry slice.
+008-E remains planning only. New domain persistence/authentication implementation is not authorized until 008-L explicitly authorizes a Phase 009 entry slice.
