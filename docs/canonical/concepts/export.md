@@ -10,6 +10,7 @@ sources:
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
   - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
 ---
 
 # Purpose
@@ -45,6 +46,13 @@ An Export may later be Current, Affected, Stale, Superseded, or Retired from ord
 Generating an Export does not itself publish or release it. External release is a deliberate [Publication](publication.md) action under the relevant audience/disclosure contract.
 
 The broader Finalization/publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007). Audience disclosure is governed by [DISC-002](../policies/anonymity-disclosure.md#disc-002). Temporal currency semantics are owned by [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+
+<a id="export-003"></a>
+## EXPORT-003 — Representation cannot promote source authority
+
+An Export may select, format, summarize, redact, or transform source information for its declared purpose and audience, but it must not silently make that source appear more authoritative, current, complete, eligible, or official than the identified source basis actually is.
+
+In particular, a calculated/provisional result does not become official because it is rendered in an artifact; incomplete Coverage cannot be represented as satisfied; an Affected or historical basis must not be silently presented as unaffected current truth; and audience redaction must not change the identity or semantic meaning of the represented subject.
 
 # Boundaries
 
