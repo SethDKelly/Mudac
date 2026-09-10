@@ -13,12 +13,12 @@ Current meaning is organized under canonical knowledge. Numbered phase directori
 * [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and implementation contracts.
 * [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog.
 * [Synchronizations](canonical/synchronizations/) — current cross-concept coordination plus temporal/correction/historical-truth contracts.
-* [Policies](canonical/policies/) — Evaluation, disclosure, Panel composition, correction/finalization, continuity, and [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md).
-* [Experience](canonical/experience/) — current Judge/Organizer interaction semantics, including [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
-* [Governance](canonical/governance/) — documentation authority, agent context, change/conflict, source lineage, metadata/trust/lifecycle, validation/CI, stable IDs, and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
+* [Policies](canonical/policies/) — current governing/configurable semantics, including Operational Exception & Override Governance.
+* [Experience](canonical/experience/) — current Judge/Organizer interaction semantics and authority traceability.
+* [Governance](canonical/governance/) — documentation/change/context governance and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) — durable normative IDs and cross-reference registry.
 * [Architecture](canonical/architecture/) — current accepted system/application architecture contracts.
-* [Implementation](canonical/implementation/) — accepted implementation/tooling contracts plus the protected 006-D non-domain bootstrap baseline.
+* [Implementation](canonical/implementation/) — accepted implementation/tooling contracts plus the qualified protected 006-D non-domain bootstrap baseline.
 
 # Agent bootstrap
 
@@ -37,13 +37,15 @@ Before any implementation/code/IaC task, load [Design / Implementation Boundary]
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) — Complete.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — Historical/frozen after 006-D; 006-E through 006-M are superseded as the current execution queue and remain planning lineage.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — Historical after 006-D; 006-E through 006-M remain superseded planning lineage.
 * [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **Complete — formal methodology exit passed**.
-* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **In Progress — 008-A complete; 008-B next**.
+* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **In Progress — 008-A/B complete; 008-C next**.
 
 # Active Phase 008 planning posture
 
-[008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) has established the current implementation-planning authority model.
+[008-A](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) established the current implementation-planning authority model.
+
+[008-B](008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) has qualified the retained 006-D executable substrate after two narrow non-domain drift repairs.
 
 The current boundary is:
 
@@ -51,32 +53,26 @@ The current boundary is:
 Jackson Concept Design methodology: COMPLETE / EXITED
 baseline semantic design: COMPLETE
 known baseline semantic blockers: NONE OPEN
-Phase 008 subdivision: COMPLETE
 implementation planning authority: ESTABLISHED
 008-A: COMPLETE
-008-B: NEXT / NOT STARTED
-protected 006-D baseline: NOT YET QUALIFIED BY PHASE 008
+008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
+protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
+008-C: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
-Phase 008 is not a coding phase. It refreshes the implementation plan against completed semantic design, accepted architecture, the 007-H residual register, and the retained 006-D baseline. The old 006-E–M sequence remains planning lineage rather than automatic execution authority.
+The qualification confirms that the retained toolchain/source/runtime bootstrap remains a coherent planning input and contains no accidental domain implementation. It does not authorize domain execution.
 
-008-A establishes that current semantic/governance owners constrain architecture, architecture constrains implementation, and implementation plans/code remain downstream. The Design / Implementation Boundary separately owns whether execution is authorized. Semantic contradictions route through `CHG-*`; implementation inconvenience does not silently weaken upstream meaning.
-
-If the Phase 008 exit passes, 008-L may explicitly authorize a dependency-safe first executable slice and hand off to Phase 009. Until then, new domain implementation remains not started.
+008-C now maps the 007-H/007-I residual register and historical 006-E–M work into explicit current owners and dispositions before any durable persistence/security/API/client or domain-slice planning begins.
 
 # Navigation Guidance
 
-For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For cross-Concept coordination and temporal/correction questions, load [Synchronizations](canonical/synchronizations/) instead of reconstructing semantics from phase history. For material Judge/Organizer interaction or UI-authority design, load the experience action/authority traceability contract plus only the relevant experience owner(s). For policy exceptions, overrides, waiver-like behavior, acknowledgement/resolution, or operational emergency authority, load [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) plus the specific governing policy.
+For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For implementation planning, load the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), [Phase 008 routing](008-implementation-reentry/), task-relevant architecture, and accepted implementation contracts. Use historical Phase 006 only when rationale or prior dependency reasoning materially helps the current subgroup.
 
-For external representation/publication work, preserve exact source authority through [Export](canonical/concepts/export.md), [Publication](canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners.
+The immediate next task is **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**.
 
-For implementation planning, load the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), [Phase 008 routing](008-implementation-reentry/), task-relevant architecture, and accepted implementation contracts. Use historical Phase 006 only when its rationale or prior dependency reasoning materially helps the current subgroup.
-
-The immediate next task is **008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation**.
-
-Passing Knowledge Validation or Implementation Verification is evidence for the checked revision; neither creates OKF verification metadata, implementation correctness, executable-slice authorization, deployment authority, or production certification.
+Passing Knowledge Validation, Implementation Verification, or CodeQL is evidence for the checked revision; none creates semantic verification, executable-slice authorization, deployment authority, or production certification.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
