@@ -2,17 +2,17 @@
 
 Phase 008 is the active post-Concept-Design implementation-planning phase.
 
-Current implementation/design boundary authority lives in [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md). Current product, synchronization, policy, experience, architecture and implementation contracts remain under [Canonical Knowledge](../canonical/).
+Current execution authority lives in [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md). Current product, synchronization, policy, experience, architecture, and implementation contracts remain under [Canonical Knowledge](../canonical/).
 
 # Status
 
-Phase 008 subdivision is **Complete**. Implementation planning is **Active**. 008-A is **Complete**. New domain implementation after the retained 006-D bootstrap is **Not Started**.
+Phase 008 subdivision is **Complete**. Implementation planning is **Active**. 008-A and 008-B are **Complete**. The retained 006-D bootstrap is now **Qualified for Phase 008 planning**. New domain implementation remains **Not Started**.
 
 # Records
 
-* [008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) — **Complete**. Establishes the subject-sensitive current authority hierarchy, planning-versus-execution taxonomy, `CHG-*` escalation route, progressive-disclosure/anti-bloat rules, historical-006 treatment, and the rule that no new domain implementation is authorized before 008-L.
-* **008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation** — **Next**.
-* **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix** — Planned.
+* [008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) — **Complete**. Establishes current authority, planning-versus-execution states, `CHG-*` escalation, progressive disclosure, and the 008-L authorization boundary.
+* [008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) — **Complete — PASS AFTER NARROW REMEDIATION**. Qualifies the retained toolchain/source/runtime/CI/PostgreSQL/IaC bootstrap, repairs stale Phase 006 execution guidance, and preserves external administration/evidence limitations.
+* **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix** — **Next**.
 * **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan** — Planned.
 * **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan** — Planned.
 * **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan** — Planned.
@@ -23,31 +23,20 @@ Phase 008 subdivision is **Complete**. Implementation planning is **Active**. 00
 * **008-K — Security, Privacy, Accessibility, Observability, Performance, Recovery/DR, Retention & Operational Evidence Plan** — Planned.
 * **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** — Planned.
 
-# 008-A authority result
+# 008-B qualification result
 
-Phase 008 now works under the following constraint direction:
+The protected 006-D baseline is qualified for planning use after two narrow non-domain repairs:
 
-```text
-canonical semantic/governance owners
-        ↓
-canonical architecture
-        ↓
-canonical implementation contracts
-        ↓
-Phase 008 planning decisions
-        ↓
-future executable realization/evidence
-```
+1. bootstrap browser copy no longer points to superseded Phase 006 slices;
+2. Implementation Verification no longer carries an obsolete `phase-006-*` push trigger.
 
-The [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md) separately owns execution posture.
+The audit confirmed that the exact 006-D toolchain pins remain coherent with the committed lockfile; the API remains health-only; the worker remains lifecycle-only; the browser remains bootstrap-only; the six authoritative module packages remain placeholder seams; local PostgreSQL contains no authoritative MUDAC schema; dependency-cruiser/ESLint boundaries remain present; and the OpenTofu roots remain separate and resource-free.
 
-A planning decision is not first-slice authorization; first-slice authorization is not code start; code completion/green CI is not merge, deployment, or production readiness. Only 008-L may authorize the Phase 009 entry slice, and 008-L itself performs no domain implementation.
-
-If implementation planning conflicts with current canonical meaning, the mechanism changes by default. A genuine contradiction, missing semantic owner, or intentional product change routes through `CHG-*` rather than being resolved silently in a schema, API, component, test, ADR, or phase plan.
+The repository-administration residual remains open: no repository rulesets are visible and branch-protection state is not readable by the current integration. Dependabot configuration is visible, but its alert inventory is not available through the current connector, so 008-B does not claim zero dependency findings.
 
 # Execution boundary
 
-All 008-A through 008-L work is planning, qualification, reconciliation, or authorization work. No Phase 008 subgroup implements new MUDAC domain behavior.
+All 008-A through 008-L work remains planning, qualification, reconciliation, or authorization work. No Phase 008 subgroup implements new MUDAC domain behavior.
 
 The first new executable domain work belongs to **Phase 009**, and only after 008-L explicitly authorizes a dependency-safe first slice.
 
@@ -55,8 +44,8 @@ The first new executable domain work belongs to **Phase 009**, and only after 00
 
 006-A through 006-D remain historical implementation-planning/bootstrap provenance. 006-E through 006-M remain useful dependency rationale but are superseded as an executable queue.
 
-Phase 008 owns the current implementation-plan refresh and may preserve, split, merge, rename, reorder, or replace those earlier slices. 008-C will record the explicit disposition after 008-B qualifies the retained 006-D baseline.
+008-B has qualified the retained 006-D substrate. 008-C now owns explicit mapping of the 007-H/007-I residual register and historical 006-E–M work into the refreshed plan.
 
 # Next
 
-Proceed to **008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation**.
+Proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**.
