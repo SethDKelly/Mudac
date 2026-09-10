@@ -29,7 +29,8 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: **Complete**
   * 007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: **Complete**
   * 007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit: **Complete**
-  * **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit: Next**
+  * 007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit: **Complete**
+  * **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: Next**
 
 ## Current design posture
 
@@ -41,7 +42,17 @@ The current execution boundary is owned by [Design / Implementation Boundary](ca
 
 007-E pressure-tested the model through ordinary, exceptional, degraded, concurrent, malicious and recovery scenarios. 007-F then re-audited Judge/Organizer experience architecture against the refined Concept/action/synchronization model and established [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
 
-007-G now closes the integrated policy/representation plane. Evaluation Policy, Coverage/Aggregate/Rank, Panel composition, correction authority, Awards/finalization, paper continuity, Official Outcome Revision, disclosure, Export and Publication compose without another Concept. [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) now owns the cross-cutting rule that exceptions preserve source truth, remain explicit/scoped/attributable, and cannot become generic invariant-bypassing overrides. Export cannot promote its source's authority through representation, and official-results Publication must bind to an identified Official Outcome Revision even though other legitimate operational materials may be distributed before Finalization.
+007-G closed the integrated policy/representation plane. Evaluation Policy, Coverage/Aggregate/Rank, Panel composition, correction authority, Awards/finalization, paper continuity, Official Outcome Revision, disclosure, Export and Publication compose without another Concept. [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) owns the cross-cutting rule that exceptions preserve source truth, remain explicit/scoped/attributable, and cannot become generic invariant-bypassing overrides.
+
+007-H then reconciled those current semantics against experience, Phase 005 architecture and the frozen Phase 006 plan. It found **no known unresolved baseline semantic/design blocker**. Remaining questions are classified as adequately constrained architecture details, implementation/evidence work, or explicit future product scope. That is semantic exit-readiness evidence—not formal methodology exit or implementation-resume authority.
+
+The current posture is therefore:
+
+```text
+semantic exit readiness: PASS
+formal Jackson methodology exit: NOT YET PERFORMED
+implementation resume: NOT AUTHORIZED
+```
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
 
@@ -55,4 +66,6 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-H — Cross-Layer Design Completeness, Residual Semantic-Risk & Jackson Methodology Exit-Readiness Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision**.
+
+007-I is the dedicated methodology-exit decision required by 007-A. Until that decision explicitly changes the boundary, the 006-D freeze remains in force.
