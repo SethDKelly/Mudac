@@ -4,13 +4,13 @@ okf_version: "0.2"
 
 # MUDAC Knowledge Bundle
 
-Preferred progressive-disclosure entry point for MUDAC design, architecture, retained implementation, and governance knowledge.
+Preferred progressive-disclosure entry point for MUDAC design, architecture, implementation, and governance knowledge.
 
 Current meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance.
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and retained implementation contracts.
+* [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and implementation contracts.
 * [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog.
 * [Synchronizations](canonical/synchronizations/) — current cross-concept coordination plus temporal/correction/historical-truth contracts.
 * [Policies](canonical/policies/) — Evaluation, disclosure, Panel composition, correction/finalization, continuity, and [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md).
@@ -18,13 +18,13 @@ Current meaning is organized under canonical knowledge. Numbered phase directori
 * [Governance](canonical/governance/) — documentation authority, agent context, change/conflict, source lineage, metadata/trust/lifecycle, validation/CI, stable IDs, and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 * [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) — durable normative IDs and cross-reference registry.
 * [Architecture](canonical/architecture/) — current accepted system/application architecture contracts.
-* [Implementation](canonical/implementation/) — accepted toolchain/source/runtime contracts retained as a frozen 006-D non-domain bootstrap substrate.
+* [Implementation](canonical/implementation/) — accepted implementation/tooling contracts plus the protected 006-D non-domain bootstrap baseline.
 
 # Agent bootstrap
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundle root and only task-relevant canonical owners. `AGENTS.md` is an adapter, not a competing rule store.
 
-Before any executable implementation task, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
+Before any implementation/code/IaC task, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
 # External Authorities and References
 
@@ -37,29 +37,40 @@ Before any executable implementation task, load [Design / Implementation Boundar
 * [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) — Complete.
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — **Frozen after 006-D**. 006-E through 006-M are deferred.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-H are complete; **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision is next**.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — Historical/frozen after 006-D; 006-E through 006-M are superseded as the current execution queue and remain planning lineage.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **Complete — formal methodology exit passed**.
+* **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness — Next / not started.**
 
-# Design-refinement progress
+# Formal design-exit result
 
-007-B closed current Concept-form completeness/independence evidence. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale state, historical query meaning, official-outcome succession, and Export/Publication timelines.
+Phase 007 deliberately reopened and then closed the full current semantic system after the earlier implementation bootstrap moved ahead of an explicit final methodology exit.
 
-007-E validated the resulting model across ordinary end-to-end competition operation, event-day exceptions, device/role authority pressure, interrupted and concurrent writes, paper/degraded operation, invalidation/rejudge, post-Finalization correction, disclosure failures, technical/break-glass misuse, stale derived state, malicious replay, and regional infrastructure failure. The sixteen-Concept catalog survived.
+007-B through 007-H established Concept completeness/independence, synchronization authority, temporal/correction truth, adversarial/degraded behavior, Judge/Organizer experience traceability, policy/representation closure, and a cross-layer residual-risk classification with no known baseline semantic blocker.
 
-007-F validated the Judge/Organizer experience layer against that current model. Consequential interactions trace to accepted Concept actions, synchronization boundaries, derived projections or non-authoritative working state; work modes, confirmation dialogs, status/exception views, route visibility and enabled controls do not establish domain authority.
+007-I formally exits the renewed Jackson Concept Design methodology for the current MUDAC baseline.
 
-007-G validated the integrated policy/representation plane. Policy-specific exceptions preserve source truth and are governed by [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md); calculated, official, represented, published, and delivered states remain distinct; [Export](canonical/concepts/export.md#export-003) cannot promote source authority; and [Publication](canonical/concepts/publication.md#pub-001) prerequisites follow representation purpose/source authority.
+The current boundary is:
 
-007-H reconciled the complete current semantic system against experience, Phase 005 architecture and the frozen Phase 006 plan. It found no known unresolved baseline semantic/design blocker and classified all remaining issues as downstream architecture detail, implementation/evidence work, or future product scope. The canonical boundary now records semantic exit-readiness as passed while formal methodology exit and implementation resume remain pending.
+```text
+Jackson Concept Design methodology: COMPLETE / EXITED
+baseline semantic design: COMPLETE
+known baseline semantic blockers: NONE OPEN
+implementation planning: READY TO RESUME
+Phase 008 plan refresh: NEXT / NOT STARTED
+new domain implementation after 006-D: NOT STARTED
+production readiness: NOT ESTABLISHED
+```
 
-These are methodology-exit evidence, not implementation-resume authority.
+Implementation planning may therefore resume. New domain implementation may not begin by simply picking up 006-E through 006-M. Phase 008 must first refresh the plan against current canonical design and explicitly authorize a dependency-safe first implementation slice.
 
 # Navigation Guidance
 
 For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For cross-Concept coordination and temporal/correction questions, load [Synchronizations](canonical/synchronizations/) instead of reconstructing semantics from phase history. For material Judge/Organizer interaction or UI-authority design, load the experience action/authority traceability contract plus only the relevant experience owner(s). For policy exceptions, overrides, waiver-like behavior, acknowledgement/resolution, or operational emergency authority, load [Operational Exception & Override Governance](canonical/policies/operational-exception-governance.md) plus the specific governing policy.
 
-Current work is design refinement. The executable 006-D workspace may receive only narrowly necessary non-domain maintenance while the freeze is active.
+For external representation/publication work, preserve exact source authority through [Export](canonical/concepts/export.md), [Publication](canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners.
 
-Passing Knowledge Validation or Implementation Verification is evidence for the checked revision; neither creates OKF verification metadata, Jackson-methodology closure, implementation-resume authority, or production certification.
+For implementation planning, load the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), task-relevant architecture, and accepted implementation contracts. The old 006-E–M sequence is planning lineage, not automatic execution authority.
+
+Passing Knowledge Validation or Implementation Verification is evidence for the checked revision; neither creates OKF verification metadata, implementation correctness, production certification, or authority to skip the Phase 008 plan-refresh boundary.
 
 See [docs/README.md](README.md) for a human-oriented authority summary.
