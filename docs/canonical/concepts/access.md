@@ -9,6 +9,7 @@ sources:
   - resource: ../../002-concept-specification/002-B-identity-participation-access-specifications.md
   - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
   - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../007-design-refinement/007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md
 ---
 
 # Purpose
@@ -39,7 +40,9 @@ Ordinary Judge Access is limited to Judge-safe event context and the Judge's own
 <a id="acc-002"></a>
 ## ACC-002 — Access does not transfer semantic authority
 
-Access grants capability; it does not transfer semantic authorship or decision authority. Navigation, URLs, QR codes, device possession, or authentication proof never substitute for the current Access decision.
+Access grants capability; it does not transfer semantic authorship or decision authority. Navigation, URLs, QR codes, device possession, authentication proof, system administration, support privilege, and emergency/break-glass capability never substitute for the current semantic authority required by the protected Competition action.
+
+Emergency or support intervention may restore, restrict, or revoke technical capability. It does not silently create Judge or Organizer authority, and technical impersonation must not erase the true acting Identity or falsely change the represented semantic author/authority.
 
 # Boundaries
 
