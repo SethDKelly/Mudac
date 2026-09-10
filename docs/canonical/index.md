@@ -15,25 +15,29 @@ This subtree is the preferred source for current MUDAC product, conceptual UX, d
 
 * [Governance](governance/) — methodology/terminology, documentation authority, agent context, canonical change, metadata/trust/lifecycle, validation/CI, source lineage, stable rule IDs, and the current [Design / Implementation Boundary](governance/design-implementation-boundary.md).
 * [Architecture](architecture/) — current accepted system/application architecture contracts. Knowledge topology does not dictate source-code topology.
-* [Implementation](implementation/) — accepted implementation/tooling contracts and the frozen 006-D bootstrap substrate. These remain subordinate to the active design-reentry freeze and are not current authority to advance domain implementation.
+* [Implementation](implementation/) — accepted implementation/tooling contracts plus the protected 006-D non-domain bootstrap baseline. Implementation planning may now resume, but new domain implementation remains not started pending Phase 008 plan refresh and first-slice authorization.
 
 # Current delivery posture
 
-MUDAC remains in deliberate design refinement with executable work frozen at the 006-D non-domain bootstrap boundary. Phase 006-E through 006-M are deferred until an explicit Jackson-methodology exit and implementation-resume decision authorize further domain implementation.
+MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline.
 
-Current design work proceeds through [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/).
+Phase 007 is complete. 007-H found no known unresolved baseline semantic/design blocker; 007-I formally accepted that evidence and made the methodology-exit decision.
 
-007-B established the current sixteen-Concept catalog. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale, official-outcome and Publication-history semantics. 007-E validated those semantics under end-to-end, exceptional, adversarial and degraded scenarios. 007-F revalidated Judge/Organizer experience semantics against the current Concept/action/synchronization/authority model. 007-G closed integrated policy, outcome, disclosure, representation and operational-exception governance while preserving the sixteen-Concept catalog.
-
-007-H has now completed the cross-layer exit-readiness audit. It finds no known unresolved baseline semantic/design blocker and classifies remaining work as adequately constrained architecture detail, implementation/evidence work, or future product scope.
-
-The current boundary is intentionally:
+The current boundary is:
 
 ```text
-semantic exit readiness: PASS
-formal Jackson methodology exit: NOT YET PERFORMED
-implementation resume: NOT AUTHORIZED
+Jackson Concept Design methodology: COMPLETE / EXITED
+baseline semantic design: COMPLETE
+known baseline semantic blockers: NONE OPEN
+implementation planning: READY TO RESUME
+Phase 008 plan refresh: NEXT / NOT STARTED
+new domain implementation after 006-D: NOT STARTED
+production readiness: NOT ESTABLISHED
 ```
+
+The retained 006-D executable substrate is a protected non-domain implementation baseline. The old 006-E through 006-M sequence remains historical planning lineage and is superseded as the active execution queue.
+
+Current work should proceed through **Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness**, beginning by defining dependency-safe subgroups before any new domain implementation is authorized.
 
 # Retrieval Rule
 
@@ -45,8 +49,8 @@ For Judge/Organizer interaction, route, action visibility, status/exception, con
 
 For exception, waiver, override, acknowledgement/suppression, policy bypass, or technical-emergency-versus-semantic-authority questions, load [Operational Exception & Override Governance](policies/operational-exception-governance.md) plus the specific policy/Concept owner involved.
 
-For external representation/publication questions, preserve the chain from source authority through [Export](concepts/export.md) to [Publication](concepts/publication.md); a representation may not promote its source's authority and official-result Publication must bind to an identified Official Outcome Revision.
+For external representation/publication questions, preserve the chain from source authority through [Export](concepts/export.md) to [Publication](concepts/publication.md); a representation may not promote its source authority and official-result Publication must bind to an identified Official Outcome Revision.
 
-Before any code, schema, authentication, API, feature, or application-IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). While the freeze is active, implementation owners are used only for understanding the retained prototype or performing narrowly permitted maintenance.
+Before any implementation/code/IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). During Phase 008, implementation work is limited to planning/re-entry plus narrow maintenance of the protected 006-D baseline until an explicit first domain implementation slice is authorized.
 
-Passing repository checks is evidence for a tested revision, not semantic verification, design-methodology closure, implementation-resume authority, or production certification.
+Passing repository checks is evidence for a tested revision, not semantic verification, implementation correctness, authority to skip the plan-refresh boundary, or production certification.
