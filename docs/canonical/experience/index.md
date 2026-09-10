@@ -3,6 +3,7 @@
 Current user-facing interaction semantics for MUDAC.
 
 * [Experience Context & Role Modes](context-role-modes.md) - Identity → Participation/role → Competition → operational context → task.
+* [Experience Action, State & Authority Traceability](action-authority-traceability.md) - Consequential interactions trace to Concept actions, synchronizations, projections, and current authority rather than UI-owned domain state.
 * [Judge Onboarding](judge-onboarding.md) - Event entry through derived Ready to Judge.
 * [Judge Evaluation](judge-evaluation.md) - Encounter confirmation, Draft evaluation, explicit Finalization, and amendment.
 * [Organizer Preparation](organizer-preparation.md) - Non-linear configuration and derived Competition readiness.
@@ -12,4 +13,4 @@ Current user-facing interaction semantics for MUDAC.
 * [Accessibility & Resilience](accessibility-resilience.md) - Semantic parity across input, viewport, device, connectivity, and paper fallback.
 * [Status, Feedback & Recovery](status-feedback-recovery.md) - Cross-cutting status dimensions, authority feedback, privacy, and recovery grammar.
 
-These are conceptual UX contracts, not component, route, API, or framework specifications. Follow each contract's `sources` when historical UX rationale is needed.
+These are conceptual UX contracts, not component, route, API, or framework specifications. For material interaction or UI-authority questions, load the action/authority traceability contract plus only the task-relevant experience owners. Follow each contract's `sources` when historical UX rationale is needed.
