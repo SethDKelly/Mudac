@@ -13,32 +13,36 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 5. For Judge/Organizer interaction, route, status, exception, confirmation, recovery, or UI-authority design, additionally load [`Experience Action, State & Authority Traceability`](docs/canonical/experience/action-authority-traceability.md) plus only the task-relevant experience owner(s).
 6. For exception, waiver, override, acknowledgement/suppression, policy-bypass, or technical-emergency-versus-semantic-authority work, additionally load [`Operational Exception & Override Governance`](docs/canonical/policies/operational-exception-governance.md) plus the specific governing policy/Concept owner.
 7. For Export/Publication or external representation work, preserve exact source authority and load the relevant [`Export`](docs/canonical/concepts/export.md), [`Publication`](docs/canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners as needed. A representation cannot promote its source authority.
-8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). The Jackson Concept Design methodology is complete for the current baseline, but new domain implementation is not yet started; Phase 008 plan refresh must explicitly authorize the first executable domain slice.**
+8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). The Jackson Concept Design methodology is complete for the current baseline, but new domain implementation is not yet started and no executable domain slice is authorized.**
 9. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-10. For implementation-planning work, load the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), task-relevant architecture, and materially relevant product/UX/governance/synchronization constraints.
+10. For implementation-planning work, also load the active [`Phase 008`](docs/008-implementation-reentry/) routing, the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), task-relevant architecture, and materially relevant product/UX/governance/synchronization constraints.
 11. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
 12. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
 13. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
 14. Use numbered phase history only for rationale, chronology, rejected alternatives, implementation lineage, or source audit.
 
-Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonical synchronization/architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
+Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonical synchronization/architecture rules, [`IMPL-*`](docs/canonical/implementation/implementation-foundation.md), the task-relevant canonical implementation owners, the active Phase 008 plan, and the current [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md).
 
 ## Current post-methodology implementation boundary
 
 The renewed Jackson Concept Design methodology formally exited through Phase 007-I for the current MUDAC baseline.
 
+Phase 008 has now been divided into dependency-safe planning/qualification subgroups.
+
 Current status:
 
 ```text
 Jackson Concept Design methodology: COMPLETE / EXITED
-implementation planning: READY TO RESUME
-Phase 008 plan refresh: NEXT / NOT STARTED
+Phase 008 subdivision: COMPLETE
+implementation planning: ACTIVE
+008-A: NEXT / NOT STARTED
+first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 ```
 
 The executable work created through 006-D is retained as a **protected non-domain implementation baseline**.
 
-Until Phase 008 explicitly authorizes the first domain implementation slice, agents must not advance into new:
+Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** explicitly authorizes the first domain implementation slice, agents must not advance into new:
 
 - domain PostgreSQL schema/migrations/repositories;
 - Cognito/session/Participation/Access/invitation implementation;
@@ -49,7 +53,7 @@ Until Phase 008 explicitly authorizes the first domain implementation slice, age
 
 Permitted executable changes before first-slice authorization are narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current design.
 
-Current work should default to **Phase 008 implementation re-entry and plan refresh**, not immediate domain coding.
+Current work should default to **Phase 008 implementation re-entry and plan refresh**, beginning with 008-A, not immediate domain coding.
 
 ## Do not
 
@@ -74,7 +78,8 @@ Current work should default to **Phase 008 implementation re-entry and plan refr
 - substitute SQLite/in-memory evidence for real PostgreSQL when PostgreSQL semantics matter;
 - hide flaky consequential tests behind retries or indefinite quarantine;
 - treat CI, coverage, scanners, workflow existence, IaC validation, or deployment configuration as semantic verification or production certification;
-- infer that completion of Concept Design, green implementation checks, historical 005-J readiness, or old 006-E–M plans authorize skipping the Phase 008 plan-refresh and first-slice boundary.
+- infer that completion of Concept Design, Phase 008 subdivision, green implementation checks, historical 005-J readiness, or old 006-E–M plans authorize skipping the 008-L first-slice boundary;
+- begin Phase 009 or any new domain implementation before 008-L explicitly authorizes the first slice.
 
 ## Protected executable baseline
 
