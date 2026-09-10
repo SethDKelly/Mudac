@@ -6,23 +6,31 @@ Implementation is downstream of canonical product/UX/governance and architecture
 
 # Current execution status
 
-**Implementation advancement is currently frozen at the 006-D non-domain bootstrap boundary.**
+**Implementation planning may resume; new domain implementation is not yet started.**
 
-The controlling current owner is [Design / Implementation Boundary](../governance/design-implementation-boundary.md). Phase 006-E through 006-M are deferred while MUDAC returns to deliberate design refinement under Phase 007+.
+The controlling current owner is [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
 
-These implementation contracts remain valid as retained substrate decisions and future inputs, but their existence does not authorize schema, persistence, authentication, API, browser-domain, feature, or application-AWS implementation while the freeze is active.
+The renewed Jackson Concept Design methodology formally exited in 007-I. The executable work through 006-D is retained as a protected non-domain implementation baseline. The old 006-E through 006-M sequence remains historical planning lineage and is superseded as the current executable queue.
+
+Before new domain implementation begins, Phase 008 must refresh the implementation plan against the completed Phase 007 design and explicitly authorize a dependency-safe first executable slice.
 
 # Accepted implementation contracts
 
 * [Implementation Authority, Toolchain & Delivery Governance](implementation-foundation.md) — `IMPL-*` contracts for implementation authority, TypeScript/Node/Fastify/pnpm/Kysely/OpenTofu baseline, static analysis, dependency/version/generated-code policy, repository merge/deployment governance, security scanning, and implementation completion semantics.
 * [Verification Strategy, Evidence & Quality Gates](verification-strategy.md) — verification contract for evidence layers, real PostgreSQL integration, deterministic fixtures/fakes, stable-rule traceability, security/accessibility/concurrency/recovery evidence, coverage posture, CI tiers, flaky-test handling, and privacy-minimized diagnostic artifacts.
 * [Source Topology, Package Boundaries & Dependency Enforcement](source-topology.md) — workspace/source graph for the three deployable composition roots, six authoritative module packages, application coordination, projections, business-neutral foundation, browser layers, test ownership, package exports, pnpm workspace dependencies, and dependency-cruiser enforcement.
-* [Runtime, Environment & Delivery Bootstrap](runtime-delivery-bootstrap.md) — executable workspace/local-development/CI/IaC bootstrap, environment/state separation, supply-chain checks, and deployment-authority boundary retained as the frozen prototype.
+* [Runtime, Environment & Delivery Bootstrap](runtime-delivery-bootstrap.md) — executable workspace/local-development/CI/IaC bootstrap, environment/state separation, supply-chain checks, and deployment-authority boundary retained as the protected 006-D baseline.
+
+# Current planning boundary
+
+During Phase 008, implementation work may include plan reconciliation, dependency analysis, current-baseline verification, test/evidence planning, and narrow maintenance of the protected 006-D substrate.
+
+Do not create new MUDAC domain schema, authentication/session behavior, production domain API behavior, IndexedDB domain Draft semantics, feature code, or domain-purpose AWS application provisioning until the refreshed plan explicitly authorizes the first executable slice.
 
 # Authority rule
 
 Implementation documents own durable implementation meaning within their scope. The current [Design / Implementation Boundary](../governance/design-implementation-boundary.md) owns whether implementation is permitted to advance.
 
-If an implementation document's historical handoff says a deferred 006-E+ task is “next,” that sequence is not current execution authority while the freeze is active.
+Historical Phase 006 handoffs are lineage rather than current execution authority. Phase 008 must decide which portions remain valid, need refinement, or should be superseded.
 
-Implementation code and tests cannot override upstream canonical product, UX, governance, or architecture meaning. If implementation pressure implies a semantic redesign, use the canonical `CHG-*` process rather than changing meaning only downstream.
+Implementation code and tests cannot override upstream canonical product, UX, governance, synchronization, temporal, policy, or architecture meaning. If implementation pressure implies a semantic redesign, use canonical `CHG-*` governance rather than changing meaning only downstream.
