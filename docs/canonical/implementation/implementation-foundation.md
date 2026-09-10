@@ -9,6 +9,7 @@ sources:
   - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
+  - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
   - resource: runtime-delivery-bootstrap.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: ../governance/documentation-authority.md
@@ -19,14 +20,14 @@ sources:
   - resource: ../architecture/commands-api-concurrency.md
   - resource: ../architecture/frontend-interaction.md
   - resource: ../architecture/aws-runtime-operations.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T17:23:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:08:00Z }
 ---
 
 # Purpose
 
 Define the durable implementation-level rules established at Phase 006 entry and retained after the formal Jackson Concept Design exit. These rules constrain source code, build/test tooling, migrations, generated contracts, CI/CD, and IaC while remaining subordinate to canonical product/UX/governance and architecture meaning.
 
-Implementation **planning** is active under Phase 008. 008-B has qualified the protected 006-D non-domain substrate, but new domain implementation remains not started and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
+Implementation **planning** is active under Phase 008. 008-B qualified the protected 006-D non-domain substrate, and 008-C has reconciled residual/historical-plan ownership. New domain implementation remains not started and no first executable domain slice is authorized until 008-L explicitly grants that authority through the current [Design / Implementation Boundary](../governance/design-implementation-boundary.md).
 
 <a id="impl-001"></a>
 ## IMPL-001 — Upstream canonical meaning outranks implementation convenience
@@ -112,7 +113,7 @@ The implementation baseline uses layered dependency, static-code, container and 
 
 Findings are fixed, shown to be inapplicable, or explicitly accepted with reason/owner/expiry-equivalent handling. Broad permanent suppression is not the default resolution.
 
-008-B qualified the currently configured lockfile/Dependabot/CodeQL/bootstrap controls but could not read the Dependabot alert inventory through the current connector; configured controls must not be restated as proof of zero open dependency findings.
+008-B qualified the currently configured lockfile/Dependabot/CodeQL/bootstrap controls but could not read the Dependabot alert inventory through the current connector. 008-C assigns that evidence limitation to 008-K; configured controls must not be restated as proof of zero open dependency findings.
 
 <a id="impl-013"></a>
 ## IMPL-013 — `main` is intended to be PR-gated by required current checks before implementation merges
@@ -121,7 +122,7 @@ When executable implementation work is authorized, ordinary changes reach `main`
 
 A mandatory reviewer count is not required while the repository is effectively single-maintainer; review requirements should strengthen when independent maintainers exist rather than create ceremonial self-approval.
 
-The required workflow checks exist, but repository ruleset/branch-protection administration remains an external repository-admin gate. 008-B revalidated that the repository rulesets endpoint exposes no rulesets and the current integration cannot read branch-protection state. Workflow existence must not be represented as enforced merge policy until those controls are independently configured and confirmed.
+The required workflow checks exist, but repository ruleset/branch-protection administration remains an external repository-admin gate. 008-B revalidated that the repository rulesets endpoint exposes no rulesets and the current integration cannot read branch-protection state. 008-C assigns this to 008-K with 008-L authorization-gate responsibility. Workflow existence must not be represented as enforced merge policy until those controls are independently configured and confirmed.
 
 <a id="impl-014"></a>
 ## IMPL-014 — Merge does not imply production deployment authority
@@ -138,6 +139,8 @@ Cross-cutting/reversible implementation choices that affect multiple delivery gr
 An implementation decision record cannot override canonical architecture. A choice that would change product/architecture semantics escalates through `CHG-*` first.
 
 During Phase 008, a planning decision or implementation decision record is still **planning authority**, not executable-slice authorization. Durable accepted implementation choices should be reflected in the applicable canonical implementation owner before Phase 009 execution depends on them.
+
+008-C intentionally keeps its residual/supersession matrix as Phase 008 planning provenance rather than creating a generic parallel canonical decision store. Later groups promote only durable implementation choices into their applicable canonical owners.
 
 <a id="impl-016"></a>
 ## IMPL-016 — Implementation subgroup completion requires implementation and evidence closure
@@ -168,9 +171,9 @@ Exact implementation versions are pinned in manifests/lockfiles and are not perm
 
 006-A established the common toolchain/governance, 006-B the verification/evidence model, 006-C the source/package boundaries, and 006-D the executable workspace/local/CI/IaC bootstrap.
 
-007-A later froze execution and reopened deliberate design. Phase 007 formally exited through 007-I. Phase 008 is now active: 008-A established implementation-planning authority, and 008-B qualified the retained 006-D substrate after narrow remediation.
+007-A later froze execution and reopened deliberate design. Phase 007 formally exited through 007-I. Phase 008 is active: 008-A established implementation-planning authority, 008-B qualified the retained 006-D substrate, and 008-C reconciled all accepted Class 2/3 residuals, Class 4 exclusions, 008-B evidence limitations, and historical 006-E–M dispositions into current planning owners.
 
-008-C is next and will ingest the residual register and explicitly dispose the historical 006-E–M planning queue against the qualified baseline.
+Historical 006-E through 006-M is fully superseded as an executable roadmap. 008-D is next and owns detailed persistence/temporal/Versioning/Provenance/governed-exception/outbox/projection/migration planning.
 
 No first executable domain slice is authorized until 008-L. The first new domain implementation belongs to Phase 009 after explicit authorization.
 
