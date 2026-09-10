@@ -14,6 +14,7 @@ sources:
   - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
   - resource: ../../007-design-refinement/007-H-cross-layer-design-completeness-residual-semantic-risk-jackson-methodology-exit-readiness-audit.md
   - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
+  - resource: ../../008-implementation-reentry/README.md
   - resource: change-governance.md
   - resource: methodology-terminology.md
   - resource: ../synchronizations/concept-synchronizations.md
@@ -33,7 +34,7 @@ This owner preserves the historical 006-D implementation freeze as provenance wh
 
 # Current state
 
-MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline.
+MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline, and Phase 008 has now been divided into a dependency-safe implementation-reentry plan.
 
 The governing status is:
 
@@ -41,34 +42,34 @@ The governing status is:
 Jackson Concept Design methodology: COMPLETE / EXITED
 baseline semantic design: COMPLETE
 known baseline semantic blockers: NONE OPEN
-implementation planning: READY TO RESUME
-Phase 008 plan refresh: NEXT / NOT STARTED
+Phase 008 subdivision: COMPLETE
+implementation planning: ACTIVE
+008-A: NEXT / NOT STARTED
+first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
 The formal exit is scoped to the current baseline. New scope or a genuine later contradiction may require a new design cycle under canonical change governance.
 
-# What 007-I authorizes
+# What Phase 008 planning authority permits
 
-007-I authorizes **implementation planning to resume**.
-
-That means current work may now:
+Current work may now:
 
 - reconcile the retained 006-D substrate against the completed canonical design;
 - refresh implementation slices and dependency ordering;
 - map the 007-H residual issue register into architecture/implementation/evidence tasks;
+- define concrete downstream implementation mechanisms where accepted architecture and semantics sufficiently constrain the choice;
 - define verification gates and explicit implementation-entry criteria;
-- choose downstream mechanisms where canonical semantics and accepted architecture already constrain the choice sufficiently;
 - prepare an explicit first domain implementation slice for authorization.
 
-This is a real change from the earlier design-reentry freeze.
+The active Phase 008 routing is [Implementation Re-entry, Plan Refresh & Execution Readiness](../../008-implementation-reentry/).
 
-# What 007-I does not authorize
+# What Phase 008 does not authorize
 
-007-I does **not** authorize agents to immediately implement domain behavior from the old 006-E through 006-M queue.
+The completed Phase 008 subdivision does **not** authorize agents to implement domain behavior.
 
-Until Phase 008 refresh explicitly authorizes a first executable domain slice, do not advance into new:
+Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** explicitly authorizes a first executable slice, do not advance into new:
 
 - domain PostgreSQL schema, migrations, repositories, or projections;
 - Cognito/session/Identity/Participation/Access/invitation behavior;
@@ -80,7 +81,9 @@ Until Phase 008 refresh explicitly authorizes a first executable domain slice, d
 The distinction is intentional:
 
 ```text
-implementation planning ready
+implementation planning active
+    ≠
+first executable slice authorized
     ≠
 domain implementation started
 ```
@@ -101,7 +104,7 @@ Phase 006 remains historical implementation-planning/bootstrap provenance.
 
 They must not be resumed mechanically.
 
-The next implementation-planning phase may preserve, split, merge, rename, reorder, or replace those slices while retaining useful rationale and provenance.
+Phase 008 may preserve, split, merge, rename, reorder, or replace those slices while retaining useful rationale and provenance.
 
 # Required Phase 008 refresh
 
@@ -117,6 +120,8 @@ Before new domain implementation starts, Phase 008 must refresh the implementati
 - the 007-H residual architecture/implementation/evidence register.
 
 The refreshed plan must identify a dependency-safe first implementation slice and explicitly authorize it before new domain code begins.
+
+Phase 008 is subdivided so that authority/baseline qualification precedes durable persistence planning; persistence precedes Identity/Access; Identity/Access precedes commands/API; server contracts precede browser continuity; operational domain slices precede evaluation evidence; evaluation evidence precedes official outcomes/externalization; and cross-cutting verification precedes first-slice authorization.
 
 # Current methodology evidence
 
@@ -149,13 +154,13 @@ The following categories are intentionally carried downstream rather than treate
 - repository administration and production operations;
 - future Stage/Round, student application, scheduling, notifications, calibrated scoring, rich public results, and advanced Award governance.
 
-Their detailed classification is owned by 007-H and accepted by 007-I.
+Their detailed classification is owned by 007-H and accepted by 007-I. Phase 008 must route the Class 2 and Class 3 items into explicit implementation-plan owners while preserving Class 4 outside the current baseline.
 
 # Change-control after design exit
 
 Completed Concept Design remains current semantic authority, not immutable dogma.
 
-If implementation discovers a real canonical contradiction, missing independent Concept, impossible synchronization/authority requirement, unmodeled correction/history condition, or material new product scope, return through `CHG-*` and deliberate design as necessary.
+If implementation planning or later implementation discovers a real canonical contradiction, missing independent Concept, impossible synchronization/authority requirement, unmodeled correction/history condition, or material new product scope, return through `CHG-*` and deliberate design as necessary.
 
 Implementation inconvenience, framework preference, storage convenience, UI convenience, or technical/operator privilege alone does not authorize semantic weakening.
 
@@ -163,12 +168,12 @@ Implementation inconvenience, framework preference, storage convenience, UI conv
 
 005-J remains historical evidence that the Phase 005 architecture was implementation-planning ready at that time.
 
-007-A later froze execution and required renewed full-methodology closure. 007-B through 007-H supplied that evidence. 007-I now formally exits the renewed methodology.
+007-A later froze execution and required renewed full-methodology closure. 007-B through 007-H supplied that evidence. 007-I formally exited the renewed methodology. Phase 008 now owns the active implementation-plan refresh.
 
 None of those historical records is rewritten retroactively.
 
 # Current handoff
 
-Proceed next by **defining Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness into dependency-safe subgroups**.
+Proceed to **008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails** under [Phase 008](../../008-implementation-reentry/).
 
-Phase 008 is planning/re-entry work. New domain implementation remains **not started** until that refreshed phase explicitly authorizes its first executable slice.
+New domain implementation remains **not started** and no first executable slice is authorized until 008-L explicitly changes this boundary.
