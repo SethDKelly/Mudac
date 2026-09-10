@@ -4,7 +4,7 @@ Status: **Frozen after 006-D**
 
 ## Current authority
 
-Phase 006 began implementation planning and then crossed into executable bootstrap work at 006-D. A later human design decision now freezes that executable substrate and returns MUDAC to deliberate Jackson Concept Design refinement before any domain implementation continues.
+Phase 006 began implementation planning and then crossed into executable bootstrap work at 006-D. A later human design decision freezes that executable substrate and returns MUDAC to deliberate Jackson Concept Design refinement before any domain implementation continues.
 
 The current freeze is owned by [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md) and recorded by [007-A — Design Re-entry, Implementation Freeze & Jackson Completion Criteria](../007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md).
 
@@ -69,10 +69,38 @@ Its original dependency intent remains useful context:
 
 But this chain is **not executable authority while the design freeze is active**.
 
+## Phase 007 reconciliation requirement
+
+007-H has completed the cross-layer semantic exit-readiness audit and found no known baseline semantic blocker. That result does **not** resume this phase.
+
+Before any later implementation execution, the deferred plan must be refreshed against the Phase 007 refinements, including:
+
+- temporal/correction/invalidation/replacement and latest-declared-official + Affected semantics;
+- explicit authority-establishing versus derived/convergent synchronization effects;
+- adversarial technical/break-glass and disclosure-exposure findings;
+- Judge/Organizer experience action/authority traceability;
+- Operational Exception & Override Governance;
+- Export representation-authority monotonicity;
+- purpose/source-specific Publication prerequisites.
+
+The refresh may preserve, reorder, split, merge, rename, or supersede 006-E through 006-M. Historical plan records remain provenance rather than automatic execution instructions.
+
 ## Resume condition
 
-Implementation resumes only after a later explicit Jackson-methodology exit and human/design decision. Green CI, the existence of 006-E plans, or the prior 005-J conclusion does not independently authorize continuation.
+Implementation resumes only after a dedicated formal Jackson-methodology exit and explicit implementation-resume decision.
+
+The current canonical posture is:
+
+```text
+semantic exit readiness: PASS
+formal Jackson methodology exit: NOT YET PERFORMED
+implementation resume: NOT AUTHORIZED
+```
+
+Green CI, the existence of 006-E plans, 007-H exit readiness, or the prior 005-J conclusion does not independently authorize continuation.
 
 ## Next
 
-Proceed to [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/), beginning with **007-B — Concept Completeness, Independence & Genericity Audit**.
+Current work remains in [Phase 007 — Jackson Design Refinement & Methodology Closure](../007-design-refinement/).
+
+Proceed to **007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision**. If that decision later authorizes implementation planning to resume, refresh this Phase 006 plan against Phase 007 before executing domain work.
