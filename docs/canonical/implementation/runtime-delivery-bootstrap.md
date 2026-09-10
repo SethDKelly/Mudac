@@ -10,14 +10,16 @@ sources:
   - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
+  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
   - resource: source-topology.md
+  - resource: persistence-history-projection.md
   - resource: ../architecture/aws-runtime-operations.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T18:12:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
 ---
 
 # Purpose
@@ -34,7 +36,7 @@ This owner introduces no new stable-rule namespace. Runtime/bootstrap configurat
 
 **Result: qualified for Phase 008 planning after narrow non-domain remediation.**
 
-008-C has since assigned the remaining repository-administration/dependency-evidence limits to later Phase 008 owners and fully superseded the historical 006-E through 006-M execution queue. The qualification does not authorize domain implementation.
+008-C assigned the remaining repository-administration/dependency-evidence limits to later Phase 008 owners and fully superseded the historical 006-E through 006-M execution queue. 008-D has since accepted the downstream persistence/history/migration plan while keeping the executable baseline itself schema-free.
 
 Until 008-L explicitly authorizes the first executable domain slice, this substrate may be retained and narrowly maintained but not extended into new MUDAC domain behavior.
 
@@ -75,13 +77,15 @@ The six authoritative module packages remain minimal public seams. `@mudac/appli
 
 008-B found no authoritative domain schema, migration, repository, authentication/session behavior, domain API, IndexedDB Draft behavior, Competition/Judging/Evaluation/Outcome/Export/Publication implementation, or domain-purpose AWS resource.
 
-Therefore new domain implementation after 006-D remains **NOT STARTED**.
+008-D is a planning artifact only and did not alter that executable fact. Therefore new domain implementation after 006-D remains **NOT STARTED**.
 
 # Local development
 
 Routine local development runs Node application processes on the host and PostgreSQL through Docker Compose.
 
 The current local service uses `postgres:17-alpine` with development-only default credentials and a named local volume. This is a qualified local bootstrap dependency, not a production PostgreSQL-version contract and not an authoritative MUDAC schema.
+
+008-D defines the future PostgreSQL schema/migration conventions but does not instantiate them in this bootstrap.
 
 External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. Deterministic local fakes support normal development/testing; targeted real-service evidence belongs to later authorized work when provider semantics matter.
 
@@ -150,7 +154,7 @@ Real local secret files are ignored. Long-lived AWS deployment keys do not belon
 
 When later implementation is authorized, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
 
-Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
+008-D now requires SQL-first forward migrations, checksum verification, an advisory migration lock, separate migrator authority, no application-startup auto-migration, and expand/migrate/contract compatibility. Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
 
 CI may validate OpenTofu without backend credentials. Real plan/apply occurs only under intended environment/account deployment authority and an exact reviewed revision.
 
@@ -182,14 +186,14 @@ GitHub repository
 
 # Deliberate limitations
 
-This qualified bootstrap still does not implement PostgreSQL domain schemas/migrations, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
+This qualified bootstrap still does not implement the PostgreSQL schemas/migrations/outbox/projections planned by 008-D, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
 
 These are later implementation-planning/evidence concerns, not defects in the 006-D bootstrap.
 
 # Handoff
 
-The protected baseline remains qualified as current planning input. 008-C has reconciled its downstream residuals and historical-plan dependencies.
+The protected baseline remains qualified as current planning input. 008-D has fixed the persistence/history/migration contract that future authorized work will add to it.
 
-Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
+Proceed to **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan**.
 
 No first executable domain slice is authorized before 008-L; new domain implementation remains not started.
