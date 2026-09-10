@@ -36,11 +36,13 @@ Before any executable implementation task, load [Design / Implementation Boundar
 * [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
 * [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
 * [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — **Frozen after 006-D**. 006-E through 006-M are deferred.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-D are complete; **007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation is next**.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **In Progress**. 007-A through 007-E are complete; **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit is next**.
 
 # Design-refinement progress
 
 007-B closed current Concept-form completeness/independence evidence. 007-C consolidated cross-concept synchronization authority. 007-D consolidated temporal truth, correction, invalidation, supersession, replacement, affected/stale state, historical query meaning, official-outcome succession, and Export/Publication timelines.
+
+007-E validates the resulting model across ordinary end-to-end competition operation, event-day exceptions, device/role authority pressure, interrupted and concurrent writes, paper/degraded operation, invalidation/rejudge, post-Finalization correction, disclosure failures, technical/break-glass misuse, stale derived state, malicious replay, and regional infrastructure failure. The sixteen-Concept catalog survives; current canonical Access/disclosure wording now explicitly separates technical emergency capability from Competition semantic authority and treats actual disclosure as irreversible historical exposure.
 
 These are methodology-exit evidence, not implementation-resume authority.
 
