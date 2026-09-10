@@ -15,7 +15,7 @@ Canonical governance lives under [`docs/canonical/governance/`](docs/canonical/g
 7. For Export/Publication or external representation work, preserve exact source authority and load the relevant [`Export`](docs/canonical/concepts/export.md), [`Publication`](docs/canonical/concepts/publication.md), disclosure, official-outcome, and temporal owners as needed. A representation cannot promote its source authority.
 8. **Before any implementation/code/IaC task, read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md). The Jackson Concept Design methodology is complete for the current baseline, implementation planning is active, the 006-D non-domain substrate is qualified, but no executable domain slice is authorized.**
 9. For architecture work, load only the relevant owner(s) under [`docs/canonical/architecture/`](docs/canonical/architecture/) plus materially relevant upstream constraints.
-10. For implementation-planning work, also load the active [`Phase 008`](docs/008-implementation-reentry/) routing, the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), task-relevant architecture, and materially relevant product/UX/governance/synchronization constraints. [008-A](docs/008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) defines planning authority; [008-B](docs/008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) defines the qualified bootstrap baseline and its open evidence limits.
+10. For implementation-planning work, also load the active [`Phase 008`](docs/008-implementation-reentry/) routing, the relevant owner(s) under [`docs/canonical/implementation/`](docs/canonical/implementation/), task-relevant architecture, and materially relevant product/UX/governance/synchronization constraints. [008-A](docs/008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) defines planning authority; [008-B](docs/008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) defines the qualified bootstrap; [008-C](docs/008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) owns current residual/historical-plan disposition.
 11. Verification/test work additionally loads [`Verification Strategy, Evidence & Quality Gates`](docs/canonical/implementation/verification-strategy.md).
 12. Source/package/import work additionally loads [`Source Topology, Package Boundaries & Dependency Enforcement`](docs/canonical/implementation/source-topology.md).
 13. Runtime/environment/CI/IaC work additionally loads [`Runtime, Environment & Delivery Bootstrap`](docs/canonical/implementation/runtime-delivery-bootstrap.md).
@@ -27,7 +27,7 @@ Governed by `DOC-*`, `CTX-*`, `CHG-*`, `META-*`, `VAL-*`, task-relevant canonica
 
 The renewed Jackson Concept Design methodology formally exited through Phase 007-I for the current MUDAC baseline.
 
-Phase 008 is active. 008-A established implementation-planning authority; 008-B qualified the retained 006-D substrate after narrow non-domain remediation.
+Phase 008 is active. 008-A established implementation-planning authority; 008-B qualified the retained 006-D substrate; 008-C reconciled all accepted residuals and historical 006-E through 006-M into current owners.
 
 Current status:
 
@@ -38,7 +38,9 @@ implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
 protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-008-C: NEXT / NOT STARTED
+008-C: COMPLETE — PASS
+historical 006-E–M executable queue: SUPERSEDED / MAPPED
+008-D: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 ```
@@ -56,23 +58,29 @@ Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-S
 
 Permitted executable changes before first-slice authorization remain narrow dependency/security/compatibility maintenance, non-domain verification/tooling repair, documentation/routing changes, and removal of accidental behavior that conflicts with current authority.
 
-Current work should proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**, not immediate domain coding.
+Current work should proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**, not domain coding.
 
-## Qualified bootstrap evidence and limits
+## 008-C planning ownership
 
-008-B confirmed the retained exact toolchain/lockfile, three composition roots, six authoritative module seams, schema-free local PostgreSQL bootstrap, dependency enforcement, CI configuration, and resource-free separated OpenTofu roots.
+008-C is the current provenance owner for residual and historical-plan disposition. Agents must use it instead of reconstructing the old 006-E–M queue.
 
-Two narrow drift items were repaired: stale browser copy pointing to later Phase 006 slices and an obsolete `phase-006-*` special push trigger in Implementation Verification.
+Key routing consequences:
 
-Two limits remain visible:
+- 007-H Class 2/3 residuals have named Phase 008 owners;
+- Class 4 Stage/Round, student application, scheduling, notifications, calibration, rich public results, and advanced Award governance remain outside the current baseline;
+- old 006-J is split between 008-G browser Draft/recovery and 008-I evaluation/paper;
+- old 006-L is merged into 008-J outcomes/externalization planning;
+- old 006-M is split between 008-K cross-cutting evidence/readiness and 008-L authorization/exit;
+- repository-protection and dependency-alert evidence limitations remain assigned to 008-K/008-L rather than assumed resolved.
 
-- no repository rulesets are currently visible and branch-protection state cannot be read by the connected integration, so intended merge controls must not be claimed as enforced;
-- Dependabot is configured, but the alert inventory is unavailable through the current connector, so zero open dependency findings must not be inferred.
+The matrices in 008-C are planning provenance, not a new canonical rule namespace. Durable implementation choices selected by later groups belong in their applicable canonical implementation owner when `IMPL-015` warrants promotion.
 
 ## Do not
 
 - recursively preload all of `docs/` for ordinary work;
 - reconstruct current rules from old phase history when a canonical owner exists;
+- resume 006-E through 006-M as executable slices after 008-C has superseded/mapped them;
+- pull 007-H Class 4 future scope into baseline planning without deliberate `CHG-*` re-entry;
 - duplicate synchronization or temporal semantics independently inside multiple Concept/architecture/implementation documents when the canonical synchronization owner can be referenced;
 - collapse lifecycle, currentness, validity, affected/stale currency, replacement, distribution state, and historical observation into one convenience status merely for implementation ease;
 - let a screen, route, work mode, status badge, exception row, confirmation dialog, recovery affordance, or enabled control become an alternate domain-action or authority owner;
@@ -92,7 +100,7 @@ Two limits remain visible:
 - substitute SQLite/in-memory evidence for real PostgreSQL when PostgreSQL semantics matter;
 - hide flaky consequential tests behind retries or indefinite quarantine;
 - treat CI, coverage, scanners, workflow existence, IaC validation, or deployment configuration as semantic verification or production certification;
-- infer that completion of Concept Design, Phase 008 subdivision, 008-A/008-B completion, a qualified bootstrap, green checks, historical 005-J readiness, or old 006-E–M plans authorize skipping the 008-L first-slice boundary;
+- infer that completion of Concept Design, Phase 008 subdivision, 008-A/B/C completion, a qualified bootstrap, green checks, historical 005-J readiness, or old 006-E–M plans authorize skipping the 008-L first-slice boundary;
 - begin Phase 009 or any new domain implementation before 008-L explicitly authorizes the first slice.
 
 ## Protected executable baseline
