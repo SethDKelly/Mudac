@@ -27,7 +27,8 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
   * 007-C — Cross-Concept Synchronization Completeness, Trigger, Preconditions/Postconditions & Authority-Seam Audit: **Complete**
   * 007-D — Temporal State, Correction, Invalidation, Supersession & Historical-Truth Closure: **Complete**
   * 007-E — End-to-End Scenario, Exception, Failure & Adversarial Authority Validation: **Complete**
-  * **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: Next**
+  * 007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit: **Complete**
+  * **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit: Next**
 
 ## Current design posture
 
@@ -37,9 +38,9 @@ The current execution boundary is owned by [Design / Implementation Boundary](ca
 
 007-B established the sixteen-Concept catalog. 007-C established the current [Synchronization](canonical/synchronizations/) layer. 007-D added [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md), separating lifecycle, working/committed authority, supersession, invalidation, replacement, affected/stale currency, distribution state, and historical observation.
 
-007-E then pressure-tested the model through end-to-end ordinary operation, Judge/Panel exceptions, dual-role behavior, lost/shared devices, interrupted authoritative transitions, paper recovery, duplicate/concurrent inputs, invalid Encounter/rejudge, post-event amendments, post-Finalization correction, disclosure failures, Administrator/break-glass misuse, stale derived state, and regional infrastructure failure.
+007-E pressure-tested the model through end-to-end ordinary operation, Judge/Panel exceptions, dual-role behavior, lost/shared devices, interrupted authoritative transitions, paper recovery, duplicate/concurrent inputs, invalid Encounter/rejudge, post-event amendments, post-Finalization correction, disclosure failures, Administrator/break-glass misuse, stale derived state, and regional infrastructure failure. The sixteen-Concept catalog survived without a generic Workflow/Recovery/Incident/Conflict/Break-glass/Reconciliation Concept.
 
-The sixteen-Concept catalog survives that pressure without a generic Workflow, Recovery, Incident, Conflict, Break-glass, or Reconciliation Concept. The only canonical refinements required were to clarify that technical/system emergency capability does not create Competition semantic authority, and that actual protected-information exposure is a historical occurrence that later revocation cannot erase.
+007-F then re-audited the Phase 003 Judge/Organizer experience architecture against that refined current model. Material interactions remain traceable to Concept actions, queries, synchronizations, derived projections, working state, or implementation-only interaction state. UI modes, confirmations, exception rows, readiness indicators, and enabled controls do not create semantic authority. Current cross-cutting UX authority now lives in [Experience Action, State & Authority Traceability](canonical/experience/action-authority-traceability.md).
 
 The 006-D executable substrate remains in the repository because it is intentionally semantically thin. It is **not** authority to continue 006-E onward.
 
@@ -53,4 +54,4 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed through [Phase 007](007-design-refinement/) with **007-F — Judge & Organizer Experience-to-Concept Action, Synchronization & Authority Traceability Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
+Proceed through [Phase 007](007-design-refinement/) with **007-G — Policy, Representation, Outcome, Disclosure & Operational-Governance Closure Audit**. The renewed design runway continues until a dedicated later Jackson-methodology exit explicitly authorizes implementation to resume.
