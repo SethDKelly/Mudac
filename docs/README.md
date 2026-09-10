@@ -15,19 +15,18 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 003 — Conceptual UX Architecture: **Complete**
 * Phase 004 — Knowledge Architecture, OKF Retrofit & Documentation Governance: **Complete**
 * Phase 005 — System, Application, Data & Synchronization Architecture: **Complete as historical architecture exit**
-* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **Historical after 006-D; 006-E–M superseded as current execution queue**
-  * 006-A — implementation authority/toolchain: Complete
-  * 006-B — verification/evidence strategy: Complete
-  * 006-C — source/package/dependency topology: Complete
-  * 006-D — environment/IaC/CI/CD/local/runtime bootstrap: Complete; re-qualified by 008-B as the protected non-domain baseline
-  * 006-E through 006-M: historical deferred planning lineage; not executable authority
+* Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy: **Historical after 006-D; 006-E–M explicitly mapped/superseded by 008-C**
+  * 006-A through 006-C: complete historical planning
+  * 006-D: complete historical bootstrap; re-qualified by 008-B as the protected non-domain baseline
+  * 006-E through 006-M: preserved historical planning lineage; no longer executable authority
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **Complete — formal methodology exit passed**
   * 007-A through 007-H: Complete
   * 007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: **Complete — PASS**
 * Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **In Progress**
   * 008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails: **Complete**
   * 008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation: **Complete — PASS AFTER NARROW REMEDIATION**
-  * 008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix: **Next**
+  * 008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix: **Complete — PASS**
+  * 008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan: **Next**
 
 ## Current posture
 
@@ -35,7 +34,7 @@ MUDAC has formally exited the renewed Jackson Concept Design methodology for the
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-[008-A](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) establishes the Phase 008 authority model. [008-B](008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) has now qualified the retained 006-D executable substrate as a current planning input after two narrow non-domain drift repairs.
+[008-A](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) establishes the Phase 008 authority model. [008-B](008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) qualifies the retained 006-D executable substrate. [008-C](008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) closes residual and historical-plan ownership.
 
 The current status is:
 
@@ -48,17 +47,18 @@ implementation planning authority: ESTABLISHED
 008-A: COMPLETE
 008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
 protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-008-C: NEXT / NOT STARTED
+008-C: COMPLETE — PASS
+residual ownership: CLOSED FOR CURRENT BASELINE
+historical 006-E–M executable queue: SUPERSEDED / MAPPED
+008-D: NEXT / NOT STARTED
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
-Qualification means later planning may rely on the retained workspace/toolchain/source/runtime substrate. It does not authorize domain implementation.
+008-C assigns every 007-H Class 2/3 residual to a current later planning owner, preserves every Class 4 item outside the baseline, carries the 008-B repository-protection/dependency-alert evidence limitations to 008-K/008-L, and gives each historical 006-E–M item an explicit preserve/split/merge/expand disposition.
 
-008-B confirmed the exact retained toolchain pins and lockfile, three bootstrap composition roots, six authoritative module seams, schema-free local PostgreSQL role, dependency enforcement, CI configuration, and separate resource-free OpenTofu roots. It corrected stale Phase 006 copy in the bootstrap browser and removed the obsolete `phase-006-*` special push trigger from Implementation Verification.
-
-Two evidence/administration limits remain explicit: no repository rulesets are currently visible and branch-protection state cannot be read through the current integration; Dependabot is configured, but its alert inventory is unavailable through the current connector. Neither condition is silently represented as clean/enforced.
+The key decomposition changes are deliberate: old 006-J splits between 008-G and 008-I; old 006-L merges into 008-J; old 006-M splits between 008-K and 008-L.
 
 ## Phase 008 structure
 
@@ -69,9 +69,9 @@ Two evidence/administration limits remain explicit: no repository rulesets are c
    ↓
 008-B protected substrate qualification                       COMPLETE
    ↓
-008-C residual-risk + historical-plan reconciliation          NEXT
+008-C residual-risk + historical-plan reconciliation          COMPLETE
    ↓
-008-D persistence / temporal / provenance / exception plan
+008-D persistence / temporal / provenance / exception plan    NEXT
    ↓
 008-E Identity / Participation / Access / session plan
    ↓
@@ -100,18 +100,18 @@ A qualified bootstrap, planning decision, first-slice authorization, code start,
 
 If implementation planning conflicts with current canonical meaning, the downstream mechanism changes by default. A genuine semantic contradiction, missing semantic owner, or intentional product change routes through `CHG-*`; it is not resolved silently in schema, APIs, UI, tests, IaC, or implementation-planning documents.
 
-Phase 008 follows `CTX-*` progressive disclosure and `DOC-*` one-owner discipline. Historical phase records are used for rationale and supersession analysis, not reconstructed as current rule stores.
+Phase 008 follows `CTX-*` progressive disclosure and `DOC-*` one-owner discipline. 008-C is the planning/provenance owner for residual and historical-plan disposition; it does not create a second canonical rule store.
 
 ## Why Phase 005 and Phase 006 were not erased
 
 [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier architecture-readiness conclusion.
 
-[007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) later froze execution and reopened deliberate Concept Design; [007-I](007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md) closed that renewed methodology. 008-B subsequently re-qualified the retained 006-D executable portion rather than resuming 006-E–M mechanically.
+[007-A](007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md) later froze execution and reopened deliberate Concept Design; [007-I](007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md) closed that renewed methodology. 008-B re-qualified the retained 006-D executable portion, and 008-C now explicitly maps rather than deletes the deferred 006-E–M lineage.
 
-Historical records remain append-stable provenance. 008-C now owns the explicit disposition of the deferred 006-E–M planning lineage against current residuals and canonical authority.
+Historical records remain append-stable provenance. Current planning authority now belongs to 008-D through 008-L.
 
 ## Current next work
 
-Proceed to **008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix**.
+Proceed to **008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan**.
 
 New domain implementation remains **not started** until 008-L explicitly authorizes the first executable slice.
