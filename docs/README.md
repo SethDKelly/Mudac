@@ -24,7 +24,9 @@ Use numbered phase directories for rationale, design evolution, alternatives, im
 * Phase 007 — Jackson Design Refinement & Methodology Closure: **Complete — formal methodology exit passed**
   * 007-A through 007-H: Complete
   * 007-I — Formal Jackson Concept Design Methodology Exit, Accepted Residual Uncertainty & Implementation-Resume Boundary Decision: **Complete — PASS**
-* Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **In Progress — subdivision complete; 008-A next**
+* Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness: **In Progress**
+  * 008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails: **Complete**
+  * 008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation: **Next**
 
 ## Current posture
 
@@ -32,7 +34,7 @@ MUDAC has formally exited the renewed Jackson Concept Design methodology for the
 
 The current execution boundary is owned by [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
 
-Phase 008 has now been divided into twelve dependency-safe planning/qualification groups. The active phase begins with implementation authority and canonical-baseline reset, then qualifies the retained 006-D substrate, ingests residual/historical planning work, refreshes durable data/security/API/client plans, derives domain vertical-slice ordering, defines cross-cutting evidence gates, and ends with an explicit first-slice authorization review.
+[008-A](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) now establishes the Phase 008 authority model: current canonical semantic/governance owners constrain architecture, architecture constrains implementation, current implementation contracts constrain downstream mechanism, and numbered Phase 008 records capture planning rationale without becoming a competing canonical tree.
 
 The current status is:
 
@@ -41,8 +43,10 @@ Jackson Concept Design methodology: COMPLETE / EXITED
 baseline semantic design: COMPLETE
 known baseline semantic blockers: NONE OPEN
 Phase 008 subdivision: COMPLETE
-implementation planning: ACTIVE
-008-A: NEXT / NOT STARTED
+implementation planning authority: ESTABLISHED
+008-A: COMPLETE
+008-B: NEXT / NOT STARTED
+protected 006-D baseline: NOT YET QUALIFIED BY PHASE 008
 first executable domain slice: NOT YET AUTHORIZED
 new domain implementation after 006-D: NOT STARTED
 production readiness: NOT ESTABLISHED
@@ -55,9 +59,9 @@ The retained 006-D substrate remains a protected non-domain baseline. The old 00
 [Phase 008](008-implementation-reentry/) proceeds through:
 
 ```text
-008-A authority / canonical baseline / change control
+008-A authority / canonical baseline / change control          COMPLETE
    ↓
-008-B protected substrate qualification
+008-B protected substrate qualification                       NEXT
    ↓
 008-C residual-risk + historical-plan reconciliation
    ↓
@@ -84,6 +88,14 @@ Phase 009 implementation
 
 No Phase 008 subgroup implements new domain behavior. If 008-L passes, Phase 009 will begin the first explicitly authorized domain implementation slice.
 
+## Planning authority and change control
+
+008-A distinguishes planning decision, first-slice authorization, code start, merge readiness, deployment readiness, and production readiness. None implies the next.
+
+If implementation planning conflicts with current canonical meaning, the downstream mechanism changes by default. A genuine semantic contradiction, missing semantic owner, or intentional product change routes through `CHG-*`; it is not resolved silently in schema, APIs, UI, tests, IaC, or implementation-planning documents.
+
+Phase 008 follows `CTX-*` progressive disclosure and `DOC-*` one-owner discipline. Historical phase records are used for rationale and supersession analysis, not reconstructed as current rule stores.
+
 ## Why Phase 005 and Phase 006 were not erased
 
 [005-J](005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md) remains historical provenance for the earlier conclusion that architecture was implementation-planning ready.
@@ -94,6 +106,6 @@ Historical records are preserved rather than rewritten to make earlier decisions
 
 ## Current next work
 
-Proceed to **008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails**.
+Proceed to **008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation**.
 
 New domain implementation remains **not started** until 008-L explicitly authorizes the first executable slice.
