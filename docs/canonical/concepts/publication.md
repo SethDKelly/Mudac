@@ -10,6 +10,7 @@ sources:
   - resource: ../../003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md
   - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
 ---
 
 # Purpose
@@ -34,6 +35,15 @@ A corrected source or newly generated Export never silently retargets an existin
 
 An Organizer generates and validates an Export appropriate to a particular audience. When the representation should actually be released, an authorized actor explicitly publishes that exact representation to the intended channel. The Publication remains historically attributable even if its source later changes or it is withdrawn. If correction requires a replacement, the application generates a successor Export and explicitly creates a successor Publication while preserving the earlier release as historical.
 
+<a id="pub-001"></a>
+## PUB-001 — Publication prerequisites follow representation purpose and source authority
+
+Publication does not universally require Competition Finalization. Operational/event materials may be distributed before Finalization when their own source state, lifecycle, purpose, Access/disclosure, and policy constraints permit it.
+
+A Publication that purports to communicate **official Competition outcomes** must, through its exact Export basis, identify an [Official Outcome Revision](../mechanisms/official-outcome-revision.md) established by explicit Competition Finalization or an explicitly confirmed successor official revision. Publication cannot promote calculated/provisional Rank, incomplete Coverage, or other non-official state into official authority merely by release or labeling.
+
+If the bound source later becomes Affected or is superseded, that does not erase the historical Publication. Current distribution and any successor release remain explicit Publication decisions under current disclosure/governance constraints.
+
 # Boundaries
 
 Publication is distinct from:
@@ -46,4 +56,4 @@ Publication is distinct from:
 
 Artifact/byte identity and delivery infrastructure remain architecture/implementation mechanisms. Publication owns the deliberate domain act and retained distribution state.
 
-See [Official Does Not Automatically Mean Public](../invariants/official-not-automatically-public.md#inv-007), [Anonymity & Disclosure](../policies/anonymity-disclosure.md), [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md), and [Paper Capture, Export and Publication](../experience/paper-export-publication.md).
+See [Official Does Not Automatically Mean Public](../invariants/official-not-automatically-public.md#inv-007), [Anonymity & Disclosure](../policies/anonymity-disclosure.md), [Operational Exception & Override Governance](../policies/operational-exception-governance.md), [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md), and [Paper Capture, Export and Publication](../experience/paper-export-publication.md).
