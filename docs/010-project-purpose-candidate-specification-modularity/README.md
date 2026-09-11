@@ -1,6 +1,6 @@
 # Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion
 
-Status: **In Progress — 010-A through 010-D complete; 010-E next**
+Status: **In Progress — 010-A through 010-E complete; 010-F next**
 
 ## Role in the completion runway
 
@@ -48,8 +48,8 @@ Prior conclusions are evidence, not protected outcomes. The current sixteen-Conc
 | 010-B | [Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) | **Complete — PASS** |
 | 010-C | [Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation](010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md) | **Complete — PASS** |
 | 010-D | [Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) | **Complete — PASS** |
-| 010-E | **Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** | **Next** |
-| 010-F | **Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** | Planned |
+| 010-E | [Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit](010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) | **Complete — PASS** |
+| 010-F | **Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** | **Next** |
 | 010-G | **Completeness, Independence & Genericity-for-Boundary Audit** | Planned |
 | 010-H | **Concept Boundary Convergence, Re-specification & Canonical Reconciliation** | Planned |
 | 010-I | **Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff** | Planned |
@@ -106,30 +106,33 @@ The current nine purpose obligations are P-01 independent human judgment, P-02 f
 Key results:
 
 - the sixteen incumbent Concepts remain **provisional candidates**, not a reconfirmed final catalog;
-- four challenger candidates now require explicit behavioral specification in 010-E:
-  1. **Evaluation Assignment / Obligation**;
-  2. **Evaluation Sufficiency**;
-  3. **Reconciliation / Resolution**;
-  4. **Official Outcome / Outcome Declaration**;
-- merge/reframe pressure remains across:
-  - `Identity + Participation + Access` versus **Actor Context**;
-  - `Panel + Judging Encounter` versus assignment/occurrence alternatives;
-  - `Versioning + Provenance` versus **Authority History**;
-  - `Export + Publication` versus **External Representation & Release**;
-  - current `Judging Encounter` versus a more generic **Evaluation Occurrence**;
-- Aggregate, Rank and Readiness remain strong derived-mechanism candidates after reassessment;
-- Recovery/Continuity is confirmed as a first-class purpose obligation but is not retained as an independent Concept candidate unless 010-E exposes missing intrinsic recovery behavior;
-- no canonical Concept promotion/demotion occurs in 010-D because candidate divergence remains phase evidence until later convergence.
+- four challenger candidates require behavioral testing: **Evaluation Assignment / Obligation**, **Evaluation Sufficiency**, **Reconciliation / Resolution**, and **Official Outcome / Outcome Declaration**;
+- merge/reframe pressure remains across Actor Context, judging assignment/occurrence, Authority History, External Representation & Release, and generic Evaluation Occurrence alternatives;
+- Aggregate, Rank and Readiness remain strong derived-mechanism candidates;
+- Recovery/Continuity is a first-class purpose obligation but not a standalone Concept candidate by default;
+- no canonical Concept promotion/demotion occurred.
+
+## Completed 010-E result
+
+010-E applied the adopted Base/Jackson behavioral-specification contract to the sixteen incumbents, the four challengers and the required merge/reframe alternatives.
+
+Key results:
+
+- all sixteen incumbent Concept owners are behaviorally adequate to enter modularity analysis; this is **not** acceptance of their boundaries;
+- the four challengers now have explicit provisional Purpose, Operational Principle, abstract State, Actions/Queries, guards/effects, invariants and intrinsic history/authority semantics in the 010-E phase record;
+- five comparison countermodels are behaviorally explicit enough for 010-F: **Actor Context**, **Evaluation Work Item**, **generic Evaluation Occurrence**, **Authority History**, and **External Representation & Release**;
+- current direct cross-Concept typing is treated as a future 010-G genericity pressure, not as proof of intrinsic dependence;
+- Aggregate, Rank and Readiness remain derived-mechanism baselines;
+- Recovery/Continuity remains a cross-cutting P-05 completeness obligation because current specifications expose sufficient intrinsic draft/history/authority behavior to reason about continuity without a standalone Recovery Concept;
+- no challenger canonical Concept page was created because 010-F/G may still reject, split, merge or reframe candidates.
+
+010-E therefore supplies the behavioral evidence needed to test specificity without letting historical names or implementation structure decide boundaries.
 
 ## Remaining subgroup intentions
 
-### 010-E — Behavioral-Specification Current-Truth Audit
-
-Behaviorally audit the sixteen incumbent candidates plus the four 010-D challenger candidates. Establish enough representation-independent Purpose, State, Actions and Operational Principle evidence to compare the required split/merge/reframe alternatives without assuming any candidate will survive 010-F/G.
-
 ### 010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit
 
-Test whether each retained candidate serves one coherent valuable purpose and deliberately consider split/combine/reframe/reduce/expand alternatives.
+Test whether each behaviorally specified candidate serves one coherent valuable purpose. Deliberately compare retain/split/combine/reframe/reduce/expand alternatives, including the 010-E challenger and countermodel specifications.
 
 ### 010-G — Completeness, Independence & Genericity-for-Boundary Audit
 
@@ -165,9 +168,10 @@ implementation authorization: NOT YET
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
-010-E: NEXT
+010-E: COMPLETE — PASS
+010-F: NEXT
 ```
 
 ## Next
 
-Proceed to **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**. Begin with the [010-D rediscovery record](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), not just the incumbent Concept index.
+Proceed to **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**. Start from [010-E](010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md), and judge boundaries from behavior and purpose rather than current catalog labels.

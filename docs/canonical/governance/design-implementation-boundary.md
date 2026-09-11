@@ -12,6 +12,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
@@ -25,7 +26,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. 010-A established the completion sequence, 010-B reconciled current project/intake truth, 010-C revalidated purpose/need/success/tensions, and 010-D completed purpose-first candidate rediscovery without canonically promoting or demoting Concepts.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. 010-A established the completion sequence, 010-B reconciled current project/intake truth, 010-C revalidated purpose/need/success/tensions, 010-D completed purpose-first candidate rediscovery, and 010-E established behaviorally explicit incumbent/challenger/countermodel specifications without canonically changing Concept boundaries.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -45,7 +46,8 @@ Phase 010: IN PROGRESS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
-010-E: NEXT
+010-E: COMPLETE — PASS
+010-F: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -69,7 +71,7 @@ historical architecture / implementation
         ≠ design constraint
 ```
 
-The current project/purpose baseline is [Project Context & Purpose](../project/). Candidate divergence remains phase evidence in [010-D](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md).
+The current project/purpose baseline is [Project Context & Purpose](../project/). Candidate divergence remains phase evidence in [010-D](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md). Behavioral specification evidence for current modularity analysis is [010-E](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md).
 
 # What remains authoritative
 
@@ -81,21 +83,28 @@ During Phase 010:
 
 - the current sixteen Concept pages remain incumbent current knowledge, not a protected final catalog;
 - current Concept/non-Concept classifications remain challengeable;
-- 010-D challenger candidates are phase hypotheses until later specification/modularity convergence;
+- 010-D/E challenger and countermodel specifications are phase hypotheses until later modularity convergence;
+- behavioral adequacy in 010-E does not constitute Concept acceptance;
 - no architecture or implementation choice may decide Concept candidacy or boundaries.
 
-# Current candidate-specification pressure
+# Current modularity pressure
 
-010-D requires 010-E to behaviorally test the sixteen incumbents plus four challengers:
+010-E established enough representation-independent behavior for 010-F to compare:
 
-- Evaluation Assignment / Obligation;
-- Evaluation Sufficiency;
-- Reconciliation / Resolution;
-- Official Outcome / Outcome Declaration.
+- all sixteen incumbent Concepts;
+- **Evaluation Assignment / Obligation**;
+- **Evaluation Sufficiency**;
+- **Reconciliation / Resolution**;
+- **Official Outcome / Outcome Declaration**;
+- **Actor Context** versus Identity/Participation/Access;
+- **Evaluation Work Item** and assignment/occurrence alternatives versus Panel/Judging Encounter;
+- **generic Evaluation Occurrence** versus current Judging Encounter;
+- **Authority History** versus Versioning/Provenance;
+- **External Representation & Release** versus Export/Publication.
 
-010-E/F must also preserve comparison of Actor Context vs Identity/Participation/Access, assignment/occurrence alternatives vs Panel/Judging Encounter, Authority History vs Versioning/Provenance, unified External Representation & Release vs Export/Publication, and broader Evaluation Occurrence vs current Judging Encounter.
+010-E also identified current direct cross-Concept state/type references as 010-G genericity pressure rather than proof of intrinsic dependence.
 
-This candidate pressure does not authorize code, schemas, APIs, persistence or architecture.
+This design work does not authorize code, schemas, APIs, persistence or architecture.
 
 # Project-purpose versus downstream constraints
 
@@ -156,8 +165,8 @@ Current work may:
 010-B project/context reconciliation                          COMPLETE
 010-C purpose / need / success / tensions                     COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
-010-E behavioral specification current-truth audit            NEXT
-010-F specificity / purpose singularity / boundary options
+010-E behavioral specification current-truth audit            COMPLETE
+010-F specificity / purpose singularity / boundary options    NEXT
 010-G completeness / independence / boundary genericity
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
@@ -194,6 +203,6 @@ A successful Phase 017 may establish Concept Design readiness for downstream wor
 
 Proceed to:
 
-> **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**
+> **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**
 
-010-E begins from the 010-D specification-pressure set and must not assume that the current sixteen Concepts or current mechanism classifications already satisfy the behavioral specification gate.
+010-F must use the behaviorally explicit incumbent/challenger/countermodel set from 010-E and must not protect current boundaries because of document location, prior architecture or implementation structure.

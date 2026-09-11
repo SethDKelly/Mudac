@@ -23,16 +23,20 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is now active; its entry/decomposition gate has passed.
+Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is active; project/context, purpose, candidate rediscovery and behavioral specification have now passed their current gates.
 
 Current state:
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
-009 realignment/gap map: COMPLETE
+009 realignment/gap map: COMPLETE — PASS
 010 foundational completion: IN PROGRESS
 010-A: COMPLETE — PASS
-010-B: NEXT
+010-B: COMPLETE — PASS
+010-C: COMPLETE — PASS
+010-D: COMPLETE — PASS
+010-E: COMPLETE — PASS
+010-F: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -46,7 +50,9 @@ The exact current boundary is owned by [Design / Implementation Boundary](design
 
 Phase 010 closes project/context, purpose, candidate discovery, behavioral specification and modularity obligations before composition can be trusted.
 
-The current sixteen-Concept catalog is the incumbent design hypothesis, not protected authority. The active phase may change Concept identities when evidence warrants it, and any changed Concept must be re-specified and canonically reconciled before Phase 010 exits.
+The current sixteen-Concept catalog is the incumbent design hypothesis, not protected authority. [010-E](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) establishes behavioral precision sufficient to compare the incumbents, four challengers and five boundary countermodels. 010-F must now test specificity/purpose singularity before 010-G evaluates completeness/independence/genericity.
+
+Any changed Concept must be re-specified and canonically reconciled before Phase 010 exits.
 
 # Agent adapter
 

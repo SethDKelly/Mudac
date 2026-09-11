@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed rediscovery evidence is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md). During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
+The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed candidate rediscovery evidence is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), and the current behavioral-specification audit is [010-E](010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
 
 ## Status
 
@@ -19,7 +19,7 @@ The current representation-independent baseline is [Project Context & Purpose](c
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D complete; 010-E next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D/E complete; 010-F next**
 
 ## Current posture
 
@@ -37,7 +37,8 @@ implementation planning: SUSPENDED
 010-B: COMPLETE
 010-C: COMPLETE
 010-D: COMPLETE
-010-E: NEXT
+010-E: COMPLETE
+010-F: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The durable rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
@@ -49,21 +50,21 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
 010-B project/context reconciliation                          COMPLETE
 010-C purpose / need / success / tensions                     COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
-010-E behavioral specification current-truth audit            NEXT
-010-F specificity / purpose singularity / boundary options
+010-E behavioral specification current-truth audit            COMPLETE
+010-F specificity / purpose singularity / boundary options    NEXT
 010-G completeness / independence / boundary genericity
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-010-D did not promote or demote canonical Concepts. It retained the current sixteen as provisional candidates and added four challengers for 010-E behavioral specification:
+010-E did not promote or demote canonical Concepts. It verified that all sixteen incumbents are behaviorally specified enough for specificity analysis and created provisional full behavioral specifications for four challengers:
 
 - Evaluation Assignment / Obligation;
 - Evaluation Sufficiency;
 - Reconciliation / Resolution;
 - Official Outcome / Outcome Declaration.
 
-It also preserved required split/merge comparisons around Actor Context, judging assignment/occurrence, Authority History, and External Representation & Release.
+It also made five boundary countermodels concrete: Actor Context, Evaluation Work Item, generic Evaluation Occurrence, Authority History, and External Representation & Release. 010-F must now compare those behaviors against the incumbent splits rather than relying on catalog naming.
 
 ## Completion runway
 
@@ -95,4 +96,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are 
 
 ## Current next work
 
-Proceed to **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**. Begin from 010-D's specification-pressure set, not from an assumption that the current sixteen are already complete.
+Proceed to **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**. Begin from 010-E's behaviorally explicit incumbent/challenger/countermodel set and deliberately test retain/split/combine/reframe/reduce/expand alternatives.

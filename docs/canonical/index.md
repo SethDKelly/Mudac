@@ -4,8 +4,8 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/) — current project/intake mandate, scope/non-goals, operational constraints, purpose obligations, success situations, tensions and current candidate-specification pressure.
-* [Concepts](concepts/) — current sixteen-Concept incumbent catalog; not a protected final answer.
+* [Project Context & Purpose](project/) — current project/intake mandate, scope/non-goals, operational constraints, purpose obligations, success situations and tensions.
+* [Concepts](concepts/) — current sixteen-Concept incumbent catalog; behaviorally adequate for 010-F but not a protected final answer.
 * [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to Phase 011 composition revalidation.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects; classifications remain challengeable during Phase 010.
 * [Policies](policies/) — current governing/configurable Competition semantics.
@@ -23,7 +23,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A through 010-D have passed.
+Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A through 010-E have passed.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -41,10 +41,11 @@ implementation authorization: NOT YET
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
-010-E: NEXT
+010-E: COMPLETE — PASS
+010-F: NEXT
 ```
 
-The active methodology record is [Phase 010](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/). Detailed candidate rediscovery evidence is [010-D](../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md).
+The active methodology record is [Phase 010](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/). Candidate rediscovery is [010-D](../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), and the behaviorally explicit candidate set is [010-E](../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md).
 
 # Retrieval rule during reopened design
 
@@ -52,7 +53,7 @@ For Phases 010–017:
 
 1. load the active phase/start-gate record;
 2. load [Project Context & Purpose](project/) whenever project/purpose/scope assumptions matter;
-3. for 010-E/F, load 010-D before treating current Concept/mechanism classifications as evidence;
+3. for 010-F/G, load 010-D and 010-E before treating current Concept/mechanism classifications as evidence;
 4. load only task-relevant current conceptual owners;
 5. load historical design evidence only where it materially supports the phase question;
 6. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
@@ -60,7 +61,7 @@ For Phases 010–017:
 
 During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept classifications are incumbent hypotheses rather than protected answers.
 
-010-D carries four challengers into behavioral specification: Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, and Official Outcome/Outcome Declaration.
+010-E established behavioral specifications sufficient for specificity analysis across the sixteen incumbents, four challengers—Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, Official Outcome/Outcome Declaration—and five merge/reframe countermodels.
 
 # Active Phase 010 order
 
@@ -69,8 +70,8 @@ During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept cl
 010-B project/context reconciliation                          COMPLETE
 010-C purpose / need / success / tensions                     COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
-010-E behavioral specification current-truth audit            NEXT
-010-F specificity / purpose singularity / boundary options
+010-E behavioral specification current-truth audit            COMPLETE
+010-F specificity / purpose singularity / boundary options    NEXT
 010-G completeness / independence / boundary genericity
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
@@ -96,4 +97,4 @@ During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept cl
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**.
+The immediate next work is **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**.

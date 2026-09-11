@@ -131,13 +131,14 @@ Current but challengeable assumptions:
 - controlled external release remains in the present capability boundary, while a rich public portal does not;
 - formal scheduling may remain external/lightweight unless later purpose/dependence work shows it necessary.
 
-# Open questions after 010-D
+# Open questions after 010-E
 
-Current project context intentionally leaves open:
+Behavioral specification is now adequate for modularity analysis. Current project context intentionally leaves open:
 
-- which incumbent and challenger candidates survive behavioral specification and modularity review;
+- which incumbent and challenger candidates satisfy one coherent purpose and survive 010-F specificity testing;
 - whether Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution or Official Outcome/Outcome Declaration qualify as Concepts;
-- whether actor-context, judging-occurrence, authority-history or representation/release boundaries should split/merge/reframe;
+- whether Actor Context, Evaluation Work Item/Occurrence, Authority History or External Representation & Release alternatives are better factorizations than current splits;
+- whether direct current cross-Concept typing should be generalized during 010-G;
 - which capability areas belong in every coherent MUDAC product variant;
 - detailed evaluation, coverage, ranking, tie, Award and disclosure policies;
 - exact retention/regulatory requirements not currently evidenced;
@@ -151,8 +152,8 @@ Architecture and implementation produced before methodology completion are quara
 
 # Current handoff
 
-Phase 010-B reconciled project/intake truth, 010-C established the current purpose model, and 010-D completed candidate rediscovery. The next methodology task is:
+Phase 010-B reconciled project/intake truth, 010-C established the purpose model, 010-D rediscovered candidates, and 010-E established behavioral specifications adequate for modularity analysis. The next methodology task is:
 
-> **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**
+> **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**
 
-010-E must use the 010-D specification-pressure set rather than assuming the current sixteen canonical Concepts are the complete candidate space.
+010-F must judge candidate boundaries from the 010-E behavioral evidence rather than current catalog names or current mechanism classifications.

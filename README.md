@@ -10,7 +10,7 @@ The current project mandate and purpose model are intentionally representation-i
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate and purpose baseline.
 * [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
-* [`docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md`](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) — current candidate rediscovery evidence and specification-pressure set.
+* [`docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md`](docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) — current behavioral specification evidence for incumbents, challengers and boundary countermodels.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -31,7 +31,8 @@ implementation authorization: NOT YET
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
-010-E: NEXT
+010-E: COMPLETE — PASS
+010-F: NEXT
 ```
 
 ## Phase 010 decomposition
@@ -41,23 +42,23 @@ implementation authorization: NOT YET
 010-B — project mandate / actors / scope / constraints        COMPLETE
 010-C — purpose / need / success / tensions                   COMPLETE
 010-D — candidate rediscovery / divergent alternatives        COMPLETE
-010-E — behavioral specification current-truth audit          NEXT
-010-F — specificity / purpose singularity
+010-E — behavioral specification current-truth audit          COMPLETE
+010-F — specificity / purpose singularity                     NEXT
 010-G — completeness / independence / boundary genericity
 010-H — convergence / re-specification / canonical repair
 010-I — consolidation / exit / Phase 011 handoff
 ```
 
-010-D did **not** canonically replace the incumbent sixteen Concepts. It retained them as provisional candidates for behavioral audit and added four challengers that 010-E must test explicitly:
+010-E confirmed that the current sixteen incumbent Concepts are behaviorally specified enough for modularity analysis without accepting their boundaries as final. It also established provisional full behavioral specifications for four challengers:
 
 1. **Evaluation Assignment / Obligation**
 2. **Evaluation Sufficiency**
 3. **Reconciliation / Resolution**
 4. **Official Outcome / Outcome Declaration**
 
-Required merge/reframe comparisons also remain open around actor context, judging occurrence/assignment, authority history, and external representation/release.
+Behavioral countermodels are also explicit for **Actor Context**, **Evaluation Work Item**, **generic Evaluation Occurrence**, **Authority History**, and **External Representation & Release**. These remain phase evidence until 010-F/G determine the proper Concept factoring.
 
-Aggregate, Rank and Readiness remain strong derived-mechanism candidates after rediscovery. Recovery/Continuity remains a first-class purpose obligation but not an independent Concept candidate unless later specification exposes missing behavior.
+Aggregate, Rank and Readiness remain strong derived-mechanism baselines. Recovery/Continuity remains a first-class cross-cutting purpose obligation rather than an independent Concept candidate unless later modularity analysis proves otherwise.
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
@@ -89,4 +90,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**. Begin from the 010-D candidate set rather than assuming the incumbent sixteen are the only candidates.
+Proceed to **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**. Begin from the 010-E behavioral evidence and compare incumbent, challenger and merge/reframe boundaries without treating any current name as protected.
