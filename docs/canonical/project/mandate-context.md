@@ -1,7 +1,7 @@
 ---
 type: Canonical Project Context
 title: MUDAC Project Mandate & Current Context
-description: Current representation-independent project/intake baseline for MUDAC: contemplated capability, actors and affected parties, outcome directions, scope, constraints, assumptions, open questions and evidence posture.
+description: "Current representation-independent project/intake baseline for MUDAC: contemplated capability, actors and affected parties, outcome directions, scope, constraints, assumptions, open questions and evidence posture."
 status: stable
 tags: [canonical, project, context, mandate, actors, scope, constraints, evidence]
 sources:
