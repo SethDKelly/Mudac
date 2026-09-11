@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — relationship among Daniel Jackson Concept Design, the Base completion-control lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — `DOC-*` rules for current-owner precedence, one-owner discipline, downstream constraints, historical preservation and routing-artifact boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, frozen 006-D bootstrap, suspended downstream authority, and design-only execution boundary.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, frozen 006-D bootstrap, suspended downstream authority and design-only execution boundary.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents architecture/implementation work produced before methodology completion from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -23,14 +23,16 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature.
+Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is now active; its entry/decomposition gate has passed.
 
 Current state:
 
 ```text
-Jackson Concept Design: REOPENED / NOT COMPLETE
+Jackson Concept Design: REOPENED / IN PROGRESS
 009 realignment/gap map: COMPLETE
-010 foundational completion: NEXT
+010 foundational completion: IN PROGRESS
+010-A: COMPLETE — PASS
+010-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -38,7 +40,13 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-The exact current boundary is owned by [Design / Implementation Boundary](design-implementation-boundary.md). Phase 009 history is at [Jackson Methodology Completion Realignment & Design Re-entry](../../009-jackson-methodology-realignment/).
+The exact current boundary is owned by [Design / Implementation Boundary](design-implementation-boundary.md). The active methodology phase is [Phase 010](../../010-project-purpose-candidate-specification-modularity/); Phase 009 history remains the realignment/gap-map provenance.
+
+# Phase 010 methodology discipline
+
+Phase 010 closes project/context, purpose, candidate discovery, behavioral specification and modularity obligations before composition can be trusted.
+
+The current sixteen-Concept catalog is the incumbent design hypothesis, not protected authority. The active phase may change Concept identities when evidence warrants it, and any changed Concept must be re-specified and canonically reconciled before Phase 010 exits.
 
 # Agent adapter
 

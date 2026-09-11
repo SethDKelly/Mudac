@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design. Use numbered phases for design evolution, evidence, alternatives, and historical downstream work.
+During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design. Use numbered phases for design evolution, evidence, alternatives and historical downstream work.
 
 ## Status
 
@@ -19,12 +19,12 @@ During the reopened Jackson methodology, architecture and implementation materia
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure reopened/superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **Next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A complete; 010-B next**
 
 ## Current posture
 
 ```text
-Jackson Concept Design: REOPENED / NOT COMPLETE
+Jackson Concept Design: REOPENED / IN PROGRESS
 implementation readiness: NOT READY
 implementation execution: NOT STARTED for new domain work
 implementation authorization: NOT YET
@@ -32,19 +32,45 @@ architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
 009: COMPLETE
-010: NEXT
+010: IN PROGRESS
+010-A: COMPLETE
+010-B: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
 
-## Why the methodology was reopened
+## Active Phase 010
 
-A fresh crosswalk against Daniel Jackson's Concept Design concerns and the refined [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) lifecycle showed that MUDAC had strong existing work but had not fully completed several distinct obligations in the correct dependency order.
+[Phase 010](010-project-purpose-candidate-specification-modularity/) closes the residual foundational methodology obligations corresponding to project/context truth, purpose/need/success, candidate rediscovery, behavioral specification and Concept modularity.
 
-The principal remaining work is:
+The dependency-safe subgroup plan is:
 
 ```text
-010 foundational traceability / rediscovery / modularity completion
+010-A intent / evidence reuse / decomposition                 COMPLETE
+  ↓
+010-B project mandate / actors / outcomes / scope / evidence  NEXT
+  ↓
+010-C purpose / need / success / tension / traceability
+  ↓
+010-D candidate rediscovery / divergent alternatives
+  ↓
+010-E behavioral specification current-truth audit
+  ↓
+010-F specificity / purpose singularity / boundary options
+  ↓
+010-G completeness / independence / boundary genericity
+  ↓
+010-H convergence / re-specification / canonical reconciliation
+  ↓
+010-I consolidation / exit / Phase 011 handoff
+```
+
+The current sixteen-Concept catalog is an incumbent hypothesis, not protected methodology authority. Phase 010 may retain, add, reject, split, combine, reframe, generalize, reduce or expand Concepts when evidence warrants it.
+
+## Completion runway
+
+```text
+010 foundational project/purpose/discovery/specification/modularity completion
   ↓
 011 composition revalidation
   ↓
@@ -71,4 +97,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are 
 
 ## Current next work
 
-Proceed to the **Phase 010 entry/decomposition exercise**. Do not resume 008-F or any architecture/implementation planning.
+Proceed to **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**. Do not resume 008-F or any architecture/implementation planning.

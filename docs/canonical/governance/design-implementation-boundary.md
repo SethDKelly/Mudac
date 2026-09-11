@@ -8,6 +8,7 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
   - resource: ../../009-jackson-methodology-realignment/009-B-jackson-base-lifecycle-crosswalk-evidence-reuse-gap-map.md
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md
   - resource: downstream-authority-quarantine.md
   - resource: methodology-terminology.md
   - resource: change-governance.md
@@ -15,16 +16,16 @@ sources:
 
 # Purpose
 
-Keep the boundary between reopened Jackson Concept Design, historical downstream work, the frozen 006-D bootstrap, future architecture/engineering handoff, implementation execution, and production readiness explicit.
+Keep the boundary between reopened Jackson Concept Design, historical downstream work, the frozen 006-D bootstrap, future architecture/engineering handoff, implementation execution and production readiness explicit.
 
 # Current state
 
-A fresh methodology review superseded the previous 007-I Concept Design closure as current authority. Phase 009 has completed the formal realignment/gap map and established the dependency-safe completion runway.
+A fresh methodology review superseded the previous 007-I Concept Design closure as current authority. Phase 009 completed the formal realignment/gap map. Phase 010 is now active and its 010-A start gate has established the dependency-safe foundational completion sequence.
 
 Current governing posture:
 
 ```text
-Jackson Concept Design methodology: REOPENED / NOT COMPLETE
+Jackson Concept Design methodology: REOPENED / IN PROGRESS
 previous 007-I methodology exit: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
 Phase 008 implementation re-entry: HALTED AFTER 008-E
 008-A..E: HISTORICAL / PREMATURE DOWNSTREAM PLANNING
@@ -36,7 +37,9 @@ implementation readiness: NOT READY
 new domain implementation: NOT STARTED
 implementation authorization: NOT YET
 Phase 009: COMPLETE — PASS
-Phase 010: NEXT
+Phase 010: IN PROGRESS
+010-A: COMPLETE — PASS
+010-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -73,6 +76,8 @@ Current product/conceptual authority remains in task-relevant canonical:
 - methodology/documentation/change governance.
 
 These owners are subject to correction by the remaining Jackson phases. Historical phase records remain evidence and rationale rather than immutable truth.
+
+During Phase 010 specifically, the current sixteen-Concept catalog is an incumbent design hypothesis. Its current canonical documents are evidence/current meaning, but Phase 010 may change Concept identity or boundaries when the methodology warrants it.
 
 # What is suspended
 
@@ -114,13 +119,37 @@ Current work may:
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
 - improve documentation/routing/validation that supports the design process.
 
+# Active Phase 010 decomposition
+
+```text
+010-A intent / evidence reuse / decomposition                 COMPLETE
+  ↓
+010-B project mandate / actors / outcomes / scope / evidence  NEXT
+  ↓
+010-C purpose / need / success / tension / traceability
+  ↓
+010-D candidate rediscovery / divergent alternatives
+  ↓
+010-E behavioral specification current-truth audit
+  ↓
+010-F specificity / purpose singularity / boundary options
+  ↓
+010-G completeness / independence / boundary genericity
+  ↓
+010-H convergence / re-specification / canonical reconciliation
+  ↓
+010-I consolidation / exit / Phase 011 handoff
+```
+
+The sequence may reopen earlier Phase 010 work when later evidence exposes a defect.
+
 # Completion runway
 
 ```text
 009 realignment / gap map                         COMPLETE
   ↓
-010 purpose / rediscovery / specification /
-    modularity completion                         NEXT
+010 foundational project/purpose/discovery/
+    specification/modularity completion           IN PROGRESS
   ↓
 011 composition / synchronization revalidation
   ↓
@@ -137,8 +166,6 @@ Current work may:
 017 methodology completeness / canonical closure
 ```
 
-The sequence may reopen earlier design owners when later evidence exposes a defect.
-
 # Meaning of future successful closure
 
 A successful Phase 017 may establish:
@@ -149,10 +176,10 @@ implementation execution: NOT STARTED
 implementation authorization: NOT GRANTED BY CONCEPT-DESIGN CLOSURE
 ```
 
-It will authorize only a separate downstream architecture/engineering re-entry. It will not automatically reactivate Phase 005 architecture, Phase 008 planning, or any old first-slice proposal.
+It will authorize only a separate downstream architecture/engineering re-entry. It will not automatically reactivate Phase 005 architecture, Phase 008 planning or any old first-slice proposal.
 
 # Current handoff
 
-Proceed to the **Phase 010 entry/decomposition exercise** for:
+Proceed to:
 
-> **Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion**
+> **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**

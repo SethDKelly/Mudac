@@ -11,7 +11,7 @@ Current conceptual meaning is organized under canonical knowledge. Numbered phas
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance plus suspended downstream candidate architecture/implementation material.
-* [Concepts](canonical/concepts/) — current sixteen-Concept catalog, subject to methodology-completion revalidation.
+* [Concepts](canonical/concepts/) — current sixteen-Concept incumbent catalog, subject to Phase 010 revalidation and possible correction.
 * [Synchronizations](canonical/synchronizations/) — current composition and temporal/correction semantics, subject to Phase 011 revalidation.
 * [Policies](canonical/policies/) — current governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
@@ -41,12 +41,12 @@ During Phases 010–017, do not preload architecture/implementation unless the t
 * [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — substantial reusable design evidence; 007-I closure **superseded as current closure authority**.
 * [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **halted after 008-E; historical premature downstream planning**.
 * [Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry](009-jackson-methodology-realignment/) — **Complete — PASS**.
-* **Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion — Next.**
+* [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](010-project-purpose-candidate-specification-modularity/) — **In Progress — 010-A complete; 010-B next**.
 
 # Current posture
 
 ```text
-Jackson Concept Design methodology: REOPENED / NOT COMPLETE
+Jackson Concept Design methodology: REOPENED / IN PROGRESS
 007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
 008 implementation re-entry: HALTED AFTER 008-E
 architecture authority: SUSPENDED PENDING DESIGN CLOSURE
@@ -56,14 +56,40 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
-010: NEXT
+010: IN PROGRESS
+010-A: COMPLETE — PASS
+010-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
+
+# Active Phase 010 decomposition
+
+```text
+010-A intent / evidence reuse / decomposition                 COMPLETE
+  ↓
+010-B project mandate / actors / outcomes / scope / evidence  NEXT
+  ↓
+010-C purpose / need / success / tension / traceability
+  ↓
+010-D candidate rediscovery / divergent alternatives
+  ↓
+010-E behavioral specification current-truth audit
+  ↓
+010-F specificity / purpose singularity / boundary options
+  ↓
+010-G completeness / independence / boundary genericity
+  ↓
+010-H convergence / re-specification / canonical reconciliation
+  ↓
+010-I consolidation / exit / Phase 011 handoff
+```
+
+The current sixteen-Concept catalog is an incumbent hypothesis, not a protected answer. Phase 010 may correct Concept identities when justified by the design evidence.
 
 # Completion runway
 
 ```text
-010 purpose / rediscovery / specification / modularity completion
+010 foundational project/purpose/discovery/specification/modularity completion
   ↓
 011 composition / synchronization / application-action revalidation
   ↓
@@ -84,8 +110,10 @@ A successful Phase 017 may authorize only a **separate downstream architecture/e
 
 # Navigation Guidance
 
-For current design work, use the active phase record plus task-relevant Concepts/synchronizations/policies/mechanisms/invariants/experience/governance owners. Use older phase records only for evidence, alternatives, chronology or provenance.
+For current Phase 010 work, start with [Phase 010](010-project-purpose-candidate-specification-modularity/) and [010-A](010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), then load only the prior design evidence and canonical owners required by the active subgroup.
+
+Use older phase records for evidence, alternatives, chronology or provenance. Do not treat downstream architecture/implementation as proof of conceptual correctness.
 
 Before any code/IaC or downstream-planning request, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). During reopened Concept Design the answer is normally that downstream execution is suspended unless the requested work is narrow bootstrap safety/build maintenance.
 
-The immediate next task is a **Phase 010 entry/decomposition exercise**.
+The immediate next task is **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**.

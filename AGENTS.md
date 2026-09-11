@@ -7,14 +7,15 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read the current [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. For current methodology work, use [`Phase 009`](docs/009-jackson-methodology-realignment/) as the realignment/gap-map provenance and begin from the current Phase 010 entry/decomposition task.
-5. Load only task-relevant canonical Concepts, synchronizations, policies, mechanisms, invariants, experience and governance owners.
-6. Use numbered historical phases only when rationale, alternatives, chronology, or evidence materially help the current methodology question.
+4. For current methodology work, use [`Phase 009`](docs/009-jackson-methodology-realignment/) as realignment/gap-map provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
+5. Read [010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) before any Phase 010 substantive subgroup.
+6. Load only task-relevant canonical Concepts, synchronizations, policies, mechanisms, invariants, experience and governance owners.
+7. Use numbered historical phases only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
 
 ```text
-Jackson Concept Design: REOPENED / NOT COMPLETE
+Jackson Concept Design: REOPENED / IN PROGRESS
 007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
 008 implementation re-entry: HALTED AFTER 008-E
 architecture authority: SUSPENDED
@@ -24,13 +25,15 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
-010: NEXT
+010: IN PROGRESS
+010-A: COMPLETE — PASS
+010-B: NEXT
 ```
 
 The current completion runway is:
 
 ```text
-010 purpose / candidate rediscovery / specification / modularity
+010 project/purpose / rediscovery / specification / modularity
   ↓
 011 composition / synchronization revalidation
   ↓
@@ -47,20 +50,53 @@ The current completion runway is:
 017 methodology completeness / canonical closure
 ```
 
+## Active Phase 010 subgroup order
+
+```text
+010-A intent / evidence reuse / decomposition                 COMPLETE
+  ↓
+010-B project mandate / actors / outcomes / scope / evidence  NEXT
+  ↓
+010-C purpose / need / success / tension / traceability
+  ↓
+010-D candidate rediscovery / divergent alternatives
+  ↓
+010-E behavioral specification current-truth audit
+  ↓
+010-F specificity / purpose singularity / boundary options
+  ↓
+010-G completeness / independence / boundary genericity
+  ↓
+010-H convergence / re-specification / canonical reconciliation
+  ↓
+010-I consolidation / exit / Phase 011 handoff
+```
+
+## Phase 010 discipline
+
+- Treat the current sixteen-Concept catalog as the incumbent hypothesis, not a protected answer.
+- Reuse prior 001–003/007 design evidence when it genuinely satisfies the active methodology test.
+- Do not reverse-engineer purpose merely to justify current Concepts.
+- Candidate rediscovery must be meaningfully divergent before the catalog is reconfirmed.
+- Do not judge modularity from Concept names alone; use representation-independent behavioral specifications.
+- Specificity/purpose singularity is evaluated before completeness/independence so boundary changes are not audited against obsolete identities.
+- Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
+- Extrinsic Concept dependence belongs to Phase 012, not Phase 010 independence analysis.
+- Familiarity/reuse/catalog refinement beyond boundary-required genericity belongs to Phase 014.
+
 ## Design-only rules for Phases 010–017
 
 - Do not resume 008-F through 008-L.
 - Do not begin new domain implementation.
 - Do not let frameworks, packages, tables, APIs, AWS services, source topology, authentication providers, persistence choices or existing code determine Concept Design.
 - Do not use canonical architecture/implementation documents as evidence that a Concept, dependency, mapping, scope choice or integrity decision is correct.
-- Architecture/implementation may be inspected only for explicit contamination analysis, historical comparison, assumptions/counterexamples, or future post-closure handoff preparation.
-- Reuse prior design evidence when it genuinely satisfies the current methodology obligation; do not mechanically rewrite strong 001–003/007 work.
+- Architecture/implementation may be inspected only for explicit contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
 - If a later design phase exposes an upstream defect, correct the natural earlier owner and revalidate affected later conclusions.
-- Keep product meaning in canonical conceptual owners; keep detailed audit matrices/counterexamples in phase history.
+- Keep durable product meaning in canonical conceptual owners; keep detailed audit matrices/counterexamples in phase history.
 
 ## Frozen executable substrate
 
-The real 006-D bootstrap remains in the repository. Narrow dependency/security/build maintenance is permitted only when necessary to keep the repository safe/buildable and only if it adds no MUDAC domain semantics or constrains the reopened design.
+The real 006-D bootstrap remains in the repository. Narrow dependency/security/build maintenance is permitted only when necessary to keep the repository safe/buildable and only if it adds no MUDAC domain semantics or constrains reopened design.
 
 Existing implementation choices are historical facts, not current requirements.
 
@@ -82,6 +118,6 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 ## Current next task
 
-Proceed to the **Phase 010 entry/decomposition exercise** for:
+Proceed to:
 
-> **Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion**
+> **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**

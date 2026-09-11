@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical definitions of the accepted Daniel Jackson MUDAC Concepts.
+Current canonical definitions of the incumbent MUDAC Concept catalog under reopened Daniel Jackson Concept Design.
 
 Each Concept owner exposes a current **Purpose, State, Actions, and Operational Principle** in addition to its materially important rules/boundaries. Detailed derivation remains in numbered design history.
 
@@ -21,6 +21,10 @@ Each Concept owner exposes a current **Purpose, State, Actions, and Operational 
 * [Export](export.md) - Stable external representation of identified source state for a purpose/audience.
 * [Publication](publication.md) - Deliberate distribution or public release of an identified Export representation.
 
-These sixteen documents define the current MUDAC Concept catalog after the Phase 007-B post-architecture audit. Important non-Concept knowledge remains routed through [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/).
+These sixteen documents are the **incumbent current catalog entering Phase 010**, not a protected final answer. Phase 010 is explicitly authorized to retain, add, reject, split, combine, reframe, generalize, reduce or expand Concept identities when current project/purpose/discovery/specification/modularity evidence warrants it.
 
-The current catalog decision and rejected/promoted candidates are documented in [007-B — Concept Completeness, Independence & Genericity Audit](../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md).
+Important non-Concept knowledge remains routed through [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/). Those classifications are also subject to correction if Phase 010 discovers that an item has—or lacks—an independent user-facing purpose and behavioral identity.
+
+The earlier catalog decision and rejected/promoted candidates are documented in [007-B — Concept Completeness, Independence & Genericity Audit](../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md) and remain reusable evidence rather than closure authority.
+
+The active foundational audit is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../../010-project-purpose-candidate-specification-modularity/).

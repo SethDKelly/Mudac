@@ -8,6 +8,7 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
+* [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
 * [`docs/009-jackson-methodology-realignment/`](docs/009-jackson-methodology-realignment/) — completed formal methodology realignment/gap map and design re-entry.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 * [`docs/canonical/governance/downstream-authority-quarantine.md`](docs/canonical/governance/downstream-authority-quarantine.md) — prevents premature architecture/implementation work from constraining reopened Concept Design.
@@ -16,10 +17,10 @@ Student Teams present analyses to Panels of volunteer Judges. Each Judge indepen
 
 A fresh comparison against Daniel Jackson's Concept Design method and the refined [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) lifecycle showed that MUDAC's prior Phase 007 methodology exit was premature.
 
-The existing design work is substantial and is being reused. The correction is that final methodology closure has been reopened and downstream architecture/implementation planning is suspended until the missing design obligations are completed.
+Phase 009 corrected the methodology posture. Phase 010 is now active and its start gate has decomposed the residual foundational work into dependency-safe subphases.
 
 ```text
-Jackson Concept Design: REOPENED / NOT COMPLETE
+Jackson Concept Design: REOPENED / IN PROGRESS
 007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
 008 implementation re-entry: HALTED AFTER 008-E
 006-D executable bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -29,8 +30,42 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009 methodology realignment: COMPLETE — PASS
-010: NEXT
+010: IN PROGRESS
+010-A: COMPLETE — PASS
+010-B: NEXT
 ```
+
+## Phase 010 decomposition
+
+```text
+010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure &
+        Subphase Planning                                      COMPLETE
+  ↓
+010-B — Current Project Mandate, Actors, Outcomes, Scope,
+        Constraints & Evidence Reconciliation                  NEXT
+  ↓
+010-C — Purpose, Need, Success, Tension & Purpose-to-Concept
+        Traceability Revalidation
+  ↓
+010-D — Candidate Concept Rediscovery, Divergent Alternatives &
+        Rejected/Deferred Candidate Reassessment
+  ↓
+010-E — Retained Concept Purpose, Operational Principle, State,
+        Action & Behavioral-Specification Current-Truth Audit
+  ↓
+010-F — Specificity, Purpose Singularity & Concept-Boundary
+        Alternative Audit
+  ↓
+010-G — Completeness, Independence & Genericity-for-Boundary Audit
+  ↓
+010-H — Concept Boundary Convergence, Re-specification &
+        Canonical Reconciliation
+  ↓
+010-I — Phase 010 Consolidation, Methodology-Coverage Decision &
+        Phase 011 Handoff
+```
+
+The current sixteen-Concept catalog is an incumbent hypothesis, not a protected answer. Phase 010 may change the catalog when the Jackson methodology evidence warrants it.
 
 ## Completion runway
 
@@ -68,4 +103,4 @@ A successful future Phase 017 closure may establish readiness for a **separate a
 
 ## Current direction
 
-Proceed to the **Phase 010 entry/decomposition exercise**. Do not resume 008-F or begin architecture/implementation work.
+Proceed to **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**. Do not resume 008-F or begin architecture/implementation work.
