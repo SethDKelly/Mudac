@@ -6,51 +6,50 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and governance knowledge.
 
-Current conceptual meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. Architecture and implementation material are preserved but currently quarantined from constraining reopened Concept Design.
+Current conceptual meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. Architecture and implementation material are preserved but quarantined from constraining reopened Concept Design.
 
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance plus suspended downstream candidate architecture/implementation material.
-* [Project Context & Purpose](canonical/project/) — current representation-independent project mandate, actors/affected parties, scope/constraints, product purpose, needs, success situations, tensions and candidate-rediscovery pressure established by 010-B/C.
-* [Concepts](canonical/concepts/) — current sixteen-Concept incumbent catalog, subject to Phase 010 rediscovery/specification/modularity review and possible correction.
+* [Project Context & Purpose](canonical/project/) — current representation-independent project mandate, scope/constraints, purpose obligations, needs, success situations, tensions and current candidate-specification pressure.
+* [Concepts](canonical/concepts/) — current sixteen-Concept **incumbent** catalog; 010-D did not reconfirm it as final.
+* [Mechanisms](canonical/mechanisms/) — current derived/supporting subjects; classifications remain challengeable during Phase 010.
 * [Synchronizations](canonical/synchronizations/) — current composition and temporal/correction semantics, subject to Phase 011 revalidation.
 * [Policies](canonical/policies/) — current governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
-* [Governance](canonical/governance/) — methodology, documentation/change/context governance, [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), and [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
-* [Architecture](canonical/architecture/) — preserved **suspended downstream candidates**, not current Concept Design constraints.
-* [Implementation](canonical/implementation/) — preserved **suspended downstream candidates** plus the frozen historical 006-D bootstrap facts.
+* [Governance](canonical/governance/) — methodology, documentation/change governance and the current design/implementation boundary.
+* [Architecture](canonical/architecture/) — preserved **suspended downstream candidates**.
+* [Implementation](canonical/implementation/) — preserved **suspended downstream candidates** plus frozen 006-D bootstrap facts.
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, the active methodology phase, [Project Context & Purpose](canonical/project/), and only then task-relevant Concept/mechanism/policy/invariant owners.
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), the active [Phase 010](010-project-purpose-candidate-specification-modularity/), and the [010-D rediscovery record](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) before 010-E work.
 
 During Phases 010–017, do not preload architecture/implementation unless the task explicitly concerns contamination analysis or historical comparison.
 
 # External Authorities and References
 
 * [References](references/) — external methodologies, standards, specifications and MUDAC adoption/profile context.
-* [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) — current Jackson-aligned lifecycle operationalization used for completion-control reference; its numbering is not represented as Daniel Jackson's official phase sequence.
+* [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) — Jackson-aligned lifecycle operationalization used for completion-control reference; its numbering is not represented as Daniel Jackson's official phase sequence.
 
 # Design History and Current Phase
 
-* [Phase 001 — Concept Design Foundation](001-concept-design/) — substantial reusable design evidence.
-* [Phase 002 — Concept Specification](002-concept-specification/) — substantial reusable behavioral-specification evidence.
-* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) — substantial reusable mapping/experience evidence.
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — current documentation/OKF governance foundation.
-* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — historical architecture work; suspended as a Concept Design constraint.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — historical downstream planning/bootstrap; 006-D executable substrate frozen.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — substantial reusable design evidence; 007-I closure **superseded as current closure authority**.
-* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **halted after 008-E; historical premature downstream planning**.
-* [Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry](009-jackson-methodology-realignment/) — **Complete — PASS**.
-* [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](010-project-purpose-candidate-specification-modularity/) — **In Progress — 010-A/B/C complete; 010-D next**.
+* Phase 001 — Concept Design Foundation: reusable design evidence.
+* Phase 002 — Concept Specification: reusable behavioral-specification evidence.
+* Phase 003 — Conceptual UX Architecture: reusable mapping/experience evidence.
+* Phase 004 — Knowledge Architecture: current OKF/documentation governance foundation.
+* Phase 005 — Architecture: historical; suspended as Concept Design constraint.
+* Phase 006 — Implementation Planning/Bootstrap: historical; 006-D frozen.
+* Phase 007 — Design Refinement: reusable evidence; 007-I closure superseded.
+* Phase 008 — Implementation Re-entry: halted after 008-E.
+* Phase 009 — Methodology Realignment: **Complete — PASS**.
+* Phase 010 — Foundational Concept Design Completion: **In Progress — 010-A/B/C/D complete; 010-E next**.
 
 # Current posture
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
-007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
-008 implementation re-entry: HALTED AFTER 008-E
-architecture authority: SUSPENDED PENDING DESIGN CLOSURE
+architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 006-D executable bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
 new domain implementation: NOT STARTED
@@ -61,7 +60,8 @@ implementation authorization: NOT YET
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -69,25 +69,17 @@ production readiness: NOT ESTABLISHED
 
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
-  ↓
-010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
-  ↓
-010-C purpose / need / success / tension / traceability       COMPLETE
-  ↓
-010-D candidate rediscovery / divergent alternatives          NEXT
-  ↓
-010-E behavioral specification current-truth audit
-  ↓
+010-B project/context reconciliation                          COMPLETE
+010-C purpose / need / success / tensions                     COMPLETE
+010-D candidate rediscovery / divergent alternatives          COMPLETE
+010-E behavioral specification current-truth audit            NEXT
 010-F specificity / purpose singularity / boundary options
-  ↓
 010-G completeness / independence / boundary genericity
-  ↓
 010-H convergence / re-specification / canonical reconciliation
-  ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-The current sixteen-Concept catalog is an incumbent hypothesis, not a protected answer. 010-C established P-01–P-09 independently of Concept names; 010-D must derive candidates from those purposes and actor needs before looking back at the incumbent catalog.
+010-D established a specification-pressure set rather than a replacement catalog. 010-E must audit the sixteen incumbents plus four challengers: Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, and Official Outcome/Outcome Declaration.
 
 # Completion runway
 
@@ -113,12 +105,6 @@ A successful Phase 017 may authorize only a **separate downstream architecture/e
 
 # Navigation Guidance
 
-For current Phase 010 work, start with [Phase 010](010-project-purpose-candidate-specification-modularity/), [010-A](010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), and [Project Context & Purpose](canonical/project/), then load only the prior design evidence and canonical owners required by the active subgroup.
+For 010-E, read [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) before using [incumbent Concepts](canonical/concepts/) or [Mechanisms](canonical/mechanisms/). The canonical sixteen and current mechanism classifications are the baseline being tested, not the answer.
 
-For 010-D specifically, generate candidate alternatives from [MUDAC Purpose, Needs, Success & Tensions](canonical/project/purpose-needs-success-tensions.md) before comparing them with [incumbent Concepts](canonical/concepts/). Do not treat current non-Concept classifications as protected either.
-
-Use older phase records for evidence, alternatives, chronology or provenance. Do not treat downstream architecture/implementation as proof of conceptual correctness.
-
-Before any code/IaC or downstream-planning request, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). During reopened Concept Design the answer is normally that downstream execution is suspended unless the requested work is narrow bootstrap safety/build maintenance.
-
-The immediate next task is **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**.
+The immediate next task is **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**.

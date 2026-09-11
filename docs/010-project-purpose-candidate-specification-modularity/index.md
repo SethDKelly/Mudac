@@ -4,15 +4,15 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 
 ## Status
 
-**In Progress — 010-A, 010-B and 010-C complete; 010-D next.**
+**In Progress — 010-A through 010-D complete; 010-E next.**
 
 ## Records
 
 - [010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) — **Complete — PASS**.
 - [010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) — **Complete — PASS**.
 - [010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation](010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md) — **Complete — PASS**.
-- **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** — Next.
-- **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** — Planned.
+- [010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) — **Complete — PASS**.
+- **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** — Next.
 - **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** — Planned.
 - **010-G — Completeness, Independence & Genericity-for-Boundary Audit** — Planned.
 - **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation** — Planned.
@@ -29,9 +29,9 @@ Phase 010 is the active foundational Concept Design completion phase after the P
   ↓
 010-C purpose/need/success revalidation          COMPLETE
   ↓
-010-D candidate rediscovery/divergence           NEXT
+010-D candidate rediscovery/divergence           COMPLETE
   ↓
-010-E behavioral specification audit
+010-E behavioral specification audit             NEXT
   ↓
 010-F specificity/purpose singularity
   ↓
@@ -44,8 +44,8 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 011 composition/synchronization revalidation
 ```
 
-Current project/intake and purpose truth is owned by [Canonical Project Context & Purpose](../canonical/project/). The current sixteen-Concept catalog remains an incumbent hypothesis, not a protected answer.
+Current project/intake and purpose truth is owned by [Canonical Project Context & Purpose](../canonical/project/).
 
-010-D must regenerate candidate alternatives from the reconciled project mandate and P-01–P-09 purpose model before comparing those alternatives with the incumbent catalog. Architecture and implementation remain quarantined from constraining Phase 010.
+010-D did **not** canonically replace the sixteen incumbent Concepts. It established a phase-level specification-pressure set: the sixteen incumbents plus four challengers—Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, and Official Outcome/Outcome Declaration—with explicit merge/reframe alternatives that 010-E/F must test behaviorally.
 
-See [README.md](README.md) for phase intent, subgroup responsibilities, evidence posture, exclusions and exit criteria.
+See [README.md](README.md) for phase intent, rediscovery result, subgroup responsibilities, evidence posture, exclusions and exit criteria.

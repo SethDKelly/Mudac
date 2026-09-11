@@ -1,8 +1,8 @@
 # MUDAC Concepts
 
-Current canonical definitions of the incumbent MUDAC Concept catalog under reopened Daniel Jackson Concept Design.
+Current canonical definitions of the **incumbent** MUDAC Concept catalog under reopened Daniel Jackson Concept Design.
 
-Each Concept owner exposes a current **Purpose, State, Actions, and Operational Principle** in addition to its materially important rules/boundaries. Detailed derivation remains in numbered design history.
+Each current Concept owner exposes a current **Purpose, State, Actions, and Operational Principle** in addition to materially important rules/boundaries. Detailed derivation remains in numbered design history.
 
 * [Competition](competition.md) - Lifecycle and governing context for one competition occurrence.
 * [Division](division.md) - Mutually exclusive competitive population for Teams.
@@ -21,10 +21,17 @@ Each Concept owner exposes a current **Purpose, State, Actions, and Operational 
 * [Export](export.md) - Stable external representation of identified source state for a purpose/audience.
 * [Publication](publication.md) - Deliberate distribution or public release of an identified Export representation.
 
-These sixteen documents are the **incumbent current catalog entering Phase 010**, not a protected final answer. Phase 010 is explicitly authorized to retain, add, reject, split, combine, reframe, generalize, reduce or expand Concept identities when current project/purpose/discovery/specification/modularity evidence warrants it.
+These sixteen documents remain current canonical knowledge because Phase 010 has **not yet converged a replacement catalog**. Their presence does not mean 010-D reconfirmed them as final Concepts.
 
-Important non-Concept knowledge remains routed through [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/). Those classifications are also subject to correction if Phase 010 discovers that an item has—or lacks—an independent user-facing purpose and behavioral identity.
+[010-D — Candidate Concept Rediscovery](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) generated materially different decompositions and carries four challenger candidates into 010-E behavioral specification:
 
-The earlier catalog decision and rejected/promoted candidates are documented in [007-B — Concept Completeness, Independence & Genericity Audit](../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md) and remain reusable evidence rather than closure authority.
+- **Evaluation Assignment / Obligation**;
+- **Evaluation Sufficiency**;
+- **Reconciliation / Resolution**;
+- **Official Outcome / Outcome Declaration**.
 
-The active foundational audit is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../../010-project-purpose-candidate-specification-modularity/).
+010-D also requires explicit comparison of `Identity + Participation + Access` versus Actor Context, `Panel + Judging Encounter` versus assignment/occurrence alternatives, `Versioning + Provenance` versus Authority History, `Export + Publication` versus External Representation & Release, and the current Judging Encounter identity versus a broader Evaluation Occurrence.
+
+No challenger receives a canonical Concept page before specification and modularity evidence justify promotion. Likewise, current non-Concept knowledge under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/) remains subject to correction.
+
+Current next methodology work: **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**.

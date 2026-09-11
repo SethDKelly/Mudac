@@ -6,13 +6,15 @@ status: stable
 tags: [canonical, project, context, mandate, actors, scope, constraints, evidence]
 sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
 ---
 
 # Purpose
 
-Provide one concise current owner for MUDAC's project definition.
+Provide one concise current owner for MUDAC's project definition before final Concept selection.
 
-This document answers **what project is being designed and under what conditions**. The separate [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) owner answers why the product matters and what valuable outcomes must be enabled. Neither document protects the current Concept catalog.
+This document answers **what project is being designed and under what conditions**. [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) answers why the product matters. Neither document protects the current Concept catalog.
 
 # Current mandate
 
@@ -22,11 +24,9 @@ The baseline capability should help volunteer Judges and competition Organizers 
 
 Current capability spans preparation, live evaluation, paper/electronic continuity, correction, outcome formation and controlled external representation.
 
-The present sixteen-Concept catalog is an incumbent design hypothesis. This project mandate does not require those exact Concept identities or boundaries.
-
 # Stable competition context
 
-Current evidence supports these context facts:
+Current evidence supports these facts:
 
 - student Teams present work for evaluation;
 - volunteer Judges form individual judgments from multiple perspectives;
@@ -42,39 +42,22 @@ Current evidence supports these context facts:
 
 ## Direct product actors
 
-- **Judge** — volunteer human evaluator. Needs low-friction participation and independent/private judgment capture.
+- **Judge** — volunteer human evaluator needing low-friction, accessible, independent/private judgment participation.
 - **Organizer** — human responsible for preparation, live operation, exception handling, reconciliation and official closeout.
-- **Technical administrator/support operator** — operates or supports the technical environment; technical power does not automatically confer competition decision authority.
+- **Technical administrator/support operator** — operates/supports the technical environment; technical power does not automatically confer competition decision authority.
 
 ## Materially affected non-actors
 
-- **Student Team** — competitor whose outcome depends on fair, sufficiently covered, bias-aware evaluation. Student-facing application use is outside the current baseline.
-- **External recipients of released material** — consumers of print/external representations; not currently direct application actors and not evidence for a rich public-results portal.
+- **Student Team** — competitor whose outcome depends on fair, sufficiently supported, bias-aware evaluation. Student-facing application use is outside the baseline.
+- **External recipient** — consumer of print/external representations who needs honest source/authority/disclosure meaning; not evidence for a rich public-results portal.
 
-The repository does not currently establish sponsor, faculty-advisor, institutional-representative or event-leadership roles as separate application actors. 010-C did not find evidence requiring another principal baseline software actor; later discovery may still expose a distinct affected-party need without inventing roles prematurely.
-
-# Outcome directions
-
-The outcome directions identified by 010-B have now been revalidated and decomposed by 010-C into the current purpose model. See [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md).
-
-The current high-level directions remain:
-
-- Judges can record independent judgment without excessive administrative friction;
-- Organizers can coordinate the event and understand incomplete/exceptional conditions;
-- official outcomes are traceable to evaluation evidence and governing rules;
-- bias-sensitive Team identity is not revealed to Judges merely for convenience;
-- missing evaluation remains distinguishable from a deliberate low score;
-- paper and electronic judging preserve compatible evaluation meaning;
-- interruption and degraded connectivity do not unnecessarily destroy valid work;
-- corrections preserve authorship, provenance and historical truth;
-- provisional/live information is distinguishable from official information;
-- external representations do not silently promote unauthorized or provisional information into official truth.
+No separate sponsor, faculty-advisor, institutional-representative or event-leadership software role is currently established by evidence.
 
 # Current capability boundary
 
 ## In scope
 
-At capability level, MUDAC currently includes:
+At capability level, MUDAC includes:
 
 - competition judging-context/policy setup;
 - competitor establishment and competition-facing identity handling;
@@ -83,23 +66,23 @@ At capability level, MUDAC currently includes:
 - declaration of evaluation criteria/basis;
 - independent judgment and qualitative evidence capture;
 - preservation of incomplete/draft work distinct from authoritative evaluation;
-- paper and electronic evaluation continuity;
+- paper/electronic evaluation continuity;
 - Organizer visibility into completion, gaps and exceptions;
 - provenance-preserving correction and historical evidence;
 - derived/reconciled competition evaluation, coverage and ordering;
-- organizer-defined recognition/awards;
+- organizer-defined recognition/Awards;
 - official outcome closeout;
 - stable printable/external representations tied to identified source state;
 - deliberate release/withdrawal of external representations where disclosure rules permit.
 
-These are capability areas, not assignments to current Concepts.
+These are capability areas, not assignments to particular Concepts.
 
 ## Out of current baseline
 
 - student registration/accounts/dashboard;
 - student submission management;
 - dataset hosting/distribution;
-- notebook, analytics or ML execution infrastructure;
+- notebook/analytics/ML execution infrastructure;
 - faculty-advisor management;
 - general ticketing/marketing;
 - prize payment/disbursement;
@@ -109,23 +92,7 @@ These are capability areas, not assignments to current Concepts.
 - notification systems as required core functionality;
 - rich public-results portal beyond controlled representation/release.
 
-Formal Stage/Round abstractions and other format extensions remain possible later scope; Phase 012 owns application-family/subset analysis.
-
-# Pre-Concept vocabulary
-
-The project can use these terms descriptively without treating them as protected Concepts:
-
-- **Team** — student competitor/group;
-- **Judge** — human evaluator;
-- **Organizer** — competition operator/governor;
-- **Panel** — ordinary competition term for Judges evaluating together;
-- **Rubric** — declared evaluation criteria/basis;
-- **Scorecard** — ordinary repository term for one Judge's recorded evaluation;
-- **Division** — organizer-defined competitive grouping where used.
-
-`Judging Encounter` remains useful shorthand for a bounded evaluator/Team judging occurrence, but whether it should remain a distinct Concept is explicitly open to Phase 010-D–G.
-
-Other incumbent Concept names are not prerequisites of the project definition.
+Formal Stage/Round abstractions and other format extensions remain possible later scope; Phase 012 owns product-family/subset analysis.
 
 # Product and operational constraints
 
@@ -134,7 +101,7 @@ The current design must respect these representation-independent constraints:
 - **Live event:** delays, substitutions, incomplete work and rapid exception handling matter.
 - **Independent judgment:** ordinary Judge evaluation must not depend on peer scores/notes or live standings.
 - **Bias-sensitive disclosure:** administrative/institutional Team identity must be controllable in judging contexts.
-- **Accessibility:** the product cannot assume perfect vision, color perception, fine motor control, hearing, a single device or touch-only operation.
+- **Accessibility:** the product cannot assume perfect vision, color perception, fine motor control, hearing, one device or touch-only interaction.
 - **Degraded connectivity/devices:** interruption, poor connectivity and device problems are expected conditions.
 - **Paper continuity:** paper must be a valid continuity/accommodation path with compatible evaluation meaning.
 - **Historical truth:** correction must not require destructive rewriting of meaningful authoritative history.
@@ -143,13 +110,13 @@ The current design must respect these representation-independent constraints:
 
 # Downstream-only delivery constraint
 
-Historical project intent targets an eventual delivery chain of:
+Historical project intent targets:
 
 ```text
 GitHub → GitHub Actions → AWS ecosystem
 ```
 
-This is retained only as a **downstream delivery constraint**. It does not determine Concepts, Concept boundaries, state/actions, UI mapping, persistence, authentication, APIs, service topology or specific AWS services.
+This is only a **downstream delivery constraint**. It does not determine Concepts, state/actions, UI mapping, persistence, authentication, APIs, service topology or specific AWS services.
 
 The existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu bootstrap is a frozen historical executable fact, not project-intake authority.
 
@@ -162,32 +129,30 @@ Current but challengeable assumptions:
 - competitive grouping is configurable rather than fixed to one exact taxonomy;
 - judging commonly seeks multiple evaluator perspectives, while exact expertise categories/quotas are policy choices;
 - controlled external release remains in the present capability boundary, while a rich public portal does not;
-- formal scheduling may remain external/lightweight unless later purpose/dependence work shows it is necessary.
+- formal scheduling may remain external/lightweight unless later purpose/dependence work shows it necessary.
 
-# Open questions
+# Open questions after 010-D
 
-Current project context intentionally leaves these open:
+Current project context intentionally leaves open:
 
-- which candidate Concepts best factor the current purpose obligations;
-- whether every current capability area belongs in every coherent MUDAC variant;
-- which incumbent Concepts survive rediscovery and modularity review;
-- whether current non-Concept mechanism classifications survive rediscovery;
+- which incumbent and challenger candidates survive behavioral specification and modularity review;
+- whether Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution or Official Outcome/Outcome Declaration qualify as Concepts;
+- whether actor-context, judging-occurrence, authority-history or representation/release boundaries should split/merge/reframe;
+- which capability areas belong in every coherent MUDAC product variant;
 - detailed evaluation, coverage, ranking, tie, Award and disclosure policies;
 - exact retention/regulatory requirements not currently evidenced;
 - final dependence/subset decisions, mappings, architecture and implementation realization.
-
-The final purpose/need/success decomposition is no longer open at this stage: 010-C established the current baseline in [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md), subject to normal later reopening if new evidence exposes an upstream defect.
 
 # Evidence posture
 
 Use historical Phase 001–003/007 material as evidence and rationale, not immutable truth.
 
-Architecture and implementation produced before methodology completion are quarantined from constraining this project definition. When later design evidence changes the mandate, update this document as the natural current owner and preserve the older conclusion in phase history.
+Architecture and implementation produced before methodology completion are quarantined from constraining this project definition. When later design evidence changes the mandate, update this document as the natural current owner and preserve older conclusions in phase history.
 
 # Current handoff
 
-Phase 010-B reconciled project/intake truth and Phase 010-C established the current purpose model. The next methodology task is:
+Phase 010-B reconciled project/intake truth, 010-C established the current purpose model, and 010-D completed candidate rediscovery. The next methodology task is:
 
-> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**
+> **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**
 
-010-D must derive candidates from this context and [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) before comparing them with incumbent Concept or mechanism identities.
+010-E must use the 010-D specification-pressure set rather than assuming the current sixteen canonical Concepts are the complete candidate space.

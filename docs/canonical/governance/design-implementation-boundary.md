@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's reopened Concept Design posture, suspended downstream architecture/implementation authority, frozen 006-D bootstrap, and the design-only gate that remains in force until a successful methodology closure.
+description: Defines MUDAC's reopened Concept Design posture, suspended downstream architecture/implementation authority, frozen 006-D bootstrap, and the design-only gate that remains in force until successful methodology closure.
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, reentry]
 sources:
@@ -11,6 +11,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
@@ -24,9 +25,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. Its 010-A start gate established the foundational completion sequence, 010-B reconciled current project/intake truth independently of the incumbent Concept catalog, and 010-C revalidated current purpose/need/success/tension obligations before provisional Concept traceability.
-
-Current governing posture:
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. 010-A established the completion sequence, 010-B reconciled current project/intake truth, 010-C revalidated purpose/need/success/tensions, and 010-D completed purpose-first candidate rediscovery without canonically promoting or demoting Concepts.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -45,7 +44,8 @@ Phase 010: IN PROGRESS
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -60,39 +60,48 @@ canonical Project Context
         ↓
 canonical Purpose / Needs / Success / Tensions
         ↓
-phase-specific Jackson methodology analysis
+phase-specific Jackson discovery/specification/modularity analysis
         ↓
-corrected current conceptual owners
+corrected current conceptual owners after convergence
 
 historical architecture / implementation
         = evidence or contamination probe only
         ≠ design constraint
 ```
 
-The current project/purpose baseline is [Project Context & Purpose](../project/). The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
+The current project/purpose baseline is [Project Context & Purpose](../project/). Candidate divergence remains phase evidence in [010-D](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md).
 
 # What remains authoritative
 
-Current product/conceptual authority includes task-relevant canonical:
-
-- Project Context & Purpose;
-- Concepts;
-- synchronizations and temporal/correction semantics;
-- policies;
-- mechanisms where intentionally non-Concepts;
-- invariants;
-- conceptual experience/mapping knowledge;
-- methodology/documentation/change governance.
+Current product/conceptual authority includes task-relevant canonical Project Context & Purpose, incumbent Concepts, synchronizations, policies, mechanisms, invariants, experience/mapping knowledge, and methodology/documentation/change governance.
 
 These owners remain subject to correction by Phases 010–017.
 
-During Phase 010, the current sixteen-Concept catalog and existing Concept/non-Concept classifications are incumbent design hypotheses. They may change when rediscovery, specification or modularity evidence warrants it.
+During Phase 010:
+
+- the current sixteen Concept pages remain incumbent current knowledge, not a protected final catalog;
+- current Concept/non-Concept classifications remain challengeable;
+- 010-D challenger candidates are phase hypotheses until later specification/modularity convergence;
+- no architecture or implementation choice may decide Concept candidacy or boundaries.
+
+# Current candidate-specification pressure
+
+010-D requires 010-E to behaviorally test the sixteen incumbents plus four challengers:
+
+- Evaluation Assignment / Obligation;
+- Evaluation Sufficiency;
+- Reconciliation / Resolution;
+- Official Outcome / Outcome Declaration.
+
+010-E/F must also preserve comparison of Actor Context vs Identity/Participation/Access, assignment/occurrence alternatives vs Panel/Judging Encounter, Authority History vs Versioning/Provenance, unified External Representation & Release vs Export/Publication, and broader Evaluation Occurrence vs current Judging Encounter.
+
+This candidate pressure does not authorize code, schemas, APIs, persistence or architecture.
 
 # Project-purpose versus downstream constraints
 
-010-B established current representation-independent project constraints. 010-C established current purpose obligations P-01–P-09 and exposed material tensions such as friction versus trustworthy attribution, resilience versus singular logical authority, speed versus outcome correctness, correction versus historical truth, and transparency versus controlled disclosure.
+Current representation-independent constraints include live-event operation, independent judgment, bias-sensitive identity disclosure, accessibility, degraded connectivity/device conditions, paper continuity, historical truth, explainability and separation of technical authority from competition judgment.
 
-Those are conceptual constraints. They do not select implementation mechanisms.
+Current purpose obligations P-01–P-09 and their tensions are conceptual constraints. They do not select realization mechanisms.
 
 Historical intent for:
 
@@ -100,7 +109,7 @@ Historical intent for:
 GitHub → GitHub Actions → AWS ecosystem
 ```
 
-is retained only as a downstream delivery constraint. It does not determine Concepts, state/actions, UI mapping, persistence, authentication, APIs, services or AWS resources.
+is retained only as a downstream delivery constraint. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain historical implementation facts, not conceptual requirements.
 
 # What is suspended
 
@@ -115,20 +124,18 @@ Until successful Phase 017 closure:
 
 # Frozen 006-D executable substrate
 
-The repository already contains a non-domain bootstrap created before design completion was reassessed.
-
-It remains frozen and may receive only narrow safety/build maintenance that does not add MUDAC domain semantics or constrain the design. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices are historical implementation facts, not conceptual requirements.
+The repository contains a non-domain bootstrap created before design completion was reassessed. It remains frozen and may receive only narrow safety/build maintenance that does not add MUDAC domain semantics or constrain design.
 
 # Prohibited work during Phases 010–017
 
 Do not begin or resume:
 
-- domain PostgreSQL schemas, migrations, repositories, outbox or projections;
-- Cognito/login/session/Identity/Participation/Access implementation;
-- production domain commands, queries, APIs, transactions or idempotency mechanisms;
-- IndexedDB domain Draft/synchronization implementation;
+- domain database schemas/migrations/repositories/outbox/projections;
+- login/session/Identity/Participation/Access implementation;
+- production domain commands/queries/APIs/transactions/idempotency mechanisms;
+- client-side domain Draft/synchronization implementation;
 - Competition/Judging/Evaluation/Outcome/Award/Export/Publication feature code;
-- domain-purpose AWS application provisioning;
+- domain-purpose AWS provisioning;
 - implementation-plan continuation from 008-F through 008-L;
 - architecture decisions intended to constrain remaining Concept Design.
 
@@ -136,7 +143,7 @@ Do not begin or resume:
 
 Current work may:
 
-- execute Phases 010–017 of the methodology completion runway;
+- execute Phases 010–017;
 - update Project Context/Purpose or other canonical conceptual owners when design meaning changes;
 - inspect historical architecture/implementation only for contamination, assumptions, counterexamples or later handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
@@ -146,25 +153,15 @@ Current work may:
 
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
-  ↓
-010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
-  ↓
-010-C purpose / need / success / tension / traceability       COMPLETE
-  ↓
-010-D candidate rediscovery / divergent alternatives          NEXT
-  ↓
-010-E behavioral specification current-truth audit
-  ↓
+010-B project/context reconciliation                          COMPLETE
+010-C purpose / need / success / tensions                     COMPLETE
+010-D candidate rediscovery / divergent alternatives          COMPLETE
+010-E behavioral specification current-truth audit            NEXT
 010-F specificity / purpose singularity / boundary options
-  ↓
 010-G completeness / independence / boundary genericity
-  ↓
 010-H convergence / re-specification / canonical reconciliation
-  ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
-
-010-D must derive candidate alternatives from [MUDAC Purpose, Needs, Success & Tensions](../project/purpose-needs-success-tensions.md) before comparing them with incumbent Concepts or current non-Concept classifications.
 
 # Completion runway
 
@@ -191,20 +188,12 @@ Current work may:
 
 # Meaning of future successful closure
 
-A successful Phase 017 may establish:
-
-```text
-Concept Design readiness for downstream work: READY
-implementation execution: NOT STARTED
-implementation authorization: NOT GRANTED BY CONCEPT-DESIGN CLOSURE
-```
-
-It will authorize only a separate downstream architecture/engineering re-entry. It will not automatically reactivate Phase 005 architecture, Phase 008 planning or any old first-slice proposal.
+A successful Phase 017 may establish Concept Design readiness for downstream work. It does **not** start implementation or grant implementation authorization; it authorizes only a separate architecture/engineering re-entry.
 
 # Current handoff
 
 Proceed to:
 
-> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**
+> **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**
 
-010-D begins from [Project Context & Purpose](../project/) and must not derive candidate identities from the incumbent catalog or downstream implementation structure.
+010-E begins from the 010-D specification-pressure set and must not assume that the current sixteen Concepts or current mechanism classifications already satisfy the behavioral specification gate.

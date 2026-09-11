@@ -5,12 +5,12 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 ## Required start
 
 1. Start at [`docs/index.md`](docs/index.md).
-2. Read the current [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
+2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. For current methodology work, use [`Phase 009`](docs/009-jackson-methodology-realignment/) as realignment/gap-map provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
-5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-D or later Phase 010 work.
-6. Load only task-relevant canonical Concepts, mechanisms, policies, invariants, synchronizations, experience and governance owners after the project-purpose baseline is understood.
-7. Use numbered historical phases only when rationale, alternatives, chronology or evidence materially help the current methodology question.
+4. Use [`Phase 009`](docs/009-jackson-methodology-realignment/) as methodology realignment provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
+5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), [010-D](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-E or later Phase 010 work.
+6. Load task-relevant incumbent Concept/mechanism/policy/invariant owners only after the project-purpose baseline and 010-D candidate pressure are understood.
+7. Use older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
 
@@ -29,46 +29,38 @@ implementation authorization: NOT YET
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 ```
 
 ## Active Phase 010 subgroup order
 
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
-  ↓
 010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
-  ↓
 010-C purpose / need / success / tension / traceability       COMPLETE
-  ↓
-010-D candidate rediscovery / divergent alternatives          NEXT
-  ↓
-010-E behavioral specification current-truth audit
-  ↓
+010-D candidate rediscovery / divergent alternatives          COMPLETE
+010-E behavioral specification current-truth audit            NEXT
 010-F specificity / purpose singularity / boundary options
-  ↓
 010-G completeness / independence / boundary genericity
-  ↓
 010-H convergence / re-specification / canonical reconciliation
-  ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
 
 ## Phase 010 discipline
 
 - Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current baseline before Concept analysis.
-- Treat the current sixteen-Concept catalog as the incumbent hypothesis, not a protected answer.
-- Reuse prior 001–003/007 design evidence when it genuinely satisfies the active methodology test.
-- Do not reverse-engineer purpose merely to justify current Concepts.
-- The current P-01–P-09 purpose obligations were derived before Concept traceability and are not Concept identities.
-- 010-D must generate materially different candidate decompositions from purposes/needs before comparing them to the incumbent catalog.
-- Current non-Concept mechanisms such as Coverage, Rank, Reconciliation and Official Outcome Revision are valid rediscovery candidates; their current classification is not protected.
-- Previously rejected/deferred candidates such as Recovery/Continuity must be reconsidered when the current purpose model creates genuine pressure, without promoting mechanisms merely because they have implementation state.
-- Do not judge modularity from Concept names alone; use representation-independent behavioral specifications.
-- Specificity/purpose singularity is evaluated before completeness/independence so boundary changes are not audited against obsolete identities.
+- Treat the current sixteen canonical Concept pages as **incumbent current knowledge**, not a protected final catalog.
+- 010-D's detailed divergent candidate space is phase evidence, not canonical authority.
+- 010-E must behaviorally test the sixteen incumbents plus four challengers: **Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, Official Outcome/Outcome Declaration**.
+- 010-E/F must preserve these merge/reframe comparisons: Actor Context vs `Identity + Participation + Access`; assignment/occurrence alternatives vs `Panel + Judging Encounter`; Authority History vs `Versioning + Provenance`; unified External Representation & Release vs `Export + Publication`; generic Evaluation Occurrence vs current Judging Encounter.
+- Aggregate, Rank and Readiness remain incumbent derived mechanisms after 010-D but may still be corrected if later behavioral evidence warrants it.
+- Recovery/Continuity is a first-class P-05 obligation, not currently an independent Concept candidate; reopen it only if retained candidate specifications cannot express the required behavior without hidden cross-cutting semantics.
+- Do not judge modularity from names alone; use representation-independent behavioral specifications.
+- Specificity/purpose singularity is evaluated before completeness/independence.
 - Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
-- Extrinsic Concept dependence belongs to Phase 012, not Phase 010 independence analysis.
-- Familiarity/reuse/catalog refinement beyond boundary-required genericity belongs to Phase 014.
+- Extrinsic Concept dependence belongs to Phase 012.
+- Full familiarity/reuse/catalog refinement belongs to Phase 014.
 
 ## Current project-purpose guardrails
 
@@ -84,7 +76,7 @@ Current purpose obligations are:
 - P-08 contextual confidentiality and authority separation;
 - P-09 faithful external representation and controlled release.
 
-The purpose model explicitly preserves tensions such as friction vs attribution, anonymity vs explainability, resilience vs singular authority, speed vs correctness, correction vs historical truth, and transparency vs controlled disclosure.
+The purpose model explicitly preserves tensions such as friction vs attribution, identity shielding vs explainability, resilience vs singular authority, speed vs correctness, correction vs historical truth, and transparency vs controlled disclosure.
 
 `GitHub → GitHub Actions → AWS ecosystem` is a downstream delivery constraint only. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain frozen historical executable facts and must not determine Concept Design.
 
@@ -95,8 +87,8 @@ The purpose model explicitly preserves tensions such as friction vs attribution,
 - Do not let frameworks, packages, tables, APIs, AWS services, source topology, authentication providers, persistence choices or existing code determine Concept Design.
 - Do not use canonical architecture/implementation documents as evidence that a Concept, dependency, mapping, scope choice or integrity decision is correct.
 - Architecture/implementation may be inspected only for explicit contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
-- If a later design phase exposes an upstream defect, correct the natural earlier owner and revalidate affected later conclusions.
-- Keep durable product meaning in canonical conceptual owners; keep detailed audit matrices/counterexamples in phase history.
+- If later design exposes an upstream defect, correct the natural earlier owner and revalidate affected downstream conclusions.
+- Keep durable product meaning in canonical conceptual owners; keep detailed candidate matrices/counterexamples in phase history.
 
 ## Frozen executable substrate
 
@@ -112,7 +104,7 @@ The real 006-D bootstrap remains in the repository. Narrow dependency/security/b
 - 008-E identity/auth plan: suspended downstream hypothesis.
 - 008-F–L: not active.
 
-A future successful Phase 017 may authorize only a separate architecture/engineering re-entry. It does not automatically reactivate any of the above.
+A future successful Phase 017 may authorize only a separate architecture/engineering re-entry.
 
 ## Knowledge validation
 
@@ -122,4 +114,4 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 Proceed to:
 
-> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**
+> **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**

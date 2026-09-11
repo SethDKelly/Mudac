@@ -1,29 +1,29 @@
 # Canonical MUDAC Knowledge
 
-This subtree is the preferred source for current MUDAC conceptual product meaning and governance. Architecture and implementation material are preserved here but are currently **suspended downstream candidates** while Jackson Concept Design is reopened.
+This subtree is the preferred source for current MUDAC conceptual product meaning and governance. Architecture and implementation material are preserved here but remain **suspended downstream candidates** while Jackson Concept Design is reopened.
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/) — current project/intake mandate, actors and affected parties, scope/non-goals, operational constraints, purpose obligations, success situations, tensions and candidate-rediscovery pressure.
-* [Concepts](concepts/) — current MUDAC Concepts, subject to Phase 010 rediscovery/specification/modularity review.
+* [Project Context & Purpose](project/) — current project/intake mandate, scope/non-goals, operational constraints, purpose obligations, success situations, tensions and current candidate-specification pressure.
+* [Concepts](concepts/) — current sixteen-Concept incumbent catalog; not a protected final answer.
 * [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to Phase 011 composition revalidation.
-* [Mechanisms](mechanisms/) — current derived/supporting subjects intentionally not promoted to Concepts; classifications remain challengeable during 010-D.
+* [Mechanisms](mechanisms/) — current derived/supporting subjects; classifications remain challengeable during Phase 010.
 * [Policies](policies/) — current governing/configurable Competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
-* [Experience](experience/) — current conceptual mapping/experience evidence, subject to post-scope Phase 013 revalidation.
+* [Experience](experience/) — current conceptual mapping/experience evidence, subject to Phase 013 revalidation.
 
 # Governance
 
-* [Governance](governance/) — methodology/terminology, documentation authority, change governance, stable rule identifiers, validation, the current [Design / Implementation Boundary](governance/design-implementation-boundary.md), and [Downstream Architecture & Implementation Authority Quarantine](governance/downstream-authority-quarantine.md).
+* [Governance](governance/) — methodology/terminology, documentation authority, change governance, stable rule identifiers, validation, the [Design / Implementation Boundary](governance/design-implementation-boundary.md), and [Downstream Architecture & Implementation Authority Quarantine](governance/downstream-authority-quarantine.md).
 
 # Suspended downstream knowledge
 
-* [Architecture](architecture/) — preserved pre-closure architecture candidates. **Suspended as current Concept Design constraints** until a successful Phase 017 closure and separate downstream revalidation.
-* [Implementation](implementation/) — preserved toolchain/implementation candidates and historical bootstrap knowledge. **Suspended as current domain implementation authority** while Concept Design remains open.
+* [Architecture](architecture/) — preserved pre-closure architecture candidates; suspended as current Concept Design constraints.
+* [Implementation](implementation/) — preserved toolchain/implementation candidates and frozen historical bootstrap knowledge; suspended as current domain implementation authority.
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A, 010-B and 010-C have passed.
+Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A through 010-D have passed.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -40,10 +40,11 @@ implementation authorization: NOT YET
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 ```
 
-The active methodology record is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/).
+The active methodology record is [Phase 010](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/). Detailed candidate rediscovery evidence is [010-D](../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md).
 
 # Retrieval rule during reopened design
 
@@ -51,34 +52,27 @@ For Phases 010–017:
 
 1. load the active phase/start-gate record;
 2. load [Project Context & Purpose](project/) whenever project/purpose/scope assumptions matter;
-3. load only task-relevant current conceptual owners;
-4. load historical design evidence only where it materially supports the phase question;
-5. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
-6. do **not** load architecture/implementation merely because it exists—use it only for explicit contamination analysis, historical comparison or later handoff preparation.
+3. for 010-E/F, load 010-D before treating current Concept/mechanism classifications as evidence;
+4. load only task-relevant current conceptual owners;
+5. load historical design evidence only where it materially supports the phase question;
+6. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
+7. do not preload architecture/implementation except for explicit contamination/history work.
 
-During Phase 010, treat the current sixteen-Concept catalog and current Concept/non-Concept classifications as incumbent hypotheses rather than protected answers.
+During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept classifications are incumbent hypotheses rather than protected answers.
 
-For 010-D, derive candidate alternatives from [MUDAC Purpose, Needs, Success & Tensions](project/purpose-needs-success-tensions.md) before comparison with [Concepts](concepts/) or [Mechanisms](mechanisms/).
+010-D carries four challengers into behavioral specification: Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, and Official Outcome/Outcome Declaration.
 
 # Active Phase 010 order
 
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
-  ↓
-010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
-  ↓
-010-C purpose / need / success / tension / traceability       COMPLETE
-  ↓
-010-D candidate rediscovery / divergent alternatives          NEXT
-  ↓
-010-E behavioral specification current-truth audit
-  ↓
+010-B project/context reconciliation                          COMPLETE
+010-C purpose / need / success / tensions                     COMPLETE
+010-D candidate rediscovery / divergent alternatives          COMPLETE
+010-E behavioral specification current-truth audit            NEXT
 010-F specificity / purpose singularity / boundary options
-  ↓
 010-G completeness / independence / boundary genericity
-  ↓
 010-H convergence / re-specification / canonical reconciliation
-  ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
 
@@ -102,4 +96,4 @@ For 010-D, derive candidate alternatives from [MUDAC Purpose, Needs, Success & T
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**.
+The immediate next work is **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**.
