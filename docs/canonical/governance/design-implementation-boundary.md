@@ -10,7 +10,9 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
   - resource: ../project/mandate-context.md
+  - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
   - resource: methodology-terminology.md
   - resource: change-governance.md
@@ -22,7 +24,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. Its 010-A start gate established the foundational completion sequence and 010-B reconciled current project/intake truth independently of the incumbent Concept catalog.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. Its 010-A start gate established the foundational completion sequence, 010-B reconciled current project/intake truth independently of the incumbent Concept catalog, and 010-C revalidated current purpose/need/success/tension obligations before provisional Concept traceability.
 
 Current governing posture:
 
@@ -42,7 +44,8 @@ Phase 009: COMPLETE — PASS
 Phase 010: IN PROGRESS
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
-010-C: NEXT
+010-C: COMPLETE — PASS
+010-D: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -55,6 +58,8 @@ human product intent / evidence
         ↓
 canonical Project Context
         ↓
+canonical Purpose / Needs / Success / Tensions
+        ↓
 phase-specific Jackson methodology analysis
         ↓
 corrected current conceptual owners
@@ -64,13 +69,13 @@ historical architecture / implementation
         ≠ design constraint
 ```
 
-The current project/intake baseline is [MUDAC Project Mandate & Current Context](../project/mandate-context.md). The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
+The current project/purpose baseline is [Project Context & Purpose](../project/). The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
 
 # What remains authoritative
 
 Current product/conceptual authority includes task-relevant canonical:
 
-- Project Context;
+- Project Context & Purpose;
 - Concepts;
 - synchronizations and temporal/correction semantics;
 - policies;
@@ -81,11 +86,13 @@ Current product/conceptual authority includes task-relevant canonical:
 
 These owners remain subject to correction by Phases 010–017.
 
-During Phase 010, the current sixteen-Concept catalog is an incumbent design hypothesis. It may be changed when purpose, rediscovery, specification or modularity evidence warrants it.
+During Phase 010, the current sixteen-Concept catalog and existing Concept/non-Concept classifications are incumbent design hypotheses. They may change when rediscovery, specification or modularity evidence warrants it.
 
-# Project-context versus downstream constraints
+# Project-purpose versus downstream constraints
 
-010-B established that live-event operation, independent judgment, bias-sensitive identity disclosure, accessibility, degraded connectivity/device conditions, paper continuity, historical truth, explainability and separation of technical authority from competition judgment are current representation-independent constraints.
+010-B established current representation-independent project constraints. 010-C established current purpose obligations P-01–P-09 and exposed material tensions such as friction versus trustworthy attribution, resilience versus singular logical authority, speed versus outcome correctness, correction versus historical truth, and transparency versus controlled disclosure.
+
+Those are conceptual constraints. They do not select implementation mechanisms.
 
 Historical intent for:
 
@@ -130,7 +137,7 @@ Do not begin or resume:
 Current work may:
 
 - execute Phases 010–017 of the methodology completion runway;
-- update Project Context or other canonical conceptual owners when design meaning changes;
+- update Project Context/Purpose or other canonical conceptual owners when design meaning changes;
 - inspect historical architecture/implementation only for contamination, assumptions, counterexamples or later handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
 - improve documentation/routing/validation supporting the design process.
@@ -142,9 +149,9 @@ Current work may:
   ↓
 010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability       NEXT
+010-C purpose / need / success / tension / traceability       COMPLETE
   ↓
-010-D candidate rediscovery / divergent alternatives
+010-D candidate rediscovery / divergent alternatives          NEXT
   ↓
 010-E behavioral specification current-truth audit
   ↓
@@ -156,6 +163,8 @@ Current work may:
   ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
+
+010-D must derive candidate alternatives from [MUDAC Purpose, Needs, Success & Tensions](../project/purpose-needs-success-tensions.md) before comparing them with incumbent Concepts or current non-Concept classifications.
 
 # Completion runway
 
@@ -196,6 +205,6 @@ It will authorize only a separate downstream architecture/engineering re-entry. 
 
 Proceed to:
 
-> **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**
+> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**
 
-010-C begins from [Canonical Project Context](../project/mandate-context.md) and must not derive purpose from incumbent Concept names.
+010-D begins from [Project Context & Purpose](../project/) and must not derive candidate identities from the incumbent catalog or downstream implementation structure.

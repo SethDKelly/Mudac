@@ -1,6 +1,6 @@
 # Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion
 
-Status: **In Progress — 010-A and 010-B complete; 010-C next**
+Status: **In Progress — 010-A, 010-B and 010-C complete; 010-D next**
 
 ## Role in the completion runway
 
@@ -23,7 +23,7 @@ Phase 010 is governed by:
 - [Phase 009 realignment and gap map](../009-jackson-methodology-realignment/);
 - [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md);
 - [Downstream Architecture & Implementation Authority Quarantine](../canonical/governance/downstream-authority-quarantine.md);
-- [Canonical Project Context](../canonical/project/);
+- [Canonical Project Context & Purpose](../canonical/project/);
 - current task-relevant conceptual canonical owners;
 - Daniel Jackson Concept Design as methodology authority;
 - [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) as the adopted completion-control operationalization, without treating its numbering as Jackson's official sequence.
@@ -46,8 +46,8 @@ Prior conclusions are evidence, not protected outcomes. The current sixteen-Conc
 | --- | --- | --- |
 | 010-A | [Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) | **Complete — PASS** |
 | 010-B | [Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) | **Complete — PASS** |
-| 010-C | **Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** | **Next** |
-| 010-D | **Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** | Planned |
+| 010-C | [Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation](010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md) | **Complete — PASS** |
+| 010-D | **Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** | **Next** |
 | 010-E | **Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** | Planned |
 | 010-F | **Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** | Planned |
 | 010-G | **Completeness, Independence & Genericity-for-Boundary Audit** | Planned |
@@ -89,18 +89,42 @@ Key consequences:
 - the live student data competition setting, volunteer judging, Organizer operation, Student Team impact, bias-sensitive identity shielding, accessibility, degraded connectivity, paper continuity, traceability and historical correction remain current project context;
 - exact lifecycle states, scoring arithmetic, authentication/session mechanisms, persistence structures, source topology and AWS services are not intake truth;
 - `GitHub → GitHub Actions → AWS ecosystem` is retained only as a downstream delivery constraint, not as Concept Design authority;
-- the current sixteen Concepts remain challengeable and none were accepted/rejected by 010-B itself;
-- 010-C must derive purpose from the reconciled project context rather than from current Concept names.
+- the current sixteen Concepts remain challengeable and none were accepted/rejected by 010-B itself.
+
+## Completed 010-C result
+
+010-C derived a purpose model from the reconciled project context **before** inspecting incumbent Concept identities and created [MUDAC Purpose, Needs, Success & Tensions](../canonical/project/purpose-needs-success-tensions.md) as the durable current owner.
+
+The current nine purpose obligations are:
+
+1. P-01 — independent human judgment;
+2. P-02 — fair and bias-aware Team treatment;
+3. P-03 — low-friction and accessible participation;
+4. P-04 — live operational coordination and completion;
+5. P-05 — resilient evaluation continuity;
+6. P-06 — trustworthy and explainable outcome formation;
+7. P-07 — correctable authority and historical truth;
+8. P-08 — contextual confidentiality and authority separation;
+9. P-09 — faithful external representation and controlled release.
+
+010-C also established representative success situations and ten material tensions. It found no wholly unrepresented product-level purpose, but explicitly **did not** treat this as evidence that the current catalog is complete or correctly factored.
+
+Important rediscovery pressure handed to 010-D includes:
+
+- P-03 being spread across Identity/Participation/Access plus experience concerns;
+- P-04 being distributed across Competition/Participation/Panel/Judging Encounter and readiness/reconciliation knowledge;
+- P-05 crossing judgment, paper, recovery, history and privacy rather than having one natural current owner;
+- P-06 depending heavily on current non-Concept mechanisms such as Coverage, Aggregate, Rank, Reconciliation and Official Outcome Revision;
+- P-07 requiring a fresh challenge to Versioning/Provenance Concept status/factoring;
+- P-09 establishing real external-representation/release value without proving the current Export/Publication split.
+
+No Concept was accepted, rejected, split, merged or demoted by 010-C.
 
 ## Remaining subgroup intentions
 
-### 010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation
-
-Establish a current need-focused, evaluable purpose model from the reconciled project context. Test actor/affected-party needs, success situations, tensions, orphan purposes and provisional purpose-to-current-Concept traceability without using the current catalog as the source of purpose.
-
 ### 010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment
 
-Challenge catalog anchoring through genuine divergence from the current purpose model. Revisit important rejected/deferred candidates and distinguish Concepts from features, roles, entities, screens, policies, mechanisms and implementation nouns.
+Challenge catalog anchoring through genuine divergence from the current project-purpose model. Regenerate plausible candidates from P-01–P-09 and actor/affected-party needs **before** comparing them to the incumbent catalog. Revisit important rejected/deferred candidates and distinguish Concepts from features, roles, entities, screens, policies, mechanisms and implementation nouns.
 
 ### 010-E — Behavioral-Specification Current-Truth Audit
 
@@ -142,9 +166,10 @@ implementation authorization: NOT YET
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
-010-C: NEXT
+010-C: COMPLETE — PASS
+010-D: NEXT
 ```
 
 ## Next
 
-Proceed to **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**.
+Proceed to **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**. Start from [Project Context & Purpose](../canonical/project/) rather than from the incumbent Concept catalog.

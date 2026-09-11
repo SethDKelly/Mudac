@@ -8,8 +8,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read the current [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. For current methodology work, use [`Phase 009`](docs/009-jackson-methodology-realignment/) as realignment/gap-map provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
-5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), and [Canonical Project Context](docs/canonical/project/mandate-context.md) before 010-C or later Phase 010 work.
-6. Load only task-relevant canonical Concepts, synchronizations, policies, mechanisms, invariants, experience and governance owners.
+5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-D or later Phase 010 work.
+6. Load only task-relevant canonical Concepts, mechanisms, policies, invariants, synchronizations, experience and governance owners after the project-purpose baseline is understood.
 7. Use numbered historical phases only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -28,7 +28,8 @@ implementation authorization: NOT YET
 010: IN PROGRESS
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
-010-C: NEXT
+010-C: COMPLETE — PASS
+010-D: NEXT
 ```
 
 ## Active Phase 010 subgroup order
@@ -38,9 +39,9 @@ implementation authorization: NOT YET
   ↓
 010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability       NEXT
+010-C purpose / need / success / tension / traceability       COMPLETE
   ↓
-010-D candidate rediscovery / divergent alternatives
+010-D candidate rediscovery / divergent alternatives          NEXT
   ↓
 010-E behavioral specification current-truth audit
   ↓
@@ -55,30 +56,35 @@ implementation authorization: NOT YET
 
 ## Phase 010 discipline
 
-- Treat [Canonical Project Context](docs/canonical/project/mandate-context.md) as the current intake baseline.
+- Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current baseline before Concept analysis.
 - Treat the current sixteen-Concept catalog as the incumbent hypothesis, not a protected answer.
 - Reuse prior 001–003/007 design evidence when it genuinely satisfies the active methodology test.
 - Do not reverse-engineer purpose merely to justify current Concepts.
-- 010-C must derive purposes from project/affected-party need and use current Concepts only as traceability targets.
-- Candidate rediscovery must be meaningfully divergent before the catalog is reconfirmed.
+- The current P-01–P-09 purpose obligations were derived before Concept traceability and are not Concept identities.
+- 010-D must generate materially different candidate decompositions from purposes/needs before comparing them to the incumbent catalog.
+- Current non-Concept mechanisms such as Coverage, Rank, Reconciliation and Official Outcome Revision are valid rediscovery candidates; their current classification is not protected.
+- Previously rejected/deferred candidates such as Recovery/Continuity must be reconsidered when the current purpose model creates genuine pressure, without promoting mechanisms merely because they have implementation state.
 - Do not judge modularity from Concept names alone; use representation-independent behavioral specifications.
 - Specificity/purpose singularity is evaluated before completeness/independence so boundary changes are not audited against obsolete identities.
 - Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
 - Extrinsic Concept dependence belongs to Phase 012, not Phase 010 independence analysis.
 - Familiarity/reuse/catalog refinement beyond boundary-required genericity belongs to Phase 014.
 
-## Current project-context guardrails
+## Current project-purpose guardrails
 
-The following are current project constraints/context, not protected Concept choices:
+Current purpose obligations are:
 
-- live student data competition setting;
-- volunteer Judges and competition Organizers;
-- Student Teams as materially affected non-user participants;
-- independent judgment;
-- bias-sensitive Team identity disclosure;
-- accessibility, interruption, degraded connectivity and paper continuity;
-- traceable/recoverable authoritative outcomes and history;
-- technical authority separated from competition judgment authority.
+- P-01 independent human judgment;
+- P-02 fair and bias-aware Team treatment;
+- P-03 low-friction and accessible participation;
+- P-04 live operational coordination and completion;
+- P-05 resilient evaluation continuity;
+- P-06 trustworthy and explainable outcome formation;
+- P-07 correctable authority and historical truth;
+- P-08 contextual confidentiality and authority separation;
+- P-09 faithful external representation and controlled release.
+
+The purpose model explicitly preserves tensions such as friction vs attribution, anonymity vs explainability, resilience vs singular authority, speed vs correctness, correction vs historical truth, and transparency vs controlled disclosure.
 
 `GitHub → GitHub Actions → AWS ecosystem` is a downstream delivery constraint only. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain frozen historical executable facts and must not determine Concept Design.
 
@@ -116,4 +122,4 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 Proceed to:
 
-> **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**
+> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**

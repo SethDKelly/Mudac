@@ -10,9 +10,9 @@ sources:
 
 # Purpose
 
-Provide one concise current owner for MUDAC's project definition before purpose decomposition and Concept selection.
+Provide one concise current owner for MUDAC's project definition.
 
-This document answers **what project is being designed and under what conditions**. It does not define the final Jackson purpose model or protect the current Concept catalog.
+This document answers **what project is being designed and under what conditions**. The separate [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) owner answers why the product matters and what valuable outcomes must be enabled. Neither document protects the current Concept catalog.
 
 # Current mandate
 
@@ -51,11 +51,13 @@ Current evidence supports these context facts:
 - **Student Team** — competitor whose outcome depends on fair, sufficiently covered, bias-aware evaluation. Student-facing application use is outside the current baseline.
 - **External recipients of released material** — consumers of print/external representations; not currently direct application actors and not evidence for a rich public-results portal.
 
-The repository does not currently establish sponsor, faculty-advisor, institutional-representative or event-leadership roles as separate application actors. Later purpose analysis may identify distinct affected-party needs without inventing software roles prematurely.
+The repository does not currently establish sponsor, faculty-advisor, institutional-representative or event-leadership roles as separate application actors. 010-C did not find evidence requiring another principal baseline software actor; later discovery may still expose a distinct affected-party need without inventing roles prematurely.
 
-# Outcome directions for Phase 010-C
+# Outcome directions
 
-These are current desired directions, not the final purpose decomposition:
+The outcome directions identified by 010-B have now been revalidated and decomposed by 010-C into the current purpose model. See [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md).
+
+The current high-level directions remain:
 
 - Judges can record independent judgment without excessive administrative friction;
 - Organizers can coordinate the event and understand incomplete/exceptional conditions;
@@ -67,8 +69,6 @@ These are current desired directions, not the final purpose decomposition:
 - corrections preserve authorship, provenance and historical truth;
 - provisional/live information is distinguishable from official information;
 - external representations do not silently promote unauthorized or provisional information into official truth.
-
-Phase 010-C owns the need-focused, evaluable purpose model and tensions among these outcomes.
 
 # Current capability boundary
 
@@ -168,13 +168,15 @@ Current but challengeable assumptions:
 
 Current project context intentionally leaves these open:
 
-- final purpose/need/success decomposition and stakeholder tensions;
-- whether additional affected parties have distinct software-relevant needs;
-- which capability areas belong in every coherent MUDAC variant;
+- which candidate Concepts best factor the current purpose obligations;
+- whether every current capability area belongs in every coherent MUDAC variant;
 - which incumbent Concepts survive rediscovery and modularity review;
+- whether current non-Concept mechanism classifications survive rediscovery;
 - detailed evaluation, coverage, ranking, tie, Award and disclosure policies;
 - exact retention/regulatory requirements not currently evidenced;
-- final mappings, architecture and implementation realization.
+- final dependence/subset decisions, mappings, architecture and implementation realization.
+
+The final purpose/need/success decomposition is no longer open at this stage: 010-C established the current baseline in [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md), subject to normal later reopening if new evidence exposes an upstream defect.
 
 # Evidence posture
 
@@ -184,6 +186,8 @@ Architecture and implementation produced before methodology completion are quara
 
 # Current handoff
 
-Phase 010-B has reconciled project/intake truth. The next methodology task is:
+Phase 010-B reconciled project/intake truth and Phase 010-C established the current purpose model. The next methodology task is:
 
-> **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**
+> **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**
+
+010-D must derive candidates from this context and [Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) before comparing them with incumbent Concept or mechanism identities.

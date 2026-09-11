@@ -4,14 +4,14 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 
 ## Status
 
-**In Progress — 010-A and 010-B complete; 010-C next.**
+**In Progress — 010-A, 010-B and 010-C complete; 010-D next.**
 
 ## Records
 
 - [010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) — **Complete — PASS**.
 - [010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) — **Complete — PASS**.
-- **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** — Next.
-- **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** — Planned.
+- [010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation](010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md) — **Complete — PASS**.
+- **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** — Next.
 - **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** — Planned.
 - **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** — Planned.
 - **010-G — Completeness, Independence & Genericity-for-Boundary Audit** — Planned.
@@ -27,9 +27,9 @@ Phase 010 is the active foundational Concept Design completion phase after the P
   ↓
 010-B project/context reconciliation             COMPLETE
   ↓
-010-C purpose/need/success revalidation          NEXT
+010-C purpose/need/success revalidation          COMPLETE
   ↓
-010-D candidate rediscovery/divergence
+010-D candidate rediscovery/divergence           NEXT
   ↓
 010-E behavioral specification audit
   ↓
@@ -44,6 +44,8 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 011 composition/synchronization revalidation
 ```
 
-Current project/intake truth is now owned by [Canonical Project Context](../canonical/project/). The current sixteen-Concept catalog remains an incumbent hypothesis, not a protected answer. Architecture and implementation remain quarantined from constraining Phase 010.
+Current project/intake and purpose truth is owned by [Canonical Project Context & Purpose](../canonical/project/). The current sixteen-Concept catalog remains an incumbent hypothesis, not a protected answer.
+
+010-D must regenerate candidate alternatives from the reconciled project mandate and P-01–P-09 purpose model before comparing those alternatives with the incumbent catalog. Architecture and implementation remain quarantined from constraining Phase 010.
 
 See [README.md](README.md) for phase intent, subgroup responsibilities, evidence posture, exclusions and exit criteria.

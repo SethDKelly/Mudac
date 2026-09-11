@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-The current project/intake baseline is [MUDAC Project Mandate & Current Context](canonical/project/mandate-context.md). During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design.
+The current representation-independent baseline is [Project Context & Purpose](canonical/project/): 010-B owns project/intake truth and 010-C owns the current purpose/need/success/tension model. During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design.
 
 ## Status
 
@@ -19,7 +19,7 @@ The current project/intake baseline is [MUDAC Project Mandate & Current Context]
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure reopened/superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B complete; 010-C next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C complete; 010-D next**
 
 ## Current posture
 
@@ -35,7 +35,8 @@ implementation planning: SUSPENDED
 010: IN PROGRESS
 010-A: COMPLETE
 010-B: COMPLETE
-010-C: NEXT
+010-C: COMPLETE
+010-D: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
@@ -49,9 +50,9 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
   ↓
 010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability       NEXT
+010-C purpose / need / success / tension / traceability       COMPLETE
   ↓
-010-D candidate rediscovery / divergent alternatives
+010-D candidate rediscovery / divergent alternatives          NEXT
   ↓
 010-E behavioral specification current-truth audit
   ↓
@@ -64,7 +65,7 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-010-B established a representation-independent current project baseline and deliberately did not accept or reject any Concept. The current sixteen-Concept catalog remains an incumbent hypothesis.
+010-C established nine purpose obligations independently of the current Concept names. It found no wholly unrepresented product purpose but deliberately left strong rediscovery pressure around distributed coordination/continuity/outcome responsibilities and several incumbent Concept boundaries. The current sixteen-Concept catalog remains an incumbent hypothesis.
 
 ## Completion runway
 
@@ -96,4 +97,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are 
 
 ## Current next work
 
-Proceed to **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** using [Canonical Project Context](canonical/project/mandate-context.md) as the starting baseline. Do not resume 008-F or any architecture/implementation planning.
+Proceed to **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** using [Project Context & Purpose](canonical/project/) as the starting baseline. Generate candidates from P-01–P-09 and actor/affected-party needs before comparing against incumbent Concepts or mechanisms. Do not resume 008-F or any architecture/implementation planning.

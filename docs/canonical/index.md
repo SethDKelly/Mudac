@@ -4,10 +4,10 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context](project/) — current project/intake mandate, actors and affected parties, outcome directions, scope/non-goals, operational constraints, assumptions and open questions.
-* [Concepts](concepts/) — current MUDAC Concepts, subject to Phase 010 revalidation/refinement.
+* [Project Context & Purpose](project/) — current project/intake mandate, actors and affected parties, scope/non-goals, operational constraints, purpose obligations, success situations, tensions and candidate-rediscovery pressure.
+* [Concepts](concepts/) — current MUDAC Concepts, subject to Phase 010 rediscovery/specification/modularity review.
 * [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to Phase 011 composition revalidation.
-* [Mechanisms](mechanisms/) — current derived/supporting subjects intentionally not promoted to Concepts.
+* [Mechanisms](mechanisms/) — current derived/supporting subjects intentionally not promoted to Concepts; classifications remain challengeable during 010-D.
 * [Policies](policies/) — current governing/configurable Competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — current conceptual mapping/experience evidence, subject to post-scope Phase 013 revalidation.
@@ -23,7 +23,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A and 010-B have passed.
+Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A, 010-B and 010-C have passed.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -39,23 +39,26 @@ implementation authorization: NOT YET
 010: IN PROGRESS
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
-010-C: NEXT
+010-C: COMPLETE — PASS
+010-D: NEXT
 ```
 
-The active methodology record is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../010-project-purpose-candidate-specification-modularity/). The current intake baseline is [MUDAC Project Mandate & Current Context](project/mandate-context.md).
+The active methodology record is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/).
 
 # Retrieval rule during reopened design
 
 For Phases 010–017:
 
 1. load the active phase/start-gate record;
-2. load [Project Context](project/) whenever project/purpose/scope assumptions matter;
+2. load [Project Context & Purpose](project/) whenever project/purpose/scope assumptions matter;
 3. load only task-relevant current conceptual owners;
 4. load historical design evidence only where it materially supports the phase question;
 5. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
 6. do **not** load architecture/implementation merely because it exists—use it only for explicit contamination analysis, historical comparison or later handoff preparation.
 
-During Phase 010, treat the current sixteen-Concept catalog as the incumbent hypothesis rather than a protected answer.
+During Phase 010, treat the current sixteen-Concept catalog and current Concept/non-Concept classifications as incumbent hypotheses rather than protected answers.
+
+For 010-D, derive candidate alternatives from [MUDAC Purpose, Needs, Success & Tensions](project/purpose-needs-success-tensions.md) before comparison with [Concepts](concepts/) or [Mechanisms](mechanisms/).
 
 # Active Phase 010 order
 
@@ -64,9 +67,9 @@ During Phase 010, treat the current sixteen-Concept catalog as the incumbent hyp
   ↓
 010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability       NEXT
+010-C purpose / need / success / tension / traceability       COMPLETE
   ↓
-010-D candidate rediscovery / divergent alternatives
+010-D candidate rediscovery / divergent alternatives          NEXT
   ↓
 010-E behavioral specification current-truth audit
   ↓
@@ -99,4 +102,4 @@ During Phase 010, treat the current sixteen-Concept catalog as the incumbent hyp
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**.
+The immediate next work is **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**.

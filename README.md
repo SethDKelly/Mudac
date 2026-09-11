@@ -2,13 +2,13 @@
 
 MUDAC is a design-governed application effort for fair, traceable, resilient judging at live student data competitions.
 
-The current project mandate is intentionally representation-independent: volunteer Judges and competition Organizers need to conduct, preserve, reconcile and explain independent evaluation under real event-day constraints while protecting bias-sensitive Team identity and trustworthy historical evidence. The current sixteen-Concept catalog remains an incumbent hypothesis rather than a protected answer.
+The current project mandate and purpose model are intentionally representation-independent: volunteer Judges and competition Organizers need to conduct, preserve, reconcile and explain independent evaluation under real event-day constraints while protecting bias-sensitive Team identity, trustworthy authority and historical evidence. The current sixteen-Concept catalog remains an incumbent hypothesis rather than a protected answer.
 
 ## Start here
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate, actors/affected parties, outcomes, scope, constraints, assumptions and open questions.
+* [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate plus purpose, actor/affected-party needs, success situations, tensions and rediscovery pressure.
 * [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
 * [`docs/009-jackson-methodology-realignment/`](docs/009-jackson-methodology-realignment/) — completed formal methodology realignment/gap map and design re-entry.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
@@ -30,7 +30,8 @@ implementation authorization: NOT YET
 010: IN PROGRESS
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
-010-C: NEXT
+010-C: COMPLETE — PASS
+010-D: NEXT
 ```
 
 ## Phase 010 decomposition
@@ -43,10 +44,10 @@ implementation authorization: NOT YET
         Constraints & Evidence Reconciliation                  COMPLETE
   ↓
 010-C — Purpose, Need, Success, Tension & Purpose-to-Concept
-        Traceability Revalidation                              NEXT
+        Traceability Revalidation                              COMPLETE
   ↓
 010-D — Candidate Concept Rediscovery, Divergent Alternatives &
-        Rejected/Deferred Candidate Reassessment
+        Rejected/Deferred Candidate Reassessment               NEXT
   ↓
 010-E — Retained Concept Purpose, Operational Principle, State,
         Action & Behavioral-Specification Current-Truth Audit
@@ -63,7 +64,9 @@ implementation authorization: NOT YET
         Phase 011 Handoff
 ```
 
-010-B established the current project/intake baseline without using the Concept catalog as the project definition. In particular, the live-event setting, volunteer judging, Organizer operation, Student Team impact, identity-bias sensitivity, accessibility, degraded connectivity, paper continuity, traceability and historical correction remain current context. Exact lifecycle models, scoring arithmetic, authentication, persistence, UI technology and AWS services do not.
+010-B established the project/intake baseline without using the Concept catalog as the project definition. 010-C then established nine need-focused purpose obligations independently of incumbent Concept names and tested only provisional traceability afterward.
+
+The main 010-D pressure is now explicit: live coordination, continuity and outcome formation are distributed across current Concepts and non-Concept mechanisms, while several current Concept splits remain instrumentally rather than independently justified. Candidate rediscovery must therefore be genuinely divergent.
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
@@ -103,4 +106,4 @@ A successful future Phase 017 closure may establish readiness for a **separate a
 
 ## Current direction
 
-Proceed to **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**. Begin from [`docs/canonical/project/mandate-context.md`](docs/canonical/project/mandate-context.md), not from incumbent Concept names.
+Proceed to **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**. Begin from [`docs/canonical/project/`](docs/canonical/project/) and derive candidates from the current purpose model before comparing them with incumbent Concept names.
