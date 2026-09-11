@@ -10,7 +10,7 @@ The current project mandate and purpose model are intentionally representation-i
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate and purpose baseline.
 * [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
-* [`docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md`](docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) — current behavioral specification evidence for incumbents, challengers and boundary countermodels.
+* [`docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md`](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) — current post-specificity candidate set and boundary decisions for 010-G.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -32,7 +32,8 @@ implementation authorization: NOT YET
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
-010-F: NEXT
+010-F: COMPLETE — PASS
+010-G: NEXT
 ```
 
 ## Phase 010 decomposition
@@ -43,22 +44,24 @@ implementation authorization: NOT YET
 010-C — purpose / need / success / tensions                   COMPLETE
 010-D — candidate rediscovery / divergent alternatives        COMPLETE
 010-E — behavioral specification current-truth audit          COMPLETE
-010-F — specificity / purpose singularity                     NEXT
-010-G — completeness / independence / boundary genericity
+010-F — specificity / purpose singularity                     COMPLETE
+010-G — completeness / independence / boundary genericity     NEXT
 010-H — convergence / re-specification / canonical repair
 010-I — consolidation / exit / Phase 011 handoff
 ```
 
-010-E confirmed that the current sixteen incumbent Concepts are behaviorally specified enough for modularity analysis without accepting their boundaries as final. It also established provisional full behavioral specifications for four challengers:
+010-F does **not** replace the current canonical sixteen-Concept index yet. It establishes the provisional candidate set that 010-G must test before 010-H convergence.
 
-1. **Evaluation Assignment / Obligation**
-2. **Evaluation Sufficiency**
-3. **Reconciliation / Resolution**
-4. **Official Outcome / Outcome Declaration**
+The major specificity decisions are:
 
-Behavioral countermodels are also explicit for **Actor Context**, **Evaluation Work Item**, **generic Evaluation Occurrence**, **Authority History**, and **External Representation & Release**. These remain phase evidence until 010-F/G determine the proper Concept factoring.
+- current **Judging Encounter** is split/reframed into working **Evaluation Occurrence** plus separate **Evaluation Obligation** responsibility;
+- **Outcome Declaration** survives as a separate candidate while Competition remains focused on occurrence lifecycle/finalization;
+- **Evaluation Sufficiency** remains derived rather than becoming a Concept;
+- **Reconciliation** remains an Organizer process/work mode rather than a Concept;
+- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** are rejected as overloaded merges;
+- the post-specificity set contains **18 provisional candidates** for 010-G.
 
-Aggregate, Rank and Readiness remain strong derived-mechanism baselines. Recovery/Continuity remains a first-class cross-cutting purpose obligation rather than an independent Concept candidate unless later modularity analysis proves otherwise.
+Aggregate, Rank and Readiness remain derived-mechanism baselines. Recovery/Continuity remains a first-class cross-cutting purpose obligation rather than an independent Concept candidate unless later completeness/independence evidence proves otherwise.
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
@@ -90,4 +93,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**. Begin from the 010-E behavioral evidence and compare incumbent, challenger and merge/reframe boundaries without treating any current name as protected.
+Proceed to **010-G — Completeness, Independence & Genericity-for-Boundary Audit**. Begin from 010-F's eighteen-candidate post-specificity set rather than falling back to the incumbent sixteen-Concept catalog.

@@ -8,8 +8,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 009`](docs/009-jackson-methodology-realignment/) as methodology realignment provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
-5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), [010-D](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), [010-E](docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-F or later Phase 010 work.
-6. Load task-relevant incumbent Concept/mechanism/policy/invariant owners only after the project-purpose baseline and 010-D/E candidate evidence are understood.
+5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), [010-D](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), [010-E](docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md), [010-F](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-G or later Phase 010 work.
+6. Load task-relevant incumbent Concept/mechanism/policy/invariant owners only after the project-purpose baseline and 010-D/E/F candidate evidence are understood.
 7. Use older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -31,7 +31,8 @@ implementation authorization: NOT YET
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
-010-F: NEXT
+010-F: COMPLETE — PASS
+010-G: NEXT
 ```
 
 ## Active Phase 010 subgroup order
@@ -42,8 +43,8 @@ implementation authorization: NOT YET
 010-C purpose / need / success / tension / traceability       COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
-010-F specificity / purpose singularity / boundary options    NEXT
-010-G completeness / independence / boundary genericity
+010-F specificity / purpose singularity / boundary options    COMPLETE
+010-G completeness / independence / boundary genericity       NEXT
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
 ```
@@ -51,26 +52,46 @@ implementation authorization: NOT YET
 ## Phase 010 discipline
 
 - Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current baseline before Concept analysis.
-- Treat the current sixteen canonical Concept pages as **incumbent current knowledge**, not a protected final catalog.
-- 010-D's divergent candidate space and 010-E's challenger specifications are phase evidence, not canonical promotion.
-- 010-E established enough behavioral precision for all sixteen incumbents plus four challengers: **Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, Official Outcome/Outcome Declaration**.
-- 010-F must test these behaviorally explicit comparison models: Actor Context vs `Identity + Participation + Access`; Evaluation Assignment/Work Item/Occurrence alternatives vs `Panel + Judging Encounter`; Authority History vs `Versioning + Provenance`; unified External Representation & Release vs `Export + Publication`; generic Evaluation Occurrence vs current Judging Encounter.
-- Do not infer a Concept boundary from a current direct type reference. 010-E identified current Panel→Participation, Encounter→Panel/Team, Scorecard→Encounter/Rubric and Publication→Export references as **010-G genericity pressure**, not proof of intrinsic dependence.
-- Aggregate, Rank and Readiness remain incumbent derived mechanisms after 010-E unless later modularity evidence warrants change.
-- Recovery/Continuity remains a first-class P-05 completeness obligation, not currently an independent Concept candidate; reopen only if 010-F/G expose a coherent missing behavior.
-- 010-F evaluates specificity/purpose singularity **before** 010-G evaluates completeness/independence/genericity so later tests do not operate on obsolete boundaries.
+- Treat the current sixteen canonical Concept pages as **incumbent current knowledge**, not the post-010-F candidate answer.
+- 010-D divergence, 010-E challenger specifications and 010-F specificity decisions are phase evidence until 010-H convergence.
+- 010-F establishes an **eighteen-candidate post-specificity set** for 010-G:
+  1. Competition
+  2. Division
+  3. Team
+  4. Panel
+  5. Evaluation Occurrence
+  6. Evaluation Obligation
+  7. Rubric
+  8. Scorecard
+  9. Award
+  10. Identity
+  11. Participation
+  12. Alias
+  13. Access
+  14. Versioning
+  15. Provenance
+  16. Outcome Declaration
+  17. Export
+  18. Publication
+- Current `Judging Encounter` is a canonical incumbent pending 010-H, but 010-G must test the **Evaluation Occurrence** boundary defined by 010-F rather than silently treating obligation state as intrinsic.
+- **Evaluation Sufficiency** and **Reconciliation** do not enter 010-G as Concepts. Sufficiency remains derived; Reconciliation remains process/work mode. Their current mechanism documents remain current incumbent owners until 010-H reconciliation.
+- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** were rejected as overloaded merges in 010-F and must not be reintroduced without new evidence.
+- Do not infer a Concept boundary from current direct type references. 010-G must test whether abstract parameters remove false dependence.
+- Aggregate, Rank and Readiness remain incumbent derived mechanisms unless 010-G exposes contrary semantic evidence.
+- Recovery/Continuity remains a first-class P-05 completeness obligation, not currently an independent Concept candidate; reopen only if 010-G exposes behavior with no coherent owner.
 - Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
 - Extrinsic Concept dependence belongs to Phase 012.
 - Full familiarity/reuse/catalog refinement belongs to Phase 014.
 
-## 010-F specificity rules
+## 010-G completeness / independence / genericity rules
 
-- Judge behavior, not names: compare Purpose + Operational Principle + State + Actions/guards/effects from 010-E.
-- A retained Concept should serve one coherent valuable purpose; composition may make a Concept contribute to several product purposes without making its own purpose plural.
-- Deliberately test retain, split, combine, reframe, reduce and expand alternatives for every high-pressure boundary.
-- Do not use current document taxonomy (`concepts/`, `mechanisms/`, `policies/`) as evidence that the classification is correct.
-- Do not preserve a Concept because implementation, UI, schema or prior architecture already has a corresponding component.
-- When an alternative is rejected, record the behavioral reason so later phases do not rediscover the same ambiguity without context.
+- Begin from the eighteen post-specificity candidates in 010-F, not from the canonical index count.
+- **Completeness:** if every peer Concept vanished, does the candidate still contain the semantics required to fulfill its own purpose?
+- **Independence:** can its purpose, OP, state and actions be specified without relying on another application Concept's internal meaning?
+- **Genericity-for-boundary:** if an external object only supplies identity/content, use an abstract parameter rather than importing the peer Concept type.
+- Do not absorb a different purpose merely to make a Concept appear complete; that behavior belongs to later synchronization if it serves another Concept's purpose.
+- Do not reject a Concept merely because the final MUDAC application will normally include another Concept beside it; extrinsic inclusion dependence belongs to Phase 012.
+- When 010-G changes a boundary, preserve the required 010-H re-specification debt explicitly.
 
 ## Current project-purpose guardrails
 
@@ -124,4 +145,4 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 Proceed to:
 
-> **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**
+> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**

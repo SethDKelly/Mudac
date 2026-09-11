@@ -8,6 +8,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
 ---
 
 # Purpose
@@ -131,18 +132,21 @@ Current but challengeable assumptions:
 - controlled external release remains in the present capability boundary, while a rich public portal does not;
 - formal scheduling may remain external/lightweight unless later purpose/dependence work shows it necessary.
 
-# Open questions after 010-E
+# Open questions after 010-F
 
-Behavioral specification is now adequate for modularity analysis. Current project context intentionally leaves open:
+Specificity/purpose singularity is now complete. Current project context intentionally leaves open:
 
-- which incumbent and challenger candidates satisfy one coherent purpose and survive 010-F specificity testing;
-- whether Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution or Official Outcome/Outcome Declaration qualify as Concepts;
-- whether Actor Context, Evaluation Work Item/Occurrence, Authority History or External Representation & Release alternatives are better factorizations than current splits;
+- whether every member of 010-F's eighteen-candidate set is complete and independent enough to survive 010-G;
+- whether Evaluation Occurrence, Evaluation Obligation and Outcome Declaration can be specified with abstract parameters rather than intrinsic dependency on current MUDAC peer Concepts;
+- whether any retained incumbent Concept becomes fragmentary once peer assumptions are removed;
 - whether direct current cross-Concept typing should be generalized during 010-G;
+- whether 010-G exposes missing behavior requiring expansion for completeness;
 - which capability areas belong in every coherent MUDAC product variant;
 - detailed evaluation, coverage, ranking, tie, Award and disclosure policies;
 - exact retention/regulatory requirements not currently evidenced;
 - final dependence/subset decisions, mappings, architecture and implementation realization.
+
+010-F has already rejected Evaluation Sufficiency and Reconciliation as Concept candidates for this runway and rejected Actor Context, Evaluation Work Item, Authority History and External Representation & Release as overloaded merges unless new evidence reopens them.
 
 # Evidence posture
 
@@ -152,8 +156,8 @@ Architecture and implementation produced before methodology completion are quara
 
 # Current handoff
 
-Phase 010-B reconciled project/intake truth, 010-C established the purpose model, 010-D rediscovered candidates, and 010-E established behavioral specifications adequate for modularity analysis. The next methodology task is:
+Phase 010-B reconciled project/intake truth, 010-C established the purpose model, 010-D rediscovered candidates, 010-E established behavioral specifications, and 010-F established the post-specificity boundary set. The next methodology task is:
 
-> **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**
+> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**
 
-010-F must judge candidate boundaries from the 010-E behavioral evidence rather than current catalog names or current mechanism classifications.
+010-G must judge the eighteen post-specificity candidates from 010-F rather than the current canonical index count.

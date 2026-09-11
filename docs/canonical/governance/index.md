@@ -23,7 +23,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is active; project/context, purpose, candidate rediscovery and behavioral specification have now passed their current gates.
+Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is active; project/context, purpose, candidate rediscovery, behavioral specification and specificity/purpose singularity have passed their current gates.
 
 Current state:
 
@@ -36,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
-010-F: NEXT
+010-F: COMPLETE — PASS
+010-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,7 +51,9 @@ The exact current boundary is owned by [Design / Implementation Boundary](design
 
 Phase 010 closes project/context, purpose, candidate discovery, behavioral specification and modularity obligations before composition can be trusted.
 
-The current sixteen-Concept catalog is the incumbent design hypothesis, not protected authority. [010-E](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) establishes behavioral precision sufficient to compare the incumbents, four challengers and five boundary countermodels. 010-F must now test specificity/purpose singularity before 010-G evaluates completeness/independence/genericity.
+[010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) is the current modularity handoff. It replaces the old assumption that 010-G should test the canonical sixteen exactly as indexed and establishes an eighteen-candidate **phase-level** set instead.
+
+Current canonical Concept/mechanism ownership is intentionally not rewritten yet. 010-G must test completeness, independence and genericity against the post-specificity boundaries; 010-H then owns canonical convergence/re-specification.
 
 Any changed Concept must be re-specified and canonically reconciled before Phase 010 exits.
 

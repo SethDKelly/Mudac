@@ -1,13 +1,14 @@
 ---
 type: Canonical Project Purpose Model
 title: MUDAC Purpose, Needs, Success & Tensions
-description: "Current representation-independent purpose baseline for MUDAC: product purpose, actor and affected-party needs, nine purpose obligations, representative success situations, material tensions and current modularity pressure."
+description: "Current representation-independent purpose baseline for MUDAC: product purpose, actor and affected-party needs, nine purpose obligations, representative success situations, material tensions and current post-specificity candidate pressure."
 status: stable
 tags: [canonical, project, purpose, needs, success, tensions, traceability]
 sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
   - resource: mandate-context.md
 ---
 
@@ -15,7 +16,7 @@ sources:
 
 Provide the current need-focused purpose baseline for MUDAC.
 
-This document states **why the product matters and what outcomes it must enable**. It does not define the final Concept catalog. Detailed divergent candidates, provisional challenger specifications and boundary countermodels remain in Phase 010 evidence rather than becoming canonical Concept authority.
+This document states **why the product matters and what outcomes it must enable**. It does not define the final Concept catalog. Detailed divergent candidates, provisional challenger specifications and modularity/boundary rationale remain in Phase 010 evidence rather than becoming canonical Concept authority before convergence.
 
 # Product-level purpose
 
@@ -112,39 +113,56 @@ Current success remains scenario-verifiable rather than based on invented numeri
 
 These tensions are design constraints, not instructions to maximize one side unconditionally.
 
-# Current candidate pressure after 010-E
+# Current candidate pressure after 010-F
 
-010-D performed purpose-first rediscovery. 010-E then specified the resulting candidate space deeply enough for modularity analysis.
+010-D performed purpose-first rediscovery, 010-E specified the candidate space deeply enough for modularity analysis, and 010-F then applied specificity/purpose singularity before completeness/independence.
 
-The current sixteen Concepts remain **incumbent candidates**, not a final catalog. Four challenger candidates now have explicit provisional Purpose, Operational Principle, abstract State, Actions/Queries, guards/effects and invariants:
+The **provisional post-specificity candidate set for 010-G** is:
 
-1. **Evaluation Assignment / Obligation**;
-2. **Evaluation Sufficiency**;
-3. **Reconciliation / Resolution**;
-4. **Official Outcome / Outcome Declaration**.
+1. Competition;
+2. Division;
+3. Team;
+4. Panel;
+5. Evaluation Occurrence;
+6. Evaluation Obligation;
+7. Rubric;
+8. Scorecard;
+9. Award;
+10. Identity;
+11. Participation;
+12. Alias;
+13. Access;
+14. Versioning;
+15. Provenance;
+16. Outcome Declaration;
+17. Export;
+18. Publication.
 
-Five comparison models are also behaviorally explicit for specificity testing:
+This list is phase evidence, not yet the canonical Concept catalog.
 
-- `Identity + Participation + Access` versus **Actor Context**;
-- `Panel + Judging Encounter` versus **Evaluation Work Item** / **Evaluation Assignment** alternatives;
-- current `Judging Encounter` versus **generic Evaluation Occurrence**;
-- `Versioning + Provenance` versus **Authority History**;
-- `Export + Publication` versus **External Representation & Release**.
+Key 010-F decisions:
 
-Aggregate, Rank and Readiness remain strong derived-mechanism baselines after behavioral audit. Recovery/Continuity remains a first-class purpose/completeness obligation but not currently an independent Concept candidate.
+- current `Judging Encounter` is overloaded by occurrence-history and evaluator-responsibility purposes; the working post-specificity split is **Evaluation Occurrence + Evaluation Obligation**;
+- **Outcome Declaration** survives as the specific authority-bearing behavior previously hidden inside Competition Finalization + Official Outcome Revision; Competition remains focused on governed occurrence lifecycle/finalization;
+- **Evaluation Sufficiency** does not survive as a Concept: factual sufficiency remains derived while exception acceptance is a separate governed consequence decision;
+- **Reconciliation** remains a work mode/process over source conditions rather than an independently valuable Concept;
+- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** are rejected as overloaded merges;
+- Identity/Participation/Access, Versioning/Provenance, Export/Publication and the other retained incumbent boundaries remain separate for 010-G.
 
-010-E also identifies current direct cross-Concept typing as a future 010-G genericity question rather than proof that current boundaries are intrinsic.
+Aggregate, Rank and Readiness remain strong derived-mechanism baselines. Recovery/Continuity remains a first-class P-05 purpose/completeness obligation but not currently an independent Concept candidate.
+
+010-G now owns whether these eighteen candidates are complete, independent and appropriately parameterized/generic for their boundaries. In particular, current direct cross-Concept typing is not evidence that the post-specificity boundaries are intrinsically dependent.
 
 # Interpretation rule
 
-Purpose traceability, rediscovery retention or behavioral-specification adequacy does **not** establish that a candidate is necessary, specific, complete, independent, familiar, reusable, correctly named, correctly split/merged, or required in every product variant.
+Purpose traceability, rediscovery retention, behavioral-specification adequacy or specificity survival does **not** establish that a candidate is complete, independent, familiar, reusable, correctly parameterized, required in every product variant, or ready for canonical promotion.
 
-010-F now owns specificity/purpose singularity; 010-G later owns completeness/independence/boundary genericity.
+010-G owns completeness/independence/boundary genericity. 010-H owns canonical convergence and re-specification.
 
 # Current handoff
 
-010-E has completed the behavioral-specification current-truth audit. The next methodology task is:
+010-F has completed the specificity/purpose-singularity audit. The next methodology task is:
 
-> **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**
+> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**
 
-010-F must judge candidate boundaries from the behavior specified in 010-E, deliberately testing retain/split/combine/reframe/reduce/expand alternatives rather than privileging the current catalog.
+010-G must begin from the eighteen-candidate post-specificity set rather than the current canonical sixteen-Concept index.

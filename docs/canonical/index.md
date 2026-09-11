@@ -4,10 +4,10 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/) — current project/intake mandate, scope/non-goals, operational constraints, purpose obligations, success situations and tensions.
-* [Concepts](concepts/) — current sixteen-Concept incumbent catalog; behaviorally adequate for 010-F but not a protected final answer.
+* [Project Context & Purpose](project/) — current project/intake mandate, scope/non-goals, operational constraints, purpose obligations, success situations, tensions and current post-specificity candidate pressure.
+* [Concepts](concepts/) — current sixteen-Concept incumbent catalog pending Phase 010 convergence; 010-F's eighteen-candidate set is phase evidence for 010-G rather than a canonical replacement yet.
 * [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to Phase 011 composition revalidation.
-* [Mechanisms](mechanisms/) — current derived/supporting subjects; classifications remain challengeable during Phase 010.
+* [Mechanisms](mechanisms/) — current derived/supporting subjects; Evaluation Sufficiency/Coverage and Reconciliation remain non-Concept after 010-F, while current Official Outcome Revision ownership remains unreconciled pending 010-G/010-H.
 * [Policies](policies/) — current governing/configurable Competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — current conceptual mapping/experience evidence, subject to Phase 013 revalidation.
@@ -23,7 +23,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A through 010-E have passed.
+Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A through 010-F have passed.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -42,10 +42,11 @@ implementation authorization: NOT YET
 010-C: COMPLETE — PASS
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
-010-F: NEXT
+010-F: COMPLETE — PASS
+010-G: NEXT
 ```
 
-The active methodology record is [Phase 010](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/). Candidate rediscovery is [010-D](../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), and the behaviorally explicit candidate set is [010-E](../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md).
+The active methodology record is [Phase 010](../010-project-purpose-candidate-specification-modularity/). The current project/purpose baseline is [Project Context & Purpose](project/). The active modularity input is [010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit](../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md).
 
 # Retrieval rule during reopened design
 
@@ -53,15 +54,35 @@ For Phases 010–017:
 
 1. load the active phase/start-gate record;
 2. load [Project Context & Purpose](project/) whenever project/purpose/scope assumptions matter;
-3. for 010-F/G, load 010-D and 010-E before treating current Concept/mechanism classifications as evidence;
-4. load only task-relevant current conceptual owners;
-5. load historical design evidence only where it materially supports the phase question;
-6. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
-7. do not preload architecture/implementation except for explicit contamination/history work.
+3. for 010-G, load 010-F before treating current Concept/mechanism classifications as the candidate set;
+4. load 010-D/E only when rediscovery/specification rationale materially helps;
+5. load only task-relevant current conceptual owners;
+6. load historical design evidence only where it materially supports the phase question;
+7. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
+8. do not preload architecture/implementation except for explicit contamination/history work.
 
-During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept classifications are incumbent hypotheses rather than protected answers.
+During Phase 010, canonical current owners remain authoritative **until deliberately reconciled**, but their existence does not override later phase evidence about the boundary that 010-H may adopt.
 
-010-E established behavioral specifications sufficient for specificity analysis across the sixteen incumbents, four challengers—Evaluation Assignment/Obligation, Evaluation Sufficiency, Reconciliation/Resolution, Official Outcome/Outcome Declaration—and five merge/reframe countermodels.
+010-F's post-specificity set for 010-G is:
+
+- Competition;
+- Division;
+- Team;
+- Panel;
+- Evaluation Occurrence;
+- Evaluation Obligation;
+- Rubric;
+- Scorecard;
+- Award;
+- Identity;
+- Participation;
+- Alias;
+- Access;
+- Versioning;
+- Provenance;
+- Outcome Declaration;
+- Export;
+- Publication.
 
 # Active Phase 010 order
 
@@ -71,8 +92,8 @@ During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept cl
 010-C purpose / need / success / tensions                     COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
-010-F specificity / purpose singularity / boundary options    NEXT
-010-G completeness / independence / boundary genericity
+010-F specificity / purpose singularity / boundary options    COMPLETE
+010-G completeness / independence / boundary genericity       NEXT
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
 ```
@@ -97,4 +118,4 @@ During Phase 010, the current sixteen-Concept catalog and Concept/non-Concept cl
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**.
+The immediate next work is **010-G — Completeness, Independence & Genericity-for-Boundary Audit**.

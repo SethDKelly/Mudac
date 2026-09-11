@@ -21,23 +21,37 @@ Each current Concept owner exposes a current **Purpose, State, Actions, and Oper
 * [Export](export.md) - Stable external representation of identified source state for a purpose/audience.
 * [Publication](publication.md) - Deliberate distribution or public release of an identified Export representation.
 
-These sixteen documents remain current canonical knowledge because Phase 010 has **not yet converged a replacement catalog**. Their presence does not mean 010-D/E reconfirmed their final Concept boundaries.
+These sixteen documents remain current canonical knowledge because Phase 010 has **not yet canonically converged the post-specificity boundary changes**. Their presence does not mean they are the candidate set that 010-G should test.
 
-[010-D — Candidate Concept Rediscovery](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) generated materially different decompositions. [010-E — Behavioral Specification Current-Truth Audit](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) then established that all sixteen incumbents are behaviorally adequate for modularity analysis while specifying four challengers to the same reasoning threshold:
+[010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) establishes the provisional post-specificity set for 010-G:
 
-- **Evaluation Assignment / Obligation**;
-- **Evaluation Sufficiency**;
-- **Reconciliation / Resolution**;
-- **Official Outcome / Outcome Declaration**.
+1. Competition;
+2. Division;
+3. Team;
+4. Panel;
+5. **Evaluation Occurrence** — working reframe of the occurrence purpose currently inside Judging Encounter;
+6. **Evaluation Obligation** — separate responsibility purpose split from current Encounter obligation state;
+7. Rubric;
+8. Scorecard;
+9. Award;
+10. Identity;
+11. Participation;
+12. Alias;
+13. Access;
+14. Versioning;
+15. Provenance;
+16. **Outcome Declaration** — authority-bearing declaration/successor behavior currently represented through Competition Finalization + Official Outcome Revision;
+17. Export;
+18. Publication.
 
-010-E also made five comparison models behaviorally explicit for 010-F:
+010-F also rejects the following as Concept candidates for the current runway:
 
-- **Actor Context** versus `Identity + Participation + Access`;
-- **Evaluation Work Item** and **Evaluation Assignment/Obligation** alternatives versus `Panel + Judging Encounter`;
-- **generic Evaluation Occurrence** versus current `Judging Encounter`;
-- **Authority History** versus `Versioning + Provenance`;
-- **External Representation & Release** versus `Export + Publication`.
+- **Evaluation Sufficiency** — remains derived from qualifying evidence + requirement basis; exception acceptance is a separate governed decision rather than factual sufficiency;
+- **Reconciliation / Resolution** — remains Organizer process/work mode over source conditions;
+- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** — rejected as overloaded merge alternatives.
 
-No challenger receives a canonical Concept page before specificity, completeness and independence evidence justify convergence. Current non-Concept knowledge under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/) likewise remains subject to correction.
+No new canonical Concept page is created by 010-F. 010-G must first test completeness, independence and boundary genericity; 010-H then owns canonical promotion, supersession, renaming, re-specification and index repair.
 
-Current next methodology work: **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**.
+Current non-Concept knowledge under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/) likewise remains subject to correction.
+
+Current next methodology work: **010-G — Completeness, Independence & Genericity-for-Boundary Audit**.

@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed candidate rediscovery evidence is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), and the current behavioral-specification audit is [010-E](010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
+The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed candidate rediscovery/specification history is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) and [010-E](010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). The current post-specificity candidate set is owned by [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md). During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
 
 ## Status
 
@@ -19,7 +19,7 @@ The current representation-independent baseline is [Project Context & Purpose](c
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D/E complete; 010-F next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D/E/F complete; 010-G next**
 
 ## Current posture
 
@@ -38,7 +38,8 @@ implementation planning: SUSPENDED
 010-C: COMPLETE
 010-D: COMPLETE
 010-E: COMPLETE
-010-F: NEXT
+010-F: COMPLETE
+010-G: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The durable rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
@@ -51,20 +52,21 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
 010-C purpose / need / success / tensions                     COMPLETE
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
-010-F specificity / purpose singularity / boundary options    NEXT
-010-G completeness / independence / boundary genericity
+010-F specificity / purpose singularity / boundary options    COMPLETE
+010-G completeness / independence / boundary genericity       NEXT
 010-H convergence / re-specification / canonical reconciliation
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-010-E did not promote or demote canonical Concepts. It verified that all sixteen incumbents are behaviorally specified enough for specificity analysis and created provisional full behavioral specifications for four challengers:
+010-F produces the provisional post-specificity set that 010-G must test. The major differences from the unreconciled canonical taxonomy are:
 
-- Evaluation Assignment / Obligation;
-- Evaluation Sufficiency;
-- Reconciliation / Resolution;
-- Official Outcome / Outcome Declaration.
+- current Judging Encounter is split/reframed into working **Evaluation Occurrence + Evaluation Obligation**;
+- **Outcome Declaration** survives as a candidate distinct from Competition lifecycle and Publication;
+- **Evaluation Sufficiency** remains derived rather than becoming a Concept;
+- **Reconciliation** remains an Organizer process/work mode;
+- Actor Context, Evaluation Work Item, Authority History and External Representation & Release are rejected as overloaded merge alternatives.
 
-It also made five boundary countermodels concrete: Actor Context, Evaluation Work Item, generic Evaluation Occurrence, Authority History, and External Representation & Release. 010-F must now compare those behaviors against the incumbent splits rather than relying on catalog naming.
+The resulting 010-G input contains **18 provisional candidates**. Canonical Concept/mechanism pages intentionally remain unchanged until 010-G completes the rest of the modularity tests and 010-H performs convergence/re-specification.
 
 ## Completion runway
 
@@ -96,4 +98,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are 
 
 ## Current next work
 
-Proceed to **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit**. Begin from 010-E's behaviorally explicit incumbent/challenger/countermodel set and deliberately test retain/split/combine/reframe/reduce/expand alternatives.
+Proceed to **010-G — Completeness, Independence & Genericity-for-Boundary Audit**. Begin from the eighteen-candidate post-specificity set in 010-F, not the incumbent canonical count.
