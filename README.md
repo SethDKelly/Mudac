@@ -10,7 +10,7 @@ The current project mandate and purpose model are intentionally representation-i
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate and purpose baseline.
 * [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
-* [`docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md`](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) — current post-specificity candidate set and boundary decisions for 010-G.
+* [`docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md`](docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) — current validated modularity input for canonical convergence.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -33,7 +33,8 @@ implementation authorization: NOT YET
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
-010-G: NEXT
+010-G: COMPLETE — PASS
+010-H: NEXT
 ```
 
 ## Phase 010 decomposition
@@ -45,23 +46,25 @@ implementation authorization: NOT YET
 010-D — candidate rediscovery / divergent alternatives        COMPLETE
 010-E — behavioral specification current-truth audit          COMPLETE
 010-F — specificity / purpose singularity                     COMPLETE
-010-G — completeness / independence / boundary genericity     NEXT
-010-H — convergence / re-specification / canonical repair
+010-G — completeness / independence / boundary genericity     COMPLETE
+010-H — convergence / re-specification / canonical repair     NEXT
 010-I — consolidation / exit / Phase 011 handoff
 ```
 
-010-F does **not** replace the current canonical sixteen-Concept index yet. It establishes the provisional candidate set that 010-G must test before 010-H convergence.
+010-G confirms that **all 18 post-specificity candidates survive** completeness, intrinsic-independence and genericity-for-boundary testing. The validated set is Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication.
 
-The major specificity decisions are:
+This still does **not** replace the current canonical sixteen-Concept index. 010-H must perform deliberate convergence and re-specification.
 
-- current **Judging Encounter** is split/reframed into working **Evaluation Occurrence** plus separate **Evaluation Obligation** responsibility;
-- **Outcome Declaration** survives as a separate candidate while Competition remains focused on occurrence lifecycle/finalization;
-- **Evaluation Sufficiency** remains derived rather than becoming a Concept;
-- **Reconciliation** remains an Organizer process/work mode rather than a Concept;
-- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** are rejected as overloaded merges;
-- the post-specificity set contains **18 provisional candidates** for 010-G.
+The principal mandatory corrections entering 010-H are:
 
-Aggregate, Rank and Readiness remain derived-mechanism baselines. Recovery/Continuity remains a first-class cross-cutting purpose obligation rather than an independent Concept candidate unless later completeness/independence evidence proves otherwise.
+- add successor-responsibility behavior to Evaluation Obligation;
+- add Rubric response interpretation/validation queries;
+- add explicit Versioning invalidation/current-eligibility behavior;
+- add explicit Export currency behavior;
+- replace false direct peer typing with abstract boundary parameters where only identity/content/context is required;
+- converge current Judging Encounter to Evaluation Occurrence, add Evaluation Obligation and Outcome Declaration, and repair mechanism/index ownership without collapsing later synchronization/dependence questions.
+
+Evaluation Sufficiency/Coverage remains derived; Reconciliation remains process/work mode; Aggregate, Rank and Readiness remain derived mechanisms. Recovery/Continuity remains a first-class cross-cutting purpose obligation rather than an independent Concept.
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
@@ -93,4 +96,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **010-G — Completeness, Independence & Genericity-for-Boundary Audit**. Begin from 010-F's eighteen-candidate post-specificity set rather than falling back to the incumbent sixteen-Concept catalog.
+Proceed to **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**. Begin from 010-G's validated eighteen-candidate set and mandatory re-specification queue.

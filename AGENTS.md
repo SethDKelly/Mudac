@@ -8,8 +8,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 009`](docs/009-jackson-methodology-realignment/) as methodology realignment provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
-5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), [010-C](docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md), [010-D](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), [010-E](docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md), [010-F](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-G or later Phase 010 work.
-6. Load task-relevant incumbent Concept/mechanism/policy/invariant owners only after the project-purpose baseline and 010-D/E/F candidate evidence are understood.
+5. Read [010-F](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [Canonical Project Context & Purpose](docs/canonical/project/) before 010-H or later Phase 010 work. Load 010-D/E when discovery/specification provenance is materially needed.
+6. Load task-relevant incumbent Concept/mechanism/policy/invariant owners only after the 010-F/G boundary decisions are understood.
 7. Use older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -32,7 +32,8 @@ implementation authorization: NOT YET
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
-010-G: NEXT
+010-G: COMPLETE — PASS
+010-H: NEXT
 ```
 
 ## Active Phase 010 subgroup order
@@ -44,17 +45,16 @@ implementation authorization: NOT YET
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
 010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       NEXT
-010-H convergence / re-specification / canonical reconciliation
+010-G completeness / independence / boundary genericity       COMPLETE
+010-H convergence / re-specification / canonical reconciliation NEXT
 010-I consolidation / exit / Phase 011 handoff
 ```
 
 ## Phase 010 discipline
 
-- Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current baseline before Concept analysis.
-- Treat the current sixteen canonical Concept pages as **incumbent current knowledge**, not the post-010-F candidate answer.
-- 010-D divergence, 010-E challenger specifications and 010-F specificity decisions are phase evidence until 010-H convergence.
-- 010-F establishes an **eighteen-candidate post-specificity set** for 010-G:
+- Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current product-purpose baseline.
+- Treat the current sixteen canonical Concept pages as **incumbent current owners pending 010-H**, not the validated final boundary set.
+- 010-F/G together establish the validated phase-level eighteen-candidate set:
   1. Competition
   2. Division
   3. Team
@@ -73,29 +73,42 @@ implementation authorization: NOT YET
   16. Outcome Declaration
   17. Export
   18. Publication
-- Current `Judging Encounter` is a canonical incumbent pending 010-H, but 010-G must test the **Evaluation Occurrence** boundary defined by 010-F rather than silently treating obligation state as intrinsic.
-- **Evaluation Sufficiency** and **Reconciliation** do not enter 010-G as Concepts. Sufficiency remains derived; Reconciliation remains process/work mode. Their current mechanism documents remain current incumbent owners until 010-H reconciliation.
-- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** were rejected as overloaded merges in 010-F and must not be reintroduced without new evidence.
-- Do not infer a Concept boundary from current direct type references. 010-G must test whether abstract parameters remove false dependence.
-- Aggregate, Rank and Readiness remain incumbent derived mechanisms unless 010-G exposes contrary semantic evidence.
-- Recovery/Continuity remains a first-class P-05 completeness obligation, not currently an independent Concept candidate; reopen only if 010-G exposes behavior with no coherent owner.
-- Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
-- Extrinsic Concept dependence belongs to Phase 012.
-- Full familiarity/reuse/catalog refinement belongs to Phase 014.
+- All eighteen passed 010-G completeness, intrinsic-independence and boundary-genericity testing.
+- Current `Judging Encounter` must not be preserved merely because it is canonical today. 010-H must converge it to the validated **Evaluation Occurrence** boundary and move evaluator responsibility to **Evaluation Obligation**.
+- **Outcome Declaration** passed 010-G independently over abstract Scope/OutcomeBasis/DeclaringAuthority and must be reconciled from current Official Outcome Revision/Competition ownership in 010-H.
+- **Evaluation Sufficiency/Coverage** remains derived. **Reconciliation** remains process/work mode. Aggregate, Rank and Readiness remain derived mechanisms.
+- **Actor Context**, **Evaluation Work Item**, **Authority History**, and **External Representation & Release** remain rejected overloaded merges unless new evidence reopens them.
+- Recovery/Continuity remains a first-class P-05 completeness obligation, not an independent Concept.
+- Cross-Concept composition belongs to Phase 011. Product-family inclusion dependence belongs to Phase 012. Broad familiarity/reuse/name refinement belongs to Phase 014.
 
-## 010-G completeness / independence / genericity rules
+## Mandatory 010-H re-specification debt from 010-G
 
-- Begin from the eighteen post-specificity candidates in 010-F, not from the canonical index count.
-- **Completeness:** if every peer Concept vanished, does the candidate still contain the semantics required to fulfill its own purpose?
-- **Independence:** can its purpose, OP, state and actions be specified without relying on another application Concept's internal meaning?
-- **Genericity-for-boundary:** if an external object only supplies identity/content, use an abstract parameter rather than importing the peer Concept type.
-- Do not absorb a different purpose merely to make a Concept appear complete; that behavior belongs to later synchronization if it serves another Concept's purpose.
-- Do not reject a Concept merely because the final MUDAC application will normally include another Concept beside it; extrinsic inclusion dependence belongs to Phase 012.
-- When 010-G changes a boundary, preserve the required 010-H re-specification debt explicitly.
+010-H must incorporate at least these completeness corrections:
+
+1. **Evaluation Obligation** — successor responsibility when valid application semantics require re-evaluation after a previously terminal/satisfied obligation, preserving prior history.
+2. **Rubric** — response interpretation/validation queries needed to own valid-judgment semantics.
+3. **Versioning** — explicit invalidation and current-eligible-authority behavior; no silent predecessor fallback.
+4. **Export** — explicit Current/Affected/Stale/Superseded/Retired currency behavior and queries.
+
+010-H must also replace false peer typing with abstract boundary parameters where only identity/content/context is needed. Important examples include Division<Scope,Member>, Panel<Scope,Member>, EvaluationOccurrence<Subject,Evaluator,PresentedContext,BasisRef>, EvaluationObligation<Evaluator,Subject,Basis,Scope,OccurrenceRef,EvidenceRef>, Scorecard<Evaluator,Subject,OccurrenceContext,EvaluationBasis>, Participation<Participant,Scope,Capacity>, Access<Principal,Capability,Resource,ContextFacts,Rule>, Provenance<Subject,StateRef,Actor,RepresentedAuthority,Scope,Source>, OutcomeDeclaration<Scope,OutcomeBasis,DeclaringAuthority>, Export<SourceBasis,...>, and Publication<Representation,...>.
+
+These are conceptual parameters, not programming generics or implementation types.
+
+## 010-H convergence rules
+
+- Make current authority unambiguous: do not leave old and new Concept owners both indexed as current.
+- Re-specify changed/generalized Concepts at Phase-003 quality: Purpose, OP, abstract State, Actions/Queries, guards/effects, invariants, history/authority, deliberate under-specification.
+- Preserve historical phase records and supersession rationale; do not rewrite 001/002/007 to pretend the old boundary never existed.
+- Current Judging Encounter history may remain as historical provenance, but the canonical current owner must reflect Evaluation Occurrence if the validated boundary is adopted.
+- Create Evaluation Obligation and Outcome Declaration canonical owners only as part of deliberate 010-H convergence, not as parallel unresolved pages.
+- Keep Coverage/Reconciliation mechanism ownership coherent with the 010-F/G decisions.
+- Repair indexes, cross-references, source lineage and any current rules whose referents change.
+- Do not solve Phase 011 synchronization or Phase 012 inclusion dependence while reconciling ownership.
+- If canonical re-specification reveals that a validated boundary cannot stand independently/complete, reopen 010-F/G instead of forcing the documentation.
 
 ## Current project-purpose guardrails
 
-Current purpose obligations are:
+Current purpose obligations remain:
 
 - P-01 independent human judgment;
 - P-02 fair and bias-aware Team treatment;
@@ -107,8 +120,6 @@ Current purpose obligations are:
 - P-08 contextual confidentiality and authority separation;
 - P-09 faithful external representation and controlled release.
 
-The purpose model explicitly preserves tensions such as friction vs attribution, identity shielding vs explainability, resilience vs singular authority, speed vs correctness, correction vs historical truth, and transparency vs controlled disclosure.
-
 `GitHub → GitHub Actions → AWS ecosystem` is a downstream delivery constraint only. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain frozen historical executable facts and must not determine Concept Design.
 
 ## Design-only rules for Phases 010–017
@@ -119,7 +130,7 @@ The purpose model explicitly preserves tensions such as friction vs attribution,
 - Do not use canonical architecture/implementation documents as evidence that a Concept, dependency, mapping, scope choice or integrity decision is correct.
 - Architecture/implementation may be inspected only for explicit contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
 - If later design exposes an upstream defect, correct the natural earlier owner and revalidate affected downstream conclusions.
-- Keep durable product meaning in canonical conceptual owners; keep detailed candidate matrices/counterexamples in phase history until convergence.
+- Keep durable product meaning in canonical conceptual owners; keep detailed rationale/counterexamples in phase history.
 
 ## Frozen executable substrate
 
@@ -145,4 +156,4 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 Proceed to:
 
-> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**
+> **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**

@@ -6,7 +6,9 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed candidate rediscovery/specification history is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) and [010-E](010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). The current post-specificity candidate set is owned by [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md). During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
+The current representation-independent baseline is [Project Context & Purpose](canonical/project/). Detailed candidate rediscovery/specification history is in [010-D](010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) and [010-E](010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). The boundary rationale is [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and the current validated modularity result is [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md).
+
+During reopened Jackson methodology, architecture and implementation material remain quarantined from constraining Concept Design.
 
 ## Status
 
@@ -19,7 +21,7 @@ The current representation-independent baseline is [Project Context & Purpose](c
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D/E/F complete; 010-G next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B/C/D/E/F/G complete; 010-H next**
 
 ## Current posture
 
@@ -39,7 +41,8 @@ implementation planning: SUSPENDED
 010-D: COMPLETE
 010-E: COMPLETE
 010-F: COMPLETE
-010-G: NEXT
+010-G: COMPLETE
+010-H: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The durable rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
@@ -53,20 +56,21 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
 010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       NEXT
-010-H convergence / re-specification / canonical reconciliation
+010-G completeness / independence / boundary genericity       COMPLETE
+010-H convergence / re-specification / canonical reconciliation NEXT
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-010-F produces the provisional post-specificity set that 010-G must test. The major differences from the unreconciled canonical taxonomy are:
+010-G confirms that every member of 010-F's eighteen-candidate set is minimally complete and intrinsically independent once false peer typing is replaced with abstract boundary parameters. No new Concept is required and no 010-F split/rejection is reversed.
 
-- current Judging Encounter is split/reframed into working **Evaluation Occurrence + Evaluation Obligation**;
-- **Outcome Declaration** survives as a candidate distinct from Competition lifecycle and Publication;
-- **Evaluation Sufficiency** remains derived rather than becoming a Concept;
-- **Reconciliation** remains an Organizer process/work mode;
-- Actor Context, Evaluation Work Item, Authority History and External Representation & Release are rejected as overloaded merge alternatives.
+The validated phase-level set remains:
 
-The resulting 010-G input contains **18 provisional candidates**. Canonical Concept/mechanism pages intentionally remain unchanged until 010-G completes the rest of the modularity tests and 010-H performs convergence/re-specification.
+- Competition, Division, Team, Panel;
+- Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard;
+- Award, Identity, Participation, Alias, Access;
+- Versioning, Provenance, Outcome Declaration, Export, Publication.
+
+Canonical Concept/mechanism pages intentionally remain unreconciled until 010-H. Four material completeness expansions must be incorporated there: Evaluation Obligation successor responsibility, Rubric response interpretation/validation, Versioning invalidation/current eligibility, and Export currency behavior.
 
 ## Completion runway
 
@@ -98,4 +102,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are 
 
 ## Current next work
 
-Proceed to **010-G — Completeness, Independence & Genericity-for-Boundary Audit**. Begin from the eighteen-candidate post-specificity set in 010-F, not the incumbent canonical count.
+Proceed to **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**. Begin from 010-G's validated boundary/genericity/completeness result and 010-F's specificity rationale.

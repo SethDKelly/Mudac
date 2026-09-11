@@ -9,6 +9,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
 ---
 
 # Purpose
@@ -132,21 +133,21 @@ Current but challengeable assumptions:
 - controlled external release remains in the present capability boundary, while a rich public portal does not;
 - formal scheduling may remain external/lightweight unless later purpose/dependence work shows it necessary.
 
-# Open questions after 010-F
+# Open questions after 010-G
 
-Specificity/purpose singularity is now complete. Current project context intentionally leaves open:
+Foundational modularity analysis is now complete at phase level. All eighteen post-specificity candidates survived completeness, intrinsic-independence and boundary-genericity testing.
 
-- whether every member of 010-F's eighteen-candidate set is complete and independent enough to survive 010-G;
-- whether Evaluation Occurrence, Evaluation Obligation and Outcome Declaration can be specified with abstract parameters rather than intrinsic dependency on current MUDAC peer Concepts;
-- whether any retained incumbent Concept becomes fragmentary once peer assumptions are removed;
-- whether direct current cross-Concept typing should be generalized during 010-G;
-- whether 010-G exposes missing behavior requiring expansion for completeness;
-- which capability areas belong in every coherent MUDAC product variant;
+Current project context intentionally leaves open:
+
+- whether 010-H can canonically converge/re-specify all validated boundaries without exposing a hidden upstream defect;
+- exact synchronization triggers/preconditions/postconditions among the converged Concepts, owned by Phase 011;
+- which Concepts are intrinsically independent yet extrinsically required together in coherent application variants, owned by Phase 012;
+- whether Division, Panel, Award, Publication or other capabilities are optional in specific product-family members;
 - detailed evaluation, coverage, ranking, tie, Award and disclosure policies;
 - exact retention/regulatory requirements not currently evidenced;
-- final dependence/subset decisions, mappings, architecture and implementation realization.
+- mapping/interaction refinements, familiarity/reuse refinement, integrity/adversarial closure, architecture and implementation realization.
 
-010-F has already rejected Evaluation Sufficiency and Reconciliation as Concept candidates for this runway and rejected Actor Context, Evaluation Work Item, Authority History and External Representation & Release as overloaded merges unless new evidence reopens them.
+010-G found no project-context defect and no nineteenth Concept. Evaluation Sufficiency/Coverage remains derived; Reconciliation remains process/work mode; Recovery/Continuity remains a cross-cutting obligation rather than a Concept.
 
 # Evidence posture
 
@@ -156,8 +157,8 @@ Architecture and implementation produced before methodology completion are quara
 
 # Current handoff
 
-Phase 010-B reconciled project/intake truth, 010-C established the purpose model, 010-D rediscovered candidates, 010-E established behavioral specifications, and 010-F established the post-specificity boundary set. The next methodology task is:
+Phase 010-B reconciled project/intake truth, 010-C established the purpose model, 010-D rediscovered candidates, 010-E established behavioral specifications, 010-F established the post-specificity boundary set, and 010-G validated completeness/independence/boundary-genericity for all eighteen candidates. The next methodology task is:
 
-> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**
+> **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**
 
-010-G must judge the eighteen post-specificity candidates from 010-F rather than the current canonical index count.
+010-H must make the validated boundary decisions current and unambiguous without solving Phase 011 synchronization or Phase 012 product-family dependence prematurely.

@@ -14,14 +14,18 @@ Current incumbent MUDAC knowledge for subjects modeled as derived/supporting mec
 
 These are **current canonical classifications under the unreconciled incumbent model**, not permanently closed methodology decisions.
 
-[010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) now provides the specificity disposition needed by 010-G:
+[010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) established the specificity decisions and [010-G](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) confirmed them through completeness/independence/genericity testing:
 
-- `Coverage` / **Evaluation Sufficiency** does **not** survive as a Concept. Raw sufficiency remains a derived assessment. An accepted exception changes permitted consequence rather than fabricating factual sufficiency; 010-H should preserve that distinction canonically if 010-G does not reopen it.
+- `Coverage` / **Evaluation Sufficiency** does **not** survive as a Concept. Raw sufficiency remains a derived assessment. An accepted exception changes permitted consequence rather than fabricating factual sufficiency.
 - `Reconciliation` / **Reconciliation Resolution** does **not** survive as a Concept. It remains an Organizer process/work mode over source conditions rather than a separate ticket-like source of truth.
-- `Official Outcome Revision` is the incumbent mechanism owner for behavior that 010-F reframes as the **Outcome Declaration** candidate. Do not promote/rename it canonically until 010-G tests completeness/independence and 010-H converges the boundary.
+- `Official Outcome Revision` is the incumbent mechanism owner for behavior now validated as the **Outcome Declaration** Concept. 010-H must converge/reclassify this ownership and preserve historical sources/cross-references.
 
-`Aggregate`, `Rank`, and `Readiness` remain strong derived-mechanism baselines because their behavior is calculated from authoritative source state/policy rather than independently authored/operated state.
+`Aggregate`, `Rank`, and `Readiness` remain derived mechanisms after 010-G. No completeness or independence finding requires their promotion.
 
-Recovery/Continuity remains a cross-cutting P-05 completeness obligation rather than a standalone Concept candidate because current Scorecard, obligation/occurrence, history, authority and capture semantics are sufficient to test continuity without a new current owner.
+Recovery/Continuity remains a cross-cutting P-05 completeness obligation rather than a standalone Concept because the validated eighteen-Concept set can own the required draft/current authority, obligation succession, occurrence history, Versioning, Provenance, Access and representation/release semantics without a separate Recovery subject.
 
-Do not create challenger canonical Concept pages before 010-H convergence. For 010-G, use the post-specificity set in 010-F rather than the current folder taxonomy.
+010-H must preserve the distinction between **factual Coverage sufficiency** and a governed exception that changes permitted consequence. It must also preserve Reconciliation as process/work mode rather than inventing independent ticket authority.
+
+Do not treat current Official Outcome Revision classification as final after 010-G; 010-H owns its canonical convergence into Outcome Declaration.
+
+Current next methodology work: **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**.

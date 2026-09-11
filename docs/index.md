@@ -11,9 +11,9 @@ Current conceptual meaning is organized under canonical knowledge. Numbered phas
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance plus suspended downstream candidate architecture/implementation material.
-* [Project Context & Purpose](canonical/project/) — current representation-independent project mandate, scope/constraints, purpose obligations, needs, success situations, tensions and current post-specificity pressure.
-* [Concepts](canonical/concepts/) — current sixteen-Concept **incumbent** catalog pending Phase 010 convergence; do not confuse the index count with 010-F's provisional eighteen-candidate set.
-* [Mechanisms](canonical/mechanisms/) — current derived/supporting subjects; 010-F specifically keeps Evaluation Sufficiency/Coverage and Reconciliation non-Concept while Outcome Declaration remains a candidate pending 010-G/010-H.
+* [Project Context & Purpose](canonical/project/) — current representation-independent project mandate, scope/constraints, purpose obligations, success situations, tensions and validated Phase-010 modularity pressure.
+* [Concepts](canonical/concepts/) — current sixteen-Concept **incumbent** catalog pending 010-H convergence; do not confuse current ownership with the validated eighteen-candidate phase-level result.
+* [Mechanisms](canonical/mechanisms/) — current derived/supporting subjects; Evaluation Sufficiency/Coverage and Reconciliation remain non-Concept, while Official Outcome Revision ownership is pending convergence to Outcome Declaration.
 * [Synchronizations](canonical/synchronizations/) — current composition and temporal/correction semantics, subject to Phase 011 revalidation.
 * [Policies](canonical/policies/) — current governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
@@ -23,7 +23,7 @@ Current conceptual meaning is organized under canonical knowledge. Numbered phas
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), the active [Phase 010](010-project-purpose-candidate-specification-modularity/), and [010-F specificity/boundary audit](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) before 010-G work. Load 010-D/E when the discovery/specification rationale is needed.
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), the active [Phase 010](010-project-purpose-candidate-specification-modularity/), [010-F specificity/boundary audit](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and [010-G completeness/independence/genericity audit](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) before 010-H work.
 
 During Phases 010–017, do not preload architecture/implementation unless the task explicitly concerns contamination analysis or historical comparison.
 
@@ -43,7 +43,7 @@ During Phases 010–017, do not preload architecture/implementation unless the t
 * Phase 007 — Design Refinement: reusable evidence; 007-I closure superseded.
 * Phase 008 — Implementation Re-entry: halted after 008-E.
 * Phase 009 — Methodology Realignment: **Complete — PASS**.
-* Phase 010 — Foundational Concept Design Completion: **In Progress — 010-A/B/C/D/E/F complete; 010-G next**.
+* Phase 010 — Foundational Concept Design Completion: **In Progress — 010-A/B/C/D/E/F/G complete; 010-H next**.
 
 # Current posture
 
@@ -63,7 +63,8 @@ implementation authorization: NOT YET
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
-010-G: NEXT
+010-G: COMPLETE — PASS
+010-H: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -76,12 +77,12 @@ production readiness: NOT ESTABLISHED
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
 010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       NEXT
-010-H convergence / re-specification / canonical reconciliation
+010-G completeness / independence / boundary genericity       COMPLETE
+010-H convergence / re-specification / canonical reconciliation NEXT
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-010-F's post-specificity set contains eighteen provisional candidates: Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication. It is phase evidence for 010-G, not yet a replacement canonical catalog.
+010-G validates all eighteen post-specificity candidates and hands 010-H a finite canonical convergence queue. Four material completeness expansions are mandatory: Evaluation Obligation successor responsibility, Rubric response interpretation, Versioning invalidation/current eligibility, and Export currency behavior. Generic boundary parameters must also replace false direct peer typing where a Concept needs only identity/content/context.
 
 # Completion runway
 
@@ -107,6 +108,6 @@ A successful Phase 017 may authorize only a **separate downstream architecture/e
 
 # Navigation Guidance
 
-For 010-G, read [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) before using [incumbent Concepts](canonical/concepts/) or [Mechanisms](canonical/mechanisms/). Completeness/independence/genericity must be tested against the post-specificity boundaries rather than the still-unreconciled canonical taxonomy.
+For 010-H, read [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) and [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) before changing [incumbent Concepts](canonical/concepts/) or [Mechanisms](canonical/mechanisms/). Canonical convergence must preserve phase-history rationale while leaving Phase 011 synchronization and Phase 012 inclusion dependence unresolved.
 
-The immediate next task is **010-G — Completeness, Independence & Genericity-for-Boundary Audit**.
+The immediate next task is **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**.

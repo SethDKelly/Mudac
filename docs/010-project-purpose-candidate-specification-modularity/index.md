@@ -4,7 +4,7 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 
 ## Status
 
-**In Progress — 010-A through 010-F complete; 010-G next.**
+**In Progress — 010-A through 010-G complete; 010-H next.**
 
 ## Records
 
@@ -14,8 +14,8 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 - [010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) — **Complete — PASS**.
 - [010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit](010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md) — **Complete — PASS**.
 - [010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit](010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) — **Complete — PASS**.
-- **010-G — Completeness, Independence & Genericity-for-Boundary Audit** — Next.
-- **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation** — Planned.
+- [010-G — Completeness, Independence & Genericity-for-Boundary Audit](010-G-completeness-independence-genericity-for-boundary-audit.md) — **Complete — PASS**.
+- **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation** — Next.
 - **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff** — Planned.
 
 ## Phase relationship
@@ -35,9 +35,9 @@ Phase 010 is the active foundational Concept Design completion phase after the P
   ↓
 010-F specificity/purpose singularity            COMPLETE
   ↓
-010-G completeness/independence/genericity       NEXT
+010-G completeness/independence/genericity       COMPLETE
   ↓
-010-H convergence/re-specification/reconciliation
+010-H convergence/re-specification/reconciliation NEXT
   ↓
 010-I exit review
   ↓
@@ -46,8 +46,17 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 
 Current project/intake and purpose truth is owned by [Canonical Project Context & Purpose](../canonical/project/).
 
-010-F produces a **provisional eighteen-candidate post-specificity set** for 010-G. It is not yet the canonical catalog. The material boundary decisions are the split of current Judging Encounter into working **Evaluation Occurrence + Evaluation Obligation**, survival/reframing of **Outcome Declaration**, and rejection of Evaluation Sufficiency/Reconciliation as Concepts while retaining their derived/process roles.
+010-F produced the provisional eighteen-candidate set. 010-G has now confirmed that **all eighteen survive completeness, intrinsic-independence and boundary-genericity testing**, subject to explicit re-specification corrections. This remains phase evidence until 010-H updates canonical ownership.
 
-Canonical Concept/mechanism ownership remains unchanged until 010-G finishes the remaining modularity tests and 010-H deliberately reconciles current truth.
+The four material completeness expansions handed to 010-H are:
+
+1. Evaluation Obligation successor responsibility after previously satisfying evidence becomes unusable;
+2. Rubric response interpretation/validation queries;
+3. Versioning invalidation/current-eligibility operations and queries;
+4. Export representation-currency transitions/queries.
+
+010-G also requires generic parameterization that removes false direct peer typing from Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Scorecard, Award, Participation, Access, Provenance, Outcome Declaration, Export and Publication while preserving MUDAC-specific composition outside each intrinsic Concept specification.
+
+Canonical Concept/mechanism pages remain intentionally unreconciled until 010-H.
 
 See [README.md](README.md) for phase intent, completed results, subgroup responsibilities, evidence posture, exclusions and exit criteria.

@@ -14,6 +14,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
@@ -27,7 +28,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. 010-A established the completion sequence, 010-B reconciled current project/intake truth, 010-C revalidated purpose/need/success/tensions, 010-D completed purpose-first candidate rediscovery, 010-E established behaviorally explicit candidates/countermodels, and 010-F completed specificity/purpose-singularity analysis with a provisional eighteen-candidate input for 010-G.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. 010-A established the completion sequence; 010-B/C reconciled project and purpose truth; 010-D/E completed candidate rediscovery/behavioral specification; 010-F completed specificity/purpose singularity; and 010-G completed completeness, intrinsic-independence and genericity-for-boundary analysis for the eighteen validated candidates.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -49,7 +50,8 @@ Phase 010: IN PROGRESS
 010-D: COMPLETE — PASS
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
-010-G: NEXT
+010-G: COMPLETE — PASS
+010-H: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -73,25 +75,26 @@ historical architecture / implementation
         ≠ design constraint
 ```
 
-The current project/purpose baseline is [Project Context & Purpose](../project/). Candidate divergence/specification remains phase evidence in [010-D](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) and [010-E](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md). The current modularity input is [010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md).
+The current project/purpose baseline is [Project Context & Purpose](../project/). The current boundary rationale is [010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and the validated modularity result is [010-G](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md).
 
-# What remains authoritative
+# What remains authoritative before 010-H
 
 Current product/conceptual authority includes task-relevant canonical Project Context & Purpose, incumbent Concepts, synchronizations, policies, mechanisms, invariants, experience/mapping knowledge, and methodology/documentation/change governance.
 
 These owners remain subject to correction by Phases 010–017.
 
-During Phase 010:
+During the transition into 010-H:
 
-- the current sixteen Concept pages remain incumbent current knowledge until 010-H convergence; they are not the candidate set that 010-G should test;
-- 010-F's eighteen-candidate post-specificity set is binding methodology input to 010-G but not yet a canonical replacement catalog;
-- Evaluation Sufficiency/Reconciliation remain current mechanism owners and do not enter 010-G as Concepts;
-- Evaluation Occurrence, Evaluation Obligation and Outcome Declaration are phase-level candidates until 010-G/010-H validate and reconcile them;
-- no architecture or implementation choice may decide Concept candidacy or boundaries.
+- the current sixteen Concept pages remain incumbent current knowledge until the convergence commit makes new ownership unambiguous;
+- 010-F/G validate an eighteen-candidate boundary set that 010-H must reconcile canonically;
+- Evaluation Occurrence, Evaluation Obligation and Outcome Declaration are validated phase-level Concepts awaiting current owners;
+- current Judging Encounter and Official Outcome Revision ownership are known to require convergence;
+- Evaluation Sufficiency/Coverage and Reconciliation remain non-Concept;
+- no architecture or implementation choice may decide the convergence result.
 
-# Current modularity pressure
+# Validated Phase-010 boundary set
 
-010-F establishes the following provisional candidates for 010-G:
+010-G confirms the following eighteen candidates are complete/independent enough for canonical convergence when its re-specification corrections are applied:
 
 ```text
 Competition
@@ -114,17 +117,16 @@ Export
 Publication
 ```
 
-Material specificity conclusions are:
+Mandatory own-purpose corrections entering 010-H are:
 
-- current Judging Encounter is overloaded by occurrence-history and evaluator-obligation purposes;
-- Competition lifecycle and Outcome Declaration authority/history are distinct purposes;
-- Actor Context, Evaluation Work Item, Authority History and External Representation & Release are overloaded merge alternatives;
-- Evaluation Sufficiency is derived rather than an independently valuable Concept;
-- Reconciliation remains process/work mode rather than independent source state.
+- Evaluation Obligation successor responsibility after previously terminal/satisfied work when valid application semantics require re-evaluation;
+- Rubric response interpretation/validation queries;
+- Versioning explicit invalidation/current-eligible-authority behavior;
+- Export explicit representation-currency behavior.
 
-010-G must now test completeness, intrinsic independence and generic parameters against these post-specificity boundaries.
+010-G also requires appropriate abstract parameterization so direct peer Concept types do not create false intrinsic dependence.
 
-This design work does not authorize code, schemas, APIs, persistence or architecture.
+This work does not authorize code, schemas, APIs, persistence or architecture.
 
 # Project-purpose versus downstream constraints
 
@@ -174,6 +176,7 @@ Current work may:
 
 - execute Phases 010–017;
 - update Project Context/Purpose or other canonical conceptual owners when design meaning changes;
+- perform 010-H canonical Concept/mechanism re-specification and supersession;
 - inspect historical architecture/implementation only for contamination, assumptions, counterexamples or later handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
 - improve documentation/routing/validation supporting the design process.
@@ -187,8 +190,8 @@ Current work may:
 010-D candidate rediscovery / divergent alternatives          COMPLETE
 010-E behavioral specification current-truth audit            COMPLETE
 010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       NEXT
-010-H convergence / re-specification / canonical reconciliation
+010-G completeness / independence / boundary genericity       COMPLETE
+010-H convergence / re-specification / canonical reconciliation NEXT
 010-I consolidation / exit / Phase 011 handoff
 ```
 
@@ -223,6 +226,6 @@ A successful Phase 017 may establish Concept Design readiness for downstream wor
 
 Proceed to:
 
-> **010-G — Completeness, Independence & Genericity-for-Boundary Audit**
+> **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**
 
-010-G must begin from the eighteen post-specificity candidates in 010-F and must not silently fall back to the unreconciled canonical sixteen-Concept taxonomy.
+010-H must make the validated eighteen-candidate boundary set current and unambiguous, incorporate 010-G completeness/genericity corrections, preserve historical rationale/supersession, and leave Phase 011 synchronization plus Phase 012 inclusion dependence unresolved.
