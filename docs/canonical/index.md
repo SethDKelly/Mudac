@@ -1,75 +1,75 @@
 # Canonical MUDAC Knowledge
 
-This subtree is the preferred source for current MUDAC product, conceptual UX, documentation-governance, accepted architecture, and accepted implementation meaning.
+This subtree is the preferred source for current MUDAC conceptual product meaning and governance. Architecture and implementation material are preserved here but are currently **suspended downstream candidates** while Jackson Concept Design is reopened.
 
-# Current Knowledge
+# Current conceptual knowledge
 
-* [Concepts](concepts/) — accepted MUDAC Concepts.
-* [Synchronizations](synchronizations/) — current cross-concept trigger, authority, precondition/postcondition, failure/retry, and temporal/history coordination contracts.
-* [Mechanisms](mechanisms/) — derived/supporting subjects that intentionally remain non-Concepts.
-* [Policies](policies/) — governing/configurable Competition semantics, including [Operational Exception & Override Governance](policies/operational-exception-governance.md).
-* [Invariants](invariants/) — cross-cutting normative constraints.
-* [Experience](experience/) — current conceptual UX contracts, including [Experience Action, State & Authority Traceability](experience/action-authority-traceability.md).
+* [Concepts](concepts/) — current MUDAC Concepts, subject to Phases 010–017 revalidation/refinement.
+* [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to composition revalidation.
+* [Mechanisms](mechanisms/) — current derived/supporting subjects intentionally not promoted to Concepts.
+* [Policies](policies/) — current governing/configurable Competition semantics.
+* [Invariants](invariants/) — current cross-cutting conceptual constraints.
+* [Experience](experience/) — current conceptual mapping/experience evidence, subject to post-scope revalidation.
 
-# Governance, Architecture and Implementation
+# Governance
 
-* [Governance](governance/) — methodology/terminology, documentation authority, agent context, canonical change, metadata/trust/lifecycle, validation/CI, source lineage, stable rule IDs, and the current [Design / Implementation Boundary](governance/design-implementation-boundary.md).
-* [Architecture](architecture/) — current accepted system/application architecture contracts. Knowledge topology does not dictate source-code topology.
-* [Implementation](implementation/) — accepted implementation/tooling contracts, the **qualified protected 006-D non-domain bootstrap**, the accepted 008-D persistence/history contract, and the accepted 008-E Identity/authentication/Access/session contract.
+* [Governance](governance/) — methodology/terminology, documentation authority, change governance, stable rule identifiers, validation, the current [Design / Implementation Boundary](governance/design-implementation-boundary.md), and [Downstream Architecture & Implementation Authority Quarantine](governance/downstream-authority-quarantine.md).
 
-# Current delivery posture
+# Suspended downstream knowledge
 
-MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline.
+* [Architecture](architecture/) — preserved pre-closure architecture candidates. **Suspended as current Concept Design constraints** until a successful Phase 017 closure and separate downstream revalidation.
+* [Implementation](implementation/) — preserved toolchain/implementation candidates and historical bootstrap knowledge. **Suspended as current domain implementation authority** while Concept Design remains open.
 
-Phase 008 implementation planning is active. [008-A](../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) established planning authority, [008-B](../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) qualified the retained 006-D substrate, [008-C](../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) reconciled residual/historical ownership, [008-D](../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) accepted the persistence/history implementation plan, and [008-E](../008-implementation-reentry/008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md) accepted the Identity/authentication/Participation/Access/session implementation plan.
+# Current methodology posture
 
-The current boundary is:
+Phase 009 has formally reopened and realigned Jackson Concept Design.
 
 ```text
-Jackson Concept Design methodology: COMPLETE / EXITED
-baseline semantic design: COMPLETE
-known baseline semantic blockers: NONE OPEN
-implementation planning authority: ESTABLISHED
-008-A: COMPLETE
-008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-008-C: COMPLETE — PASS
-008-D: COMPLETE — PASS
-008-E: COMPLETE — PASS
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-persistence/history implementation plan: ACCEPTED / NOT IMPLEMENTED
-identity/auth/access/session implementation plan: ACCEPTED / NOT IMPLEMENTED
-008-F: NEXT / NOT STARTED
-first executable domain slice: NOT YET AUTHORIZED
-new domain implementation after 006-D: NOT STARTED
-production readiness: NOT ESTABLISHED
+Jackson Concept Design: REOPENED / NOT COMPLETE
+007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
+008 implementation re-entry: HALTED AFTER 008-E
+architecture: SUSPENDED PENDING DESIGN CLOSURE
+implementation planning: SUSPENDED
+006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
+new domain implementation: NOT STARTED
+implementation readiness: NOT READY
+implementation authorization: NOT YET
+009: COMPLETE — PASS
+010: NEXT
 ```
 
-Durable 008-D implementation meaning is owned by [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](implementation/persistence-history-projection.md).
+The active methodology record is [Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry](../009-jackson-methodology-realignment/).
 
-Durable 008-E implementation meaning is owned by [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](implementation/identity-authentication-access-session.md).
+# Retrieval rule during reopened design
 
-The numbered phase records preserve rationale/local decisions; they are not parallel canonical rule stores.
+For Phases 010–017:
 
-All 007-H Class 4 future-scope items remain outside the current baseline unless deliberate `CHG-*` work reopens them.
+1. load the active phase/start-gate record;
+2. load only task-relevant current conceptual owners;
+3. load historical design evidence only where it materially supports the phase question;
+4. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
+5. do **not** load architecture/implementation merely because it exists—use it only for explicit contamination analysis, historical comparison, or later handoff preparation.
 
-# Retrieval Rule
+This prevents downstream realization choices from back-driving Concept Design.
 
-Load only the specific owner documents and linked dependencies required by the task. For behavior spanning more than one Concept, prefer the relevant [Synchronization](synchronizations/) owner rather than reconstructing coordination from scattered phase history. Use stable rule IDs for normative cross-reference and phase history only when rationale/chronology is needed.
+# Completion runway
 
-For correction/current-vs-historical/invalidation/official-outcome/Publication-timeline questions, also load [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md).
+```text
+010 purpose / candidate rediscovery / specification / modularity
+  ↓
+011 composition / synchronization revalidation
+  ↓
+012 dependence / subsets / product-family / scope
+  ↓
+013 mapping / representation revalidation
+  ↓
+014 familiarity / reuse / genericity
+  ↓
+015 integrity / interference
+  ↓
+016 scenario / misfit / adversarial validation
+  ↓
+017 methodology completeness / canonical closure
+```
 
-For Judge/Organizer interaction, route, action visibility, status/exception, confirmation, recovery, or UI-authority design, load [Experience Action, State & Authority Traceability](experience/action-authority-traceability.md) plus only the relevant experience owner(s).
-
-For exception, waiver, override, acknowledgement/suppression, policy bypass, or technical-emergency-versus-semantic-authority questions, load [Operational Exception & Override Governance](policies/operational-exception-governance.md) plus the specific policy/Concept owner involved.
-
-For persistence/history/outbox/projection/migration planning or implementation, load [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](implementation/persistence-history-projection.md) plus the task-relevant upstream semantic/architecture owner.
-
-For authentication, Identity, Participation, Access, session, invitation, recovery, reverification, or technical-authority work, load [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](implementation/identity-authentication-access-session.md) plus the task-relevant upstream semantic/architecture owner.
-
-For external representation/publication questions, preserve the chain from source authority through [Export](concepts/export.md) to [Publication](concepts/publication.md); a representation may not promote its source authority.
-
-Before any implementation/code/IaC work, load [Design / Implementation Boundary](governance/design-implementation-boundary.md). During Phase 008, work remains planning/re-entry plus narrow maintenance of the qualified protected baseline until 008-L explicitly authorizes a first domain implementation slice.
-
-The next planning subgroup is **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan**.
-
-Passing repository checks is evidence for a tested revision, not semantic verification, implementation correctness, executable-slice authorization, deployment authority, or production certification.
+The immediate next work is a **Phase 010 entry/decomposition exercise**.

@@ -1,66 +1,24 @@
 # Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness
 
-Phase 008 is the active post-Concept-Design implementation-planning phase.
+Phase 008 is **historical/premature downstream planning**, not the active repository route.
 
-Current execution authority lives in [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md). Current product, synchronization, policy, experience, architecture, and implementation contracts remain under [Canonical Knowledge](../canonical/).
+## Status
 
-# Status
+**HALTED after 008-E by Phase 009 methodology realignment.**
 
-Phase 008 subdivision is **Complete**. Implementation planning is **Active**. 008-A through 008-E are **Complete**. The retained 006-D bootstrap is **Qualified for Phase 008 planning**. New domain implementation remains **Not Started**.
+* [008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) — historical planning-governance record.
+* [008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) — historical bootstrap-qualification evidence.
+* [008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix](008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) — historical planning reconciliation.
+* [008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan](008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) — suspended downstream planning candidate.
+* [008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan](008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md) — suspended downstream planning candidate.
+* 008-F through 008-L — **not started and no longer an active queue**.
 
-# Records
+## Current authority
 
-* [008-A — Implementation Re-entry Authority, Canonical Baseline, Change Control & Planning Guardrails](008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) — **Complete**. Establishes current authority, planning-versus-execution states, `CHG-*` escalation, progressive disclosure, and the 008-L authorization boundary.
-* [008-B — Protected 006-D Baseline Qualification, Drift Audit & Toolchain/Environment Reconciliation](008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) — **Complete — PASS AFTER NARROW REMEDIATION**. Qualifies the retained toolchain/source/runtime/CI/PostgreSQL/IaC bootstrap and preserves external administration/evidence limitations.
-* [008-C — Residual-Risk Ingestion, Historical 006 Mapping, Decision Register & Supersession Matrix](008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) — **Complete — PASS**. Assigns accepted residuals and historical 006-E–M work to current planning owners.
-* [008-D — Persistence, Temporal Truth, Versioning, Provenance, Governed Exceptions, Outbox, Projection & Migration Implementation Plan](008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) — **Complete — PASS**. Resolves the physical PostgreSQL ownership/history/version/provenance/exception/outbox/projection/migration substrate and promotes it to canonical implementation knowledge.
-* [008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan](008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md) — **Complete — PASS**. Resolves Cognito/OIDC adapter boundaries, stable external-principal linkage, Participation-context isolation, contextual Access, opaque first-party sessions, invitation/recovery/reverification, secret handling, and technical-authority separation.
-* **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan** — **Next**.
-* **008-G — Browser Shell, Routing, Remote State, Draft Continuity, Synchronization, Recovery, Responsive & Accessibility Implementation Plan** — Planned.
-* **008-H — Competition Configuration, Team/Division/Alias, Rubric, Participation, Panel & Encounter Operations Slice Plan** — Planned.
-* **008-I — Scorecard, Evaluation Evidence, Amendment, Paper Capture, Verification & Convergence Slice Plan** — Planned.
-* **008-J — Reconciliation, Coverage, Aggregate, Rank, Awards, Finalization, Official Outcome, Export, Publication & Disclosure Slice Plan** — Planned.
-* **008-K — Security, Privacy, Accessibility, Observability, Performance, Recovery/DR, Retention & Operational Evidence Plan** — Planned.
-* **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** — Planned.
+Use:
 
-# Accepted detailed implementation contracts
+- [Design / Implementation Boundary](../canonical/governance/design-implementation-boundary.md)
+- [Downstream Architecture & Implementation Authority Quarantine](../canonical/governance/downstream-authority-quarantine.md)
+- [Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry](../009-jackson-methodology-realignment/)
 
-008-D establishes the current PostgreSQL/history/projection/migration substrate in [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](../canonical/implementation/persistence-history-projection.md).
-
-008-E establishes the current Identity/authentication/session/Access realization in [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](../canonical/implementation/identity-authentication-access-session.md).
-
-The 008-E authority chain is deliberately explicit:
-
-```text
-provider authentication proof
-   ↓
-explicit issuer/subject link
-   ↓
-MUDAC Identity
-   ↓
-selected Competition Participation
-   ↓
-contextual Access
-   ↓
-resource-owner preconditions
-```
-
-Cognito claims, email, role labels, session state, invitation possession, step-up proof, or technical/operator privilege cannot skip that chain.
-
-Sessions use opaque server-managed state backed by PostgreSQL and select one Participation context at a time. Provider bearer tokens are transient by default. Event Completed removes ordinary Judge capability from source-state authorization regardless of stale browser/session state. Explicit post-event grants remain resource/capability/time bounded and do not transfer Judge authorship.
-
-# Execution boundary
-
-All 008-A through 008-L work remains planning, qualification, reconciliation, or authorization work. No Phase 008 subgroup implements new MUDAC domain behavior.
-
-The first new executable domain work belongs to **Phase 009**, and only after 008-L explicitly authorizes a dependency-safe first slice.
-
-# Historical Phase 006 relationship
-
-006-A through 006-D remain historical implementation-planning/bootstrap provenance. The 006-D executable substrate remains the qualified protected baseline.
-
-006-E through 006-M remain preserved as historical planning lineage but are fully superseded as an executable roadmap by 008-C. 008-D supersedes the persistence-planning substance historically associated with 006-E; 008-E now owns the refreshed Identity/auth/session/Access substance historically planned for 006-F.
-
-# Next
-
-Proceed to **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan**.
+The next repository work is a Phase 010 start-gate/decomposition exercise, not 008-F.

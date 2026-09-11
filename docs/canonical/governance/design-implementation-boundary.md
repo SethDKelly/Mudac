@@ -1,251 +1,158 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's current post-Concept-Design posture, active Phase 008 planning authority, qualified protected 006-D baseline, accepted persistence and identity/authentication implementation contracts, and the explicit gate before new domain implementation begins.
+description: Defines MUDAC's reopened Concept Design posture, suspended downstream architecture/implementation authority, frozen 006-D bootstrap, and the design-only gate that remains in force until a successful methodology closure.
 status: stable
-tags: [governance, methodology, design, implementation, boundary, jackson, planning]
+tags: [governance, methodology, design, implementation, boundary, jackson, reentry]
 sources:
-  - resource: ../../007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md
-  - resource: ../../008-implementation-reentry/README.md
-  - resource: ../../008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md
-  - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
-  - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
-  - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
-  - resource: ../../008-implementation-reentry/008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md
-  - resource: change-governance.md
+  - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
+  - resource: ../../009-jackson-methodology-realignment/009-B-jackson-base-lifecycle-crosswalk-evidence-reuse-gap-map.md
+  - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
+  - resource: downstream-authority-quarantine.md
   - resource: methodology-terminology.md
-  - resource: ../synchronizations/concept-synchronizations.md
-  - resource: ../synchronizations/temporal-truth-correction.md
-  - resource: ../policies/operational-exception-governance.md
-  - resource: ../experience/action-authority-traceability.md
-  - resource: ../implementation/runtime-delivery-bootstrap.md
-  - resource: ../implementation/implementation-foundation.md
-  - resource: ../implementation/persistence-history-projection.md
-  - resource: ../implementation/identity-authentication-access-session.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-11T00:40:00Z }
+  - resource: change-governance.md
 ---
 
 # Purpose
 
-Keep the boundary between completed MUDAC Concept Design, active implementation planning, the qualified bootstrap substrate, future domain implementation, deployment authority, and production readiness explicit.
+Keep the boundary between reopened Jackson Concept Design, historical downstream work, the frozen 006-D bootstrap, future architecture/engineering handoff, implementation execution, and production readiness explicit.
 
 # Current state
 
-MUDAC has formally exited the renewed Jackson Concept Design methodology for the current accepted baseline. 008-A established implementation-planning authority and guardrails. 008-B qualified the retained 006-D executable substrate. 008-C reconciled accepted residuals and historical 006-E–M into current owners. 008-D accepted the persistence/history implementation contract. 008-E has now accepted the Identity/authentication/Participation/Access/session/invitation/secrets/technical-authority implementation contract.
+A fresh methodology review superseded the previous 007-I Concept Design closure as current authority. Phase 009 has completed the formal realignment/gap map and established the dependency-safe completion runway.
 
-The governing status is:
+Current governing posture:
 
 ```text
-Jackson Concept Design methodology: COMPLETE / EXITED
-baseline semantic design: COMPLETE
-known baseline semantic blockers: NONE OPEN
-Phase 008 subdivision: COMPLETE
-implementation planning authority: ESTABLISHED
-008-A: COMPLETE
-008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-008-C: COMPLETE — PASS
-008-D: COMPLETE — PASS
-008-E: COMPLETE — PASS
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-persistence/history implementation plan: ACCEPTED / NOT IMPLEMENTED
-identity/auth/access/session implementation plan: ACCEPTED / NOT IMPLEMENTED
-008-F: NEXT / NOT STARTED
-first executable domain slice: NOT YET AUTHORIZED
-new domain implementation after 006-D: NOT STARTED
+Jackson Concept Design methodology: REOPENED / NOT COMPLETE
+previous 007-I methodology exit: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
+Phase 008 implementation re-entry: HALTED AFTER 008-E
+008-A..E: HISTORICAL / PREMATURE DOWNSTREAM PLANNING
+008-F..L: NOT STARTED / NOT ACTIVE
+006-D executable bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
+canonical architecture authority: SUSPENDED PENDING DESIGN CLOSURE
+canonical implementation authority: SUSPENDED PENDING DESIGN CLOSURE
+implementation readiness: NOT READY
+new domain implementation: NOT STARTED
+implementation authorization: NOT YET
+Phase 009: COMPLETE — PASS
+Phase 010: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
-The formal design exit is scoped to the current baseline. New scope or a genuine later contradiction may require renewed design under canonical change governance.
+# Current authority direction
 
-# Current planning authority
-
-Phase 008 follows the authority direction established in 008-A:
+During reopened Concept Design:
 
 ```text
-canonical product / synchronization / policy / mechanism /
-invariant / experience / governance meaning
+human product intent / evidence
         ↓
-canonical architecture
+current canonical conceptual owners
         ↓
-canonical implementation contracts
+phase-specific Jackson methodology analysis
         ↓
-Phase 008 implementation-planning decisions
-        ↓
-future executable realization and evidence
+corrected current conceptual design
+
+historical architecture / implementation
+        = evidence or contamination probe only
+        ≠ design constraint
 ```
 
-The Design / Implementation Boundary separately owns **execution posture**.
+The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
 
-Historical phase records provide rationale/provenance. Routing artifacts route. Code, tests, schema, generated artifacts and IaC realize downstream choices. None silently replaces its upstream owner.
+# What remains authoritative
 
-# Qualified protected 006-D baseline
+Current product/conceptual authority remains in task-relevant canonical:
 
-008-B audited the retained non-domain workspace against current authority and found no semantic, architectural, or accidental-domain-implementation blocker.
+- Concepts;
+- synchronizations and temporal/correction semantics;
+- policies;
+- mechanisms where they are intentionally non-Concepts;
+- invariants;
+- conceptual experience/mapping knowledge;
+- methodology/documentation/change governance.
 
-The baseline remains qualified for later Phase 008 planning and contains only the accepted bootstrap class:
+These owners are subject to correction by the remaining Jackson phases. Historical phase records remain evidence and rationale rather than immutable truth.
 
-- pinned Node/pnpm/TypeScript/application-tool manifests and committed lockfile;
-- minimal API, worker and browser composition roots;
-- six authoritative module package seams without domain behavior;
-- `application`, `projections`, `foundation`, and `test-support` boundaries;
-- Docker Compose PostgreSQL without authoritative MUDAC schema/migrations;
-- CI/static/dependency enforcement and supply-chain configuration;
-- separate OpenTofu nonproduction/production/recovery roots without AWS application resources.
+# What is suspended
 
-Qualification means the substrate may be relied upon as **planning input**. It does not authorize domain extension of that substrate.
+Until successful Phase 017 closure:
 
-# Reconciled residual and historical-plan ownership
+- Phase 005 architecture conclusions do not constrain Concept Design;
+- `docs/canonical/architecture/` is preserved as candidate downstream knowledge, not current design authority;
+- Phase 006 implementation planning is historical only;
+- Phase 008 implementation planning is halted;
+- `docs/canonical/implementation/` is preserved as downstream candidate/tooling knowledge, not current domain realization authority;
+- 008-D persistence/history choices and 008-E identity/authentication/session choices are hypotheses requiring post-closure revalidation.
 
-008-C closes the ambiguity around accepted downstream uncertainty.
+# Frozen 006-D executable substrate
 
-All six 007-H Class 2 architecture details and all twelve Class 3 implementation/evidence questions have current Phase 008 owners. The two 008-B administration/evidence limitations are carried to 008-K/008-L. All seven Class 4 future-scope items remain outside the current baseline unless `CHG-*` deliberately reopens them.
+The repository already contains a real non-domain bootstrap created before design completion was reassessed.
 
-Historical 006-E through 006-M is fully superseded as an executable roadmap. Its useful dependency rationale remains provenance, but current planning routes only through 008-D through 008-L.
+It remains frozen and may receive only narrow safety/build maintenance that does not add MUDAC domain semantics or constrain the design. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu/tooling choices are historical implementation facts, not conceptual requirements.
 
-# Accepted 008-D persistence implementation contract
+# Prohibited work during Phases 010–017
 
-008-D resolves the physical persistence choices needed by downstream planning while remaining non-executable.
+Do not begin or resume:
 
-Current implementation planning may assume one module-owned PostgreSQL authority database; stable UUID resource identities; monotonic mutable-root revisions; mutable current state distinct from immutable semantic Version history; module-local Provenance; explicit correction/invalidation/replacement; policy-specific governed exceptions; immutable Official Outcome Revision substrate; transactional at-least-once outbox; basis-aware rebuildable projections; SQL-first owner-scoped forward migrations; and conservative historical retention.
+- domain PostgreSQL schemas, migrations, repositories, outbox or projections;
+- Cognito/login/session/Identity/Participation/Access implementation;
+- production domain commands, queries, APIs, transactions or idempotency mechanisms;
+- IndexedDB domain Draft/synchronization implementation;
+- Competition/Judging/Evaluation/Outcome/Award/Export/Publication feature code;
+- domain-purpose AWS application provisioning;
+- implementation-plan continuation from 008-F through 008-L;
+- architecture decisions intended to constrain the remaining Concept Design.
 
-Durable detail is owned by [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](../implementation/persistence-history-projection.md).
-
-These are **accepted planning constraints, not created database objects**.
-
-# Accepted 008-E identity/authentication implementation contract
-
-008-E resolves the physical authentication-to-authority chain needed by command/API planning while remaining non-executable.
-
-Current implementation planning may assume:
-
-```text
-Cognito/OIDC authentication proof
-        ↓
-explicit provider/issuer + subject link
-        ↓
-stable MUDAC Identity
-        ↓
-exactly one selected Competition Participation context
-        ↓
-contextual Access/grant evaluation
-        ↓
-resource-owner semantic preconditions
-```
-
-The accepted realization includes:
-
-- Cognito User Pools behind a provider adapter, using authorization-code authentication with state/nonce/PKCE and server-side exchange;
-- no provider bearer tokens in script-readable browser storage and no default long-term provider-token retention after MUDAC session establishment;
-- external principal linkage by provider/issuer + subject rather than email/name/group claims;
-- one Participation per Identity × Competition × role and explicit dual-role context selection rather than unioned privileges;
-- contextual Access rather than a generic database RBAC authority model;
-- retained, resource/capability/time/purpose-bounded explicit grants;
-- Event Completed source-state authorization overriding stale session/browser state for ordinary Judge private-evaluation capability;
-- opaque PostgreSQL-backed first-party sessions with digest-only bearer-token storage, bounded lifetime, rotation and server revocation;
-- bounded invitation/Participation-claim mechanisms whose possession alone does not grant Identity or Access;
-- separate provider credential recovery and explicit MUDAC principal-link recovery, with no silent email/name merge;
-- step-up/reverification as stronger proof rather than capability creation;
-- technical/operator/break-glass authority distinct from Judge/Organizer semantic authority, with no baseline user impersonation mechanism;
-- server-only secret storage/configuration boundaries.
-
-Durable detail is owned by [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](../implementation/identity-authentication-access-session.md).
-
-These are **accepted planning constraints, not Cognito resources, session cookies, database tables, or implemented authorization behavior**.
-
-# What Phase 008 planning authority permits
+# Permitted work
 
 Current work may:
 
-- use the qualified 006-D substrate as a concrete starting assumption;
-- consume the 008-C residual/historical-plan ownership map;
-- consume the accepted 008-D persistence/history implementation contract;
-- consume the accepted 008-E server-derived Identity/Participation/Access/session contract;
-- define concrete command/query/transaction/API, browser, vertical-slice, outcome/externalization and evidence mechanisms where upstream authority leaves implementation latitude;
-- create implementation decision records where `IMPL-015` warrants them;
-- update canonical implementation owners when durable downstream contracts change;
-- define verification/evidence gates and explicit implementation-entry criteria;
-- prepare a specifically bounded first domain implementation slice for 008-L authorization.
+- execute Phases 010–017 of the methodology completion runway;
+- update canonical conceptual owners when design meaning changes;
+- inspect historical architecture/implementation only for contamination, assumptions, counterexamples or later handoff evidence;
+- maintain the frozen bootstrap narrowly for repository safety/buildability;
+- improve documentation/routing/validation that supports the design process.
 
-008-F is next and owns Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API implementation planning.
-
-# What Phase 008 does not authorize
-
-Completion of 008-A through 008-E does **not** authorize domain implementation.
-
-Until **008-L — Consolidated Dependency Graph, Implementation Roadmap, First-Slice Authorization & Phase Exit Review** explicitly authorizes a first executable slice, do not create new:
-
-- authoritative domain PostgreSQL schemas, migrations, repositories, outbox or projections described by 008-D;
-- Cognito User Pools/app clients/domains, login/callback/session/Invitation/Identity/Participation/Access behavior described by 008-E;
-- production domain commands, queries, APIs, transactions or idempotency behavior;
-- IndexedDB domain Draft/synchronization behavior;
-- Competition/Judging/Evaluation/Outcome/Award/Export/Publication feature behavior;
-- domain-purpose AWS application provisioning/deployment.
-
-The status distinctions remain:
+# Completion runway
 
 ```text
-qualified bootstrap
-    ≠
-accepted implementation plan
-    ≠
-first executable slice authorized
-    ≠
-domain implementation started
-    ≠
-merge ready
-    ≠
-deployment ready
-    ≠
-production ready
+009 realignment / gap map                         COMPLETE
+  ↓
+010 purpose / rediscovery / specification /
+    modularity completion                         NEXT
+  ↓
+011 composition / synchronization revalidation
+  ↓
+012 dependence / subsets / product-family / scope
+  ↓
+013 mapping / representation revalidation
+  ↓
+014 familiarity / reuse / genericity
+  ↓
+015 integrity / interference
+  ↓
+016 scenario / misfit / adversarial validation
+  ↓
+017 methodology completeness / canonical closure
 ```
 
-008-L may authorize a Phase 009 entry slice. 008-L itself performs no domain implementation.
+The sequence may reopen earlier design owners when later evidence exposes a defect.
 
-# Phase 006 treatment
+# Meaning of future successful closure
 
-Phase 006 remains historical implementation-planning/bootstrap provenance.
+A successful Phase 017 may establish:
 
-006-A through 006-D accurately record prior planning/bootstrap work. The executable portion of 006-D was re-qualified by 008-B rather than silently resumed.
+```text
+Concept Design readiness for downstream work: READY
+implementation execution: NOT STARTED
+implementation authorization: NOT GRANTED BY CONCEPT-DESIGN CLOSURE
+```
 
-006-E through 006-M remain preserved historical planning lineage but are fully superseded as current executable authority. Their explicit disposition is owned by 008-C. The persistence substance historically associated with 006-E is superseded by 008-D. The Identity/authentication/session/Access substance historically associated with 006-F is superseded by 008-E.
-
-# Open evidence and administration limits
-
-008-C carries the 008-B limitations forward to named owners:
-
-1. repository rulesets/branch-protection enforcement remains an 008-K evidence/admin item and an 008-L authorization consideration;
-2. Dependabot alert inventory remains unavailable through the current connector and is assigned to 008-K security evidence.
-
-008-D leaves retention periods, backup/restore objectives, RDS sizing, migration deployment evidence and projection recovery exercises to 008-K.
-
-008-E additionally leaves concrete production session idle/absolute durations, final step-up thresholds, secret-rotation evidence, abuse/threat testing and security monitoring to 008-K. 008-F owns final CSRF/origin composition; 008-G owns browser cache/private-state cleanup mechanics.
-
-None of those details blocks continued planning because their required authority boundaries are already fixed.
-
-# Change control during implementation planning
-
-Completed Concept Design remains current semantic authority, not immutable dogma.
-
-If planning or later implementation discovers a genuine canonical contradiction, missing independent Concept, impossible synchronization/authority requirement, unmodeled correction/history condition, or material new product scope, return through `CHG-*` and deliberate design as necessary.
-
-If an implementation mechanism merely conflicts with current canonical meaning, the mechanism changes by default under `CHG-005` and `IMPL-001`.
-
-Implementation inconvenience, framework preference, storage convenience, authentication-provider convenience, UI convenience, testing convenience, or technical/operator privilege alone does not authorize semantic weakening.
-
-# Documentation and context boundary
-
-Phase 008 follows `DOC-*` and `CTX-*`:
-
-- canonical owners control durable current meaning;
-- numbered Phase 008 records preserve planning rationale/evidence without becoming a parallel rule store;
-- `persistence-history-projection.md` owns the durable 008-D implementation result;
-- `identity-authentication-access-session.md` owns the durable 008-E implementation result;
-- historical phases are loaded only when rationale, chronology, or supersession requires them;
-- routing artifacts summarize and link rather than own rules;
-- agents stop expanding context once the material authority set is sufficient.
+It will authorize only a separate downstream architecture/engineering re-entry. It will not automatically reactivate Phase 005 architecture, Phase 008 planning, or any old first-slice proposal.
 
 # Current handoff
 
-Proceed to **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan** under [Phase 008](../../008-implementation-reentry/).
+Proceed to the **Phase 010 entry/decomposition exercise** for:
 
-008-F may rely on the accepted 008-D persistence contract and 008-E server-derived identity/access/session contract as planning inputs. New domain implementation remains **NOT STARTED** and no first executable slice is authorized until 008-L explicitly changes this boundary.
+> **Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion**

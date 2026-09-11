@@ -1,43 +1,68 @@
 ---
 type: Documentation Authority
 title: Methodology, OKF Adoption & Terminology
-description: Defines the authority relationship between Daniel Jackson Concept Design, OKF, MUDAC terminology, and future implementation structure.
+description: Defines the authority relationship among Daniel Jackson Concept Design, the Base lifecycle operationalization, OKF, MUDAC terminology, and downstream architecture/implementation structure.
 status: stable
-tags: [governance, methodology, okf, terminology]
+tags: [governance, methodology, jackson, base, okf, terminology]
 sources:
   - resource: ../../004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
+  - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
+  - resource: https://github.com/SethDKelly/Base/blob/main/docs/methodology/concept-design-lifecycle.md
 ---
 
 # Canonical contract
 
-Daniel Jackson Concept Design determines MUDAC product meaning. OKF v0.2 is the adopted knowledge representation, metadata, linking, provenance, and progressive-disclosure convention.
+Daniel Jackson Concept Design determines MUDAC product meaning. OKF v0.2 structures and exposes MUDAC knowledge. The `SethDKelly/Base` lifecycle is the currently adopted completion-control operationalization used to ensure Jackson's substantive design concerns are exercised in a dependency-safe order.
 
 ```text
-Concept Design
-    discovers / specifies product meaning
+Daniel Jackson Concept Design
+    = methodology / product-design authority
 
-OKF
-    structures and exposes the resulting knowledge
+Base lifecycle
+    = project-process operationalization and completion control
+
+OKF v0.2
+    = knowledge representation, linking and progressive disclosure
+
+MUDAC numbered phases
+    = project-specific execution and evidence history
 ```
 
-OKF does not redefine MUDAC application Concepts, authority, lifecycle, policies, or architecture.
+Base phase numbering is **not** represented as Daniel Jackson's official prescribed lifecycle. Where phase numbering differs, substantive methodology coverage controls.
+
+# Current methodology posture
+
+The previous MUDAC 007-I methodology exit has been reopened. Phase 009 established the current gap map and Phase 010–017 completion runway.
+
+Until successful Phase 017 closure:
+
+- Jackson Concept Design is not complete;
+- implementation readiness remains not ready;
+- architecture and implementation material are downstream candidates, not Concept Design constraints;
+- current work follows the design-only boundary.
 
 # OKF version authority
 
 MUDAC currently adopts OKF **v0.2**. A newer upstream OKF release is not automatically adopted; it requires explicit compatibility review and repository adoption.
 
-The dedicated `GoogleCloudPlatform/open-knowledge-format` repository is the upstream authority identified by Phase 004. Historical frozen copies are not the MUDAC implementation baseline.
+OKF does not redefine MUDAC Concepts, authority, lifecycle, policies, synchronizations or scope.
 
 # Concept terminology
 
-`MUDAC Concept` means a Daniel Jackson application Concept accepted through Concept Design.
+`MUDAC Concept` means a Daniel Jackson application Concept accepted through the current Concept Design process.
 
-An `OKF knowledge document` is a unit of repository knowledge. Creating a document for Coverage, Rank, a policy, an invariant, or an experience contract does not promote that subject into the MUDAC Concept catalog.
+An `OKF knowledge document` is a unit of repository knowledge. Creating a document for Coverage, Rank, a policy, an invariant, a mapping, an architecture decision or an implementation choice does not promote that subject into the MUDAC Concept catalog.
+
+# Design versus downstream terminology
+
+`Concept Design` refers to representation-independent product meaning: purposes, concepts, state/actions/operational principles, composition, dependence/scope, mapping obligations, familiarity/reuse, integrity and contextual fit.
+
+`Architecture` and `implementation` are downstream realization layers. During the reopened methodology they may provide historical evidence or contamination probes, but they do not define conceptual meaning.
 
 # Provenance terminology
 
-`OKF/source lineage` explains why a knowledge document says what it says and which design sources materially produced/refined it.
+`OKF/source lineage` explains why a knowledge document says what it says and which sources materially produced or refined it.
 
 The MUDAC `Provenance` Concept explains how Competition-domain state arose or changed and through whose authority.
 
@@ -45,12 +70,10 @@ These are separate layers.
 
 # Verification terminology
 
-OKF/document verification metadata describes verification of a knowledge artifact. It must not be confused with Competition-domain verification such as paper Scorecard transcription verification.
-
-Detailed trust/verification metadata conventions are defined in 004-G.
+OKF/document verification metadata describes verification of a knowledge artifact. It must not be confused with Competition-domain verification such as paper Scorecard transcription verification or later implementation/testing evidence.
 
 # Structure boundary
 
-Knowledge topology is a retrieval/authority structure, not a mandate for source-code package, service, database, API, or AWS topology.
+Knowledge topology is a retrieval/authority structure, not a mandate for source-code package, service, database, API, AWS topology or implementation sequence.
 
-Future architecture may organize implementation differently as long as it satisfies the canonical product/UX contracts and preserves traceable relationships back to them.
+Future downstream engineering may organize implementation differently as long as it satisfies the successfully closed conceptual design and preserves traceability.

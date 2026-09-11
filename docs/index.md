@@ -4,86 +4,88 @@ okf_version: "0.2"
 
 # MUDAC Knowledge Bundle
 
-Preferred progressive-disclosure entry point for MUDAC design, architecture, implementation, and governance knowledge.
+Preferred progressive-disclosure entry point for MUDAC design and governance knowledge.
 
-Current meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance.
+Current conceptual meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. Architecture and implementation material are preserved but currently quarantined from constraining reopened Concept Design.
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) — current MUDAC Concepts, synchronizations, mechanisms, policies, invariants, experience contracts, governance, architecture, and implementation contracts.
-* [Concepts](canonical/concepts/) — current sixteen-Concept Jackson catalog.
-* [Synchronizations](canonical/synchronizations/) — current cross-concept coordination plus temporal/correction/historical-truth contracts.
-* [Policies](canonical/policies/) — current governing/configurable semantics, including Operational Exception & Override Governance.
-* [Experience](canonical/experience/) — current Judge/Organizer interaction semantics and authority traceability.
-* [Governance](canonical/governance/) — documentation/change/context governance and the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
-* [Stable Rule Identifiers](canonical/governance/rule-identifiers.md) — durable normative IDs and cross-reference registry.
-* [Architecture](canonical/architecture/) — current accepted system/application architecture contracts.
-* [Implementation](canonical/implementation/) — accepted implementation/tooling contracts, the qualified protected 006-D bootstrap, the accepted 008-D persistence/history contract, and the accepted 008-E Identity/authentication/Access/session contract.
+* [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance plus suspended downstream candidate architecture/implementation material.
+* [Concepts](canonical/concepts/) — current sixteen-Concept catalog, subject to methodology-completion revalidation.
+* [Synchronizations](canonical/synchronizations/) — current composition and temporal/correction semantics, subject to Phase 011 revalidation.
+* [Policies](canonical/policies/) — current governing/configurable conceptual semantics.
+* [Experience](canonical/experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
+* [Governance](canonical/governance/) — methodology, documentation/change/context governance, [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), and [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
+* [Architecture](canonical/architecture/) — preserved **suspended downstream candidates**, not current Concept Design constraints.
+* [Implementation](canonical/implementation/) — preserved **suspended downstream candidates** plus the frozen historical 006-D bootstrap facts.
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then follow this bundle root and only task-relevant canonical owners. `AGENTS.md` is an adapter, not a competing rule store.
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, the active methodology phase, and only task-relevant conceptual owners.
 
-Before any implementation/code/IaC task, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md).
+During Phases 010–017, do not preload architecture/implementation unless the task explicitly concerns contamination analysis or historical comparison.
 
 # External Authorities and References
 
-* [References](references/) — external methodologies, standards, specifications, and MUDAC adoption/profile context, including the pinned Open Knowledge Format v0.2 reference.
+* [References](references/) — external methodologies, standards, specifications and MUDAC adoption/profile context.
+* [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) — current Jackson-aligned lifecycle operationalization used for completion-control reference; its numbering is not represented as Daniel Jackson's official phase sequence.
 
 # Design History and Current Phase
 
-* [Phase 001 — Concept Design Foundation](001-concept-design/) — Complete.
-* [Phase 002 — Concept Specification](002-concept-specification/) — Complete.
-* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) — Complete.
-* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — Complete.
-* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — Complete as historical architecture exit.
-* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — Historical after 006-D; 006-E through 006-M are explicitly mapped/superseded planning lineage.
-* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — **Complete — formal methodology exit passed**.
-* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **In Progress — 008-A/B/C/D/E complete; 008-F next**.
+* [Phase 001 — Concept Design Foundation](001-concept-design/) — substantial reusable design evidence.
+* [Phase 002 — Concept Specification](002-concept-specification/) — substantial reusable behavioral-specification evidence.
+* [Phase 003 — Conceptual UX Architecture](003-conceptual-ux-architecture/) — substantial reusable mapping/experience evidence.
+* [Phase 004 — Knowledge Architecture](004-knowledge-architecture/) — current documentation/OKF governance foundation.
+* [Phase 005 — System, Application, Data & Synchronization Architecture](005-system-application-data-synchronization-architecture/) — historical architecture work; suspended as a Concept Design constraint.
+* [Phase 006 — Implementation Planning, Delivery Slices & Verification Strategy](006-implementation-planning/) — historical downstream planning/bootstrap; 006-D executable substrate frozen.
+* [Phase 007 — Jackson Design Refinement & Methodology Closure](007-design-refinement/) — substantial reusable design evidence; 007-I closure **superseded as current closure authority**.
+* [Phase 008 — Implementation Re-entry, Plan Refresh & Execution Readiness](008-implementation-reentry/) — **halted after 008-E; historical premature downstream planning**.
+* [Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry](009-jackson-methodology-realignment/) — **Complete — PASS**.
+* **Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion — Next.**
 
-# Active Phase 008 planning posture
-
-[008-A](008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md) established implementation-planning authority. [008-B](008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md) qualified the retained 006-D substrate. [008-C](008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md) closed residual/historical-plan ownership.
-
-[008-D](008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md) is **Complete — PASS**. Durable current implementation detail is owned by [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](canonical/implementation/persistence-history-projection.md).
-
-[008-E](008-implementation-reentry/008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md) is **Complete — PASS**. Durable current implementation detail is owned by [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](canonical/implementation/identity-authentication-access-session.md).
-
-The current boundary is:
+# Current posture
 
 ```text
-Jackson Concept Design methodology: COMPLETE / EXITED
-baseline semantic design: COMPLETE
-known baseline semantic blockers: NONE OPEN
-implementation planning authority: ESTABLISHED
-008-A: COMPLETE
-008-B: COMPLETE — PASS AFTER NARROW REMEDIATION
-008-C: COMPLETE — PASS
-008-D: COMPLETE — PASS
-008-E: COMPLETE — PASS
-protected 006-D baseline: QUALIFIED FOR PHASE 008 PLANNING
-persistence/history implementation plan: ACCEPTED / NOT IMPLEMENTED
-identity/auth/access/session implementation plan: ACCEPTED / NOT IMPLEMENTED
-008-F: NEXT / NOT STARTED
-first executable domain slice: NOT YET AUTHORIZED
-new domain implementation after 006-D: NOT STARTED
+Jackson Concept Design methodology: REOPENED / NOT COMPLETE
+007-I previous closure: SUPERSEDED AS CURRENT CLOSURE AUTHORITY
+008 implementation re-entry: HALTED AFTER 008-E
+architecture authority: SUSPENDED PENDING DESIGN CLOSURE
+implementation-planning authority: SUSPENDED
+006-D executable bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
+new domain implementation: NOT STARTED
+implementation readiness: NOT READY
+implementation authorization: NOT YET
+009: COMPLETE — PASS
+010: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
-008-F now owns Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API implementation planning. It must consume the accepted 008-D persistence/history contract and 008-E server-derived Identity/Participation/Access/session contract rather than redefining either inside transport code.
+# Completion runway
+
+```text
+010 purpose / rediscovery / specification / modularity completion
+  ↓
+011 composition / synchronization / application-action revalidation
+  ↓
+012 dependence / product-family / subsets / scope
+  ↓
+013 mapping / interaction / representation revalidation
+  ↓
+014 familiarity / reuse / genericity / catalog refinement
+  ↓
+015 integrity / cross-concept interference
+  ↓
+016 scenario / misfit / exception / failure / adversarial validation
+  ↓
+017 methodology completeness / canonical consolidation / closure
+```
+
+A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture, Phase 008 planning, or implementation.
 
 # Navigation Guidance
 
-For current meaning, use [Canonical Knowledge](canonical/) and load only task-relevant owners/dependencies. For implementation planning, load the current [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md), [Phase 008 routing](008-implementation-reentry/), task-relevant architecture, and accepted implementation contracts.
+For current design work, use the active phase record plus task-relevant Concepts/synchronizations/policies/mechanisms/invariants/experience/governance owners. Use older phase records only for evidence, alternatives, chronology or provenance.
 
-For persistence/history/migration work, load [Persistence, History, Provenance, Outbox, Projection & Migration Implementation Contract](canonical/implementation/persistence-history-projection.md) plus only materially relevant upstream semantic/architecture owners.
+Before any code/IaC or downstream-planning request, load [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). During reopened Concept Design the answer is normally that downstream execution is suspended unless the requested work is narrow bootstrap safety/build maintenance.
 
-For authentication, Identity, Participation, Access, session, invitation, recovery, reverification, or technical-authority work, load [Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical Authority Implementation Contract](canonical/implementation/identity-authentication-access-session.md).
-
-Use historical Phase 006 only when rationale or provenance materially helps. For current historical-plan disposition, use 008-C rather than reconstructing the old deferred queue.
-
-The immediate next task is **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan**.
-
-Passing Knowledge Validation, Implementation Verification, or CodeQL is evidence for the checked revision; none creates semantic verification, executable-slice authorization, deployment authority, or production certification.
-
-See [docs/README.md](README.md) for a human-oriented authority summary.
+The immediate next task is a **Phase 010 entry/decomposition exercise**.

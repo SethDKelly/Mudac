@@ -1,23 +1,39 @@
 # Architecture
 
-Current accepted MUDAC system/application architecture contracts and decisions.
+This subtree preserves the architecture MUDAC selected before the latest Jackson methodology completion reassessment.
 
-Architecture remains downstream of canonical product, UX, invariant, policy, and governance knowledge. Architecture owners describe how those upstream contracts are realized; they do not redefine product meaning for implementation convenience.
+## Current authority state
 
-# Current architecture
+**SUSPENDED AS A CONCEPT-DESIGN CONSTRAINT.**
 
-* [Architectural Foundation, Quality Attributes & Trust Boundaries](architectural-foundation.md) — `ARCH-*` architecture-wide constraints for authoritative transitions, client/local state, projections, attribution, retry/failure behavior, disclosure enforcement, freshness/uncertainty, trust boundaries, and architecture decision quality.
-* [Application Boundaries, Modules & Dependency Architecture](application-boundaries.md) — `MOD-*` ownership/dependency contracts; six authoritative semantic modules, non-authoritative projection/query composition, thin cross-module coordination, and modular-monolith-first deployment posture.
-* [Data, Persistence, Versioning, Provenance & Projection Architecture](data-persistence.md) — `DATA-*` persistence contracts; one PostgreSQL-compatible relational authority store with module-owned namespaces, stable IDs, append-stable Versions/Provenance, reconstructible derived state, rebuildable projections, and transactional change propagation without primary event sourcing.
-* [Identity, Authentication, Access & Session Architecture](identity-access-session.md) — `AUTH-*` identity/security contracts; provider-backed authentication mapped to stable MUDAC Identity, explicit Participation context, contextual Access, opaque first-party server sessions, event-completion expiry, role-context isolation, revocation, narrow correction grants, and break-glass separation.
-* [Commands, Queries, API, Transaction & Concurrency Architecture](commands-api-concurrency.md) — `API-*` request/transaction contracts; HTTPS/JSON command-query separation, current-context authorization, confirmed-after-commit semantics, optimistic concurrency, targeted locking/isolation, durable idempotency, lost-response recovery, and explicit projection freshness.
-* [Draft Synchronization, Offline & Recovery Architecture](synchronization-recovery.md) — `SYNC-*` continuity contracts; bounded local Draft persistence, revision-aware synchronization, conflict preservation, online-only authoritative transitions, reconnect/Access revalidation, truthful sync state, and paper/electronic convergence.
-* [External Representation, Artifact & Publication Architecture](external-representation.md) — `REP-*` externalization contracts; paper-source/capture authority boundaries, exact source/disclosure binding, immutable artifact bytes and digests, object-storage separation, idempotent generation, validation, explicit publication, supersession, and end-to-end representation provenance.
-* [Front-End State, Navigation & Interaction Architecture](frontend-interaction.md) — `FE-*` browser contracts; React/TypeScript baseline, React Router route boundaries, TanStack Query remote cache, IndexedDB Draft continuity, explicit role/context and command states, accessible component layering, phone-primary Judge interaction, exception-first Organizer responsiveness, and failure/recovery containment.
-* [AWS Runtime, Security & Operations Architecture](aws-runtime-operations.md) — `AWS-*` production-cloud contracts; single-active `us-east-2` Multi-AZ topology, CloudFront private origins, ECS/Fargate modular-monolith runtime, RDS PostgreSQL Multi-AZ authority, Cognito authentication adapter, encrypted/versioned S3, SQS asynchronous work, GitHub-OIDC deployment, observability, cross-Region recovery, and cost guardrails.
+Concept Design is reopened through the Phase 009 realignment. Until successful Phase 017 closure and a separate downstream architecture/engineering re-entry, these documents are **candidate downstream architecture knowledge**, not current authority over product meaning.
 
-# Authority rule
+The controlling rules are:
 
-Accepted architecture documents are current owners for architecture meaning in this subtree while numbered Phase 005 records preserve alternatives, rationale, tradeoffs, and decision lineage.
+- [Design / Implementation Boundary](../governance/design-implementation-boundary.md)
+- [Downstream Architecture & Implementation Authority Quarantine](../governance/downstream-authority-quarantine.md)
 
-Architecture must cite task-relevant upstream stable rules and state local consequences rather than recreating complete upstream rule bodies. Knowledge topology does not dictate source-code topology.
+## Preserved candidate architecture
+
+* [Architectural Foundation, Quality Attributes & Trust Boundaries](architectural-foundation.md)
+* [Application Boundaries, Modules & Dependency Architecture](application-boundaries.md)
+* [Data, Persistence, Versioning, Provenance & Projection Architecture](data-persistence.md)
+* [Identity, Authentication, Access & Session Architecture](identity-access-session.md)
+* [Commands, Queries, API, Transaction & Concurrency Architecture](commands-api-concurrency.md)
+* [Draft Synchronization, Offline & Recovery Architecture](synchronization-recovery.md)
+* [External Representation, Artifact & Publication Architecture](external-representation.md)
+* [Front-End State, Navigation & Interaction Architecture](frontend-interaction.md)
+* [AWS Runtime, Security & Operations Architecture](aws-runtime-operations.md)
+
+## Permitted use during Phases 010–017
+
+Architecture material may be consulted only to:
+
+- detect implementation/architecture contamination of conceptual design;
+- expose assumptions worth challenging;
+- understand historical rationale;
+- preserve evidence for later post-closure revalidation.
+
+It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
+
+A successful Phase 017 closure will **not automatically reactivate** these documents. A separate downstream re-entry must compare them against the closed conceptual design and decide what remains justified.
