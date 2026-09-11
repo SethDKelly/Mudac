@@ -2,17 +2,16 @@
 
 MUDAC is a design-governed application effort for fair, traceable, resilient judging at live student data competitions.
 
-The current project mandate and purpose model are intentionally representation-independent: volunteer Judges and competition Organizers need to conduct, preserve, reconcile and explain independent evaluation under real event-day constraints while protecting bias-sensitive Team identity, trustworthy authority and historical evidence. The current sixteen-Concept catalog remains an incumbent hypothesis rather than a protected answer.
+The current project mandate and purpose model are intentionally representation-independent: volunteer Judges and competition Organizers need to conduct, preserve, reconcile and explain independent evaluation under real event-day constraints while protecting bias-sensitive Team identity, trustworthy authority and historical evidence.
 
 ## Start here
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate plus purpose, actor/affected-party needs, success situations, tensions and rediscovery pressure.
+* [`docs/canonical/project/`](docs/canonical/project/) — current project/intake mandate and purpose baseline.
 * [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundational Concept Design completion work.
-* [`docs/009-jackson-methodology-realignment/`](docs/009-jackson-methodology-realignment/) — completed formal methodology realignment/gap map and design re-entry.
+* [`docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md`](docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) — current candidate rediscovery evidence and specification-pressure set.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
-* [`docs/canonical/governance/downstream-authority-quarantine.md`](docs/canonical/governance/downstream-authority-quarantine.md) — prevents premature architecture/implementation work from constraining reopened Concept Design.
 
 ## Current status
 
@@ -31,79 +30,63 @@ implementation authorization: NOT YET
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 ```
 
 ## Phase 010 decomposition
 
 ```text
-010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure &
-        Subphase Planning                                      COMPLETE
-  ↓
-010-B — Current Project Mandate, Actors, Outcomes, Scope,
-        Constraints & Evidence Reconciliation                  COMPLETE
-  ↓
-010-C — Purpose, Need, Success, Tension & Purpose-to-Concept
-        Traceability Revalidation                              COMPLETE
-  ↓
-010-D — Candidate Concept Rediscovery, Divergent Alternatives &
-        Rejected/Deferred Candidate Reassessment               NEXT
-  ↓
-010-E — Retained Concept Purpose, Operational Principle, State,
-        Action & Behavioral-Specification Current-Truth Audit
-  ↓
-010-F — Specificity, Purpose Singularity & Concept-Boundary
-        Alternative Audit
-  ↓
-010-G — Completeness, Independence & Genericity-for-Boundary Audit
-  ↓
-010-H — Concept Boundary Convergence, Re-specification &
-        Canonical Reconciliation
-  ↓
-010-I — Phase 010 Consolidation, Methodology-Coverage Decision &
-        Phase 011 Handoff
+010-A — intent / evidence reuse / decomposition               COMPLETE
+010-B — project mandate / actors / scope / constraints        COMPLETE
+010-C — purpose / need / success / tensions                   COMPLETE
+010-D — candidate rediscovery / divergent alternatives        COMPLETE
+010-E — behavioral specification current-truth audit          NEXT
+010-F — specificity / purpose singularity
+010-G — completeness / independence / boundary genericity
+010-H — convergence / re-specification / canonical repair
+010-I — consolidation / exit / Phase 011 handoff
 ```
 
-010-B established the project/intake baseline without using the Concept catalog as the project definition. 010-C then established nine need-focused purpose obligations independently of incumbent Concept names and tested only provisional traceability afterward.
+010-D did **not** canonically replace the incumbent sixteen Concepts. It retained them as provisional candidates for behavioral audit and added four challengers that 010-E must test explicitly:
 
-The main 010-D pressure is now explicit: live coordination, continuity and outcome formation are distributed across current Concepts and non-Concept mechanisms, while several current Concept splits remain instrumentally rather than independently justified. Candidate rediscovery must therefore be genuinely divergent.
+1. **Evaluation Assignment / Obligation**
+2. **Evaluation Sufficiency**
+3. **Reconciliation / Resolution**
+4. **Official Outcome / Outcome Declaration**
+
+Required merge/reframe comparisons also remain open around actor context, judging occurrence/assignment, authority history, and external representation/release.
+
+Aggregate, Rank and Readiness remain strong derived-mechanism candidates after rediscovery. Recovery/Continuity remains a first-class purpose obligation but not an independent Concept candidate unless later specification exposes missing behavior.
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
 ## Completion runway
 
 ```text
-010 — Project/Purpose Traceability, Candidate Rediscovery,
-      Specification & Modularity Completion
+010 foundational project/purpose/discovery/specification/modularity completion
   ↓
-011 — Concept Composition, Synchronization, Application Action
-      Surface & Automation Revalidation
+011 composition / synchronization revalidation
   ↓
-012 — Concept Dependence, Product-Family, Subset & Scope Analysis
+012 dependence / subsets / product-family / scope
   ↓
-013 — Concept Mapping, Interaction Semantics & User-Visible
-      Representation Revalidation
+013 mapping / interaction / representation revalidation
   ↓
-014 — Familiarity, Reuse, Genericity & Concept-Catalog Refinement
+014 familiarity / reuse / genericity
   ↓
-015 — Concept Integrity, Cross-Concept Coherence & Interference Audit
+015 integrity / cross-concept interference
   ↓
-016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
+016 scenario / misfit / exception / failure / adversarial validation
   ↓
-017 — Methodology Completeness, Canonical Consolidation &
-      Concept-Design Closure
+017 methodology completeness / canonical consolidation / closure
 ```
-
-Strong Phase 001–003 and 007 evidence should be reused wherever it satisfies the current phase-specific methodology test.
 
 ## Downstream work
 
 Phase 005 architecture, Phase 006 implementation planning/bootstrap and Phase 008 implementation planning remain preserved as historical evidence and future candidates. They are not current Concept Design constraints.
 
-The 008-D persistence plan and 008-E identity/authentication plan remain **suspended downstream hypotheses**, not accepted current implementation requirements.
-
-A successful future Phase 017 closure may establish readiness for a **separate architecture/engineering re-entry**. It will not automatically reactivate Phase 008 or authorize coding.
+A successful future Phase 017 may establish readiness for a **separate architecture/engineering re-entry**. It will not automatically reactivate Phase 008 or authorize coding.
 
 ## Current direction
 
-Proceed to **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**. Begin from [`docs/canonical/project/`](docs/canonical/project/) and derive candidates from the current purpose model before comparing them with incumbent Concept names.
+Proceed to **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**. Begin from the 010-D candidate set rather than assuming the incumbent sixteen are the only candidates.
