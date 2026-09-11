@@ -11,15 +11,17 @@ sources:
   - resource: ../../008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md
   - resource: ../../008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md
   - resource: ../../008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md
+  - resource: ../../008-implementation-reentry/008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md
   - resource: ../governance/design-implementation-boundary.md
   - resource: implementation-foundation.md
   - resource: verification-strategy.md
   - resource: source-topology.md
   - resource: persistence-history-projection.md
+  - resource: identity-authentication-access-session.md
   - resource: ../architecture/aws-runtime-operations.md
   - resource: ../architecture/application-boundaries.md
   - resource: ../architecture/frontend-interaction.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T19:13:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-11T00:40:00Z }
 ---
 
 # Purpose
@@ -36,7 +38,7 @@ This owner introduces no new stable-rule namespace. Runtime/bootstrap configurat
 
 **Result: qualified for Phase 008 planning after narrow non-domain remediation.**
 
-008-C assigned the remaining repository-administration/dependency-evidence limits to later Phase 008 owners and fully superseded the historical 006-E through 006-M execution queue. 008-D has since accepted the downstream persistence/history/migration plan while keeping the executable baseline itself schema-free.
+008-C assigned the remaining repository-administration/dependency-evidence limits to later Phase 008 owners and fully superseded the historical 006-E through 006-M execution queue. 008-D accepted the downstream persistence/history/migration plan. 008-E has now accepted the downstream Identity/authentication/Participation/Access/session/invitation/secrets/technical-authority plan while keeping the executable baseline itself schema/auth-free.
 
 Until 008-L explicitly authorizes the first executable domain slice, this substrate may be retained and narrowly maintained but not extended into new MUDAC domain behavior.
 
@@ -77,7 +79,7 @@ The six authoritative module packages remain minimal public seams. `@mudac/appli
 
 008-B found no authoritative domain schema, migration, repository, authentication/session behavior, domain API, IndexedDB Draft behavior, Competition/Judging/Evaluation/Outcome/Export/Publication implementation, or domain-purpose AWS resource.
 
-008-D is a planning artifact only and did not alter that executable fact. Therefore new domain implementation after 006-D remains **NOT STARTED**.
+008-D and 008-E are planning artifacts only and do not alter that executable fact. Therefore new domain implementation after 006-D remains **NOT STARTED**.
 
 # Local development
 
@@ -85,9 +87,9 @@ Routine local development runs Node application processes on the host and Postgr
 
 The current local service uses `postgres:17-alpine` with development-only default credentials and a named local volume. This is a qualified local bootstrap dependency, not a production PostgreSQL-version contract and not an authoritative MUDAC schema.
 
-008-D defines the future PostgreSQL schema/migration conventions but does not instantiate them in this bootstrap.
+008-D defines future PostgreSQL schema/migration conventions but does not instantiate them in this bootstrap.
 
-External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. Deterministic local fakes support normal development/testing; targeted real-service evidence belongs to later authorized work when provider semantics matter.
+External provider behavior such as Cognito, S3, SQS, email, scanners, and rendering remains behind application-owned ports. 008-E now defines the Cognito/OIDC adapter/session/secret contract: local development should use deterministic provider fakes, while targeted real Cognito evidence belongs to later authorized nonproduction work. No Cognito resource is currently provisioned by the retained IaC roots.
 
 Normal local development does not require long-lived AWS credentials.
 
@@ -132,9 +134,7 @@ The workflow covers all pull requests and pushes to `main`. 008-B removed the ob
 
 Knowledge Validation remains separate under `VAL-*`. CodeQL remains configured for JavaScript/TypeScript analysis. Dependabot remains configured weekly for npm and GitHub Actions.
 
-The final 008-B bootstrap head passed Implementation Verification and CodeQL. That is evidence for the tested revision, not implementation or production authority.
-
-The baseline also retains ignored local secrets/state/output, restrictive package exports, and source dependency enforcement.
+The final 008-B bootstrap head passed Implementation Verification and CodeQL. Later Phase 008 documentation heads may also pass those same retained checks, but that is evidence for the tested revision rather than domain implementation or production authority.
 
 The current connector does not expose the Dependabot alert inventory used for a complete vulnerability-state assertion. 008-C assigns that evidence limitation to 008-K. Therefore configured controls and successful CI may be claimed; zero open dependency vulnerabilities may not be inferred.
 
@@ -148,13 +148,15 @@ Ordinary implementation merge policy is intended to require pull requests plus c
 
 Production deployment remains separately authorized through a protected GitHub environment and OIDC-federated AWS role under `IMPL-014`/`AWS-011`. Those controls and actual production resources are not established by this baseline.
 
-Real local secret files are ignored. Long-lived AWS deployment keys do not belong in GitHub or repository configuration.
+Real local secret files are ignored. Long-lived AWS deployment keys do not belong in GitHub or repository configuration. 008-E further requires protected runtime secrets such as database credentials and any Cognito confidential-client secret to remain server-only and outside browser/source/log/Provenance/outbox surfaces.
 
 # Release posture retained for future implementation
 
 When later implementation is authorized, backend/frontend deployment workflows must bind releases to exact repository/build identity. Backend rollout uses immutable image identity; frontend rollout uses content-addressed immutable assets plus a mutable release entrypoint/manifest.
 
-008-D now requires SQL-first forward migrations, checksum verification, an advisory migration lock, separate migrator authority, no application-startup auto-migration, and expand/migrate/contract compatibility. Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
+008-D requires SQL-first forward migrations, checksum verification, an advisory migration lock, separate migrator authority, no application-startup auto-migration, and expand/migrate/contract compatibility. Database migration remains a separately privileged deployment step once schema work is authorized, and application rollback must not assume destructive schema rollback.
+
+008-E requires authentication-provider secrets and runtime/operator authorities to remain distinct from MUDAC semantic authority. A production login flow therefore requires both application/IaC implementation and 008-K security evidence before production readiness can be claimed.
 
 CI may validate OpenTofu without backend credentials. Real plan/apply occurs only under intended environment/account deployment authority and an exact reviewed revision.
 
@@ -186,14 +188,14 @@ GitHub repository
 
 # Deliberate limitations
 
-This qualified bootstrap still does not implement the PostgreSQL schemas/migrations/outbox/projections planned by 008-D, Cognito/session/Access, API command semantics, IndexedDB Drafts, domain workflows, actual AWS application resources, OIDC IAM roles, production environment protection, deploy workflows, observability dashboards, load tests, or recovery exercises.
+This qualified bootstrap still does not implement the PostgreSQL schemas/migrations/outbox/projections planned by 008-D; the Cognito/principal-link/Identity/Participation/Access/session/invitation/secrets behavior planned by 008-E; API command semantics; IndexedDB Drafts; domain workflows; actual AWS application resources; OIDC IAM roles; production environment protection; deploy workflows; observability dashboards; load tests; or recovery exercises.
 
 These are later implementation-planning/evidence concerns, not defects in the 006-D bootstrap.
 
 # Handoff
 
-The protected baseline remains qualified as current planning input. 008-D has fixed the persistence/history/migration contract that future authorized work will add to it.
+The protected baseline remains qualified as current planning input. 008-D and 008-E have fixed the persistence/history and identity/authentication contracts that future authorized work will add to it.
 
-Proceed to **008-E — Identity, Authentication, Participation, Access, Session, Invitation, Secrets & Technical-Authority Implementation Plan**.
+Proceed to **008-F — Commands, Queries, Transactions, CAS, Idempotency, Concurrency, Lost-Response Reconciliation & API Implementation Plan**.
 
 No first executable domain slice is authorized before 008-L; new domain implementation remains not started.
