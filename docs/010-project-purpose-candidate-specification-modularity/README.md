@@ -1,6 +1,6 @@
 # Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion
 
-Status: **In Progress — 010-A, 010-B and 010-C complete; 010-D next**
+Status: **In Progress — 010-A through 010-D complete; 010-E next**
 
 ## Role in the completion runway
 
@@ -47,8 +47,8 @@ Prior conclusions are evidence, not protected outcomes. The current sixteen-Conc
 | 010-A | [Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) | **Complete — PASS** |
 | 010-B | [Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) | **Complete — PASS** |
 | 010-C | [Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation](010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md) | **Complete — PASS** |
-| 010-D | **Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** | **Next** |
-| 010-E | **Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** | Planned |
+| 010-D | [Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md) | **Complete — PASS** |
+| 010-E | **Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** | **Next** |
 | 010-F | **Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** | Planned |
 | 010-G | **Completeness, Independence & Genericity-for-Boundary Audit** | Planned |
 | 010-H | **Concept Boundary Convergence, Re-specification & Canonical Reconciliation** | Planned |
@@ -95,44 +95,41 @@ Key consequences:
 
 010-C derived a purpose model from the reconciled project context **before** inspecting incumbent Concept identities and created [MUDAC Purpose, Needs, Success & Tensions](../canonical/project/purpose-needs-success-tensions.md) as the durable current owner.
 
-The current nine purpose obligations are:
+The current nine purpose obligations are P-01 independent human judgment, P-02 fair/bias-aware Team treatment, P-03 low-friction accessible participation, P-04 live coordination/completion, P-05 resilient continuity, P-06 trustworthy outcome formation, P-07 correctable authority/history, P-08 confidentiality/authority separation, and P-09 faithful external representation/release.
 
-1. P-01 — independent human judgment;
-2. P-02 — fair and bias-aware Team treatment;
-3. P-03 — low-friction and accessible participation;
-4. P-04 — live operational coordination and completion;
-5. P-05 — resilient evaluation continuity;
-6. P-06 — trustworthy and explainable outcome formation;
-7. P-07 — correctable authority and historical truth;
-8. P-08 — contextual confidentiality and authority separation;
-9. P-09 — faithful external representation and controlled release.
+010-C found no wholly unrepresented product purpose but deliberately left strong factorization pressure for rediscovery.
 
-010-C also established representative success situations and ten material tensions. It found no wholly unrepresented product-level purpose, but explicitly **did not** treat this as evidence that the current catalog is complete or correctly factored.
+## Completed 010-D result
 
-Important rediscovery pressure handed to 010-D includes:
+010-D followed a purpose-first anti-anchoring protocol and produced materially different candidate decompositions before comparing them with the incumbent catalog.
 
-- P-03 being spread across Identity/Participation/Access plus experience concerns;
-- P-04 being distributed across Competition/Participation/Panel/Judging Encounter and readiness/reconciliation knowledge;
-- P-05 crossing judgment, paper, recovery, history and privacy rather than having one natural current owner;
-- P-06 depending heavily on current non-Concept mechanisms such as Coverage, Aggregate, Rank, Reconciliation and Official Outcome Revision;
-- P-07 requiring a fresh challenge to Versioning/Provenance Concept status/factoring;
-- P-09 establishing real external-representation/release value without proving the current Export/Publication split.
+Key results:
 
-No Concept was accepted, rejected, split, merged or demoted by 010-C.
+- the sixteen incumbent Concepts remain **provisional candidates**, not a reconfirmed final catalog;
+- four challenger candidates now require explicit behavioral specification in 010-E:
+  1. **Evaluation Assignment / Obligation**;
+  2. **Evaluation Sufficiency**;
+  3. **Reconciliation / Resolution**;
+  4. **Official Outcome / Outcome Declaration**;
+- merge/reframe pressure remains across:
+  - `Identity + Participation + Access` versus **Actor Context**;
+  - `Panel + Judging Encounter` versus assignment/occurrence alternatives;
+  - `Versioning + Provenance` versus **Authority History**;
+  - `Export + Publication` versus **External Representation & Release**;
+  - current `Judging Encounter` versus a more generic **Evaluation Occurrence**;
+- Aggregate, Rank and Readiness remain strong derived-mechanism candidates after reassessment;
+- Recovery/Continuity is confirmed as a first-class purpose obligation but is not retained as an independent Concept candidate unless 010-E exposes missing intrinsic recovery behavior;
+- no canonical Concept promotion/demotion occurs in 010-D because candidate divergence remains phase evidence until later convergence.
 
 ## Remaining subgroup intentions
 
-### 010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment
-
-Challenge catalog anchoring through genuine divergence from the current project-purpose model. Regenerate plausible candidates from P-01–P-09 and actor/affected-party needs **before** comparing them to the incumbent catalog. Revisit important rejected/deferred candidates and distinguish Concepts from features, roles, entities, screens, policies, mechanisms and implementation nouns.
-
 ### 010-E — Behavioral-Specification Current-Truth Audit
 
-Ensure every candidate proceeding to modularity has adequate purpose, operational principle, abstract state, actions, conditions/effects, invariants and intrinsic lifecycle/history/authority semantics independent of representation.
+Behaviorally audit the sixteen incumbent candidates plus the four 010-D challenger candidates. Establish enough representation-independent Purpose, State, Actions and Operational Principle evidence to compare the required split/merge/reframe alternatives without assuming any candidate will survive 010-F/G.
 
 ### 010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit
 
-Test whether each retained Concept serves one coherent valuable purpose and deliberately consider split/combine/reframe/reduce/expand alternatives.
+Test whether each retained candidate serves one coherent valuable purpose and deliberately consider split/combine/reframe/reduce/expand alternatives.
 
 ### 010-G — Completeness, Independence & Genericity-for-Boundary Audit
 
@@ -167,9 +164,10 @@ implementation authorization: NOT YET
 010-A: COMPLETE — PASS
 010-B: COMPLETE — PASS
 010-C: COMPLETE — PASS
-010-D: NEXT
+010-D: COMPLETE — PASS
+010-E: NEXT
 ```
 
 ## Next
 
-Proceed to **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment**. Start from [Project Context & Purpose](../canonical/project/) rather than from the incumbent Concept catalog.
+Proceed to **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit**. Begin with the [010-D rediscovery record](010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md), not just the incumbent Concept index.
