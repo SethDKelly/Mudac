@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design. Use numbered phases for design evolution, evidence, alternatives and historical downstream work.
+The current project/intake baseline is [MUDAC Project Mandate & Current Context](canonical/project/mandate-context.md). During the reopened Jackson methodology, architecture and implementation material are preserved but quarantined from constraining Concept Design.
 
 ## Status
 
@@ -19,7 +19,7 @@ During the reopened Jackson methodology, architecture and implementation materia
 * Phase 007 — Design Refinement: **Reusable evidence; 007-I closure reopened/superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Completion Realignment & Design Re-entry: **Complete — PASS**
-* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A complete; 010-B next**
+* Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion: **In Progress — 010-A/B complete; 010-C next**
 
 ## Current posture
 
@@ -34,7 +34,8 @@ implementation planning: SUSPENDED
 009: COMPLETE
 010: IN PROGRESS
 010-A: COMPLETE
-010-B: NEXT
+010-B: COMPLETE
+010-C: NEXT
 ```
 
 The current boundary is [Design / Implementation Boundary](canonical/governance/design-implementation-boundary.md). The rule preventing premature downstream work from back-driving design is [Downstream Architecture & Implementation Authority Quarantine](canonical/governance/downstream-authority-quarantine.md).
@@ -43,14 +44,12 @@ The current boundary is [Design / Implementation Boundary](canonical/governance/
 
 [Phase 010](010-project-purpose-candidate-specification-modularity/) closes the residual foundational methodology obligations corresponding to project/context truth, purpose/need/success, candidate rediscovery, behavioral specification and Concept modularity.
 
-The dependency-safe subgroup plan is:
-
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
   ↓
-010-B project mandate / actors / outcomes / scope / evidence  NEXT
+010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability
+010-C purpose / need / success / tension / traceability       NEXT
   ↓
 010-D candidate rediscovery / divergent alternatives
   ↓
@@ -65,7 +64,7 @@ The dependency-safe subgroup plan is:
 010-I consolidation / exit / Phase 011 handoff
 ```
 
-The current sixteen-Concept catalog is an incumbent hypothesis, not protected methodology authority. Phase 010 may retain, add, reject, split, combine, reframe, generalize, reduce or expand Concepts when evidence warrants it.
+010-B established a representation-independent current project baseline and deliberately did not accept or reject any Concept. The current sixteen-Concept catalog remains an incumbent hypothesis.
 
 ## Completion runway
 
@@ -93,8 +92,8 @@ This is not a restart. Existing 001–003 and 007 evidence should be reused when
 
 Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning are preserved as historical evidence and future downstream candidates. They are not current Concept Design constraints.
 
-008-D/E are specifically treated as suspended implementation hypotheses. Their persistence/authentication choices may later save work, but only after successful Concept Design closure and a separate architecture/engineering re-entry revalidates them.
+008-D/E are suspended implementation hypotheses. `GitHub → GitHub Actions → AWS ecosystem` is retained only as a downstream delivery constraint and does not determine Concept Design.
 
 ## Current next work
 
-Proceed to **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**. Do not resume 008-F or any architecture/implementation planning.
+Proceed to **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** using [Canonical Project Context](canonical/project/mandate-context.md) as the starting baseline. Do not resume 008-F or any architecture/implementation planning.

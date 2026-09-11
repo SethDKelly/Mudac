@@ -4,13 +4,13 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 
 ## Status
 
-**In Progress — 010-A complete; 010-B next.**
+**In Progress — 010-A and 010-B complete; 010-C next.**
 
 ## Records
 
 - [010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) — **Complete — PASS**.
-- **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation** — Next.
-- **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** — Planned.
+- [010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation](010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md) — **Complete — PASS**.
+- **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation** — Next.
 - **010-D — Candidate Concept Rediscovery, Divergent Alternatives & Rejected/Deferred Candidate Reassessment** — Planned.
 - **010-E — Retained Concept Purpose, Operational Principle, State, Action & Behavioral-Specification Current-Truth Audit** — Planned.
 - **010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit** — Planned.
@@ -25,9 +25,9 @@ Phase 010 is the active foundational Concept Design completion phase after the P
   ↓
 010-A entry/decomposition                        COMPLETE
   ↓
-010-B project/context reconciliation             NEXT
+010-B project/context reconciliation             COMPLETE
   ↓
-010-C purpose/need/success revalidation
+010-C purpose/need/success revalidation          NEXT
   ↓
 010-D candidate rediscovery/divergence
   ↓
@@ -44,6 +44,6 @@ Phase 010 is the active foundational Concept Design completion phase after the P
 011 composition/synchronization revalidation
 ```
 
-The current sixteen-Concept catalog is an incumbent hypothesis, not a protected answer. Architecture and implementation remain quarantined from constraining Phase 010.
+Current project/intake truth is now owned by [Canonical Project Context](../canonical/project/). The current sixteen-Concept catalog remains an incumbent hypothesis, not a protected answer. Architecture and implementation remain quarantined from constraining Phase 010.
 
 See [README.md](README.md) for phase intent, subgroup responsibilities, evidence posture, exclusions and exit criteria.

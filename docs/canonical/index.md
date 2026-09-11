@@ -4,6 +4,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
+* [Project Context](project/) — current project/intake mandate, actors and affected parties, outcome directions, scope/non-goals, operational constraints, assumptions and open questions.
 * [Concepts](concepts/) — current MUDAC Concepts, subject to Phase 010 revalidation/refinement.
 * [Synchronizations](synchronizations/) — current cross-concept and temporal/correction semantics, subject to Phase 011 composition revalidation.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects intentionally not promoted to Concepts.
@@ -22,7 +23,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active after its entry/decomposition gate.
+Phase 009 formally reopened and realigned Jackson Concept Design. Phase 010 is active; 010-A and 010-B have passed.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -37,20 +38,22 @@ implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: IN PROGRESS
 010-A: COMPLETE — PASS
-010-B: NEXT
+010-B: COMPLETE — PASS
+010-C: NEXT
 ```
 
-The active methodology record is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../010-project-purpose-candidate-specification-modularity/). Phase 009 remains the methodology-realignment/gap-map provenance.
+The active methodology record is [Phase 010 — Project/Purpose Traceability, Candidate Rediscovery, Specification & Modularity Completion](../010-project-purpose-candidate-specification-modularity/). The current intake baseline is [MUDAC Project Mandate & Current Context](project/mandate-context.md).
 
 # Retrieval rule during reopened design
 
 For Phases 010–017:
 
 1. load the active phase/start-gate record;
-2. load only task-relevant current conceptual owners;
-3. load historical design evidence only where it materially supports the phase question;
-4. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
-5. do **not** load architecture/implementation merely because it exists—use it only for explicit contamination analysis, historical comparison or later handoff preparation.
+2. load [Project Context](project/) whenever project/purpose/scope assumptions matter;
+3. load only task-relevant current conceptual owners;
+4. load historical design evidence only where it materially supports the phase question;
+5. load [Design / Implementation Boundary](governance/design-implementation-boundary.md) and [Downstream Authority Quarantine](governance/downstream-authority-quarantine.md);
+6. do **not** load architecture/implementation merely because it exists—use it only for explicit contamination analysis, historical comparison or later handoff preparation.
 
 During Phase 010, treat the current sixteen-Concept catalog as the incumbent hypothesis rather than a protected answer.
 
@@ -59,9 +62,9 @@ During Phase 010, treat the current sixteen-Concept catalog as the incumbent hyp
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
   ↓
-010-B project mandate / actors / outcomes / scope / evidence  NEXT
+010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability
+010-C purpose / need / success / tension / traceability       NEXT
   ↓
 010-D candidate rediscovery / divergent alternatives
   ↓
@@ -96,4 +99,4 @@ During Phase 010, treat the current sixteen-Concept catalog as the incumbent hyp
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**.
+The immediate next work is **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**.

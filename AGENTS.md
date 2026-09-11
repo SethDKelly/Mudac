@@ -8,7 +8,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read the current [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. For current methodology work, use [`Phase 009`](docs/009-jackson-methodology-realignment/) as realignment/gap-map provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
-5. Read [010-A — Phase Intent, Evidence-Reuse Scope, Gap Closure & Subphase Planning](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md) before any Phase 010 substantive subgroup.
+5. Read [010-A](docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md), [010-B](docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md), and [Canonical Project Context](docs/canonical/project/mandate-context.md) before 010-C or later Phase 010 work.
 6. Load only task-relevant canonical Concepts, synchronizations, policies, mechanisms, invariants, experience and governance owners.
 7. Use numbered historical phases only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
@@ -27,27 +27,8 @@ implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: IN PROGRESS
 010-A: COMPLETE — PASS
-010-B: NEXT
-```
-
-The current completion runway is:
-
-```text
-010 project/purpose / rediscovery / specification / modularity
-  ↓
-011 composition / synchronization revalidation
-  ↓
-012 dependence / subsets / product-family / scope
-  ↓
-013 mapping / interaction / representation revalidation
-  ↓
-014 familiarity / reuse / genericity
-  ↓
-015 integrity / interference
-  ↓
-016 scenario / misfit / adversarial validation
-  ↓
-017 methodology completeness / canonical closure
+010-B: COMPLETE — PASS
+010-C: NEXT
 ```
 
 ## Active Phase 010 subgroup order
@@ -55,9 +36,9 @@ The current completion runway is:
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
   ↓
-010-B project mandate / actors / outcomes / scope / evidence  NEXT
+010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability
+010-C purpose / need / success / tension / traceability       NEXT
   ↓
 010-D candidate rediscovery / divergent alternatives
   ↓
@@ -74,15 +55,32 @@ The current completion runway is:
 
 ## Phase 010 discipline
 
+- Treat [Canonical Project Context](docs/canonical/project/mandate-context.md) as the current intake baseline.
 - Treat the current sixteen-Concept catalog as the incumbent hypothesis, not a protected answer.
 - Reuse prior 001–003/007 design evidence when it genuinely satisfies the active methodology test.
 - Do not reverse-engineer purpose merely to justify current Concepts.
+- 010-C must derive purposes from project/affected-party need and use current Concepts only as traceability targets.
 - Candidate rediscovery must be meaningfully divergent before the catalog is reconfirmed.
 - Do not judge modularity from Concept names alone; use representation-independent behavioral specifications.
 - Specificity/purpose singularity is evaluated before completeness/independence so boundary changes are not audited against obsolete identities.
 - Changed Concepts must be re-specified and reconciled canonically before 010-I may exit.
 - Extrinsic Concept dependence belongs to Phase 012, not Phase 010 independence analysis.
 - Familiarity/reuse/catalog refinement beyond boundary-required genericity belongs to Phase 014.
+
+## Current project-context guardrails
+
+The following are current project constraints/context, not protected Concept choices:
+
+- live student data competition setting;
+- volunteer Judges and competition Organizers;
+- Student Teams as materially affected non-user participants;
+- independent judgment;
+- bias-sensitive Team identity disclosure;
+- accessibility, interruption, degraded connectivity and paper continuity;
+- traceable/recoverable authoritative outcomes and history;
+- technical authority separated from competition judgment authority.
+
+`GitHub → GitHub Actions → AWS ecosystem` is a downstream delivery constraint only. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain frozen historical executable facts and must not determine Concept Design.
 
 ## Design-only rules for Phases 010–017
 
@@ -97,8 +95,6 @@ The current completion runway is:
 ## Frozen executable substrate
 
 The real 006-D bootstrap remains in the repository. Narrow dependency/security/build maintenance is permitted only when necessary to keep the repository safe/buildable and only if it adds no MUDAC domain semantics or constrains reopened design.
-
-Existing implementation choices are historical facts, not current requirements.
 
 ## Current downstream treatment
 
@@ -120,4 +116,4 @@ Knowledge-only changes should run the repository knowledge validation path. Pass
 
 Proceed to:
 
-> **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**
+> **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**

@@ -9,6 +9,8 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-B-jackson-base-lifecycle-crosswalk-evidence-reuse-gap-map.md
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md
+  - resource: ../project/mandate-context.md
   - resource: downstream-authority-quarantine.md
   - resource: methodology-terminology.md
   - resource: change-governance.md
@@ -20,7 +22,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-A fresh methodology review superseded the previous 007-I Concept Design closure as current authority. Phase 009 completed the formal realignment/gap map. Phase 010 is now active and its 010-A start gate has established the dependency-safe foundational completion sequence.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active. Its 010-A start gate established the foundational completion sequence and 010-B reconciled current project/intake truth independently of the incumbent Concept catalog.
 
 Current governing posture:
 
@@ -39,7 +41,8 @@ implementation authorization: NOT YET
 Phase 009: COMPLETE — PASS
 Phase 010: IN PROGRESS
 010-A: COMPLETE — PASS
-010-B: NEXT
+010-B: COMPLETE — PASS
+010-C: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -50,34 +53,47 @@ During reopened Concept Design:
 ```text
 human product intent / evidence
         ↓
-current canonical conceptual owners
+canonical Project Context
         ↓
 phase-specific Jackson methodology analysis
         ↓
-corrected current conceptual design
+corrected current conceptual owners
 
 historical architecture / implementation
         = evidence or contamination probe only
         ≠ design constraint
 ```
 
-The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
+The current project/intake baseline is [MUDAC Project Mandate & Current Context](../project/mandate-context.md). The durable quarantine rule is [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
 
 # What remains authoritative
 
-Current product/conceptual authority remains in task-relevant canonical:
+Current product/conceptual authority includes task-relevant canonical:
 
+- Project Context;
 - Concepts;
 - synchronizations and temporal/correction semantics;
 - policies;
-- mechanisms where they are intentionally non-Concepts;
+- mechanisms where intentionally non-Concepts;
 - invariants;
 - conceptual experience/mapping knowledge;
 - methodology/documentation/change governance.
 
-These owners are subject to correction by the remaining Jackson phases. Historical phase records remain evidence and rationale rather than immutable truth.
+These owners remain subject to correction by Phases 010–017.
 
-During Phase 010 specifically, the current sixteen-Concept catalog is an incumbent design hypothesis. Its current canonical documents are evidence/current meaning, but Phase 010 may change Concept identity or boundaries when the methodology warrants it.
+During Phase 010, the current sixteen-Concept catalog is an incumbent design hypothesis. It may be changed when purpose, rediscovery, specification or modularity evidence warrants it.
+
+# Project-context versus downstream constraints
+
+010-B established that live-event operation, independent judgment, bias-sensitive identity disclosure, accessibility, degraded connectivity/device conditions, paper continuity, historical truth, explainability and separation of technical authority from competition judgment are current representation-independent constraints.
+
+Historical intent for:
+
+```text
+GitHub → GitHub Actions → AWS ecosystem
+```
+
+is retained only as a downstream delivery constraint. It does not determine Concepts, state/actions, UI mapping, persistence, authentication, APIs, services or AWS resources.
 
 # What is suspended
 
@@ -92,9 +108,9 @@ Until successful Phase 017 closure:
 
 # Frozen 006-D executable substrate
 
-The repository already contains a real non-domain bootstrap created before design completion was reassessed.
+The repository already contains a non-domain bootstrap created before design completion was reassessed.
 
-It remains frozen and may receive only narrow safety/build maintenance that does not add MUDAC domain semantics or constrain the design. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu/tooling choices are historical implementation facts, not conceptual requirements.
+It remains frozen and may receive only narrow safety/build maintenance that does not add MUDAC domain semantics or constrain the design. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices are historical implementation facts, not conceptual requirements.
 
 # Prohibited work during Phases 010–017
 
@@ -107,26 +123,26 @@ Do not begin or resume:
 - Competition/Judging/Evaluation/Outcome/Award/Export/Publication feature code;
 - domain-purpose AWS application provisioning;
 - implementation-plan continuation from 008-F through 008-L;
-- architecture decisions intended to constrain the remaining Concept Design.
+- architecture decisions intended to constrain remaining Concept Design.
 
 # Permitted work
 
 Current work may:
 
 - execute Phases 010–017 of the methodology completion runway;
-- update canonical conceptual owners when design meaning changes;
+- update Project Context or other canonical conceptual owners when design meaning changes;
 - inspect historical architecture/implementation only for contamination, assumptions, counterexamples or later handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
-- improve documentation/routing/validation that supports the design process.
+- improve documentation/routing/validation supporting the design process.
 
 # Active Phase 010 decomposition
 
 ```text
 010-A intent / evidence reuse / decomposition                 COMPLETE
   ↓
-010-B project mandate / actors / outcomes / scope / evidence  NEXT
+010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
   ↓
-010-C purpose / need / success / tension / traceability
+010-C purpose / need / success / tension / traceability       NEXT
   ↓
 010-D candidate rediscovery / divergent alternatives
   ↓
@@ -140,8 +156,6 @@ Current work may:
   ↓
 010-I consolidation / exit / Phase 011 handoff
 ```
-
-The sequence may reopen earlier Phase 010 work when later evidence exposes a defect.
 
 # Completion runway
 
@@ -182,4 +196,6 @@ It will authorize only a separate downstream architecture/engineering re-entry. 
 
 Proceed to:
 
-> **010-B — Current Project Mandate, Actors, Outcomes, Scope, Constraints & Evidence Reconciliation**
+> **010-C — Purpose, Need, Success, Tension & Purpose-to-Concept Traceability Revalidation**
+
+010-C begins from [Canonical Project Context](../project/mandate-context.md) and must not derive purpose from incumbent Concept names.
