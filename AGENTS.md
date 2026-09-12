@@ -9,8 +9,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/) and [Current Concepts](docs/canonical/concepts/) before task-specific composition work.
-6. Read [011-A](docs/011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) before Phase 011 work; use [010-I](docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) for the incoming handoff.
-7. Treat [Canonical Synchronizations](docs/canonical/synchronizations/) and Phase 007-C/007-D as strong pre-011 evidence until Phase 011 revalidates and reconciles them.
+6. Read [011-A](docs/011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) for Phase 011 scope/decomposition and [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the current legacy-sync dispositions, composition-obligation ownership and provisional application-action baseline.
+7. Treat [Canonical Synchronizations](docs/canonical/synchronizations/) and Phase 007-C/007-D as strong pre-011 evidence until an owning Phase 011 subgroup establishes current replacement semantics and 011-J reconciles the canonical corpus.
 8. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -29,7 +29,8 @@ implementation authorization: NOT YET
 010: COMPLETE — PASS
 011: IN PROGRESS
 011-A: COMPLETE — READY
-011-B: NEXT
+011-B: COMPLETE — PASS
+011-C: NEXT
 ```
 
 ## Current Concept authority
@@ -68,23 +69,26 @@ Do **not** use the previous sixteen-Concept taxonomy as current authority.
 
 Phase 011 composes independent Concepts; it does not rewrite them in terms of one another.
 
-- Revalidate the old synchronization corpus against the Phase 010 boundaries before accepting it as current.
-- Do not mechanically rename `Judging Encounter` to `Evaluation Occurrence`; responsibility now belongs to Evaluation Obligation.
-- Do not mechanically rename `Official Outcome Revision` to `Outcome Declaration`; revalidate Competition Finalization and declaration authority as independent actions that may compose.
+- Use 011-B as the current classification authority for all sixteen legacy synchronization contracts.
+- No legacy contract is current merely because 011-B found a reusable semantic core.
+- Do not mechanically rename `Judging Encounter` to `Evaluation Occurrence`; responsibility belongs to Evaluation Obligation.
+- Do not mechanically rename `Official Outcome Revision` to `Outcome Declaration`; Competition Finalization and declaration authority are independent actions that may compose.
 - Keep factual Coverage distinct from governed exception disposition.
 - Preserve abstract peer parameters introduced by Phase 010; application bindings belong in composition.
-- Deliberately classify relevant Concept actions as direct application exposure, coordinated composition, composition-only, system-triggered or intentionally unavailable.
+- Use the 011-B application-action baseline provisionally: direct candidate, coordinated candidate, composition-only participant, system-triggered reaction, intentionally unavailable, or unresolved.
+- Do not expose generic Versioning, Provenance, Access-check, obligation-satisfaction or affected-state actions merely because the Concepts define them.
 - Test over-synchronization and under-synchronization.
 - Trace material conceptual chaining/automation and check authority, preconditions, invariants and cycle risk.
 - Do not infer inclusion dependence from synchronization; Phase 012 owns subsets/product-family dependence.
+- Keep role/mode/context-switch representation separate for Phase 013 where it does not change Concept state.
 - If composition exposes a genuine specification/boundary defect, correct the natural Phase 010 owner and revalidate affected Phase 011 conclusions.
 
 ## Approved Phase 011 order
 
 ```text
 011-A composition scope / evidence reuse / risks / decomposition      COMPLETE — READY
-011-B legacy sync inventory / obligation map / action baseline        NEXT
-011-C Competition lifecycle / Identity / Participation / Access       PLANNED
+011-B legacy sync inventory / obligation map / action baseline        COMPLETE — PASS
+011-C Competition lifecycle / Identity / Participation / Access       NEXT
 011-D Team/Division/Alias/Panel / Occurrence / Obligation             PLANNED
 011-E evaluation basis / Scorecard / Versioning / Provenance / paper  PLANNED
 011-F temporal correction / invalidation / successor / affected       PLANNED
@@ -115,4 +119,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**
+> **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**

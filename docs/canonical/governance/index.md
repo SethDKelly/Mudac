@@ -23,7 +23,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 reopened and realigned Jackson Concept Design. Phase 010 completed the foundational project/purpose/discovery/specification/modularity work. Phase 011 is now active for concept composition/synchronization revalidation.
+Phase 009 reopened and realigned Jackson Concept Design. Phase 010 completed foundational project/purpose/discovery/specification/modularity work. Phase 011 is active for concept composition/synchronization revalidation.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -31,7 +31,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 010 foundational completion: COMPLETE — PASS
 011 composition/synchronization: IN PROGRESS
 011-A: COMPLETE — READY
-011-B: NEXT
+011-B: COMPLETE — PASS
+011-C: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -39,14 +40,16 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current Concept authority
+# Current Concept and composition authority
 
 [Canonical Concepts](../concepts/) owns one current eighteen-Concept catalog. Deprecated adapter files for Judging Encounter and Official Outcome Revision preserve history/links but are not current owners.
 
-[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the active composition start gate. Existing synchronization contracts remain pre-011 evidence until explicitly revalidated against Evaluation Occurrence, Evaluation Obligation, Outcome Declaration and the other post-010 boundaries.
+[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the active composition scope and dependency order.
 
-Phase 012 inclusion-dependence questions remain intentionally unresolved.
+[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) is the current inventory/classification authority for legacy synchronization disposition and provisional action exposure. Existing synchronization bodies remain pre-011 evidence until their owning semantic subgroup establishes current replacement rules and 011-J reconciles canonical ownership.
+
+Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.
+Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.

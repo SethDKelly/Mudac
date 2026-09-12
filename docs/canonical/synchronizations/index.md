@@ -2,38 +2,62 @@
 
 Phase 011 is active for Concept Composition, Synchronization, Application Action Surface & Automation Revalidation.
 
-The synchronization corpus below remains **strong pre-011 composition evidence**, not yet a fully reconciled current synchronization model for the eighteen-Concept catalog.
+## Current authority posture
 
-* [Concept Synchronization Contracts](concept-synchronizations.md) — prior trigger/authority/precondition/postcondition/failure semantics to be revalidated in Phase 011.
-* [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md) — reusable temporal/correction semantics to be revalidated against Evaluation Occurrence, Evaluation Obligation and Outcome Declaration ownership.
+[011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) is the current **inventory/classification authority** for the pre-011 synchronization corpus.
+
+It classifies all sixteen legacy contracts against the eighteen-Concept model, assigns CO-01 through CO-12 to current Phase 011 owners, identifies post-Phase-010 composition gaps, and establishes a provisional application-action baseline.
+
+No legacy contract is accepted unchanged as current synchronization authority.
+
+The files below remain **strong pre-011 composition evidence** until the owning 011-C through 011-H work establishes replacement/current semantics and 011-J performs canonical reconciliation:
+
+* [Concept Synchronization Contracts](concept-synchronizations.md) — historical sixteen-contract trigger/authority/precondition/postcondition/failure model.
+* [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md) — reusable temporal/correction evidence requiring reinterpretation through Evaluation Occurrence, Evaluation Obligation and Outcome Declaration.
+
+The legacy contract file predates Phase 010 and may still contain an older `stable` self-label. That metadata does **not** override this index or the active Phase 011 authority chain. Until reconciliation, treat the document as preserved pre-011 evidence.
 
 Synchronizations are not additional Concepts. They coordinate independent Concept actions while preserving each owner's intrinsic purpose, state, authority and lifecycle.
 
-## Active Phase 011 start gate
+## 011-B legacy dispositions
 
-[011-A — Composition Scope, Evidence Reuse, Synchronization Risk & Subphase Planning](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) is complete and authorizes Phase 011 substantive work.
+The sixteen old contracts are now classified as:
 
-It establishes that:
+- **7 REUSE CORE / REVALIDATE** — 02, 04, 07, 10, 11, 13, 15;
+- **4 SPLIT / REFRAME** — 01, 03, 05, 09;
+- **3 REPLACE** — 06, 08, 14;
+- **1 DECOMPOSE CROSS-CUTTING** — 12;
+- **1 RECLASSIFY / MAPPING CARRY-FORWARD** — 16.
 
-- the old sixteen-contract corpus must be dispositioned contract-by-contract;
-- `Judging Encounter` references cannot be mechanically renamed because occurrence truth and evaluator responsibility are now separate Concepts;
-- `Official Outcome Revision` references require revalidation around the current Outcome Declaration Concept;
-- application action exposure/non-exposure is a first-class Phase 011 obligation;
-- conceptual chaining, automation, over/under-synchronization, authority compatibility and cycle risk require explicit closure;
-- runtime orchestration remains outside Concept Design.
+See 011-B for the complete rationale and downstream ownership.
 
 ## Interpretation until canonical reconciliation
 
-Until a Phase 011 subphase explicitly establishes replacement/current semantics:
+Unless a Phase 011 subgroup has explicitly established replacement/current semantics:
 
-- synchronization text referring to **Judging Encounter** is historical pre-split evidence to be reconsidered across [Evaluation Occurrence](../concepts/evaluation-occurrence.md) and [Evaluation Obligation](../concepts/evaluation-obligation.md);
-- synchronization text referring to **Official Outcome Revision** is historical pre-reclassification evidence for [Outcome Declaration](../concepts/outcome-declaration.md);
+- **Judging Encounter** text is historical pre-split evidence and must be reconsidered across [Evaluation Occurrence](../concepts/evaluation-occurrence.md) and [Evaluation Obligation](../concepts/evaluation-obligation.md);
+- **Official Outcome Revision** text is historical evidence for [Outcome Declaration](../concepts/outcome-declaration.md);
 - occurrence completion must not be interpreted as obligation completion;
 - Panel membership, actual occurrence participation and Evaluation Obligation responsibility are distinct;
-- Competition Finalization and Outcome Declaration remain independent Concept actions whose coordination must be revalidated;
-- factual Coverage remains distinct from governed exception disposition.
+- Competition Finalization and Outcome Declaration remain independent Concept actions;
+- factual Coverage remains distinct from governed exception disposition;
+- generic Versioning/Provenance/Access-check/obligation-satisfaction actions are not automatically direct MUDAC application actions;
+- runtime retry, idempotency, transaction, queue, session or transport language in old documents is not current Concept Design authority.
 
-Do not edit the old contracts by terminology substitution and treat them as revalidated. Accepted current composition must come from Phase 011 analysis against the eighteen-Concept model.
+## Active Phase 011 sequence
+
+```text
+011-A scope / evidence / risks / decomposition                 COMPLETE — READY
+011-B legacy inventory / obligations / action baseline         COMPLETE — PASS
+011-C lifecycle / Identity / Participation / Access            NEXT
+011-D competitor context / Panel / Occurrence / Obligation
+011-E evaluation basis / Scorecard / Versioning / Provenance / paper
+011-F correction / invalidation / successor / affected
+011-G Coverage / Aggregate / Rank / Award / Finalization / Declaration
+011-H Export / Publication / currency / release
+011-I action surface / chaining / automation / over-under / authority / synergy
+011-J canonical reconciliation / exit / Phase 012 handoff
+```
 
 ## Historical composition evidence
 
@@ -42,6 +66,6 @@ Do not edit the old contracts by terminology substitution and treat them as reva
 
 ## Current next work
 
-Proceed to **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.
+Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
 
-011-B will classify every pre-011 contract as retain/rewrite/split/merge/retire/additional-gap and establish the finite revalidation backlog before current synchronization authority is rewritten.
+011-C owns current semantic revalidation for legacy contracts 01–04, the readiness portion of 05, and the semantic Access-context portion of 16.

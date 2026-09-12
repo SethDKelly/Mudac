@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's reopened Concept Design posture with active Phase 011 conceptual composition/synchronization work, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate through Phases 011–017 until successful methodology closure.
+description: "Defines MUDAC's reopened Concept Design posture with active Phase 011 conceptual composition/synchronization work, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate through Phases 011–017 until successful methodology closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, composition, reentry]
 sources:
@@ -9,10 +9,11 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md
+  - resource: ../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T09:45:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T11:10:00-05:00 }
 ---
 
 # Purpose
@@ -21,7 +22,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed the foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is now active for representation-independent Concept composition and synchronization.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed the foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization; 011-B has completed the legacy-sync inventory and provisional application-action baseline.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -39,7 +40,8 @@ Phase 009: COMPLETE — PASS
 Phase 010: COMPLETE — PASS
 Phase 011: IN PROGRESS
 011-A: COMPLETE — READY
-011-B: NEXT
+011-B: COMPLETE — PASS
+011-C: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -91,6 +93,19 @@ It may establish:
 
 It must preserve the intrinsic meaning and independence of each Concept. If composition requires changing intrinsic behavior to make a synchronization work, reopen/correct the appropriate upstream Concept owner instead of hiding the defect in composition.
 
+# Current Phase 011 knowledge authority
+
+[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) owns Phase 011 scope, evidence posture and decomposition.
+
+[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) currently owns:
+
+- disposition of all sixteen pre-011 synchronization contracts;
+- CO-01 through CO-12 downstream ownership;
+- the post-Phase-010 composition-gap inventory;
+- the provisional application-action classification baseline.
+
+No legacy contract is current merely because it has reusable semantics. `docs/canonical/synchronizations/` remains preserved pre-011 evidence unless a later Phase 011 subgroup has explicitly established replacement/current semantics. 011-J will perform final canonical reconciliation.
+
 # Phase 011 runtime/implementation prohibition
 
 Conceptual synchronization must **not** be translated into or justified by:
@@ -109,25 +124,28 @@ Conceptual synchronization must **not** be translated into or justified by:
 
 Conceptual uncertain-outcome, duplicate-intent, authority-establishment and convergence semantics may constrain later engineering, but Phase 011 must remain neutral about how those guarantees are realized.
 
-# Current composition evidence treatment
+# Application-action boundary
 
-Existing `docs/canonical/synchronizations/` material and Phase 007-C/007-D are strong reusable evidence, but they predate the eighteen-Concept cutover.
+011-B's action classifications are conceptual, not implementation or interaction design.
 
-They must be revalidated especially where they previously assumed:
+A Concept action can be:
 
-- Judging Encounter owned both occurrence and obligation meaning;
-- Evaluation Obligation was not a Concept;
-- Official Outcome Revision was the official-outcome authority owner;
-- old direct peer typing represented intrinsic relationships;
-- factual Coverage and exception acceptance could be discussed too closely together.
+- a direct application-action candidate;
+- coordinated with other Concept actions;
+- composition-only;
+- system-triggered conceptually;
+- intentionally unavailable as a generic MUDAC action;
+- unresolved pending its owning subgroup.
 
-[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) is the active composition start gate and approved decomposition.
+This classification does not specify buttons, screens, routes, APIs, command handlers or authorization middleware. Phase 013 will revalidate user-visible mapping.
 
-# Phase 012 boundary
+# Phase 012 / Phase 013 boundaries
 
 Phase 011 answers how included Concepts interact. Phase 012 answers which otherwise independent Concepts must, may, conditionally or alternatively be included together in coherent application/product variants.
 
 A synchronization edge is not automatically an inclusion-dependence edge.
+
+Phase 013 owns user-visible representation/mapping questions such as how role/context selection is presented when that selection does not itself create domain authority.
 
 # Current project-purpose constraints
 
@@ -151,7 +169,7 @@ Until successful Phase 017 closure:
 Current work may:
 
 - execute Phases 011–017;
-- update canonical synchronization/composition knowledge when Phase 011 establishes current semantics;
+- update canonical synchronization/composition knowledge only when Phase 011 evidence establishes current semantics;
 - update current Concept/policy/mechanism owners when methodology evidence genuinely changes their meaning;
 - inspect historical downstream material only for contamination/assumptions/counterexamples or future handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
@@ -165,4 +183,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**
+> **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**

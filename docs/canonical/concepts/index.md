@@ -49,8 +49,8 @@ In particular:
 
 ## Active methodology work
 
-Phase 011 is active. [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the composition start gate and approved subphase sequence.
+Phase 011 is active. [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the composition scope and sequence. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) is the current legacy synchronization classification and provisional application-action baseline.
 
-Phase 011 must preserve these Concepts as intrinsically independent while revalidating application-level synchronization and action exposure. Phase 012 will separately analyze product-family inclusion dependence.
+Phase 011 must preserve these Concepts as intrinsically independent while revalidating application-level synchronization and action exposure. 011-B found no Concept-boundary defect requiring Phase 010 reopening. Phase 012 will separately analyze product-family inclusion dependence.
 
-Next: **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.
+Next: **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.

@@ -22,6 +22,6 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Phase 011 is now active. The start gate is [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md). Derived mechanisms participate in application composition where appropriate but must not gain source or official authority merely because a synchronization consumes or refreshes them.
+Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) establishes the current composition inventory and explicitly preserves derived mechanisms as non-authoritative participants: synchronization may consume, refresh or condition on them without allowing them to establish source or official authority.
 
-The next methodology task is **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.
+The next methodology task is **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
