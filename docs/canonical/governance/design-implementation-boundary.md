@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: Defines MUDAC's reopened Concept Design posture, current Phase 010 convergence state, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate until successful methodology closure.
+description: Defines MUDAC's reopened Concept Design posture after Phase 010 completion, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate through Phases 011–017 until successful methodology closure.
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, reentry]
 sources:
@@ -9,10 +9,11 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T09:29:00-05:00 }
 ---
 
 # Purpose
@@ -21,7 +22,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 is active and has completed project/context reconciliation, purpose revalidation, divergent candidate discovery, behavioral specification, specificity, completeness/independence/genericity, and canonical Concept convergence through 010-H.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 has now completed the foundational project/context, purpose, discovery, behavioral specification and modularity work required before composition.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -36,16 +37,8 @@ implementation readiness: NOT READY
 new domain implementation: NOT STARTED
 implementation authorization: NOT YET
 Phase 009: COMPLETE — PASS
-Phase 010: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+Phase 010: COMPLETE — PASS
+Phase 011: NEXT — ENTRY/DECOMPOSITION
 production readiness: NOT ESTABLISHED
 ```
 
@@ -69,13 +62,13 @@ historical architecture / implementation
 
 # Current Concept boundary
 
-010-H has converged the current Concept catalog to eighteen Concepts:
+Phase 010 converged and exited with eighteen current Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
 The previous Judging Encounter and Official Outcome Revision paths are deprecated historical adapters, not current semantic owners.
 
-This convergence does **not** establish:
+Phase 010 establishes that the current Concepts are sufficiently behaviorally specified, specific, complete, intrinsically independent and boundary-generic for composition work. It does **not** establish:
 
 - synchronization/composition completeness — Phase 011;
 - inclusion dependence/product subsets — Phase 012;
@@ -84,6 +77,23 @@ This convergence does **not** establish:
 - whole-system integrity — Phase 015;
 - final scenario/adversarial closure — Phase 016;
 - methodology closure — Phase 017.
+
+# Phase 011 authority boundary
+
+Phase 011 may design **conceptual composition and synchronization only**.
+
+It may define:
+
+- which independent Concept actions participate together at application level;
+- conceptual triggers, conditions and semantic value bindings;
+- deliberate application action exposure/non-exposure;
+- chained conceptual effects, automation and defensible synergy;
+- over/under-synchronization findings;
+- Phase 012 inclusion/dependence questions.
+
+It must not define runtime realization such as APIs, controllers, event buses, queues, workers, transactions, sagas, retries, source modules, service boundaries or deployment architecture.
+
+Existing synchronization documents and Phase 007-C/007-D are reusable evidence but must be revalidated against Evaluation Occurrence, Evaluation Obligation, Outcome Declaration and the post-010 parameterized boundaries.
 
 # Current project-purpose constraints
 
@@ -102,7 +112,7 @@ Until successful Phase 017 closure:
 - Phase 008 implementation planning remains halted;
 - `docs/canonical/implementation/` remains downstream candidate/tooling knowledge, not current domain realization authority.
 
-# Prohibited work during Phases 010–017
+# Prohibited work during Phases 011–017
 
 Do not begin/resume:
 
@@ -119,7 +129,7 @@ Do not begin/resume:
 
 Current work may:
 
-- execute Phases 010–017;
+- execute Phases 011–017;
 - update current conceptual owners when methodology evidence changes meaning;
 - inspect historical downstream material only for contamination/assumptions/counterexamples or future handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
@@ -131,6 +141,6 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 # Current handoff
 
-Proceed to:
+Proceed to a **Phase 011 entry/decomposition exercise** for:
 
-> **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**
+> **Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation**

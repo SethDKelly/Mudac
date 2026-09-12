@@ -7,9 +7,9 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. Use [`Phase 009`](docs/009-jackson-methodology-realignment/) as methodology-realignment provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the active phase.
+4. Use [`Phase 009`](docs/009-jackson-methodology-realignment/) as methodology-realignment provenance and [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/) and [Current Concepts](docs/canonical/concepts/) before task-specific Concept work.
-6. For the Phase 010 boundary transition rationale, use [010-F](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [010-H](docs/010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
+6. Read [010-I](docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) before Phase 011 work; use [010-F](docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [010-H](docs/010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md) when boundary rationale is needed.
 7. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -25,19 +25,11 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
-010: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+010: COMPLETE — PASS
+011: NEXT — ENTRY/DECOMPOSITION
 ```
 
-## Current Concept authority after 010-H
+## Current Concept authority after Phase 010
 
 The current canonical catalog contains eighteen Concepts:
 
@@ -69,31 +61,35 @@ Do **not** use the previous sixteen-Concept taxonomy as current authority.
 - Aggregate, Rank and Readiness remain derived mechanisms.
 - Recovery/Continuity remains a cross-cutting purpose obligation rather than a standalone Concept.
 
-## Phase 010 subgroup order
+## Phase 010 result
+
+Phase 010 completed the foundational project/purpose/discovery/specification/modularity work required before composition:
 
 ```text
-010-A intent / evidence reuse / decomposition                 COMPLETE
-010-B project mandate / actors / outcomes / scope / evidence  COMPLETE
-010-C purpose / need / success / tension / traceability       COMPLETE
-010-D candidate rediscovery / divergent alternatives          COMPLETE
-010-E behavioral specification current-truth audit            COMPLETE
-010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       COMPLETE
-010-H convergence / re-specification / canonical repair       COMPLETE
-010-I consolidation / exit / Phase 011 handoff                NEXT
+010-A intent / evidence reuse / decomposition                 COMPLETE — PASS
+010-B project mandate / actors / outcomes / scope / evidence  COMPLETE — PASS
+010-C purpose / need / success / tension / traceability       COMPLETE — PASS
+010-D candidate rediscovery / divergent alternatives          COMPLETE — PASS
+010-E behavioral specification current-truth audit            COMPLETE — PASS
+010-F specificity / purpose singularity / boundary options    COMPLETE — PASS
+010-G completeness / independence / boundary genericity       COMPLETE — PASS
+010-H convergence / re-specification / canonical repair       COMPLETE — PASS
+010-I consolidation / exit / Phase 011 handoff                COMPLETE — PASS
 ```
 
-## Current Concept-design discipline
+## Phase 011 discipline
 
-- Treat [Canonical Project Context & Purpose](docs/canonical/project/) as the current project/purpose baseline.
-- Treat [Canonical Concepts](docs/canonical/concepts/) as the current Concept catalog.
-- Direct peer Concept references are not automatically intrinsic dependency. Preserve the abstract-parameter boundaries established by 010-G/H.
-- Do not pull cross-Concept behavior into a Concept merely to simplify workflow; Phase 011 owns synchronization.
-- Do not infer that independent Concepts must appear together in every product variant; Phase 012 owns inclusion dependence/subsets.
-- Broader familiarity/reuse/catalog refinement belongs to Phase 014.
-- If later work exposes a genuine upstream defect, correct the natural owner and revalidate affected downstream conclusions.
+The next task is a **Phase 011 entry/decomposition exercise** for Concept Composition, Synchronization, Application Action Surface & Automation Revalidation.
 
-## Design-only rules for Phases 010–017
+- Treat [Canonical Concepts](docs/canonical/concepts/) as the authoritative independent Concept set.
+- Treat [Canonical Synchronizations](docs/canonical/synchronizations/) and Phase 007-C/007-D as strong reusable **pre-011 evidence**, not as automatically current composition authority.
+- Revalidate synchronizations against Evaluation Occurrence, Evaluation Obligation, Outcome Declaration and the generic parameter boundaries established by 010-G/H.
+- Do not mechanically rename `Judging Encounter` or `Official Outcome Revision` references and call composition complete.
+- Do not pull cross-Concept behavior into Concept specifications merely to simplify coordination.
+- Do not infer inclusion dependence from synchronization; Phase 012 owns subsets/product-family dependence.
+- If composition exposes a genuine Phase 003/004 defect, reopen/correct the natural owner and revalidate affected conclusions.
+
+## Design-only rules for Phases 011–017
 
 - Do not resume 008-F through 008-L.
 - Do not begin new domain implementation.
@@ -111,6 +107,6 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 ## Current next task
 
-Proceed to:
+Proceed to a **Phase 011 entry/decomposition exercise** for:
 
-> **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**
+> **Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation**

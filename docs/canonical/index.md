@@ -5,9 +5,9 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 # Current conceptual knowledge
 
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
-* [Concepts](concepts/) — current **eighteen-Concept** catalog after 010-H convergence.
+* [Concepts](concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes; Official Outcome Revision remains only a deprecated historical adapter.
-* [Synchronizations](synchronizations/) — current pre-011 composition evidence, subject to Phase 011 revalidation against the converged Concept catalog.
+* [Synchronizations](synchronizations/) — pre-011 composition evidence subject to Phase 011 revalidation against the converged Concept catalog.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
@@ -34,21 +34,15 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
-010: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+010: COMPLETE — PASS
+011: NEXT — ENTRY/DECOMPOSITION
 ```
 
 # Phase 010 canonical result
 
-[010-H](../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md) converged the current catalog to:
+[010-I](../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) closes Phase 010 with PASS after project/purpose/discovery/specification/modularity reconciliation.
+
+Current Concept authority is:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
@@ -56,23 +50,23 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 # Retrieval rule during reopened design
 
-For Phases 010–017:
+For Phases 011–017:
 
-1. load the active phase/start-gate record;
+1. load the current phase/start-gate record;
 2. load [Project Context & Purpose](project/) when project/purpose/scope assumptions matter;
 3. load only task-relevant current Concept/mechanism/policy/invariant owners;
 4. use older phase records for rationale/evidence rather than current ownership;
 5. load the [Design / Implementation Boundary](governance/design-implementation-boundary.md) and downstream quarantine;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-After 010-H, agents must use the eighteen-Concept index as current authority rather than the old sixteen-Concept taxonomy or the phase-level candidate tables.
+For Phase 011 specifically, treat [Synchronizations](synchronizations/) and Phase 007-C/007-D as strong reusable evidence that must be revalidated against the post-010 Concept boundaries.
 
 # Completion runway
 
 ```text
-010 project/purpose / discovery / specification / modularity   IN PROGRESS — 010-I NEXT
+010 project/purpose / discovery / specification / modularity   COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation
+011 composition / synchronization revalidation                NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -87,4 +81,4 @@ After 010-H, agents must use the eighteen-Concept index as current authority rat
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+The immediate next work is a **Phase 011 entry/decomposition exercise**.

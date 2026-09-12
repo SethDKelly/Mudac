@@ -9,8 +9,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
-* [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog after 010-H convergence.
-* [`docs/010-project-purpose-candidate-specification-modularity/`](docs/010-project-purpose-candidate-specification-modularity/) — active Phase 010 foundation/completion history.
+* [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
+* [`docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md`](docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) — Phase 010 exit decision and Phase 011 handoff.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -26,21 +26,13 @@ new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 009 methodology realignment: COMPLETE — PASS
-010: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+010 foundational completion: COMPLETE — PASS
+011: NEXT — ENTRY/DECOMPOSITION
 ```
 
 ## Current Concept catalog
 
-Phase 010-H canonically converged the model to eighteen Concepts:
+Phase 010 canonically converged the model to eighteen Concepts:
 
 1. Competition
 2. Division
@@ -68,9 +60,9 @@ Coverage remains derived factual sufficiency with exception disposition modeled 
 ## Completion runway
 
 ```text
-010-I — Phase 010 consolidation / exit / Phase 011 handoff     NEXT
+010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation
+011 composition / synchronization revalidation                 NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -95,4 +87,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+Proceed to a **Phase 011 entry/decomposition exercise** for **Concept Composition, Synchronization, Application Action Surface & Automation Revalidation**.

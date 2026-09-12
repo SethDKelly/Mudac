@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 modularity convergence.
+Current canonical Concept catalog after Phase 010 modularity convergence and exit.
 
 Each current Concept owner exposes a current representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Direct MUDAC peer bindings are treated as composition unless the peer semantics are intrinsic.
 
@@ -29,7 +29,7 @@ Each current Concept owner exposes a current representation-independent Purpose,
 
 [Judging Encounter](judging-encounter.md) is retained only as a `deprecated` historical adapter. Its former responsibilities are now owned by **Evaluation Occurrence + Evaluation Obligation**. It is not part of the current Concept count.
 
-## Phase 010 convergence authority
+## Phase 010 authority
 
 The current catalog is the result of:
 
@@ -37,9 +37,10 @@ The current catalog is the result of:
 - [010-E behavioral specification audit](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md);
 - [010-F specificity/purpose singularity](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md);
 - [010-G completeness/independence/boundary genericity](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md);
-- [010-H canonical convergence](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
+- [010-H canonical convergence](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md);
+- [010-I Phase 010 exit review](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md).
 
-No current Concept is accepted merely because it existed historically. Conversely, later phases may still discover defects and reopen the natural owner when evidence warrants it.
+No current Concept is accepted merely because it existed historically. Later phases may still discover defects and reopen the natural owner when evidence warrants it.
 
 ## Explicit non-Concept classifications
 
@@ -55,6 +56,6 @@ In particular:
 
 ## Next methodology work
 
-Phase 010-H has converged the current catalog. The next task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+Phase 010 is complete. The next task is a **Phase 011 entry/decomposition exercise** for Concept Composition, Synchronization, Application Action Surface & Automation Revalidation.
 
 Phase 011 will revalidate synchronization among these independent Concepts. Phase 012 will analyze product-family inclusion dependence. Neither question is answered by this index.

@@ -12,9 +12,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance.
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
-* [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010-H convergence.
+* [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
-* [Synchronizations](canonical/synchronizations/) — composition evidence subject to Phase 011 revalidation.
+* [Synchronizations](canonical/synchronizations/) — pre-011 composition evidence subject to Phase 011 revalidation.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
 * [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
@@ -23,25 +23,17 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), and the active [Phase 010](010-project-purpose-candidate-specification-modularity/).
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), and [010-I](010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md).
 
-For the modularity transition rationale, use [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [010-H](010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
+For Phase 010 modularity rationale, use [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [010-H](010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
 
 # Current methodology state
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
-010: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+010: COMPLETE — PASS
+011: NEXT — ENTRY/DECOMPOSITION
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -49,18 +41,18 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Phase 010 result so far
+# Phase 010 result
 
-010-H removed the temporary split between incumbent and candidate catalogs. Current authority is now the converged eighteen-Concept model.
+Phase 010 closes the current foundational `000–004` residual work identified by Phase 009. Current authority is the converged eighteen-Concept model, with project/purpose/discovery/specification/modularity evidence preserved in the Phase 010 records.
 
 Deprecated adapter paths preserve historical meaning for `Judging Encounter` and `Official Outcome Revision`; neither is a current owner.
 
 # Completion runway
 
 ```text
-010 foundational completion                         010-I NEXT
+010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization
+011 composition / synchronization                                      NEXT
   ↓
 012 dependence / product family / subsets
   ↓
@@ -77,4 +69,4 @@ Deprecated adapter paths preserve historical meaning for `Judging Encounter` and
 
 A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-The immediate next task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+The immediate next task is a **Phase 011 entry/decomposition exercise** for Concept Composition, Synchronization, Application Action Surface & Automation Revalidation.
