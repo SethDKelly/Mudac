@@ -11,7 +11,7 @@ sources:
   - resource: ../concepts/versioning.md
   - resource: ../concepts/provenance.md
   - resource: ../concepts/scorecard.md
-  - resource: ../mechanisms/official-outcome-revision.md
+  - resource: ../concepts/outcome-declaration.md
   - resource: ../policies/correction-authority.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:52:55Z }
 ---
@@ -82,7 +82,7 @@ Coverage, Aggregate, Rank, readiness, and similar derived values may be material
 
 Derived rows are not independently editable authority. A changed basis invalidates/recomputes them.
 
-An [Official Outcome Revision](../mechanisms/official-outcome-revision.md#out-001) is different: explicit Finalization freezes an immutable official snapshot/basis, and later correction produces a successor revision under `OUT-002`.
+An [Outcome Declaration](../concepts/outcome-declaration.md#out-001) is different: explicit declaration freezes an immutable official basis, and later correction requires explicit successor confirmation under `OUT-002`.
 
 <a id="data-009"></a>
 ## DATA-009 — Read projections are disposable, rebuildable, and non-authoritative

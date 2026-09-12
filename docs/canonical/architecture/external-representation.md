@@ -15,12 +15,12 @@ sources:
   - resource: synchronization-recovery.md
   - resource: ../concepts/export.md
   - resource: ../concepts/publication.md
+  - resource: ../concepts/outcome-declaration.md
   - resource: ../policies/continuity-paper.md
   - resource: ../policies/anonymity-disclosure.md
   - resource: ../policies/correction-authority.md
   - resource: ../policies/operational-exception-governance.md
   - resource: ../experience/paper-export-publication.md
-  - resource: ../mechanisms/official-outcome-revision.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-10T08:12:00Z }
 ---
 
@@ -103,7 +103,7 @@ Validation/preview does not change the underlying source Version or automaticall
 
 The [Publication](../concepts/publication.md) Concept owns the deliberate domain act of release/distribution. This architecture realizes it as an authoritative record that identifies the exact Artifact/Export representation, inherited source/disclosure basis, audience, channel/destination, actor/authorizer, publication time, and current distribution state.
 
-Publication eligibility follows [PUB-001](../concepts/publication.md#pub-001): operational/event representations may be released before Competition Finalization when their own source/lifecycle/disclosure constraints permit, while a Publication claiming official Competition outcomes must bind through its Export to an identified [Official Outcome Revision](../mechanisms/official-outcome-revision.md). A generated or official artifact is not public until an applicable Publication transition succeeds after authoritative commit.
+Publication eligibility follows [PUB-001](../concepts/publication.md#pub-001): operational/event representations may be released before Competition Finalization when their own source/lifecycle/disclosure constraints permit, while a Publication claiming official Competition outcomes must bind through its Export to an identified [Outcome Declaration](../concepts/outcome-declaration.md). A generated or officially declared artifact is not public until an applicable Publication transition succeeds after authoritative commit.
 
 <a id="rep-012"></a>
 ## REP-012 — Source changes affect dependent representations without rewriting historical artifacts
@@ -117,7 +117,7 @@ A source correction never silently rewrites an old artifact.
 
 A corrected/revised representation is generated as a new Export/Artifact and requires an explicit successor [Publication](../concepts/publication.md). Prior Publications retain predecessor/successor history and are marked superseded/withdrawn/current as applicable rather than being repointed invisibly.
 
-This mirrors successor-based authority in [OUT-002](../mechanisms/official-outcome-revision.md#out-002) without making Publication itself an Official Outcome Revision.
+This mirrors successor-based authority in [OUT-002](../concepts/outcome-declaration.md#out-002) without making Publication itself an Outcome Declaration.
 
 <a id="rep-014"></a>
 ## REP-014 — URLs, QR codes, signed links, print jobs, and delivery channels do not confer authority
