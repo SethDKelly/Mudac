@@ -1,42 +1,48 @@
 ---
 type: Design Concept
 title: Alias
-description: Competition-scoped Team identity used to support blinded judging.
+description: Scoped alternate identity for a Subject that preserves historical mapping without exposing underlying identity by default.
 status: stable
-tags: [concept, identity, anonymity]
+tags: [concept, identity, anonymity, alias]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-A-competition-division-team-alias-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Give a subject a context-specific identity that can be used without exposing its underlying administrative identity.
+Give a Subject a context-specific alternate identity within a Scope so interaction can use that identity without exposing the underlying subject identity by default.
+
+# Abstract parameters
+
+Conceptually:
+
+`Alias<Subject, Scope, AliasValue>`
+
+Alias is intrinsically generic over subject identity, scope, and alias value.
 
 # State
 
-Alias owns subject, scope, value, Active/Retired-or-Superseded status, and the historical mapping needed to resolve previously used values. For MUDAC, subject is Team and scope is Competition.
+Alias owns Subject, Scope, AliasValue, Active/Retired-or-Superseded status, uniqueness/reservation within the applicable scope, and historical mapping needed to resolve previously used values.
 
-# Actions
+# Actions and queries
 
-Conceptual actions are `assign`, `replace`, `retire`, and `resolve`.
+Conceptual actions are `assign`, `replace`, and `retire`.
 
-Whether a caller may resolve an Alias to its underlying subject is an [Access](access.md) question rather than Alias state.
+Conceptual queries include `currentAlias`, `history`, and access-controlled `resolve` to the underlying Subject.
 
 # Operational Principle
 
-A Team is assigned a competition identity that avoids unnecessary institutional disclosure. Judges interact with that Alias during judging. Authorized Organizer activity may resolve it to the Team. If a correction replaces the Alias after use, the prior value remains reserved and historically traceable rather than being silently reused.
+A Subject receives an alternate identity for a Scope. Ordinary interaction can use the Alias without revealing underlying identity. If correction replaces an Alias after use, the prior value remains reserved and historically traceable rather than silently reused. Whether a caller may resolve the Alias is an Access decision, not Alias state.
 
-# Canonical contract
+# MUDAC composition binding
 
-Each participating Team requires exactly one active Competition Alias before Ready. Active Aliases are unique in Competition scope, designed not to reveal institution identity, and are not recycled after operational use.
-
-Alias is the canonical Judge-facing Team identity during blinded judging. Historical Encounters preserve the Alias presented at the time even if current Alias is later corrected.
+MUDAC normally binds Subject to Team and Scope to Competition. The Alias is the Judge-facing competitor identity during blinded judging; Evaluation Occurrence preserves the Alias/presentation value actually shown at the time.
 
 # Boundaries
 
-Alias is not authentication, a secret, Team Name, Division encoding, or stable Team identity.
+Alias is not authentication, a secret, Team Name, Division encoding, permanent Subject identity, or an Access-control mechanism.
 
-See [Team](team.md), [Anonymity & Disclosure](../policies/anonymity-disclosure.md), and [Current vs Historical Truth](../invariants/current-vs-historical-truth.md).
+See [Anonymity & Disclosure](../policies/anonymity-disclosure.md).

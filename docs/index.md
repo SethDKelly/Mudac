@@ -6,55 +6,31 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and governance knowledge.
 
-Current conceptual meaning is organized under canonical knowledge. Numbered phase directories preserve design/history/planning provenance. Architecture and implementation material are preserved but quarantined from constraining reopened Concept Design.
+Current conceptual meaning lives under canonical knowledge. Numbered phase directories preserve design/history provenance. Architecture and implementation are preserved but quarantined from constraining reopened Concept Design.
 
 # Current Canonical Knowledge
 
-* [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance plus suspended downstream candidate architecture/implementation material.
-* [Project Context & Purpose](canonical/project/) — current representation-independent project mandate, scope/constraints, purpose obligations, success situations, tensions and validated Phase-010 modularity pressure.
-* [Concepts](canonical/concepts/) — current sixteen-Concept **incumbent** catalog pending 010-H convergence; do not confuse current ownership with the validated eighteen-candidate phase-level result.
-* [Mechanisms](canonical/mechanisms/) — current derived/supporting subjects; Evaluation Sufficiency/Coverage and Reconciliation remain non-Concept, while Official Outcome Revision ownership is pending convergence to Outcome Declaration.
-* [Synchronizations](canonical/synchronizations/) — current composition and temporal/correction semantics, subject to Phase 011 revalidation.
-* [Policies](canonical/policies/) — current governing/configurable conceptual semantics.
-* [Experience](canonical/experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
-* [Governance](canonical/governance/) — methodology, documentation/change governance and the current design/implementation boundary.
-* [Architecture](canonical/architecture/) — preserved **suspended downstream candidates**.
-* [Implementation](canonical/implementation/) — preserved **suspended downstream candidates** plus frozen 006-D bootstrap facts.
+* [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance.
+* [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
+* [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010-H convergence.
+* [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
+* [Synchronizations](canonical/synchronizations/) — composition evidence subject to Phase 011 revalidation.
+* [Policies](canonical/policies/) — governing/configurable conceptual semantics.
+* [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
+* [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
+* [Architecture](canonical/architecture/) — suspended downstream candidates.
+* [Implementation](canonical/implementation/) — suspended downstream candidates plus frozen bootstrap facts.
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), the active [Phase 010](010-project-purpose-candidate-specification-modularity/), [010-F specificity/boundary audit](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), and [010-G completeness/independence/genericity audit](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) before 010-H work.
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), and the active [Phase 010](010-project-purpose-candidate-specification-modularity/).
 
-During Phases 010–017, do not preload architecture/implementation unless the task explicitly concerns contamination analysis or historical comparison.
+For the modularity transition rationale, use [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md), [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md), and [010-H](010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
 
-# External Authorities and References
-
-* [References](references/) — external methodologies, standards, specifications and MUDAC adoption/profile context.
-* [`SethDKelly/Base`](https://github.com/SethDKelly/Base/tree/main) — Jackson-aligned lifecycle operationalization used for completion-control reference; its numbering is not represented as Daniel Jackson's official phase sequence.
-
-# Design History and Current Phase
-
-* Phase 001 — Concept Design Foundation: reusable design evidence.
-* Phase 002 — Concept Specification: reusable behavioral-specification evidence.
-* Phase 003 — Conceptual UX Architecture: reusable mapping/experience evidence.
-* Phase 004 — Knowledge Architecture: current OKF/documentation governance foundation.
-* Phase 005 — Architecture: historical; suspended as Concept Design constraint.
-* Phase 006 — Implementation Planning/Bootstrap: historical; 006-D frozen.
-* Phase 007 — Design Refinement: reusable evidence; 007-I closure superseded.
-* Phase 008 — Implementation Re-entry: halted after 008-E.
-* Phase 009 — Methodology Realignment: **Complete — PASS**.
-* Phase 010 — Foundational Concept Design Completion: **In Progress — 010-A/B/C/D/E/F/G complete; 010-H next**.
-
-# Current posture
+# Current methodology state
 
 ```text
-Jackson Concept Design methodology: REOPENED / IN PROGRESS
-architecture authority: SUSPENDED
-implementation-planning authority: SUSPENDED
-006-D executable bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
-new domain implementation: NOT STARTED
-implementation readiness: NOT READY
-implementation authorization: NOT YET
+Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
 010: IN PROGRESS
 010-A: COMPLETE — PASS
@@ -64,50 +40,41 @@ implementation authorization: NOT YET
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
 010-G: COMPLETE — PASS
-010-H: NEXT
-production readiness: NOT ESTABLISHED
+010-H: COMPLETE — PASS
+010-I: NEXT
+architecture authority: SUSPENDED
+implementation planning: SUSPENDED
+new domain implementation: NOT STARTED
+implementation readiness: NOT READY
+implementation authorization: NOT YET
 ```
 
-# Active Phase 010 decomposition
+# Phase 010 result so far
 
-```text
-010-A intent / evidence reuse / decomposition                 COMPLETE
-010-B project/context reconciliation                          COMPLETE
-010-C purpose / need / success / tensions                     COMPLETE
-010-D candidate rediscovery / divergent alternatives          COMPLETE
-010-E behavioral specification current-truth audit            COMPLETE
-010-F specificity / purpose singularity / boundary options    COMPLETE
-010-G completeness / independence / boundary genericity       COMPLETE
-010-H convergence / re-specification / canonical reconciliation NEXT
-010-I consolidation / exit / Phase 011 handoff
-```
+010-H removed the temporary split between incumbent and candidate catalogs. Current authority is now the converged eighteen-Concept model.
 
-010-G validates all eighteen post-specificity candidates and hands 010-H a finite canonical convergence queue. Four material completeness expansions are mandatory: Evaluation Obligation successor responsibility, Rubric response interpretation, Versioning invalidation/current eligibility, and Export currency behavior. Generic boundary parameters must also replace false direct peer typing where a Concept needs only identity/content/context.
+Deprecated adapter paths preserve historical meaning for `Judging Encounter` and `Official Outcome Revision`; neither is a current owner.
 
 # Completion runway
 
 ```text
-010 foundational project/purpose/discovery/specification/modularity completion
+010 foundational completion                         010-I NEXT
   ↓
-011 composition / synchronization / application-action revalidation
+011 composition / synchronization
   ↓
-012 dependence / product-family / subsets / scope
+012 dependence / product family / subsets
   ↓
-013 mapping / interaction / representation revalidation
+013 mapping / representation
   ↓
-014 familiarity / reuse / genericity / catalog refinement
+014 familiarity / reuse / catalog refinement
   ↓
-015 integrity / cross-concept interference
+015 integrity / interference
   ↓
-016 scenario / misfit / exception / failure / adversarial validation
+016 scenario / misfit / failure / adversarial
   ↓
-017 methodology completeness / canonical consolidation / closure
+017 methodology completeness / closure
 ```
 
-A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture, Phase 008 planning, or implementation.
+A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-# Navigation Guidance
-
-For 010-H, read [010-G](010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) and [010-F](010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) before changing [incumbent Concepts](canonical/concepts/) or [Mechanisms](canonical/mechanisms/). Canonical convergence must preserve phase-history rationale while leaving Phase 011 synchronization and Phase 012 inclusion dependence unresolved.
-
-The immediate next task is **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**.
+The immediate next task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.

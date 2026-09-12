@@ -1,42 +1,46 @@
 ---
 type: Design Concept
 title: Division
-description: Competitive partition within which Teams are compared by default.
+description: Scoped competitive cohort definition and member assignment for legitimate comparison.
 status: stable
-tags: [concept, competition, ranking]
+tags: [concept, competition, division, cohort]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-A-competition-division-team-alias-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Partition competing Teams into mutually exclusive populations that should be compared against one another.
+Partition competing members within a Scope into mutually exclusive cohorts that should be compared under the same competitive grouping.
+
+# Abstract parameters
+
+Conceptually:
+
+`Division<Scope, Member>`
+
+Division needs only scoped Member identity; it does not require the internals of Competition or Team.
 
 # State
 
-Division owns Competition-scoped Division definitions with stable identity, name/description, and Active/Retired status, plus the current Team-to-Division assignment relation. Historical Encounter presentation remains outside Division.
+Division owns stable cohort identity within Scope, name/description, Active/Retired availability, current Member-to-Division assignment, and attributable correction history for assignment mistakes.
 
-# Actions
+# Actions and queries
 
-Conceptual actions are `define`, `updateDefinition`, `retire`, `assign`, and explicit `correctAssignment`.
+Conceptual actions are `define`, `updateDefinition`, `retire`, `assign`, and `correctAssignment`.
 
-Ordinary competition operation treats assignment as stable; a later correction is semantically different from routine movement between cohorts.
+Queries include current assignment, active cohorts, and assignment history.
 
 # Operational Principle
 
-An Organizer defines the Competition's Divisions and assigns each participating Team to the appropriate competitive cohort. If a Team was misclassified, the Organizer explicitly corrects the assignment; existing Judge evaluations remain attached to the same Team while affected Division-scoped derivations are reassessed.
+An authorized actor defines competitive cohorts within a Scope and assigns each competing Member to the appropriate cohort. Ordinary operation treats assignment as current competitive truth. If a Member was misclassified, the assignment is explicitly corrected rather than silently rewritten; historical evaluation/presentation elsewhere remains governed by the state captured by those Concepts.
 
-# Canonical contract
+# MUDAC composition binding
 
-A participating Team belongs to exactly one active Division in the Competition before Ready/Active. Division definitions are configurable rather than hard-coded academic labels.
-
-Division assignment is current operational truth. A later correction does not rewrite the Division historically presented during an already-completed [Judging Encounter](judging-encounter.md).
+MUDAC normally binds Scope to Competition and Member to Team identity. Rank is derived within current Division scope under Evaluation Policy, but Division does not calculate ranking.
 
 # Boundaries
 
-Division does not own Team identity, Alias, evaluation evidence, Aggregate, Rank, or Awards. [Rank](../mechanisms/rank.md) is derived within Division scope under [Evaluation Policy](../policies/evaluation-policy.md).
-
-See [Current vs Historical Truth](../invariants/current-vs-historical-truth.md).
+Division does not own competitor identity, Alias, evaluation evidence, occurrence history, Aggregate, Rank, Award, or outcome declaration.

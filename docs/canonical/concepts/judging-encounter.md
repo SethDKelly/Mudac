@@ -1,45 +1,30 @@
 ---
 type: Design Concept
-title: Judging Encounter
-description: One bounded occurrence of a Panel evaluating one Team.
-status: stable
-tags: [concept, judging, encounter]
+title: Judging Encounter — Deprecated Boundary
+description: Deprecated historical adapter for the former combined occurrence-and-obligation Concept; current ownership is split between Evaluation Occurrence and Evaluation Obligation.
+status: deprecated
+tags: [concept, deprecated, judging, encounter, supersession]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
-  - resource: ../../002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
-  - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: evaluation-occurrence.md
+  - resource: evaluation-obligation.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
-# Purpose
+# Supersession notice
 
-Represent one bounded occurrence of one [Panel](panel.md) evaluating one [Team](team.md).
+`Judging Encounter` is no longer a current MUDAC Concept boundary.
 
-# State
+Phase 010 modularity analysis found that the former owner mixed two independently changing purposes:
 
-Encounter owns stable Competition/Panel/Team identity, the presented Alias and Division snapshots, lifecycle, timing, starting participant snapshot, participant adjustments, effective evaluation obligations, and any cancellation/invalidation/replacement relationship.
+- historical truth about a bounded evaluation occurrence; and
+- an evaluator's responsibility to produce qualifying judgment.
 
-The baseline lifecycle is `Prepared → Open → Complete`, with `Cancelled` before meaningful judging and `Invalidated` when an occurrence that happened must no longer contribute officially.
+Current ownership is:
 
-# Actions
+- [Evaluation Occurrence](evaluation-occurrence.md) — what bounded evaluation occurrence actually happened, including presented context, actual participants, validity and replacement history;
+- [Evaluation Obligation](evaluation-obligation.md) — which evaluator is responsible for qualifying judgment and whether that responsibility is Outstanding, Satisfied, Excused, Cancelled, reassigned, or succeeded by a new responsibility.
 
-Conceptual actions are `prepare`, `begin`, `confirmPresentationComplete`, `recordParticipantAdjustment`, `complete`, `cancel`, `invalidate`, and `linkReplacement`.
+Historical phase records may continue to use `Judging Encounter` according to the design that was current when those records were written. This file remains only to preserve links and explain the semantic transition.
 
-# Operational Principle
-
-A Panel is ready to judge a Team. The application prepares or resolves the Encounter. When judging begins it snapshots the Team-facing context and participating Judges, creating the basis for individual evaluation obligations. Absence, recusal, or replacement is recorded explicitly. When all remaining required obligations are resolved, the Encounter becomes Complete.
-
-# Canonical contract
-
-Effective Encounter participation—not nominal Panel membership—creates Scorecard obligations.
-
-Invalidating an Encounter preserves that the occurrence happened and preserves the Scorecards Judges authored from it, while making evaluation evidence dependent on that invalid Encounter ineligible for ordinary official aggregation. A rejudge is a distinct replacement Encounter with its own participant/context snapshots and evaluation obligations rather than a mutation of the invalidated occurrence.
-
-# Boundaries
-
-Later Panel, Alias, or Division changes never rewrite what this Encounter historically observed. Same Panel + Team initiation should converge on one valid occurrence unless an explicit rejudge/replacement creates another occurrence.
-
-Encounter does not own Judge judgment, Rubric semantics, or downstream aggregation/ranking.
-
-See [Scorecard](scorecard.md), [Panel Membership & Composition](../mechanisms/panel-membership-composition.md), [Current vs Historical Truth](../invariants/current-vs-historical-truth.md), and [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+Do not use this document as current Concept authority.

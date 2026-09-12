@@ -4,28 +4,26 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Methodology and authority
 
-* [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — relationship among Daniel Jackson Concept Design, the Base completion-control lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
-* [Documentation Authority & Canonical Ownership](documentation-authority.md) — `DOC-*` rules for current-owner precedence, one-owner discipline, downstream constraints, historical preservation and routing-artifact boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, frozen 006-D bootstrap, suspended downstream authority and design-only execution boundary.
-* [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents architecture/implementation work produced before methodology completion from constraining reopened Concept Design.
+* [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — relationship among Daniel Jackson Concept Design, Base completion-control lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
+* [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, downstream constraints, historical preservation and routing boundaries.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, frozen 006-D bootstrap and suspended downstream authority.
+* [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
 
-* [Agent Context & Progressive Retrieval](agent-context.md) — `CTX-*` rules for minimum-sufficient context, progressive disclosure, historical retrieval and anti-bloat behavior.
-* [Canonical Change & Conflict Governance](change-governance.md) — `CHG-*` rules for semantic changes, stable-rule impact review, contradiction handling and downstream/design mismatch.
+* [Agent Context & Progressive Retrieval](agent-context.md) — minimum-sufficient context, progressive disclosure and anti-bloat behavior.
+* [Canonical Change & Conflict Governance](change-governance.md) — semantic changes, contradiction handling and downstream/design mismatch.
 
-# Lineage, metadata, validation and reference governance
+# Lineage, metadata and validation
 
-* [Source Lineage and Historical Design Records](source-lineage.md) — backward `sources` provenance, forward phase-to-canonical lineage, historical preservation and material-source selection.
-* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md) — `META-*` rules for frontmatter profile, attribution, verification, lifecycle status, freshness and trust-tier boundaries.
-* [Knowledge Validation & CI Enforcement](validation-enforcement.md) — `VAL-*` rules for deterministic structural validation, stable-ID/link checks, routing requirements and read-only CI enforcement.
-* [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md) — durable rule IDs, explicit anchors, reference-first reuse and the rule registry.
+* [Source Lineage and Historical Design Records](source-lineage.md)
+* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md)
+* [Knowledge Validation & CI Enforcement](validation-enforcement.md)
+* [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md)
 
 # Current methodology posture
 
-Phase 009 formally reopened and realigned Jackson Concept Design after determining that the earlier 007-I closure was premature. Phase 010 is active; project/context, purpose, candidate rediscovery, behavioral specification, specificity and the remaining foundational modularity tests have passed their current gates.
-
-Current state:
+Phase 009 reopened and realigned Jackson Concept Design. Phase 010 has now progressed through canonical Concept convergence.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -38,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 010-E: COMPLETE — PASS
 010-F: COMPLETE — PASS
 010-G: COMPLETE — PASS
-010-H: NEXT
+010-H: COMPLETE — PASS
+010-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -46,18 +45,14 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-The exact current boundary is owned by [Design / Implementation Boundary](design-implementation-boundary.md). The active methodology phase is [Phase 010](../../010-project-purpose-candidate-specification-modularity/); Phase 009 history remains the realignment/gap-map provenance.
+# Current Concept authority
 
-# Phase 010 methodology discipline
+[010-H](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md) completed the high-risk documentation/ownership cutover required by the Base Phase-004 contract.
 
-Phase 010 closes project/context, purpose, candidate discovery, behavioral specification and modularity obligations before composition can be trusted.
+[Canonical Concepts](../concepts/) now owns one current eighteen-Concept catalog. Deprecated adapter files for Judging Encounter and Official Outcome Revision preserve history/links but are not current owners.
 
-[010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) established the eighteen-candidate post-specificity set. [010-G](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) confirms that all eighteen survive completeness, intrinsic-independence and boundary-genericity testing and provides an explicit canonical re-specification queue.
+Phase 011 synchronization and Phase 012 inclusion-dependence questions remain intentionally unresolved.
 
-Current canonical Concept/mechanism ownership is intentionally not rewritten yet. **010-H now owns canonical convergence/re-specification.**
+# Current handoff
 
-Any changed Concept must be re-specified at Phase-003 quality and current authority must become unambiguous before Phase 010 exits.
-
-# Agent adapter
-
-Repository agents receive a concise bootstrap through [`AGENTS.md`](../../../AGENTS.md). That adapter routes to these canonical governance owners and is not an independent authority layer.
+Proceed to **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.

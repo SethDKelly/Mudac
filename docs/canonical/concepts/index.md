@@ -1,65 +1,60 @@
 # MUDAC Concepts
 
-Current canonical definitions of the **incumbent** MUDAC Concept catalog under reopened Daniel Jackson Concept Design.
+Current canonical Concept catalog after Phase 010 modularity convergence.
 
-Each current Concept owner exposes a current **Purpose, State, Actions, and Operational Principle** in addition to materially important rules/boundaries. Detailed derivation remains in numbered design history.
+Each current Concept owner exposes a current representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Direct MUDAC peer bindings are treated as composition unless the peer semantics are intrinsic.
 
-* [Competition](competition.md) - Lifecycle and governing context for one competition occurrence.
-* [Division](division.md) - Mutually exclusive competitive population for Teams.
-* [Team](team.md) - Stable administrative competitor representation.
-* [Panel](panel.md) - Reusable grouping of Judge Participations intended to evaluate together.
-* [Judging Encounter](judging-encounter.md) - One bounded occurrence of a Panel evaluating a Team.
-* [Rubric](rubric.md) - Structured definition of valid evaluation judgment.
-* [Scorecard](scorecard.md) - One Judge's independent evaluation in one Encounter.
-* [Award](award.md) - Explicit competition recognition with declared selection semantics.
-* [Identity](identity.md) - Continuity that actions and Participations belong to the same human identity.
-* [Participation](participation.md) - Scoped, time-bounded involvement of an Identity in a Competition capacity.
-* [Alias](alias.md) - Context-specific Team identity used for blinded judging.
-* [Access](access.md) - Scoped permission and disclosure determined by context, state, relationship, and time.
-* [Versioning](versioning.md) - Preservation of successive authoritative states.
-* [Provenance](provenance.md) - Meaningful origin and authority history for application state.
-* [Export](export.md) - Stable external representation of identified source state for a purpose/audience.
-* [Publication](publication.md) - Deliberate distribution or public release of an identified Export representation.
+## Current eighteen-Concept catalog
 
-These sixteen documents remain current canonical knowledge only because Phase 010 has **not yet executed 010-H convergence**. Their presence must not be interpreted as contradicting the validated modularity result.
+1. [Competition](competition.md) — lifecycle and governing context for one competition occurrence.
+2. [Division](division.md) — scoped competitive cohort definition and member assignment.
+3. [Team](team.md) — stable scoped administrative competitor representation.
+4. [Panel](panel.md) — reusable scoped grouping of evaluator members.
+5. [Evaluation Occurrence](evaluation-occurrence.md) — bounded historical evaluation occurrence and actual presented/participant context.
+6. [Evaluation Obligation](evaluation-obligation.md) — one evaluator's responsibility to produce a qualifying independent evaluation.
+7. [Rubric](rubric.md) — structured evaluation instrument and response interpretation/validation semantics.
+8. [Scorecard](scorecard.md) — one evaluator's independent judgment under supplied context and evaluation basis.
+9. [Award](award.md) — scoped recognition definition and attributable conferral.
+10. [Identity](identity.md) — stable human identity continuity independent of event capacity/permission.
+11. [Participation](participation.md) — scoped, time-bounded involvement in a particular capacity.
+12. [Alias](alias.md) — scoped alternate identity preserving historical mapping.
+13. [Access](access.md) — contextual capability/disclosure decision over supplied facts and rules.
+14. [Versioning](versioning.md) — immutable authoritative-state lineage, eligibility, invalidation and currentness.
+15. [Provenance](provenance.md) — meaningful origin, actor, represented-authority and correction history.
+16. [Outcome Declaration](outcome-declaration.md) — explicit declared outcome authority with Affected/successor history.
+17. [Export](export.md) — stable source-bound external representation and representation currency.
+18. [Publication](publication.md) — deliberate release/withdrawal/supersession of an identified representation.
 
-[010-F — Specificity, Purpose Singularity & Concept-Boundary Alternative Audit](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) established the post-specificity boundary set. [010-G — Completeness, Independence & Genericity-for-Boundary Audit](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) then confirmed that **all eighteen candidates survive**:
+## Superseded Concept boundary
 
-1. Competition;
-2. Division;
-3. Team;
-4. Panel;
-5. **Evaluation Occurrence** — validated replacement/reframe of the occurrence purpose currently inside Judging Encounter;
-6. **Evaluation Obligation** — validated separate evaluator-responsibility Concept;
-7. Rubric;
-8. Scorecard;
-9. Award;
-10. Identity;
-11. Participation;
-12. Alias;
-13. Access;
-14. Versioning;
-15. Provenance;
-16. **Outcome Declaration** — validated authority-bearing declaration/successor Concept currently represented through Competition Finalization + Official Outcome Revision;
-17. Export;
-18. Publication.
+[Judging Encounter](judging-encounter.md) is retained only as a `deprecated` historical adapter. Its former responsibilities are now owned by **Evaluation Occurrence + Evaluation Obligation**. It is not part of the current Concept count.
 
-010-G confirms that these boundaries can be specified independently once false direct peer typing is replaced by appropriate abstract parameters. It also requires four material completeness expansions during 010-H:
+## Phase 010 convergence authority
 
-- Evaluation Obligation successor responsibility for legitimate re-evaluation while preserving prior obligation history;
-- Rubric response interpretation/validation queries;
-- Versioning explicit invalidation/current-eligibility behavior;
-- Export explicit representation-currency behavior.
+The current catalog is the result of:
 
-010-H must now perform deliberate canonical convergence. Until that occurs:
+- [010-D candidate rediscovery](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md);
+- [010-E behavioral specification audit](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md);
+- [010-F specificity/purpose singularity](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md);
+- [010-G completeness/independence/boundary genericity](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md);
+- [010-H canonical convergence](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
 
-- `Judging Encounter` remains the current canonical owner but is **known to be pending supersession/reframe**;
-- Evaluation Obligation and Outcome Declaration remain validated phase-level Concepts without canonical pages;
-- current retained Concept pages may still contain direct peer typing that 010-G has classified as application composition rather than intrinsic dependence;
-- no implementation, schema, API, package or architecture may infer authority from the temporary mismatch between canonical incumbent ownership and validated phase evidence.
+No current Concept is accepted merely because it existed historically. Conversely, later phases may still discover defects and reopen the natural owner when evidence warrants it.
 
-010-F/G continue to reject Evaluation Sufficiency and Reconciliation as Concepts and reject Actor Context, Evaluation Work Item, Authority History and External Representation & Release as overloaded merges.
+## Explicit non-Concept classifications
 
-Current non-Concept knowledge under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/) remains subject to 010-H reconciliation where ownership/references change.
+Current non-Concept knowledge remains under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/).
 
-Current next methodology work: **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**.
+In particular:
+
+- Coverage/Evaluation Sufficiency is derived factual sufficiency, distinct from governed exception disposition;
+- Reconciliation is an Organizer process/work mode;
+- Aggregate, Rank and Readiness are derived mechanisms;
+- Recovery/Continuity is a cross-cutting purpose obligation rather than a separate Concept;
+- Correction remains a family of owner-specific actions/compositions.
+
+## Next methodology work
+
+Phase 010-H has converged the current catalog. The next task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+
+Phase 011 will revalidate synchronization among these independent Concepts. Phase 012 will analyze product-family inclusion dependence. Neither question is answered by this index.

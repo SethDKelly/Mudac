@@ -1,26 +1,21 @@
 ---
 type: Derived Mechanism
-title: Official Outcome Revision
-description: Reconstructible authoritative snapshot of Competition outcomes established by explicit Finalization.
-status: stable
-tags: [mechanism, finalization, outcome]
+title: Official Outcome Revision — Deprecated Classification
+description: Deprecated historical adapter for the former mechanism classification; current authority is owned by the Outcome Declaration Concept.
+status: deprecated
+tags: [mechanism, deprecated, outcome, authority, supersession]
 sources:
-  - resource: ../../002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
-  - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: ../concepts/outcome-declaration.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
-<a id="out-001"></a>
-## OUT-001 — Finalization establishes an Official Outcome Revision
+# Supersession notice
 
-Explicit Competition Finalization establishes an immutable/reconstructible Official Outcome Revision containing the policy/evidence basis needed to explain declared Rankings, Coverage/exceptions, and Award conferrals.
+`Official Outcome Revision` is no longer a current derived mechanism classification.
 
-<a id="out-002"></a>
-## OUT-002 — Official correction requires explicit successor confirmation
+Phase 010 established that explicit declared outcome authority has its own independently meaningful state, actions, currentness and successor history. The current owner is therefore the [Outcome Declaration](../concepts/outcome-declaration.md) Concept.
 
-A verified source or policy correction may affect the latest declared official revision and change latest calculations. Until reconciliation and explicit successor confirmation, the prior revision remains the **latest declared official revision** while being identifiable as **Affected** when its source basis has changed.
+Historical records may continue to refer to Official Outcome Revision according to the prior design. This file remains addressable so those links retain meaning.
 
-Official authority changes only after explicit successor confirmation; the predecessor then becomes Superseded official history and remains reconstructible. Competition remains Finalized throughout this correction path.
-
-The distinction between calculations and official authority is owned by [INV-006](../invariants/calculated-not-official.md#inv-006). Publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007). Temporal meanings are owned by [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+Do not use this document as current mechanism authority.

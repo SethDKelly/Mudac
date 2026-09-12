@@ -1,31 +1,27 @@
 # Derived and Supporting Mechanisms
 
-Current incumbent MUDAC knowledge for subjects modeled as derived/supporting mechanisms rather than accepted Concepts **before Phase 010 canonical convergence**.
+Current MUDAC subjects modeled as derived/supporting mechanisms or processes rather than independent Concepts after Phase 010 convergence.
 
-* [Team Attributes](team-attributes.md) - Disclosure-controlled descriptive Team metadata, including optional Team Name.
-* [Criterion & Notes](criterion-notes.md) - Rubric/Scorecard subordinate evaluation structure.
-* [Panel Membership & Composition](panel-membership-composition.md) - Current Panel relational state and composition capacity.
-* [Readiness](readiness.md) - Derived permission-to-proceed projections for Competition, Ranking, and Finalization.
-* [Coverage](coverage.md) - Sufficiency of qualifying evaluation evidence.
-* [Aggregate](aggregate.md) - Numerical combination of eligible authoritative Judge Scorecards.
-* [Rank](rank.md) - Derived Division ordering of rank-eligible Teams.
-* [Reconciliation](reconciliation.md) - Organizer process for resolving outcome-affecting exceptions after live judging.
-* [Official Outcome Revision](official-outcome-revision.md) - Reconstructible snapshot of declared official Competition outcomes.
+* [Team Attributes](team-attributes.md) — disclosure-controlled descriptive Team metadata, including optional Team Name.
+* [Criterion & Notes](criterion-notes.md) — Rubric/Scorecard subordinate evaluation structure.
+* [Panel Membership & Composition](panel-membership-composition.md) — current Panel relational/composition support semantics.
+* [Readiness](readiness.md) — derived permission-to-proceed projections.
+* [Coverage](coverage.md) — derived factual sufficiency of qualifying evaluation evidence; exception disposition is separate.
+* [Aggregate](aggregate.md) — numerical combination of eligible authoritative individual judgments.
+* [Rank](rank.md) — derived ordering under declared comparison policy.
+* [Reconciliation](reconciliation.md) — Organizer process/work mode for resolving outcome-affecting conditions.
 
-These are **current canonical classifications under the unreconciled incumbent model**, not permanently closed methodology decisions.
+## Deprecated classification adapter
 
-[010-F](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md) established the specificity decisions and [010-G](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) confirmed them through completeness/independence/genericity testing:
+[Official Outcome Revision](official-outcome-revision.md) is retained only as a `deprecated` historical adapter. Its former authority-bearing behavior is now owned by the current [Outcome Declaration](../concepts/outcome-declaration.md) Concept and it is **not** a current mechanism.
 
-- `Coverage` / **Evaluation Sufficiency** does **not** survive as a Concept. Raw sufficiency remains a derived assessment. An accepted exception changes permitted consequence rather than fabricating factual sufficiency.
-- `Reconciliation` / **Reconciliation Resolution** does **not** survive as a Concept. It remains an Organizer process/work mode over source conditions rather than a separate ticket-like source of truth.
-- `Official Outcome Revision` is the incumbent mechanism owner for behavior now validated as the **Outcome Declaration** Concept. 010-H must converge/reclassify this ownership and preserve historical sources/cross-references.
+## Current classification rules after 010-H
 
-`Aggregate`, `Rank`, and `Readiness` remain derived mechanisms after 010-G. No completeness or independence finding requires their promotion.
+- **Coverage / Evaluation Sufficiency** remains derived. Its factual answer is `Satisfied` or `Incomplete`; accepted exception disposition may permit a consequence while factual Coverage remains Incomplete.
+- **Reconciliation** remains process/work mode rather than independent ticket-like source state.
+- **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
+- **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Recovery/Continuity remains a cross-cutting P-05 completeness obligation rather than a standalone Concept because the validated eighteen-Concept set can own the required draft/current authority, obligation succession, occurrence history, Versioning, Provenance, Access and representation/release semantics without a separate Recovery subject.
+Phase 010 convergence is recorded in [010-H](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
 
-010-H must preserve the distinction between **factual Coverage sufficiency** and a governed exception that changes permitted consequence. It must also preserve Reconciliation as process/work mode rather than inventing independent ticket authority.
-
-Do not treat current Official Outcome Revision classification as final after 010-G; 010-H owns its canonical convergence into Outcome Declaration.
-
-Current next methodology work: **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**.
+The next methodology task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.

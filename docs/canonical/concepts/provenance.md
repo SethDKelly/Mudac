@@ -1,51 +1,64 @@
 ---
 type: Design Concept
 title: Provenance
-description: Meaningful application-state origin, transformation, and authority history.
+description: Meaningful origin, transformation, actor, represented-authority, and correction history for authoritative state.
 status: stable
-tags: [concept, provenance, audit]
+tags: [concept, provenance, audit, authority]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Preserve the meaningful origin and transformation history needed to explain authoritative application state.
+Preserve the meaningful origin and transformation history needed to explain authoritative application state, including who acted and whose semantic authority/content was represented when those differ.
+
+# Abstract parameters
+
+Conceptually:
+
+`Provenance<Subject, StateRef, Actor, RepresentedAuthority, Scope, Source>`
+
+These values identify evidence roles. Provenance does not require Identity, Participation, Competition, or Versioning internals.
 
 # State
 
-Provenance owns append-stable meaningful domain events identifying the target subject/Version, event classification, acting Identity/Participation, represented semantic author or authority when different, Competition scope, prior/resulting authoritative state where applicable, capture/source channel/reference, exceptional authorizer, reason, and correction/replacement/invalidation relationships as needed.
+Provenance owns append-stable meaningful records describing, as relevant:
 
-When materially different, Provenance also preserves enough temporal context to distinguish the **occurrence/effective time** of the underlying domain event or source from the later time MUDAC captured, verified, corrected, or established authority for that information.
+- target Subject/StateRef;
+- event classification;
+- Actor;
+- RepresentedAuthority/semantic author when different from Actor;
+- Scope;
+- source/capture channel/reference;
+- material reason or exceptional authorizer;
+- prior/resulting authoritative-state references;
+- correction/replacement/invalidation relationships;
+- occurrence/effective time versus later capture/verification/authority time when materially different.
 
-# Actions
+# Actions and queries
 
-Conceptual actions are `record`, `historyFor`, `originOf`, `traceVersion`, `traceCorrection`, and `traceReplacement`.
+Conceptual actions are `record` and attributable provenance correction through successor evidence.
 
-An incorrect provenance statement is corrected by attributable successor evidence rather than silent historical rewrite.
+Queries include `historyFor`, `originOf`, `traceState`, `traceCorrection`, and `traceReplacement`.
 
 # Operational Principle
 
-When a meaningful domain action establishes, changes, invalidates, or replaces authoritative state, the application records enough provenance to reconstruct who acted, whose authority the resulting content represents, why the action occurred when material, what prior state or source it depended on, and when the underlying occurrence versus later capture/authority establishment happened when those differ materially.
+When a meaningful action establishes, changes, invalidates, replaces, captures, or corrects authoritative state, the application supplies enough provenance facts to explain who acted, whose authority/content the result represents, why the transition happened when material, what source/prior state it depended on, and relevant occurrence-versus-capture timing. An incorrect provenance assertion is corrected with attributable successor evidence rather than silent historical rewrite.
 
 # Canonical contract
 
-Provenance distinguishes semantic author, acting/capture actor, and exceptional authorizer. For example, a Judge may remain evaluation author while an Organizer is the paper capture actor.
+Actor, semantic author, and exceptional authorizer are distinct roles. Technical/capture performance never silently transfers semantic authorship.
 
-Provenance is not an obligation to log every keystroke, read, or UI interaction.
+Provenance records meaningful authority/explanation events, not every read, keystroke, or observability event.
 
-A later correction to a historical assertion can improve MUDAC's current best-known account of what happened while preserving what MUDAC previously recorded or considered authoritative. See [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+# MUDAC composition binding
 
-# Boundary with OKF
-
-This MUDAC Concept concerns Competition-domain authority lineage. OKF `sources`, `generated`, and `verified` metadata describe documentation lineage and trust; they do not replace this Concept.
+MUDAC commonly binds Actor/RepresentedAuthority to Identity/Participation references, Scope to Competition, StateRef to authoritative state such as a Version or declaration, and Source to electronic/paper/import/correction evidence. Those are supplied references; Provenance owns explanatory history, not their internal behavior.
 
 # Boundaries
 
-Provenance explains meaningful origin/authority history; it does not preserve the content snapshots themselves ([Versioning](versioning.md)) and is distinct from low-level security/observability telemetry.
-
-See [Correction & Authority](../policies/correction-authority.md).
+Provenance answers **how, why, from what source, and through whose represented authority state arose**. [Versioning](versioning.md) answers **what authoritative snapshots existed and which is currently eligible**. Provenance is distinct from low-level security/observability telemetry.

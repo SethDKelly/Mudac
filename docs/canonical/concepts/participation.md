@@ -1,40 +1,48 @@
 ---
 type: Design Concept
 title: Participation
-description: Competition-scoped, time-bounded involvement of an Identity in a particular capacity.
+description: Scoped, time-bounded involvement of a Participant in a particular capacity.
 status: stable
 tags: [concept, participation, authority]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-B-identity-participation-access-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Represent an [Identity](identity.md) taking part in a scoped activity for a limited period and in a particular capacity.
+Represent a Participant taking part in a supplied Scope for a limited period and in a particular Capacity.
+
+# Abstract parameters
+
+Conceptually:
+
+`Participation<Participant, Scope, Capacity>`
+
+Participation needs the Participant identity, Scope, and Capacity value. It does not require Identity or Competition internals.
 
 # State
 
-Participation owns Identity reference, one Competition scope, role such as Judge or Organizer, participation lifecycle/status, lifecycle timestamps, and role-relevant declared metadata such as current Judge expertise.
+Participation owns Participant reference, Scope, Capacity, lifecycle/status, lifecycle timestamps, and capacity-relevant declared metadata.
 
-The baseline lifecycle is `Enrolled → Checked In → Active → Completed`, with `Withdrawn` as an exceptional non-participating state and restoration while policy permits.
+A representative lifecycle is `Enrolled → Checked In → Active → Completed`, with `Withdrawn` as an exceptional non-participating state and restoration where governing policy permits.
 
-# Actions
+# Actions and queries
 
 Conceptual actions are `enroll`, `checkIn`, `activate`, `updateDeclaredAttributes`, `withdraw`, `restore`, and `complete`.
 
+Queries include current state/capacity, effective participation status, and participation history.
+
 # Operational Principle
 
-A volunteer establishes Identity, enrolls for the current Competition in a particular capacity, checks in and becomes Active when operationally eligible, performs role-specific work through separately evaluated Access, and later becomes Completed. A later Competition creates a new Participation even when the Identity is reused.
+A Participant enrolls in a Scope in a particular Capacity, becomes operationally active when eligibility/preparation conditions supplied by the application are satisfied, performs capacity-specific work through separately evaluated Access, and later completes or withdraws. A later Scope uses a new Participation even when the same Participant identity is reused.
 
-# Canonical contract
+# MUDAC composition binding
 
-Judge and Organizer are Participation roles, not permanent Identity types. Returning Identity continuity may simplify reverification but does not resume an old Competition Participation.
+MUDAC normally binds Participant to Identity, Scope to Competition, and Capacity to values such as Judge or Organizer. Returning Identity continuity may simplify reverification but does not resume a prior Participation. Panel may group Judge Participation identities without changing their Participation capacity.
 
 # Boundaries
 
-Expertise is Participation metadata, not authorization. Technical Administrator authority does not automatically create Organizer Participation. Panel membership does not change Participation role.
-
-Current permission/disclosure is determined through [Access](access.md). See [Judge Onboarding](../experience/judge-onboarding.md).
+Participation does not establish permanent human identity, current Access, Panel membership, technical-administrator privilege, or semantic authorship.

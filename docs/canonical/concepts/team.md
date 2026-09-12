@@ -1,43 +1,47 @@
 ---
 type: Design Concept
 title: Team
-description: Stable administrative representation of one competing student group.
+description: Stable scoped administrative representation of one competing student group.
 status: stable
 tags: [concept, competitor, team]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-A-competition-division-team-alias-specifications.md
   - resource: ../../002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Maintain the administrative representation of a student group participating as one competing unit.
+Maintain the administrative representation of one student group participating as a single competing unit within a supplied Scope.
+
+# Abstract parameter
+
+Conceptually: `Team<Scope>`.
+
+Team requires a Scope identity but does not need Competition lifecycle semantics to define its own competing-unit record.
 
 # State
 
-Team owns stable Team identity, one Competition scope, the Organizer-facing administrative record, disclosure-controlled descriptive attributes, and participation status such as `Active` or `Withdrawn`.
+Team owns stable Team identity, Scope, Organizer-facing administrative record, disclosure-controlled descriptive attributes, and participation status such as `Active` or `Withdrawn`.
 
-# Actions
+# Actions and queries
 
-Conceptual actions are `create`, `updateAdministrativeRecord`, `withdraw`, and `restore` while Competition policy still permits restoration.
+Conceptual actions are `create`, `updateAdministrativeRecord`, `withdraw`, and `restore` while governing policy permits restoration.
 
-Withdrawal preserves existing authoritative/historical relationships rather than deleting them.
+Queries include current status and administrative/descriptive state under the applicable disclosure contract.
 
 # Operational Principle
 
-An Organizer establishes a Team as the administrative representation of one competing student group. The application separately coordinates its Division and competition-safe Alias. Judges evaluate the Team through that Alias in Encounters without requiring the administrative identity. Withdrawal prevents future ordinary judging while preserving prior evidence and history.
+An Organizer establishes a Team as one competing unit, maintains necessary administrative/descriptive information, and may withdraw or restore it without deleting prior history. Other Concepts may associate the Team with competitive cohort, blinded identity, evaluation occurrences and outcomes, but those relationships do not become Team-owned state merely because they concern the same competitor.
 
-# Canonical contract
+# MUDAC composition binding
 
-A Team may carry optional `teamName` and other explicitly defined descriptive attributes. Those attributes do not replace stable identity and have no competitive effect unless explicit policy gives them one.
+MUDAC normally binds Scope to Competition. Division and Alias are coordinated separately; Judges ordinarily encounter the Team through a Judge-safe Alias rather than administrative identity.
 
 # Boundaries
 
-Team does not own [Division](division.md), [Alias](alias.md), Encounters, Scorecards, Aggregate, Rank, or Awards.
+Team does not own Division, Alias, Evaluation Occurrence, Evaluation Obligation, Scorecard, Aggregate, Rank, Award, or Outcome Declaration.
 
-`teamName` is not Alias, need not be unique, and is hidden from Judges by default during blinded judging.
-
-See [Team Attributes](../mechanisms/team-attributes.md) and [Anonymity & Disclosure](../policies/anonymity-disclosure.md).
+`teamName` is descriptive metadata, not Alias, need not be unique, and has no competitive meaning unless explicit policy gives it one.

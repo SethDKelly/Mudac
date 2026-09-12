@@ -2,13 +2,17 @@
 
 Current representation-independent project/intake and purpose knowledge for MUDAC.
 
-- [MUDAC Project Mandate & Current Context](mandate-context.md) — current contemplated capability, actors and affected parties, outcome directions, scope/non-goals, operational constraints, working assumptions, open questions and evidence posture.
-- [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) — current product-level purpose, actor/affected-party needs, nine purpose obligations, representative success situations, material tensions and current validated modularity pressure.
+- [MUDAC Project Mandate & Current Context](mandate-context.md) — current mandate, actors/affected parties, capability scope/non-goals, operational constraints, converged Concept context and remaining design questions.
+- [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) — product purpose, actor needs, nine purpose obligations, success situations, tensions and traceability to the current Concept catalog.
 
-This layer exists before final Concept selection. It must not be used to protect the incumbent sixteen-Concept catalog or the current Concept/non-Concept classifications.
+Phase 010 has now progressed through canonical Concept convergence:
 
-010-D completed purpose-first rediscovery, 010-E established representation-independent behavioral specifications, 010-F selected the eighteen-candidate post-specificity set, and [010-G](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md) confirmed that all eighteen survive completeness, intrinsic-independence and genericity-for-boundary testing.
+- 010-D — purpose-first candidate rediscovery;
+- 010-E — behavioral specification audit;
+- 010-F — specificity/purpose singularity;
+- 010-G — completeness/independence/boundary genericity;
+- 010-H — current canonical convergence/re-specification.
 
-The eighteen validated candidates remain phase-level design until 010-H performs canonical convergence. 010-G also records mandatory completeness corrections for Evaluation Obligation, Rubric, Versioning and Export plus generic parameterization needed to remove false peer dependence.
+The current Concept catalog is no longer provisional. It is owned by [Canonical Concepts](../concepts/) and contains eighteen current Concepts.
 
-Current methodology handoff: **010-A/B/C/D/E/F/G complete; 010-H next**.
+Current methodology handoff: **010-A through 010-H complete; 010-I next**.

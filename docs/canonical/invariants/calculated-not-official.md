@@ -1,21 +1,24 @@
 ---
 type: Design Invariant
-title: Calculated Is Not Official
-description: A computable result or ranking-ready projection does not itself become the Competition's declared official outcome.
+title: Calculated Is Not Declared Official
+description: A computable or ranking-ready result does not itself become declared official outcome authority.
 status: stable
-tags: [invariant, ranking, finalization]
+tags: [invariant, ranking, outcome, authority]
 sources:
   - resource: ../../002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md
-  - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 <a id="inv-006"></a>
-# INV-006 — Calculated Is Not Official
+# INV-006 — Calculated Is Not Declared Official
 
-MUDAC preserves the sequence:
+MUDAC preserves the distinction:
 
-`calculated result ≠ ranking-ready result ≠ official outcome`.
+`calculated result ≠ ranking-ready result ≠ explicitly declared official outcome`.
 
-Calculations may update as evidence changes. Ranking readiness derives from resolved source state. Official authority arises only through explicit Competition Finalization and an [Official Outcome Revision](../mechanisms/official-outcome-revision.md).
+Calculations may update as evidence changes. Ranking readiness derives from resolved source state. Official authority arises only when an authorized [Outcome Declaration](../concepts/outcome-declaration.md) explicitly declares an identified outcome basis through the applicable application synchronization/governance path.
 
-A corrected latest calculation cannot silently replace the current official revision.
+Competition Finalization may coordinate that declaration but is not, by itself, ownership of declared outcome content/history.
+
+A corrected latest calculation cannot silently replace the current Outcome Declaration. If the declared basis is affected, the current declaration becomes Affected until an explicit successor is confirmed.

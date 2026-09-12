@@ -1,58 +1,77 @@
 ---
 type: Design Concept
 title: Scorecard
-description: One Judge's independent evaluation for one Judging Encounter under one exact Rubric Version.
+description: One evaluator's independent judgment over a supplied subject, occurrence context, and evaluation basis.
 status: stable
-tags: [concept, judging, evidence]
+tags: [concept, judging, evidence, scorecard]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md
   - resource: ../../002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Capture one evaluator's independent judgment within one [Judging Encounter](judging-encounter.md), under one exact [Rubric](rubric.md) Version.
+Capture one evaluator's independent judgment for a supplied Subject under a supplied OccurrenceContext and exact EvaluationBasis, preserving Draft versus authoritative judgment and legitimate amendment history.
+
+# Abstract parameters
+
+Conceptually:
+
+`Scorecard<Evaluator, Subject, OccurrenceContext, EvaluationBasis>`
+
+Scorecard stores the semantic identities/basis it judged under; it does not require peer Concept internals.
 
 # State
 
-Scorecard owns one stable logical identity, Judge Participation/semantic author, Encounter basis, fixed Rubric-Version basis, working criterion responses and Notes, the current authoritative response Version when one exists, and amendment-Draft state when one exists.
+Scorecard owns:
 
-`Not Started` is an Encounter evaluation obligation without Scorecard work, not a Scorecard lifecycle state.
+- one stable logical identity;
+- Evaluator / semantic author;
+- Subject;
+- OccurrenceContext reference/snapshot sufficient to identify the judging context;
+- fixed EvaluationBasis;
+- working criterion responses and Notes;
+- non-authoritative Draft state;
+- current authoritative response state when one exists;
+- amendment Draft state when one exists;
+- semantic amendment history.
 
-# Actions
+`Not Started` is responsibility state outside Scorecard, not a Scorecard lifecycle state.
+
+# Actions and queries
 
 Conceptual actions are `start`, `setCriterionScore`, `clearCriterionScore`, `setCriterionNote`, `clearCriterionNote`, `setOverallNote`, `clearOverallNote`, `finalize`, `beginAmendment`, `abandonAmendment`, and `finalizeAmendment`.
 
-Draft persistence/autosave is not itself a user-significant domain action.
+Queries include Draft/current-authoritative responses, basis/context identity, completion status under supplied EvaluationBasis validation, and amendment history.
 
 # Operational Principle
 
-An effective Judge participant begins one logical Scorecard for an Encounter using the exact applicable Rubric Version, forms judgment incrementally in a non-authoritative Draft, and explicitly Finalizes the complete evaluation. A later legitimate author correction begins an Amendment Draft while the prior finalized Version remains authoritative; finalizing the amendment creates a successor authoritative Version without creating another Judge vote.
-
-Logical uniqueness and evaluation weight are owned by [INV-002](../invariants/one-logical-scorecard.md#inv-002). Judge semantic authorship is owned by [INV-004](../invariants/organizer-not-judge-author.md#inv-004).
+An evaluator starts one logical judgment for a Subject under a fixed OccurrenceContext and EvaluationBasis, works incrementally in a non-authoritative Draft, and explicitly Finalizes a valid completed evaluation. A later legitimate author correction begins an Amendment Draft while the prior authoritative judgment remains current; successful amendment finalization establishes a successor authoritative judgment without creating an additional evaluator vote.
 
 <a id="sc-001"></a>
 ## SC-001 — Draft is non-authoritative
 
-A Scorecard Draft may be complete enough for Finalization while remaining non-authoritative. Only explicit successful Finalization establishes an authoritative Scorecard Version.
+Completeness of working responses does not itself establish authority. Explicit successful Finalization is required.
 
 <a id="sc-002"></a>
-## SC-002 — Amendment preserves prior authority until successor Finalization
+## SC-002 — Amendment preserves prior authority until successor establishment
 
-Beginning an Amendment creates an Amendment Draft without displacing the current Finalized Version. The prior Version remains authoritative until the amendment is explicitly Finalized; the successor then becomes current under [Versioning](versioning.md).
-
-Successor Versions do not create additional evaluation weight; that cross-cutting rule remains [INV-002](../invariants/one-logical-scorecard.md#inv-002).
+Beginning an Amendment never displaces the prior authoritative judgment. The predecessor remains current until the successor is explicitly finalized through application composition with authoritative-history owners.
 
 <a id="sc-003"></a>
-## SC-003 — Structural Scorecard identity is not amended
+## SC-003 — Structural identity is not ordinary amendment content
 
-Ordinary amendment may change Judge-authored evaluation content such as Criterion responses and Notes, but it cannot silently change semantic author, Team/Encounter basis, or Rubric-Version basis. Structural errors require the explicit correction/invalidation paths in [Correction & Authority](../policies/correction-authority.md).
+Ordinary amendment may change evaluator-authored response/note content but cannot silently change Evaluator, Subject, OccurrenceContext, or EvaluationBasis. Structural errors use explicit correction/invalidation/replacement paths.
+
+# MUDAC composition binding
+
+MUDAC normally binds Evaluator to Judge Participation identity, Subject to Team, OccurrenceContext to Evaluation Occurrence, and EvaluationBasis to an exact authoritative Rubric basis. Rubric supplies response validity semantics. Versioning and Provenance may preserve authoritative snapshots/history through Phase 011 synchronization. Finalization may satisfy an Evaluation Obligation, but Scorecard does not own that responsibility state.
 
 # Boundaries
 
-Scorecard does not decide who participates in an Encounter, who has Access, how its authoritative Versions are historically preserved, or how multiple evaluations are aggregated/ranked. Paper/electronic capture shares this same Concept; capture channel belongs to [Provenance](provenance.md).
+Scorecard does not decide who is responsible to evaluate, who participated in an occurrence, who has Access, how authoritative snapshots/provenance are coordinated, or how multiple judgments are aggregated/ranked.
 
-See [Judge Independence](../invariants/judge-independence.md#inv-001).
+Paper/electronic capture shares this same judgment Concept; capture channel belongs to explanatory Provenance rather than changing evaluator authorship.

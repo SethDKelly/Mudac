@@ -1,59 +1,76 @@
 ---
 type: Design Concept
 title: Export
-description: Stable audience-specific external representation tied to identified source state.
+description: Stable external representation of an identified source basis for a declared representation purpose and audience profile.
 status: stable
-tags: [concept, export, representation]
+tags: [concept, export, representation, currency]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-H-export-print-operational-continuity-external-representations.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
-  - resource: ../../007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Produce a stable external representation of identified source information for a declared purpose and audience/disclosure profile.
+Produce and preserve a stable external representation of identified source information for a declared purpose and audience/disclosure profile, while keeping the representation's relationship to source currentness explicit.
+
+# Abstract parameters
+
+Conceptually:
+
+`Export<SourceBasis, RepresentationProfile, AudienceProfile>`
+
+`SourceBasis` is an identified supplied source state. Export does not need the source Concept's private semantics.
 
 # State
 
-Export owns stable representation identity, exact source subject/Version/revision/basis, representation purpose/profile, intended audience/disclosure class, format, generation time, generated representation/artifact reference, and representation currency/status such as Current, Affected, Stale, Superseded, or Retired from ordinary use.
+Export owns:
 
-Currency is about the Export's relationship to its bound/current source basis; it is distinct from whether a [Publication](publication.md) of that Export is currently distributed.
+- stable representation identity;
+- exact SourceBasis;
+- RepresentationProfile/purpose;
+- intended AudienceProfile/disclosure class;
+- format/representation kind where semantically relevant;
+- generation time;
+- generated representation/artifact reference;
+- currency such as `Current`, `Affected`, `Stale`, `Superseded`, or `Retired`;
+- optional reason/successor reference supporting a currency transition.
 
-# Actions
+Currency is about the representation's relationship to source meaning/currentness. It is distinct from whether the representation has been distributed through [Publication](publication.md).
 
-Conceptual actions are `request`, `validateDisclosure`, `generate`, `retrieve`, `regenerateFromCurrentSource`, and `retireFromOrdinaryUse`.
+# Actions and queries
 
-Regeneration from changed source state creates another representation rather than rewriting an operationally meaningful historical Export.
+Conceptual actions are `request`, `validateRepresentation`, `generate`, `markAffected`, `markStale`, `supersedeBy`, and `retireFromOrdinaryUse`.
+
+Conceptual queries include `retrieve`, `sourceBasis`, `currency`, `isCurrent`, `successor`, and representation history.
+
+Generating another representation from newer source state creates another Export rather than rewriting an operationally meaningful historical representation.
 
 # Operational Principle
 
-An Organizer chooses information to externalize. The application resolves the exact source basis, purpose, and audience/disclosure profile; validates the representation contract; generates a stable representation; and preserves enough identity to explain what the representation means later. If the source changes, the earlier Export remains attributable to its original basis and may become Affected or Stale; a new Export represents the newer source. Deliberate distribution/public release is then handled by [Publication](publication.md), not by generation itself.
+An actor selects information to externalize and supplies an exact SourceBasis plus purpose/audience profiles. Export validates the representation contract and creates a stable representation tied to that basis. If later source change means the representation requires review, Export can become Affected; if it is known not to reflect the applicable current basis, it can become Stale; a replacement representation may explicitly supersede it. The old Export remains attributable to what it represented when generated. Deliberate release remains a separate Publication decision.
 
 <a id="export-001"></a>
-## EXPORT-001 — Export represents source truth; it does not replace it
+## EXPORT-001 — Export represents source authority; it never promotes it
 
-An Export is tied to identified source Version/revision, purpose, and audience/disclosure profile. It may produce paper, files, encoded identifiers, or other artifacts without becoming the authoritative source it represents.
-
-An Export may later be Current, Affected, Stale, Superseded, or Retired from ordinary use while remaining historically attributable to its original source basis. Source correction never silently rewrites that basis.
+Formatting, summarizing, redacting, or rendering supplied source information must not make that source appear more authoritative, complete, eligible, current, or official than the identified SourceBasis actually is.
 
 <a id="export-002"></a>
-## EXPORT-002 — Generation and publication are distinct
+## EXPORT-002 — Currency and distribution are separate
 
-Generating an Export does not itself publish or release it. External release is a deliberate [Publication](publication.md) action under the relevant audience/disclosure contract.
-
-The broader Finalization/publication separation is owned by [INV-007](../invariants/official-not-automatically-public.md#inv-007). Audience disclosure is governed by [DISC-002](../policies/anonymity-disclosure.md#disc-002). Temporal currency semantics are owned by [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+Source-currentness transitions do not themselves publish, withdraw, or retarget a representation. Publication owns distribution authority.
 
 <a id="export-003"></a>
-## EXPORT-003 — Representation cannot promote source authority
+## EXPORT-003 — Historical basis is stable
 
-An Export may select, format, summarize, redact, or transform source information for its declared purpose and audience, but it must not silently make that source appear more authoritative, current, complete, eligible, or official than the identified source basis actually is.
+Source correction never silently rewrites the historical SourceBasis of an already meaningful Export. Replacement uses a new Export and explicit supersession relation where appropriate.
 
-In particular, a calculated/provisional result does not become official because it is rendered in an artifact; incomplete Coverage cannot be represented as satisfied; an Affected or historical basis must not be silently presented as unaffected current truth; and audience redaction must not change the identity or semantic meaning of the represented subject.
+# MUDAC composition binding
+
+MUDAC may export competition setup, judging material, calculated/provisional information, or an [Outcome Declaration](outcome-declaration.md). Application synchronization/policy decides when a source change warrants Affected/Stale/Superseded transitions and which disclosure profile is legitimate.
 
 # Boundaries
 
-Export does not own its source semantics, Access, or the authoritative decision to distribute/release a representation. PDF, QR, barcode, file layout, and immutable byte-storage mechanics are representations/implementation mechanisms rather than Concepts.
+Export does not own source semantics, Access decisions, Competition/Outcome authority, or deliberate release. PDF, QR, barcode, file layout, byte storage and transport are realization mechanisms rather than Concept identity.

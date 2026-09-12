@@ -1,55 +1,81 @@
 ---
 type: Design Concept
 title: Versioning
-description: Preservation of successive authoritative states without erasing history.
+description: Preservation of successive authoritative states, eligibility, invalidation, and current lineage without erasing history.
 status: stable
-tags: [concept, versioning, authority]
+tags: [concept, versioning, authority, history]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
   - resource: ../../007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Preserve successive authoritative states of something that may legitimately change over time.
+Preserve successive authoritative states of a subject that may legitimately change over time while retaining immutable history and representing which committed state, if any, is currently eligible authority.
+
+# Abstract parameters
+
+Conceptually:
+
+`Versioning<Subject, Snapshot>`
+
+Versioning requires subject identity and complete authoritative snapshots. It does not require the domain semantics of the subject being versioned.
 
 # State
 
-Versioning owns a stable subject/lineage reference, immutable committed Version identities and snapshots, predecessor/sequence relationships, and at most one **eligible current authoritative Version** for a linear lineage.
+Versioning owns:
 
-A lineage may temporarily have no eligible current authoritative Version when its latest committed authority is invalidated and no legitimate successor has yet been established. Invalidated or superseded Versions remain retained and addressable as history.
+- stable subject/lineage identity;
+- immutable committed Version identities and complete reconstructible Snapshots;
+- predecessor/sequence relationships;
+- eligibility/validity of each committed Version for the lineage's authoritative purpose;
+- at most one current eligible authoritative Version for a linear lineage;
+- retained superseded/invalidated history.
 
 Working Drafts are not committed Versions.
 
-# Actions
+A lineage may have **no current eligible authoritative Version** after invalidation when no legitimate successor has yet been established.
 
-Conceptual actions are `initializeLineage`, `commitInitialVersion`, `commitSuccessor` against the expected current Version, `currentVersion`, `versionByIdentity`, `history`, and `compare`.
+# Actions and queries
 
-A committed Version must be reconstructible as a complete authoritative state even if storage internally uses deltas.
+Conceptual actions are:
+
+- `initializeLineage`;
+- `commitInitialVersion`;
+- `commitSuccessor(expectedCurrent, snapshot)`;
+- `invalidateVersion(version, reasonRef)`.
+
+Conceptual queries are:
+
+- `currentEligibleVersion`;
+- `isEligible(version)`;
+- `versionByIdentity`;
+- `history`;
+- `compare`.
+
+Committing a successor against an expected current Version protects semantic currentness. Concrete compare-and-swap realization is not prescribed here.
 
 # Operational Principle
 
-A user works with concept-owned Draft state. When the owning concept establishes that state as authoritative, Versioning commits an immutable Version. A later legitimate correction begins from the current authoritative state and commits a successor only if the expected current Version still matches. Earlier Versions remain addressable and unchanged.
+A subject establishes authoritative state and Versioning commits a complete immutable snapshot. A later legitimate change commits a successor against the expected current eligible Version; the predecessor remains historical authority and becomes Superseded. If a committed Version later becomes ineligible for the authoritative purpose, an authorized caller may invalidate it. The invalidated Version remains retained and addressable, and the lineage reports no current eligible Version unless a legitimate successor exists. Older predecessors are never silently revived.
 
 # Canonical contract
 
-Committed Versions are immutable historical snapshots.
+**Superseded** means an explicit successor became current for the same logical lineage. The predecessor remains valid historical authority.
 
-**Supersession** means an explicit successor Version becomes current for the same logical subject/lineage; the predecessor remains valid historical authority.
+**Invalidated** means a retained Version is no longer eligible for the relevant authoritative purpose. Invalidation does not imply a successor and never silently selects an older predecessor as current.
 
-**Invalidation** means a retained Version/subject is no longer eligible for the relevant authoritative purpose. Invalidation does not imply that a successor exists and does not silently reactivate an older predecessor.
-
-**Replacement** of a structurally invalid subject/occurrence is not Version supersession when the replacement has a distinct logical identity. For example, a replacement Judging Encounter is a new occurrence rather than a new Version of the invalidated Encounter.
-
-Primary confirmed uses include Rubric Versions and Scorecard amendments.
+**Replacement** of a structurally invalid distinct subject is not Version supersession; replacement belongs to the owning domain Concept.
 
 # Boundaries
 
-Versioning answers **what authoritative states existed**. [Provenance](provenance.md) answers **how, why, when, and through whose authority those states arose**. Versioning does not decide who may revise, whether a Version should be invalidated, or what downstream calculations change.
+Versioning answers **what authoritative states existed and which committed state is eligible/current**.
 
-Temporal vocabulary and the no-silent-fallback rule are owned by [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+[Provenance](provenance.md) answers **how, why, from what source, and through whose represented authority state arose**.
 
-See [Correction & Authority](../policies/correction-authority.md).
+Versioning does not decide whether a domain correction is legitimate, who may authorize invalidation, or which downstream calculations/representations are affected.
+
+See [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md) and [Correction & Authority](../policies/correction-authority.md).

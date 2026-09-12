@@ -1,38 +1,48 @@
 ---
 type: Design Concept
 title: Panel
-description: Reusable grouping of Judge Participations intended to evaluate together.
+description: Reusable scoped grouping of evaluator Members intended to operate together.
 status: stable
-tags: [concept, judging, panel]
+tags: [concept, judging, panel, grouping]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Maintain a reusable grouping of active Judge [Participations](participation.md) intended to evaluate together.
+Maintain a reusable grouping of evaluator Members intended to operate together within a supplied Scope.
+
+# Abstract parameters
+
+Conceptually:
+
+`Panel<Scope, Member, CapacityLabel>`
+
+Panel needs Member identity and optional composition-capacity labels. It does not require Participation lifecycle semantics.
 
 # State
 
-Panel owns stable Competition-scoped identity, human-facing label, Active/Retired availability, membership history, and current optional composition-capacity assignments. Membership preserves effective intervals rather than only a current `panel_id`.
+Panel owns stable Panel identity, Scope, human-facing label, Active/Retired availability, membership history with effective intervals, and optional current composition-capacity assignments.
 
-# Actions
+# Actions and queries
 
 Conceptual actions are `create`, `rename`, `addMember`, `endMembership`, `replaceMember`, `assignCompositionCapacity`, `clearCompositionCapacity`, `retire`, and `restore`.
 
+Queries include current members, membership-as-of, availability, and current composition-capacity assignment.
+
 # Operational Principle
 
-An Organizer creates a Panel, groups eligible Judge Participations, assigns composition capacities where useful, and uses the Panel across repeated Team Encounters. Membership may change during the event while previous Encounters retain the participants who actually evaluated at that time.
+An Organizer creates a Panel, groups evaluator Members, optionally records composition capacities, and reuses the grouping across multiple evaluation situations. Membership may change while earlier occurrences retain their own actual participant history. Panel represents intended reusable grouping, not who actually evaluated in any particular occurrence.
 
-# Canonical contract
+# MUDAC composition binding
 
-Current Panel membership answers who is intended to judge together now. It does not answer who actually evaluated a Team in a past occurrence.
+MUDAC normally binds Scope to Competition and Member to Judge Participation identity. Participation eligibility and composition-policy compliance are supplied/application concerns. Evaluation Occurrence may use a Panel's current membership as an intended starting group, but Panel membership does not itself create Evaluation Obligations.
 
 # Boundaries
 
-Historical participation belongs to [Judging Encounter](judging-encounter.md). Panel membership alone does not create Scorecard obligations. Composition compliance is policy/derivation rather than a Panel lifecycle.
+Actual occurrence participants belong to [Evaluation Occurrence](evaluation-occurrence.md). Individual responsibility belongs to [Evaluation Obligation](evaluation-obligation.md). Panel does not own judgment, Access, or derived composition compliance.
 
-See [Panel Membership & Composition](../mechanisms/panel-membership-composition.md), [Panel Composition Policy](../policies/panel-composition.md), and [Current vs Historical Truth](../invariants/current-vs-historical-truth.md).
+See [Panel Membership & Composition](../mechanisms/panel-membership-composition.md).

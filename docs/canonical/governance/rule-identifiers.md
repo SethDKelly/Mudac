@@ -11,7 +11,8 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T12:45:00Z }
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Canonical contract
@@ -48,11 +49,11 @@ Editorial clarification may retain an ID when semantics remain compatible. A mat
 # Cross-cutting invariants
 
 * [INV-001 — Judge Independence](../invariants/judge-independence.md#inv-001)
-* [INV-002 — One Logical Scorecard per Judge × Encounter](../invariants/one-logical-scorecard.md#inv-002)
+* [INV-002 — One Logical Evaluation per Evaluation Obligation](../invariants/one-logical-scorecard.md#inv-002)
 * [INV-003 — Missing Is Never Zero](../invariants/missing-never-zero.md#inv-003)
 * [INV-004 — Organizer Authority Does Not Become Judge Authorship](../invariants/organizer-not-judge-author.md#inv-004)
 * [INV-005 — Current and Historical Truth Remain Distinct](../invariants/current-vs-historical-truth.md#inv-005)
-* [INV-006 — Calculated Is Not Official](../invariants/calculated-not-official.md#inv-006)
+* [INV-006 — Calculated Is Not Declared Official](../invariants/calculated-not-official.md#inv-006)
 * [INV-007 — Official Is Not Automatically Public](../invariants/official-not-automatically-public.md#inv-007)
 * [INV-008 — Capture-Channel Parity](../invariants/capture-channel-parity.md#inv-008)
 * [INV-009 — Accessibility Is Semantic Parity](../invariants/accessibility-semantic-parity.md#inv-009)
@@ -87,10 +88,10 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [RANK-001 — Rank Is Derived and Non-Editable](../mechanisms/rank.md#rank-001)
 * [RANK-002 — Precision and Ties Follow Declared Policy](../mechanisms/rank.md#rank-002)
 
-# Official Outcomes
+# Outcome Declaration
 
-* [OUT-001 — Finalization Establishes an Official Outcome Revision](../mechanisms/official-outcome-revision.md#out-001)
-* [OUT-002 — Official Correction Requires Explicit Successor Confirmation](../mechanisms/official-outcome-revision.md#out-002)
+* [OUT-001 — Explicit Declaration Establishes Official Outcome Authority](../concepts/outcome-declaration.md#out-001)
+* [OUT-002 — Affected Declaration Requires Explicit Successor Confirmation](../concepts/outcome-declaration.md#out-002)
 
 # Disclosure
 
@@ -99,9 +100,9 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 
 # Export
 
-* [EXPORT-001 — Export Represents Source Truth; It Does Not Replace It](../concepts/export.md#export-001)
-* [EXPORT-002 — Generation and Publication Are Distinct](../concepts/export.md#export-002)
-* [EXPORT-003 — Representation Cannot Promote Source Authority](../concepts/export.md#export-003)
+* [EXPORT-001 — Export Represents Source Authority; It Never Promotes It](../concepts/export.md#export-001)
+* [EXPORT-002 — Currency and Distribution Are Separate](../concepts/export.md#export-002)
+* [EXPORT-003 — Historical Basis Is Stable](../concepts/export.md#export-003)
 
 # Publication
 

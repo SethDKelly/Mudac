@@ -1,40 +1,48 @@
 ---
 type: Design Concept
 title: Award
-description: Explicit Competition recognition with declared scope and selection semantics.
+description: Scoped recognition definition and attributable conferral over supplied recipient and selection basis.
 status: stable
-tags: [concept, outcome, award]
+tags: [concept, outcome, award, recognition]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Define and confer recognized achievement within a Competition.
+Define and confer recognized achievement within a supplied Scope under explicit selection semantics.
+
+# Abstract parameters
+
+Conceptually:
+
+`Award<Scope, Recipient, SelectionBasis>`
+
+Award can consume supplied selection evidence/basis without understanding a Rank mechanism internally.
 
 # State
 
-Award owns stable Competition-scoped Award identity, name/description, scope, selection method, eligibility rules, recipient cardinality, required/optional closeout posture, definition availability/history, and attributable conferral/revocation history.
+Award owns stable identity within Scope, name/description, recognition scope, selection method/rule, eligibility rules, recipient cardinality, required/optional closeout posture, definition availability/history, and attributable conferral/revocation/correction history.
 
-Selection method is at least `Rank-derived` or `Discretionary` and must remain explicit.
+Selection method is at least `Derived` or `Discretionary` in semantic character and must remain explicit.
 
-# Actions
+# Actions and queries
 
-Conceptual actions are `define`, `updateDefinition`, `retireUnusedDefinition`, `confer`, `revoke`, and `correctConferral`, subject to Competition lifecycle/correction authority.
+Conceptual actions are `define`, `updateDefinition`, `retireUnusedDefinition`, `confer`, `revoke`, and `correctConferral`.
+
+Queries include current definition, current conferrals, history, and whether a supplied SelectionBasis is consistent with the declared rule.
 
 # Operational Principle
 
-An Organizer defines a recognition and its selection semantics. For a rank-derived Award, the system derives candidate recipient(s) from the declared Rank rule and an authorized Organizer confirms a consistent conferral. For a discretionary Award, an authorized Organizer deliberately confers recognition without portraying the choice as mathematically implied. Later correction preserves prior conferrals/revocations rather than rewriting history.
+An authorized actor defines recognition and its selection semantics. For a derived selection method, the application supplies a current SelectionBasis and the Award validates that any conferral is consistent with its declared rule. For discretionary recognition, an authorized actor deliberately selects a Recipient without portraying the choice as mathematically implied. Later correction preserves prior conferral/revocation history.
 
-# Canonical contract
+# MUDAC composition binding
 
-Awards may be rank-derived or discretionary. A rank-derived Award consumes a ready [Rank](../mechanisms/rank.md) and declared rule; Organizer confirmation cannot contradict that rule. A discretionary Award represents authorized human judgment and must not be portrayed as mathematically implied.
+MUDAC normally binds Scope to Competition and Recipient to Team. Rank-derived Awards consume supplied Rank result/basis through application composition; Rank remains a derived mechanism and is not intrinsic Award state.
 
 # Boundaries
 
-Award is distinct from Rank. Ranking orders Teams; Award represents recognition. Official-outcome revisioning records which Award state was officially declared but does not replace Award itself.
-
-See [Awards & Finalization](../policies/awards-finalization.md) and [Reconciliation & Finalization Experience](../experience/reconciliation-finalization.md).
+Award is distinct from Rank, Outcome Declaration, Competition lifecycle, and Publication. Outcome Declaration may include an identified Award state in its supplied declared basis without taking ownership of Award semantics.

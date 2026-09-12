@@ -1,23 +1,19 @@
 ---
 type: Canonical Project Purpose Model
 title: MUDAC Purpose, Needs, Success & Tensions
-description: "Current representation-independent purpose baseline for MUDAC: product purpose, actor and affected-party needs, nine purpose obligations, representative success situations, material tensions and current validated modularity pressure."
+description: "Current representation-independent purpose baseline for MUDAC: product purpose, actor needs, nine purpose obligations, representative success situations, material tensions, and traceability to the converged Concept model."
 status: stable
 tags: [canonical, project, purpose, needs, success, tensions, traceability]
 sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md
-  - resource: ../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md
-  - resource: ../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md
-  - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
-  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
   - resource: mandate-context.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose of this document
 
-Provide the current need-focused purpose baseline for MUDAC.
-
-This document states **why the product matters and what outcomes it must enable**. It does not define the final Concept catalog. Detailed discovery, specification and modularity rationale remains in Phase 010 evidence until canonical convergence.
+State **why MUDAC matters and what outcomes it must enable** independently of implementation and downstream architecture.
 
 # Product-level purpose
 
@@ -31,29 +27,30 @@ A Judge needs to:
 
 - know the correct judging context and evaluation basis;
 - form and record independent judgment without peer-score, standings or protected-identity influence;
-- retain authorship even when another person captures a paper-originated record;
-- participate with low administrative friction through accessible interaction;
-- preserve legitimate work across interruption or degraded connectivity;
-- distinguish preserved work from asserted/authoritative evaluation;
-- understand what judging work remains;
-- amend the Judge's own evaluation through a legitimate correction path;
+- retain authorship when another person captures paper-originated work;
+- participate with low administrative friction and accessible interaction;
+- preserve legitimate work across interruption/degraded connectivity;
+- distinguish preserved Draft work from authoritative evaluation;
+- understand what evaluation responsibility remains;
+- amend the Judge's own evaluation legitimately;
 - avoid unnecessary broad post-event exposure of private evaluation history.
 
 ## Organizer
 
 An Organizer needs to:
 
-- establish competition-specific judging context and evaluation basis;
+- establish judging context and evaluation basis;
 - prepare evaluators/competitors and coordinate live judging;
 - see completion, gaps, substitutions and exceptions quickly;
 - preserve missing evidence as missing rather than inventing a score;
 - recover from paper operation, no-shows, interruption and mistakes without inventing judgment;
-- determine whether evaluation evidence satisfies declared rules;
-- derive, reconcile and declare outcomes from qualifying evidence under explicit policy;
-- distinguish live/calculated information from official outcomes;
-- correct legitimate errors without destroying prior historical truth;
-- explain outcomes from underlying evidence and rules;
-- externalize information without silently changing its authority/currentness;
+- determine whether evaluation evidence factually satisfies declared requirements;
+- govern exceptions without rewriting factual sufficiency;
+- derive, reconcile and explicitly declare outcomes from qualifying evidence/rules;
+- distinguish calculated/provisional information from declared official authority;
+- correct legitimate errors while preserving prior historical truth;
+- explain outcomes from evidence, rules and declaration history;
+- externalize information without silently changing authority/currentness;
 - deliberately govern disclosure/release.
 
 ## Technical administrator / support operator
@@ -62,41 +59,40 @@ A technical operator needs to keep the environment usable and secure without tec
 
 ## Student Team
 
-A Student Team needs evaluation based on legitimate competition information rather than protected institutional identity or administrative accident; missing evaluation to remain distinguishable from a low score; sufficiently consistent declared rules; traceable/correctable outcomes; and provisional information to remain distinguishable from official outcomes.
-
-Student Teams remain materially affected non-users in the current baseline.
+A Team needs evaluation based on legitimate competition information rather than protected identity or administrative accident; missing evaluation to remain distinct from low evaluation; consistent declared rules; traceable/correctable outcomes; and provisional information to remain distinguishable from declared official outcomes.
 
 ## External recipient
 
-A recipient of printed or deliberately released material needs an honest representation of its identified source basis, disclosure intent and authority/currentness. A rich public application is not required.
+A recipient of deliberately released material needs an honest representation of identified source basis, disclosure intent and authority/currentness.
 
 # Current purpose obligations
 
-- **P-01 — Independent human judgment:** a Judge can form, record and assert the Judge's own evaluation without peer scoring, standings, protected identity or capture mechanics substituting for that judgment.
+- **P-01 — Independent human judgment:** a Judge can form, record and assert the Judge's own evaluation without peer scoring, standings, protected identity or capture mechanics substituting for judgment.
 - **P-02 — Fair and bias-aware Team treatment:** competitive treatment reflects legitimate evidence and declared distinctions rather than protected identity, missing-data artifacts, administrative accident or arbitrary ordering.
 - **P-03 — Low-friction and accessible participation:** volunteers can enter the correct context and perform authorized judging work with low overhead through accessible interaction without erasing trustworthy attribution/authority.
 - **P-04 — Live operational coordination and completion:** Organizers can prepare/operate the event, understand readiness/incompletion, handle substitutions/exceptions and determine remaining work without ad-hoc reconstruction.
 - **P-05 — Resilient evaluation continuity:** interruption, connectivity loss, device failure or paper operation does not unnecessarily destroy work, duplicate semantic judgment, change authorship or make uncertain state appear authoritative.
-- **P-06 — Trustworthy and explainable outcome formation:** Organizers can derive, reconcile and declare outcomes from qualifying judgments/rules while distinguishing incomplete, calculated/provisional and official information.
+- **P-06 — Trustworthy and explainable outcome formation:** Organizers can derive, reconcile and explicitly declare outcomes from qualifying judgments/rules while distinguishing incomplete, calculated/provisional and declared official information.
 - **P-07 — Correctable authority and historical truth:** amendments, invalidations, replacements and corrections can improve current authority without destructive rewrite, silent predecessor revival, authorship transfer or loss of prior history.
 - **P-08 — Contextual confidentiality and authority separation:** protected identity/private evaluation/semantic authority do not leak through technical privilege, stale access, shared devices or prior participation.
-- **P-09 — Faithful external representation and controlled release:** external material accurately represents identified source state/disclosure intent and is released or withdrawn under deliberate competition authority.
+- **P-09 — Faithful external representation and controlled release:** external material accurately represents identified source state/disclosure intent and is released or withdrawn under deliberate authority.
 
 # Representative success situations
-
-Current success remains scenario-verifiable rather than based on invented numeric thresholds:
 
 - a first-time Judge completes an independent evaluation without protected/peer leakage;
 - missing evaluation remains visibly missing rather than becoming zero;
 - Judge substitution restores capacity without rewriting earlier actual participation;
+- an evaluation occurrence can end while unfinished evaluator responsibility remains visible;
 - interruption does not unnecessarily destroy work or falsely report authority;
 - paper-originated judging remains substantively equivalent and Judge-authored;
 - an Organizer can identify unresolved obligations/exceptions during live operation;
-- an official result can be traced to qualifying evidence and declared rules;
+- an official result can be traced to qualifying evidence, declared rules and the explicit Outcome Declaration;
 - correction can change current authority while preserving prior meaningful history;
-- ordinary Judge access can expire without deleting Organizer-authorized evidence;
+- a satisfied historical obligation is preserved if later re-evaluation requires a successor obligation;
+- ordinary Judge access can expire without deleting retained evidence;
 - technical support can recover service without silently acquiring competition authority;
-- provisional information cannot become official merely by being displayed/printed/exported;
+- provisional information cannot become official merely by display/print/export;
+- an Affected Outcome Declaration remains historically declared until explicit successor confirmation;
 - corrected external material uses explicit successor representation/release rather than silent mutation.
 
 # Material tensions
@@ -114,40 +110,28 @@ Current success remains scenario-verifiable rather than based on invented numeri
 
 These tensions are design constraints, not instructions to maximize one side unconditionally.
 
-# Current candidate pressure after 010-G
+# Traceability to the converged Concept model
 
-010-D performed purpose-first rediscovery, 010-E supplied behavioral specifications, 010-F established specific/purpose-singular boundaries, and 010-G tested the resulting set for completeness, intrinsic independence and genericity needed to remove false peer dependence.
+The current eighteen-Concept catalog is [Canonical Concepts](../concepts/). Purpose support is distributed rather than assigned one-to-one:
 
-**All eighteen candidates survive 010-G:** Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication.
+| Purpose | Principal current support |
+| --- | --- |
+| P-01 | Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Access |
+| P-02 | Team, Division, Alias, Evaluation Obligation, derived Coverage |
+| P-03 | Identity, Participation, Access, Scorecard Draft semantics |
+| P-04 | Competition, Panel, Evaluation Occurrence, Evaluation Obligation, derived Readiness/Reconciliation process |
+| P-05 | Scorecard, Evaluation Obligation succession, Evaluation Occurrence history, Versioning, Provenance, Access |
+| P-06 | derived Coverage/Aggregate/Rank, Award, Outcome Declaration, Competition closeout |
+| P-07 | Versioning, Provenance, Scorecard amendment, Evaluation Occurrence replacement, Outcome Declaration succession |
+| P-08 | Identity, Participation, Alias, Access, Provenance |
+| P-09 | Outcome Declaration, Export, Publication |
 
-This remains phase-level validated design until 010-H makes the boundary changes canonical.
-
-Key current conclusions:
-
-- current `Judging Encounter` should converge to **Evaluation Occurrence**, with evaluator responsibility owned by separate **Evaluation Obligation**;
-- **Outcome Declaration** is complete/independent over an abstract OutcomeBasis and DeclaringAuthority, distinct from Competition lifecycle and Publication;
-- **Evaluation Sufficiency/Coverage** remains derived and Reconciliation remains process/work mode;
-- Aggregate, Rank and Readiness remain derived mechanisms;
-- Recovery/Continuity remains a cross-cutting P-05 obligation rather than a Concept;
-- direct peer typing in current documents often represents application composition, not intrinsic dependence, and should be replaced by abstract boundary parameters during 010-H where only identity/content/context is required.
-
-Four material completeness expansions are mandatory during canonical re-specification:
-
-1. Evaluation Obligation successor responsibility after prior satisfaction when legitimate re-evaluation becomes required;
-2. Rubric response interpretation/validation queries;
-3. Versioning invalidation/current-eligibility behavior;
-4. Export representation-currency behavior.
+No purpose requires restoring Evaluation Sufficiency, Reconciliation, Recovery/Continuity, Aggregate, Rank or Readiness as standalone Concepts.
 
 # Interpretation rule
 
-Purpose traceability, behavioral adequacy and modularity survival do **not** establish that a Concept belongs in every product variant, has the final most familiar/reusable name, composes correctly with every peer, maps optimally to UI, or is ready for implementation.
-
-010-H owns canonical convergence/re-specification. Phase 011 owns composition/synchronization. Phase 012 owns product-family inclusion dependence. Phase 014 owns broader familiarity/reuse refinement.
+Phase 010 canonical convergence establishes the current Concept boundaries. It does **not** establish final synchronization design, product-family inclusion dependence, interaction mapping, broad reuse/familiarity, whole-system integrity, scenario closure, architecture readiness, or implementation authorization.
 
 # Current handoff
 
-010-G has completed the remaining foundational modularity tests. The next methodology task is:
-
-> **010-H — Concept Boundary Convergence, Re-specification & Canonical Reconciliation**
-
-010-H must make the validated eighteen-candidate boundary set current and unambiguous, incorporate the required completeness/genericity corrections, and preserve later composition/dependence questions as unresolved.
+Proceed to **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.

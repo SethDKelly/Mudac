@@ -1,42 +1,63 @@
 ---
 type: Design Concept
 title: Rubric
-description: Structured evaluation definition governing valid Judge judgment.
+description: Structured evaluation definition governing interpretation and validity of judgment responses.
 status: stable
-tags: [concept, judging, rubric]
+tags: [concept, judging, rubric, evaluation-basis]
 sources:
-  - resource: ../../001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md
   - resource: ../../002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md
-  - resource: ../../002-concept-specification/002-I-phase-consolidation-specification-exit-review.md
-  - resource: ../../007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
+  - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
 # Purpose
 
-Define the structured evaluation instrument and semantics of valid judgment.
+Define the structured evaluation instrument and the semantics by which supplied judgment responses are interpreted and validated.
 
 # State
 
-Rubric owns stable lineage/applicability context, name and instructions, scoring model, ordered Criteria, score domains/guidance, contribution configuration, note policies, and working-definition validity state.
+Rubric owns stable instrument identity/lineage context, name/instructions, scoring model, ordered Criteria, response/score domains, guidance, contribution configuration, note policies, and working-definition validity state.
 
-# Actions
+Criterion and Note remain subordinate structures rather than independent MUDAC Concepts.
 
-Conceptual actions are `createDraft`, `rename`, `updateInstructions`, `configureScoringModel`, `addCriterion`, `editCriterion`, `reorderCriterion`, `removeCriterion`, `configureCriterionNotePolicy`, `configureOverallNotePolicy`, `validate`, and `prepareForUse`.
+# Actions and queries
 
-Establishing an immutable authoritative Rubric Version composes with [Versioning](versioning.md); Rubric itself owns whether its working definition is valid.
+Conceptual actions are `createDraft`, `rename`, `updateInstructions`, `configureScoringModel`, `addCriterion`, `editCriterion`, `reorderCriterion`, `removeCriterion`, `configureCriterionNotePolicy`, `configureOverallNotePolicy`, `validateDefinition`, and `prepareForUse`.
+
+Completeness requires Rubric to expose interpretation queries such as:
+
+- `criterionDefinition`;
+- `allowedResponseDomain`;
+- `interpretResponse`;
+- `validateResponse`;
+- `validateCompletedResponseSet`;
+- `isDefinitionValid`.
+
+These queries define whether supplied response values are semantically valid under the Rubric. A recording Concept such as Scorecard does not invent those semantics.
 
 # Operational Principle
 
-An Organizer creates a Rubric, defines its scoring model and Criteria, supplies guidance and note requirements, validates the working definition, and establishes an authoritative Version. A Judge later receives that exact Version in an Encounter and records one Scorecard under its semantics.
+An authorized user defines an evaluation instrument, its Criteria, response domains, scoring semantics, guidance and note requirements. Rubric validates that the working definition is internally coherent and can interpret/validate supplied evaluator responses against that definition. The application may then establish an immutable authoritative basis through Versioning/Provenance synchronization. Evaluators subsequently record judgments against an exact supplied Rubric basis without the recording Concept redefining response meaning.
 
 # Canonical contract
 
-A Scorecard is bound to one exact authoritative Rubric [Version](versioning.md). Semantic Rubric changes require a new Version; existing Scorecards never silently rebind.
+Missing, zero and not-applicable meanings must remain distinguishable where the configured Rubric supports them.
 
-Missing, zero, and not-applicable semantics must remain distinguishable where supported. Scoring math must be deterministic and avoid hidden double weighting.
+Scoring semantics must be deterministic from the Rubric definition and avoid hidden double weighting.
+
+A semantic Rubric change does not silently reinterpret historical judgment recorded under an earlier supplied basis.
+
+# Generic boundary
+
+Rubric does not intrinsically require Team, Judge, Competition, Evaluation Occurrence, Scorecard, Versioning, or Provenance types. It defines an evaluation instrument and the meaning/validity of response values.
+
+# MUDAC composition binding
+
+MUDAC normally establishes immutable authoritative Rubric states through [Versioning](versioning.md) and [Provenance](provenance.md), then supplies one exact basis to Evaluation Occurrence / Scorecard coordination. Those interactions belong to Phase 011 synchronization rather than Rubric's intrinsic behavior.
 
 # Boundaries
 
-Criterion and Note are subordinate evaluation structure rather than independent MUDAC Concepts. Rubric does not know which Team or Judge is being evaluated and does not own Competition aggregation/ranking.
+Rubric does not own who is evaluated, who evaluates, evaluator responsibility, judgment authorship, outcome aggregation/ranking, or authoritative lineage mechanics.
 
-See [Criterion & Notes](../mechanisms/criterion-notes.md), [Scorecard](scorecard.md), and [Evaluation Policy](../policies/evaluation-policy.md).
+See [Criterion & Notes](../mechanisms/criterion-notes.md) and [Evaluation Policy](../policies/evaluation-policy.md).
