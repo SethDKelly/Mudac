@@ -10,7 +10,8 @@ Current foundational truth is:
 
 - [Project Context & Purpose](canonical/project/);
 - [Current eighteen-Concept catalog](canonical/concepts/);
-- [010-I Phase 010 exit review](010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) for the completed foundational methodology decision and Phase 011 handoff.
+- [Active Phase 011](011-concept-composition-synchronization/) for composition/synchronization revalidation;
+- [011-A](011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) for the approved Phase 011 decomposition.
 
 ## Status
 
@@ -24,7 +25,7 @@ Current foundational truth is:
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **Next — entry/decomposition**
+* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A complete; 011-B next**
 
 ## Current posture
 
@@ -38,25 +39,25 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
-011: NEXT — ENTRY/DECOMPOSITION
+011: IN PROGRESS
+011-A: COMPLETE — READY
+011-B: NEXT
 ```
 
-## Phase 010 canonical result
+## Phase 011 composition posture
 
-The canonical catalog contains eighteen Concepts:
+Phase 010's current catalog contains eighteen independent Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-The previous `Judging Encounter` and `Official Outcome Revision` paths remain only as deprecated historical adapters.
-
-Phase 010 also closed the current project/intake, purpose, divergent discovery, behavioral specification, specificity, completeness, independence and boundary-genericity obligations needed before composition.
+The previous synchronization corpus is not discarded, but it is **pre-011 evidence** until each material contract is revalidated against these boundaries. The active phase must explicitly establish current synchronization semantics and application action exposure without runtime orchestration.
 
 ## Completion runway
 
 ```text
 010 foundational completion                         COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation      NEXT
+011 composition / synchronization revalidation      IN PROGRESS — 011-B NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -75,4 +76,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to a **Phase 011 entry/decomposition exercise** for **Concept Composition, Synchronization, Application Action Surface & Automation Revalidation**.
+Proceed to **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.

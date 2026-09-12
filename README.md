@@ -10,7 +10,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
-* [`docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md`](docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) — Phase 010 exit decision and Phase 011 handoff.
+* [`docs/011-concept-composition-synchronization/`](docs/011-concept-composition-synchronization/) — active Phase 011 composition/synchronization work.
+* [`docs/011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md`](docs/011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) — Phase 011 start gate and approved decomposition.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -27,7 +28,9 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009 methodology realignment: COMPLETE — PASS
 010 foundational completion: COMPLETE — PASS
-011: NEXT — ENTRY/DECOMPOSITION
+011 composition/synchronization revalidation: IN PROGRESS
+011-A: COMPLETE — READY
+011-B: NEXT
 ```
 
 ## Current Concept catalog
@@ -57,12 +60,18 @@ The former `Judging Encounter` and `Official Outcome Revision` paths remain only
 
 Coverage remains derived factual sufficiency with exception disposition modeled separately; Reconciliation remains process/work mode; Aggregate, Rank and Readiness remain derived mechanisms.
 
+## Phase 011 posture
+
+The existing synchronization corpus and Phase 007-C/007-D are strong **pre-011 evidence**, not automatically current composition authority. Phase 011 must revalidate them against the eighteen-Concept catalog, especially the Evaluation Occurrence/Evaluation Obligation split and the Outcome Declaration promotion.
+
+Phase 011 defines conceptual triggers, participating Concept actions, semantic bindings, action exposure/non-exposure, chaining, automation and composition consequences. It does not define APIs, services, queues, transactions, retries, workers, workflow engines or deployment architecture.
+
 ## Completion runway
 
 ```text
 010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                 NEXT
+011 composition / synchronization revalidation                 IN PROGRESS — 011-B NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -87,4 +96,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to a **Phase 011 entry/decomposition exercise** for **Concept Composition, Synchronization, Application Action Surface & Automation Revalidation**.
+Proceed to **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.

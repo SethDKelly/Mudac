@@ -15,13 +15,13 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 
 [Official Outcome Revision](official-outcome-revision.md) is retained only as a `deprecated` historical adapter. Its former authority-bearing behavior is now owned by the current [Outcome Declaration](../concepts/outcome-declaration.md) Concept and it is **not** a current mechanism.
 
-## Current classification rules after 010-H
+## Current classification rules
 
 - **Coverage / Evaluation Sufficiency** remains derived. Its factual answer is `Satisfied` or `Incomplete`; accepted exception disposition may permit a consequence while factual Coverage remains Incomplete.
 - **Reconciliation** remains process/work mode rather than independent ticket-like source state.
 - **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Phase 010 convergence is recorded in [010-H](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md).
+Phase 011 is now active. The start gate is [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md). Derived mechanisms participate in application composition where appropriate but must not gain source or official authority merely because a synchronization consumes or refreshes them.
 
-The next methodology task is **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+The next methodology task is **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.

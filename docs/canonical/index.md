@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes; Official Outcome Revision remains only a deprecated historical adapter.
-* [Synchronizations](synchronizations/) — pre-011 composition evidence subject to Phase 011 revalidation against the converged Concept catalog.
+* [Synchronizations](synchronizations/) — strong pre-011 composition evidence being revalidated by active Phase 011.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
@@ -35,18 +35,22 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
-011: NEXT — ENTRY/DECOMPOSITION
+011: IN PROGRESS
+011-A: COMPLETE — READY
+011-B: NEXT
 ```
 
-# Phase 010 canonical result
+# Phase 011 current authority
 
-[010-I](../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) closes Phase 010 with PASS after project/purpose/discovery/specification/modularity reconciliation.
+[011-A](../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the composition start gate and approved Phase 011 sequence.
 
-Current Concept authority is:
+Current Concept authority remains the Phase 010 eighteen-Concept catalog:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
 `Judging Encounter` and `Official Outcome Revision` remain only as deprecated historical adapters.
+
+The existing synchronization corpus is not yet fully reconciled current composition authority. Phase 011 must revalidate it before canonical promotion, especially where old contracts encoded Encounter-owned obligations or Official Outcome Revision.
 
 # Retrieval rule during reopened design
 
@@ -59,14 +63,14 @@ For Phases 011–017:
 5. load the [Design / Implementation Boundary](governance/design-implementation-boundary.md) and downstream quarantine;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-For Phase 011 specifically, treat [Synchronizations](synchronizations/) and Phase 007-C/007-D as strong reusable evidence that must be revalidated against the post-010 Concept boundaries.
+For Phase 011 specifically, use [Synchronizations](synchronizations/) and Phase 007-C/007-D as strong reusable evidence subject to explicit semantic revalidation against the post-010 Concept boundaries.
 
 # Completion runway
 
 ```text
 010 project/purpose / discovery / specification / modularity   COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                NEXT
+011 composition / synchronization revalidation                IN PROGRESS — 011-B NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -81,4 +85,4 @@ For Phase 011 specifically, treat [Synchronizations](synchronizations/) and Phas
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is a **Phase 011 entry/decomposition exercise**.
+The immediate next work is **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.

@@ -4,7 +4,7 @@ Phase 010 is complete.
 
 ## Status
 
-**Complete — PASS. Phase 011 entry/decomposition is next.**
+**Complete — PASS. Phase 011 is active; 011-A complete; 011-B next.**
 
 ## Records
 
@@ -20,7 +20,7 @@ Phase 010 is complete.
 
 ## Exit result
 
-Phase 010 closes the current Base/Jackson-aligned `000–004` residual work identified by Phase 009. The repository now has one current, representation-independent and modular eighteen-Concept catalog suitable for composition revalidation.
+Phase 010 closes the current Base/Jackson-aligned `000–004` residual work identified by Phase 009. The repository has one current, representation-independent and modular eighteen-Concept catalog suitable for composition revalidation.
 
 The material boundary corrections are:
 
@@ -32,14 +32,16 @@ The material boundary corrections are:
 
 [Canonical Concepts](../canonical/concepts/) is the current catalog authority. Deprecated adapter paths preserve history but are not current owners.
 
-## Phase relationship
+## Active downstream phase
+
+[Phase 011](../011-concept-composition-synchronization/) is active. [011-A](../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) completed the composition start gate and approved the B→J dependency sequence.
 
 ```text
-009 methodology realignment                      COMPLETE — PASS
+009 methodology realignment                                  COMPLETE — PASS
   ↓
-010 project/purpose/discovery/specification/modularity        COMPLETE — PASS
+010 project/purpose/discovery/specification/modularity       COMPLETE — PASS
   ↓
-011 composition/synchronization revalidation                 NEXT — ENTRY/DECOMPOSITION
+011 composition/synchronization revalidation                IN PROGRESS — 011-B NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -54,4 +56,4 @@ The material boundary corrections are:
 017 methodology completeness / closure
 ```
 
-See [README.md](README.md) for the phase summary and [010-I](010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) for the formal coverage/exit decision and Phase 011 handoff.
+See [README.md](README.md) for the Phase 010 summary and [010-I](010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) for the formal exit decision.

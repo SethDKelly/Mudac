@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — relationship among Daniel Jackson Concept Design, Base completion-control lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, downstream constraints, historical preservation and routing boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, frozen 006-D bootstrap and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, active Phase 011 composition boundary, frozen 006-D bootstrap and suspended downstream authority.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -23,21 +23,15 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 reopened and realigned Jackson Concept Design. Phase 010 has now progressed through canonical Concept convergence.
+Phase 009 reopened and realigned Jackson Concept Design. Phase 010 completed the foundational project/purpose/discovery/specification/modularity work. Phase 011 is now active for concept composition/synchronization revalidation.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
 009 realignment/gap map: COMPLETE — PASS
-010 foundational completion: IN PROGRESS
-010-A: COMPLETE — PASS
-010-B: COMPLETE — PASS
-010-C: COMPLETE — PASS
-010-D: COMPLETE — PASS
-010-E: COMPLETE — PASS
-010-F: COMPLETE — PASS
-010-G: COMPLETE — PASS
-010-H: COMPLETE — PASS
-010-I: NEXT
+010 foundational completion: COMPLETE — PASS
+011 composition/synchronization: IN PROGRESS
+011-A: COMPLETE — READY
+011-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -47,12 +41,12 @@ implementation authorization: NOT YET
 
 # Current Concept authority
 
-[010-H](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md) completed the high-risk documentation/ownership cutover required by the Base Phase-004 contract.
+[Canonical Concepts](../concepts/) owns one current eighteen-Concept catalog. Deprecated adapter files for Judging Encounter and Official Outcome Revision preserve history/links but are not current owners.
 
-[Canonical Concepts](../concepts/) now owns one current eighteen-Concept catalog. Deprecated adapter files for Judging Encounter and Official Outcome Revision preserve history/links but are not current owners.
+[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the active composition start gate. Existing synchronization contracts remain pre-011 evidence until explicitly revalidated against Evaluation Occurrence, Evaluation Obligation, Outcome Declaration and the other post-010 boundaries.
 
-Phase 011 synchronization and Phase 012 inclusion-dependence questions remain intentionally unresolved.
+Phase 012 inclusion-dependence questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **010-I — Phase 010 Consolidation, Methodology-Coverage Decision & Phase 011 Handoff**.
+Proceed to **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.

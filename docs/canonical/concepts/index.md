@@ -2,7 +2,7 @@
 
 Current canonical Concept catalog after Phase 010 modularity convergence and exit.
 
-Each current Concept owner exposes a current representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Direct MUDAC peer bindings are treated as composition unless the peer semantics are intrinsic.
+Each current Concept owner exposes a representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Direct MUDAC peer bindings are treated as composition unless the peer semantics are intrinsic.
 
 ## Current eighteen-Concept catalog
 
@@ -31,16 +31,9 @@ Each current Concept owner exposes a current representation-independent Purpose,
 
 ## Phase 010 authority
 
-The current catalog is the result of:
+The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the formal handoff.
 
-- [010-D candidate rediscovery](../../010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md);
-- [010-E behavioral specification audit](../../010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md);
-- [010-F specificity/purpose singularity](../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md);
-- [010-G completeness/independence/boundary genericity](../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md);
-- [010-H canonical convergence](../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md);
-- [010-I Phase 010 exit review](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md).
-
-No current Concept is accepted merely because it existed historically. Later phases may still discover defects and reopen the natural owner when evidence warrants it.
+No current Concept is accepted merely because it existed historically. Later phases may still expose defects and reopen the natural owner when evidence warrants it.
 
 ## Explicit non-Concept classifications
 
@@ -54,8 +47,10 @@ In particular:
 - Recovery/Continuity is a cross-cutting purpose obligation rather than a separate Concept;
 - Correction remains a family of owner-specific actions/compositions.
 
-## Next methodology work
+## Active methodology work
 
-Phase 010 is complete. The next task is a **Phase 011 entry/decomposition exercise** for Concept Composition, Synchronization, Application Action Surface & Automation Revalidation.
+Phase 011 is active. [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the composition start gate and approved subphase sequence.
 
-Phase 011 will revalidate synchronization among these independent Concepts. Phase 012 will analyze product-family inclusion dependence. Neither question is answered by this index.
+Phase 011 must preserve these Concepts as intrinsically independent while revalidating application-level synchronization and action exposure. Phase 012 will separately analyze product-family inclusion dependence.
+
+Next: **011-B — Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline**.
