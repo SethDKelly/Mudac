@@ -7,11 +7,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
+4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the completed composition phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/).
-6. Use [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) only as the historical Phase 011 inventory/action baseline; current family authorities are 011-C through 011-H.
-7. Use [011-I](docs/011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md) and [Application Action Surface, Chaining & Automation Composition](docs/canonical/synchronizations/application-action-surface-composition.md) as current whole-application action/chaining/automation authority.
-8. Treat the old sixteen-contract synchronization corpus as historical evidence wherever current Phase 011 owners supersede it.
+6. Use [011-J](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for the Phase 011 exit and Phase 012 handoff.
+7. Use canonical synchronization owners for current interaction rules; numbered 011-C through 011-I records are provenance/rationale evidence.
+8. Treat [Historical Concept Synchronization Contracts — Pre-Phase-011](docs/canonical/synchronizations/concept-synchronizations.md) as historical evidence only.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -28,17 +28,8 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
-011: IN PROGRESS
-011-A: COMPLETE — READY
-011-B: COMPLETE — PASS
-011-C: COMPLETE — PASS
-011-D: COMPLETE — PASS
-011-E: COMPLETE — PASS
-011-F: COMPLETE — PASS
-011-G: COMPLETE — PASS
-011-H: COMPLETE — PASS
-011-I: COMPLETE — PASS
-011-J: NEXT
+011: COMPLETE — PASS
+012: NEXT — Concept Dependence, Product-Family, Subset & Scope Analysis
 ```
 
 ## Current Concept authority
@@ -53,25 +44,9 @@ Do **not** use the previous sixteen-Concept taxonomy as current authority.
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context. Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Phase 011 whole-application discipline
+## Current composition authority
 
-Phase 011 composes independent Concepts; it does not rewrite them in terms of one another.
-
-Final action classes:
-
-- **D** direct application action;
-- **C** coordinated application action;
-- **P** composition-only participant;
-- **S** system-triggered conceptual reaction;
-- **X** intentionally unavailable generic action.
-
-No unresolved `U` action remains.
-
-Governing rule:
-
-> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
-
-Preserve these whole-application distinctions:
+Phase 011 is complete. Preserve these whole-application distinctions:
 
 - Identity continuity ≠ Participation authority ≠ Access permission;
 - Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
@@ -86,62 +61,65 @@ Preserve these whole-application distinctions:
 - Coverage factual sufficiency ≠ exception disposition;
 - Aggregate existence ≠ rank eligibility;
 - Rank ≠ Award authority;
-- Competition Finalization ≠ Outcome Declaration content/history;
+- Competition Finalization ≠ Outcome Declaration;
 - calculated ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release ≠ transport delivery;
-- source correction never silently rewrites dependent owner authority/history.
+- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-## Automation limits
+Final action classes are:
 
-Conceptual automation may include Access guards, derived recomputation, Ready-state blocking invalidation, bounded live-Judge Participation completion during Complete Live Event, verified declaration/export affectedness and required supporting Provenance.
+- **D** direct application action;
+- **C** coordinated application action;
+- **P** composition-only participant;
+- **S** system-triggered conceptual reaction;
+- **X** intentionally unavailable generic action.
 
-Do **not** automate semantic authorship or discretionary authority merely from an upstream change. In particular do not automatically:
+No unresolved `U` remains.
 
-- finalize Judge Scorecards;
-- satisfy obligations without qualifying evidence;
-- create successor Judge work because evidence became unusable;
-- rebind structural Scorecard identity;
-- clone replacement-occurrence responsibilities;
-- move/revoke/reconfer Awards;
-- Finalize Competition;
-- establish or confirm Outcome Declarations;
-- regenerate Export merely because source changed;
-- publish/withdraw/supersede Publication;
-- restore Participation/Access after resume.
+Governing automation rule:
 
-## Rejected hidden coordinators
+> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
 Do not introduce semantic authority named Workflow, Run, Case, Task, Reconciliation state machine, Finalization coordinator, Result/Outcome aggregate owner, Release manager, Automation/Cascade controller or Synchronization state.
 
-Implementation constructs with similar names may later exist only as downstream realization mechanisms and may not become Concept authority by convenience.
+## Phase 012 discipline
 
-## Phase boundaries
+Phase 012 owns **extrinsic inclusion dependence**, coherent Concept subsets, product/application-family variants and adopted scope.
 
-- Phase 012 owns inclusion/dependence/product-family subsets. Synchronization is evidence, not automatic dependence.
-- Phase 013 owns user-visible mapping/interaction. Action classification is not a UI/CLI/API design.
-- Architecture/implementation remain suspended until the full reopened design runway eventually authorizes separate re-entry.
-
-## Approved Phase 011 order
+For Concept inclusion claims, distinguish:
 
 ```text
-011-A  COMPLETE — READY
-011-B  COMPLETE — PASS
-011-C  COMPLETE — PASS
-011-D  COMPLETE — PASS
-011-E  COMPLETE — PASS
-011-F  COMPLETE — PASS
-011-G  COMPLETE — PASS
-011-H  COMPLETE — PASS
-011-I  COMPLETE — PASS
-011-J  NEXT — canonical synchronization reconciliation / Phase 011 exit / Phase 012 handoff
+intrinsic dependence
+  = Concept-boundary defect; reopen the natural upstream owner
+
+synchronization/composition
+  = how already-included Concepts interact
+
+extrinsic inclusion dependence
+  = contextual rule that including A requires B for A's intended application role
+
+implementation dependency
+  = out of scope for Concept Design
 ```
 
-## Design-only rules for Phases 011–017
+Do not convert every synchronization edge into a dependence edge.
+
+Phase 012 must challenge familiar packaging and consider unusual/minimal coherent subsets. It must distinguish dependence-valid subsets from variants MUDAC actually adopts into scope.
+
+Questions explicitly entering Phase 012 include whether Panel, Division, Award, Outcome Declaration, Export, Publication, Versioning and Provenance are required, optional, conditional or alternative in different coherent variants.
+
+Recommended next subgroup:
+
+> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
+
+012-A should derive its own dependency-safe subphase sequence before substantive dependence edges are accepted.
+
+## Design-only rules for Phases 012–017
 
 - Do not resume 008-F through 008-L.
 - Do not begin new domain implementation.
 - Do not let frameworks, packages, tables, APIs, AWS services, source topology, authentication providers, persistence choices or existing code determine Concept Design.
-- Do not design runtime synchronization through APIs, event buses, queues, workers, workflow engines, transactions, sagas, retries, timeouts or persistence cascades.
+- Do not infer Concept dependence from service/package/module/database dependency.
+- Do not turn the dependence graph into implementation architecture or implementation order.
 - Architecture/implementation may be inspected only for contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
 - Keep durable current meaning in canonical conceptual owners; keep rejected alternatives/counterexamples in phase history.
 
@@ -157,4 +135,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**
+> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
