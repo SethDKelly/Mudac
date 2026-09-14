@@ -14,7 +14,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
-* [Synchronizations](canonical/synchronizations/) — preserved pre-011 evidence plus current Phase 011 classification/routing.
+* [Synchronizations](canonical/synchronizations/) — current Phase 011 synchronization owners plus preserved pre-011 evidence.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
 * [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
@@ -23,9 +23,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), and active [Phase 011](011-concept-composition-synchronization/).
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 011](011-concept-composition-synchronization/).
 
-Use [011-A](011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) for Phase 011 scope/decomposition and [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for current legacy synchronization dispositions and the provisional application-action baseline.
+Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the full legacy disposition/action baseline and [011-C](011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for the first current synchronization family.
 
 # Current methodology state
 
@@ -36,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -46,16 +47,18 @@ implementation authorization: NOT YET
 
 # Phase 011 authority posture
 
-011-B classified all sixteen legacy synchronization contracts against the eighteen-Concept model. No legacy contract is accepted unchanged as current; 011-C through 011-H will establish current composition family by family. The canonical synchronization files remain preserved pre-011 evidence until 011-J reconciliation.
+011-B classified all sixteen legacy synchronization contracts against the eighteen-Concept model. No legacy contract was accepted unchanged.
 
-The application-action baseline is conceptual only: it distinguishes direct candidates, coordinated actions, composition-only participants, system-triggered reactions, intentionally unavailable generic actions, and unresolved cases without specifying UI or APIs.
+011-C has established current semantics for Identity→Participation binding, contextual Access, Competition readiness/activation/completion/resume, Team/Division/Alias readiness contribution, and operating-context isolation. The canonical owner is [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md).
+
+Unreplaced legacy synchronization text remains evidence only. 011-D through 011-H will establish the remaining current families, 011-I will close whole-application action/chaining/automation questions, and 011-J will reconcile the corpus.
 
 # Completion runway
 
 ```text
 010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization                                      IN PROGRESS — 011-C NEXT
+011 composition / synchronization                                      IN PROGRESS — 011-D NEXT
   ↓
 012 dependence / product family / subsets
   ↓
@@ -72,4 +75,4 @@ The application-action baseline is conceptual only: it distinguishes direct cand
 
 A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-The immediate next task is **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
+The immediate next task is **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.

@@ -10,8 +10,9 @@ Current foundational truth is:
 
 - [Project Context & Purpose](canonical/project/);
 - [Current eighteen-Concept catalog](canonical/concepts/);
+- [Current Synchronizations](canonical/synchronizations/);
 - [Active Phase 011](011-concept-composition-synchronization/) for composition/synchronization revalidation;
-- [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the current legacy synchronization disposition and provisional application-action baseline.
+- [011-C](011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for the current Competition/Identity/Participation/Access composition result.
 
 ## Status
 
@@ -25,7 +26,7 @@ Current foundational truth is:
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B complete; 011-C next**
+* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C complete; 011-D next**
 
 ## Current posture
 
@@ -42,7 +43,8 @@ implementation authorization: NOT YET
 011: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 ```
 
 ## Phase 011 composition posture
@@ -51,16 +53,16 @@ Phase 010's current catalog contains eighteen independent Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-011-B establishes the current inventory/classification baseline: all sixteen legacy synchronization contracts have explicit dispositions, CO-01 through CO-12 have owners, and the action surface has a provisional classification across all eighteen Concepts. No legacy contract was promoted unchanged and no upstream Concept defect was found.
+011-B remains the complete legacy synchronization inventory/classification baseline. 011-C has now established current canonical composition for Competition lifecycle/readiness, Identity continuity, Competition Participation, contextual Access, event completion/resume and operating-context isolation.
 
-The old synchronization corpus remains pre-011 evidence until the owning semantic subgroups establish current rules and 011-J canonically reconciles them.
+Unreplaced portions of the old synchronization corpus remain evidence only until their owning semantic subgroups establish current rules.
 
 ## Completion runway
 
 ```text
 010 foundational completion                         COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation      IN PROGRESS — 011-C NEXT
+011 composition / synchronization revalidation      IN PROGRESS — 011-D NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -79,4 +81,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
+Proceed to **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.

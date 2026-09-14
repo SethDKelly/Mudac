@@ -1,6 +1,6 @@
 # Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation
 
-Status: **In Progress — 011-A/B complete; 011-C next**
+Status: **In Progress — 011-A/B/C complete; 011-D next**
 
 ## Role in the completion runway
 
@@ -18,9 +18,11 @@ Phase 010 established eighteen current Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-011-A established the composition start gate. 011-B has now classified all sixteen pre-011 synchronization contracts, assigned all twelve composition obligations, identified ten post-Phase-010 composition gaps, and established a provisional application-action baseline spanning all eighteen Concepts.
+011-A established the composition start gate. 011-B classified all sixteen pre-011 synchronization contracts, assigned all twelve composition obligations, identified ten post-Phase-010 composition gaps, and established a provisional application-action baseline spanning all eighteen Concepts.
 
-No legacy synchronization has been promoted unchanged. The existing canonical synchronization corpus remains preserved pre-011 evidence until the owning 011-C through 011-H work establishes replacement/current semantics and 011-J performs canonical reconciliation.
+011-C has now established the first current synchronization family: Competition lifecycle/readiness, Identity continuity, Competition-scoped Participation, contextual Access, event completion/resume, Team/Division/Alias readiness contribution, and one-context-only capability evaluation. The durable rules live in [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md).
+
+No Phase 010 Concept boundary was reopened.
 
 ## Subgroup status
 
@@ -28,8 +30,8 @@ No legacy synchronization has been promoted unchanged. The existing canonical sy
 | --- | --- | --- |
 | 011-A | [Composition Scope, Evidence Reuse, Synchronization Risk & Subphase Planning](011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) | **Complete — READY** |
 | 011-B | [Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline](011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) | **Complete — PASS** |
-| 011-C | **Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition** | **Next** |
-| 011-D | Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment | Planned |
+| 011-C | [Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition](011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) | **Complete — PASS** |
+| 011-D | **Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment** | **Next** |
 | 011-E | Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition | Planned |
 | 011-F | Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation | Planned |
 | 011-G | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition | Planned |
@@ -37,28 +39,20 @@ No legacy synchronization has been promoted unchanged. The existing canonical sy
 | 011-I | Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure | Planned |
 | 011-J | Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff | Planned |
 
-## 011-B baseline result
+## 011-C current composition result
 
-The sixteen legacy contracts are classified as:
+011-C establishes that:
 
-- 7 reusable semantic cores requiring revalidation;
-- 4 split/reframe cases;
-- 3 replacements required by Phase 010 ownership changes;
-- 1 cross-cutting correction bundle to decompose;
-- 1 partial reclassification into semantic Access composition plus Phase 013 mapping.
-
-All twelve Phase 011 composition obligations have owners and no Phase 010 Concept-boundary defect was found.
-
-The provisional action-surface vocabulary is:
-
-- direct candidate;
-- coordinated candidate;
-- composition-only participant;
-- system-triggered conceptual reaction;
-- intentionally unavailable as a generic direct action;
-- unresolved pending owning subgroup/final 011-I closure.
-
-This classification is Concept Design, not API or UI design.
+- Identity continuity and Competition Participation remain separate;
+- Participation enrollment/activation never grants Access by itself;
+- `markReady` and `activate` are gated by derived readiness without Readiness becoming authority;
+- a blocking source change while Ready system-triggers `returnToDraft`, but an Active Competition never rolls back due to later readiness degradation;
+- `completeEvent` completes ordinary live Judge Participations while leaving outstanding evaluation responsibility/evidence untouched;
+- ordinary Judge private-evaluation Access closes from current Event Completed/Participation context without requiring a persisted ordinary Access-expiry action;
+- `resumeEvent` restores no Participation, Panel, session or capability automatically;
+- restored Judge Participation after resume is explicit/selective and Access is freshly evaluated;
+- one protected operation uses one explicit Participation context and capabilities never union across roles;
+- Team/Division/Alias current state contributes to readiness, while historical presented judging context is deferred to 011-D.
 
 ## Dependency order
 
@@ -67,9 +61,9 @@ This classification is Concept Design, not API or UI design.
   ↓
 011-B legacy sync inventory / obligations / action baseline        COMPLETE — PASS
   ↓
-011-C actor / Competition lifecycle / Participation / Access       NEXT
+011-C actor / Competition lifecycle / Participation / Access       COMPLETE — PASS
   ↓
-011-D competitor context / Panel / Occurrence / Obligation
+011-D competitor context / Panel / Occurrence / Obligation         NEXT
   ↓
 011-E evaluation basis / Scorecard / Versioning / Provenance / paper
   ↓
@@ -105,7 +99,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -116,6 +111,6 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
+Proceed to **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.
 
-011-C owns current semantic revalidation for legacy contracts 01–04, the readiness portion of 05, and the semantic Access-context portion of 16.
+011-D owns the remaining competitor-context half of legacy 05 plus the major replacements for legacy 06 and the responsibility-establishment portion of legacy 08.

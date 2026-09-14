@@ -32,7 +32,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011 composition/synchronization: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -44,12 +45,14 @@ implementation authorization: NOT YET
 
 [Canonical Concepts](../concepts/) owns one current eighteen-Concept catalog. Deprecated adapter files for Judging Encounter and Official Outcome Revision preserve history/links but are not current owners.
 
-[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) establishes the active composition scope and dependency order.
+[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) remains current inventory/classification authority for the complete legacy synchronization corpus and provisional whole-application action surface.
 
-[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) is the current inventory/classification authority for legacy synchronization disposition and provisional action exposure. Existing synchronization bodies remain pre-011 evidence until their owning semantic subgroup establishes current replacement rules and 011-J reconciles canonical ownership.
+[011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) has established current Competition/Identity/Participation/Access composition semantics. Their durable owner is [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
+
+Where a Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy contract text. Unreplaced legacy synchronization semantics remain pre-011 evidence.
 
 Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
+Proceed to **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.

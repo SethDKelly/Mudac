@@ -7,8 +7,8 @@ Current representation-independent project/intake and purpose knowledge for MUDA
 
 Phase 010 completed the foundational Concept Design work needed before composition and established the current eighteen-Concept catalog.
 
-Phase 011 is active. [011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) established the composition start gate and [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) classified every legacy synchronization, assigned the composition obligations, and established the provisional application-action baseline.
+Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the legacy composition inventory/action baseline, while [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) has established the first current synchronization family for Competition lifecycle/readiness, Identity, Participation and Access.
 
-The current Concept catalog is owned by [Canonical Concepts](../concepts/) and contains eighteen current Concepts.
+The current Concept catalog is owned by [Canonical Concepts](../concepts/), and current synchronization-family authority is routed through [Canonical Synchronizations](../synchronizations/).
 
-Current methodology handoff: **Phase 011 in progress; 011-A/B complete; 011-C next**.
+Current methodology handoff: **Phase 011 in progress; 011-A/B/C complete; 011-D next**.

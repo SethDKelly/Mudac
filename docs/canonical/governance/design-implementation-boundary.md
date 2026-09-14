@@ -10,10 +10,12 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md
   - resource: ../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md
+  - resource: ../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md
+  - resource: ../synchronizations/competition-participation-access.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T11:10:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
 ---
 
 # Purpose
@@ -22,7 +24,9 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed the foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization; 011-B has completed the legacy-sync inventory and provisional application-action baseline.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization.
+
+011-B completed the legacy-sync inventory/action baseline. 011-C has now established the first current synchronization family for Competition lifecycle/readiness, Identity, Participation, Access and operating-context composition.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -41,7 +45,8 @@ Phase 010: COMPLETE — PASS
 Phase 011: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -54,7 +59,9 @@ canonical Project Context & Purpose
         ↓
 current canonical Concepts / mechanisms / policies / invariants
         ↓
-active Phase 011 conceptual composition work
+current Phase 011 canonical synchronization families
+        ↓
+active remaining Phase 011 design work
         ↓
 future corrected current conceptual owners as later phases warrant
 
@@ -95,16 +102,23 @@ It must preserve the intrinsic meaning and independence of each Concept. If comp
 
 # Current Phase 011 knowledge authority
 
-[011-A](../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md) owns Phase 011 scope, evidence posture and decomposition.
+[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy-sync disposition, composition-obligation inventory and provisional whole-application action classification.
 
-[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) currently owns:
+[011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) establishes current actor/lifecycle/access composition. Its durable current owner is [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
 
-- disposition of all sixteen pre-011 synchronization contracts;
-- CO-01 through CO-12 downstream ownership;
-- the post-Phase-010 composition-gap inventory;
-- the provisional application-action classification baseline.
+Current 011-C rules include:
 
-No legacy contract is current merely because it has reusable semantics. `docs/canonical/synchronizations/` remains preserved pre-011 evidence unless a later Phase 011 subgroup has explicitly established replacement/current semantics. 011-J will perform final canonical reconciliation.
+- Identity continuity ≠ Participation authority;
+- Participation capacity ≠ Access permission;
+- Access permission ≠ semantic authorship;
+- blocking source change while Ready → `Competition.returnToDraft`;
+- Active Competition does not roll back due to later readiness degradation;
+- `completeEvent` coordinates completion of active live Judge Participations but not Evaluation Obligations;
+- ordinary Judge Access closes from current context after Event Completed;
+- `resumeEvent` restores no capability automatically;
+- one protected operation uses one explicit Participation context with no cross-role capability union.
+
+Where a current Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy synchronization prose. Unreplaced legacy families remain evidence until their owning subgroup establishes current semantics. 011-J will perform final corpus reconciliation.
 
 # Phase 011 runtime/implementation prohibition
 
@@ -126,18 +140,11 @@ Conceptual uncertain-outcome, duplicate-intent, authority-establishment and conv
 
 # Application-action boundary
 
-011-B's action classifications are conceptual, not implementation or interaction design.
+Phase 011 action classifications are conceptual, not implementation or interaction design.
 
-A Concept action can be:
+A Concept action can be directly exposed, coordinated, composition-only, system-triggered, intentionally unavailable, or unresolved pending its owning subgroup.
 
-- a direct application-action candidate;
-- coordinated with other Concept actions;
-- composition-only;
-- system-triggered conceptually;
-- intentionally unavailable as a generic MUDAC action;
-- unresolved pending its owning subgroup.
-
-This classification does not specify buttons, screens, routes, APIs, command handlers or authorization middleware. Phase 013 will revalidate user-visible mapping.
+011-C has settled that family except `Competition.finalize`, which remains 011-G work. Phase 013 will revalidate user-visible mapping.
 
 # Phase 012 / Phase 013 boundaries
 
@@ -169,7 +176,7 @@ Until successful Phase 017 closure:
 Current work may:
 
 - execute Phases 011–017;
-- update canonical synchronization/composition knowledge only when Phase 011 evidence establishes current semantics;
+- update canonical synchronization/composition knowledge when Phase 011 evidence establishes current semantics;
 - update current Concept/policy/mechanism owners when methodology evidence genuinely changes their meaning;
 - inspect historical downstream material only for contamination/assumptions/counterexamples or future handoff evidence;
 - maintain the frozen bootstrap narrowly for repository safety/buildability;
@@ -183,4 +190,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**
+> **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**

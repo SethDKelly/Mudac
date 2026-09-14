@@ -10,8 +10,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current synchronization families plus preserved pre-011 evidence.
 * [`docs/011-concept-composition-synchronization/`](docs/011-concept-composition-synchronization/) — active Phase 011 composition/synchronization work.
-* [`docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md`](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) — current legacy-sync disposition and application-action baseline.
+* [`docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md`](docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) — current actor/lifecycle/access composition result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -31,7 +32,8 @@ implementation authorization: NOT YET
 011 composition/synchronization revalidation: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
-011-C: NEXT
+011-C: COMPLETE — PASS
+011-D: NEXT
 ```
 
 ## Current Concept catalog
@@ -63,9 +65,11 @@ Coverage remains derived factual sufficiency with exception disposition modeled 
 
 ## Phase 011 posture
 
-011-A established the composition start gate. 011-B classified all sixteen legacy synchronization contracts and established a provisional action-surface baseline across all eighteen Concepts. No legacy contract is accepted unchanged as current synchronization authority, and no Phase 010 Concept-boundary defect was found.
+011-A established the composition start gate. 011-B classified all sixteen legacy synchronization contracts and established a provisional action-surface baseline across all eighteen Concepts.
 
-The existing synchronization documents remain preserved pre-011 evidence while 011-C through 011-H establish current composition family by family. 011-I will close action-surface/chaining/automation/coherence questions and 011-J will reconcile the canonical synchronization corpus.
+011-C has now established the first current composition family. Current rules preserve Identity/Participation/Access separation, gate Competition lifecycle through derived readiness without making Readiness authority, complete ordinary live Judge Participations at Event Completed, prevent automatic authority resurrection on exceptional resume, and require exactly one Participation context for protected Access evaluation.
+
+The remaining legacy synchronization semantics stay preserved evidence until 011-D through 011-H establish their current families. 011-I will close action-surface/chaining/automation/coherence questions and 011-J will reconcile the canonical synchronization corpus.
 
 Phase 011 defines conceptual triggers, participating Concept actions, semantic bindings, action exposure/non-exposure, chaining, automation and composition consequences. It does not define APIs, services, queues, transactions, retries, workers, workflow engines or deployment architecture.
 
@@ -74,7 +78,7 @@ Phase 011 defines conceptual triggers, participating Concept actions, semantic b
 ```text
 010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                 IN PROGRESS — 011-C NEXT
+011 composition / synchronization revalidation                 IN PROGRESS — 011-D NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -99,4 +103,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **011-C — Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition**.
+Proceed to **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.
