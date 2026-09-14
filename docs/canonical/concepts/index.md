@@ -53,11 +53,12 @@ Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B
 
 Current composition owners live under [Canonical Synchronizations](../synchronizations/):
 
-- 011-C preserves Competition/Identity/Participation/Access intrinsic boundaries while composing lifecycle and capability behavior;
-- 011-D now preserves Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation intrinsic boundaries while composing historical presentation, actual participants and individual responsibility.
+- 011-C composes Competition/Identity/Participation/Access while preserving intrinsic ownership;
+- 011-D composes Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation while keeping intended grouping, actual participation and responsibility distinct;
+- 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity.
 
-011-D confirms that Panel membership, occurrence participation, Evaluation Obligation responsibility and later Scorecard evidence are different meanings. Ordinary obligations are established at occurrence begin, and `completeOccurrence` does not resolve them.
+011-E confirms that the current MUDAC Evaluation Basis is one exact authoritative Rubric Version; one Evaluation Obligation maps to at most one logical Scorecard; a Satisfied obligation refers to that logical Scorecard while Versioning identifies its current authoritative snapshot; and paper/electronic capture cannot create another vote or transfer Judge authorship.
 
 No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
 
-Next: **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+Next: **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.

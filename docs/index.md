@@ -25,7 +25,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 011](011-concept-composition-synchronization/).
 
-Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the full legacy/action baseline, [011-C](011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for lifecycle/actor/access composition, and [011-D](011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for current competitor-context/occurrence/responsibility composition.
+Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the full legacy/action baseline, [011-C](011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for lifecycle/actor/access composition, [011-D](011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for competitor-context/occurrence/responsibility composition, and [011-E](011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for evaluation-basis/Scorecard-authority/capture composition.
 
 # Current methodology state
 
@@ -38,7 +38,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -53,18 +54,19 @@ implementation authorization: NOT YET
 Current family owners now include:
 
 - [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md) — 011-C;
-- [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md) — 011-D.
+- [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md) — 011-D;
+- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md) — 011-E.
 
-011-D establishes that Panel membership is not occurrence participation, occurrence participation is not responsibility, initial responsibilities are established at occurrence begin, participant adjustment requires an explicit responsibility decision, and occurrence completion can coexist with Outstanding obligations.
+011-E establishes that one exact authoritative Rubric Version is the Evaluation Basis, one Evaluation Obligation maps to at most one logical Scorecard, initial Finalization coherently establishes Scorecard authority/Versioning/Provenance/obligation satisfaction, amendment preserves one vote, and paper/electronic capture preserve Judge authorship and weight.
 
-Unreplaced legacy synchronization text remains evidence only. 011-E through 011-H will establish the remaining current families, 011-I will close whole-application action/chaining/automation questions, and 011-J will reconcile the corpus.
+Unreplaced legacy synchronization text remains evidence only. 011-F through 011-H will establish the remaining current families, 011-I will close whole-application action/chaining/automation questions, and 011-J will reconcile the corpus.
 
 # Completion runway
 
 ```text
 010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization                                      IN PROGRESS — 011-E NEXT
+011 composition / synchronization                                      IN PROGRESS — 011-F NEXT
   ↓
 012 dependence / product family / subsets
   ↓
@@ -81,4 +83,4 @@ Unreplaced legacy synchronization text remains evidence only. 011-E through 011-
 
 A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-The immediate next task is **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+The immediate next task is **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.

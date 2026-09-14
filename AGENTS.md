@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/) before task-specific composition work.
-6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the full legacy/action baseline, [011-C](docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for actor/lifecycle/access composition, and [011-D](docs/011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for current competitor-context/occurrence/responsibility composition.
+6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline, [011-C](docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for actor/lifecycle/access composition, [011-D](docs/011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for competitor-context/occurrence/responsibility composition, and [011-E](docs/011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for evaluation-basis/Scorecard-authority/capture composition.
 7. Treat only unreplaced portions of the old synchronization corpus and Phase 007-C/007-D as evidence; current Phase 011 family owners under `docs/canonical/synchronizations/` outrank matching legacy prose.
 8. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
@@ -32,7 +32,8 @@ implementation authorization: NOT YET
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 ```
 
 ## Current Concept authority
@@ -73,21 +74,26 @@ Phase 011 composes independent Concepts; it does not rewrite them in terms of on
 
 - Use 011-B as the inventory/classification authority for the full legacy corpus and provisional whole-application action surface.
 - Use current files under `docs/canonical/synchronizations/` when an owning Phase 011 subgroup has established replacement semantics.
-- 011-C establishes Identity→Participation binding, contextual Access, Competition readiness/activation/completion/resume, and one-context-only capability evaluation.
-- 011-D establishes Team/Division/Alias historical presentation capture, Panel intended grouping, actual Evaluation Occurrence participation, ordinary Evaluation Obligation establishment at occurrence begin, live participant/responsibility adjustment, and occurrence completion independent from obligation completion.
+- 011-C establishes Identity→Participation binding, contextual Access and Competition lifecycle composition.
+- 011-D establishes historical competitor presentation, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment and participant/responsibility separation.
+- 011-E establishes authoritative Rubric Version/Evaluation Basis binding, one logical Scorecard per obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction and capture-channel parity.
 - Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence.
-- `EvaluationOccurrence.prepare` creates no obligation.
-- Ordinary initial obligations are established at occurrence begin for confirmed starting evaluators expected to judge.
-- Participant adjustment does not implicitly excuse/reassign/cancel responsibility; the responsibility consequence must be explicit.
+- `EvaluationOccurrence.prepare` creates no obligation; ordinary initial obligations arise at occurrence begin.
 - `completeOccurrence` does not satisfy or clear obligations.
+- Current MUDAC Evaluation Basis is one exact authoritative Rubric Version; later Rubric Version establishment does not silently rebind existing evaluation state.
+- One Evaluation Obligation maps to at most one logical Scorecard.
+- Scorecard Draft state is non-authoritative.
+- Successful initial Finalization establishes Scorecard authority, immutable Scorecard Version, meaningful Provenance and obligation satisfaction as one coherent semantic result.
+- A Satisfied obligation's EvidenceRef identifies the logical Scorecard; Versioning identifies the current authoritative Version.
+- Judge amendment creates a successor Scorecard Version without another obligation or vote.
+- Versioning and Provenance actions remain composition-only; do not expose them as generic admin controls.
+- Paper/electronic/assisted capture paths preserve the same Judge author, Evaluation Basis, logical Scorecard and weight.
+- Organizer capture actor may differ from Judge represented authority only through explicit Provenance and cannot invent judgment or Finalization intent.
+- Post-authority transcription mismatch, Version invalidation, structural correction and successor work belong to 011-F.
 - Identity continuity is not Participation authority; Participation capacity is not Access permission; Access permission is not semantic authorship.
-- `completeEvent` may coexist with Outstanding Evaluation Obligations; do not re-collapse event completion into work completion.
-- `resumeEvent` restores no Participation, Panel, occurrence/obligation state or Access automatically.
-- Do not mechanically rename `Judging Encounter` to `Evaluation Occurrence`; responsibility belongs to Evaluation Obligation.
-- Do not mechanically rename `Official Outcome Revision` to `Outcome Declaration`; Competition Finalization and declaration authority are independent actions that may compose.
+- Do not mechanically rename `Judging Encounter` to `Evaluation Occurrence` or `Official Outcome Revision` to `Outcome Declaration`.
 - Keep factual Coverage distinct from governed exception disposition.
 - Preserve abstract peer parameters introduced by Phase 010; application bindings belong in composition.
-- Do not expose generic Versioning, Provenance, Access-check, obligation-satisfaction or affected-state actions merely because the Concepts define them.
 - Test over-synchronization and under-synchronization.
 - Trace material conceptual chaining/automation and check authority, preconditions, invariants and cycle risk.
 - Do not infer inclusion dependence from synchronization; Phase 012 owns subsets/product-family dependence.
@@ -101,8 +107,8 @@ Phase 011 composes independent Concepts; it does not rewrite them in terms of on
 011-B legacy sync inventory / obligation map / action baseline        COMPLETE — PASS
 011-C Competition lifecycle / Identity / Participation / Access       COMPLETE — PASS
 011-D Team/Division/Alias/Panel / Occurrence / Obligation             COMPLETE — PASS
-011-E evaluation basis / Scorecard / Versioning / Provenance / paper  NEXT
-011-F temporal correction / invalidation / successor / affected       PLANNED
+011-E evaluation basis / Scorecard / Versioning / Provenance / paper  COMPLETE — PASS
+011-F temporal correction / invalidation / successor / affected       NEXT
 011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    PLANNED
 011-H Export / Publication / currency / release                       PLANNED
 011-I action surface / chaining / automation / over-under / synergy   PLANNED
@@ -130,4 +136,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**
+> **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**

@@ -1,6 +1,6 @@
 # Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation
 
-Status: **In Progress — 011-A/B/C/D complete; 011-E next**
+Status: **In Progress — 011-A/B/C/D/E complete; 011-F next**
 
 ## Role in the completion runway
 
@@ -22,7 +22,9 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 011-C established current Competition lifecycle / Identity / Participation / Access composition in [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md).
 
-011-D has now established current competitor-context / Panel / Evaluation Occurrence / Evaluation Obligation composition in [Competitor Context, Evaluation Occurrence & Obligation Composition](../canonical/synchronizations/evaluation-occurrence-obligation.md).
+011-D established current competitor-context / Panel / Evaluation Occurrence / Evaluation Obligation composition in [Competitor Context, Evaluation Occurrence & Obligation Composition](../canonical/synchronizations/evaluation-occurrence-obligation.md).
+
+011-E has now established current evaluation-basis / Scorecard-authority / Versioning / Provenance / paper-capture composition in [Evaluation Basis, Scorecard Authority & Capture Composition](../canonical/synchronizations/evaluation-basis-scorecard-authority.md).
 
 No Phase 010 Concept boundary has required reopening.
 
@@ -34,28 +36,30 @@ No Phase 010 Concept boundary has required reopening.
 | 011-B | [Legacy Synchronization Inventory, Composition-Obligation Map & Application-Action Baseline](011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) | **Complete — PASS** |
 | 011-C | [Competition Lifecycle, Identity, Participation, Access & Operating-Context Composition](011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) | **Complete — PASS** |
 | 011-D | [Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment](011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) | **Complete — PASS** |
-| 011-E | **Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition** | **Next** |
-| 011-F | Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation | Planned |
+| 011-E | [Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition](011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) | **Complete — PASS** |
+| 011-F | **Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation** | **Next** |
 | 011-G | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition | Planned |
 | 011-H | Export, Publication, Representation Currency & Release Composition | Planned |
 | 011-I | Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure | Planned |
 | 011-J | Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff | Planned |
 
-## 011-D current composition result
+## 011-E current composition result
 
-011-D establishes that:
+011-E establishes that:
 
-- Team/Division/Alias current state supplies competitor presentation context, while Evaluation Occurrence preserves the historical Judge-facing snapshot;
-- Panel is intended reusable grouping only and never equals actual occurrence participation or individual responsibility;
-- `EvaluationOccurrence.prepare` creates no Evaluation Obligation;
-- ordinary initial Evaluation Obligations are established at `EvaluationOccurrence.begin`, one per confirmed starting evaluator expected to judge;
-- absent nominal Panel members therefore do not create phantom missing work;
-- participant adjustment and responsibility disposition remain separate;
-- live departure may leave responsibility Outstanding, recusal may Excuse it, substitution may use `reassignWithSuccessor`, and a legitimate late-added evaluator may receive a new obligation;
-- Panel membership change never rewrites an already-begun occurrence;
-- `completeOccurrence` ends the bounded occurrence even while Evaluation Obligations remain Outstanding;
-- Prepared cancellation remains distinct from later invalidation/replacement, which belongs to 011-F;
-- no Scorecard is created or satisfied by 011-D.
+- current MUDAC Evaluation Basis is one exact authoritative Rubric Version;
+- `Rubric.prepareForUse` alone is not authoritative Version establishment;
+- later Rubric Version establishment never silently rebinds an existing occurrence, obligation or Scorecard;
+- one Outstanding Evaluation Obligation resolves at most one logical Scorecard;
+- Draft Scorecard work remains non-authoritative;
+- initial Finalization coherently establishes Scorecard authority, one immutable initial Scorecard Version, meaningful Provenance and Evaluation Obligation satisfaction;
+- a Satisfied obligation's `EvidenceRef` identifies the logical Scorecard, while Versioning identifies the current authoritative Scorecard snapshot;
+- Judge amendment produces a successor Scorecard Version without another obligation or evaluation weight;
+- Versioning and Provenance actions remain composition-only rather than generic direct MUDAC admin actions;
+- paper/electronic/assisted capture paths converge on the same logical Scorecard;
+- Organizer capture may differ from semantic Judge authorship only through explicit Provenance;
+- ambiguous paper content or Judge commit intent never becomes authoritative by Organizer inference;
+- post-authority transcription mismatch is correction work for 011-F.
 
 ## Dependency order
 
@@ -68,9 +72,9 @@ No Phase 010 Concept boundary has required reopening.
   ↓
 011-D competitor context / Panel / Occurrence / Obligation         COMPLETE — PASS
   ↓
-011-E evaluation basis / Scorecard / Versioning / Provenance / paper   NEXT
+011-E evaluation basis / Scorecard / Versioning / Provenance / paper   COMPLETE — PASS
   ↓
-011-F temporal correction / invalidation / successor / affected
+011-F temporal correction / invalidation / successor / affected        NEXT
   ↓
 011-G derived outcomes / Award / Finalization / Outcome Declaration
   ↓
@@ -89,9 +93,9 @@ It may **not** define APIs, services, queues, event choreography, transactions, 
 
 ## Phase 012 / Phase 013 boundary
 
-Phase 011 answers how included Concepts interact. Phase 012 will answer which Concepts must, may, conditionally or alternatively be included together in coherent application/product variants. In particular, whether Panel is required in every judging variant remains Phase 012 work.
+Phase 011 answers how included Concepts interact. Phase 012 will answer which Concepts must, may, conditionally or alternatively be included together in coherent application/product variants. In particular, whether Panel, paper continuity or Versioning are required in every coherent product variant remains Phase 012 work.
 
-Phase 013 will revalidate user-visible mapping/interaction. An action-surface classification is not a UI-control design.
+Phase 013 will revalidate user-visible mapping/interaction, including physical/electronic representation of Judge Finalization intent and paper verification affordances. An action-surface classification is not a UI-control design.
 
 ## Current execution posture
 
@@ -104,7 +108,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -115,6 +120,6 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
 
-011-E starts from an already-established Evaluation Occurrence and Outstanding Evaluation Obligation. It owns the exact authoritative evaluation basis, one logical Scorecard identity/work path, finalization/amendment authority, obligation satisfaction, Versioning/Provenance participation and paper-capture convergence.
+011-F starts from an explicit authority baseline: one logical Scorecard satisfies one Evaluation Obligation, one exact Rubric Version is its basis, Versioning preserves current/historical authoritative snapshots, Provenance explains actor/represented-authority/source, and capture channel never changes authorship or weight.

@@ -40,7 +40,8 @@ implementation authorization: NOT YET
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 ```
 
 # Phase 011 current authority
@@ -50,7 +51,8 @@ implementation authorization: NOT YET
 Current family-level authority now includes:
 
 - [011-C](../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) → [Competition Lifecycle, Participation & Contextual Access Composition](synchronizations/competition-participation-access.md);
-- [011-D](../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) → [Competitor Context, Evaluation Occurrence & Obligation Composition](synchronizations/evaluation-occurrence-obligation.md).
+- [011-D](../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) → [Competitor Context, Evaluation Occurrence & Obligation Composition](synchronizations/evaluation-occurrence-obligation.md);
+- [011-E](../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) → [Evaluation Basis, Scorecard Authority & Capture Composition](synchronizations/evaluation-basis-scorecard-authority.md).
 
 Current Concept authority remains the Phase 010 eighteen-Concept catalog:
 
@@ -58,9 +60,9 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 `Judging Encounter` and `Official Outcome Revision` remain only as deprecated historical adapters.
 
-The old combined Encounter semantics are no longer current: Panel membership, actual occurrence participation, individual responsibility and Scorecard evidence are distinct. Initial obligations are established at occurrence begin, and occurrence completion does not wait for responsibility completion.
+The old combined Encounter/evaluation-authority semantics are no longer current: Panel membership, occurrence participation, responsibility, logical Scorecard identity, current authoritative Version and capture provenance are distinct. One exact authoritative Rubric Version is the current MUDAC Evaluation Basis; a Satisfied obligation identifies one logical Scorecard, while Versioning separately identifies that Scorecard's current authoritative snapshot.
 
-Unreplaced legacy synchronization bodies remain preserved evidence. 011-E through 011-H will establish the remaining current families; 011-I will close action-surface/chaining/automation/coherence questions; 011-J will reconcile canonical synchronization ownership.
+Unreplaced legacy synchronization bodies remain preserved evidence. 011-F through 011-H will establish the remaining current families; 011-I will close action-surface/chaining/automation/coherence questions; 011-J will reconcile canonical synchronization ownership.
 
 # Retrieval rule during reopened design
 
@@ -79,7 +81,7 @@ For Phases 011–017:
 ```text
 010 project/purpose / discovery / specification / modularity   COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                IN PROGRESS — 011-E NEXT
+011 composition / synchronization revalidation                IN PROGRESS — 011-F NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -94,4 +96,4 @@ For Phases 011–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+The immediate next work is **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.

@@ -12,12 +12,14 @@ sources:
   - resource: ../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md
   - resource: ../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md
   - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
+  - resource: ../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md
   - resource: ../synchronizations/competition-participation-access.md
   - resource: ../synchronizations/evaluation-occurrence-obligation.md
+  - resource: ../synchronizations/evaluation-basis-scorecard-authority.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T11:58:00-05:00 }
 ---
 
 # Purpose
@@ -28,7 +30,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization.
 
-011-B completed the legacy-sync inventory/action baseline. 011-C established current lifecycle/actor/access composition. 011-D has now established current competitor-context/Panel/Evaluation Occurrence/Evaluation Obligation composition.
+011-B completed the legacy-sync inventory/action baseline. 011-C established current lifecycle/actor/access composition. 011-D established current competitor-context/Panel/Evaluation Occurrence/Evaluation Obligation composition. 011-E has now established evaluation-basis/Scorecard-authority/Versioning/Provenance/paper-capture composition.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -49,7 +51,8 @@ Phase 011: IN PROGRESS
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -110,22 +113,28 @@ It must preserve the intrinsic meaning and independence of each Concept. If comp
 Current durable family owners are:
 
 - [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md), established by 011-C;
-- [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md), established by 011-D.
+- [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md), established by 011-D;
+- [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md), established by 011-E.
 
 Current 011-C rules include Identity/Participation/Access separation, readiness-gated Competition transitions, event completion independent from evaluation responsibility, no automatic authority resurrection on resume, and one explicit Participation context per protected operation.
 
-Current 011-D rules include:
+Current 011-D rules include current Team/Division/Alias truth distinct from historical presentation, Panel intended grouping distinct from occurrence participation, obligation establishment at occurrence begin, explicit responsibility disposition on participant adjustment, and occurrence completion independent from responsibility completion.
 
-- current Team/Division/Alias truth is distinct from historical presented occurrence context;
-- Panel membership is intended grouping, not actual occurrence participation;
-- `EvaluationOccurrence.prepare` creates no Evaluation Obligation;
-- ordinary initial obligations are established at occurrence begin for the confirmed starting evaluator set;
-- participant adjustment requires an explicit responsibility consequence rather than silently changing obligation state;
-- Panel changes do not rewrite an already-begun occurrence;
-- `completeOccurrence` ends the bounded occurrence while obligations may remain Outstanding;
-- no Scorecard/evidence authority is created by occurrence or obligation establishment alone.
+Current 011-E rules include:
 
-Where a current Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy synchronization prose. Unreplaced legacy families remain evidence until their owning subgroup establishes current semantics. 011-J will perform final corpus reconciliation.
+- one exact authoritative Rubric Version is the current MUDAC Evaluation Basis;
+- later Rubric Version establishment never silently rebinds existing occurrences, obligations or Scorecards;
+- one Evaluation Obligation maps to at most one logical Scorecard;
+- Scorecard Draft state is non-authoritative;
+- successful initial Finalization coherently establishes Scorecard authority, one immutable Scorecard Version, meaningful Provenance and Evaluation Obligation satisfaction;
+- the Satisfied obligation refers to the logical Scorecard while Versioning identifies its current authoritative Version;
+- Judge amendment creates a successor Version without another vote/responsibility;
+- Versioning/Provenance actions are composition-only support actions;
+- paper/electronic/assisted capture preserve the same Judge author, basis and logical Scorecard;
+- Organizer capture cannot infer Judge judgment or Finalization intent;
+- post-authority transcription mismatch/invalidation/successor work is deferred to 011-F.
+
+Where a current Phase 011 canonical synchronization owner exists, it outranks corresponding legacy synchronization prose. Unreplaced legacy families remain evidence until their owning subgroup establishes current semantics. 011-J will perform final corpus reconciliation.
 
 # Phase 011 runtime/implementation prohibition
 
@@ -151,17 +160,17 @@ Phase 011 action classifications are conceptual, not implementation or interacti
 
 A Concept action can be directly exposed, coordinated, composition-only, system-triggered, intentionally unavailable, or unresolved pending its owning subgroup.
 
-011-C settled its family except `Competition.finalize`, which remains 011-G work. 011-D settles current competitor/grouping/occurrence/responsibility actions while deferring Scorecard/evidence actions to 011-E and correction/invalidation/successor-re-evaluation actions to 011-F.
+011-C settled its family except `Competition.finalize`, which remains 011-G. 011-D settled competitor/grouping/occurrence/responsibility actions while deferring Scorecard/evidence authority to 011-E. 011-E now settles Rubric-basis establishment, Scorecard start/finalize/amendment, obligation satisfaction, Versioning/Provenance participation and paper capture while deferring invalidation/correction/successor work to 011-F.
 
-Phase 013 will revalidate user-visible mapping.
+Phase 013 will revalidate user-visible mapping, including physical/electronic representation of Judge Finalization intent.
 
 # Phase 012 / Phase 013 boundaries
 
 Phase 011 answers how included Concepts interact. Phase 012 answers which otherwise independent Concepts must, may, conditionally or alternatively be included together in coherent application/product variants.
 
-A synchronization edge is not automatically an inclusion-dependence edge. In particular, 011-D does not decide whether every coherent judging variant requires Panel.
+A synchronization edge is not automatically an inclusion-dependence edge. In particular, 011-D/E do not decide whether every coherent judging variant requires Panel, paper continuity, Versioning, or the same capture options.
 
-Phase 013 owns user-visible representation/mapping questions such as role/context selection, occurrence/obligation presentation and live substitution affordances.
+Phase 013 owns user-visible representation/mapping questions such as role/context selection, occurrence/obligation presentation, live substitution affordances and paper/electronic Finalization representation.
 
 # Current project-purpose constraints
 
@@ -199,4 +208,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**
+> **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**

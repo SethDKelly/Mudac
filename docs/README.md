@@ -12,7 +12,7 @@ Current foundational truth is:
 - [Current eighteen-Concept catalog](canonical/concepts/);
 - [Current Synchronizations](canonical/synchronizations/);
 - [Active Phase 011](011-concept-composition-synchronization/) for composition/synchronization revalidation;
-- [011-D](011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for the current competitor-context/occurrence/responsibility composition result.
+- [011-E](011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for the current evaluation-basis/Scorecard-authority/capture result.
 
 ## Status
 
@@ -26,7 +26,7 @@ Current foundational truth is:
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C/D complete; 011-E next**
+* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C/D/E complete; 011-F next**
 
 ## Current posture
 
@@ -45,7 +45,8 @@ implementation authorization: NOT YET
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 ```
 
 ## Phase 011 composition posture
@@ -58,7 +59,9 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 011-C established current canonical composition for Competition lifecycle/readiness, Identity continuity, Competition Participation, contextual Access, event completion/resume and operating-context isolation.
 
-011-D now establishes current canonical composition for competitor presentation context, intended Panel grouping, actual Evaluation Occurrence participation, ordinary Evaluation Obligation establishment, participant/responsibility adjustment and occurrence completion independent from obligation completion.
+011-D established current canonical composition for competitor presentation context, intended Panel grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment, participant/responsibility adjustment and occurrence completion independent from obligation completion.
+
+011-E now establishes current canonical composition for authoritative Rubric Version/Evaluation Basis, one logical Scorecard per responsibility, Finalization/amendment authority, Versioning/Provenance, obligation satisfaction and paper/electronic capture parity.
 
 Unreplaced portions of the old synchronization corpus remain evidence only until their owning semantic subgroups establish current rules.
 
@@ -67,7 +70,7 @@ Unreplaced portions of the old synchronization corpus remain evidence only until
 ```text
 010 foundational completion                         COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation      IN PROGRESS — 011-E NEXT
+011 composition / synchronization revalidation      IN PROGRESS — 011-F NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -86,4 +89,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.

@@ -34,7 +34,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
-011-E: NEXT
+011-E: COMPLETE — PASS
+011-F: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -51,9 +52,10 @@ implementation authorization: NOT YET
 Current family-level synchronization authority includes:
 
 - [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) / [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md);
-- [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md).
+- [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md);
+- [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) / [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md).
 
-011-D establishes that Panel intended membership, actual Evaluation Occurrence participation, Evaluation Obligation responsibility and later Scorecard evidence are independent meanings. Ordinary initial obligations arise at occurrence begin, and occurrence completion does not resolve them.
+011-E establishes that one exact authoritative Rubric Version is the Evaluation Basis, one Evaluation Obligation maps to at most one logical Scorecard, successful initial Finalization coherently establishes Scorecard authority/Versioning/Provenance/obligation satisfaction, amendment preserves one evaluation weight, and paper/electronic capture cannot transfer Judge authorship.
 
 Where a Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy contract text. Unreplaced legacy synchronization semantics remain pre-011 evidence.
 
@@ -61,4 +63,4 @@ Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction quest
 
 # Current handoff
 
-Proceed to **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
+Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
