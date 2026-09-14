@@ -11,7 +11,9 @@ sources:
   - resource: ../../011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md
   - resource: ../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md
   - resource: ../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md
+  - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
   - resource: ../synchronizations/competition-participation-access.md
+  - resource: ../synchronizations/evaluation-occurrence-obligation.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
@@ -26,7 +28,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization.
 
-011-B completed the legacy-sync inventory/action baseline. 011-C has now established the first current synchronization family for Competition lifecycle/readiness, Identity, Participation, Access and operating-context composition.
+011-B completed the legacy-sync inventory/action baseline. 011-C established current lifecycle/actor/access composition. 011-D has now established current competitor-context/Panel/Evaluation Occurrence/Evaluation Obligation composition.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -46,7 +48,8 @@ Phase 011: IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
-011-D: NEXT
+011-D: COMPLETE — PASS
+011-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -104,19 +107,23 @@ It must preserve the intrinsic meaning and independence of each Concept. If comp
 
 [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy-sync disposition, composition-obligation inventory and provisional whole-application action classification.
 
-[011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) establishes current actor/lifecycle/access composition. Its durable current owner is [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
+Current durable family owners are:
 
-Current 011-C rules include:
+- [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md), established by 011-C;
+- [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md), established by 011-D.
 
-- Identity continuity ≠ Participation authority;
-- Participation capacity ≠ Access permission;
-- Access permission ≠ semantic authorship;
-- blocking source change while Ready → `Competition.returnToDraft`;
-- Active Competition does not roll back due to later readiness degradation;
-- `completeEvent` coordinates completion of active live Judge Participations but not Evaluation Obligations;
-- ordinary Judge Access closes from current context after Event Completed;
-- `resumeEvent` restores no capability automatically;
-- one protected operation uses one explicit Participation context with no cross-role capability union.
+Current 011-C rules include Identity/Participation/Access separation, readiness-gated Competition transitions, event completion independent from evaluation responsibility, no automatic authority resurrection on resume, and one explicit Participation context per protected operation.
+
+Current 011-D rules include:
+
+- current Team/Division/Alias truth is distinct from historical presented occurrence context;
+- Panel membership is intended grouping, not actual occurrence participation;
+- `EvaluationOccurrence.prepare` creates no Evaluation Obligation;
+- ordinary initial obligations are established at occurrence begin for the confirmed starting evaluator set;
+- participant adjustment requires an explicit responsibility consequence rather than silently changing obligation state;
+- Panel changes do not rewrite an already-begun occurrence;
+- `completeOccurrence` ends the bounded occurrence while obligations may remain Outstanding;
+- no Scorecard/evidence authority is created by occurrence or obligation establishment alone.
 
 Where a current Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy synchronization prose. Unreplaced legacy families remain evidence until their owning subgroup establishes current semantics. 011-J will perform final corpus reconciliation.
 
@@ -144,15 +151,17 @@ Phase 011 action classifications are conceptual, not implementation or interacti
 
 A Concept action can be directly exposed, coordinated, composition-only, system-triggered, intentionally unavailable, or unresolved pending its owning subgroup.
 
-011-C has settled that family except `Competition.finalize`, which remains 011-G work. Phase 013 will revalidate user-visible mapping.
+011-C settled its family except `Competition.finalize`, which remains 011-G work. 011-D settles current competitor/grouping/occurrence/responsibility actions while deferring Scorecard/evidence actions to 011-E and correction/invalidation/successor-re-evaluation actions to 011-F.
+
+Phase 013 will revalidate user-visible mapping.
 
 # Phase 012 / Phase 013 boundaries
 
 Phase 011 answers how included Concepts interact. Phase 012 answers which otherwise independent Concepts must, may, conditionally or alternatively be included together in coherent application/product variants.
 
-A synchronization edge is not automatically an inclusion-dependence edge.
+A synchronization edge is not automatically an inclusion-dependence edge. In particular, 011-D does not decide whether every coherent judging variant requires Panel.
 
-Phase 013 owns user-visible representation/mapping questions such as how role/context selection is presented when that selection does not itself create domain authority.
+Phase 013 owns user-visible representation/mapping questions such as role/context selection, occurrence/obligation presentation and live substitution affordances.
 
 # Current project-purpose constraints
 
@@ -190,4 +199,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**
+> **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**

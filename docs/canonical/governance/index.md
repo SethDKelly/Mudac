@@ -23,7 +23,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 # Current methodology posture
 
-Phase 009 reopened and realigned Jackson Concept Design. Phase 010 completed foundational project/purpose/discovery/specification/modularity work. Phase 011 is active for concept composition/synchronization revalidation.
+Phase 009 reopened and realigned Jackson Concept Design. Phase 010 completed foundational project/purpose/discovery/specification/modularity work. Phase 011 is active for Concept composition/synchronization revalidation.
 
 ```text
 Jackson Concept Design: REOPENED / IN PROGRESS
@@ -33,7 +33,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-A: COMPLETE — READY
 011-B: COMPLETE — PASS
 011-C: COMPLETE — PASS
-011-D: NEXT
+011-D: COMPLETE — PASS
+011-E: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -47,7 +48,12 @@ implementation authorization: NOT YET
 
 [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) remains current inventory/classification authority for the complete legacy synchronization corpus and provisional whole-application action surface.
 
-[011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) has established current Competition/Identity/Participation/Access composition semantics. Their durable owner is [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
+Current family-level synchronization authority includes:
+
+- [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) / [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md);
+- [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md).
+
+011-D establishes that Panel intended membership, actual Evaluation Occurrence participation, Evaluation Obligation responsibility and later Scorecard evidence are independent meanings. Ordinary initial obligations arise at occurrence begin, and occurrence completion does not resolve them.
 
 Where a Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy contract text. Unreplaced legacy synchronization semantics remain pre-011 evidence.
 
@@ -55,4 +61,4 @@ Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction quest
 
 # Current handoff
 
-Proceed to **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.
+Proceed to **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.

@@ -22,6 +22,8 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) establishes the overall composition inventory and [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) now establishes the current readiness/lifecycle rule: Readiness may gate `Competition.markReady`/`activate` and a new blocker while Ready induces `returnToDraft`, but Readiness never owns Competition lifecycle authority and an Active Competition never rolls back merely because readiness later degrades.
+Phase 011 is active. [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) owns current readiness/lifecycle composition. [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) now owns the application composition that uses Panel membership as an intended grouping input while preserving actual Evaluation Occurrence participation and Evaluation Obligation responsibility as separate meanings.
 
-The next methodology task is **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.
+[Panel Membership & Composition](panel-membership-composition.md) therefore no longer carries an unresolved “future Phase 011 synchronization” placeholder; it routes to the current [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md) owner.
+
+The next methodology task is **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.

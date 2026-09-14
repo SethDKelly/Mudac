@@ -49,8 +49,15 @@ In particular:
 
 ## Active methodology work
 
-Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy synchronization classification/action baseline. [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) has established current composition for Competition, Identity, Participation and Access without changing their intrinsic boundaries.
+Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy synchronization classification/action baseline.
 
-Current composition owners live under [Canonical Synchronizations](../synchronizations/). 011-C found no Concept-boundary defect requiring Phase 010 reopening. Phase 012 will separately analyze product-family inclusion dependence.
+Current composition owners live under [Canonical Synchronizations](../synchronizations/):
 
-Next: **011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment**.
+- 011-C preserves Competition/Identity/Participation/Access intrinsic boundaries while composing lifecycle and capability behavior;
+- 011-D now preserves Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation intrinsic boundaries while composing historical presentation, actual participants and individual responsibility.
+
+011-D confirms that Panel membership, occurrence participation, Evaluation Obligation responsibility and later Scorecard evidence are different meanings. Ordinary obligations are established at occurrence begin, and `completeOccurrence` does not resolve them.
+
+No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
+
+Next: **011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition**.
