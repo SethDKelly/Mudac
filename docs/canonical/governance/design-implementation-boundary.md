@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with active Phase 011 conceptual composition/synchronization work, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate through Phases 011–017 until successful methodology closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 011 whole-application composition closed through 011-I, final canonical reconciliation still active, suspended downstream architecture/implementation authority, frozen bootstrap, and design-only gate through Phases 011–017 until successful methodology closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, composition, reentry]
 sources:
@@ -16,16 +16,10 @@ sources:
   - resource: ../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md
   - resource: ../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md
   - resource: ../../011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md
-  - resource: ../synchronizations/competition-participation-access.md
-  - resource: ../synchronizations/evaluation-occurrence-obligation.md
-  - resource: ../synchronizations/evaluation-basis-scorecard-authority.md
-  - resource: ../synchronizations/temporal-truth-correction.md
-  - resource: ../synchronizations/evaluation-outcome-finalization-declaration.md
-  - resource: ../synchronizations/external-representation-publication-release.md
-  - resource: ../project/mandate-context.md
-  - resource: ../project/purpose-needs-success-tensions.md
+  - resource: ../../011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md
+  - resource: ../synchronizations/application-action-surface-composition.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T16:58:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T17:35:00-05:00 }
 ---
 
 # Purpose
@@ -34,9 +28,9 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization.
+Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 remains active for representation-independent Concept composition and synchronization.
 
-011-C through 011-H have established current family-level lifecycle/access, occurrence/responsibility, evaluation-basis/Scorecard/capture, temporal correction/successor, outcome/Award/finalization/declaration, and external representation/release composition. 011-I is next for whole-application action/chaining/automation/over-under/authority/synergy closure.
+011-C through 011-H establish all current family-level composition. 011-I completes the whole-application action-surface/chaining/automation/authority/synergy audit with a PASS. 011-J is next for canonical reconciliation and final Phase 011 exit/handoff.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -61,7 +55,8 @@ Phase 011: IN PROGRESS
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
 011-H: COMPLETE — PASS
-011-I: NEXT
+011-I: COMPLETE — PASS
+011-J: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -74,11 +69,13 @@ canonical Project Context & Purpose
         ↓
 current canonical Concepts / mechanisms / policies / invariants
         ↓
-current Phase 011 canonical synchronization families
+current Phase 011 family synchronization owners
         ↓
-active remaining Phase 011 whole-composition closure
+current whole-application action/chaining/automation owner (011-I)
         ↓
-future corrected current conceptual owners as later phases warrant
+011-J canonical reconciliation / Phase 011 exit
+        ↓
+future Phase 012 dependence/subset work
 
 historical architecture / implementation
         = evidence or contamination probe only
@@ -93,7 +90,7 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 The previous Judging Encounter and Official Outcome Revision paths are deprecated historical adapters, not current semantic owners.
 
-011-C through 011-H found no Concept-boundary defect requiring Phase 010 reopening. 011-H made one bounded Export action/state clarification: `validateRepresentation` owns non-destructive revalidation of `Affected` Export state. Publication's existing purpose/actions remain sufficient.
+011-C through 011-I found no Concept-boundary defect requiring Phase 010 reopening.
 
 # Phase 011 authority boundary
 
@@ -105,33 +102,25 @@ It must preserve intrinsic Concept meaning and independence.
 
 # Current Phase 011 knowledge authority
 
-[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy-sync disposition, composition-obligation inventory and provisional whole-application action classification.
+[011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) remains the full legacy-sync disposition/inventory and provisional action-classification baseline.
 
-Current durable family owners are:
+Current family synchronization owners are 011-C through 011-H under [Canonical Synchronizations](../synchronizations/).
 
-- [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md), established by 011-C;
-- [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md), established by 011-D;
-- [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md), established by 011-E;
-- [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md), established/revalidated by 011-F;
-- [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md), established by 011-G;
-- [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md), established by 011-H.
+Final whole-application action/chaining/automation authority is [Application Action Surface, Chaining & Automation Composition](../synchronizations/application-action-surface-composition.md), established by 011-I.
 
-Current 011-H representation/release rules include:
+011-I establishes these design-only constraints:
 
-- Export binds exact SourceBasis + representation purpose + AudienceProfile;
-- Export never promotes source authority;
-- actor Access does not authorize all actor-visible information for an Export's audience;
-- Export `Current/Affected/Stale/Superseded/Retired` currency is distinct from Publication `Published/Withdrawn/Superseded` distribution state;
-- `Affected` means review required, while `Stale` means known current-use mismatch;
-- revalidation cannot rewrite historical SourceBasis;
-- representation of newer/corrected source requires a new Export;
-- Export generation does not publish;
-- Publication binds one exact Representation and source correction never retargets it;
-- withdrawal/successor release is explicit and preserves historical release;
-- official != public != delivered;
-- transport/delivery outcomes do not establish Publication authority.
+- every current Concept action family has deliberate `D` / `C` / `P` / `S` / `X` classification; no `U` remains;
+- no global Workflow/Coordinator/Process or equivalent hidden authority Concept is needed;
+- `Export.request` is direct while `Export.generate` is coordinated; Publication release/withdrawal/succession remain controlled coordinated actions;
+- generic Access/Versioning/Provenance administration is unavailable as unrestricted direct behavior;
+- system/composition automation may propagate knowledge/currentness, apply guards, or perform consequences already authorized by an explicit initiating action;
+- automation may not manufacture Judge judgment, obligation satisfaction without evidence, successor evaluation work, Award authority, Competition Finalization, Outcome Declaration authority, Export generation, or Publication authority;
+- the semantic authority graph is acyclic;
+- over- and under-synchronization audits pass;
+- nine bounded application-level synergies are retained.
 
-With 011-H, all legacy synchronization semantic families have current Phase 011 owners. 011-I now closes whole-application exposure, chaining, automation, authority/cycle risk and synergy; 011-J performs final corpus reconciliation.
+011-J now owns canonical ownership/history/retrieval reconciliation and the final Phase 011 exit review. No semantic redesign is presently queued.
 
 # Phase 011 runtime/implementation prohibition
 
@@ -155,20 +144,25 @@ Conceptual uncertain-outcome, duplicate-intent, authority-establishment, invalid
 
 Phase 011 action classifications are conceptual, not implementation or interaction design.
 
-011-H settles the representation/release family provisionally for 011-I closure:
+The final whole-application governing rule is:
 
-- Export `request` is a direct request candidate;
-- `validateRepresentation` participates in Generate Export and owns Affected revalidation;
-- `generate` is coordinated through Generate Export;
-- `markAffected` and `markStale` are system/composition reactions after verified dependency/current-use consequences;
-- `supersedeBy` is composition-only within successor Export establishment;
-- `retireFromOrdinaryUse` is a controlled administrative action;
-- Publication `publish` is explicit release;
-- `withdraw` is controlled high-consequence release authority;
-- `supersedeWith` is coordinated explicit successor release;
-- declaration → automatic publication, source correction → automatic withdraw/republish, and transport success → Publication state are intentionally unavailable.
+> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-011-I now owns the final whole-application action classification and chain/cycle/automation/synergy audit.
+Consequently:
+
+- Access `check` is a composition-only/system guard;
+- Versioning/Provenance generic actions remain composition-only and unavailable as generic administration;
+- derived Readiness/Coverage/Aggregate/Rank behavior has no generic write surface;
+- responsibility establishment/satisfaction is not a generic manual toggle;
+- Rank never confers or moves Award automatically;
+- corrected calculation never creates successor official authority automatically;
+- Outcome Declaration never automatically generates Export or Publication;
+- Export generation never publishes;
+- Publication never follows from transport success;
+- invalidation never creates successor work automatically;
+- resume never restores prior peer capability automatically.
+
+Phase 013 will later map these conceptual actions into user-visible interaction.
 
 # Phase 012 / Phase 013 boundaries
 
@@ -203,4 +197,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**
+> **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**
