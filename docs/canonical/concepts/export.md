@@ -84,12 +84,7 @@ Source-currentness transitions do not themselves publish, withdraw, or retarget 
 <a id="export-003"></a>
 ## EXPORT-003 — Historical basis is stable
 
-Source correction never silently rewrites the historical SourceBasis of an already meaningful Export. Replacement uses a new Export and explicit supersession relation where appropriate.
-
-<a id="export-004"></a>
-## EXPORT-004 — Affected revalidation is non-destructive
-
-An Affected Export may return to Current only by validating that the unchanged exact SourceBasis and representation contract remain applicable for the intended current use. Revalidation never changes the historical SourceBasis or represented content into newer source truth.
+Source correction never silently rewrites the historical SourceBasis of an already meaningful Export. Replacement uses a new Export and explicit supersession relation where appropriate. An Affected Export may return to Current only by validating that the unchanged exact SourceBasis and representation contract remain applicable for the intended current use; revalidation never changes historical SourceBasis or represented content into newer source truth.
 
 # MUDAC composition binding
 

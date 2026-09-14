@@ -47,16 +47,9 @@ Publication does not decide whether supplied information is semantically officia
 
 Publication cannot promote supplied information into greater semantic authority merely by labeling or distributing it.
 
-Source correction, representation regeneration, or Export-currentness change never silently retargets an existing Publication.
+Source correction, representation regeneration, or Export-currentness change never silently retargets an existing Publication. Withdrawal or successor release changes current MUDAC distribution authority but does not erase that the predecessor representation was released or prove that every previously distributed physical/digital copy disappeared. A successor Publication binds its own exact successor Representation; the predecessor is never retargeted.
 
 Possession of a URL, QR code, file, or transport reference is not itself Publication authority or Access permission.
-
-<a id="pub-002"></a>
-## PUB-002 — Withdrawal and supersession preserve release history
-
-Withdrawal or successor release changes current MUDAC distribution authority but does not erase that the predecessor representation was released or prove that every previously distributed physical/digital copy disappeared.
-
-A successor Publication binds its own exact successor Representation. The predecessor is never retargeted.
 
 # MUDAC composition binding
 
