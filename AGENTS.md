@@ -9,9 +9,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/) before task-specific composition work.
-6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline, [011-C](docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for actor/lifecycle/access composition, [011-D](docs/011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for competitor-context/occurrence/responsibility composition, and [011-E](docs/011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for evaluation-basis/Scorecard-authority/capture composition.
-7. Treat only unreplaced portions of the old synchronization corpus and Phase 007-C/007-D as evidence; current Phase 011 family owners under `docs/canonical/synchronizations/` outrank matching legacy prose.
-8. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
+6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline; then use the current family owners from 011-C through 011-F for the semantic family being changed.
+7. Use [011-F](docs/011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](docs/canonical/synchronizations/temporal-truth-correction.md) as current correction/invalidation/successor authority.
+8. Treat only unreplaced portions of the old synchronization corpus and Phase 007-C/007-D as evidence; current Phase 011 family owners outrank matching legacy prose.
+9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
 
@@ -33,12 +34,13 @@ implementation authorization: NOT YET
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
-011-F: NEXT
+011-F: COMPLETE — PASS
+011-G: NEXT
 ```
 
 ## Current Concept authority
 
-The current canonical catalog contains eighteen Concepts:
+The canonical catalog contains eighteen Concepts:
 
 1. Competition
 2. Division
@@ -62,7 +64,7 @@ The current canonical catalog contains eighteen Concepts:
 Do **not** use the previous sixteen-Concept taxonomy as current authority.
 
 - `Judging Encounter` is a deprecated adapter to Evaluation Occurrence + Evaluation Obligation.
-- `Official Outcome Revision` is a deprecated mechanism adapter to Outcome Declaration.
+- `Official Outcome Revision` is a deprecated adapter to Outcome Declaration.
 - Coverage/Evaluation Sufficiency remains derived factual sufficiency; exception disposition is separate.
 - Reconciliation remains process/work mode.
 - Aggregate, Rank and Readiness remain derived mechanisms.
@@ -72,33 +74,37 @@ Do **not** use the previous sixteen-Concept taxonomy as current authority.
 
 Phase 011 composes independent Concepts; it does not rewrite them in terms of one another.
 
-- Use 011-B as the inventory/classification authority for the full legacy corpus and provisional whole-application action surface.
-- Use current files under `docs/canonical/synchronizations/` when an owning Phase 011 subgroup has established replacement semantics.
 - 011-C establishes Identity→Participation binding, contextual Access and Competition lifecycle composition.
 - 011-D establishes historical competitor presentation, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment and participant/responsibility separation.
 - 011-E establishes authoritative Rubric Version/Evaluation Basis binding, one logical Scorecard per obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction and capture-channel parity.
+- 011-F establishes supersession/invalidation/replacement distinction, post-authority capture correction, occurrence/evidence invalidation, obligation successor work, corrected historical assertions and affected-state propagation.
 - Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence.
-- `EvaluationOccurrence.prepare` creates no obligation; ordinary initial obligations arise at occurrence begin.
-- `completeOccurrence` does not satisfy or clear obligations.
-- Current MUDAC Evaluation Basis is one exact authoritative Rubric Version; later Rubric Version establishment does not silently rebind existing evaluation state.
+- `completeOccurrence` does not satisfy/clear obligations.
+- Evaluation Basis is one exact authoritative Rubric Version; later Rubric Version establishment does not silently rebind existing evaluation state.
 - One Evaluation Obligation maps to at most one logical Scorecard.
 - Scorecard Draft state is non-authoritative.
-- Successful initial Finalization establishes Scorecard authority, immutable Scorecard Version, meaningful Provenance and obligation satisfaction as one coherent semantic result.
-- A Satisfied obligation's EvidenceRef identifies the logical Scorecard; Versioning identifies the current authoritative Version.
-- Judge amendment creates a successor Scorecard Version without another obligation or vote.
-- Versioning and Provenance actions remain composition-only; do not expose them as generic admin controls.
-- Paper/electronic/assisted capture paths preserve the same Judge author, Evaluation Basis, logical Scorecard and weight.
-- Organizer capture actor may differ from Judge represented authority only through explicit Provenance and cannot invent judgment or Finalization intent.
-- Post-authority transcription mismatch, Version invalidation, structural correction and successor work belong to 011-F.
-- Identity continuity is not Participation authority; Participation capacity is not Access permission; Access permission is not semantic authorship.
-- Do not mechanically rename `Judging Encounter` to `Evaluation Occurrence` or `Official Outcome Revision` to `Outcome Declaration`.
+- A Satisfied obligation's EvidenceRef identifies the logical Scorecard; Versioning identifies current authoritative Version.
+- Version supersession ≠ invalidation ≠ distinct-subject replacement.
+- Invalidation never silently revives an older Version or creates a successor.
+- Evaluation Occurrence invalidation preserves occurrence/evidence history; evidence may become currently ineligible without being erased.
+- Historical obligation satisfaction and current evidence eligibility are distinct.
+- Terminal obligations never reopen. Required re-evaluation uses `requireSuccessorEvaluation` and a new logical Scorecard.
+- Outstanding obligations tied to invalid occurrence context are explicitly ended rather than left satisfiable against invalid state.
+- Replacement occurrence never clones participants, obligations or Scorecards automatically.
+- Source-faithful post-authority capture correction may use the same logical Scorecard only when structural identity is unchanged and retained source is unambiguous.
+- Wrong Evaluator/Subject/OccurrenceContext/EvaluationBasis is structural correction, not ordinary amendment.
+- Corrected historical assertions preserve both as-recorded/as-known and best-known truth through Provenance.
+- Affected-state propagation is dependency-specific and owner-specific; it never silently moves Award, Outcome Declaration, Export or Publication authority.
+- Versioning and Provenance generic actions remain composition-only; do not expose them as generic admin controls.
+- Organizer/Admin technical capability never becomes Judge semantic authorship.
+- Do not mechanically rename deprecated historical concepts.
 - Keep factual Coverage distinct from governed exception disposition.
 - Preserve abstract peer parameters introduced by Phase 010; application bindings belong in composition.
 - Test over-synchronization and under-synchronization.
 - Trace material conceptual chaining/automation and check authority, preconditions, invariants and cycle risk.
 - Do not infer inclusion dependence from synchronization; Phase 012 owns subsets/product-family dependence.
 - Keep user-visible mapping questions for Phase 013.
-- If composition exposes a genuine specification/boundary defect, correct the natural Phase 010 owner and revalidate affected Phase 011 conclusions.
+- If composition exposes a genuine specification/boundary defect, correct the natural owner and revalidate affected conclusions.
 
 ## Approved Phase 011 order
 
@@ -108,8 +114,8 @@ Phase 011 composes independent Concepts; it does not rewrite them in terms of on
 011-C Competition lifecycle / Identity / Participation / Access       COMPLETE — PASS
 011-D Team/Division/Alias/Panel / Occurrence / Obligation             COMPLETE — PASS
 011-E evaluation basis / Scorecard / Versioning / Provenance / paper  COMPLETE — PASS
-011-F temporal correction / invalidation / successor / affected       NEXT
-011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    PLANNED
+011-F temporal correction / invalidation / successor / affected       COMPLETE — PASS
+011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    NEXT
 011-H Export / Publication / currency / release                       PLANNED
 011-I action surface / chaining / automation / over-under / synergy   PLANNED
 011-J canonical reconciliation / exit / Phase 012 handoff             PLANNED
@@ -136,4 +142,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**
+> **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**

@@ -25,7 +25,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 011](011-concept-composition-synchronization/).
 
-Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the full legacy/action baseline, [011-C](011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) for lifecycle/actor/access composition, [011-D](011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) for competitor-context/occurrence/responsibility composition, and [011-E](011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for evaluation-basis/Scorecard-authority/capture composition.
+Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline, then the current family records through [011-F](011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md). Current temporal/correction authority is [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md).
 
 # Current methodology state
 
@@ -39,7 +39,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
-011-F: NEXT
+011-F: COMPLETE — PASS
+011-G: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,18 +56,19 @@ Current family owners now include:
 
 - [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md) — 011-C;
 - [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md) — 011-D;
-- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md) — 011-E.
+- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md) — 011-E;
+- [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md) — 011-F.
 
-011-E establishes that one exact authoritative Rubric Version is the Evaluation Basis, one Evaluation Obligation maps to at most one logical Scorecard, initial Finalization coherently establishes Scorecard authority/Versioning/Provenance/obligation satisfaction, amendment preserves one vote, and paper/electronic capture preserve Judge authorship and weight.
+011-F establishes owner-specific non-destructive correction: supersession/invalidation/replacement stay distinct, occurrence invalidation preserves Judge-authored evidence history, terminal obligations never reopen, required re-evaluation uses successor responsibility/new logical Scorecard, source-faithful capture correction preserves the same Scorecard/Judge author, and downstream affectedness cannot silently change declared/public authority.
 
-Unreplaced legacy synchronization text remains evidence only. 011-F through 011-H will establish the remaining current families, 011-I will close whole-application action/chaining/automation questions, and 011-J will reconcile the corpus.
+The outcome/release portions of the legacy synchronization corpus remain evidence only until 011-G/H. 011-I will close whole-application action/chaining/automation questions and 011-J will reconcile the corpus.
 
 # Completion runway
 
 ```text
 010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization                                      IN PROGRESS — 011-F NEXT
+011 composition / synchronization                                      IN PROGRESS — 011-G NEXT
   ↓
 012 dependence / product family / subsets
   ↓
@@ -83,4 +85,4 @@ Unreplaced legacy synchronization text remains evidence only. 011-F through 011-
 
 A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-The immediate next task is **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+The immediate next task is **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.

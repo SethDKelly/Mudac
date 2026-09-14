@@ -35,7 +35,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
-011-F: NEXT
+011-F: COMPLETE — PASS
+011-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -53,14 +54,15 @@ Current family-level synchronization authority includes:
 
 - [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) / [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md);
 - [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md);
-- [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) / [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md).
+- [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) / [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md);
+- [011-F](../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
 
-011-E establishes that one exact authoritative Rubric Version is the Evaluation Basis, one Evaluation Obligation maps to at most one logical Scorecard, successful initial Finalization coherently establishes Scorecard authority/Versioning/Provenance/obligation satisfaction, amendment preserves one evaluation weight, and paper/electronic capture cannot transfer Judge authorship.
+011-F establishes current temporal repair semantics: supersession/invalidation/replacement are distinct; invalidated occurrence/evidence history remains reconstructible; historical obligation satisfaction is distinct from current evidence eligibility; terminal obligations never reopen; required re-evaluation uses successor obligation/new logical Scorecard; source-faithful capture correction preserves Judge authorship; corrected historical assertions are append-stable; and affected downstream authority remains owner-specific.
 
-Where a Phase 011 canonical synchronization owner exists, it outranks the corresponding legacy contract text. Unreplaced legacy synchronization semantics remain pre-011 evidence.
+Where a Phase 011 canonical synchronization owner exists, it outranks corresponding legacy contract text. Unreplaced outcome/release semantics remain pre-011 evidence until 011-G/H.
 
 Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+Proceed to **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.

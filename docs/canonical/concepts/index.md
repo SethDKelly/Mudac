@@ -55,10 +55,11 @@ Current composition owners live under [Canonical Synchronizations](../synchroniz
 
 - 011-C composes Competition/Identity/Participation/Access while preserving intrinsic ownership;
 - 011-D composes Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation while keeping intended grouping, actual participation and responsibility distinct;
-- 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity.
+- 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity;
+- 011-F establishes owner-specific temporal correction/invalidation/replacement/successor composition.
 
-011-E confirms that the current MUDAC Evaluation Basis is one exact authoritative Rubric Version; one Evaluation Obligation maps to at most one logical Scorecard; a Satisfied obligation refers to that logical Scorecard while Versioning identifies its current authoritative snapshot; and paper/electronic capture cannot create another vote or transfer Judge authorship.
+011-F confirms that supersession, invalidation and replacement are distinct; occurrence invalidation preserves Judge-authored evidence/history; historical obligation satisfaction remains distinct from current evidence eligibility; terminal obligations never reopen; legitimate re-evaluation uses successor responsibility/new logical Scorecard; and source-faithful capture correction may preserve the same logical Scorecard only when structural identity is unchanged and Provenance preserves Judge authorship.
 
-No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
+The bounded Scorecard wording clarification needed for source-faithful capture correction does not create a new Concept or reopen the eighteen-Concept boundary. No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
 
-Next: **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+Next: **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.

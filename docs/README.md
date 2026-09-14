@@ -12,7 +12,7 @@ Current foundational truth is:
 - [Current eighteen-Concept catalog](canonical/concepts/);
 - [Current Synchronizations](canonical/synchronizations/);
 - [Active Phase 011](011-concept-composition-synchronization/) for composition/synchronization revalidation;
-- [011-E](011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) for the current evaluation-basis/Scorecard-authority/capture result.
+- [011-F](011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) for current temporal/correction/invalidation/successor composition.
 
 ## Status
 
@@ -26,7 +26,7 @@ Current foundational truth is:
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C/D/E complete; 011-F next**
+* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C/D/E/F complete; 011-G next**
 
 ## Current posture
 
@@ -46,7 +46,8 @@ implementation authorization: NOT YET
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
-011-F: NEXT
+011-F: COMPLETE — PASS
+011-G: NEXT
 ```
 
 ## Phase 011 composition posture
@@ -55,22 +56,18 @@ Phase 010's current catalog contains eighteen independent Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-011-B remains the complete legacy synchronization inventory/classification baseline.
+011-C through 011-F now provide current canonical family authorities for lifecycle/access, occurrence/responsibility, Scorecard/evaluation-basis authority, and temporal correction/invalidation/successor work.
 
-011-C established current canonical composition for Competition lifecycle/readiness, Identity continuity, Competition Participation, contextual Access, event completion/resume and operating-context isolation.
+011-F establishes that supersession, invalidation and replacement are distinct; occurrence invalidation preserves Judge-authored evidence/history; historical obligation satisfaction remains distinct from current evidence eligibility; terminal obligations never reopen; required re-evaluation uses successor responsibility/new logical Scorecard; capture correction preserves Judge authorship; and affected-state propagation does not silently mutate downstream declared/public authority.
 
-011-D established current canonical composition for competitor presentation context, intended Panel grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment, participant/responsibility adjustment and occurrence completion independent from obligation completion.
-
-011-E now establishes current canonical composition for authoritative Rubric Version/Evaluation Basis, one logical Scorecard per responsibility, Finalization/amendment authority, Versioning/Provenance, obligation satisfaction and paper/electronic capture parity.
-
-Unreplaced portions of the old synchronization corpus remain evidence only until their owning semantic subgroups establish current rules.
+The remaining outcome and release portions of the legacy synchronization corpus remain evidence until 011-G/H establish current semantics.
 
 ## Completion runway
 
 ```text
 010 foundational completion                         COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation      IN PROGRESS — 011-F NEXT
+011 composition / synchronization revalidation      IN PROGRESS — 011-G NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -89,4 +86,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+Proceed to **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.

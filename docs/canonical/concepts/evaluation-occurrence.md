@@ -9,7 +9,9 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+  - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
+  - resource: ../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T13:36:00-05:00 }
 ---
 
 # Purpose
@@ -58,6 +60,8 @@ Cancellation and invalidation are distinct: cancellation represents an intended 
 
 Replacement never mutates the invalidated occurrence into a new one.
 
+Invalidation does not erase Scorecards or obligation history merely because their current eligibility may depend on this occurrence. Those consequences are application composition.
+
 # MUDAC composition binding
 
 MUDAC normally binds:
@@ -68,7 +72,9 @@ MUDAC normally binds:
 - `PresentedContext` to Judge-facing Alias/Division and other material presentation facts;
 - `BasisRef` to the exact applicable evaluation basis.
 
-Panel may supply an intended starting group, but Panel is not intrinsic to this Concept. Evaluation Obligations may be established from the occurrence through Phase 011 synchronization, but obligation state is not owned here.
+Panel may supply an intended starting group, but Panel is not intrinsic to this Concept. [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md) owns ordinary prepare/begin/participant/responsibility composition.
+
+[Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md) owns MUDAC invalidation, replacement, responsibility-disposition and corrected-historical-assertion composition. A replacement link never clones participant, responsibility or evidence state.
 
 # Boundaries
 

@@ -12,7 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current Phase 011 synchronization owners plus preserved pre-011 evidence.
 * [`docs/011-concept-composition-synchronization/`](docs/011-concept-composition-synchronization/) — active Phase 011 composition/synchronization work.
-* [`docs/011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md`](docs/011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) — current evaluation-basis/Scorecard-authority/capture composition result.
+* [`docs/011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md`](docs/011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) — current temporal/correction/invalidation/successor result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -35,7 +35,8 @@ implementation authorization: NOT YET
 011-C: COMPLETE — PASS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
-011-F: NEXT
+011-F: COMPLETE — PASS
+011-G: NEXT
 ```
 
 ## Current Concept catalog
@@ -67,15 +68,17 @@ Coverage remains derived factual sufficiency with exception disposition modeled 
 
 ## Phase 011 posture
 
-011-A established the composition start gate. 011-B classified all sixteen legacy synchronization contracts and established a provisional action-surface baseline across all eighteen Concepts.
+011-A established the composition start gate and 011-B classified the legacy synchronization corpus/action surface.
 
 011-C established Competition lifecycle/readiness, Identity/Participation/Access and operating-context composition.
 
-011-D established Team/Division/Alias competitor presentation context, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment at occurrence begin, live participant/responsibility adjustment, and occurrence completion independent from responsibility completion.
+011-D established competitor presentation, intended Panel grouping, actual Evaluation Occurrence participation, ordinary Evaluation Obligation establishment and occurrence completion independent from responsibility completion.
 
-011-E now establishes authoritative Rubric Version/Evaluation Basis composition, one logical Scorecard per Evaluation Obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction, and paper/electronic capture parity. A Satisfied obligation points to the logical Scorecard while Versioning identifies its current authoritative snapshot; capture actor may differ from Judge semantic author only through explicit Provenance.
+011-E established authoritative Rubric Version/Evaluation Basis composition, one logical Scorecard per Evaluation Obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction and capture parity.
 
-Unreplaced legacy synchronization semantics remain preserved evidence until 011-F through 011-H establish their current families. 011-I will close action-surface/chaining/automation/coherence questions and 011-J will reconcile the canonical synchronization corpus.
+011-F now establishes current temporal repair semantics: supersession, invalidation and replacement remain distinct; occurrence invalidation preserves authored/history truth; terminal obligations never reopen; required re-evaluation uses successor responsibility/new logical Scorecard; source-faithful capture correction preserves the same logical Scorecard and Judge authorship; and affected-state propagation never silently mutates declared or published authority.
+
+The remaining outcome and release synchronization semantics are 011-G/H. 011-I will close whole-application action/chaining/automation/coherence questions and 011-J will reconcile the canonical synchronization corpus.
 
 Phase 011 defines conceptual triggers, participating Concept actions, semantic bindings, action exposure/non-exposure, chaining, automation and composition consequences. It does not define APIs, services, queues, transactions, retries, workers, workflow engines or deployment architecture.
 
@@ -84,7 +87,7 @@ Phase 011 defines conceptual triggers, participating Concept actions, semantic b
 ```text
 010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                 IN PROGRESS — 011-F NEXT
+011 composition / synchronization revalidation                 IN PROGRESS — 011-G NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -109,4 +112,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+Proceed to **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.

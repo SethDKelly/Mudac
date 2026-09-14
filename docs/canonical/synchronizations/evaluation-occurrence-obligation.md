@@ -1,11 +1,12 @@
 ---
 type: Synchronization Contract
 title: Competitor Context, Evaluation Occurrence & Obligation Composition
-description: "Current MUDAC composition for Team/Division/Alias presentation context, Panel intended grouping, actual Evaluation Occurrence participation, ordinary Evaluation Obligation establishment, participant adjustment, and occurrence completion after Phase 011-D."
+description: "Current MUDAC composition for Team/Division/Alias presentation context, Panel intended grouping, actual Evaluation Occurrence participation, ordinary Evaluation Obligation establishment, participant adjustment, occurrence completion, and handoff into current correction/authority families."
 status: stable
 tags: [synchronization, team, division, alias, panel, evaluation-occurrence, evaluation-obligation, judging, phase-011]
 sources:
   - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
+  - resource: ../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md
   - resource: ../concepts/team.md
   - resource: ../concepts/division.md
   - resource: ../concepts/alias.md
@@ -22,20 +23,17 @@ sources:
   - resource: ../invariants/missing-never-zero.md
   - resource: ../invariants/one-logical-scorecard.md
   - resource: competition-participation-access.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
+  - resource: temporal-truth-correction.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T13:36:00-05:00 }
 ---
 
 # Purpose
 
-Define current MUDAC application composition from current competitor/grouping state into one historical [Evaluation Occurrence](../concepts/evaluation-occurrence.md) and individual [Evaluation Obligations](../concepts/evaluation-obligation.md), while preserving independent ownership by [Team](../concepts/team.md), [Division](../concepts/division.md), [Alias](../concepts/alias.md), [Panel](../concepts/panel.md), Participation and Access.
+Define current MUDAC application composition from current competitor/grouping state into one historical [Evaluation Occurrence](../concepts/evaluation-occurrence.md) and individual [Evaluation Obligations](../concepts/evaluation-obligation.md), while preserving independent ownership by Team, Division, Alias, Panel, Participation and Access.
 
-This document supersedes the current-authority meaning of:
+This document supersedes legacy synchronization 05's historical presented-context half, legacy 06, and legacy 08's responsibility-establishment half.
 
-- legacy synchronization 05's historical presented-context half;
-- legacy synchronization 06;
-- legacy synchronization 08's responsibility-establishment half.
-
-Scorecard/evaluation-basis authority remains 011-E work. Invalidation/replacement/successor re-evaluation remains 011-F work.
+Current Scorecard/evaluation-basis authority is owned by [Evaluation Basis, Scorecard Authority & Capture Composition](evaluation-basis-scorecard-authority.md). Current invalidation/replacement/successor-work semantics are owned by [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md).
 
 # Authority boundary
 
@@ -44,8 +42,8 @@ Scorecard/evaluation-basis authority remains 011-E work. Invalidation/replacemen
 - **Alias** owns current Judge-facing alternate identity and alias history.
 - **Panel** owns reusable intended evaluator grouping/current membership history.
 - **Participation** owns whether one Judge is currently participating in the Competition in Judge capacity.
-- **Access** owns the current contextual capability/disclosure decision.
-- **Evaluation Occurrence** owns the bounded historical occurrence, presented context, actual participant history, occurrence lifecycle/validity and replacement relation.
+- **Access** owns current contextual capability/disclosure decisions.
+- **Evaluation Occurrence** owns bounded historical occurrence, presented context, actual participant history, lifecycle/validity and replacement relation.
 - **Evaluation Obligation** owns one evaluator's responsibility lifecycle.
 
 Panel membership is not occurrence participation. Occurrence participation is not responsibility. Responsibility is not judgment evidence.
@@ -54,9 +52,7 @@ Panel membership is not occurrence participation. Occurrence participation is no
 
 Application action: **Prepare Evaluation Occurrence**.
 
-Primary participant:
-
-- `EvaluationOccurrence.prepare`.
+Primary participant: `EvaluationOccurrence.prepare`.
 
 MUDAC normally binds:
 
@@ -67,29 +63,21 @@ PresentedContext = Judge-facing competitor snapshot
 BasisRef         = exact supplied evaluation-basis reference
 ```
 
-The presented-context snapshot contains the disclosure-safe competitor facts whose historical value matters to what evaluators encounter, normally including the Alias and Division context used for that judging occurrence.
+The historical presented-context snapshot normally includes the Alias and Division context used for that occurrence.
 
-`prepare` creates **no Evaluation Obligation** and does not assert that every Panel member will judge.
+`prepare` creates no Evaluation Obligation and does not assert that every Panel member will judge.
 
-If a material Team/Division/Alias change before begin makes the prepared presentation no longer legitimate, ordinary begin is blocked. A Prepared occurrence may be cancelled and a new one prepared rather than silently rewriting the snapshot.
+If material Team/Division/Alias change before begin makes the prepared presentation no longer legitimate, ordinary begin is blocked. A Prepared occurrence may be cancelled and a new one prepared rather than silently rewriting the snapshot.
 
 # Panel supplies intended candidates only
 
 For a Panel-backed path, current Panel members may supply candidate starting evaluators.
 
-The application confirms the actual starting set using current facts such as:
-
-- same Competition scope;
-- active/eligible Judge Participation;
-- current Access for judging;
-- known absence/recusal;
-- Panel Composition Policy and any governed exception.
+The application confirms the actual starting set using current facts such as same Competition scope, active/eligible Judge Participation, current Access, absence/recusal facts, Panel Composition Policy and governed exception state.
 
 Only the confirmed set is supplied to `EvaluationOccurrence.begin`.
 
-A nominal Panel member known absent before begin does not become an occurrence participant or receive an Evaluation Obligation merely because the membership exists.
-
-Panel-composition exceptions preserve the actual shortfall. They never create fictitious participants or evidence.
+A nominal Panel member known absent before begin does not become an occurrence participant or receive an Evaluation Obligation merely because membership exists.
 
 # Begin Evaluation Occurrence → establish initial responsibilities
 
@@ -100,7 +88,7 @@ Application action: **Begin Evaluation Occurrence**.
 Participants:
 
 - `EvaluationOccurrence.begin`;
-- `EvaluationObligation.establish` once for each confirmed starting evaluator expected to produce an independent judgment.
+- `EvaluationObligation.establish` once for each confirmed starting evaluator expected to produce independent judgment.
 
 Initial obligation bindings are:
 
@@ -116,144 +104,132 @@ state         = Outstanding
 
 Conditions include:
 
-- Competition is Active under [Competition Lifecycle, Participation & Contextual Access Composition](competition-participation-access.md);
-- occurrence is Prepared and eligible to begin;
-- the prepared competitor presentation remains legitimate;
-- an exact applicable BasisRef is supplied;
-- every starting evaluator is a current eligible Judge Participation in the same Competition and is permitted by current Access/context;
-- Panel-composition conditions are satisfied or an explicitly allowed governed exception exists where Panel is used;
-- no duplicate current initial responsibility already exists for the same evaluator/subject/basis/occurrence meaning.
+- Competition Active under [Competition Lifecycle, Participation & Contextual Access Composition](competition-participation-access.md);
+- occurrence Prepared and eligible to begin;
+- prepared competitor presentation still legitimate;
+- one exact applicable BasisRef;
+- every starting evaluator is a current eligible Judge Participation with current Access;
+- Panel-composition conditions satisfied or explicitly governed exception present where Panel is used;
+- no duplicate current initial responsibility for the same evaluator/subject/basis/occurrence meaning.
 
 Postconditions:
 
-- occurrence is Open with the actual starting evaluator set;
+- occurrence Open with actual starting evaluator set;
 - each responsible starting evaluator has one Outstanding Evaluation Obligation;
-- no Scorecard is created merely by beginning the occurrence.
+- no Scorecard exists merely because the occurrence began.
 
 # Why begin is the establishment point
 
-MUDAC deliberately rejects three alternatives:
+MUDAC rejects:
 
-- **Panel membership → obligation**: too early; nominal members may be absent or recused.
-- **Prepared occurrence → obligation**: too early; actual starting participation is not yet confirmed and preparation may be abandoned.
-- **Scorecard start → obligation**: too late; responsibility must remain visible even before a Judge starts a Scorecard.
+- Panel membership → obligation: too early;
+- Prepared occurrence → obligation: too early;
+- Scorecard start → obligation: too late.
 
-Occurrence begin is the first point at which actual participation and current responsibility can be established truthfully together while remaining separate owners.
+Occurrence begin is the first point where actual participation and current responsibility can be established truthfully together while remaining independent meanings.
 
 # Panel membership and occurrence history remain separate
 
-After an occurrence begins, Panel membership/capacity changes affect the reusable grouping and future planning only.
+After begin, Panel membership/capacity changes affect reusable grouping/future planning only.
 
-They do not automatically:
+They do not automatically modify occurrence participants, establish/excuse/reassign obligations, or rewrite presented context.
 
-- modify occurrence starting/effective participants;
-- establish/excuse/reassign obligations;
-- rewrite presented competitor context.
+A deliberate operational decision may coordinate both Panel and occurrence actions, but neither implies the other.
 
-If the same operational decision should update both the reusable Panel and one live occurrence, the application may deliberately coordinate the relevant Panel action with the occurrence adjustment. Neither action is implied by the other.
+# Participant adjustment requires explicit responsibility disposition
 
-# Participant adjustment requires an explicit responsibility decision
-
-`EvaluationOccurrence.recordParticipantAdjustment` records actual participation change. Responsibility disposition is separately selected according to the real situation.
+`EvaluationOccurrence.recordParticipantAdjustment` records actual participation change. Responsibility disposition is separate.
 
 ## Participant leaves but still owes evaluation
 
 - record occurrence adjustment;
-- leave the Evaluation Obligation Outstanding.
+- leave obligation Outstanding.
 
 ## Recusal/release with no replacement
 
 - record occurrence adjustment;
-- invoke `EvaluationObligation.excuse` with legitimate authority/reason.
-
-Missing evidence remains missing; no zero or placeholder Scorecard is created.
+- `EvaluationObligation.excuse` with legitimate authority/reason.
 
 ## True substitution
 
 - record outgoing/incoming occurrence adjustment;
-- invoke `EvaluationObligation.reassignWithSuccessor` so predecessor responsibility history is preserved and the replacement receives the successor responsibility.
+- `EvaluationObligation.reassignWithSuccessor` preserves predecessor responsibility and creates successor responsibility.
 
-Optional `Panel.replaceMember` participates only when the reusable Panel should also change. One-off occurrence substitution does not force a Panel change.
+`Panel.replaceMember` participates only when reusable Panel membership should also change.
 
 ## Late addition
 
-Where policy permits late entry and the evaluator legitimately receives enough of the required presentation/context to produce a qualifying independent judgment:
+If policy permits late entry and the evaluator legitimately receives enough presentation/context to produce qualifying independent judgment:
 
-- record the late participant adjustment;
-- establish a new Outstanding Evaluation Obligation.
+- record participant adjustment;
+- establish a new Outstanding obligation.
 
-If the evaluator is taking over an existing responsibility, use `reassignWithSuccessor` rather than an unrelated new obligation.
+If taking over an existing responsibility, use successor/reassignment semantics rather than an unrelated obligation.
 
-If authoritative evidence already exists for the outgoing evaluator, participant adjustment cannot remove it; correction/invalidation belongs to 011-F.
+If authoritative evidence already exists, participant editing cannot remove it. Use [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md) for correction/invalidation.
 
 # Complete Evaluation Occurrence
 
-Application action: **Complete Evaluation Occurrence**.
+Application action: **Complete Evaluation Occurrence** using `EvaluationOccurrence.completeOccurrence`.
 
-Participant:
+Completion records that the bounded occurrence ended. It does not wait for or modify obligation state.
 
-- `EvaluationOccurrence.completeOccurrence`.
-
-Completion records that the bounded occurrence ended. It does not wait for or modify Evaluation Obligation state.
-
-A valid current state is:
+Valid state:
 
 ```text
-Occurrence = Complete
+Occurrence  = Complete
 Obligation A = Satisfied
 Obligation B = Outstanding
 Obligation C = Outstanding
 ```
 
-Occurrence completion therefore does not invoke `satisfy`, `excuse`, `cancel`, Scorecard finalization, or derived outcome actions.
+Occurrence completion does not invoke `satisfy`, `excuse`, `cancel`, Scorecard finalization or derived outcome actions.
 
-This rule supersedes the pre-Phase-010 Encounter behavior in which completion depended on all evaluation responsibilities being resolved.
+# Prepared cancellation versus later invalidation
 
-# Prepared cancellation
+A Prepared occurrence that never meaningfully begins may use `EvaluationOccurrence.cancel`. Because ordinary initial obligations do not exist before begin, simple Prepared cancellation has no obligation cleanup consequence.
 
-A Prepared occurrence that never meaningfully begins may use `EvaluationOccurrence.cancel`.
-
-Because ordinary initial obligations do not exist before begin, simple Prepared cancellation has no obligation cleanup consequence.
-
-Once an occurrence has begun, later unusability is not represented as pre-begin cancellation. Invalidation/replacement/evidence/successor-work semantics belong to 011-F.
+Once an occurrence has begun, later unusability is not represented as pre-begin cancellation. Current invalidation/replacement/responsibility consequences are defined by [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md): an invalidated occurrence remains historical; dependent evidence is not erased; Outstanding responsibilities tied to invalid context are explicitly ended; and legitimate re-evaluation uses a distinct replacement occurrence plus deliberate successor/new obligations.
 
 # Current action-surface classification
 
 | Concept action family | Current MUDAC status |
 | --- | --- |
 | Team ordinary create/update | direct |
-| Team withdraw/restore | direct/high-consequence; downstream correction effects 011-F |
+| Team withdraw/restore | direct/high-consequence; temporal effects use current correction composition |
 | Division define/update/assign | direct |
-| Division retire/correctAssignment | direct/high-consequence; downstream effects 011-F/G |
+| Division retire/correctAssignment | direct/high-consequence; temporal/outcome effects use 011-F/G |
 | Alias assign | direct |
-| Alias replace/retire | direct/high-consequence; downstream effects 011-F |
-| Panel membership/capacity planning actions | direct; no automatic occurrence/obligation effect |
-| Panel retire/restore | direct/high-consequence; no historical occurrence rewrite |
+| Alias replace/retire | direct/high-consequence; temporal effects use 011-F |
+| Panel membership/capacity planning | direct; no automatic occurrence/obligation effect |
 | Evaluation Occurrence `prepare` | coordinated application action |
 | Evaluation Occurrence `begin` | coordinated; establishes initial obligations |
-| Evaluation Occurrence participant adjustment | coordinated; explicit responsibility disposition required |
-| Evaluation Occurrence `completeOccurrence` | direct one-action application behavior |
-| Evaluation Occurrence `cancel` | direct for Prepared occurrence |
-| Evaluation Occurrence invalidation/replacement | deferred to 011-F |
+| participant adjustment | coordinated; explicit responsibility disposition required |
+| `completeOccurrence` | direct one-action application behavior |
+| Prepared `cancel` | direct |
+| occurrence `invalidate` | high-consequence coordinated action under temporal correction owner |
+| `linkReplacement` | composition-only within replacement action |
 | Evaluation Obligation `establish` | composition-only |
-| Evaluation Obligation `excuse` | coordinated exceptional action |
-| Evaluation Obligation `reassignWithSuccessor` | coordinated exceptional action |
-| Evaluation Obligation `satisfy` | composition-only; 011-E |
-| Evaluation Obligation `cancel` / `requireSuccessorEvaluation` | 011-F |
+| `excuse` / `reassignWithSuccessor` | coordinated exceptional actions |
+| `satisfy` | composition-only through Scorecard Finalization |
+| `cancel` after invalid occurrence | coordinated temporal consequence |
+| `requireSuccessorEvaluation` | controlled composition-only temporal consequence; never automatic |
 
 # Composition invariants
 
 1. Current Team/Division/Alias state does not rewrite historical presented occurrence context.
 2. Panel membership does not itself create occurrence participation or responsibility.
-3. Only actual confirmed starting evaluators enter the starting evaluator set.
-4. Ordinary initial obligations are established at occurrence begin, not at planning/preparation and not at Scorecard start.
-5. Every initial responsible evaluator has one distinct Outstanding obligation; no placeholder judgment is created.
-6. Participant adjustment does not determine responsibility disposition implicitly.
-7. Panel changes do not rewrite an already-begun occurrence.
-8. Occurrence completion is independent of obligation completion.
-9. Missing/excused responsibility never becomes score zero or fabricated evidence.
-10. Participant editing cannot erase already-authoritative evaluation evidence.
-11. Organizer coordination never transfers Judge authorship.
+3. Only actual confirmed starting evaluators enter the starting set.
+4. Ordinary initial obligations arise at occurrence begin.
+5. No placeholder judgment is created from responsibility.
+6. Participant adjustment does not implicitly decide responsibility state.
+7. Panel changes do not rewrite begun occurrence history.
+8. Occurrence completion is independent from obligation completion.
+9. Missing/excused responsibility never becomes zero/fabricated evidence.
+10. Participant editing cannot erase authoritative evidence.
+11. Occurrence invalidation preserves authored evidence/history while current eligibility may change.
+12. Terminal obligations never reopen; re-evaluation uses successor responsibility.
+13. Organizer coordination never transfers Judge authorship.
 
 # Chaining summary
 
@@ -263,39 +239,36 @@ current competitor context
 ```
 
 ```text
-Panel candidates
- + Participation eligibility
- + Access
- + absence/recusal facts
- + composition policy/exception
-      ↓
-confirmed starting evaluators
-      ↓
-EvaluationOccurrence.begin
- + EvaluationObligation.establish × N
+Panel candidates + Participation + Access + operating facts/policy
+  → confirmed starting evaluators
+  → EvaluationOccurrence.begin
+  + EvaluationObligation.establish × N
 ```
 
 ```text
 participant adjustment
-      ↓
-EvaluationOccurrence.recordParticipantAdjustment
- + explicit responsibility disposition
+  → occurrence history
+  + explicit responsibility disposition
 ```
 
 ```text
-EvaluationOccurrence.completeOccurrence
-      ↓
-occurrence ends
-obligations continue independently
+completeOccurrence
+  → occurrence ends
+  → obligations continue independently
 ```
 
-These are conceptual composition relationships and prescribe no event bus, transaction, queue, worker, retry, database cascade or UI workflow.
+```text
+later unusable occurrence
+  → current temporal-correction owner
+  → invalidation / explicit responsibility disposition / optional distinct replacement
+```
 
-# Deferred composition
+These are conceptual relationships, not runtime orchestration designs.
 
-- authoritative evaluation basis, Scorecard identity/authority, Versioning/Provenance and paper capture → 011-E;
-- occurrence invalidation/replacement, obligation cancellation/successor re-evaluation after evidence invalidation, correction consequences → 011-F;
+# Remaining downstream composition
+
 - Coverage/Aggregate/Rank/Award/Finalization/Outcome Declaration → 011-G;
+- Export/Publication → 011-H;
 - application-wide chaining/automation/over-under/synergy closure → 011-I;
-- whether Panel is required in every coherent product variant → Phase 012;
-- user-visible mapping of occurrence/obligation/participant state → Phase 013.
+- product-family inclusion dependence → Phase 012;
+- user-visible mapping → Phase 013.

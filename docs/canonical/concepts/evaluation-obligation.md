@@ -10,7 +10,10 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+  - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
+  - resource: ../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md
+  - resource: ../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T13:36:00-05:00 }
 ---
 
 # Purpose
@@ -38,7 +41,7 @@ Evaluation Obligation owns:
 - predecessor/successor responsibility relation for reassignment or legitimate re-evaluation;
 - meaningful state-transition history.
 
-A terminal historical obligation is never silently reopened. When a legitimate new responsibility is required after a terminal obligation—for example because prior satisfying evidence becomes unusable—the application creates a **successor obligation** and preserves the predecessor's history.
+A terminal historical obligation is never silently reopened. When legitimate new responsibility is required after a terminal obligation—for example because prior satisfying evidence becomes unusable—the application creates a **successor obligation** and preserves the predecessor's history.
 
 # Actions and queries
 
@@ -52,7 +55,9 @@ An application establishes that one evaluator is responsible for one independent
 
 # Canonical contract
 
-An obligation is not a judgment. `Satisfied` means qualifying evidence has been associated with the responsibility; it does not transfer semantic authorship or imply that the obligation owns the evidence content.
+An obligation is not a judgment. `Satisfied` means qualifying evidence was associated with the responsibility at the authoritative transition; it does not transfer semantic authorship or imply that the obligation owns the evidence content.
+
+Historical satisfaction and **current evidence eligibility are distinct**. Later invalidation of the linked Scorecard Version, Evaluation Occurrence or basis does not rewrite `Satisfied` back to `Outstanding`.
 
 Missing work remains explicitly Outstanding unless it is legitimately Excused or Cancelled. Missing is never represented as zero or as a fabricated Scorecard.
 
@@ -60,7 +65,11 @@ Reassignment and re-evaluation preserve predecessor responsibility history.
 
 # MUDAC composition binding
 
-MUDAC normally binds Evaluator to Judge Participation identity, Subject to Team, Basis to an exact evaluation basis, and optional OccurrenceRef to Evaluation Occurrence. Scorecard finalization may satisfy an obligation through Phase 011 synchronization. Panel membership may contribute to obligation creation, but Panel is not intrinsic to responsibility semantics.
+MUDAC normally binds Evaluator to Judge Participation identity, Subject to Team, Basis to an exact authoritative Rubric Version, and optional OccurrenceRef to Evaluation Occurrence.
+
+[Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md) owns ordinary obligation establishment/participant-responsibility composition. [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md) owns ordinary Scorecard satisfaction.
+
+[Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md) owns MUDAC cancellation after occurrence invalidation and deliberate successor responsibility when terminal historical work must genuinely be performed again. `requireSuccessorEvaluation` is not an automatic side effect of evidence invalidation.
 
 # Boundaries
 
@@ -70,4 +79,5 @@ Evaluation Obligation does not own:
 - reusable grouping ([Panel](panel.md));
 - the evaluator's judgment ([Scorecard](scorecard.md));
 - evaluation-instrument semantics ([Rubric](rubric.md));
+- current eligibility of linked evidence after external invalidation;
 - factual aggregate sufficiency across multiple obligations/evidence ([Coverage](../mechanisms/coverage.md)).

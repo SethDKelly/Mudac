@@ -22,8 +22,10 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Phase 011 is active. [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) owns current readiness/lifecycle composition. [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) owns intended-grouping/occurrence/responsibility composition. [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) now owns the application composition that uses Rubric response/Note semantics to validate Scorecard authority while keeping Versioning, Provenance, Evaluation Obligation satisfaction and paper/electronic capture as separate coordinated meanings.
+Phase 011 current family authority through 011-F establishes lifecycle/access, occurrence/responsibility, evaluation authority/capture, and temporal correction/invalidation/successor composition.
 
-[Criterion & Notes](criterion-notes.md) therefore remains subordinate evaluation structure rather than an independent Concept, and the current authority path is routed through [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md).
+[Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md) now makes an important derived-state distinction for 011-G: historical Evaluation Obligation satisfaction may remain true while the linked evidence is no longer currently eligible. Coverage therefore derives from qualifying current evidence, not merely from historical `Satisfied` responsibility state. Source correction/invalidation may also make prior Aggregate/Rank non-current without granting those mechanisms authority to rewrite source evidence.
 
-The next methodology task is **011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation**.
+Coverage/Aggregate/Rank owner-specific recomputation/currentness and their composition with Award, Competition Finalization and Outcome Declaration are the next methodology task.
+
+Next: **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
