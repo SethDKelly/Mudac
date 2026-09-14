@@ -25,9 +25,16 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 011](011-concept-composition-synchronization/).
 
-Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline, then current family records through [011-G](011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md).
+Use [011-B](011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline, then current family records through [011-H](011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md).
 
-Current outcome authority is [Evaluation Outcome, Award, Finalization & Declaration Composition](canonical/synchronizations/evaluation-outcome-finalization-declaration.md); current temporal/correction authority remains [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md).
+Current family authorities now include:
+
+- [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md);
+- [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md);
+- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md);
+- [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md);
+- [Evaluation Outcome, Award, Finalization & Declaration Composition](canonical/synchronizations/evaluation-outcome-finalization-declaration.md);
+- [External Representation, Currency & Publication Release Composition](canonical/synchronizations/external-representation-publication-release.md).
 
 # Current methodology state
 
@@ -43,7 +50,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
-011-H: NEXT
+011-H: COMPLETE — PASS
+011-I: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,24 +63,18 @@ implementation authorization: NOT YET
 
 011-B classified all sixteen legacy synchronization contracts against the eighteen-Concept model. No legacy contract was accepted unchanged.
 
-Current family owners now include:
+011-C through 011-H now provide current owners for every semantic family in that legacy corpus.
 
-- [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md) — 011-C;
-- [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md) — 011-D;
-- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md) — 011-E;
-- [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md) — 011-F;
-- [Evaluation Outcome, Award, Finalization & Declaration Composition](canonical/synchronizations/evaluation-outcome-finalization-declaration.md) — 011-G.
+011-H establishes that source authority, Export representation/currentness, Publication release and transport/delivery are separate meanings. Each meaningful Export binds exact SourceBasis + purpose + AudienceProfile; Affected Export revalidation is non-destructive; newer/corrected source requires a new Export; generation never implies release; Publication binds one exact Representation/Audience/Channel; and source correction never silently rewrites historical release.
 
-011-G establishes that factual Coverage remains separate from exception disposition, Aggregate existence does not imply rank eligibility, Rank remains derived, Award owns recognition, ordinary MUDAC official closeout coordinates Competition Finalization with explicit Outcome Declaration, and post-Finalization correction can make a declaration Affected without silently replacing official authority.
-
-Only the external representation/release family remains for 011-H before whole-application action/chaining/automation closure in 011-I and canonical reconciliation in 011-J.
+011-I is now the whole-application composition closure step. It will finalize application action exposure and audit the complete set of current family synchronizations for chains, conceptual automation, cycles, authority transfer, over-synchronization, under-synchronization and defensible synergy. 011-J will then reconcile the canonical corpus and decide Phase 011 exit readiness for Phase 012.
 
 # Completion runway
 
 ```text
 010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization                                      IN PROGRESS — 011-H NEXT
+011 composition / synchronization                                      IN PROGRESS — 011-I NEXT
   ↓
 012 dependence / product family / subsets
   ↓
@@ -89,4 +91,4 @@ Only the external representation/release family remains for 011-H before whole-a
 
 A successful Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate previous architecture or implementation planning.
 
-The immediate next task is **011-H — Export, Publication, Representation Currency & Release Composition**.
+The immediate next task is **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.
