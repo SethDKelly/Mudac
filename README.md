@@ -12,7 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current Phase 011 synchronization owners plus preserved pre-011 evidence.
 * [`docs/011-concept-composition-synchronization/`](docs/011-concept-composition-synchronization/) — active Phase 011 composition/synchronization work.
-* [`docs/011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md`](docs/011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) — current derived-outcome/Award/finalization/declaration result.
+* [`docs/011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md`](docs/011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md) — current external representation/release result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -37,7 +37,8 @@ implementation authorization: NOT YET
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
-011-H: NEXT
+011-H: COMPLETE — PASS
+011-I: NEXT
 ```
 
 ## Current Concept catalog
@@ -69,32 +70,30 @@ Coverage remains derived factual sufficiency with exception disposition modeled 
 
 ## Phase 011 posture
 
-011-A established the composition start gate and 011-B classified the legacy synchronization corpus/action surface.
+011-A/B established the composition gate, legacy inventory and provisional action surface. 011-C through 011-H have now established all current family-level composition semantics.
 
-011-C through 011-F established lifecycle/context, occurrence/responsibility, evaluation-authority/capture, and temporal correction/successor composition.
+The latest 011-H result preserves:
 
-011-G now establishes the current outcome-authority chain:
+- source authority != Export representation != Publication release != transport delivery;
+- every meaningful Export binds exact SourceBasis + purpose + AudienceProfile;
+- Export currency is independent from Publication distribution state;
+- Affected Export can be revalidated without changing historical SourceBasis;
+- newer/corrected source requires a distinct Export;
+- generation never implies Publication;
+- Publication release/withdrawal/succession is explicit and history-preserving;
+- source correction never silently retargets historical Publication;
+- official != public != delivered.
 
-- historical obligation satisfaction is distinct from current evidence eligibility;
-- factual Coverage stays separate from governed exception disposition;
-- Aggregate may exist while Coverage is Incomplete and does not imply rank eligibility;
-- Rank is derived from a supplied eligible Team set and declared policy;
-- Rank-derived Award basis does not own recognition and recalculation never silently moves an Award;
-- ordinary official closeout coordinates `Competition.finalize` and `OutcomeDeclaration.declare` while preserving separate ownership;
-- calculated != official != public;
-- post-Finalization correction leaves Competition Finalized and may make the existing Outcome Declaration Affected;
-- only explicit successor confirmation changes declared official authority.
+All semantic families represented by legacy synchronization contracts 01–16 now have current Phase 011 owners. 011-I therefore shifts to whole-application closure: final action-surface classification, chain/cycle analysis, conceptual automation review, over/under-synchronization, authority preservation and defensible synergy. 011-J will then reconcile the canonical corpus and decide Phase 011 exit readiness for Phase 012.
 
-011-H now owns Export/Publication representation currency and release. 011-I will close whole-application action/chaining/automation/coherence questions and 011-J will reconcile the canonical synchronization corpus.
-
-Phase 011 remains Concept Design. It does not define APIs, services, queues, transactions, retries, workers, workflow engines or deployment architecture.
+Phase 011 remains Concept Design. It does not define APIs, services, queues, transactions, retries, workers, workflow engines, storage/CDN delivery, or deployment architecture.
 
 ## Completion runway
 
 ```text
 010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                 IN PROGRESS — 011-H NEXT
+011 composition / synchronization revalidation                 IN PROGRESS — 011-I NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -119,4 +118,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **011-H — Export, Publication, Representation Currency & Release Composition**.
+Proceed to **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.
