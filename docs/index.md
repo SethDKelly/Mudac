@@ -14,7 +14,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
-* [Synchronizations](canonical/synchronizations/) — current Phase 011 family and whole-application synchronization authority.
+* [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
 * [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
@@ -23,18 +23,11 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 011](011-concept-composition-synchronization/).
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and the current methodology phase.
 
-Use [011-I](011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md) for the current whole-application closure and [Application Action Surface, Chaining & Automation Composition](canonical/synchronizations/application-action-surface-composition.md) for durable action/chaining/automation authority.
+Phase 011 is complete. Use [011-J](011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for its exit decision and Phase 012 handoff. Use canonical synchronization owners rather than numbered Phase 011 records for current composition rules.
 
-Family owners remain:
-
-- [Competition Lifecycle, Participation & Contextual Access Composition](canonical/synchronizations/competition-participation-access.md);
-- [Competitor Context, Evaluation Occurrence & Obligation Composition](canonical/synchronizations/evaluation-occurrence-obligation.md);
-- [Evaluation Basis, Scorecard Authority & Capture Composition](canonical/synchronizations/evaluation-basis-scorecard-authority.md);
-- [Temporal Truth, Correction & Historical Authority](canonical/synchronizations/temporal-truth-correction.md);
-- [Evaluation Outcome, Award, Finalization & Declaration Composition](canonical/synchronizations/evaluation-outcome-finalization-declaration.md);
-- [External Representation, Currency & Publication Release Composition](canonical/synchronizations/external-representation-publication-release.md).
+The pre-011 sixteen-contract file is historical evidence only.
 
 # Current methodology state
 
@@ -42,17 +35,8 @@ Family owners remain:
 Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
-011: IN PROGRESS
-011-A: COMPLETE — READY
-011-B: COMPLETE — PASS
-011-C: COMPLETE — PASS
-011-D: COMPLETE — PASS
-011-E: COMPLETE — PASS
-011-F: COMPLETE — PASS
-011-G: COMPLETE — PASS
-011-H: COMPLETE — PASS
-011-I: COMPLETE — PASS
-011-J: NEXT
+011: COMPLETE — PASS
+012: NEXT — Concept Dependence, Product-Family, Subset & Scope Analysis
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -60,9 +44,9 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Phase 011 authority posture
+# Phase 011 exit posture
 
-All semantic families from the historical synchronization corpus now have current owners, and 011-I closes the whole-application action surface.
+Phase 011 closed all CO-01 through CO-12 composition obligations and R-01 through R-12 risks. All historical synchronization contracts 01–16 have current owners or explicit downstream mapping disposition.
 
 Final application action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved action class remains.
 
@@ -70,18 +54,35 @@ The governing automation rule is:
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-No semantic cycle requires a hidden coordinator Concept. Over-synchronization and under-synchronization are closed enough for the Phase 011 exit gate. Accepted composition synergies add application value without merging Concept ownership.
+No semantic cycle requires a hidden coordinator Concept. Current synchronization knowledge is representation-independent and contains no runtime orchestration authority.
 
-011-J is now responsible for canonical synchronization reconciliation, documentation/supersession cleanup, the full Phase 011 exit review and the Phase 012 handoff decision.
+# Phase 012 handoff
+
+Phase 012 corresponds to Base Phase 006:
+
+> **Concept Dependence, Product-Family, Subset & Scope Analysis**
+
+It asks which otherwise independent Concepts must, may, conditionally or alternatively be co-included in coherent application/product variants, what subsets are valid, and which coherent variants MUDAC actually adopts into scope.
+
+Important distinction:
+
+```text
+synchronization = how included Concepts interact
+extrinsic dependence = which Concepts must be co-included for an application role
+intrinsic dependence = upstream Concept-boundary defect
+implementation dependency = out of scope
+```
+
+A synchronization edge must not be promoted mechanically into a dependence edge.
 
 # Completion runway
 
 ```text
 010 foundational project/purpose/discovery/specification/modularity    COMPLETE — PASS
   ↓
-011 composition / synchronization                                      IN PROGRESS — 011-J NEXT
+011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets
+012 dependence / product family / subsets / scope                      NEXT
   ↓
 013 mapping / representation
   ↓
@@ -94,6 +95,6 @@ No semantic cycle requires a hidden coordinator Concept. Over-synchronization an
 017 methodology completeness / closure
 ```
 
-A successful 011-J may authorize Phase 012 entry only. A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**; it does not automatically reactivate prior architecture or implementation planning.
+A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**.
+The immediate next task is **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**.
