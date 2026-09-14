@@ -10,10 +10,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
-* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current Phase 011 synchronization authority.
-* [`docs/011-concept-composition-synchronization/`](docs/011-concept-composition-synchronization/) — active Phase 011 design records.
-* [`docs/011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md`](docs/011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md) — current whole-application composition result.
-* [`docs/canonical/synchronizations/application-action-surface-composition.md`](docs/canonical/synchronizations/application-action-surface-composition.md) — durable action/chaining/automation authority.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority.
+* [`docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md`](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) — Phase 011 exit and Phase 012 handoff.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -30,89 +28,52 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009 methodology realignment: COMPLETE — PASS
 010 foundational completion: COMPLETE — PASS
-011 composition/synchronization revalidation: IN PROGRESS
-011-A: COMPLETE — READY
-011-B: COMPLETE — PASS
-011-C: COMPLETE — PASS
-011-D: COMPLETE — PASS
-011-E: COMPLETE — PASS
-011-F: COMPLETE — PASS
-011-G: COMPLETE — PASS
-011-H: COMPLETE — PASS
-011-I: COMPLETE — PASS
-011-J: NEXT
+011 composition/synchronization revalidation: COMPLETE — PASS
+012 dependence/product-family/subset/scope: NEXT
 ```
 
 ## Current Concept catalog
 
 Phase 010 canonically converged the model to eighteen Concepts:
 
-1. Competition
-2. Division
-3. Team
-4. Panel
-5. Evaluation Occurrence
-6. Evaluation Obligation
-7. Rubric
-8. Scorecard
-9. Award
-10. Identity
-11. Participation
-12. Alias
-13. Access
-14. Versioning
-15. Provenance
-16. Outcome Declaration
-17. Export
-18. Publication
+Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
 The former `Judging Encounter` and `Official Outcome Revision` paths remain deprecated historical adapters.
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains work/process context rather than an authority-owning Concept.
 
-## Phase 011 posture
+## Phase 011 result
 
-011-C through 011-H establish all family-level composition semantics. 011-I now closes the whole-application action/chaining/automation question.
+Phase 011 now passes the Base composition exit gate.
 
-The final action classes are:
-
-```text
-D  direct application action
-C  coordinated application action
-P  composition-only participant
-S  system-triggered conceptual reaction
-X  intentionally unavailable generic action
-```
-
-No unresolved action class remains.
+Current application behavior can be reconstructed from independent Concept actions + explicit synchronization + deliberate application-action exposure. The final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable; no unresolved `U` remains.
 
 The governing automation rule is:
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-No semantic cycle requires a hidden Workflow/Run/Case/Task/Result/Release/Automation coordinator. Over-synchronization and under-synchronization have been audited across the complete path from Identity/Participation through judging, correction, official declaration, Export and Publication.
-
-Key authority distinctions remain:
+Current composition preserves:
 
 - Panel membership ≠ occurrence participation ≠ responsibility ≠ Scorecard evidence;
 - historical satisfaction ≠ current evidence eligibility;
 - Coverage exception ≠ factual Coverage satisfaction;
 - Aggregate existence ≠ rank eligibility;
 - Rank ≠ Award authority;
+- Competition Finalization ≠ Outcome Declaration;
 - calculated ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport;
 - correction preserves attributable history rather than silently rewriting downstream authority.
 
-011-J is now the mandatory Phase 011 canonical reconciliation and exit gate. A successful 011-J may authorize **Phase 012 only**. It does not authorize architecture or implementation.
+All historical synchronization contracts 01–16 are fully dispositioned. The old corpus is now an archival adapter rather than parallel current authority.
 
 ## Completion runway
 
 ```text
 010 project/purpose/discovery/specification/modularity          COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                 IN PROGRESS — 011-J NEXT
+011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope
+012 dependence / product family / subsets / scope              NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -125,6 +86,8 @@ Key authority distinctions remain:
 017 methodology completeness / canonical consolidation / closure
 ```
 
+Phase 012 corresponds to Base Phase 006 — **Concept Dependence, Product-Family, Subset & Scope Analysis**. It must derive inclusion relationships freshly rather than copying synchronization edges.
+
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
 ## Downstream work
@@ -135,4 +98,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**.
+Proceed to **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**.
