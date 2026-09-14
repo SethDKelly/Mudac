@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes; Official Outcome Revision remains only a deprecated historical adapter.
-* [Synchronizations](synchronizations/) — current Phase 011 synchronization owners plus preserved pre-011 evidence for unreplaced families.
+* [Synchronizations](synchronizations/) — current Phase 011 synchronization owners plus preserved pre-011 evidence.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
@@ -43,7 +43,8 @@ implementation authorization: NOT YET
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
-011-H: NEXT
+011-H: COMPLETE — PASS
+011-I: NEXT
 ```
 
 # Phase 011 current authority
@@ -56,7 +57,8 @@ Current family-level authority now includes:
 - [011-D](../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) → [Competitor Context, Evaluation Occurrence & Obligation Composition](synchronizations/evaluation-occurrence-obligation.md);
 - [011-E](../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) → [Evaluation Basis, Scorecard Authority & Capture Composition](synchronizations/evaluation-basis-scorecard-authority.md);
 - [011-F](../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) → [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md);
-- [011-G](../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) → [Evaluation Outcome, Award, Finalization & Declaration Composition](synchronizations/evaluation-outcome-finalization-declaration.md).
+- [011-G](../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) → [Evaluation Outcome, Award, Finalization & Declaration Composition](synchronizations/evaluation-outcome-finalization-declaration.md);
+- [011-H](../011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md) → [External Representation, Currency & Publication Release Composition](synchronizations/external-representation-publication-release.md).
 
 Current Concept authority remains the Phase 010 eighteen-Concept catalog:
 
@@ -64,20 +66,18 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 `Judging Encounter` and `Official Outcome Revision` remain only as deprecated historical adapters.
 
-Current outcome composition preserves these distinctions:
+Current representation/release composition preserves these distinctions:
 
-- historical obligation satisfaction ≠ current evidence eligibility;
-- Coverage factual sufficiency ≠ exception permission;
-- Aggregate existence ≠ rank eligibility;
-- calculated Rank ≠ Ranking Readiness;
-- rank-derived candidate ≠ Award conferral;
-- Competition Finalization ≠ Outcome Declaration content/history;
-- calculated ≠ official ≠ public;
-- post-Finalization correction never silently replaces recognition or declared authority.
+- source authority ≠ representation authority;
+- actor Access ≠ audience disclosure permission;
+- Export currency ≠ Publication distribution state;
+- generation ≠ publication;
+- publication ≠ delivery;
+- source correction ≠ historical Export rewrite;
+- successor Export ≠ automatic successor Publication;
+- withdrawal/supersession ≠ retroactive disappearance of prior release.
 
-Rank-derived Award conferral requires a Ranking Ready basis. An Affected Outcome Declaration remains latest declared official authority until explicit successor confirmation, even when a materially corrected basis yields the same visible result.
-
-Only the Export/Publication representation-release family remains for 011-H before whole-application composition closure in 011-I and canonical reconciliation in 011-J.
+With 011-H, all legacy synchronization semantic families now have current Phase 011 owners. 011-I performs whole-application action-surface/chaining/automation/over-under/authority/synergy closure; 011-J then reconciles the canonical corpus and hands off to Phase 012.
 
 # Retrieval rule during reopened design
 
@@ -96,7 +96,7 @@ For Phases 011–017:
 ```text
 010 project/purpose / discovery / specification / modularity   COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                IN PROGRESS — 011-H NEXT
+011 composition / synchronization revalidation                IN PROGRESS — 011-I NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -111,4 +111,4 @@ For Phases 011–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **011-H — Export, Publication, Representation Currency & Release Composition**.
+The immediate next work is **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.

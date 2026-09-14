@@ -57,10 +57,11 @@ Current composition owners live under [Canonical Synchronizations](../synchroniz
 - 011-D composes Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation while keeping intended grouping, actual participation and responsibility distinct;
 - 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity;
 - 011-F establishes owner-specific temporal correction/invalidation/replacement/successor composition;
-- 011-G composes current qualifying evidence, factual Coverage, Aggregate/Rank, Ranking Readiness, Award authority, coordinated Competition Finalization and explicit Outcome Declaration.
+- 011-G composes qualifying evidence, factual Coverage, Aggregate/Rank, Ranking Readiness, Award authority, coordinated Competition Finalization and explicit Outcome Declaration;
+- 011-H composes exact-source Export representation/currency, audience disclosure, explicit Publication release/withdrawal/succession and historical external-release truth.
 
-011-G preserves the Phase 010 boundaries: Coverage/Aggregate/Rank/Readiness remain derived; Award owns recognition; Competition owns lifecycle closure; Outcome Declaration owns official declaration content/currentness/history. Rank-derived Award conferral requires a Ranking Ready basis, and post-Finalization source correction never silently moves recognition or declaration authority.
+011-H confirms the Phase 010 Export/Publication split: Export owns stable representation identity and source-relative currency; Publication owns deliberate release and release history. Generation never implies publication, source correction never rewrites or retargets historical release, and transport/delivery remains outside Publication authority.
 
-No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
+No Concept-boundary defect requiring Phase 010 reopening was found. 011-I now audits the whole-application action/chaining/automation surface; Phase 012 will separately analyze product-family inclusion dependence.
 
-Next: **011-H — Export, Publication, Representation Currency & Release Composition**.
+Next: **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.

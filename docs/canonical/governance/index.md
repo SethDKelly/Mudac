@@ -37,7 +37,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
-011-H: NEXT
+011-H: COMPLETE — PASS
+011-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -57,16 +58,15 @@ Current family-level synchronization authority includes:
 - [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md);
 - [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) / [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md);
 - [011-F](../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md);
-- [011-G](../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) / [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md).
+- [011-G](../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) / [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md);
+- [011-H](../../011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md) / [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md).
 
-011-G establishes the current internal outcome-authority chain: qualifying current evidence feeds factual Coverage and Aggregate; Coverage remains separate from exception permission; Rank consumes an explicitly rank-eligible Team set; Ranking Readiness is distinct from calculated Rank and is required for rank-derived Award conferral; Award owns recognition; and ordinary official closeout coordinates `Competition.finalize` + `OutcomeDeclaration.declare` without merging ownership.
+011-H closes the remaining family-level representation/release semantics: Export binds exact source/purpose/audience meaning; least-disclosure representation is independent of actor Access; Export currency is independent of Publication distribution state; generation never publishes; source correction never retargets old Export/Publication history; successor release is explicit; and official/public/delivered remain separate.
 
-Post-Finalization correction leaves Competition Finalized. If a material dependency of the immutable declared basis changes, the current declaration may become Affected and remains latest declared authority until explicit successor confirmation. The successor is still required when the corrected basis changes materially even if visible result values remain unchanged.
-
-Where a Phase 011 canonical synchronization owner exists, it outranks corresponding legacy contract text. Only unreplaced external representation/release semantics remain pre-011 evidence until 011-H.
+Where a current Phase 011 canonical synchronization owner exists, it outranks corresponding legacy synchronization prose. With 011-H, all legacy synchronization semantic families have current owners. 011-I now performs the whole-application action-surface/chaining/automation/over-under/authority/synergy audit before 011-J canonical reconciliation.
 
 Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **011-H — Export, Publication, Representation Currency & Release Composition**.
+Proceed to **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.

@@ -23,11 +23,12 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - **Readiness** remains derived. In particular, calculated Rank is distinct from **Ranking Readiness**, and Finalization Readiness is distinct from Competition lifecycle/Outcome Declaration authority.
 - **Reconciliation** remains process/work mode rather than independent ticket-like source state.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
+- No separate `Representation Currency`, `Release`, `Delivery`, or `Distribution` mechanism is required by 011-H: Export owns representation currency, Publication owns release state, and transport/delivery remains downstream realization.
 
-Phase 011 current family authority through 011-G establishes lifecycle/access, occurrence/responsibility, evaluation authority/capture, temporal correction/invalidation/successor, and internal outcome/Award/finalization/declaration composition.
+Phase 011 current family authority through 011-H now covers all semantic synchronization families.
 
-[Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md) establishes that current qualifying evidence—not historical satisfaction alone—feeds Coverage/Aggregate/Rank; a governed exception never rewrites Coverage fact; rank-derived Award conferral requires a Ranking Ready basis; Award remains the recognition owner; and ordinary official closeout coordinates Competition Finalization with explicit Outcome Declaration.
+[External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md) establishes that exact source/purpose/audience binding and Export currency are Concept-owned by Export, while explicit release/withdrawal/succession and release history are Concept-owned by Publication. Those meanings do not require an additional derived coordinator.
 
-Post-Finalization source correction may yield new current derivations while the prior declaration remains the latest official authority in Affected state until explicit successor confirmation.
+011-I now performs the whole-application action-surface/chaining/automation/over-under/authority/synergy closure across the complete family set.
 
-Next: **011-H — Export, Publication, Representation Currency & Release Composition**.
+Next: **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.
