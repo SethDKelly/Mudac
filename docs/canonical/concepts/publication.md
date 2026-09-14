@@ -8,7 +8,8 @@ sources:
   - resource: ../../002-concept-specification/002-H-export-print-operational-continuity-external-representations.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+  - resource: ../../011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T16:49:00-05:00 }
 ---
 
 # Purpose
@@ -50,9 +51,18 @@ Source correction, representation regeneration, or Export-currentness change nev
 
 Possession of a URL, QR code, file, or transport reference is not itself Publication authority or Access permission.
 
+<a id="pub-002"></a>
+## PUB-002 — Withdrawal and supersession preserve release history
+
+Withdrawal or successor release changes current MUDAC distribution authority but does not erase that the predecessor representation was released or prove that every previously distributed physical/digital copy disappeared.
+
+A successor Publication binds its own exact successor Representation. The predecessor is never retargeted.
+
 # MUDAC composition binding
 
 MUDAC normally supplies an [Export](export.md) as the Representation. Whether all MUDAC product variants containing Publication must also contain Export is an inclusion-dependence question for Phase 012, not intrinsic Publication semantics.
+
+Current Phase 011 composition is [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md).
 
 # Boundaries
 
