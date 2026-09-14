@@ -8,10 +8,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
-5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/) before task-specific composition work.
-6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline; then use the current family owners from 011-C through 011-H for the semantic family being changed.
-7. Use [011-H](docs/011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md) / [External Representation, Currency & Publication Release Composition](docs/canonical/synchronizations/external-representation-publication-release.md) as current external-representation/release authority.
-8. Treat only unreplaced portions of the old synchronization corpus and Phase 007-C/007-D as evidence; current Phase 011 family owners outrank matching legacy prose.
+5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/).
+6. Use [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) only as the historical Phase 011 inventory/action baseline; current family authorities are 011-C through 011-H.
+7. Use [011-I](docs/011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md) and [Application Action Surface, Chaining & Automation Composition](docs/canonical/synchronizations/application-action-surface-composition.md) as current whole-application action/chaining/automation authority.
+8. Treat the old sixteen-contract synchronization corpus as historical evidence wherever current Phase 011 owners supersede it.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -37,101 +37,104 @@ implementation authorization: NOT YET
 011-F: COMPLETE — PASS
 011-G: COMPLETE — PASS
 011-H: COMPLETE — PASS
-011-I: NEXT
+011-I: COMPLETE — PASS
+011-J: NEXT
 ```
 
 ## Current Concept authority
 
 The canonical catalog contains eighteen Concepts:
 
-1. Competition
-2. Division
-3. Team
-4. Panel
-5. Evaluation Occurrence
-6. Evaluation Obligation
-7. Rubric
-8. Scorecard
-9. Award
-10. Identity
-11. Participation
-12. Alias
-13. Access
-14. Versioning
-15. Provenance
-16. Outcome Declaration
-17. Export
-18. Publication
+Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
 Do **not** use the previous sixteen-Concept taxonomy as current authority.
 
-- `Judging Encounter` is a deprecated adapter to Evaluation Occurrence + Evaluation Obligation.
-- `Official Outcome Revision` is a deprecated adapter to Outcome Declaration.
-- Coverage/Evaluation Sufficiency remains derived factual sufficiency; exception disposition is separate.
-- Reconciliation remains process/work mode.
-- Aggregate, Rank and Readiness remain derived mechanisms.
-- Recovery/Continuity remains a cross-cutting purpose obligation rather than a standalone Concept.
+`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
 
-## Phase 011 discipline
+Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context. Recovery/Continuity remains a cross-cutting purpose obligation.
+
+## Phase 011 whole-application discipline
 
 Phase 011 composes independent Concepts; it does not rewrite them in terms of one another.
 
-- 011-C establishes Identity→Participation binding, contextual Access and Competition lifecycle composition.
-- 011-D establishes historical competitor presentation, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment and participant/responsibility separation.
-- 011-E establishes authoritative Rubric Version/Evaluation Basis binding, one logical Scorecard per obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction and capture-channel parity.
-- 011-F establishes supersession/invalidation/replacement distinction, post-authority capture correction, occurrence/evidence invalidation, obligation successor work, corrected historical assertions and affected-state propagation.
-- 011-G establishes eligible-evidence → Coverage/Aggregate/Rank composition, Award authority, coordinated Competition Finalization + Outcome Declaration, and post-Finalization Affected/successor semantics.
-- 011-H establishes exact-source Export generation/currency/revalidation and explicit Publication release/withdrawal/succession.
-- Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence.
-- Historical obligation satisfaction ≠ current evidence eligibility.
-- Coverage factual sufficiency ≠ governed exception disposition.
-- `Coverage=Incomplete` may coexist with an accepted exception for a specific downstream consequence.
-- Missing evidence is never zero.
-- Aggregate existence ≠ Coverage satisfaction ≠ rank eligibility.
-- Rank consumes a supplied rank-eligible Team set and declared policy; do not expose generic Rank edits.
-- Rank-derived Award selection basis does not own conferral authority.
-- Rank recalculation never silently moves an Award.
-- Competition Finalization ≠ Outcome Declaration content/history.
-- calculated ≠ official ≠ public.
-- **source authority ≠ Export representation ≠ Publication release ≠ transport delivery**.
-- Every meaningful Export binds exact SourceBasis + purpose + AudienceProfile.
-- Export never promotes source authority.
-- Export currency is independent from Publication state.
-- `Affected` Export uses `validateRepresentation` for non-destructive revalidation; changing SourceBasis requires a new Export.
-- Export generation never implies Publication.
-- Publication binds one exact Representation/Audience/Channel.
-- Source correction never silently retargets, withdraws or republishes historical Publication.
-- Withdrawal/supersession preserves prior release history and does not prove external copies disappeared.
-- Publication does not imply transport/delivery success.
-- Versioning and Provenance generic actions remain composition-only; do not expose them as generic admin controls.
-- Do not mechanically rename deprecated historical concepts.
-- Preserve abstract peer parameters introduced by Phase 010; application bindings belong in composition.
-- Test over-synchronization and under-synchronization.
-- Trace material conceptual chaining/automation and check authority, preconditions, invariants and cycle risk.
-- Do not infer inclusion dependence from synchronization; Phase 012 owns subsets/product-family dependence.
-- Keep user-visible mapping questions for Phase 013.
-- If composition exposes a genuine specification/boundary defect, correct the natural owner and revalidate affected conclusions.
+Final action classes:
+
+- **D** direct application action;
+- **C** coordinated application action;
+- **P** composition-only participant;
+- **S** system-triggered conceptual reaction;
+- **X** intentionally unavailable generic action.
+
+No unresolved `U` action remains.
+
+Governing rule:
+
+> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
+
+Preserve these whole-application distinctions:
+
+- Identity continuity ≠ Participation authority ≠ Access permission;
+- Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
+- Evaluation Basis is one exact authoritative Rubric Version;
+- Scorecard Draft ≠ authority;
+- Versioning ≠ semantic authorship;
+- Provenance ≠ domain authority;
+- supersession ≠ invalidation ≠ replacement;
+- historical obligation satisfaction ≠ current evidence eligibility;
+- terminal obligations never reopen;
+- missing evidence is never zero;
+- Coverage factual sufficiency ≠ exception disposition;
+- Aggregate existence ≠ rank eligibility;
+- Rank ≠ Award authority;
+- Competition Finalization ≠ Outcome Declaration content/history;
+- calculated ≠ official ≠ public ≠ delivered;
+- source authority ≠ Export representation ≠ Publication release ≠ transport delivery;
+- source correction never silently rewrites dependent owner authority/history.
+
+## Automation limits
+
+Conceptual automation may include Access guards, derived recomputation, Ready-state blocking invalidation, bounded live-Judge Participation completion during Complete Live Event, verified declaration/export affectedness and required supporting Provenance.
+
+Do **not** automate semantic authorship or discretionary authority merely from an upstream change. In particular do not automatically:
+
+- finalize Judge Scorecards;
+- satisfy obligations without qualifying evidence;
+- create successor Judge work because evidence became unusable;
+- rebind structural Scorecard identity;
+- clone replacement-occurrence responsibilities;
+- move/revoke/reconfer Awards;
+- Finalize Competition;
+- establish or confirm Outcome Declarations;
+- regenerate Export merely because source changed;
+- publish/withdraw/supersede Publication;
+- restore Participation/Access after resume.
+
+## Rejected hidden coordinators
+
+Do not introduce semantic authority named Workflow, Run, Case, Task, Reconciliation state machine, Finalization coordinator, Result/Outcome aggregate owner, Release manager, Automation/Cascade controller or Synchronization state.
+
+Implementation constructs with similar names may later exist only as downstream realization mechanisms and may not become Concept authority by convenience.
+
+## Phase boundaries
+
+- Phase 012 owns inclusion/dependence/product-family subsets. Synchronization is evidence, not automatic dependence.
+- Phase 013 owns user-visible mapping/interaction. Action classification is not a UI/CLI/API design.
+- Architecture/implementation remain suspended until the full reopened design runway eventually authorizes separate re-entry.
 
 ## Approved Phase 011 order
 
 ```text
-011-A composition scope / evidence reuse / risks / decomposition      COMPLETE — READY
-011-B legacy sync inventory / obligation map / action baseline        COMPLETE — PASS
-011-C Competition lifecycle / Identity / Participation / Access       COMPLETE — PASS
-011-D Team/Division/Alias/Panel / Occurrence / Obligation             COMPLETE — PASS
-011-E evaluation basis / Scorecard / Versioning / Provenance / paper  COMPLETE — PASS
-011-F temporal correction / invalidation / successor / affected       COMPLETE — PASS
-011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    COMPLETE — PASS
-011-H Export / Publication / currency / release                       COMPLETE — PASS
-011-I action surface / chaining / automation / over-under / synergy   NEXT
-011-J canonical reconciliation / exit / Phase 012 handoff             PLANNED
+011-A  COMPLETE — READY
+011-B  COMPLETE — PASS
+011-C  COMPLETE — PASS
+011-D  COMPLETE — PASS
+011-E  COMPLETE — PASS
+011-F  COMPLETE — PASS
+011-G  COMPLETE — PASS
+011-H  COMPLETE — PASS
+011-I  COMPLETE — PASS
+011-J  NEXT — canonical synchronization reconciliation / Phase 011 exit / Phase 012 handoff
 ```
-
-## 011-I discipline
-
-011-I evaluates the composed application **as a whole**. Do not invent another domain family merely to continue decomposition.
-
-It must finalize application action exposure, trace material chains, identify automation, test for cycles/authority transfer, pressure-test over/under-synchronization and document defensible synergy. It may create a finite repair queue for 011-J but must not convert conceptual chains into event buses, transactions, workflows, queues or service orchestration.
 
 ## Design-only rules for Phases 011–017
 
@@ -154,4 +157,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**
+> **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**
