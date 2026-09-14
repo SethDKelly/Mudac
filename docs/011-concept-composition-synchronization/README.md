@@ -1,6 +1,6 @@
 # Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation
 
-Status: **In Progress — 011-A/B/C/D/E/F complete; 011-G next**
+Status: **In Progress — 011-A/B/C/D/E/F/G complete; 011-H next**
 
 ## Role in the completion runway
 
@@ -23,9 +23,10 @@ Current family authorities established so far:
 - 011-C → [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md);
 - 011-D → [Competitor Context, Evaluation Occurrence & Obligation Composition](../canonical/synchronizations/evaluation-occurrence-obligation.md);
 - 011-E → [Evaluation Basis, Scorecard Authority & Capture Composition](../canonical/synchronizations/evaluation-basis-scorecard-authority.md);
-- 011-F → [Temporal Truth, Correction & Historical Authority](../canonical/synchronizations/temporal-truth-correction.md).
+- 011-F → [Temporal Truth, Correction & Historical Authority](../canonical/synchronizations/temporal-truth-correction.md);
+- 011-G → [Evaluation Outcome, Award, Finalization & Declaration Composition](../canonical/synchronizations/evaluation-outcome-finalization-declaration.md).
 
-No Phase 010 Concept boundary has required reopening. 011-F made one bounded composition-facing clarification to Scorecard successor-state semantics so source-faithful capture correction can use the same logical Scorecard while Provenance distinguishes Organizer correction actor from Judge represented authority.
+No Phase 010 Concept boundary has required reopening.
 
 ## Subgroup status
 
@@ -37,27 +38,27 @@ No Phase 010 Concept boundary has required reopening. 011-F made one bounded com
 | 011-D | [Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment](011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) | **Complete — PASS** |
 | 011-E | [Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition](011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) | **Complete — PASS** |
 | 011-F | [Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation](011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) | **Complete — PASS** |
-| 011-G | **Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition** | **Next** |
-| 011-H | Export, Publication, Representation Currency & Release Composition | Planned |
+| 011-G | [Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition](011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) | **Complete — PASS** |
+| 011-H | **Export, Publication, Representation Currency & Release Composition** | **Next** |
 | 011-I | Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure | Planned |
 | 011-J | Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff | Planned |
 
-## 011-F current composition result
+## 011-G current composition result
 
-011-F establishes that:
+011-G establishes that:
 
-- correction targets the smallest semantic owner actually wrong;
-- Version supersession, invalidation and distinct-subject replacement remain separate;
-- invalidation never silently revives an older Version or implies a successor;
-- source-faithful post-authority capture correction stays on the same logical Scorecard when structural identity is unchanged, with Organizer actor and Judge represented authority distinguished by Provenance;
-- wrong Scorecard Evaluator/Subject/OccurrenceContext/EvaluationBasis is structural misbinding and cannot be ordinary amendment;
-- Evaluation Occurrence invalidation preserves occurrence/evidence history while dependent evidence may lose current eligibility;
-- Outstanding obligations tied to invalid occurrence are explicitly ended rather than left satisfiable against invalid context;
-- Satisfied obligations never reopen; legitimate re-evaluation uses an Outstanding successor obligation and a new logical Scorecard;
-- replacement occurrence is distinct and never clones participants, obligations or evidence automatically;
-- ordinary Rubric Version supersession never changes historical evaluations; material Rubric invalidation has selective dependency impact;
-- corrected historical assertions preserve both as-recorded/as-known truth and later best-known truth through Provenance;
-- affected-state propagation is dependency-specific and non-destructive; owner-specific outcome/representation actions remain 011-G/H.
+- historical Evaluation Obligation satisfaction is distinct from current evidence eligibility;
+- factual Coverage remains `Satisfied`/`Incomplete`, with governed exception disposition separate;
+- Aggregate may exist while Coverage is Incomplete and does not imply rank eligibility;
+- Rank derives from a supplied rank-eligible Team set and declared Evaluation Policy, with no manual Rank authority;
+- **Ranking Readiness** is distinct from calculated Rank and is required before rank-derived Award conferral;
+- Award owns recognition, and Rank recalculation never silently moves a conferral;
+- Finalization Readiness requires a reconstructible current closeout basis including resolved Ranking Readiness and required Awards;
+- ordinary MUDAC official closeout coordinates `Competition.finalize` + `OutcomeDeclaration.declare` without merging ownership;
+- calculated != official != public;
+- post-Finalization correction leaves Competition Finalized and may make the existing Outcome Declaration Affected;
+- an Affected declaration remains latest declared authority until explicit successor confirmation;
+- if its materially corrected basis changes, explicit successor confirmation remains required even when visible winner/rank/Award values do not change.
 
 ## Dependency order
 
@@ -74,9 +75,9 @@ No Phase 010 Concept boundary has required reopening. 011-F made one bounded com
   ↓
 011-F temporal correction / invalidation / successor / affected     COMPLETE — PASS
   ↓
-011-G derived outcomes / Award / Finalization / Outcome Declaration NEXT
+011-G derived outcomes / Award / Finalization / Outcome Declaration COMPLETE — PASS
   ↓
-011-H Export / Publication / representation currency / release
+011-H Export / Publication / representation currency / release      NEXT
   ↓
 011-I application action surface / chaining / automation / over-under / authority / synergy
   ↓
@@ -93,7 +94,7 @@ It may **not** define APIs, services, queues, event choreography, transactions, 
 
 Phase 011 answers how included Concepts interact. Phase 012 will answer which Concepts must, may, conditionally or alternatively be included together in coherent application/product variants.
 
-Phase 013 will revalidate user-visible mapping/interaction, including correction/re-evaluation affordances and visible status representation. An action-surface classification is not a UI design.
+Phase 013 will revalidate user-visible mapping/interaction, including reconciliation/finalization/declaration and external-release affordances. An action-surface classification is not a UI design.
 
 ## Current execution posture
 
@@ -108,7 +109,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
-011-G: NEXT
+011-G: COMPLETE — PASS
+011-H: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -119,6 +121,6 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
+Proceed to **011-H — Export, Publication, Representation Currency & Release Composition**.
 
-011-G starts from explicit evidence/currentness semantics: current eligible evidence may differ from historical obligation satisfaction; invalidation/correction never silently moves recognition or declared authority; and affected downstream state must be reconciled through its own owner rather than by mutating source history.
+011-H starts from a settled internal outcome-authority chain and must determine how Export binds source authority/currentness and how Publication deliberately releases, withdraws or supersedes representations without generation implying release or source correction retargeting historical publication.

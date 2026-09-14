@@ -14,14 +14,16 @@ sources:
   - resource: ../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md
   - resource: ../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md
   - resource: ../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md
+  - resource: ../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md
   - resource: ../synchronizations/competition-participation-access.md
   - resource: ../synchronizations/evaluation-occurrence-obligation.md
   - resource: ../synchronizations/evaluation-basis-scorecard-authority.md
   - resource: ../synchronizations/temporal-truth-correction.md
+  - resource: ../synchronizations/evaluation-outcome-finalization-declaration.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: downstream-authority-quarantine.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T13:36:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T14:24:00-05:00 }
 ---
 
 # Purpose
@@ -32,7 +34,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 is active for representation-independent Concept composition and synchronization.
 
-011-B completed the legacy-sync inventory/action baseline. 011-C established lifecycle/actor/access composition. 011-D established competitor-context/Panel/Evaluation Occurrence/Evaluation Obligation composition. 011-E established evaluation-basis/Scorecard-authority/Versioning/Provenance/paper-capture composition. 011-F has now established temporal correction, invalidation, replacement, successor-work and affected-state propagation semantics.
+011-C through 011-G have established current lifecycle/access, occurrence/responsibility, evaluation-basis/Scorecard/capture, temporal correction/successor, and internal outcome/Award/finalization/declaration composition. 011-H is next for external representation/release.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -55,7 +57,8 @@ Phase 011: IN PROGRESS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
-011-G: NEXT
+011-G: COMPLETE — PASS
+011-H: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -87,9 +90,7 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 The previous Judging Encounter and Official Outcome Revision paths are deprecated historical adapters, not current semantic owners.
 
-Phase 010 establishes that these Concepts are sufficiently behaviorally specified, specific, complete, intrinsically independent and boundary-generic for composition work. Phase 011 may clarify MUDAC composition bindings but must reopen the natural Concept owner if a genuine intrinsic specification defect appears.
-
-011-F found no such boundary defect. Its bounded Scorecard clarification preserves the existing logical Scorecard purpose: the same successor-state mechanics may support Judge semantic amendment or source-faithful capture correction, while policy/Provenance distinguish correction class and acting actor from represented Judge authority.
+011-C through 011-G found no Concept-boundary defect requiring Phase 010 reopening. Composition clarifies MUDAC application bindings while preserving intrinsic Concept independence.
 
 # Phase 011 authority boundary
 
@@ -120,26 +121,24 @@ Current durable family owners are:
 - [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md), established by 011-C;
 - [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md), established by 011-D;
 - [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md), established by 011-E;
-- [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md), established/revalidated by 011-F.
+- [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md), established/revalidated by 011-F;
+- [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md), established by 011-G.
 
-Current 011-F rules include:
+Current outcome rules include:
 
-- correction targets the smallest semantic owner that is actually wrong;
-- Version supersession, invalidation and distinct-subject replacement are different transitions;
-- invalidation never silently revives an older Version or implies a successor;
-- Evaluation Occurrence invalidation preserves occurrence and Judge-authored evidence history while current evidence eligibility may be lost through the invalid dependency;
-- historical Evaluation Obligation satisfaction is distinct from current evidence eligibility;
-- terminal obligations never reopen;
-- an Outstanding obligation stranded on invalid context is explicitly ended rather than left satisfiable against it;
-- legitimate re-evaluation after unusable evidence uses a successor obligation and new logical Scorecard, and is policy-governed rather than automatic;
-- source-faithful post-authority capture correction may remain on the same logical Scorecard only when structural identity is unchanged and source proof is unambiguous;
-- structural Evaluator/Subject/OccurrenceContext/EvaluationBasis errors require invalidation/replacement rather than ordinary amendment;
-- ordinary Rubric Version supersession never retroactively rebinds historical evaluation state;
-- corrected historical assertions preserve both as-recorded/as-known state and later best-known truth through Provenance;
-- affected-state propagation is dependency-specific and owner-specific rather than a generic destructive cascade;
-- post-Finalization source correction leaves Competition Finalized and cannot silently replace declared/public authority.
+- historical obligation satisfaction does not prove current evidence eligibility;
+- Coverage factual sufficiency remains distinct from governed exception disposition;
+- Aggregate existence does not prove ranking eligibility;
+- Rank remains derived and non-editable;
+- calculated Rank is distinct from Ranking Readiness;
+- rank-derived Award conferral requires a Ranking Ready basis and Award remains the recognition owner;
+- ordinary official closeout coordinates `Competition.finalize` + initial `OutcomeDeclaration.declare` without merging ownership;
+- calculated != official != public;
+- post-Finalization correction leaves Competition Finalized;
+- material declared-basis change may make the current declaration Affected;
+- Affected remains latest declared authority until explicit successor confirmation, including when corrected visible result values remain unchanged.
 
-Where a current Phase 011 canonical synchronization owner exists, it outranks corresponding legacy synchronization prose. Legacy outcome/release semantics remain evidence until 011-G/H. 011-J will perform final corpus reconciliation.
+Where a current Phase 011 canonical synchronization owner exists, it outranks corresponding legacy synchronization prose. Legacy external representation/release semantics remain evidence until 011-H. 011-J will perform final corpus reconciliation.
 
 # Phase 011 runtime/implementation prohibition
 
@@ -163,15 +162,20 @@ Conceptual uncertain-outcome, duplicate-intent, authority-establishment, invalid
 
 Phase 011 action classifications are conceptual, not implementation or interaction design.
 
-A Concept action can be directly exposed, coordinated, composition-only, system-triggered, intentionally unavailable, or unresolved pending its owning subgroup.
+011-G settles the current internal outcome family:
 
-011-C settled lifecycle/access actions except `Competition.finalize`, which remains 011-G. 011-D settled ordinary occurrence/responsibility actions. 011-E settled Rubric-basis establishment, Scorecard start/finalize/amendment, obligation satisfaction, Versioning/Provenance participation and initial paper capture. 011-F now settles capture correction, evidence/occurrence invalidation, replacement linking, responsibility cancellation/succession, corrected historical assertions and generic affectedness discipline.
+- Coverage/Aggregate/Rank derivation is system/application derived behavior;
+- generic manual Rank edit is unavailable;
+- governed exception disposition is a controlled policy action and never mutates Coverage fact;
+- rank-derived Award conferral is coordinated and requires Ranking Readiness;
+- Competition `finalize` and initial Outcome Declaration `declare` are composition-only within ordinary `Finalize Competition & Declare Outcome`;
+- `OutcomeDeclaration.identifyAffected` is a system-triggered/composition reaction after verified dependency affectedness;
+- `OutcomeDeclaration.confirmSuccessor` is an explicit high-consequence declaration action;
+- automatic Export/Publication is unavailable here and belongs to 011-H.
 
-Generic `Versioning.invalidateVersion`, `Provenance.record`, `EvaluationObligation.requireSuccessorEvaluation`, or a generic "cascade/recompute everything" control are not unrestricted administrative actions.
+Generic Versioning/Provenance actions and generic cascade/recompute controls remain unavailable as unrestricted administrative actions.
 
-011-G is now the next owner for Coverage/Aggregate/Rank/Award/Competition Finalization/Outcome Declaration composition.
-
-Phase 013 will revalidate user-visible mapping, including correction/re-evaluation/affected-state representation.
+Phase 013 will revalidate user-visible mapping.
 
 # Phase 012 / Phase 013 boundaries
 
@@ -179,7 +183,7 @@ Phase 011 answers how included Concepts interact. Phase 012 answers which otherw
 
 A synchronization edge is not automatically an inclusion-dependence edge.
 
-Phase 013 owns user-visible representation/mapping questions such as role/context selection, occurrence/obligation presentation, correction affordances, paper/electronic Finalization and affected-state display.
+Phase 013 owns user-visible representation/mapping questions such as role/context selection, occurrence/obligation presentation, correction/reconciliation, Finalization/Declaration and external release affordances.
 
 # Current project-purpose constraints
 
@@ -198,17 +202,6 @@ Until successful Phase 017 closure:
 - Phase 008 implementation planning remains halted;
 - `docs/canonical/implementation/` remains downstream candidate/tooling knowledge, not current domain realization authority.
 
-# Permitted work
-
-Current work may:
-
-- execute Phases 011–017;
-- update canonical synchronization/composition knowledge when Phase 011 evidence establishes current semantics;
-- update current Concept/policy/mechanism owners when methodology evidence genuinely changes their meaning;
-- inspect historical downstream material only for contamination/assumptions/counterexamples or future handoff evidence;
-- maintain the frozen bootstrap narrowly for repository safety/buildability;
-- improve documentation/routing/validation supporting design work.
-
 # Meaning of future successful closure
 
 A successful Phase 017 may establish readiness for a **separate architecture/engineering re-entry**. It does not start implementation and does not automatically reactivate earlier architecture or Phase 008 plans.
@@ -217,4 +210,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**
+> **011-H — Export, Publication, Representation Currency & Release Composition**

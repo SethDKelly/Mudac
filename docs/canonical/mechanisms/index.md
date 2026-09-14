@@ -5,7 +5,7 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 * [Team Attributes](team-attributes.md) — disclosure-controlled descriptive Team metadata, including optional Team Name.
 * [Criterion & Notes](criterion-notes.md) — Rubric/Scorecard subordinate evaluation structure.
 * [Panel Membership & Composition](panel-membership-composition.md) — current Panel relational/composition support semantics.
-* [Readiness](readiness.md) — derived permission-to-proceed projections.
+* [Readiness](readiness.md) — derived permission-to-proceed projections, including Ranking and Finalization Readiness.
 * [Coverage](coverage.md) — derived factual sufficiency of qualifying evaluation evidence; exception disposition is separate.
 * [Aggregate](aggregate.md) — numerical combination of eligible authoritative individual judgments.
 * [Rank](rank.md) — derived ordering under declared comparison policy.
@@ -17,15 +17,17 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 
 ## Current classification rules
 
-- **Coverage / Evaluation Sufficiency** remains derived. Its factual answer is `Satisfied` or `Incomplete`; accepted exception disposition may permit a consequence while factual Coverage remains Incomplete.
+- **Coverage / Evaluation Sufficiency** remains derived. Its factual answer is `Satisfied` or `Incomplete`; accepted exception disposition may permit a specific consequence while factual Coverage remains Incomplete.
+- **Aggregate** remains numerical derivation over current eligible authoritative individual judgments and does not establish Coverage or rank eligibility.
+- **Rank** remains a derived, non-editable ordering over a supplied rank-eligible Team set and declared policy.
+- **Readiness** remains derived. In particular, calculated Rank is distinct from **Ranking Readiness**, and Finalization Readiness is distinct from Competition lifecycle/Outcome Declaration authority.
 - **Reconciliation** remains process/work mode rather than independent ticket-like source state.
-- **Aggregate**, **Rank**, and **Readiness** remain derived mechanisms.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
 
-Phase 011 current family authority through 011-F establishes lifecycle/access, occurrence/responsibility, evaluation authority/capture, and temporal correction/invalidation/successor composition.
+Phase 011 current family authority through 011-G establishes lifecycle/access, occurrence/responsibility, evaluation authority/capture, temporal correction/invalidation/successor, and internal outcome/Award/finalization/declaration composition.
 
-[Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md) now makes an important derived-state distinction for 011-G: historical Evaluation Obligation satisfaction may remain true while the linked evidence is no longer currently eligible. Coverage therefore derives from qualifying current evidence, not merely from historical `Satisfied` responsibility state. Source correction/invalidation may also make prior Aggregate/Rank non-current without granting those mechanisms authority to rewrite source evidence.
+[Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md) establishes that current qualifying evidence—not historical satisfaction alone—feeds Coverage/Aggregate/Rank; a governed exception never rewrites Coverage fact; rank-derived Award conferral requires a Ranking Ready basis; Award remains the recognition owner; and ordinary official closeout coordinates Competition Finalization with explicit Outcome Declaration.
 
-Coverage/Aggregate/Rank owner-specific recomputation/currentness and their composition with Award, Competition Finalization and Outcome Declaration are the next methodology task.
+Post-Finalization source correction may yield new current derivations while the prior declaration remains the latest official authority in Affected state until explicit successor confirmation.
 
-Next: **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
+Next: **011-H — Export, Publication, Representation Currency & Release Composition**.

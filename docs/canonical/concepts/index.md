@@ -56,10 +56,11 @@ Current composition owners live under [Canonical Synchronizations](../synchroniz
 - 011-C composes Competition/Identity/Participation/Access while preserving intrinsic ownership;
 - 011-D composes Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation while keeping intended grouping, actual participation and responsibility distinct;
 - 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity;
-- 011-F establishes owner-specific temporal correction/invalidation/replacement/successor composition.
+- 011-F establishes owner-specific temporal correction/invalidation/replacement/successor composition;
+- 011-G composes current qualifying evidence, factual Coverage, Aggregate/Rank, Ranking Readiness, Award authority, coordinated Competition Finalization and explicit Outcome Declaration.
 
-011-F confirms that supersession, invalidation and replacement are distinct; occurrence invalidation preserves Judge-authored evidence/history; historical obligation satisfaction remains distinct from current evidence eligibility; terminal obligations never reopen; legitimate re-evaluation uses successor responsibility/new logical Scorecard; and source-faithful capture correction may preserve the same logical Scorecard only when structural identity is unchanged and Provenance preserves Judge authorship.
+011-G preserves the Phase 010 boundaries: Coverage/Aggregate/Rank/Readiness remain derived; Award owns recognition; Competition owns lifecycle closure; Outcome Declaration owns official declaration content/currentness/history. Rank-derived Award conferral requires a Ranking Ready basis, and post-Finalization source correction never silently moves recognition or declaration authority.
 
-The bounded Scorecard wording clarification needed for source-faithful capture correction does not create a new Concept or reopen the eighteen-Concept boundary. No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
+No Concept-boundary defect requiring Phase 010 reopening was found. Phase 012 will separately analyze product-family inclusion dependence.
 
-Next: **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
+Next: **011-H — Export, Publication, Representation Currency & Release Composition**.

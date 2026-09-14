@@ -42,7 +42,8 @@ implementation authorization: NOT YET
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
-011-G: NEXT
+011-G: COMPLETE — PASS
+011-H: NEXT
 ```
 
 # Phase 011 current authority
@@ -54,7 +55,8 @@ Current family-level authority now includes:
 - [011-C](../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) → [Competition Lifecycle, Participation & Contextual Access Composition](synchronizations/competition-participation-access.md);
 - [011-D](../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) → [Competitor Context, Evaluation Occurrence & Obligation Composition](synchronizations/evaluation-occurrence-obligation.md);
 - [011-E](../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) → [Evaluation Basis, Scorecard Authority & Capture Composition](synchronizations/evaluation-basis-scorecard-authority.md);
-- [011-F](../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) → [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md).
+- [011-F](../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) → [Temporal Truth, Correction & Historical Authority](synchronizations/temporal-truth-correction.md);
+- [011-G](../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) → [Evaluation Outcome, Award, Finalization & Declaration Composition](synchronizations/evaluation-outcome-finalization-declaration.md).
 
 Current Concept authority remains the Phase 010 eighteen-Concept catalog:
 
@@ -62,9 +64,20 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 `Judging Encounter` and `Official Outcome Revision` remain only as deprecated historical adapters.
 
-Current composition now distinguishes Panel membership, occurrence participation, responsibility, logical Scorecard identity, current authoritative Version, capture provenance, evidence eligibility and historical satisfaction. Supersession, invalidation and replacement are separate; terminal obligations never reopen; and affected downstream authority is never silently mutated by source correction.
+Current outcome composition preserves these distinctions:
 
-The remaining outcome/release synchronization bodies remain preserved evidence. 011-G/H will establish those current families; 011-I will close action-surface/chaining/automation/coherence questions; 011-J will reconcile canonical synchronization ownership.
+- historical obligation satisfaction ≠ current evidence eligibility;
+- Coverage factual sufficiency ≠ exception permission;
+- Aggregate existence ≠ rank eligibility;
+- calculated Rank ≠ Ranking Readiness;
+- rank-derived candidate ≠ Award conferral;
+- Competition Finalization ≠ Outcome Declaration content/history;
+- calculated ≠ official ≠ public;
+- post-Finalization correction never silently replaces recognition or declared authority.
+
+Rank-derived Award conferral requires a Ranking Ready basis. An Affected Outcome Declaration remains latest declared official authority until explicit successor confirmation, even when a materially corrected basis yields the same visible result.
+
+Only the Export/Publication representation-release family remains for 011-H before whole-application composition closure in 011-I and canonical reconciliation in 011-J.
 
 # Retrieval rule during reopened design
 
@@ -83,7 +96,7 @@ For Phases 011–017:
 ```text
 010 project/purpose / discovery / specification / modularity   COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation                IN PROGRESS — 011-G NEXT
+011 composition / synchronization revalidation                IN PROGRESS — 011-H NEXT
   ↓
 012 dependence / subsets / product-family / scope
   ↓
@@ -98,4 +111,4 @@ For Phases 011–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
+The immediate next work is **011-H — Export, Publication, Representation Currency & Release Composition**.

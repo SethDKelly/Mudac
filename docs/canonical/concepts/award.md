@@ -8,7 +8,9 @@ sources:
   - resource: ../../002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+  - resource: ../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md
+  - resource: ../synchronizations/evaluation-outcome-finalization-declaration.md
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T14:24:00-05:00 }
 ---
 
 # Purpose
@@ -37,11 +39,19 @@ Queries include current definition, current conferrals, history, and whether a s
 
 # Operational Principle
 
-An authorized actor defines recognition and its selection semantics. For a derived selection method, the application supplies a current SelectionBasis and the Award validates that any conferral is consistent with its declared rule. For discretionary recognition, an authorized actor deliberately selects a Recipient without portraying the choice as mathematically implied. Later correction preserves prior conferral/revocation history.
+An authorized actor defines recognition and its selection semantics. For a derived selection method, the application supplies a current SelectionBasis and Award validates that any conferral is consistent with its declared rule. For discretionary recognition, an authorized actor deliberately selects a Recipient without portraying the choice as mathematically implied. Later correction preserves prior conferral/revocation history.
 
 # MUDAC composition binding
 
-MUDAC normally binds Scope to Competition and Recipient to Team. Rank-derived Awards consume supplied Rank result/basis through application composition; Rank remains a derived mechanism and is not intrinsic Award state.
+MUDAC normally binds Scope to Competition and Recipient to Team.
+
+For rank-derived Awards, current [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md) supplies Rank as SelectionBasis only after the applicable Division/result is **Ranking Ready**. A provisional calculated ordering is insufficient for rank-derived conferral while material eligibility, correction, compatibility or tie conditions remain unresolved.
+
+The system derives the candidate; `Award.confer` owns recognition. Organizer confirmation cannot contradict the declared rank-derived rule while continuing to label the Award derived.
+
+A later Rank change does not silently move recognition. The supplied basis is reassessed and any required `correctConferral`/`revoke`/new conferral is explicit and attributable.
+
+For discretionary Awards, the SelectionBasis remains explicitly discretionary; Rank/Notes/statistics do not silently become a mathematical selection rule.
 
 # Boundaries
 

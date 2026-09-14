@@ -36,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
-011-G: NEXT
+011-G: COMPLETE — PASS
+011-H: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,14 +56,17 @@ Current family-level synchronization authority includes:
 - [011-C](../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md) / [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md);
 - [011-D](../../011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) / [Competitor Context, Evaluation Occurrence & Obligation Composition](../synchronizations/evaluation-occurrence-obligation.md);
 - [011-E](../../011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) / [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md);
-- [011-F](../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md).
+- [011-F](../../011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](../synchronizations/temporal-truth-correction.md);
+- [011-G](../../011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) / [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md).
 
-011-F establishes current temporal repair semantics: supersession/invalidation/replacement are distinct; invalidated occurrence/evidence history remains reconstructible; historical obligation satisfaction is distinct from current evidence eligibility; terminal obligations never reopen; required re-evaluation uses successor obligation/new logical Scorecard; source-faithful capture correction preserves Judge authorship; corrected historical assertions are append-stable; and affected downstream authority remains owner-specific.
+011-G establishes the current internal outcome-authority chain: qualifying current evidence feeds factual Coverage and Aggregate; Coverage remains separate from exception permission; Rank consumes an explicitly rank-eligible Team set; Ranking Readiness is distinct from calculated Rank and is required for rank-derived Award conferral; Award owns recognition; and ordinary official closeout coordinates `Competition.finalize` + `OutcomeDeclaration.declare` without merging ownership.
 
-Where a Phase 011 canonical synchronization owner exists, it outranks corresponding legacy contract text. Unreplaced outcome/release semantics remain pre-011 evidence until 011-G/H.
+Post-Finalization correction leaves Competition Finalized. If a material dependency of the immutable declared basis changes, the current declaration may become Affected and remains latest declared authority until explicit successor confirmation. The successor is still required when the corrected basis changes materially even if visible result values remain unchanged.
+
+Where a Phase 011 canonical synchronization owner exists, it outranks corresponding legacy contract text. Only unreplaced external representation/release semantics remain pre-011 evidence until 011-H.
 
 Phase 012 inclusion-dependence questions and Phase 013 mapping/interaction questions remain intentionally unresolved.
 
 # Current handoff
 
-Proceed to **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**.
+Proceed to **011-H — Export, Publication, Representation Currency & Release Composition**.
