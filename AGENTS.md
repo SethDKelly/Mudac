@@ -9,8 +9,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the active composition phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/) before task-specific composition work.
-6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline; then use the current family owners from 011-C through 011-F for the semantic family being changed.
-7. Use [011-F](docs/011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) / [Temporal Truth, Correction & Historical Authority](docs/canonical/synchronizations/temporal-truth-correction.md) as current correction/invalidation/successor authority.
+6. Read [011-B](docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) for the legacy/action baseline; then use the current family owners from 011-C through 011-G for the semantic family being changed.
+7. Use [011-G](docs/011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) / [Evaluation Outcome, Award, Finalization & Declaration Composition](docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md) as current derived-outcome/finalization/declaration authority.
 8. Treat only unreplaced portions of the old synchronization corpus and Phase 007-C/007-D as evidence; current Phase 011 family owners outrank matching legacy prose.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
@@ -35,7 +35,8 @@ implementation authorization: NOT YET
 011-D: COMPLETE — PASS
 011-E: COMPLETE — PASS
 011-F: COMPLETE — PASS
-011-G: NEXT
+011-G: COMPLETE — PASS
+011-H: NEXT
 ```
 
 ## Current Concept authority
@@ -78,27 +79,25 @@ Phase 011 composes independent Concepts; it does not rewrite them in terms of on
 - 011-D establishes historical competitor presentation, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment and participant/responsibility separation.
 - 011-E establishes authoritative Rubric Version/Evaluation Basis binding, one logical Scorecard per obligation, Finalization/amendment authority, Versioning/Provenance participation, obligation satisfaction and capture-channel parity.
 - 011-F establishes supersession/invalidation/replacement distinction, post-authority capture correction, occurrence/evidence invalidation, obligation successor work, corrected historical assertions and affected-state propagation.
+- 011-G establishes eligible-evidence → Coverage/Aggregate/Rank composition, Award authority, coordinated Competition Finalization + Outcome Declaration, and post-Finalization Affected/successor semantics.
 - Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence.
-- `completeOccurrence` does not satisfy/clear obligations.
-- Evaluation Basis is one exact authoritative Rubric Version; later Rubric Version establishment does not silently rebind existing evaluation state.
-- One Evaluation Obligation maps to at most one logical Scorecard.
-- Scorecard Draft state is non-authoritative.
-- A Satisfied obligation's EvidenceRef identifies the logical Scorecard; Versioning identifies current authoritative Version.
-- Version supersession ≠ invalidation ≠ distinct-subject replacement.
-- Invalidation never silently revives an older Version or creates a successor.
-- Evaluation Occurrence invalidation preserves occurrence/evidence history; evidence may become currently ineligible without being erased.
-- Historical obligation satisfaction and current evidence eligibility are distinct.
-- Terminal obligations never reopen. Required re-evaluation uses `requireSuccessorEvaluation` and a new logical Scorecard.
-- Outstanding obligations tied to invalid occurrence context are explicitly ended rather than left satisfiable against invalid state.
-- Replacement occurrence never clones participants, obligations or Scorecards automatically.
-- Source-faithful post-authority capture correction may use the same logical Scorecard only when structural identity is unchanged and retained source is unambiguous.
-- Wrong Evaluator/Subject/OccurrenceContext/EvaluationBasis is structural correction, not ordinary amendment.
-- Corrected historical assertions preserve both as-recorded/as-known and best-known truth through Provenance.
-- Affected-state propagation is dependency-specific and owner-specific; it never silently moves Award, Outcome Declaration, Export or Publication authority.
+- Historical obligation satisfaction ≠ current evidence eligibility.
+- Coverage factual sufficiency ≠ governed exception disposition.
+- `Coverage=Incomplete` may coexist with an accepted exception for a specific downstream consequence.
+- Missing evidence is never zero.
+- Aggregate existence ≠ Coverage satisfaction ≠ rank eligibility.
+- Rank consumes a supplied rank-eligible Team set and declared policy; do not expose generic Rank edits.
+- Rank-derived Award selection basis does not own conferral authority.
+- Rank recalculation never silently moves an Award.
+- Competition Finalization ≠ Outcome Declaration content/history.
+- Ordinary MUDAC official closeout coordinates `Competition.finalize` + `OutcomeDeclaration.declare` without merging ownership.
+- calculated ≠ official ≠ public.
+- Post-Finalization correction leaves Competition Finalized.
+- A materially affected declaration remains latest declared official authority until explicit successor confirmation.
+- Corrected calculations/Awards never silently create a successor Outcome Declaration.
+- Affected-state propagation is dependency-specific and owner-specific; it never silently changes Export or Publication authority.
 - Versioning and Provenance generic actions remain composition-only; do not expose them as generic admin controls.
-- Organizer/Admin technical capability never becomes Judge semantic authorship.
 - Do not mechanically rename deprecated historical concepts.
-- Keep factual Coverage distinct from governed exception disposition.
 - Preserve abstract peer parameters introduced by Phase 010; application bindings belong in composition.
 - Test over-synchronization and under-synchronization.
 - Trace material conceptual chaining/automation and check authority, preconditions, invariants and cycle risk.
@@ -115,8 +114,8 @@ Phase 011 composes independent Concepts; it does not rewrite them in terms of on
 011-D Team/Division/Alias/Panel / Occurrence / Obligation             COMPLETE — PASS
 011-E evaluation basis / Scorecard / Versioning / Provenance / paper  COMPLETE — PASS
 011-F temporal correction / invalidation / successor / affected       COMPLETE — PASS
-011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    NEXT
-011-H Export / Publication / currency / release                       PLANNED
+011-G Coverage/Aggregate/Rank / Award / Finalization / Declaration    COMPLETE — PASS
+011-H Export / Publication / currency / release                       NEXT
 011-I action surface / chaining / automation / over-under / synergy   PLANNED
 011-J canonical reconciliation / exit / Phase 012 handoff             PLANNED
 ```
@@ -142,4 +141,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition**
+> **011-H — Export, Publication, Representation Currency & Release Composition**
