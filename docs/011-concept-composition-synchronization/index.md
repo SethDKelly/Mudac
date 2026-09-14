@@ -4,7 +4,7 @@ Phase 011 is the active Jackson/Base composition phase after the Phase 010 modul
 
 ## Status
 
-**In Progress — 011-A/B/C/D/E/F complete; 011-G next.**
+**In Progress — 011-A/B/C/D/E/F/G complete; 011-H next.**
 
 ## Records
 
@@ -14,8 +14,8 @@ Phase 011 is the active Jackson/Base composition phase after the Phase 010 modul
 - [011-D — Team/Division/Alias/Panel, Evaluation Occurrence & Evaluation Obligation Establishment](011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md) — **Complete — PASS**.
 - [011-E — Evaluation Basis, Scorecard Authority, Versioning/Provenance & Paper-Capture Composition](011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md) — **Complete — PASS**.
 - [011-F — Temporal Correction, Invalidation, Replacement, Successor Work & Affected-State Propagation](011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md) — **Complete — PASS**.
-- **011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition** — Next.
-- 011-H — Export, Publication, Representation Currency & Release Composition — Planned.
+- [011-G — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Composition](011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md) — **Complete — PASS**.
+- **011-H — Export, Publication, Representation Currency & Release Composition** — Next.
 - 011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure — Planned.
 - 011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff — Planned.
 
@@ -30,20 +30,36 @@ Current family-level synchronization authority now includes:
 - [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md) — 011-C;
 - [Competitor Context, Evaluation Occurrence & Obligation Composition](../canonical/synchronizations/evaluation-occurrence-obligation.md) — 011-D;
 - [Evaluation Basis, Scorecard Authority & Capture Composition](../canonical/synchronizations/evaluation-basis-scorecard-authority.md) — 011-E;
-- [Temporal Truth, Correction & Historical Authority](../canonical/synchronizations/temporal-truth-correction.md) — 011-F.
+- [Temporal Truth, Correction & Historical Authority](../canonical/synchronizations/temporal-truth-correction.md) — 011-F;
+- [Evaluation Outcome, Award, Finalization & Declaration Composition](../canonical/synchronizations/evaluation-outcome-finalization-declaration.md) — 011-G.
 
-The unreplaced outcome and release portions of the legacy corpus remain evidence only until 011-G/H establish current semantics.
+Only the external-representation/release portion of the legacy corpus remains without a current family owner; 011-H closes that family before whole-application composition closure in 011-I/J.
+
+## 011-G outcome authority now established
+
+Current MUDAC composition preserves:
+
+- historical obligation satisfaction != current evidence eligibility;
+- Coverage factual sufficiency != governed exception disposition;
+- Aggregate existence != Coverage satisfaction != rank eligibility;
+- Rank is derived from a supplied eligible Team set and declared policy;
+- calculated Rank != Award conferral authority;
+- Rank recalculation never silently moves an Award;
+- Competition Finalization != Outcome Declaration content/history;
+- ordinary official closeout coordinates `Competition.finalize` + `OutcomeDeclaration.declare` without merging ownership;
+- calculated != official != public;
+- post-Finalization correction leaves Competition Finalized;
+- an Affected Outcome Declaration remains latest declared official authority until explicit successor confirmation.
 
 ## Immediate handoff
 
-011-G starts from these established rules:
+011-H starts from these established rules:
 
-- historical obligation satisfaction is distinct from current evidence eligibility;
-- invalidated occurrence/evidence remains reconstructible and does not disappear;
-- Satisfied obligations never reopen; required re-evaluation uses successor obligations/new logical Scorecards;
-- source-faithful capture correction changes current Scorecard Version while preserving Judge authorship and one logical evaluation;
-- Rubric Version supersession does not retroactively rebind historical evaluation state;
-- source correction/invalidation creates owner-specific dependency-currentness consequences rather than a generic destructive cascade;
-- Award, Outcome Declaration, Export and Publication authority never change silently merely because an upstream calculation/source changed.
+- a current Outcome Declaration identifies official authority but does not itself create an external representation or public release;
+- an Affected or Superseded declaration must not be silently presented as current by a representation;
+- source correction/derived recomputation may change representation currency without rewriting historical declaration or release state;
+- Award and official declaration changes are explicit authority transitions, not automatic consequences of recalculation;
+- Publication remains deliberate release authority and must not be implied by Export generation;
+- historical published truth must remain reconstructible after withdrawal or successor release.
 
 See [README.md](README.md) for the dependency sequence and design-only boundary.
