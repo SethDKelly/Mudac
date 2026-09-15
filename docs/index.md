@@ -14,7 +14,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-C.
+* [Dependence](canonical/dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-D.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
@@ -30,7 +30,7 @@ Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-
 
 Use [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as candidate/provisional evidence only.
 
-Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted Competition/actor/competitor/bias-control dependence.
+Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
 
 # Current methodology state
 
@@ -43,7 +43,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -53,57 +54,29 @@ implementation authorization: NOT YET
 
 # Current dependence posture
 
-Phase 012 analyzes the **MUDAC live student data competition judging-and-outcome family**.
+The application family is the **MUDAC live student data competition judging-and-outcome family**.
 
-Current accepted direct edges are:
-
-```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-```
-
-Current transitive consequences include:
+Current accepted direct evaluation dependence is:
 
 ```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
 ```
 
-Current explicit universal non-edges include:
+Together with 012-C, Team and Participation supply Competition transitively and Participation supplies Identity transitively.
 
-```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
-```
+012-D explicitly rejects automatic co-inclusion among Evaluation Occurrence, Evaluation Obligation, and Scorecard. Their current full-product relationships remain synchronization/composition, while dependence-valid contractions may separately support occurrence history, responsibility tracking, or judgment capture.
 
-Competition is the required family context for in-scope MUDAC variants. This is a scope rule, not a blanket outgoing dependence edge.
+Rubric remains independently useful as evaluation-instrument definition and therefore does not depend on Competition, Occurrence, Obligation, or Scorecard merely because the full product later uses it with those Concepts.
 
-# Conditional subset rules
+# Scope discipline
 
-- blinded-judging variants include Alias;
-- multi-cohort variants include Division;
-- reusable evaluator-grouping variants include Panel;
-- protected Judge/Organizer actions use Participation context plus Access;
-- single-cohort no-Division operation is dependence-coherent but requires later policy/composition revalidation before adoption.
+Dependence-valid does not mean adopted.
 
-These conditional capability rules must not be flattened into false universal graph edges.
+Phase 012-I will decide whether evaluation contractions enter current product-family scope. If selected, variant-specific Phase-011 synchronization must be refined rather than silently assuming the full-product action chain applies.
 
-# Canonical dependence state
-
-The canonical dependence graph is **partial through 012-C**. Later Phase 012 families remain unresolved until their owning subphases accept/reject them.
-
-Do not treat absence of a 012-D through 012-G edge as a canonical non-edge yet.
+Versioning and Provenance inclusion around authoritative/correctable state remains unresolved until 012-E.
 
 # Completion runway
 
@@ -112,7 +85,7 @@ Do not treat absence of a 012-D through 012-G edge as a canonical non-edge yet.
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-D NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-E NEXT
   ↓
 013 mapping / representation
   ↓
@@ -127,4 +100,4 @@ Do not treat absence of a 012-D through 012-G edge as a canonical non-edge yet.
 
 A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+The immediate next task is **012-E — Authority Lineage, Provenance & Correctability Dependence**.
