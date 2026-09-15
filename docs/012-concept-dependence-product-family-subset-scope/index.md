@@ -4,13 +4,13 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A complete; 012-B next.**
+**In Progress — 012-A/B complete; 012-C next.**
 
 ## Records
 
 - [012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — **Complete — READY TO BEGIN SUBPHASES**.
-- **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory** — Next.
-- 012-C — Competition, Actor, Competitor Context & Bias-Control Dependence — Planned.
+- [012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) — **Complete — PASS**.
+- **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence** — Next.
 - 012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence — Planned.
 - 012-E — Authority Lineage, Provenance & Correctability Dependence — Planned.
 - 012-F — Outcome, Recognition & Official-Authority Dependence — Planned.
@@ -22,17 +22,37 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Current dependence posture
 
-No Concept-dependence edge is current yet.
+No final Concept-dependence graph is current yet.
 
-012-A establishes the analysis rule:
+012-A established the analysis rule:
 
 > `A → B` means that within the MUDAC live student competition judging/outcome family, any coherent subset containing A must also contain B because A otherwise lacks its intended application role.
 
-Do not infer that relationship merely from Phase 011 synchronization, current UI/workflow, code/module dependency, deployment topology, or habitual packaging.
+012-B now establishes a **candidate inventory only**. Candidate classifications include strong, conditional, alternative/disjunctive, challenge, and rejected-as-edge. None is canonical dependence until the owning later subgroup accepts it.
+
+Do not infer dependence merely from Phase 011 synchronization, current UI/workflow, code/module dependency, deployment topology, or habitual packaging.
+
+## 012-B role groups
+
+These are analysis groups, not dependency cycles or mandatory bundles:
+
+- Competition/actor/competitor context — Competition, Team, Identity, Participation, Access, Division, Alias, Panel;
+- evaluation — Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard;
+- authority/history support — Versioning, Provenance;
+- outcome/recognition — Award, Outcome Declaration;
+- externalization/release — Export, Publication.
+
+012-B specifically avoids:
+
+- assuming Competition requires Division, Panel, Award, Outcome Declaration, Export, or Publication;
+- treating Versioning/Provenance as universal sinks;
+- converting Evaluation Occurrence↔Obligation↔Scorecard composition into automatic dependence;
+- collapsing Award with official outcome authority;
+- collapsing Export with Publication.
 
 ## Scope-status vocabulary
 
-Phase 012 will distinguish:
+Phase 012 distinguishes:
 
 - dependence-valid subset;
 - meaningful coherent subset;
@@ -54,10 +74,19 @@ Validity is not product commitment.
 
 ## Canonical ownership plan
 
-No canonical dependence area is authoritative yet. Once substantive edge analysis establishes durable truth, Phase 012 anticipates creating a compact `docs/canonical/dependence/` owner rather than duplicating graph rules across Concept files.
+No canonical dependence area is authoritative yet. 012-B remains provisional candidate evidence.
+
+Once 012-C through 012-G establish durable edge semantics, Phase 012 may create a compact `docs/canonical/dependence/` owner rather than duplicating graph rules across Concept files.
 
 ## Immediate handoff
 
-012-B must inventory the application role of every current Concept and candidate direct/non-edge hypotheses before family-specific dependence is accepted.
+012-C now owns the first edge-acceptance pass for:
 
-Proceed to **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
+- Competition family anchoring;
+- Team scope;
+- Identity/Participation/Access inclusion;
+- Division optionality;
+- Alias/bias-control scope;
+- Panel optionality and evaluator-grouping role.
+
+Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
