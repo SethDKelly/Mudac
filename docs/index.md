@@ -23,11 +23,11 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and the current methodology phase.
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 012](012-concept-dependence-product-family-subset-scope/).
 
-Phase 011 is complete. Use [011-J](011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for its exit decision and Phase 012 handoff. Use canonical synchronization owners rather than numbered Phase 011 records for current composition rules.
+Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for the current dependence-analysis start gate and approved subphase sequence.
 
-The pre-011 sixteen-contract file is historical evidence only.
+Phase 011 is complete. Use [011-J](011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for its exit decision and use canonical synchronization owners rather than numbered Phase 011 records for current composition rules.
 
 # Current methodology state
 
@@ -36,7 +36,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
-012: NEXT — Concept Dependence, Product-Family, Subset & Scope Analysis
+012: IN PROGRESS
+012-A: COMPLETE — READY
+012-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -44,36 +46,54 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Phase 011 exit posture
+# Phase 012 authority posture
 
-Phase 011 closed all CO-01 through CO-12 composition obligations and R-01 through R-12 risks. All historical synchronization contracts 01–16 have current owners or explicit downstream mapping disposition.
+Phase 012 corresponds to Base Phase 006 — **Concept Dependence, Product-Family, Subset & Scope Analysis**.
 
-Final application action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved action class remains.
+012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family**.
 
-The governing automation rule is:
-
-> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
-
-No semantic cycle requires a hidden coordinator Concept. Current synchronization knowledge is representation-independent and contains no runtime orchestration authority.
-
-# Phase 012 handoff
-
-Phase 012 corresponds to Base Phase 006:
-
-> **Concept Dependence, Product-Family, Subset & Scope Analysis**
-
-It asks which otherwise independent Concepts must, may, conditionally or alternatively be co-included in coherent application/product variants, what subsets are valid, and which coherent variants MUDAC actually adopts into scope.
-
-Important distinction:
+It distinguishes:
 
 ```text
-synchronization = how included Concepts interact
-extrinsic dependence = which Concepts must be co-included for an application role
-intrinsic dependence = upstream Concept-boundary defect
-implementation dependency = out of scope
+intrinsic Concept dependence
+  = upstream Concept-boundary defect
+
+synchronization / composition
+  = how already-included Concepts interact
+
+extrinsic inclusion dependence
+  = which Concepts must be co-included for an intended application role
+
+implementation dependency
+  = out of scope
 ```
 
-A synchronization edge must not be promoted mechanically into a dependence edge.
+A Phase 011 synchronization edge is evidence to inspect, not automatically a dependence edge.
+
+No current dependence graph exists yet. 012-A accepts no edges and instead establishes candidate questions, subset semantics, counterexample probes, reopening triggers and the 012-B through 012-K analysis sequence.
+
+# Subset discipline
+
+Phase 012 will distinguish:
+
+- dependence-valid subset;
+- meaningful coherent subset;
+- in-scope variant;
+- coherent but out-of-scope variant;
+- invalid subset;
+- unresolved subset.
+
+A dependence-valid subset is not automatically a supported product variant.
+
+The phase must challenge familiar packaging through unusual contractions such as single-cohort operation without Division, ad-hoc judging without Panel, outcome formation without Awards, official-but-non-public operation, Export without Publication, and reduced authority-history support.
+
+Paper versus electronic capture is not a Concept-subset axis under the current model.
+
+# Canonical dependence knowledge
+
+No canonical dependence owner is established merely by 012-A. Once substantive edge analysis establishes durable current truth, Phase 012 anticipates a compact `canonical/dependence/` area with one natural owner for the dependence relation and, only if materially distinct, a product-family/scope owner.
+
+Do not place provisional inclusion hypotheses into Concept specifications.
 
 # Completion runway
 
@@ -82,7 +102,7 @@ A synchronization edge must not be promoted mechanically into a dependence edge.
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-B NEXT
   ↓
 013 mapping / representation
   ↓
@@ -97,4 +117,4 @@ A synchronization edge must not be promoted mechanically into a dependence edge.
 
 A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**.
+The immediate next task is **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
