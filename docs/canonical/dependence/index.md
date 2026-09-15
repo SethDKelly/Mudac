@@ -16,14 +16,15 @@ Phase 012 owns this knowledge. It is distinct from intrinsic Concept specificati
 012-C  COMPLETE — PASS
 012-D  COMPLETE — PASS
 012-E  COMPLETE — PASS
-012-F  NEXT — Outcome, Recognition & Official-Authority Dependence
+012-F  COMPLETE — PASS
+012-G  NEXT — External Representation & Release Dependence
 ```
 
-The canonical model is intentionally **partial through 012-E**. Later Phase 012 subgroups extend the same owner as outcome and external-representation families are resolved.
+The canonical model is intentionally **partial through 012-F**. External representation/release remains unresolved until 012-G.
 
 ## Current direct edge families
 
-### Competition / actor / competitor context
+### Competition / actor / competitor
 
 ```text
 Team          → Competition
@@ -42,19 +43,29 @@ Evaluation Obligation → Team / Participation / Rubric
 Scorecard             → Team / Participation / Rubric
 ```
 
-Evaluation edges inherit Competition through Team/Participation and Identity through Participation.
+### Outcome / recognition
 
-## Important evaluation non-edges
+```text
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
+```
 
-Evaluation Occurrence, Evaluation Obligation, and Scorecard are not a mandatory inclusion cycle.
+## Key non-cycles
 
-Rubric also remains independently meaningful as reusable evaluation-instrument definition.
+```text
+Evaluation Occurrence / Evaluation Obligation / Scorecard
+  are not a mandatory co-inclusion group
 
-Those contractions are dependence-valid only; Phase 012-I determines whether any are adopted into product scope.
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
+
+Outcome Declaration also does not gain direct Team/Scorecard/Obligation/Occurrence/Rubric edges solely from basis traceability.
 
 ## Authority-profile co-inclusion
 
-012-E adds no new universal direct edge. Instead:
+012-E remains current:
 
 ```text
 Authoritative Rubric Basis
@@ -67,17 +78,27 @@ Rubric/Scorecard authoritative correction or invalidation
   ⇒ Versioning + Provenance
 ```
 
-Versioning and Provenance are distinct and do not universally depend on one another.
+Versioning and Provenance remain distinct support Concepts rather than universal sinks.
 
-Outcome Declaration also does not universally depend on either generic support Concept because it owns declaration basis/currentness/successor history intrinsically.
+## Outcome capability rules
 
-Outcome-affecting Evaluation Policy remains a cross-cutting authority-history rule rather than a Concept vertex.
+```text
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
+
+Rank-Derived Award capability
+  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+```
+
+Current Rank is Division-scoped; that makes current rank-derived recognition Division-contextual without establishing universal `Award → Division`.
+
+Any official Outcome Declaration requires a reconstructible accepted OutcomeBasis, but the exact source Concept set is variant-specific rather than one fixed direct graph bundle.
 
 ## Current scope rule
 
 Every in-scope MUDAC product/application variant retains Competition as the live student-competition context.
 
-This scope rule does not imply that Competition directly depends on every optional capability.
+This does not imply Competition directly depends on every optional capability.
 
 ## Interpretation boundary
 
@@ -99,8 +120,8 @@ implementation dependency
   = out of scope
 ```
 
-Do not infer edges from imports, schemas, service calls, UI layout, deployment topology, current workflows, or synchronization alone.
+Do not infer edges from imports, schemas, service calls, UI layout, deployment topology, current workflows, or traceability alone.
 
 ## Next
 
-Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
+Proceed to **012-G — External Representation & Release Dependence**.
