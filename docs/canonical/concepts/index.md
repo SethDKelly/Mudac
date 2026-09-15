@@ -31,7 +31,7 @@ Each current Concept owner exposes a representation-independent Purpose, State, 
 
 ## Phase 010 authority
 
-The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the formal handoff.
+The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the formal foundational handoff.
 
 No current Concept is accepted merely because it existed historically. Later phases may still expose defects and reopen the natural owner when evidence warrants it.
 
@@ -47,21 +47,44 @@ In particular:
 - Recovery/Continuity is a cross-cutting purpose obligation rather than a separate Concept;
 - Correction remains a family of owner-specific actions/compositions.
 
-## Active methodology work
+## Current composition authority
 
-Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the full legacy synchronization classification/action baseline.
+Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/), with [011-J](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) recording the exit/handoff.
 
-Current composition owners live under [Canonical Synchronizations](../synchronizations/):
+Important current distinctions include:
 
-- 011-C composes Competition/Identity/Participation/Access while preserving intrinsic ownership;
-- 011-D composes Team/Division/Alias/Panel/Evaluation Occurrence/Evaluation Obligation while keeping intended grouping, actual participation and responsibility distinct;
-- 011-E composes Rubric/Scorecard/Versioning/Provenance/Evaluation Obligation authority while preserving evaluation semantics, authorship, history and capture-channel parity;
-- 011-F establishes owner-specific temporal correction/invalidation/replacement/successor composition;
-- 011-G composes qualifying evidence, factual Coverage, Aggregate/Rank, Ranking Readiness, Award authority, coordinated Competition Finalization and explicit Outcome Declaration;
-- 011-H composes exact-source Export representation/currency, audience disclosure, explicit Publication release/withdrawal/succession and historical external-release truth.
+- Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
+- historical satisfaction ≠ current evidence eligibility;
+- Competition Finalization ≠ Outcome Declaration;
+- calculated ≠ official ≠ public ≠ delivered;
+- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-011-H confirms the Phase 010 Export/Publication split: Export owns stable representation identity and source-relative currency; Publication owns deliberate release and release history. Generation never implies publication, source correction never rewrites or retargets historical release, and transport/delivery remains outside Publication authority.
+Phase 011 found no Concept-boundary defect requiring Phase 010 reopening.
 
-No Concept-boundary defect requiring Phase 010 reopening was found. 011-I now audits the whole-application action/chaining/automation surface; Phase 012 will separately analyze product-family inclusion dependence.
+## Active methodology work — Phase 012
 
-Next: **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.
+Phase 012 is active for **Concept Dependence, Product-Family, Subset & Scope Analysis**.
+
+[012-A](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the application family and analysis discipline.
+
+Phase 012 must not rewrite these Concept specifications with contextual inclusion dependencies. It distinguishes:
+
+```text
+intrinsic dependence
+  = Concept-boundary defect
+
+synchronization
+  = interaction among included Concepts
+
+extrinsic dependence
+  = contextual co-inclusion requirement for an intended application role
+
+implementation dependency
+  = out of scope
+```
+
+No dependence edge is current yet. Candidate inclusion questions are phase evidence until their owning Phase 012 subphase establishes durable truth.
+
+If dependence analysis shows that one Concept cannot actually be understood or specified independently of another, reopen the natural Phase 010 owner rather than encoding the problem as an extrinsic edge.
+
+Next: **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
