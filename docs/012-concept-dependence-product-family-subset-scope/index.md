@@ -4,7 +4,7 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A through 012-E complete; 012-F next.**
+**In Progress — 012-A through 012-F complete; 012-G next.**
 
 ## Records
 
@@ -13,8 +13,8 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 - [012-C — Competition, Actor, Competitor Context & Bias-Control Dependence](012-C-competition-actor-competitor-context-bias-control-dependence.md) — **Complete — PASS**.
 - [012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence](012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) — **Complete — PASS**.
 - [012-E — Authority Lineage, Provenance & Correctability Dependence](012-E-authority-lineage-provenance-correctability-dependence.md) — **Complete — PASS**.
-- **012-F — Outcome, Recognition & Official-Authority Dependence** — Next.
-- 012-G — External Representation & Release Dependence — Planned.
+- [012-F — Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) — **Complete — PASS**.
+- **012-G — External Representation & Release Dependence** — Next.
 - 012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets — Planned.
 - 012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation — Planned.
 - 012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit — Planned.
@@ -22,28 +22,28 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Current canonical owner
 
-[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current accepted dependence and capability-conditioned co-inclusion.
+[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current accepted dependence and capability-conditioned co-inclusion, partial through **012-F**.
 
-The owner is partial through **012-E**.
-
-## Direct graph posture
-
-012-E does not add universal direct edges. The direct graph remains the 012-C/012-D graph covering competition/actor/competitor and evaluation roles.
-
-Evaluation Occurrence, Evaluation Obligation, and Scorecard remain independently includable at the dependence level even though the full application synchronizes them.
-
-## Authority-profile result
-
-Versioning and Provenance are distinct support Concepts and are not universal sinks or a co-inclusion cycle:
+## Current direct edge families
 
 ```text
-Versioning ↛ Provenance
-Provenance ↛ Versioning
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
+
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
+
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
 ```
 
-Working Rubric and Scorecard roles can also exist without either support Concept.
-
-However authoritative MUDAC evaluation requires:
+## 012-E authority profile
 
 ```text
 Authoritative Rubric Basis
@@ -53,12 +53,40 @@ Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
 ```
 
-The same pair remains required for Rubric/Scorecard authoritative correction or invalidation.
+Versioning and Provenance are not universal sinks or a mandatory pair outside those named authority capabilities.
 
-Outcome Declaration does not acquire generic history dependencies merely because it is authoritative; it owns its own declaration/successor lineage.
+## 012-F outcome result
 
-## Next unresolved area
+Recognition and official declaration remain separate capability layers:
 
-012-F now resolves Award and Outcome Declaration application-family dependence, including how official-outcome capability relates to Competition, Team, evaluation evidence, Awards, and the existing authority-profile rules without turning traceability into a dense graph.
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
 
-Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
+Outcome Declaration also does not acquire direct Scorecard, Evaluation Obligation, Evaluation Occurrence, Rubric, or Team edges merely because an ordinary declared basis can be traced to those inputs.
+
+Current capability rules include:
+
+```text
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
+
+Rank-Derived Award capability
+  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+```
+
+Current Rank is Division-scoped, so rank-derived Award capability is Division-contextual under present policy/mechanisms without making `Award → Division` universal.
+
+Official OutcomeBasis must be reconstructible, but its source Concept set is variant-specific.
+
+## Immediate handoff
+
+012-G now owns Export, Publication, external-representation and release dependence while preserving:
+
+- official ≠ public;
+- source authority ≠ Export representation ≠ Publication release;
+- Award and Outcome Declaration independence;
+- explicit release authority rather than automatic publication.
+
+Proceed to **012-G — External Representation & Release Dependence**.
