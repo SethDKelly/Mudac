@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 012 dependence/subset analysis active through the 012-B candidate inventory, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 012 dependence/subset analysis active through accepted 012-C Competition/actor/competitor dependence, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, dependence, reentry]
 sources:
@@ -11,7 +11,8 @@ sources:
   - resource: ../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md
-  - resource: ../synchronizations/index.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md
+  - resource: ../dependence/application-family-dependence.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -23,11 +24,11 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 completed representation-independent Concept composition/synchronization with **PASS**.
 
-Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis** — is active. 012-A completed the required start gate and 012-B completed the whole-catalog application-role/candidate-dependence inventory with **PASS**.
+Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis** — is active. 012-A completed the start gate, 012-B completed the whole-catalog candidate inventory, and 012-C established the first accepted current dependence family with **PASS**.
 
 The only authorized next methodology work is:
 
-> **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**
+> **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -47,7 +48,8 @@ Phase 011: COMPLETE — PASS
 Phase 012: IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
-012-C: NEXT
+012-C: COMPLETE — PASS
+012-D: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -62,15 +64,15 @@ current canonical Concepts / mechanisms / policies / invariants
         ↓
 reconciled canonical synchronization/composition authority (Phase 011)
         ↓
-Phase 012-A semantics / scope
+Phase 012 semantics/candidate evidence
         ↓
-Phase 012-B candidate inclusion-role inventory
+current Canonical Dependence (partial through 012-C)
         ↓
-012-C..G family-specific dependence acceptance/rejection
+012-D..G remaining family dependence
         ↓
 012-H..K whole-graph/subset/scope/consolidation
         ↓
-future Phase 013 mapping and later design-validation phases
+future Phase 013 mapping and later validation
 
 historical architecture / implementation
         = evidence or contamination probe only
@@ -83,84 +85,56 @@ Phase 010 converged and exited with eighteen current Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-The previous Judging Encounter and Official Outcome Revision paths are deprecated historical adapters, not current semantic owners.
+Phase 012-C found no intrinsic Concept coupling requiring Phase 010 reopening.
 
-Phase 011 found no Concept-boundary defect requiring Phase 010 reopening. Phase 012 may still expose one; if it does, the natural upstream owner must be reopened rather than encoding intrinsic coupling as an extrinsic dependence edge.
+# Current dependence authority
 
-# Current composition authority
+[MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md) owns accepted current extrinsic dependence.
 
-Phase 011 is complete. Current interaction rules live under [Canonical Synchronizations](../synchronizations/).
-
-The final whole-application action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved action class remains.
-
-The governing automation rule remains:
-
-> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
-
-No hidden Workflow/Coordinator/Process Concept or semantic cycle is required by current composition.
-
-# Active Phase 012 authority boundary
-
-Phase 012 may design **contextual/extrinsic Concept inclusion dependence, coherent subsets, application/product-family variants and adopted scope**.
-
-The analyzed application family is the **MUDAC live student data competition judging-and-outcome family**.
-
-It must preserve these distinctions:
+Current direct edges through 012-C are:
 
 ```text
-intrinsic Concept dependence
-  = upstream modularity/boundary defect
-
-synchronization/composition
-  = how included Concepts interact
-
-extrinsic inclusion dependence
-  = contextual rule about which Concepts must be co-included
-
-implementation dependency
-  = downstream engineering concern, not Concept Design authority
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
 ```
 
-A Phase-011 synchronization edge is evidence, not automatically a Phase-012 dependence edge.
+Current explicit universal non-edges include:
 
-# 012-B candidate-authority rule
+```text
+Competition ↛ Division
+Competition ↛ Panel
+Team        ↛ Alias
+Identity    ↛ Competition
+Identity    ↛ Participation
+Access      ↛ Participation
+Access      ↛ Identity
+```
 
-012-B records provisional candidates only. Its classifications are:
+The owner is explicitly **partial through 012-C**. Absence of an unresolved evaluation/outcome/externalization edge is not yet a current non-edge.
 
-- strong candidate;
-- conditional candidate;
-- alternative/disjunctive candidate;
-- challenge candidate;
-- rejected as candidate edge.
+# Phase 012 scope rules
 
-None is current canonical dependence merely because it appears in the inventory.
+- every in-scope MUDAC variant retains Competition as the application-family context;
+- blinded-judging variants include Alias;
+- multi-cohort variants include Division;
+- reusable evaluator-grouping variants include Panel;
+- ad-hoc evaluator assignment may omit Panel;
+- single-cohort operation may omit Division at the dependence level;
+- current anonymity/disclosure policy must be revalidated later if a no-Division blinded variant is adopted.
 
-012-B specifically prevents:
+These are conceptual scope/capability rules, not source-code or deployment packaging decisions.
 
-- treating the full eighteen-Concept product as one mandatory bundle;
-- making Competition automatically depend on Division, Panel, Award, Outcome Declaration, Export or Publication;
-- turning ordinary Evaluation Occurrence/Evaluation Obligation/Scorecard composition into mandatory co-inclusion without proof;
-- using Versioning/Provenance as universal dependency sinks;
-- treating Award as synonymous with official outcome authority;
-- treating Export and Publication as inseparable;
-- creating mutual-dependence cycles before counterexample analysis.
+# Dependence versus composition
 
-# Subset and scope discipline
+Current Phase 011 synchronization remains independently authoritative.
 
-Phase 012 distinguishes:
+For example, Access has no universal outgoing dependence edge to Participation or Identity, yet a protected Judge/Organizer operation still requires legitimate Participation context plus an Access decision through current composition.
 
-- dependence-valid subset;
-- meaningful coherent subset;
-- in-scope variant;
-- coherent but out-of-scope variant;
-- invalid subset;
-- unresolved subset.
-
-A dependence-valid subset is not automatically a product commitment.
-
-Counterexample pressure includes single-cohort operation without Division, ad-hoc judging without Panel, judging-only without Award/Outcome Declaration/Export/Publication, official-but-non-public operation, Export without Publication, no-Alias judging, reduced Versioning/Provenance support, and obligation/occurrence asymmetry.
-
-Paper versus electronic operation remains a capture-channel difference, not a Concept-subset axis under the current model.
+Likewise Panel is optional in the dependence graph even though a Panel-backed occurrence path exists in composition.
 
 # Reopening discipline
 
@@ -169,7 +143,7 @@ If Phase 012 exposes:
 - a purpose/product role that cannot be justified → revisit the natural Phase 010 project/purpose owner;
 - intrinsic Concept coupling → reopen the natural Phase 010 Concept owner;
 - a coherent accepted subset that current composition cannot explain → reopen/refine the natural Phase 011 synchronization owner;
-- pressure to make a derived mechanism a graph node → review its upstream classification before altering the Concept catalog;
+- pressure to make a derived mechanism a graph node → review upstream classification before altering the Concept catalog;
 - user-visible mapping implications without inclusion changes → carry them to Phase 013.
 
 # Phase 012 implementation prohibition
@@ -189,34 +163,22 @@ Dependence/subset work must **not** be translated into or justified by:
 
 If a proposed dependence exists only because current implementation is coupled, reject it as Concept Design authority.
 
-# Canonical dependence knowledge
-
-No canonical dependence graph exists yet. 012-A and 012-B remain phase planning/candidate evidence.
-
-A compact `docs/canonical/dependence/` area should be promoted only after 012-C through 012-G establish durable accepted edge semantics. Provisional candidate claims must not be copied into Concept specifications.
-
 # Phase 013 boundary
 
 Phase 013 owns user-visible representation/mapping questions such as role/context selection, action availability, correction/reconciliation, Finalization/Declaration, and download/share/print/publish affordances.
-
-Phase 012 may identify explanation-order or variant-specific mapping implications, but it does not choose screens, navigation, commands, API resources or UI sequence.
-
-# Current project-purpose constraints
-
-Concept Design must continue to respect live-event operation, independent judgment, bias-sensitive disclosure, accessibility, degraded connectivity/device conditions, paper continuity, historical truth, explainability, and separation of technical power from competition semantic authority.
-
-`GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint. Existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu choices remain historical implementation facts.
 
 # Suspended downstream authority
 
 Until successful Phase 017 closure:
 
-- Phase 005 architecture conclusions do not constrain Concept Design;
+- historical architecture conclusions do not constrain Concept Design;
 - `docs/canonical/architecture/` remains preserved candidate downstream knowledge;
-- Phase 006 implementation planning is historical only;
+- implementation planning remains historical/suspended;
 - 006-D remains frozen except narrow non-domain safety/build maintenance;
 - Phase 008 implementation planning remains halted;
 - `docs/canonical/implementation/` remains downstream candidate/tooling knowledge, not current domain realization authority.
+
+`GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint.
 
 # Meaning of future successful closure
 
@@ -226,4 +188,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**
+> **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**
