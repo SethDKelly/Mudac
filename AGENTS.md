@@ -7,13 +7,12 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase, [`Phase 011`](docs/011-concept-composition-synchronization/) as the completed composition phase, and [`Phase 012`](docs/012-concept-dependence-product-family-subset-scope/) as the active dependence/subset phase.
-5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/).
-6. Use [011-J](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for the Phase 011 exit and dependence-analysis handoff.
-7. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase 012 semantics and the approved subphase sequence.
-8. Use [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) for the current whole-catalog inclusion-role and candidate-dependence inventory. Treat every 012-B edge as provisional until its owning later subgroup accepts it.
-9. Use canonical synchronization owners for current interaction rules; numbered Phase 011 records are provenance/rationale evidence.
-10. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
+4. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/), [Current Synchronizations](docs/canonical/synchronizations/) and [Current Dependence](docs/canonical/dependence/).
+5. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase 012 semantics and the approved A→K sequence.
+6. Use [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) only as candidate/provisional dependence evidence.
+7. Use [012-C](docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) and [MUDAC Application-Family Concept Dependence](docs/canonical/dependence/application-family-dependence.md) for current accepted Competition/actor/competitor/bias-control dependence.
+8. Use canonical synchronization owners for current interaction rules; dependence never replaces composition.
+9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
 
@@ -33,7 +32,8 @@ implementation authorization: NOT YET
 012: IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
-012-C: NEXT
+012-C: COMPLETE — PASS
+012-D: NEXT
 ```
 
 ## Current Concept authority
@@ -42,25 +42,20 @@ The canonical catalog contains eighteen Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-Do **not** use the previous sixteen-Concept taxonomy as current authority.
-
 `Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context. Recovery/Continuity remains a cross-cutting purpose obligation.
 
 ## Current composition authority
 
-Phase 011 is complete. Preserve these whole-application distinctions:
+Phase 011 is complete. Preserve these distinctions:
 
 - Identity continuity ≠ Participation authority ≠ Access permission;
 - Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
-- Evaluation Basis is one exact authoritative Rubric Version;
 - Scorecard Draft ≠ authority;
 - Versioning ≠ semantic authorship;
 - Provenance ≠ domain authority;
-- supersession ≠ invalidation ≠ replacement;
-- historical obligation satisfaction ≠ current evidence eligibility;
-- terminal obligations never reopen;
+- historical satisfaction ≠ current evidence eligibility;
 - missing evidence is never zero;
 - Coverage factual sufficiency ≠ exception disposition;
 - Aggregate existence ≠ rank eligibility;
@@ -69,125 +64,129 @@ Phase 011 is complete. Preserve these whole-application distinctions:
 - calculated ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-Final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved `U` remains.
-
 Governing automation rule:
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-Do not introduce semantic authority named Workflow, Run, Case, Task, Reconciliation state machine, Finalization coordinator, Result/Outcome aggregate owner, Release manager, Automation/Cascade controller or Synchronization state.
-
-## Phase 012 discipline
+## Dependence semantics
 
 Phase 012 owns **extrinsic inclusion dependence**, coherent Concept subsets, product/application-family variants and adopted scope.
 
-The application-family context is the **MUDAC live student data competition judging-and-outcome family**.
-
-For every candidate inclusion claim, distinguish:
-
 ```text
 intrinsic Concept dependence
-  = Concept-boundary defect; reopen the natural Phase 010 owner
+  = upstream Concept-boundary defect
 
 synchronization/composition
-  = how already-included Concepts interact; Phase 011 authority
+  = how already-included Concepts interact
 
 extrinsic inclusion dependence
   = contextual rule that including A requires B
     for A's intended MUDAC application role
 
 implementation dependency
-  = out of scope for Concept Design
+  = out of scope
 ```
 
-Do **not** convert every synchronization edge into a dependence edge.
+Do not derive dependence from synchronization, code imports, schemas, service calls, UI layout, deployment topology or ordinary workflow.
 
-Before accepting `A → B`, establish that A remains intrinsically understandable without B, identify A's MUDAC application role, show why that role becomes incoherent when B is absent, challenge workflow/UI/implementation bias, and test plausible unfamiliar subsets.
+## Current accepted dependence through 012-C
 
-## 012-B candidate-inventory rules
+Direct edges:
 
-012-B establishes analytical roles and candidate edges, not current dependence truth.
+```text
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
+```
 
-Candidate classes are:
+Transitive consequences:
 
-- **strong candidate** — likely contextual dependence requiring proof;
-- **conditional candidate** — dependence may hold only for a named capability/variant;
-- **alternative/disjunctive candidate** — one of several supporting roles may satisfy inclusion;
-- **challenge candidate** — familiar assumption that must be pressure-tested;
-- **rejected as candidate edge** — better explained as synchronization, generic parameterization, derived behavior or implementation coupling.
+```text
+Division → Team → Competition
+Alias    → Team → Competition
+Panel    → Participation → Competition
+Panel    → Participation → Identity
+```
 
-Do not promote these candidates into Concept specifications.
+Do not duplicate transitive reachability as direct edges without a distinct role rationale.
 
-Important current pressures:
+Current explicit universal non-edges:
 
-- Competition is a strong family anchor candidate but is not yet proven universally required;
-- Team/Participation/Division/Alias/Panel scope relationships remain contextual rather than intrinsic;
-- Division and Panel must be tested as optional contractions;
-- Alias is a bias-control/scope question, not automatic Team dependence;
-- Evaluation Occurrence, Evaluation Obligation and Scorecard must not be collapsed into one mandatory bundle merely because ordinary composition links them;
-- Versioning/Provenance must not become universal dependency sinks;
-- Award and Outcome Declaration remain separate capability layers;
-- Export may exist without Outcome Declaration or Publication;
-- `Publication → Export` is a strong candidate while `Export → Publication` is likely false;
-- no mutual-dependence cycle is accepted yet.
+```text
+Competition ↛ Division
+Competition ↛ Panel
+Team        ↛ Alias
+Identity    ↛ Competition
+Identity    ↛ Participation
+Access      ↛ Participation
+Access      ↛ Identity
+```
 
-## Subset and scope discipline
+The Access non-edges do not weaken protected-operation composition: Judge/Organizer protected actions still require legitimate Participation context and Access evaluation.
 
-Use these statuses consistently:
+## Current capability/scope rules
 
-- dependence-valid subset;
-- meaningful coherent subset;
-- in-scope variant;
-- coherent but out-of-scope variant;
-- invalid subset;
-- unresolved subset.
+- every in-scope MUDAC application variant retains Competition as the family context;
+- blinded-judging variants include Alias;
+- multi-cohort variants include Division;
+- reusable evaluator-grouping variants include Panel;
+- ad-hoc evaluator assignment may omit Panel;
+- single-cohort operation may omit Division at the dependence level;
+- current anonymity/disclosure policy would require later revalidation before a no-Division blinded variant can be adopted.
 
-Validity is not product commitment.
-
-Required counterexample probes include single-cohort operation without Division, ad-hoc judging without Panel, judging-only without Award/Outcome Declaration/Export/Publication, official outcome without Awards, official-but-non-public operation, Export without Publication, Export from non-outcome source, Publication without Export, no-Alias judging, reduced Versioning/Provenance support, and obligation/occurrence asymmetry.
-
-Paper versus electronic operation is **not** a Concept-subset axis under the current model.
+Do not turn these capability rules into false universal edges.
 
 ## Canonical dependence authority
 
-No canonical dependence graph is current yet.
+[`docs/canonical/dependence/application-family-dependence.md`](docs/canonical/dependence/application-family-dependence.md) is current dependence authority.
 
-012-A and 012-B are planning/candidate evidence. Create/promote `docs/canonical/dependence/` only after 012-C through 012-G establish durable accepted edges.
+It is explicitly **partial through 012-C**. Do not infer that unresolved 012-D through 012-G candidates are non-edges because they are absent.
+
+012-B remains candidate evidence only.
 
 ## Approved Phase 012 order
 
 ```text
-012-A  dependence scope / semantics / questions / plan                  COMPLETE — READY
-012-B  application-family roles / candidate dependence inventory        COMPLETE — PASS
-012-C  Competition / actor / competitor / bias-control dependence       NEXT
-012-D  evaluation structure / responsibility / basis / judgment         PLANNED
-012-E  authority lineage / Provenance / correctability                   PLANNED
-012-F  outcome / Award / official-authority dependence                   PLANNED
-012-G  Export / Publication / external-representation dependence         PLANNED
-012-H  whole graph / transitivity / co-inclusion / minimal subsets       PLANNED
-012-I  product-family variants / scope / composition revalidation        PLANNED
-012-J  counterexamples / upstream reopen / Phase 013 handoff audit       PLANNED
-012-K  canonical reconciliation / Phase 012 exit / Phase 013 handoff     PLANNED
+012-A  scope / semantics / questions / plan                            COMPLETE — READY
+012-B  application-family roles / candidate inventory                  COMPLETE — PASS
+012-C  Competition / actor / competitor / bias-control dependence      COMPLETE — PASS
+012-D  evaluation structure / responsibility / basis / judgment         NEXT
+012-E  authority lineage / Provenance / correctability                  PLANNED
+012-F  outcome / Award / official-authority dependence                  PLANNED
+012-G  Export / Publication / external-representation dependence        PLANNED
+012-H  whole graph / transitivity / co-inclusion / minimal subsets      PLANNED
+012-I  product-family variants / scope / composition revalidation       PLANNED
+012-J  counterexamples / upstream reopen / Phase 013 handoff audit      PLANNED
+012-K  canonical reconciliation / Phase 012 exit / Phase 013 handoff    PLANNED
 ```
+
+## 012-D discipline
+
+012-D owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence.
+
+Use current transitivity rather than redundantly adding context edges. For example, an accepted future `Evaluation Occurrence → Participation` already implies Identity + Competition; `Evaluation Occurrence → Team` already implies Competition.
+
+Do not make Panel mandatory merely because the ordinary occurrence path can begin from Panel candidates.
 
 ## Reopening rules
 
-- Purpose/scope role cannot be justified → revisit the natural Phase 010 project/purpose owner.
-- Proposed edge exposes intrinsic Concept coupling → reopen the natural Phase 010 Concept owner.
-- Accepted subset exposes missing/invalid composition → reopen/refine the natural Phase 011 synchronization owner.
-- Dependence seems to require a derived mechanism as a Concept node → review its upstream classification before adding it.
-- User-visible explanation/navigation issues without inclusion change → carry to Phase 013.
+- unjustified purpose/scope role → revisit the natural Phase 010 project/purpose owner;
+- intrinsic Concept coupling → reopen the natural Phase 010 Concept owner;
+- accepted subset exposes missing composition → reopen/refine the natural Phase 011 synchronization owner;
+- derived mechanism appears to require Concept status → review upstream classification first;
+- user-visible mapping issue without inclusion change → carry to Phase 013.
 
 ## Design-only rules for Phases 012–017
 
 - Do not resume 008-F through 008-L.
 - Do not begin new domain implementation.
-- Do not let frameworks, packages, tables, APIs, AWS services, source topology, authentication providers, persistence choices or existing code determine Concept Design.
-- Do not infer Concept dependence from service/package/module/database dependency.
-- Do not turn the dependence graph into implementation architecture or implementation order.
+- Do not infer Concept dependence from source/package/service/database dependency.
+- Do not turn the dependence graph into implementation architecture, source order, API direction, persistence ownership or deployment sequence.
 - Do not design commercial tiers from Concept subsets.
-- Architecture/implementation may be inspected only for contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
-- Keep durable current meaning in canonical conceptual owners; keep rejected alternatives/counterexamples in numbered phase history.
+- Keep accepted current meaning in canonical owners and rejected/counterexample reasoning in numbered phase history.
 
 ## Frozen executable substrate
 
@@ -201,4 +200,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**
+> **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**
