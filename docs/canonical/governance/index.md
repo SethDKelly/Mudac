@@ -30,7 +30,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011 composition/synchronization: COMPLETE — PASS
 012 dependence/product-family/subset/scope: IN PROGRESS
 012-A: COMPLETE — READY
-012-B: NEXT
+012-B: COMPLETE — PASS
+012-C: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -48,23 +49,40 @@ implementation authorization: NOT YET
 
 # Active Phase 012 boundary
 
-[012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) is the current Phase 012 start gate.
+[012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the Phase 012 semantics and work plan.
 
-It establishes:
+[012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) is the current whole-catalog candidate inventory.
 
-- application family = **MUDAC live student data competition judging-and-outcome family**;
-- no current dependence edges yet;
-- `A → B` means A lacks its intended MUDAC application role in any coherent subset that omits B;
-- synchronization is evidence, not automatic dependence;
-- intrinsic dependence is an upstream Concept-boundary defect;
-- implementation dependency is outside Concept Design;
-- dependence-valid, meaningful coherent, in-scope, coherent-but-out-of-scope, invalid and unresolved subset statuses are distinct;
-- unusual/minimal subsets must be tested rather than treating the incumbent full product as indivisible;
-- paper/electronic capture is not a Concept-subset axis;
-- canonical dependence knowledge will be created only after substantive analysis establishes durable current truth;
-- Phase 012 follows the approved 012-B through 012-K sequence.
+012-B establishes:
 
-Candidate pressure includes Division/Panel optionality, Alias under bias-sensitive judging, Evaluation Occurrence/Obligation asymmetry, Scorecard/Rubric inclusion roles, Versioning/Provenance support for authoritative variants, Award/Outcome Declaration optionality, Export without Publication/official outcome and possible Publication→Export dependence.
+- all eighteen Concepts have an explicit MUDAC application-family inclusion role;
+- candidate relations remain provisional and are classified as strong, conditional, alternative/disjunctive, challenge, or rejected-as-edge;
+- Division and Panel optionality remain explicit pressure rather than assumed requirements;
+- Alias remains a bias-control/scope question rather than an intrinsic Team requirement;
+- Evaluation Occurrence/Evaluation Obligation/Scorecard composition is not automatically dependence;
+- Versioning/Provenance are conditional authority-history support rather than universal sinks;
+- Award and Outcome Declaration remain separate capability layers;
+- Export and Publication remain separable, with `Publication → Export` a strong candidate and the reverse likely false;
+- no mutual-dependence cycle is accepted yet;
+- no canonical dependence graph is current yet.
+
+# Phase 012 dependency semantics
+
+```text
+synchronization/composition
+  = how included Concepts interact
+
+extrinsic inclusion dependence
+  = which Concepts must be co-included for an application role
+
+intrinsic dependence
+  = upstream Concept-boundary defect
+
+implementation dependency
+  = downstream engineering concern
+```
+
+Do not turn the Phase-011 synchronization graph or the 012-B candidate inventory into accepted dependence mechanically.
 
 # Phase 012 reopening rules
 
@@ -76,4 +94,4 @@ Candidate pressure includes Division/Panel optionality, Alias under bias-sensiti
 
 # Current handoff
 
-Proceed to **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
+Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
