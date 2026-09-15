@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture after Phase 011 composition closure, with Phase 012 dependence/subset analysis next, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 012 dependence/subset analysis active after a successful 012-A start gate, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, dependence, reentry]
 sources:
@@ -9,6 +9,7 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md
   - resource: ../synchronizations/index.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -21,7 +22,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 completed representation-independent Concept composition/synchronization with **PASS**.
 
-The only authorized next methodology work is Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis**.
+Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis** — is now active. 012-A completed the required start gate with **READY TO BEGIN PHASE 012 SUBPHASES**. The only authorized next methodology work is 012-B and its approved downstream dependence-analysis sequence.
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -38,7 +39,9 @@ implementation authorization: NOT YET
 Phase 009: COMPLETE — PASS
 Phase 010: COMPLETE — PASS
 Phase 011: COMPLETE — PASS
-Phase 012: NEXT
+Phase 012: IN PROGRESS
+012-A: COMPLETE — READY
+012-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -53,7 +56,7 @@ current canonical Concepts / mechanisms / policies / invariants
         ↓
 reconciled canonical synchronization/composition authority (Phase 011)
         ↓
-Phase 012 dependence / product-family / subset / scope analysis
+active Phase 012 dependence / product-family / subset / scope analysis
         ↓
 future Phase 013 mapping and later design-validation phases
 
@@ -70,7 +73,7 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 The previous Judging Encounter and Official Outcome Revision paths are deprecated historical adapters, not current semantic owners.
 
-Phase 011 found no Concept-boundary defect requiring Phase 010 reopening.
+Phase 011 found no Concept-boundary defect requiring Phase 010 reopening. Phase 012 may still expose one; if it does, the natural upstream owner must be reopened rather than encoding intrinsic coupling as an extrinsic dependence edge.
 
 # Current composition authority
 
@@ -86,14 +89,17 @@ The governing automation rule remains:
 
 No hidden Workflow/Coordinator/Process Concept or semantic cycle is required by current composition.
 
-# Phase 012 authority boundary
+# Active Phase 012 authority boundary
 
 Phase 012 may design **contextual/extrinsic Concept inclusion dependence, coherent subsets, application/product-family variants and adopted scope**.
 
-It may establish:
+012-A defines the analyzed application family as the **MUDAC live student data competition judging-and-outcome family**.
 
-- the application-family context being analyzed;
+Phase 012 may establish:
+
+- Concept application roles relevant to inclusion;
 - material inclusion-dependence edges with purpose-level rationale;
+- explicit non-edge conclusions;
 - transitive consequences where relevant;
 - mutually dependent/co-inclusion groups where legitimate;
 - representative valid and invalid subsets;
@@ -121,6 +127,35 @@ implementation dependency
 
 A Phase-011 synchronization edge is evidence, not automatically a Phase-012 dependence edge.
 
+No dependence edge is current merely because 012-A names it as a candidate question.
+
+# Subset and scope discipline
+
+Phase 012 must distinguish:
+
+- dependence-valid subset;
+- meaningful coherent subset;
+- in-scope variant;
+- coherent but out-of-scope variant;
+- invalid subset;
+- unresolved subset.
+
+A dependence-valid subset is not automatically a product commitment.
+
+Phase 012 must actively challenge the incumbent full-capability shape. Candidate probes include single-cohort operation without Division, ad-hoc judging without Panel, judging-only without Award/Outcome Declaration/Export/Publication, official-but-non-public operation, Export without Publication, no-Alias judging and reduced Versioning/Provenance support.
+
+Paper versus electronic operation remains a capture-channel difference, not a Concept-subset axis under the current model.
+
+# Reopening discipline
+
+If Phase 012 exposes:
+
+- a purpose/product role that cannot be justified → revisit the natural Phase 010 project/purpose owner;
+- intrinsic Concept coupling → reopen the natural Phase 010 Concept owner;
+- a coherent accepted subset that current composition cannot explain → reopen/refine the natural Phase 011 synchronization owner;
+- pressure to make a derived mechanism a graph node → review its upstream classification before altering the Concept catalog;
+- user-visible mapping implications without inclusion changes → carry them to Phase 013.
+
 # Phase 012 implementation prohibition
 
 Dependence/subset work must **not** be translated into or justified by:
@@ -137,6 +172,12 @@ Dependence/subset work must **not** be translated into or justified by:
 - commercial packaging alone.
 
 If a proposed dependence exists only because current implementation is coupled, reject it as Concept Design authority.
+
+# Canonical dependence knowledge
+
+No canonical dependence graph exists yet. 012-A anticipates a compact `docs/canonical/dependence/` area only after substantive edge analysis establishes durable current truth.
+
+Provisional inclusion hypotheses must remain in numbered Phase 012 evidence rather than being copied into Concept specifications as intrinsic requirements.
 
 # Phase 013 boundary
 
@@ -169,4 +210,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
+> **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**
