@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 012 dependence/subset analysis active after a successful 012-A start gate, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 012 dependence/subset analysis active through the 012-B candidate inventory, suspended downstream architecture/implementation authority, frozen bootstrap, and a design-only gate through Phase 017 until successful methodology closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, dependence, reentry]
 sources:
@@ -10,6 +10,7 @@ sources:
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md
   - resource: ../synchronizations/index.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -22,7 +23,11 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the previous 007-I methodology exit. Phase 010 completed foundational project/context, purpose, discovery, behavioral specification and modularity work. Phase 011 completed representation-independent Concept composition/synchronization with **PASS**.
 
-Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis** — is now active. 012-A completed the required start gate with **READY TO BEGIN PHASE 012 SUBPHASES**. The only authorized next methodology work is 012-B and its approved downstream dependence-analysis sequence.
+Phase 012 — **Concept Dependence, Product-Family, Subset & Scope Analysis** — is active. 012-A completed the required start gate and 012-B completed the whole-catalog application-role/candidate-dependence inventory with **PASS**.
+
+The only authorized next methodology work is:
+
+> **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -41,7 +46,8 @@ Phase 010: COMPLETE — PASS
 Phase 011: COMPLETE — PASS
 Phase 012: IN PROGRESS
 012-A: COMPLETE — READY
-012-B: NEXT
+012-B: COMPLETE — PASS
+012-C: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -56,7 +62,13 @@ current canonical Concepts / mechanisms / policies / invariants
         ↓
 reconciled canonical synchronization/composition authority (Phase 011)
         ↓
-active Phase 012 dependence / product-family / subset / scope analysis
+Phase 012-A semantics / scope
+        ↓
+Phase 012-B candidate inclusion-role inventory
+        ↓
+012-C..G family-specific dependence acceptance/rejection
+        ↓
+012-H..K whole-graph/subset/scope/consolidation
         ↓
 future Phase 013 mapping and later design-validation phases
 
@@ -79,8 +91,6 @@ Phase 011 found no Concept-boundary defect requiring Phase 010 reopening. Phase 
 
 Phase 011 is complete. Current interaction rules live under [Canonical Synchronizations](../synchronizations/).
 
-The pre-011 sixteen-contract file is historical evidence only.
-
 The final whole-application action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved action class remains.
 
 The governing automation rule remains:
@@ -93,21 +103,7 @@ No hidden Workflow/Coordinator/Process Concept or semantic cycle is required by 
 
 Phase 012 may design **contextual/extrinsic Concept inclusion dependence, coherent subsets, application/product-family variants and adopted scope**.
 
-012-A defines the analyzed application family as the **MUDAC live student data competition judging-and-outcome family**.
-
-Phase 012 may establish:
-
-- Concept application roles relevant to inclusion;
-- material inclusion-dependence edges with purpose-level rationale;
-- explicit non-edge conclusions;
-- transitive consequences where relevant;
-- mutually dependent/co-inclusion groups where legitimate;
-- representative valid and invalid subsets;
-- minimal or unusual coherent subsets that test assumptions;
-- optional, conditional and alternative inclusion relationships;
-- in-scope versus coherent-but-out-of-scope variants;
-- variant-specific implications for existing Phase-011 composition;
-- explanation/mapping implications to hand to Phase 013.
+The analyzed application family is the **MUDAC live student data competition judging-and-outcome family**.
 
 It must preserve these distinctions:
 
@@ -127,11 +123,31 @@ implementation dependency
 
 A Phase-011 synchronization edge is evidence, not automatically a Phase-012 dependence edge.
 
-No dependence edge is current merely because 012-A names it as a candidate question.
+# 012-B candidate-authority rule
+
+012-B records provisional candidates only. Its classifications are:
+
+- strong candidate;
+- conditional candidate;
+- alternative/disjunctive candidate;
+- challenge candidate;
+- rejected as candidate edge.
+
+None is current canonical dependence merely because it appears in the inventory.
+
+012-B specifically prevents:
+
+- treating the full eighteen-Concept product as one mandatory bundle;
+- making Competition automatically depend on Division, Panel, Award, Outcome Declaration, Export or Publication;
+- turning ordinary Evaluation Occurrence/Evaluation Obligation/Scorecard composition into mandatory co-inclusion without proof;
+- using Versioning/Provenance as universal dependency sinks;
+- treating Award as synonymous with official outcome authority;
+- treating Export and Publication as inseparable;
+- creating mutual-dependence cycles before counterexample analysis.
 
 # Subset and scope discipline
 
-Phase 012 must distinguish:
+Phase 012 distinguishes:
 
 - dependence-valid subset;
 - meaningful coherent subset;
@@ -142,7 +158,7 @@ Phase 012 must distinguish:
 
 A dependence-valid subset is not automatically a product commitment.
 
-Phase 012 must actively challenge the incumbent full-capability shape. Candidate probes include single-cohort operation without Division, ad-hoc judging without Panel, judging-only without Award/Outcome Declaration/Export/Publication, official-but-non-public operation, Export without Publication, no-Alias judging and reduced Versioning/Provenance support.
+Counterexample pressure includes single-cohort operation without Division, ad-hoc judging without Panel, judging-only without Award/Outcome Declaration/Export/Publication, official-but-non-public operation, Export without Publication, no-Alias judging, reduced Versioning/Provenance support, and obligation/occurrence asymmetry.
 
 Paper versus electronic operation remains a capture-channel difference, not a Concept-subset axis under the current model.
 
@@ -175,9 +191,9 @@ If a proposed dependence exists only because current implementation is coupled, 
 
 # Canonical dependence knowledge
 
-No canonical dependence graph exists yet. 012-A anticipates a compact `docs/canonical/dependence/` area only after substantive edge analysis establishes durable current truth.
+No canonical dependence graph exists yet. 012-A and 012-B remain phase planning/candidate evidence.
 
-Provisional inclusion hypotheses must remain in numbered Phase 012 evidence rather than being copied into Concept specifications as intrinsic requirements.
+A compact `docs/canonical/dependence/` area should be promoted only after 012-C through 012-G establish durable accepted edge semantics. Provisional candidate claims must not be copied into Concept specifications.
 
 # Phase 013 boundary
 
@@ -210,4 +226,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**
+> **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**
