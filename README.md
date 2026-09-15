@@ -11,9 +11,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted extrinsic inclusion-dependence authority, partial through 012-C.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted extrinsic inclusion-dependence authority, partial through 012-D.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 dependence/product-family/subset/scope work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) — current accepted Competition/actor/competitor/bias-control dependence result.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) — current evaluation-family dependence result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -35,7 +35,8 @@ implementation authorization: NOT YET
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 ```
 
 ## Current Concept catalog
@@ -50,7 +51,9 @@ Coverage remains derived factual sufficiency with exception disposition separate
 
 ## Current Phase 012 dependence
 
-012-C establishes the first durable direct edges:
+Current canonical dependence is partial through 012-D.
+
+Competition/actor/competitor direct edges are:
 
 ```text
 Team          → Competition
@@ -61,27 +64,19 @@ Alias         → Team
 Panel         → Participation
 ```
 
-The graph is minimal: Division/Alias reach Competition through Team, and Panel reaches Competition/Identity through Participation.
-
-Current explicit universal non-edges include:
+012-D adds the evaluation family:
 
 ```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
 ```
 
-These non-edges do not remove current composition requirements. Protected Judge/Organizer actions still use Participation-derived context for Access.
+Team/Participation provide Competition transitively, and Participation provides Identity transitively.
 
-Competition is the family anchor for every in-scope MUDAC variant, but that scope rule does not imply Competition depends on every optional capability.
+A key 012-D result is that Evaluation Occurrence, Evaluation Obligation, and Scorecard are **not** an automatic co-inclusion group. The full current application synchronizes them, but coherent contractions can separately support occurrence history, responsibility tracking, or judgment capture. Rubric also remains independently useful as reusable evaluation-instrument definition.
 
-Division remains optional for single-cohort operation; Panel remains optional for ad-hoc evaluator assignment; Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
-
-A single-cohort no-Division variant is dependence-coherent but would require later policy/composition revalidation before adoption because current disclosure policy names Division in the blinded Judge-facing representation.
+These contractions are not adopted product variants yet. Phase 012-I owns scope selection; selected contractions may require variant-specific Phase-011 composition refinement.
 
 ## Completion runway
 
@@ -90,7 +85,7 @@ A single-cohort no-Division variant is dependence-coherent but would require lat
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-D NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-E NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -113,4 +108,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
