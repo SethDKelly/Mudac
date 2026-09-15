@@ -1,6 +1,6 @@
 # Phase 012 — Concept Dependence, Product-Family, Subset & Scope Analysis
 
-Status: **IN PROGRESS — 012-A/B/C complete; 012-D next.**
+Status: **IN PROGRESS — 012-A/B/C/D complete; 012-E next.**
 
 ## Role in the completion runway
 
@@ -33,7 +33,7 @@ A Phase 011 synchronization edge is evidence to inspect, not automatically a Pha
 
 Phase 012 analyzes the **MUDAC live student data competition judging-and-outcome family**.
 
-Competition is now established as the anchor of every in-scope MUDAC variant, but anchoring is a scope rule rather than a blanket `Competition → every capability` graph edge.
+Competition is the anchor of every in-scope MUDAC variant, but anchoring is a scope rule rather than a blanket `Competition → every capability` graph edge.
 
 ## Current subgroup sequence
 
@@ -42,8 +42,8 @@ Competition is now established as the anchor of every in-scope MUDAC variant, bu
 | 012-A | [Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) | **Complete — READY** |
 | 012-B | [Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) | **Complete — PASS** |
 | 012-C | [Competition, Actor, Competitor Context & Bias-Control Dependence](012-C-competition-actor-competitor-context-bias-control-dependence.md) | **Complete — PASS** |
-| 012-D | Evaluation Structure, Responsibility, Basis & Judgment Dependence | **Next** |
-| 012-E | Authority Lineage, Provenance & Correctability Dependence | Planned |
+| 012-D | [Evaluation Structure, Responsibility, Basis & Judgment Dependence](012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) | **Complete — PASS** |
+| 012-E | Authority Lineage, Provenance & Correctability Dependence | **Next** |
 | 012-F | Outcome, Recognition & Official-Authority Dependence | Planned |
 | 012-G | External Representation & Release Dependence | Planned |
 | 012-H | Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets | Planned |
@@ -51,11 +51,11 @@ Competition is now established as the anchor of every in-scope MUDAC variant, bu
 | 012-J | Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit | Planned |
 | 012-K | Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff | Planned |
 
-## 012-C result
+## Current canonical dependence
 
-012-C is the first phase to establish durable current extrinsic dependence.
+Current accepted direct edges through 012-D are owned by [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md).
 
-Accepted direct edges are:
+### Competition / actor / competitor context
 
 ```text
 Team          → Competition
@@ -66,47 +66,67 @@ Alias         → Team
 Panel         → Participation
 ```
 
-The graph is intentionally minimal. Current transitive consequences include:
+### Evaluation family
 
 ```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
+Evaluation Occurrence → Team
+Evaluation Occurrence → Participation
+Evaluation Occurrence → Rubric
+
+Evaluation Obligation → Team
+Evaluation Obligation → Participation
+Evaluation Obligation → Rubric
+
+Scorecard             → Team
+Scorecard             → Participation
+Scorecard             → Rubric
 ```
 
-Current explicit universal non-edges include:
+Team/Participation edges give each evaluation Concept Competition/Identity transitively where applicable.
+
+## 012-D result
+
+012-D rejects an automatic inclusion bundle among the three evaluation-work Concepts:
 
 ```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
+Evaluation Occurrence ↛ Evaluation Obligation
+Evaluation Obligation ↛ Evaluation Occurrence
+Evaluation Occurrence ↛ Scorecard
+Scorecard             ↛ Evaluation Occurrence
+Evaluation Obligation ↛ Scorecard
+Scorecard             ↛ Evaluation Obligation
 ```
 
-The Access conclusions reject only universal graph edges. Protected Judge/Organizer operations still require Participation-derived context through current Phase-011 composition.
+The ordinary full-product chain remains valid Phase-011 synchronization. It is simply not universal inclusion dependence.
+
+Representative dependence-valid contractions now include:
+
+- occurrence-history capability without obligation/judgment capture;
+- responsibility/remaining-work capability without bounded occurrence/judgment capture;
+- lightweight Scorecard capture without formal obligation/occurrence;
+- full evaluation capability containing all three.
+
+These contractions are **not yet adopted product variants**. 012-I owns scope selection. If selected, their natural Phase-011 synchronization owners must be revalidated/refined.
+
+Rubric remains independently useful as reusable evaluation-instrument preparation and has no outgoing evaluation edge in 012-D.
 
 ## Conditional capability rules retained
 
-- blinded judging includes Alias under the current Concept catalog;
+- blinded judging includes Alias;
 - multi-cohort competition includes Division;
 - reusable intended evaluator grouping includes Panel;
 - protected Judge/Organizer actions use Participation context plus Access;
-- single-cohort no-Division operation is dependence-coherent but requires later policy/composition revalidation before adoption because current disclosure policy names Division in the blinded Judge-facing representation.
-
-These are not all representable as universal binary graph edges.
+- single-cohort no-Division operation is dependence-coherent but requires later policy/composition revalidation before adoption;
+- occurrence-backed responsibility, responsibility-backed Scorecard, and occurrence-backed Scorecard context apply when those Concepts are co-included, without making them universal dependencies.
 
 ## Canonical dependence authority
 
-Current accepted dependence now lives under:
+Current accepted dependence lives under:
 
 - [Canonical Dependence](../canonical/dependence/)
 - [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md)
 
-That owner is explicitly **partial through 012-C**. Absence of an unresolved 012-D through 012-G edge is not yet a non-edge.
+That owner is explicitly **partial through 012-D**. Versioning/Provenance, outcome/recognition, and externalization/release remain unresolved until 012-E through 012-G.
 
 Do not copy contextual dependence into intrinsic Concept specifications.
 
@@ -127,7 +147,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -137,4 +158,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
