@@ -10,7 +10,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 4. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/), [Current Synchronizations](docs/canonical/synchronizations/) and [Current Dependence](docs/canonical/dependence/).
 5. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase 012 semantics and the approved A→K sequence.
 6. Use [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) only as candidate/provisional dependence evidence.
-7. Use [012-C](docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) and [MUDAC Application-Family Concept Dependence](docs/canonical/dependence/application-family-dependence.md) for current accepted Competition/actor/competitor/bias-control dependence.
+7. Use [012-C](docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), and [MUDAC Application-Family Concept Dependence](docs/canonical/dependence/application-family-dependence.md) for accepted current dependence.
 8. Use canonical synchronization owners for current interaction rules; dependence never replaces composition.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
@@ -33,7 +33,8 @@ implementation authorization: NOT YET
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 ```
 
 ## Current Concept authority
@@ -46,7 +47,7 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context. Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Current composition authority
+## Composition authority
 
 Phase 011 is complete. Preserve these distinctions:
 
@@ -57,9 +58,6 @@ Phase 011 is complete. Preserve these distinctions:
 - Provenance ≠ domain authority;
 - historical satisfaction ≠ current evidence eligibility;
 - missing evidence is never zero;
-- Coverage factual sufficiency ≠ exception disposition;
-- Aggregate existence ≠ rank eligibility;
-- Rank ≠ Award authority;
 - Competition Finalization ≠ Outcome Declaration;
 - calculated ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
@@ -69,8 +67,6 @@ Governing automation rule:
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
 ## Dependence semantics
-
-Phase 012 owns **extrinsic inclusion dependence**, coherent Concept subsets, product/application-family variants and adopted scope.
 
 ```text
 intrinsic Concept dependence
@@ -89,9 +85,9 @@ implementation dependency
 
 Do not derive dependence from synchronization, code imports, schemas, service calls, UI layout, deployment topology or ordinary workflow.
 
-## Current accepted dependence through 012-C
+## Current accepted dependence through 012-D
 
-Direct edges:
+Competition/actor/competitor edges:
 
 ```text
 Team          → Competition
@@ -102,50 +98,45 @@ Alias         → Team
 Panel         → Participation
 ```
 
-Transitive consequences:
+Evaluation edges:
 
 ```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
 ```
 
-Do not duplicate transitive reachability as direct edges without a distinct role rationale.
+Use transitivity rather than duplicating Competition/Identity edges through each evaluation Concept.
 
-Current explicit universal non-edges:
+## Evaluation-family non-cycle
 
-```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
-```
+Do not turn ordinary evaluation synchronization into inclusion dependence.
 
-The Access non-edges do not weaken protected-operation composition: Judge/Organizer protected actions still require legitimate Participation context and Access evaluation.
+Current universal non-edges include both directions among:
 
-## Current capability/scope rules
+- Evaluation Occurrence and Evaluation Obligation;
+- Evaluation Occurrence and Scorecard;
+- Evaluation Obligation and Scorecard.
 
-- every in-scope MUDAC application variant retains Competition as the family context;
+Rubric does not depend on Competition, Evaluation Occurrence, Evaluation Obligation, or Scorecard merely because those Concepts consume its evaluation semantics.
+
+Dependence-valid contractions can separately support occurrence history, responsibility tracking, and Scorecard capture. They remain scope candidates until 012-I.
+
+## Capability rules
+
+- every in-scope MUDAC application variant retains Competition as family context;
 - blinded-judging variants include Alias;
 - multi-cohort variants include Division;
 - reusable evaluator-grouping variants include Panel;
-- ad-hoc evaluator assignment may omit Panel;
-- single-cohort operation may omit Division at the dependence level;
-- current anonymity/disclosure policy would require later revalidation before a no-Division blinded variant can be adopted.
-
-Do not turn these capability rules into false universal edges.
+- protected Judge/Organizer actions use Participation context plus Access;
+- single-cohort no-Division operation is dependence-coherent but needs policy/composition revalidation before adoption;
+- if 012-I adopts an evaluation contraction, revalidate/refine its natural Phase-011 synchronization owner rather than changing dependence to fit the existing full-product workflow.
 
 ## Canonical dependence authority
 
-[`docs/canonical/dependence/application-family-dependence.md`](docs/canonical/dependence/application-family-dependence.md) is current dependence authority.
+[`docs/canonical/dependence/application-family-dependence.md`](docs/canonical/dependence/application-family-dependence.md) is current dependence authority and is explicitly **partial through 012-D**.
 
-It is explicitly **partial through 012-C**. Do not infer that unresolved 012-D through 012-G candidates are non-edges because they are absent.
-
-012-B remains candidate evidence only.
+Versioning/Provenance, outcome/recognition, and Export/Publication dependence remain unresolved until 012-E through 012-G.
 
 ## Approved Phase 012 order
 
@@ -153,8 +144,8 @@ It is explicitly **partial through 012-C**. Do not infer that unresolved 012-D t
 012-A  scope / semantics / questions / plan                            COMPLETE — READY
 012-B  application-family roles / candidate inventory                  COMPLETE — PASS
 012-C  Competition / actor / competitor / bias-control dependence      COMPLETE — PASS
-012-D  evaluation structure / responsibility / basis / judgment         NEXT
-012-E  authority lineage / Provenance / correctability                  PLANNED
+012-D  evaluation structure / responsibility / basis / judgment        COMPLETE — PASS
+012-E  authority lineage / Provenance / correctability                  NEXT
 012-F  outcome / Award / official-authority dependence                  PLANNED
 012-G  Export / Publication / external-representation dependence        PLANNED
 012-H  whole graph / transitivity / co-inclusion / minimal subsets      PLANNED
@@ -163,13 +154,11 @@ It is explicitly **partial through 012-C**. Do not infer that unresolved 012-D t
 012-K  canonical reconciliation / Phase 012 exit / Phase 013 handoff    PLANNED
 ```
 
-## 012-D discipline
+## 012-E discipline
 
-012-D owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence.
+012-E owns the inclusion role of Versioning and Provenance around authoritative lineage, actor/represented-authority explanation, correction, invalidation, and historical reconstructibility.
 
-Use current transitivity rather than redundantly adding context edges. For example, an accepted future `Evaluation Occurrence → Participation` already implies Identity + Competition; `Evaluation Occurrence → Team` already implies Competition.
-
-Do not make Panel mandatory merely because the ordinary occurrence path can begin from Panel candidates.
+Do not make Versioning/Provenance universal sinks merely because auditability is valuable. Determine whether dependence is direct, capability-conditioned, or absent for each authoritative role.
 
 ## Reopening rules
 
@@ -200,4 +189,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**
+> **012-E — Authority Lineage, Provenance & Correctability Dependence**
