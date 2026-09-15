@@ -6,7 +6,7 @@ okf_version: "0.2"
 
 Preferred progressive-disclosure entry point for MUDAC design and governance knowledge.
 
-Current conceptual meaning lives under canonical knowledge. Numbered phase directories preserve design/history provenance. Architecture and implementation are preserved but quarantined from constraining reopened Concept Design.
+Current conceptual meaning lives under canonical knowledge. Numbered phase directories preserve design/history provenance. Architecture and implementation remain quarantined from reopened Concept Design.
 
 # Current Canonical Knowledge
 
@@ -14,7 +14,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current accepted Phase 012 extrinsic inclusion dependence and capability-conditioned co-inclusion, partial through 012-E.
+* [Dependence](canonical/dependence/) — current accepted Phase 012 inclusion dependence and capability-conditioned co-inclusion, partial through 012-F.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
@@ -26,11 +26,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), [Current Dependence](canonical/dependence/), and active [Phase 012](012-concept-dependence-product-family-subset-scope/).
 
-Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase 012 semantics and subphase plan.
+Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics and plan; [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) remains provisional candidate evidence.
 
-Use [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as candidate/provisional evidence only.
-
-Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), [012-E](012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md), and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
+Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), [012-E](012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md), [012-F](012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md), and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
 
 # Current methodology state
 
@@ -45,7 +43,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
-012-F: NEXT
+012-F: COMPLETE — PASS
+012-G: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -57,19 +56,24 @@ implementation authorization: NOT YET
 
 The application family is the **MUDAC live student data competition judging-and-outcome family**.
 
-Current direct evaluation dependence remains:
+Current outcome/recognition edges are:
 
 ```text
-Evaluation Occurrence → Team / Participation / Rubric
-Evaluation Obligation → Team / Participation / Rubric
-Scorecard             → Team / Participation / Rubric
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
 ```
 
-Together with 012-C, Team and Participation supply Competition transitively and Participation supplies Identity transitively.
+Recognition and official authority remain separate:
 
-012-D rejects automatic co-inclusion among Evaluation Occurrence, Evaluation Obligation, and Scorecard.
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
 
-012-E adds a second durable relation form for authority profiles:
+Outcome Declaration also does not directly depend on Team, Scorecard, Evaluation Obligation, Evaluation Occurrence, or Rubric merely because an ordinary accepted OutcomeBasis may be traceable to those sources.
+
+012-E authority rules remain:
 
 ```text
 Authoritative Rubric Basis
@@ -79,19 +83,23 @@ Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
 ```
 
-The same support pair remains required for Rubric/Scorecard authoritative correction or invalidation.
+Current capability rules include:
 
-Versioning and Provenance are not universal dependency sinks and do not universally depend on one another.
+```text
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
 
-Outcome Declaration is not routed through either generic support Concept merely because it is authoritative; it owns its own declaration lineage/currentness.
+Rank-Derived Award capability
+  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+```
 
-Outcome-affecting Evaluation Policy must remain reconstructible once judging begins, but it is a cross-cutting policy requirement rather than a Concept graph vertex.
+Current Rank is Division-scoped, making rank-derived recognition Division-contextual without creating universal `Award → Division`.
+
+Any official declaration requires a reconstructible accepted OutcomeBasis, but the exact source Concept set is variant-specific.
 
 # Scope discipline
 
-Dependence-valid does not mean adopted.
-
-Phase 012-I will decide whether reduced evaluation/authority profiles enter current product-family scope. Selected contractions may require variant-specific Phase-011 synchronization refinement.
+Dependence-valid does not mean adopted. Phase 012-I will decide which coherent evaluation, authority, recognition and official-outcome contractions belong to current product-family scope and which require variant-specific Phase-011 policy/composition refinement.
 
 # Completion runway
 
@@ -100,7 +108,7 @@ Phase 012-I will decide whether reduced evaluation/authority profiles enter curr
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-F NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-G NEXT
   ↓
 013 mapping / representation
   ↓
@@ -113,6 +121,6 @@ Phase 012-I will decide whether reduced evaluation/authority profiles enter curr
 017 methodology completeness / closure
 ```
 
-A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
+A successful future Phase 017 may authorize only a separate downstream architecture/engineering re-entry; it does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-F — Outcome, Recognition & Official-Authority Dependence**.
+The immediate next task is **012-G — External Representation & Release Dependence**.
