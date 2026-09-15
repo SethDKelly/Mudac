@@ -11,9 +11,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted extrinsic inclusion-dependence authority, partial through 012-D.
-* [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 dependence/product-family/subset/scope work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) — current evaluation-family dependence result.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted dependence/capability co-inclusion authority, partial through 012-E.
+* [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md) — current authority-history dependence result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -36,7 +36,8 @@ implementation authorization: NOT YET
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
-012-E: NEXT
+012-E: COMPLETE — PASS
+012-F: NEXT
 ```
 
 ## Current Concept catalog
@@ -47,13 +48,11 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 The former `Judging Encounter` and `Official Outcome Revision` paths remain deprecated historical adapters.
 
-Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains work/process context rather than an authority-owning Concept.
+Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
 
 ## Current Phase 012 dependence
 
-Current canonical dependence is partial through 012-D.
-
-Competition/actor/competitor direct edges are:
+The direct graph remains the 012-C/012-D result:
 
 ```text
 Team          → Competition
@@ -62,21 +61,32 @@ Participation → Identity
 Division      → Team
 Alias         → Team
 Panel         → Participation
-```
 
-012-D adds the evaluation family:
-
-```text
 Evaluation Occurrence → Team / Participation / Rubric
 Evaluation Obligation → Team / Participation / Rubric
 Scorecard             → Team / Participation / Rubric
 ```
 
-Team/Participation provide Competition transitively, and Participation provides Identity transitively.
+Evaluation Occurrence, Evaluation Obligation, and Scorecard are not an automatic co-inclusion group; their full-product relationships remain Phase-011 synchronization rather than universal dependence.
 
-A key 012-D result is that Evaluation Occurrence, Evaluation Obligation, and Scorecard are **not** an automatic co-inclusion group. The full current application synchronizes them, but coherent contractions can separately support occurrence history, responsibility tracking, or judgment capture. Rubric also remains independently useful as reusable evaluation-instrument definition.
+012-E adds no universal direct edge. It establishes authority-profile rules instead:
 
-These contractions are not adopted product variants yet. Phase 012-I owns scope selection; selected contractions may require variant-specific Phase-011 composition refinement.
+```text
+Authoritative Rubric Basis
+  ⇒ Versioning + Provenance
+
+Authoritative Scorecard Evidence
+  ⇒ Versioning + Provenance
+
+Rubric/Scorecard authoritative correction or invalidation
+  ⇒ Versioning + Provenance
+```
+
+Versioning and Provenance do not universally depend on one another and are not graph-wide history sinks.
+
+Outcome Declaration is a deliberate counterexample: it owns its own immutable declaration basis, declaring authority, currentness, and predecessor/successor history, so it does not universally depend on generic Versioning or Provenance.
+
+Outcome-affecting Evaluation Policy remains a cross-cutting authority-history requirement once judging begins, but it is not a Concept graph vertex.
 
 ## Completion runway
 
@@ -85,7 +95,7 @@ These contractions are not adopted product variants yet. Phase 012-I owns scope 
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-E NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-F NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -102,10 +112,10 @@ These contractions are not adopted product variants yet. Phase 012-I owns scope 
 
 ## Downstream work
 
-Phase 005 architecture, Phase 006 implementation planning/bootstrap and Phase 008 planning remain preserved as historical/downstream evidence. They are not current Concept Design constraints.
+Phase 005 architecture, Phase 006 implementation planning/bootstrap and Phase 008 planning remain historical/downstream evidence. They are not current Concept Design constraints.
 
 A successful future Phase 017 may establish readiness for a **separate architecture/engineering re-entry**. It will not automatically reactivate Phase 008 or authorize coding.
 
 ## Current direction
 
-Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
+Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
