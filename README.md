@@ -10,8 +10,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
-* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority.
-* [`docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md`](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) — Phase 011 exit and Phase 012 handoff.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
+* [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 dependence/product-family/subset/scope work.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md`](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — current Phase 012 start gate and approved subphase plan.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -29,7 +30,9 @@ implementation authorization: NOT YET
 009 methodology realignment: COMPLETE — PASS
 010 foundational completion: COMPLETE — PASS
 011 composition/synchronization revalidation: COMPLETE — PASS
-012 dependence/product-family/subset/scope: NEXT
+012 dependence/product-family/subset/scope: IN PROGRESS
+012-A: COMPLETE — READY
+012-B: NEXT
 ```
 
 ## Current Concept catalog
@@ -44,27 +47,36 @@ Coverage remains derived factual sufficiency with exception disposition separate
 
 ## Phase 011 result
 
-Phase 011 now passes the Base composition exit gate.
+Phase 011 passes the Base composition exit gate. Current application behavior can be reconstructed from independent Concept actions + explicit synchronization + deliberate application-action exposure.
 
-Current application behavior can be reconstructed from independent Concept actions + explicit synchronization + deliberate application-action exposure. The final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable; no unresolved `U` remains.
+The final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable; no unresolved `U` remains.
 
 The governing automation rule is:
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-Current composition preserves:
+## Phase 012 posture
 
-- Panel membership ≠ occurrence participation ≠ responsibility ≠ Scorecard evidence;
-- historical satisfaction ≠ current evidence eligibility;
-- Coverage exception ≠ factual Coverage satisfaction;
-- Aggregate existence ≠ rank eligibility;
-- Rank ≠ Award authority;
-- Competition Finalization ≠ Outcome Declaration;
-- calculated ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release ≠ transport;
-- correction preserves attributable history rather than silently rewriting downstream authority.
+012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family** and adopts the Base/Jackson distinction:
 
-All historical synchronization contracts 01–16 are fully dispositioned. The old corpus is now an archival adapter rather than parallel current authority.
+```text
+intrinsic Concept dependence
+  = upstream Concept-boundary defect
+
+synchronization / composition
+  = how already-included Concepts interact
+
+extrinsic inclusion dependence
+  = contextual rule that including A requires B
+    for A's intended application role
+
+implementation dependency
+  = out of scope
+```
+
+No dependence edge is current yet. 012-A instead defines the edge test, subset-status vocabulary, candidate inclusion questions, unfamiliar/minimal subset probes, canonical ownership plan and dependency-safe 012-B through 012-K sequence.
+
+Important candidate questions include Division and Panel optionality, Alias under bias-sensitive judging, Evaluation Occurrence/Obligation asymmetry, Scorecard/Rubric support, Versioning/Provenance requirements for authoritative variants, Award/Outcome Declaration optionality, Export without Publication or official outcome, and whether Publication contextually requires Export.
 
 ## Completion runway
 
@@ -73,7 +85,7 @@ All historical synchronization contracts 01–16 are fully dispositioned. The ol
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-B NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -86,8 +98,6 @@ All historical synchronization contracts 01–16 are fully dispositioned. The ol
 017 methodology completeness / canonical consolidation / closure
 ```
 
-Phase 012 corresponds to Base Phase 006 — **Concept Dependence, Product-Family, Subset & Scope Analysis**. It must derive inclusion relationships freshly rather than copying synchronization edges.
-
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
 ## Downstream work
@@ -98,4 +108,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**.
+Proceed to **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
