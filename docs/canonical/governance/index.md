@@ -32,7 +32,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -46,54 +47,22 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns current application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) now owns accepted Phase 012 extrinsic inclusion dependence. It is explicitly partial through 012-C.
+[Canonical Dependence](../dependence/) owns accepted Phase 012 extrinsic inclusion dependence and is currently partial through 012-D.
 
-Current direct edges are:
+Evaluation Occurrence, Evaluation Obligation, and Scorecard each depend on Team, Participation, and Rubric for their current MUDAC application roles. Their Team/Participation relationships provide Competition and Identity transitively through the 012-C graph.
 
-```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-```
+They do **not** universally depend on one another. Ordinary occurrence/responsibility/judgment coordination remains synchronization rather than a mandatory product-family bundle.
 
-Current transitive consequences include:
+Rubric remains independently meaningful as reusable evaluation-instrument definition.
 
-```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
-```
+# Current scope implications
 
-Do not duplicate these transitive paths as direct edges without a distinct application-role rationale.
+Dependence-valid contractions include separate occurrence-history, responsibility-tracking, and judgment-capture capabilities as well as the full combined evaluation capability.
 
-Current explicit universal non-edges include:
-
-```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
-```
-
-Access still participates in protected-operation composition; the non-edge conclusion concerns universal Concept inclusion only.
-
-# Current Phase 012 scope conclusions
-
-- Competition is the family anchor for every in-scope MUDAC application variant.
-- Division is optional for single-cohort variants.
-- Panel is optional for ad-hoc evaluator assignment.
-- Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
-- a single-cohort no-Division variant is dependence-coherent but needs later policy/composition revalidation before adoption because current disclosure policy names Division in blinded Judge-facing representation.
+These are not scope commitments. 012-I decides which variants MUDAC adopts. A selected contraction may require variant-specific Phase-011 synchronization revalidation.
 
 # Current handoff
 
-012-D now owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence. It should reuse 012-C transitive reachability rather than recreating Competition/Identity edges through every evaluation Concept.
+012-E now owns Versioning/Provenance inclusion around authoritative lineage, attribution, correction, invalidation and historical reconstructibility.
 
-Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
