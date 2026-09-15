@@ -11,9 +11,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted dependence/capability co-inclusion authority, partial through 012-E.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence/capability authority, partial through 012-F.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md) — current authority-history dependence result.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md) — current outcome/recognition dependence result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -37,7 +37,8 @@ implementation authorization: NOT YET
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
-012-F: NEXT
+012-F: COMPLETE — PASS
+012-G: NEXT
 ```
 
 ## Current Concept catalog
@@ -52,7 +53,7 @@ Coverage remains derived factual sufficiency with exception disposition separate
 
 ## Current Phase 012 dependence
 
-The direct graph remains the 012-C/012-D result:
+The current direct graph includes:
 
 ```text
 Team          → Competition
@@ -65,11 +66,15 @@ Panel         → Participation
 Evaluation Occurrence → Team / Participation / Rubric
 Evaluation Obligation → Team / Participation / Rubric
 Scorecard             → Team / Participation / Rubric
+
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
 ```
 
-Evaluation Occurrence, Evaluation Obligation, and Scorecard are not an automatic co-inclusion group; their full-product relationships remain Phase-011 synchronization rather than universal dependence.
+The graph deliberately does **not** collapse Evaluation Occurrence/Obligation/Scorecard or Award/Outcome Declaration into mandatory cycles.
 
-012-E adds no universal direct edge. It establishes authority-profile rules instead:
+012-E authority profiles remain:
 
 ```text
 Authoritative Rubric Basis
@@ -77,16 +82,30 @@ Authoritative Rubric Basis
 
 Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
-
-Rubric/Scorecard authoritative correction or invalidation
-  ⇒ Versioning + Provenance
 ```
 
-Versioning and Provenance do not universally depend on one another and are not graph-wide history sinks.
+012-F preserves:
 
-Outcome Declaration is a deliberate counterexample: it owns its own immutable declaration basis, declaring authority, currentness, and predecessor/successor history, so it does not universally depend on generic Versioning or Provenance.
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
 
-Outcome-affecting Evaluation Policy remains a cross-cutting authority-history requirement once judging begins, but it is not a Concept graph vertex.
+and rejects direct Outcome Declaration → Team/Scorecard/Obligation/Occurrence/Rubric edges based only on traceability.
+
+Current capability rules include:
+
+```text
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
+
+Rank-Derived Award capability
+  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+```
+
+Current Rank is Division-scoped, so rank-derived recognition is Division-contextual without making `Award → Division` universal.
+
+Official OutcomeBasis must be reconstructible, but its exact source Concept set is variant-specific.
 
 ## Completion runway
 
@@ -95,7 +114,7 @@ Outcome-affecting Evaluation Policy remains a cross-cutting authority-history re
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-F NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-G NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -110,12 +129,8 @@ Outcome-affecting Evaluation Policy remains a cross-cutting authority-history re
 
 `GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint and does not shape Concept Design.
 
-## Downstream work
-
-Phase 005 architecture, Phase 006 implementation planning/bootstrap and Phase 008 planning remain historical/downstream evidence. They are not current Concept Design constraints.
-
-A successful future Phase 017 may establish readiness for a **separate architecture/engineering re-entry**. It will not automatically reactivate Phase 008 or authorize coding.
+A successful future Phase 017 may establish readiness for a separate architecture/engineering re-entry. It will not automatically reactivate prior implementation planning or authorize coding.
 
 ## Current direction
 
-Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
+Proceed to **012-G — External Representation & Release Dependence**.
