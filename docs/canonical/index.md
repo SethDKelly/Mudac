@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
 * [Synchronizations](synchronizations/) — current reconciled Phase 011 composition/synchronization authority.
-* [Dependence](dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-C.
+* [Dependence](dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-D.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
@@ -41,7 +41,8 @@ implementation authorization: NOT YET
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
-012-D: NEXT
+012-D: COMPLETE — PASS
+012-E: NEXT
 ```
 
 # Current Concept authority
@@ -56,57 +57,35 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Phase 011 is complete. Current interaction rules live under [Synchronizations](synchronizations/).
 
-Dependence does not replace synchronization. A pair of Concepts may synchronize without having an inclusion edge, and an inclusion edge does not prescribe runtime orchestration or implementation calls.
+Dependence does not replace synchronization. Concepts may synchronize without having inclusion edges, and inclusion edges do not prescribe implementation calls or runtime orchestration.
 
 # Current dependence authority
 
 [MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns accepted current Phase 012 inclusion dependence.
 
-Direct edges through 012-C are:
+The model is partial through 012-D.
+
+012-C established Competition/actor/competitor context. 012-D adds:
 
 ```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
 ```
 
-Transitive consequences include:
+Team and Participation supply Competition transitively; Participation supplies Identity transitively.
 
-```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
-```
+Evaluation Occurrence, Evaluation Obligation, and Scorecard are explicitly **not** a universal co-inclusion cycle. Each has a coherent limited application role without the other two, while the full current application may include and synchronize all three.
 
-Current explicit universal non-edges include:
+Rubric remains independently meaningful as reusable evaluation-instrument definition.
 
-```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
-```
+# Product-family implications
 
-These non-edges do not erase conditional composition. For example, protected Judge/Organizer actions still use Participation-derived context plus Access.
+Dependence-valid does not mean in scope.
 
-# Current product-family scope rules
+Current contraction probes include separate occurrence-history, responsibility/remaining-work, and Scorecard-capture capabilities plus the full evaluation capability. Phase 012-I decides scope adoption.
 
-- every in-scope MUDAC application variant retains Competition as the family context;
-- blinded-judging variants include Alias;
-- multi-cohort variants include Division;
-- reusable evaluator-grouping variants include Panel;
-- ad-hoc evaluator assignment may omit Panel;
-- single-cohort operation may omit Division at the dependence level;
-- adopting a blinded no-Division variant would require later policy/composition revalidation because current disclosure policy names Division in Judge-facing blinded representation.
-
-The dependence owner is explicitly **partial through 012-C**. Do not infer non-edges for unresolved Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Versioning, Provenance, Award, Outcome Declaration, Export or Publication questions until their owning Phase 012 subphases complete.
+Versioning/Provenance inclusion around authoritative and correctable state remains unresolved until 012-E.
 
 # Retrieval rule during reopened design
 
@@ -126,7 +105,7 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-D NEXT
+012 dependence / subsets / product-family / scope             IN PROGRESS — 012-E NEXT
   ↓
 013 mapping / representation revalidation
   ↓
@@ -139,4 +118,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+The immediate next work is **012-E — Authority Lineage, Provenance & Correctability Dependence**.
