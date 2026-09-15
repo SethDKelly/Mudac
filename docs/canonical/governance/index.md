@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — Daniel Jackson Concept Design, Base lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, historical preservation and routing boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, Phase 012 dependence/subset boundary, frozen 006-D bootstrap and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, active Phase 012 dependence/subset boundary, frozen 006-D bootstrap and suspended downstream authority.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -28,7 +28,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 009 realignment/gap map: COMPLETE — PASS
 010 foundational completion: COMPLETE — PASS
 011 composition/synchronization: COMPLETE — PASS
-012 dependence/product-family/subset/scope: NEXT
+012 dependence/product-family/subset/scope: IN PROGRESS
+012-A: COMPLETE — READY
+012-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -40,44 +42,38 @@ implementation authorization: NOT YET
 
 [Canonical Concepts](../concepts/) owns the current eighteen-Concept catalog.
 
-[Canonical Synchronizations](../synchronizations/) owns current application composition. Phase 011 is complete; numbered 011-C through 011-J records preserve provenance/rationale, while current rules live in their natural canonical synchronization owners.
+[Canonical Synchronizations](../synchronizations/) owns current application composition. Phase 011 is complete; numbered Phase 011 records preserve provenance/rationale while current rules live in their natural canonical synchronization owners.
 
-The former sixteen-contract synchronization corpus is now explicitly historical evidence only.
+[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the successful Phase 011 exit and Phase 012 authorization.
 
-[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the Phase 011 exit:
+# Active Phase 012 boundary
 
-- CO-01 through CO-12 closed;
-- R-01 through R-12 closed;
-- no unresolved application action class;
-- no hidden coordinator required;
-- no blocking semantic cycle;
-- no known blocking over-/under-synchronization;
-- Phase 010 does not need reopening;
-- Phase 012 entry authorized;
-- implementation remains not ready/not started/not authorized.
+[012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) is the current Phase 012 start gate.
 
-# Phase 012 boundary
+It establishes:
 
-Phase 012 owns **Concept Dependence, Product-Family, Subset & Scope Analysis**.
+- application family = **MUDAC live student data competition judging-and-outcome family**;
+- no current dependence edges yet;
+- `A → B` means A lacks its intended MUDAC application role in any coherent subset that omits B;
+- synchronization is evidence, not automatic dependence;
+- intrinsic dependence is an upstream Concept-boundary defect;
+- implementation dependency is outside Concept Design;
+- dependence-valid, meaningful coherent, in-scope, coherent-but-out-of-scope, invalid and unresolved subset statuses are distinct;
+- unusual/minimal subsets must be tested rather than treating the incumbent full product as indivisible;
+- paper/electronic capture is not a Concept-subset axis;
+- canonical dependence knowledge will be created only after substantive analysis establishes durable current truth;
+- Phase 012 follows the approved 012-B through 012-K sequence.
 
-It must distinguish:
+Candidate pressure includes Division/Panel optionality, Alias under bias-sensitive judging, Evaluation Occurrence/Obligation asymmetry, Scorecard/Rubric inclusion roles, Versioning/Provenance support for authoritative variants, Award/Outcome Declaration optionality, Export without Publication/official outcome and possible Publication→Export dependence.
 
-```text
-synchronization/composition
-  = how included Concepts interact
+# Phase 012 reopening rules
 
-extrinsic inclusion dependence
-  = which Concepts must be co-included for an application role
-
-intrinsic dependence
-  = upstream Concept-boundary defect
-
-implementation dependency
-  = downstream engineering concern
-```
-
-Do not turn the Phase-011 synchronization graph into a dependence graph mechanically.
+- unjustified application role → revisit the natural Phase 010 project/purpose owner;
+- intrinsic Concept coupling → reopen the natural Phase 010 Concept owner;
+- accepted subset exposes missing composition → reopen/refine the natural Phase 011 synchronization owner;
+- derived mechanism appears to require Concept status → review its upstream classification first;
+- user-visible mapping issue without inclusion change → carry to Phase 013.
 
 # Current handoff
 
-Proceed to **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**.
+Proceed to **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
