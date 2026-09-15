@@ -2,7 +2,7 @@
 
 Current canonical Concept catalog after Phase 010 modularity convergence and exit.
 
-Each current Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC peer inclusion requirements belong to [Canonical Dependence](../dependence/), not to intrinsic Concept definitions.
+Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC inclusion requirements belong to [Canonical Dependence](../dependence/), not intrinsic Concept definitions.
 
 ## Current eighteen-Concept catalog
 
@@ -29,49 +29,51 @@ Each current Concept owner exposes representation-independent Purpose, State, Ac
 
 [Judging Encounter](judging-encounter.md) remains only a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
 
-## Phase 010 authority
-
-The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review.
-
-No current Concept is accepted merely because it existed historically. Later phases may still expose defects and reopen the natural owner when evidence warrants it.
-
 ## Explicit non-Concept classifications
 
 Current non-Concept knowledge remains under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/).
 
-In particular:
-
-- Coverage/Evaluation Sufficiency is derived factual sufficiency, distinct from governed exception disposition;
-- Reconciliation is an Organizer process/work mode;
-- Aggregate, Rank and Readiness are derived mechanisms;
-- Recovery/Continuity is a cross-cutting purpose obligation rather than a separate Concept;
-- Correction remains a family of owner-specific actions/compositions.
+Coverage/Evaluation Sufficiency is derived factual sufficiency; Aggregate, Rank and Readiness are derived mechanisms; Reconciliation is Organizer process/work context; Recovery/Continuity is a cross-cutting purpose obligation; correction remains owner-specific behavior/composition.
 
 ## Current composition authority
 
 Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
 
-Important distinctions include:
+Preserve:
 
-- Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
+- occurrence participation ≠ responsibility ≠ Scorecard evidence;
 - historical satisfaction ≠ current evidence eligibility;
+- Rank ≠ Award authority;
 - Competition Finalization ≠ Outcome Declaration;
-- calculated ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
+- calculated ≠ recognized ≠ official ≠ public ≠ delivered;
+- source authority ≠ Export representation ≠ Publication release.
 
 ## Active methodology work — Phase 012
 
-Phase 012 is active for **Concept Dependence, Product-Family, Subset & Scope Analysis**.
+Current durable dependence lives in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md), now partial through 012-F.
 
-[012-C](../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) and [012-D](../../012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) establish the current universal direct graph.
+Current outcome edges are:
 
-[012-E](../../012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md) establishes authority-profile support rules.
+```text
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
+```
 
-Current durable meaning lives in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
+These are contextual application dependencies and do not modify the independent Award, Competition, Team, or Outcome Declaration specifications.
 
-012-E confirms that Versioning and Provenance remain independently meaningful support Concepts rather than universal sinks or a co-inclusion cycle.
+Recognition and declaration remain independent:
 
-Do **not** rewrite Rubric or Scorecard intrinsic specifications to require Versioning/Provenance. Instead preserve the contextual authority-profile rule:
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
+
+Do not rewrite Outcome Declaration to directly depend on Team, Scorecard, Evaluation Obligation, Evaluation Occurrence, or Rubric merely because its supplied OutcomeBasis can be traced to those sources.
+
+Do not rewrite Award to depend universally on Division; current rank-derived recognition is Division-contextual because the current Rank mechanism is Division-scoped, while discretionary/competition-wide recognition remains coherent without Division.
+
+012-E authority-profile rules remain contextual rather than intrinsic:
 
 ```text
 Authoritative Rubric Basis
@@ -81,12 +83,8 @@ Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
 ```
 
-Likewise do not rewrite Outcome Declaration as a Versioning wrapper. It intrinsically owns its declaration basis/currentness/successor history and has no universal Versioning/Provenance dependence.
+Likewise do not rewrite Outcome Declaration as a Versioning wrapper; it intrinsically owns declaration/currentness/successor history.
 
-These are contextual/extrinsic application rules, not intrinsic Concept coupling.
+No Phase-010 Concept owner requires reopening from 012-F.
 
-Phase 012 remains partial through 012-E. 012-F next resolves Award and Outcome Declaration official-outcome dependence.
-
-If later dependence analysis shows that one Concept cannot actually be understood or specified independently of another, reopen the natural Phase-010 owner rather than encoding that problem as an extrinsic edge.
-
-Next: **012-F — Outcome, Recognition & Official-Authority Dependence**.
+Next: **012-G — External Representation & Release Dependence**.
