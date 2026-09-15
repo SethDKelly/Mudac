@@ -1,18 +1,19 @@
 ---
 type: Canonical Dependence Model
 title: MUDAC Application-Family Concept Dependence
-description: "Current accepted extrinsic Concept inclusion dependence for the MUDAC live student data competition judging-and-outcome family. Partial through Phase 012-C; later Phase 012 subgroups extend this owner as additional concept families are resolved."
+description: "Current accepted extrinsic Concept inclusion dependence for the MUDAC live student data competition judging-and-outcome family. Partial through Phase 012-D; later Phase 012 subgroups extend this owner as additional concept families are resolved."
 status: stable
 tags: [canonical, dependence, product-family, subsets, phase-012]
 sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: ../concepts/
   - resource: ../synchronizations/
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-15T11:26:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-15T14:11:00-05:00 }
 ---
 
 # Purpose
@@ -52,11 +53,12 @@ An edge does not imply intrinsic specification coupling, state ownership, synchr
 ```text
 012-A  COMPLETE — start gate
 012-B  COMPLETE — candidate inventory
-012-C  COMPLETE — first accepted dependence family
-012-D  NEXT
+012-C  COMPLETE — Competition / actor / competitor / bias-control dependence
+012-D  COMPLETE — evaluation structure / responsibility / basis / judgment dependence
+012-E  NEXT
 ```
 
-This owner is therefore **partial through 012-C**. Absence of an edge involving unresolved evaluation/outcome/externalization Concepts is not yet a canonical non-edge unless explicitly stated by the owning Phase 012 subgroup.
+This owner is therefore **partial through 012-D**. Absence of an edge involving unresolved authority-history/outcome/externalization Concepts is not yet a canonical non-edge unless explicitly stated by the owning Phase 012 subgroup.
 
 # Family-scope rule
 
@@ -129,7 +131,90 @@ Panel → Participation
 
 Panel's MUDAC role is reusable grouping of event-scoped Judge Participations rather than permanent human role assignment.
 
-# Minimal direct graph
+# Accepted direct evaluation edges through 012-D
+
+<a id="dep-d-001"></a>
+## DEP-D-001 — Evaluation Occurrence → Team
+
+```text
+Evaluation Occurrence → Team
+```
+
+Within MUDAC, the bounded occurrence preserves presentation/evaluation truth for one student Team.
+
+<a id="dep-d-002"></a>
+## DEP-D-002 — Evaluation Occurrence → Participation
+
+```text
+Evaluation Occurrence → Participation
+```
+
+Occurrence evaluator identities are event-scoped Judge Participations.
+
+<a id="dep-d-003"></a>
+## DEP-D-003 — Evaluation Occurrence → Rubric
+
+```text
+Evaluation Occurrence → Rubric
+```
+
+A meaningful MUDAC evaluation occurrence is governed by declared evaluation-basis semantics owned by Rubric.
+
+<a id="dep-d-004"></a>
+## DEP-D-004 — Evaluation Obligation → Team
+
+```text
+Evaluation Obligation → Team
+```
+
+The responsibility exists to produce an evaluation of one MUDAC Team.
+
+<a id="dep-d-005"></a>
+## DEP-D-005 — Evaluation Obligation → Participation
+
+```text
+Evaluation Obligation → Participation
+```
+
+The responsible evaluator is an event-scoped Judge Participation.
+
+<a id="dep-d-006"></a>
+## DEP-D-006 — Evaluation Obligation → Rubric
+
+```text
+Evaluation Obligation → Rubric
+```
+
+MUDAC evaluation responsibility is defined against declared Rubric-owned evaluation semantics.
+
+<a id="dep-d-007"></a>
+## DEP-D-007 — Scorecard → Team
+
+```text
+Scorecard → Team
+```
+
+A MUDAC Scorecard records one Judge's judgment of one student Team.
+
+<a id="dep-d-008"></a>
+## DEP-D-008 — Scorecard → Participation
+
+```text
+Scorecard → Participation
+```
+
+MUDAC Scorecard authorship is attributable to an event-scoped Judge Participation.
+
+<a id="dep-d-009"></a>
+## DEP-D-009 — Scorecard → Rubric
+
+```text
+Scorecard → Rubric
+```
+
+Rubric supplies the response interpretation, validation, completeness, and scoring semantics that give Scorecard its current MUDAC evaluation role.
+
+# Minimal direct graph through 012-D
 
 ```text
 Participation ─────→ Identity
@@ -142,11 +227,25 @@ Team ──────────────→ Competition
   └──────── Alias
 
 Panel ─────────────→ Participation
+
+Evaluation Occurrence ─────→ Team
+          │                 → Participation
+          └────────────────→ Rubric
+
+Evaluation Obligation ─────→ Team
+          │                 → Participation
+          └────────────────→ Rubric
+
+Scorecard ─────────────────→ Team
+          │                 → Participation
+          └────────────────→ Rubric
 ```
+
+There is intentionally no direct inclusion edge among Evaluation Occurrence, Evaluation Obligation, and Scorecard.
 
 # Transitive consequences
 
-Current transitive reachability includes:
+Current reachability includes:
 
 ```text
 Division → Team → Competition
@@ -155,13 +254,20 @@ Panel    → Participation → Competition
 Panel    → Participation → Identity
 ```
 
-Do not duplicate these as direct edges merely because the transitive statement is also true.
+Every Evaluation Occurrence, Evaluation Obligation, and Scorecard now also reaches:
 
-A later phase may add a direct edge only if it establishes a distinct application-role rationale that should remain meaningful independently of the intermediate edge.
+```text
+→ Team → Competition
+→ Participation → Competition
+→ Participation → Identity
+→ Rubric
+```
 
-# Explicit non-edges through 012-C
+Do not duplicate the Competition/Identity consequences as direct edges merely because the transitive statement is true.
 
-The following are current **universal non-edge conclusions**:
+# Explicit non-edges through 012-D
+
+## Competition / actor / competitor non-edges
 
 ```text
 Competition ↛ Division
@@ -175,6 +281,24 @@ Access      ↛ Identity
 
 The last two mean no **universal Concept-inclusion edge**. Protected Judge/Organizer operations still use Participation-derived context for Access under current synchronization authority.
 
+## Evaluation-structure non-edges
+
+```text
+Evaluation Occurrence ↛ Evaluation Obligation
+Evaluation Obligation ↛ Evaluation Occurrence
+Evaluation Occurrence ↛ Scorecard
+Scorecard             ↛ Evaluation Occurrence
+Evaluation Obligation ↛ Scorecard
+Scorecard             ↛ Evaluation Obligation
+
+Rubric ↛ Competition
+Rubric ↛ Evaluation Occurrence
+Rubric ↛ Evaluation Obligation
+Rubric ↛ Scorecard
+```
+
+These non-edges are deliberate. Ordinary Phase-011 synchronization among these Concepts does not make them an inseparable product-family bundle.
+
 # Redundant candidate edges intentionally omitted
 
 These are not represented as direct edges because current accepted paths already establish the same reachability:
@@ -184,11 +308,16 @@ Division → Competition
 Alias    → Competition
 Panel    → Competition
 Panel    → Identity
+
+Evaluation Occurrence → Competition
+Evaluation Occurrence → Identity
+Evaluation Obligation → Competition
+Evaluation Obligation → Identity
+Scorecard             → Competition
+Scorecard             → Identity
 ```
 
 # Conditional capability/scope rules
-
-These rules are meaningful inclusion constraints but are not universal binary graph edges.
 
 ## Protected Judge/Organizer operations
 
@@ -200,6 +329,8 @@ Participation context
 ```
 
 Participation already requires Identity and Competition. Access itself remains reusable for support/exception/disclosure contexts and therefore has no universal outgoing peer dependency here.
+
+012-D does not add dense direct edges from every protected evaluation Concept to Access. Protected operations remain governed by this capability rule.
 
 ## Blinded judging
 
@@ -219,34 +350,77 @@ A variant supporting reusable intended Judge groups includes Panel.
 
 Ad-hoc evaluator assignment may omit Panel.
 
-# Representative subset consequences
+## Occurrence-backed responsibility
 
-## Dependence-valid with respect to 012-C
+When a selected variant includes both Evaluation Occurrence and Evaluation Obligation, current full-product composition may establish obligations at occurrence begin.
+
+The dependency graph does not require either Concept merely because the other is present.
+
+## Responsibility-backed Scorecard
+
+When a selected variant includes both Evaluation Obligation and Scorecard, current full-product composition may bind one logical Scorecard to one obligation and satisfy that responsibility on authoritative Finalization.
+
+The dependency graph does not require either Concept merely because the other is present.
+
+## Occurrence-backed Scorecard context
+
+When a selected variant includes Evaluation Occurrence and Scorecard, the occurrence can own the bounded historical context supplied to Scorecard.
+
+A Scorecard-capable variant may instead use a sufficient supplied context snapshot when Evaluation Occurrence is intentionally omitted; adoption of that contraction would require composition revalidation.
+
+# Representative subset consequences through 012-D
+
+## Dependence-valid
 
 - single-cohort Competition without Division;
 - ad-hoc judging organization without Panel;
 - Team without Alias where the claimed role does not require blinded Judge presentation;
 - Identity without any current Participation;
-- Competition during setup before any Team instance exists.
+- Competition during setup before any Team instance exists;
+- reusable Rubric preparation/library capability without Competition;
+- occurrence-history capability with Evaluation Occurrence but without Evaluation Obligation or Scorecard;
+- responsibility/remaining-work capability with Evaluation Obligation but without Evaluation Occurrence or Scorecard;
+- lightweight judgment-capture capability with Scorecard but without Evaluation Occurrence or Evaluation Obligation;
+- full evaluation capability containing Evaluation Occurrence + Evaluation Obligation + Scorecard.
 
-These statements concern 012-C edges only. Later 012-D through 012-G dependencies may add additional required Concepts for complete variants.
+These are dependence-valid statements only. Phase 012-I determines which coherent subsets become adopted MUDAC variants.
 
-## Invalid with respect to 012-C
+## Invalid
 
 - Team without Competition;
-- Participation without Competition;
-- Participation without Identity;
+- Participation without Competition or Identity;
 - Division without Team;
 - Alias without Team;
-- Panel without Participation.
+- Panel without Participation;
+- Evaluation Occurrence without Team, Participation, or Rubric;
+- Evaluation Obligation without Team, Participation, or Rubric;
+- Scorecard without Team, Participation, or Rubric.
 
-# Policy/composition carry-forward
+# Variant-specific composition carry-forward
 
-Current Anonymity and Disclosure policy states that blinded Judge-facing Team representation is `Alias + Division`.
+012-D exposes three coherent contractions not represented as first-class current full-product paths in Phase 011:
 
-Phase 012-C establishes that Division is not a universal Competition dependency. Therefore, if Phase 012-I adopts a single-cohort no-Division variant, the natural policy/composition owner must be generalized to preserve blinded identity without manufacturing a fake Division.
+1. Evaluation Occurrence without Evaluation Obligation;
+2. Evaluation Obligation without Evaluation Occurrence;
+3. Scorecard without Evaluation Obligation and/or Evaluation Occurrence.
 
-This carry-forward does not reopen Phase 010 and does not yet require Phase 011 repair.
+No current synchronization is rewritten merely because those contractions are dependence-valid.
+
+If Phase 012-I adopts any of them into scope, the natural Phase-011 owner must be revalidated/refined while preserving:
+
+- Judge authorship;
+- missing-versus-zero truth;
+- enough context for correction/explanation;
+- no duplicate semantic judgment;
+- owner-safe authority establishment.
+
+# Authority-history support remains unresolved
+
+Current full MUDAC authoritative Rubric/Scorecard composition uses Versioning and Provenance.
+
+Whether Rubric and/or Scorecard universally or conditionally require those support Concepts belongs to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
+
+Absence of such edges here is not a non-edge conclusion.
 
 # Upstream integrity result
 
@@ -255,18 +429,20 @@ No accepted edge indicates intrinsic Concept coupling.
 Current Concepts remain independently specified:
 
 ```text
-Team          <Scope>
-Participation <Participant, Scope, Capacity>
-Division      <Scope, Member>
-Alias         <Subject, Scope, AliasValue>
-Panel         <Scope, Member, CapacityLabel>
-Access        <Principal, Capability, Resource, ContextFacts, Rule>
+Team<Scope>
+Participation<Participant, Scope, Capacity>
+Division<Scope, Member>
+Alias<Subject, Scope, AliasValue>
+Panel<Scope, Member, CapacityLabel>
+Access<Principal, Capability, Resource, ContextFacts, Rule>
+EvaluationOccurrence<Scope, Subject, Evaluator, PresentedContext, BasisRef>
+EvaluationObligation<Scope, Evaluator, Subject, Basis, OccurrenceRef, EvidenceRef>
+Rubric
+Scorecard<Evaluator, Subject, OccurrenceContext, EvaluationBasis>
 ```
 
 The accepted relationships are contextual application dependence only.
 
 # Next unresolved family
 
-Phase 012-D owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence.
-
-It must use this graph transitively. For example, an accepted future edge to Participation already implies Identity + Competition, and an accepted future edge to Team already implies Competition.
+Phase 012-E owns authority-lineage, Provenance, correctability, and the conditional inclusion role of Versioning/Provenance around authoritative Rubric/Scorecard state.
