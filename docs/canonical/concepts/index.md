@@ -31,59 +31,44 @@ Each current Concept owner exposes a representation-independent Purpose, State, 
 
 ## Phase 010 authority
 
-The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the foundational handoff.
+The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review.
 
-No current Concept is accepted merely because it existed historically. Later phases may still expose defects and reopen the natural owner when evidence warrants it.
+Later phases may reopen a natural owner only if new evidence exposes an intrinsic defect.
 
 ## Explicit non-Concept classifications
 
 Current non-Concept knowledge remains under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/).
 
-In particular:
-
-- Coverage/Evaluation Sufficiency is derived factual sufficiency, distinct from governed exception disposition;
-- Reconciliation is an Organizer process/work mode;
-- Aggregate, Rank and Readiness are derived mechanisms;
-- Recovery/Continuity is a cross-cutting purpose obligation rather than a separate Concept;
-- Correction remains a family of owner-specific actions/compositions.
+Coverage/Evaluation Sufficiency, Aggregate, Rank and Readiness remain derived/supporting mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
 ## Current composition authority
 
 Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
 
-Important current distinctions include:
-
-- Panel membership ≠ occurrence participation ≠ Evaluation Obligation responsibility ≠ Scorecard evidence;
-- historical satisfaction ≠ current evidence eligibility;
-- Competition Finalization ≠ Outcome Declaration;
-- calculated ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
+Panel membership, occurrence participation, Evaluation Obligation responsibility and Scorecard evidence remain distinct even when current full-product application actions coordinate them.
 
 ## Active methodology work — Phase 012
 
-Phase 012 is active for **Concept Dependence, Product-Family, Subset & Scope Analysis**.
+Phase 012 owns contextual product-family inclusion dependence.
 
-[012-A](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the application family and analysis discipline.
+[012-C](../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) and [012-D](../../012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) are the current accepted phase records. Durable meaning is in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
-[012-B](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) is provisional candidate evidence.
-
-[012-C](../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) establishes the first accepted contextual dependencies. Current durable meaning is in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
-
-Accepted direct edges through 012-C are:
+012-D establishes:
 
 ```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
+Evaluation Occurrence → Team / Participation / Rubric
+Evaluation Obligation → Team / Participation / Rubric
+Scorecard             → Team / Participation / Rubric
 ```
 
-These are **extrinsic/contextual application dependencies**. They do not modify the independent Concept specifications above.
+These are contextual application dependencies only. They do not modify the independent Concept specifications above.
 
-Current dependence remains partial through 012-C. 012-D next resolves Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard inclusion roles.
+Evaluation Occurrence, Evaluation Obligation, and Scorecard do not universally require one another. Their ordinary full-product coordination remains Phase-011 synchronization.
+
+Rubric remains independently useful as reusable instrument definition.
+
+Current dependence is partial through 012-D. 012-E next resolves Versioning/Provenance inclusion around authoritative lineage, attribution and correctability.
 
 If dependence analysis shows that one Concept cannot actually be understood or specified independently of another, reopen the natural Phase 010 owner rather than encoding the problem as an extrinsic edge.
 
-Next: **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+Next: **012-E — Authority Lineage, Provenance & Correctability Dependence**.
