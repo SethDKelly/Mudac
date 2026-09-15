@@ -2,7 +2,7 @@
 
 Current canonical Concept catalog after Phase 010 modularity convergence and exit.
 
-Each current Concept owner exposes a representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Direct MUDAC peer bindings are treated as composition unless the peer semantics are intrinsic.
+Each current Concept owner exposes a representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC peer inclusion requirements belong to [Canonical Dependence](../dependence/), not to intrinsic Concept definitions.
 
 ## Current eighteen-Concept catalog
 
@@ -31,7 +31,7 @@ Each current Concept owner exposes a representation-independent Purpose, State, 
 
 ## Phase 010 authority
 
-The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the formal foundational handoff.
+The current catalog is the result of Phase 010 rediscovery, behavioral specification, specificity, completeness/independence/genericity, canonical convergence, and exit review. [010-I](../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md) is the foundational handoff.
 
 No current Concept is accepted merely because it existed historically. Later phases may still expose defects and reopen the natural owner when evidence warrants it.
 
@@ -49,7 +49,7 @@ In particular:
 
 ## Current composition authority
 
-Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/), with [011-J](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) recording the exit/handoff.
+Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
 
 Important current distinctions include:
 
@@ -59,36 +59,31 @@ Important current distinctions include:
 - calculated ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-Phase 011 found no Concept-boundary defect requiring Phase 010 reopening.
-
 ## Active methodology work — Phase 012
 
 Phase 012 is active for **Concept Dependence, Product-Family, Subset & Scope Analysis**.
 
 [012-A](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the application family and analysis discipline.
 
-[012-B](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) inventories every Concept's MUDAC inclusion role and provisional candidate dependencies.
+[012-B](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) is provisional candidate evidence.
 
-Phase 012 must not rewrite these Concept specifications with contextual inclusion dependencies. It distinguishes:
+[012-C](../../012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) establishes the first accepted contextual dependencies. Current durable meaning is in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
+
+Accepted direct edges through 012-C are:
 
 ```text
-intrinsic dependence
-  = Concept-boundary defect
-
-synchronization
-  = interaction among included Concepts
-
-extrinsic dependence
-  = contextual co-inclusion requirement for an intended application role
-
-implementation dependency
-  = out of scope
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
 ```
 
-No final dependence graph is current yet. 012-B candidate edges remain phase evidence until their owning later subgroup establishes durable truth.
+These are **extrinsic/contextual application dependencies**. They do not modify the independent Concept specifications above.
 
-Current candidate discipline explicitly avoids treating Division/Panel as automatically required, Versioning/Provenance as universal sinks, Award/Outcome Declaration as one capability, or Export/Publication as inseparable.
+Current dependence remains partial through 012-C. 012-D next resolves Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard inclusion roles.
 
 If dependence analysis shows that one Concept cannot actually be understood or specified independently of another, reopen the natural Phase 010 owner rather than encoding the problem as an extrinsic edge.
 
-Next: **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
+Next: **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
