@@ -1,6 +1,6 @@
 # Phase 012 — Concept Dependence, Product-Family, Subset & Scope Analysis
 
-Status: **IN PROGRESS — 012-A/B complete; 012-C next.**
+Status: **IN PROGRESS — 012-A/B/C complete; 012-D next.**
 
 ## Role in the completion runway
 
@@ -33,32 +33,7 @@ A Phase 011 synchronization edge is evidence to inspect, not automatically a Pha
 
 Phase 012 analyzes the **MUDAC live student data competition judging-and-outcome family**.
 
-It may test smaller/larger coherent capability subsets within that family, but it does not design pricing tiers, deployable products, service boundaries, packages, repositories, AWS topology or implementation sequencing.
-
-012-B revalidated this boundary without narrowing or expanding it.
-
-## Current Concept baseline
-
-1. Competition
-2. Division
-3. Team
-4. Panel
-5. Evaluation Occurrence
-6. Evaluation Obligation
-7. Rubric
-8. Scorecard
-9. Award
-10. Identity
-11. Participation
-12. Alias
-13. Access
-14. Versioning
-15. Provenance
-16. Outcome Declaration
-17. Export
-18. Publication
-
-Readiness, Coverage, Aggregate, Rank and related derived mechanisms are not dependency-graph vertices unless later analysis exposes a genuine upstream classification defect.
+Competition is now established as the anchor of every in-scope MUDAC variant, but anchoring is a scope rule rather than a blanket `Competition → every capability` graph edge.
 
 ## Current subgroup sequence
 
@@ -66,8 +41,8 @@ Readiness, Coverage, Aggregate, Rank and related derived mechanisms are not depe
 | --- | --- | --- |
 | 012-A | [Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) | **Complete — READY** |
 | 012-B | [Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) | **Complete — PASS** |
-| 012-C | Competition, Actor, Competitor Context & Bias-Control Dependence | **Next** |
-| 012-D | Evaluation Structure, Responsibility, Basis & Judgment Dependence | Planned |
+| 012-C | [Competition, Actor, Competitor Context & Bias-Control Dependence](012-C-competition-actor-competitor-context-bias-control-dependence.md) | **Complete — PASS** |
+| 012-D | Evaluation Structure, Responsibility, Basis & Judgment Dependence | **Next** |
 | 012-E | Authority Lineage, Provenance & Correctability Dependence | Planned |
 | 012-F | Outcome, Recognition & Official-Authority Dependence | Planned |
 | 012-G | External Representation & Release Dependence | Planned |
@@ -76,82 +51,68 @@ Readiness, Coverage, Aggregate, Rank and related derived mechanisms are not depe
 | 012-J | Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit | Planned |
 | 012-K | Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff | Planned |
 
-## 012-A result
+## 012-C result
 
-012-A exits:
+012-C is the first phase to establish durable current extrinsic dependence.
 
-> **READY TO BEGIN PHASE 012 SUBPHASES**
+Accepted direct edges are:
 
-It established the dependency-edge test, subset vocabulary, unfamiliar-subset probes, reopening rules and the A→K phase sequence without accepting any edge.
+```text
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
+```
 
-## 012-B result
+The graph is intentionally minimal. Current transitive consequences include:
 
-012-B exits:
+```text
+Division → Team → Competition
+Alias    → Team → Competition
+Panel    → Participation → Competition
+Panel    → Participation → Identity
+```
 
-> **PASS — candidate inventory established; no final dependence edge accepted.**
+Current explicit universal non-edges include:
 
-It assigns every current Concept an application-family inclusion role and routes candidate relationships to 012-C through 012-G.
+```text
+Competition ↛ Division
+Competition ↛ Panel
+Team        ↛ Alias
+Identity    ↛ Competition
+Identity    ↛ Participation
+Access      ↛ Participation
+Access      ↛ Identity
+```
 
-Role groups are analytical rather than co-inclusion claims:
+The Access conclusions reject only universal graph edges. Protected Judge/Organizer operations still require Participation-derived context through current Phase-011 composition.
 
-- Competition / actor / competitor context: Competition, Team, Identity, Participation, Access, Division, Alias, Panel;
-- evaluation: Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard;
-- authority/history support: Versioning, Provenance;
-- outcome/recognition: Award, Outcome Declaration;
-- externalization/release: Export, Publication.
+## Conditional capability rules retained
 
-Important candidate pressure includes:
+- blinded judging includes Alias under the current Concept catalog;
+- multi-cohort competition includes Division;
+- reusable intended evaluator grouping includes Panel;
+- protected Judge/Organizer actions use Participation context plus Access;
+- single-cohort no-Division operation is dependence-coherent but requires later policy/composition revalidation before adoption because current disclosure policy names Division in the blinded Judge-facing representation.
 
-- Team and Participation likely requiring Competition context within MUDAC while remaining intrinsically generic;
-- Participation likely requiring Identity continuity for the current attribution/recovery purpose;
-- Division and Panel remaining strong optionality challenges rather than assumed Competition dependencies;
-- Alias being a bias-control/scope question rather than an intrinsic Team dependency;
-- Evaluation Occurrence/Obligation/Scorecard relationships requiring deliberate proof rather than copying ordinary Phase-011 composition;
-- Versioning/Provenance being conditional authority-history support rather than universal dependency sinks;
-- Award remaining optional relative to official outcome authority;
-- Outcome Declaration remaining optional for judging-only variants;
-- Export remaining meaningful without Publication or official outcome authority;
-- Publication → Export being a strong MUDAC candidate while Export → Publication is likely false.
+These are not all representable as universal binary graph edges.
 
-No cycle or mutual-dependence group is accepted yet.
+## Canonical dependence authority
 
-## Counterexample discipline
+Current accepted dependence now lives under:
 
-The phase continues to test unfamiliar contractions such as:
+- [Canonical Dependence](../canonical/dependence/)
+- [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md)
 
-- single-cohort competition without Division;
-- ad-hoc judging without Panel;
-- judging-only without Award/Outcome Declaration/Export/Publication;
-- official outcome without Awards;
-- official but non-public operation;
-- Export without Publication;
-- Export from non-outcome sources;
-- attempted Publication without Export;
-- no-Alias judging;
-- reduced Versioning/Provenance support;
-- obligation without occurrence and occurrence without obligation.
+That owner is explicitly **partial through 012-C**. Absence of an unresolved 012-D through 012-G edge is not yet a non-edge.
 
-Paper versus electronic operation is not a Concept-subset axis under the current model.
-
-## Canonical knowledge posture
-
-No current dependence graph exists yet.
-
-012-A and 012-B contain planning/candidate evidence only. A `docs/canonical/dependence/` owner should be created only after 012-C through 012-G begin establishing accepted current edges.
-
-Do not place provisional candidate edges into Concept specifications.
+Do not copy contextual dependence into intrinsic Concept specifications.
 
 ## Design-only boundary
 
-Phase 012 does not define:
-
-- source/package/module dependencies;
-- service or database graphs;
-- API/integration dependencies;
-- deployment order;
-- UI hierarchy;
-- commercial product tiers;
-- implementation roadmap.
+Phase 012 does not define source/package/module dependencies, service/database graphs, API direction, deployment order, UI hierarchy, commercial tiers, or implementation sequencing.
 
 If subset analysis exposes a real composition gap, reopen/refine the natural Phase 011 owner. If it exposes intrinsic Concept coupling, reopen the natural Phase 010 owner.
 
@@ -165,7 +126,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012: IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
-012-C: NEXT
+012-C: COMPLETE — PASS
+012-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -175,4 +137,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
+Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
