@@ -67,6 +67,8 @@ Phase 012 is active for **Concept Dependence, Product-Family, Subset & Scope Ana
 
 [012-A](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the application family and analysis discipline.
 
+[012-B](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) inventories every Concept's MUDAC inclusion role and provisional candidate dependencies.
+
 Phase 012 must not rewrite these Concept specifications with contextual inclusion dependencies. It distinguishes:
 
 ```text
@@ -83,8 +85,10 @@ implementation dependency
   = out of scope
 ```
 
-No dependence edge is current yet. Candidate inclusion questions are phase evidence until their owning Phase 012 subphase establishes durable truth.
+No final dependence graph is current yet. 012-B candidate edges remain phase evidence until their owning later subgroup establishes durable truth.
+
+Current candidate discipline explicitly avoids treating Division/Panel as automatically required, Versioning/Provenance as universal sinks, Award/Outcome Declaration as one capability, or Export/Publication as inseparable.
 
 If dependence analysis shows that one Concept cannot actually be understood or specified independently of another, reopen the natural Phase 010 owner rather than encoding the problem as an extrinsic edge.
 
-Next: **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
+Next: **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
