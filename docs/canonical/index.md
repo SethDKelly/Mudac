@@ -5,9 +5,9 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 # Current conceptual knowledge
 
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
-* [Concepts](concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
-* [Synchronizations](synchronizations/) — current reconciled Phase 011 composition/synchronization authority.
-* [Dependence](dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-D.
+* [Concepts](concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
+* [Synchronizations](synchronizations/) — current reconciled Phase-011 composition/synchronization authority.
+* [Dependence](dependence/) — current accepted Phase-012 inclusion dependence and capability-conditioned co-inclusion, partial through 012-E.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
@@ -42,7 +42,8 @@ implementation authorization: NOT YET
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
-012-E: NEXT
+012-E: COMPLETE — PASS
+012-F: NEXT
 ```
 
 # Current Concept authority
@@ -51,41 +52,47 @@ The current eighteen Concepts are:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-`Judging Encounter` and `Official Outcome Revision` remain only deprecated historical adapters.
+`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
 
 # Current composition authority
 
 Phase 011 is complete. Current interaction rules live under [Synchronizations](synchronizations/).
 
-Dependence does not replace synchronization. Concepts may synchronize without having inclusion edges, and inclusion edges do not prescribe implementation calls or runtime orchestration.
+Dependence does not replace synchronization. A pair of Concepts may synchronize without an inclusion edge, and an inclusion rule does not prescribe runtime orchestration or implementation calls.
 
 # Current dependence authority
 
-[MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns accepted current Phase 012 inclusion dependence.
+[MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns current Phase-012 dependence truth.
 
-The model is partial through 012-D.
+The direct graph currently covers the Competition/actor/competitor and evaluation families established in 012-C/D.
 
-012-C established Competition/actor/competitor context. 012-D adds:
+012-E establishes that authority-history support is capability-conditioned rather than a global graph sink:
 
 ```text
-Evaluation Occurrence → Team / Participation / Rubric
-Evaluation Obligation → Team / Participation / Rubric
-Scorecard             → Team / Participation / Rubric
+Authoritative Rubric Basis
+  ⇒ Versioning + Provenance
+
+Authoritative Scorecard Evidence
+  ⇒ Versioning + Provenance
+
+Rubric/Scorecard authoritative correction or invalidation
+  ⇒ Versioning + Provenance
 ```
 
-Team and Participation supply Competition transitively; Participation supplies Identity transitively.
+Versioning and Provenance remain independent Concepts:
 
-Evaluation Occurrence, Evaluation Obligation, and Scorecard are explicitly **not** a universal co-inclusion cycle. Each has a coherent limited application role without the other two, while the full current application may include and synchronize all three.
+```text
+Versioning ↛ Provenance
+Provenance ↛ Versioning
+```
 
-Rubric remains independently meaningful as reusable evaluation-instrument definition.
+Working Rubric/Scorecard capability can therefore be dependence-coherent without the support pair, but may not claim current MUDAC authoritative-evaluation semantics.
 
-# Product-family implications
+Outcome Declaration is not routed through generic Versioning/Provenance merely because it is authoritative; it owns immutable declaration basis, declaring authority, affected/superseded state, and predecessor/successor history intrinsically.
 
-Dependence-valid does not mean in scope.
+Outcome-affecting Evaluation Policy remains a reconstructibility requirement once judging begins, not a Concept vertex.
 
-Current contraction probes include separate occurrence-history, responsibility/remaining-work, and Scorecard-capture capabilities plus the full evaluation capability. Phase 012-I decides scope adoption.
-
-Versioning/Provenance inclusion around authoritative and correctable state remains unresolved until 012-E.
+The dependence owner is explicitly **partial through 012-E**. Do not infer outcome or release non-edges until 012-F/G complete.
 
 # Retrieval rule during reopened design
 
@@ -105,7 +112,7 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-E NEXT
+012 dependence / subsets / product-family / scope             IN PROGRESS — 012-F NEXT
   ↓
 013 mapping / representation revalidation
   ↓
@@ -118,4 +125,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-E — Authority Lineage, Provenance & Correctability Dependence**.
+The immediate next work is **012-F — Outcome, Recognition & Official-Authority Dependence**.
