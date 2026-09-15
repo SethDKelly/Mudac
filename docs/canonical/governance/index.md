@@ -33,7 +33,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
-012-E: NEXT
+012-E: COMPLETE — PASS
+012-F: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -47,22 +48,41 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns current application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns accepted Phase 012 extrinsic inclusion dependence and is currently partial through 012-D.
+[Canonical Dependence](../dependence/) owns current Phase-012 inclusion dependence and capability-conditioned co-inclusion. It is explicitly partial through 012-E.
 
-Evaluation Occurrence, Evaluation Obligation, and Scorecard each depend on Team, Participation, and Rubric for their current MUDAC application roles. Their Team/Participation relationships provide Competition and Identity transitively through the 012-C graph.
+The direct graph remains the 012-C/D result. 012-E adds no universal direct edge.
 
-They do **not** universally depend on one another. Ordinary occurrence/responsibility/judgment coordination remains synchronization rather than a mandatory product-family bundle.
+Instead, authoritative evaluation profiles require:
 
-Rubric remains independently meaningful as reusable evaluation-instrument definition.
+```text
+Authoritative Rubric Basis
+  ⇒ Versioning + Provenance
 
-# Current scope implications
+Authoritative Scorecard Evidence
+  ⇒ Versioning + Provenance
 
-Dependence-valid contractions include separate occurrence-history, responsibility-tracking, and judgment-capture capabilities as well as the full combined evaluation capability.
+Rubric/Scorecard authoritative correction or invalidation
+  ⇒ Versioning + Provenance
+```
 
-These are not scope commitments. 012-I decides which variants MUDAC adopts. A selected contraction may require variant-specific Phase-011 synchronization revalidation.
+Versioning and Provenance are independent support Concepts and do not universally depend on one another.
+
+Outcome Declaration also does not universally depend on either support Concept because it owns its declaration basis/currentness/successor history intrinsically.
+
+Outcome-affecting Evaluation Policy must remain reconstructible once judging begins, but it is not a Concept graph vertex.
+
+# Current Phase 012 scope conclusions
+
+- Competition is the family anchor for every in-scope MUDAC application variant.
+- Division is optional for single-cohort variants.
+- Panel is optional for ad-hoc evaluator assignment.
+- Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
+- Evaluation Occurrence, Evaluation Obligation, and Scorecard are not a universal co-inclusion group.
+- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim the current authoritative-evaluation semantics.
+- Any adopted authoritative-evaluation profile must satisfy the Versioning + Provenance authority-support rules.
 
 # Current handoff
 
-012-E now owns Versioning/Provenance inclusion around authoritative lineage, attribution, correction, invalidation and historical reconstructibility.
+012-F now owns Award, Outcome Declaration, and official-outcome inclusion dependence while preserving the sparse graph and 012-E authority-history distinctions.
 
-Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
+Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
