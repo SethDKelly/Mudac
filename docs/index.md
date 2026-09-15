@@ -12,9 +12,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance.
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
-* [Concepts](canonical/concepts/) — current **eighteen-Concept** catalog after Phase 010 convergence.
+* [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current accepted Phase 012 extrinsic inclusion-dependence authority, partial through 012-D.
+* [Dependence](canonical/dependence/) — current accepted Phase 012 extrinsic inclusion dependence and capability-conditioned co-inclusion, partial through 012-E.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
@@ -30,7 +30,7 @@ Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-
 
 Use [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as candidate/provisional evidence only.
 
-Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
+Use [012-C](012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md), [012-D](012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md), [012-E](012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md), and [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
 
 # Current methodology state
 
@@ -44,7 +44,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-B: COMPLETE — PASS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
-012-E: NEXT
+012-E: COMPLETE — PASS
+012-F: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -56,7 +57,7 @@ implementation authorization: NOT YET
 
 The application family is the **MUDAC live student data competition judging-and-outcome family**.
 
-Current accepted direct evaluation dependence is:
+Current direct evaluation dependence remains:
 
 ```text
 Evaluation Occurrence → Team / Participation / Rubric
@@ -66,17 +67,31 @@ Scorecard             → Team / Participation / Rubric
 
 Together with 012-C, Team and Participation supply Competition transitively and Participation supplies Identity transitively.
 
-012-D explicitly rejects automatic co-inclusion among Evaluation Occurrence, Evaluation Obligation, and Scorecard. Their current full-product relationships remain synchronization/composition, while dependence-valid contractions may separately support occurrence history, responsibility tracking, or judgment capture.
+012-D rejects automatic co-inclusion among Evaluation Occurrence, Evaluation Obligation, and Scorecard.
 
-Rubric remains independently useful as evaluation-instrument definition and therefore does not depend on Competition, Occurrence, Obligation, or Scorecard merely because the full product later uses it with those Concepts.
+012-E adds a second durable relation form for authority profiles:
+
+```text
+Authoritative Rubric Basis
+  ⇒ Versioning + Provenance
+
+Authoritative Scorecard Evidence
+  ⇒ Versioning + Provenance
+```
+
+The same support pair remains required for Rubric/Scorecard authoritative correction or invalidation.
+
+Versioning and Provenance are not universal dependency sinks and do not universally depend on one another.
+
+Outcome Declaration is not routed through either generic support Concept merely because it is authoritative; it owns its own declaration lineage/currentness.
+
+Outcome-affecting Evaluation Policy must remain reconstructible once judging begins, but it is a cross-cutting policy requirement rather than a Concept graph vertex.
 
 # Scope discipline
 
 Dependence-valid does not mean adopted.
 
-Phase 012-I will decide whether evaluation contractions enter current product-family scope. If selected, variant-specific Phase-011 synchronization must be refined rather than silently assuming the full-product action chain applies.
-
-Versioning and Provenance inclusion around authoritative/correctable state remains unresolved until 012-E.
+Phase 012-I will decide whether reduced evaluation/authority profiles enter current product-family scope. Selected contractions may require variant-specific Phase-011 synchronization refinement.
 
 # Completion runway
 
@@ -85,7 +100,7 @@ Versioning and Provenance inclusion around authoritative/correctable state remai
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-E NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-F NEXT
   ↓
 013 mapping / representation
   ↓
@@ -100,4 +115,4 @@ Versioning and Provenance inclusion around authoritative/correctable state remai
 
 A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-E — Authority Lineage, Provenance & Correctability Dependence**.
+The immediate next task is **012-F — Outcome, Recognition & Official-Authority Dependence**.
