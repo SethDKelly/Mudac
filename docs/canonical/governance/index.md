@@ -31,7 +31,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012 dependence/product-family/subset/scope: IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
-012-C: NEXT
+012-C: COMPLETE — PASS
+012-D: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -39,59 +40,60 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current Concept and composition authority
+# Current Concept, composition and dependence authority
 
 [Canonical Concepts](../concepts/) owns the current eighteen-Concept catalog.
 
-[Canonical Synchronizations](../synchronizations/) owns current application composition. Phase 011 is complete; numbered Phase 011 records preserve provenance/rationale while current rules live in their natural canonical synchronization owners.
+[Canonical Synchronizations](../synchronizations/) owns current application composition after Phase 011.
 
-[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the successful Phase 011 exit and Phase 012 authorization.
+[Canonical Dependence](../dependence/) now owns accepted Phase 012 extrinsic inclusion dependence. It is explicitly partial through 012-C.
 
-# Active Phase 012 boundary
-
-[012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](../../012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) establishes the Phase 012 semantics and work plan.
-
-[012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](../../012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) is the current whole-catalog candidate inventory.
-
-012-B establishes:
-
-- all eighteen Concepts have an explicit MUDAC application-family inclusion role;
-- candidate relations remain provisional and are classified as strong, conditional, alternative/disjunctive, challenge, or rejected-as-edge;
-- Division and Panel optionality remain explicit pressure rather than assumed requirements;
-- Alias remains a bias-control/scope question rather than an intrinsic Team requirement;
-- Evaluation Occurrence/Evaluation Obligation/Scorecard composition is not automatically dependence;
-- Versioning/Provenance are conditional authority-history support rather than universal sinks;
-- Award and Outcome Declaration remain separate capability layers;
-- Export and Publication remain separable, with `Publication → Export` a strong candidate and the reverse likely false;
-- no mutual-dependence cycle is accepted yet;
-- no canonical dependence graph is current yet.
-
-# Phase 012 dependency semantics
+Current direct edges are:
 
 ```text
-synchronization/composition
-  = how included Concepts interact
-
-extrinsic inclusion dependence
-  = which Concepts must be co-included for an application role
-
-intrinsic dependence
-  = upstream Concept-boundary defect
-
-implementation dependency
-  = downstream engineering concern
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
 ```
 
-Do not turn the Phase-011 synchronization graph or the 012-B candidate inventory into accepted dependence mechanically.
+Current transitive consequences include:
 
-# Phase 012 reopening rules
+```text
+Division → Team → Competition
+Alias    → Team → Competition
+Panel    → Participation → Competition
+Panel    → Participation → Identity
+```
 
-- unjustified application role → revisit the natural Phase 010 project/purpose owner;
-- intrinsic Concept coupling → reopen the natural Phase 010 Concept owner;
-- accepted subset exposes missing composition → reopen/refine the natural Phase 011 synchronization owner;
-- derived mechanism appears to require Concept status → review its upstream classification first;
-- user-visible mapping issue without inclusion change → carry to Phase 013.
+Do not duplicate these transitive paths as direct edges without a distinct application-role rationale.
+
+Current explicit universal non-edges include:
+
+```text
+Competition ↛ Division
+Competition ↛ Panel
+Team        ↛ Alias
+Identity    ↛ Competition
+Identity    ↛ Participation
+Access      ↛ Participation
+Access      ↛ Identity
+```
+
+Access still participates in protected-operation composition; the non-edge conclusion concerns universal Concept inclusion only.
+
+# Current Phase 012 scope conclusions
+
+- Competition is the family anchor for every in-scope MUDAC application variant.
+- Division is optional for single-cohort variants.
+- Panel is optional for ad-hoc evaluator assignment.
+- Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
+- a single-cohort no-Division variant is dependence-coherent but needs later policy/composition revalidation before adoption because current disclosure policy names Division in blinded Judge-facing representation.
 
 # Current handoff
 
-Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
+012-D now owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence. It should reuse 012-C transitive reachability rather than recreating Competition/Identity edges through every evaluation Concept.
+
+Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
