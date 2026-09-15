@@ -34,7 +34,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-C: COMPLETE — PASS
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
-012-F: NEXT
+012-F: COMPLETE — PASS
+012-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -42,17 +43,32 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current Concept, composition and dependence authority
+# Current authority
 
-[Canonical Concepts](../concepts/) owns the current eighteen-Concept catalog.
+[Canonical Concepts](../concepts/) owns the eighteen-Concept catalog.
 
-[Canonical Synchronizations](../synchronizations/) owns current application composition after Phase 011.
+[Canonical Synchronizations](../synchronizations/) owns application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns current Phase-012 inclusion dependence and capability-conditioned co-inclusion. It is explicitly partial through 012-E.
+[Canonical Dependence](../dependence/) owns current Phase-012 inclusion dependence and capability-conditioned co-inclusion, partial through 012-F.
 
-The direct graph remains the 012-C/D result. 012-E adds no universal direct edge.
+Current outcome edges are:
 
-Instead, authoritative evaluation profiles require:
+```text
+Award               → Competition
+Award               → Team
+Outcome Declaration → Competition
+```
+
+Recognition and declaration remain independent:
+
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+```
+
+Do not infer direct declaration dependencies on Team or evaluation-source Concepts from traceability alone.
+
+012-E authority-profile support remains:
 
 ```text
 Authoritative Rubric Basis
@@ -60,29 +76,32 @@ Authoritative Rubric Basis
 
 Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
-
-Rubric/Scorecard authoritative correction or invalidation
-  ⇒ Versioning + Provenance
 ```
 
-Versioning and Provenance are independent support Concepts and do not universally depend on one another.
+012-F capability rules include:
 
-Outcome Declaration also does not universally depend on either support Concept because it owns its declaration basis/currentness/successor history intrinsically.
+```text
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
 
-Outcome-affecting Evaluation Policy must remain reconstructible once judging begins, but it is not a Concept graph vertex.
+Rank-Derived Award capability
+  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+```
 
-# Current Phase 012 scope conclusions
+Current Rank is Division-scoped without making `Award → Division` universal.
 
-- Competition is the family anchor for every in-scope MUDAC application variant.
-- Division is optional for single-cohort variants.
-- Panel is optional for ad-hoc evaluator assignment.
-- Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
-- Evaluation Occurrence, Evaluation Obligation, and Scorecard are not a universal co-inclusion group.
-- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim the current authoritative-evaluation semantics.
-- Any adopted authoritative-evaluation profile must satisfy the Versioning + Provenance authority-support rules.
+Any official declaration must have a reconstructible accepted OutcomeBasis, but source support is variant-specific.
+
+# Current scope conclusions
+
+- Competition remains the family anchor.
+- Division, Panel and Award remain optional in coherent variants where their capabilities are absent.
+- Evaluation Occurrence, Evaluation Obligation and Scorecard remain independently includable at the dependence level.
+- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim current authoritative-evaluation semantics.
+- Outcome Declaration may exist without Award; Award may exist without Outcome Declaration.
+- Competition does not universally depend on either outcome layer.
+- official and public remain separate; 012-G resolves Export/Publication inclusion next.
 
 # Current handoff
 
-012-F now owns Award, Outcome Declaration, and official-outcome inclusion dependence while preserving the sparse graph and 012-E authority-history distinctions.
-
-Proceed to **012-F — Outcome, Recognition & Official-Authority Dependence**.
+Proceed to **012-G — External Representation & Release Dependence**.
