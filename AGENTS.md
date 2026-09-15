@@ -7,11 +7,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
-4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase and [`Phase 011`](docs/011-concept-composition-synchronization/) as the completed composition phase.
+4. Use [`Phase 010`](docs/010-project-purpose-candidate-specification-modularity/) as the completed foundational Concept Design phase, [`Phase 011`](docs/011-concept-composition-synchronization/) as the completed composition phase, and [`Phase 012`](docs/012-concept-dependence-product-family-subset-scope/) as the active dependence/subset phase.
 5. Read [Canonical Project Context & Purpose](docs/canonical/project/), [Current Concepts](docs/canonical/concepts/) and [Current Synchronizations](docs/canonical/synchronizations/).
-6. Use [011-J](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for the Phase 011 exit and Phase 012 handoff.
-7. Use canonical synchronization owners for current interaction rules; numbered 011-C through 011-I records are provenance/rationale evidence.
-8. Treat [Historical Concept Synchronization Contracts — Pre-Phase-011](docs/canonical/synchronizations/concept-synchronizations.md) as historical evidence only.
+6. Use [011-J](docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for the Phase 011 exit and dependence-analysis handoff.
+7. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for the current Phase 012 family boundary, dependency semantics, candidate questions, unfamiliar-subset probes and approved subphase sequence.
+8. Use canonical synchronization owners for current interaction rules; numbered Phase 011 records are provenance/rationale evidence.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -29,7 +29,9 @@ implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
-012: NEXT — Concept Dependence, Product-Family, Subset & Scope Analysis
+012: IN PROGRESS
+012-A: COMPLETE — READY
+012-B: NEXT
 ```
 
 ## Current Concept authority
@@ -65,15 +67,7 @@ Phase 011 is complete. Preserve these whole-application distinctions:
 - calculated ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-Final action classes are:
-
-- **D** direct application action;
-- **C** coordinated application action;
-- **P** composition-only participant;
-- **S** system-triggered conceptual reaction;
-- **X** intentionally unavailable generic action.
-
-No unresolved `U` remains.
+Final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable. No unresolved `U` remains.
 
 Governing automation rule:
 
@@ -85,33 +79,108 @@ Do not introduce semantic authority named Workflow, Run, Case, Task, Reconciliat
 
 Phase 012 owns **extrinsic inclusion dependence**, coherent Concept subsets, product/application-family variants and adopted scope.
 
-For Concept inclusion claims, distinguish:
+012-A establishes the application-family context as the **MUDAC live student data competition judging-and-outcome family**.
+
+For every candidate inclusion claim, distinguish:
 
 ```text
-intrinsic dependence
-  = Concept-boundary defect; reopen the natural upstream owner
+intrinsic Concept dependence
+  = Concept-boundary defect; reopen the natural Phase 010 owner
 
 synchronization/composition
-  = how already-included Concepts interact
+  = how already-included Concepts interact; Phase 011 authority
 
 extrinsic inclusion dependence
-  = contextual rule that including A requires B for A's intended application role
+  = contextual rule that including A requires B
+    for A's intended MUDAC application role
 
 implementation dependency
   = out of scope for Concept Design
 ```
 
-Do not convert every synchronization edge into a dependence edge.
+Do **not** convert every synchronization edge into a dependence edge.
 
-Phase 012 must challenge familiar packaging and consider unusual/minimal coherent subsets. It must distinguish dependence-valid subsets from variants MUDAC actually adopts into scope.
+Before accepting `A → B`, establish that A remains intrinsically understandable without B, identify A's MUDAC application role, show why that role becomes incoherent when B is absent, challenge current workflow/UI/implementation bias, and test plausible unfamiliar subsets.
 
-Questions explicitly entering Phase 012 include whether Panel, Division, Award, Outcome Declaration, Export, Publication, Versioning and Provenance are required, optional, conditional or alternative in different coherent variants.
+## Subset and scope discipline
 
-Recommended next subgroup:
+Use these statuses consistently:
 
-> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
+- dependence-valid subset;
+- meaningful coherent subset;
+- in-scope variant;
+- coherent but out-of-scope variant;
+- invalid subset;
+- unresolved subset.
 
-012-A should derive its own dependency-safe subphase sequence before substantive dependence edges are accepted.
+Validity is not product commitment.
+
+Phase 012 must challenge familiar full-product packaging rather than merely document it. Required probes include:
+
+- single-cohort operation without Division;
+- ad-hoc judging without Panel;
+- judging-only without Award/Outcome Declaration/Export/Publication;
+- official outcome without Awards;
+- official but non-public operation;
+- Export without Publication;
+- Export from non-outcome source;
+- attempted Publication without Export;
+- no-Alias judging;
+- reduced Versioning/Provenance support;
+- Evaluation Obligation without Evaluation Occurrence and the reverse.
+
+Paper versus electronic operation is **not** a Concept-subset axis under the current model.
+
+## Candidate dependence questions entering 012-B+
+
+Questions include whether:
+
+- Competition anchors every meaningful family member;
+- Participation contextually requires Identity;
+- Access requires Participation in every protected-operation variant;
+- Team contextually requires Competition;
+- Division is optional in single-cohort variants;
+- Alias is required or conditional under bias-sensitive judging;
+- Panel is optional when evaluators are assigned directly;
+- Evaluation Occurrence and Evaluation Obligation have directional, mutual or no inclusion dependence;
+- Scorecard contextually requires Evaluation Obligation;
+- Rubric is required for every evaluation-capable subset;
+- Versioning/Provenance are required for authoritative/correctable variants;
+- Award and Outcome Declaration are optional capability layers;
+- Export can exist without Outcome Declaration or Publication;
+- Publication contextually requires Export.
+
+These are hypotheses/questions only until their owning subphase establishes current truth.
+
+## Canonical dependence authority
+
+No canonical dependence graph is current yet.
+
+012-A anticipates a compact `docs/canonical/dependence/` area once substantive edge analysis establishes durable truth. Do not write provisional dependence claims into Concept specifications merely to make them discoverable.
+
+## Approved Phase 012 order
+
+```text
+012-A  dependence scope / semantics / questions / plan                  COMPLETE — READY
+012-B  application-family roles / candidate dependence inventory        NEXT
+012-C  Competition / actor / competitor / bias-control dependence       PLANNED
+012-D  evaluation structure / responsibility / basis / judgment         PLANNED
+012-E  authority lineage / Provenance / correctability                   PLANNED
+012-F  outcome / Award / official-authority dependence                   PLANNED
+012-G  Export / Publication / external-representation dependence         PLANNED
+012-H  whole graph / transitivity / co-inclusion / minimal subsets       PLANNED
+012-I  product-family variants / scope / composition revalidation        PLANNED
+012-J  counterexamples / upstream reopen / Phase 013 handoff audit       PLANNED
+012-K  canonical reconciliation / Phase 012 exit / Phase 013 handoff     PLANNED
+```
+
+## Reopening rules
+
+- Purpose/scope role cannot be justified → revisit the natural Phase 010 project/purpose owner.
+- Proposed edge exposes intrinsic Concept coupling → reopen the natural Phase 010 Concept owner.
+- Accepted subset exposes missing/invalid composition → reopen/refine the natural Phase 011 synchronization owner.
+- Dependence seems to require a derived mechanism as a Concept node → review its upstream classification before adding it.
+- User-visible explanation/navigation issues without inclusion change → carry to Phase 013.
 
 ## Design-only rules for Phases 012–017
 
@@ -120,8 +189,9 @@ Recommended next subgroup:
 - Do not let frameworks, packages, tables, APIs, AWS services, source topology, authentication providers, persistence choices or existing code determine Concept Design.
 - Do not infer Concept dependence from service/package/module/database dependency.
 - Do not turn the dependence graph into implementation architecture or implementation order.
+- Do not design commercial tiers from Concept subsets.
 - Architecture/implementation may be inspected only for contamination analysis, historical comparison, assumptions/counterexamples or future post-closure handoff preparation.
-- Keep durable current meaning in canonical conceptual owners; keep rejected alternatives/counterexamples in phase history.
+- Keep durable current meaning in canonical conceptual owners; keep rejected alternatives/counterexamples in numbered phase history.
 
 ## Frozen executable substrate
 
@@ -135,4 +205,4 @@ Knowledge-only changes should run repository knowledge validation. Passing CI va
 
 Proceed to:
 
-> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
+> **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**
