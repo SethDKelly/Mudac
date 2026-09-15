@@ -4,15 +4,15 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A/B/C complete; 012-D next.**
+**In Progress — 012-A through 012-D complete; 012-E next.**
 
 ## Records
 
-- [012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — **Complete — READY TO BEGIN SUBPHASES**.
+- [012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning](012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — **Complete — READY**.
 - [012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory](012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) — **Complete — PASS**.
 - [012-C — Competition, Actor, Competitor Context & Bias-Control Dependence](012-C-competition-actor-competitor-context-bias-control-dependence.md) — **Complete — PASS**.
-- **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence** — Next.
-- 012-E — Authority Lineage, Provenance & Correctability Dependence — Planned.
+- [012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence](012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) — **Complete — PASS**.
+- **012-E — Authority Lineage, Provenance & Correctability Dependence** — Next.
 - 012-F — Outcome, Recognition & Official-Authority Dependence — Planned.
 - 012-G — External Representation & Release Dependence — Planned.
 - 012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets — Planned.
@@ -20,60 +20,33 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 - 012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit — Planned.
 - 012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff — Planned.
 
-## Current canonical dependence
+## Current canonical owner
 
-012-C establishes the first accepted direct edges:
+[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current accepted extrinsic inclusion dependence.
 
-```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-```
+It is partial through 012-D.
 
-Canonical owner:
+012-D adds direct evaluation relationships from Evaluation Occurrence, Evaluation Obligation, and Scorecard to Team, Participation, and Rubric.
 
-- [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md)
+Because Team and Participation already lead to Competition, and Participation leads to Identity, those consequences are transitive rather than duplicated as direct relationships.
 
-The owner is intentionally **partial through 012-C**. Later Phase 012 subgroups extend it.
+## 012-D evaluation result
 
-## Current transitive consequences
+Evaluation Occurrence, Evaluation Obligation, and Scorecard are not a mandatory co-inclusion group.
 
-```text
-Division → Team → Competition
-Alias    → Team → Competition
-Panel    → Participation → Competition
-Panel    → Participation → Identity
-```
+Current dependence permits these conceptual contractions for later scope analysis:
 
-These are not duplicated as direct edges.
+- occurrence/history capability without formal responsibility or Scorecard capture;
+- responsibility/remaining-work capability without occurrence or Scorecard capture;
+- Scorecard judgment capture without formal responsibility or bounded occurrence;
+- full evaluation capability with all three.
 
-## Current explicit universal non-edges
+Rubric remains independently useful as reusable evaluation-instrument definition.
 
-```text
-Competition ↛ Division
-Competition ↛ Panel
-Team        ↛ Alias
-Identity    ↛ Competition
-Identity    ↛ Participation
-Access      ↛ Participation
-Access      ↛ Identity
-```
+These conclusions do not replace current full-product Phase-011 synchronization. If a contraction is later selected into scope, its natural synchronization owner must be revalidated.
 
-Access still participates in protected Judge/Organizer capability checks through current composition; the non-edge conclusion is about universal Concept inclusion only.
+## Next unresolved area
 
-## Current scope/capability conclusions
+012-E determines the inclusion role of Versioning and Provenance around authoritative state, lineage, attribution, and correctability.
 
-- Competition anchors every in-scope MUDAC application variant.
-- Division is optional except for variants that need multiple competitive cohorts or policy that explicitly requires Division context.
-- Panel is optional when evaluators are assigned ad hoc.
-- Alias is required for variants claiming the current blinded-judging role, but Team itself does not universally depend on Alias.
-- a single-cohort no-Division variant remains dependence-coherent; current anonymity/disclosure policy would need later variant-specific revalidation before adoption.
-
-## Immediate handoff
-
-012-D now owns Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard dependence. It should use 012-C transitive reachability rather than redundantly adding Competition/Identity edges wherever Team or Participation already supplies them.
-
-Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
+Proceed to **012-E — Authority Lineage, Provenance & Correctability Dependence**.
