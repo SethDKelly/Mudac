@@ -25,7 +25,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Current Concepts](canonical/concepts/), [Current Synchronizations](canonical/synchronizations/), and active [Phase 012](012-concept-dependence-product-family-subset-scope/).
 
-Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for the current dependence-analysis start gate and approved subphase sequence.
+Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for the dependence-analysis start gate and approved subphase sequence.
+
+Use [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) for the current whole-catalog inclusion-role and candidate-dependence inventory. Its candidate edges are not canonical dependence truth.
 
 Phase 011 is complete. Use [011-J](011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) for its exit decision and use canonical synchronization owners rather than numbered Phase 011 records for current composition rules.
 
@@ -38,7 +40,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 011: COMPLETE — PASS
 012: IN PROGRESS
 012-A: COMPLETE — READY
-012-B: NEXT
+012-B: COMPLETE — PASS
+012-C: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,7 +53,7 @@ implementation authorization: NOT YET
 
 Phase 012 corresponds to Base Phase 006 — **Concept Dependence, Product-Family, Subset & Scope Analysis**.
 
-012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family**.
+The application family is the **MUDAC live student data competition judging-and-outcome family**.
 
 It distinguishes:
 
@@ -70,11 +73,21 @@ implementation dependency
 
 A Phase 011 synchronization edge is evidence to inspect, not automatically a dependence edge.
 
-No current dependence graph exists yet. 012-A accepts no edges and instead establishes candidate questions, subset semantics, counterexample probes, reopening triggers and the 012-B through 012-K analysis sequence.
+012-B now provides candidate edge routing for all eighteen Concepts while preserving provisional status. It specifically prevents the full product shape, current workflow, authority traceability, or support concepts from becoming dependence merely by habit.
+
+Current analytical role groups are:
+
+- Competition/actor/competitor context — Competition, Team, Identity, Participation, Access, Division, Alias, Panel;
+- evaluation — Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard;
+- authority/history support — Versioning, Provenance;
+- outcome/recognition — Award, Outcome Declaration;
+- externalization/release — Export, Publication.
+
+These groups are not mandatory bundles or co-inclusion cycles.
 
 # Subset discipline
 
-Phase 012 will distinguish:
+Phase 012 distinguishes:
 
 - dependence-valid subset;
 - meaningful coherent subset;
@@ -85,13 +98,15 @@ Phase 012 will distinguish:
 
 A dependence-valid subset is not automatically a supported product variant.
 
-The phase must challenge familiar packaging through unusual contractions such as single-cohort operation without Division, ad-hoc judging without Panel, outcome formation without Awards, official-but-non-public operation, Export without Publication, and reduced authority-history support.
+The phase must challenge familiar packaging through contractions such as single-cohort operation without Division, ad-hoc judging without Panel, outcome formation without Awards, official-but-non-public operation, Export without Publication, and reduced authority-history support.
 
 Paper versus electronic capture is not a Concept-subset axis under the current model.
 
 # Canonical dependence knowledge
 
-No canonical dependence owner is established merely by 012-A. Once substantive edge analysis establishes durable current truth, Phase 012 anticipates a compact `canonical/dependence/` area with one natural owner for the dependence relation and, only if materially distinct, a product-family/scope owner.
+No canonical dependence owner is established yet. 012-A and 012-B contain planning/candidate evidence only.
+
+Once 012-C through 012-G establish durable current edges, Phase 012 anticipates a compact `canonical/dependence/` area with one natural owner for the dependence relation and, only if materially distinct, a product-family/scope owner.
 
 Do not place provisional inclusion hypotheses into Concept specifications.
 
@@ -102,7 +117,7 @@ Do not place provisional inclusion hypotheses into Concept specifications.
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-B NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-C NEXT
   ↓
 013 mapping / representation
   ↓
@@ -117,4 +132,4 @@ Do not place provisional inclusion hypotheses into Concept specifications.
 
 A successful future Phase 017 may authorize only a **separate downstream architecture/engineering re-entry**. It does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
+The immediate next task is **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
