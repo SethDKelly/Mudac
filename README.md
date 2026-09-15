@@ -12,7 +12,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 dependence/product-family/subset/scope work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md`](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — current Phase 012 start gate and approved subphase plan.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md`](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — Phase 012 start gate and approved subphase plan.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md`](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) — current Concept inclusion-role and candidate-dependence inventory.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -32,7 +33,8 @@ implementation authorization: NOT YET
 011 composition/synchronization revalidation: COMPLETE — PASS
 012 dependence/product-family/subset/scope: IN PROGRESS
 012-A: COMPLETE — READY
-012-B: NEXT
+012-B: COMPLETE — PASS
+012-C: NEXT
 ```
 
 ## Current Concept catalog
@@ -57,26 +59,24 @@ The governing automation rule is:
 
 ## Phase 012 posture
 
-012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family** and adopts the Base/Jackson distinction:
+012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family** and fixes the distinction among intrinsic coupling, synchronization, extrinsic inclusion dependence and implementation dependency.
 
-```text
-intrinsic Concept dependence
-  = upstream Concept-boundary defect
+012-B establishes the first whole-catalog inclusion-role/candidate-dependence inventory. It accepts no final edge. Candidate relations are classified as strong, conditional, alternative/disjunctive, challenge, or rejected-as-edge so family-specific phases can prove them rather than inherit them.
 
-synchronization / composition
-  = how already-included Concepts interact
+Important 012-B conclusions include:
 
-extrinsic inclusion dependence
-  = contextual rule that including A requires B
-    for A's intended application role
+- the full eighteen-Concept product shape is not assumed indivisible;
+- Team/Participation/Division/Alias/Panel relationships to Competition remain contextual rather than intrinsic;
+- Division and Panel retain explicit optionality pressure;
+- Alias is a bias-control/scope question rather than an intrinsic Team requirement;
+- Evaluation Occurrence, Evaluation Obligation and Scorecard composition is not automatically inclusion dependence;
+- Versioning/Provenance are conditional authority-history support rather than universal dependency sinks;
+- Award is not automatically required by official outcome authority;
+- Export does not automatically require Outcome Declaration or Publication;
+- `Publication → Export` is a strong MUDAC candidate, while `Export → Publication` is likely false;
+- no co-inclusion cycle is accepted yet.
 
-implementation dependency
-  = out of scope
-```
-
-No dependence edge is current yet. 012-A instead defines the edge test, subset-status vocabulary, candidate inclusion questions, unfamiliar/minimal subset probes, canonical ownership plan and dependency-safe 012-B through 012-K sequence.
-
-Important candidate questions include Division and Panel optionality, Alias under bias-sensitive judging, Evaluation Occurrence/Obligation asymmetry, Scorecard/Rubric support, Versioning/Provenance requirements for authoritative variants, Award/Outcome Declaration optionality, Export without Publication or official outcome, and whether Publication contextually requires Export.
+No canonical dependence graph exists yet. 012-C through 012-G must establish durable current edges before a `canonical/dependence/` owner is promoted.
 
 ## Completion runway
 
@@ -85,7 +85,7 @@ Important candidate questions include Division and Panel optionality, Alias unde
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-B NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-C NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -108,4 +108,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **012-B — Application-Family Boundary, Concept Inclusion Roles & Candidate Dependence Inventory**.
+Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
