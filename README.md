@@ -11,9 +11,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 accepted extrinsic inclusion-dependence authority, partial through 012-C.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 dependence/product-family/subset/scope work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md`](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) — Phase 012 start gate and approved subphase plan.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md`](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) — current Concept inclusion-role and candidate-dependence inventory.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md) — current accepted Competition/actor/competitor/bias-control dependence result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -34,7 +34,8 @@ implementation authorization: NOT YET
 012 dependence/product-family/subset/scope: IN PROGRESS
 012-A: COMPLETE — READY
 012-B: COMPLETE — PASS
-012-C: NEXT
+012-C: COMPLETE — PASS
+012-D: NEXT
 ```
 
 ## Current Concept catalog
@@ -47,36 +48,40 @@ The former `Judging Encounter` and `Official Outcome Revision` paths remain depr
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains work/process context rather than an authority-owning Concept.
 
-## Phase 011 result
+## Current Phase 012 dependence
 
-Phase 011 passes the Base composition exit gate. Current application behavior can be reconstructed from independent Concept actions + explicit synchronization + deliberate application-action exposure.
+012-C establishes the first durable direct edges:
 
-The final action classes are `D` direct, `C` coordinated, `P` composition-only, `S` system-triggered and `X` intentionally unavailable; no unresolved `U` remains.
+```text
+Team          → Competition
+Participation → Competition
+Participation → Identity
+Division      → Team
+Alias         → Team
+Panel         → Participation
+```
 
-The governing automation rule is:
+The graph is minimal: Division/Alias reach Competition through Team, and Panel reaches Competition/Identity through Participation.
 
-> **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
+Current explicit universal non-edges include:
 
-## Phase 012 posture
+```text
+Competition ↛ Division
+Competition ↛ Panel
+Team        ↛ Alias
+Identity    ↛ Competition
+Identity    ↛ Participation
+Access      ↛ Participation
+Access      ↛ Identity
+```
 
-012-A establishes the application-family boundary as the **MUDAC live student data competition judging-and-outcome family** and fixes the distinction among intrinsic coupling, synchronization, extrinsic inclusion dependence and implementation dependency.
+These non-edges do not remove current composition requirements. Protected Judge/Organizer actions still use Participation-derived context for Access.
 
-012-B establishes the first whole-catalog inclusion-role/candidate-dependence inventory. It accepts no final edge. Candidate relations are classified as strong, conditional, alternative/disjunctive, challenge, or rejected-as-edge so family-specific phases can prove them rather than inherit them.
+Competition is the family anchor for every in-scope MUDAC variant, but that scope rule does not imply Competition depends on every optional capability.
 
-Important 012-B conclusions include:
+Division remains optional for single-cohort operation; Panel remains optional for ad-hoc evaluator assignment; Alias is required for variants claiming the current blinded-judging role but is not a universal Team dependency.
 
-- the full eighteen-Concept product shape is not assumed indivisible;
-- Team/Participation/Division/Alias/Panel relationships to Competition remain contextual rather than intrinsic;
-- Division and Panel retain explicit optionality pressure;
-- Alias is a bias-control/scope question rather than an intrinsic Team requirement;
-- Evaluation Occurrence, Evaluation Obligation and Scorecard composition is not automatically inclusion dependence;
-- Versioning/Provenance are conditional authority-history support rather than universal dependency sinks;
-- Award is not automatically required by official outcome authority;
-- Export does not automatically require Outcome Declaration or Publication;
-- `Publication → Export` is a strong MUDAC candidate, while `Export → Publication` is likely false;
-- no co-inclusion cycle is accepted yet.
-
-No canonical dependence graph exists yet. 012-C through 012-G must establish durable current edges before a `canonical/dependence/` owner is promoted.
+A single-cohort no-Division variant is dependence-coherent but would require later policy/composition revalidation before adoption because current disclosure policy names Division in the blinded Judge-facing representation.
 
 ## Completion runway
 
@@ -85,7 +90,7 @@ No canonical dependence graph exists yet. 012-C through 012-G must establish dur
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-C NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-D NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -108,4 +113,4 @@ A successful future Phase 017 may establish readiness for a **separate architect
 
 ## Current direction
 
-Proceed to **012-C — Competition, Actor, Competitor Context & Bias-Control Dependence**.
+Proceed to **012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence**.
