@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](synchronizations/) — current reconciled Phase-011 composition/synchronization authority.
-* [Dependence](dependence/) — current Phase-012 direct dependence, capability-conditioned co-inclusion and whole-graph validation through 012-H.
+* [Dependence](dependence/) — current Phase-012 direct dependence, whole-graph validation and product-family scope.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
@@ -46,7 +46,8 @@ implementation authorization: NOT YET
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
-012-I: NEXT
+012-I: COMPLETE — PASS
+012-J: NEXT
 ```
 
 # Current Concept authority
@@ -61,35 +62,42 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Phase 011 is complete. Current interaction rules live under [Synchronizations](synchronizations/).
 
-Dependence does not replace synchronization; traceability or coordinated action does not by itself create inclusion dependence.
+Dependence/scope does not replace synchronization; traceability or coordinated action does not by itself create inclusion dependence or product scope.
 
-# Current dependence authority
+# Current dependence and scope authority
 
 [MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns direct edges/non-edges and capability-conditioned rules.
 
-[Whole-Graph Dependence & Subset Validation](dependence/whole-graph-subset-validation.md) owns the current integrated model after 012-H:
+[Whole-Graph Dependence & Subset Validation](dependence/whole-graph-subset-validation.md) owns acyclicity, transitive closure and coherent-subset validation.
 
-```text
-whole direct graph: ACYCLIC
-mutual-dependence / co-inclusion groups: NONE
-new direct edge required by closure: NONE
-```
+[MUDAC Product-Family Scope](dependence/product-family-scope.md) selects the current supported product variant:
 
-Competition is the only universal **in-scope family anchor**. All other Concepts are globally optional while remaining mandatory where a named capability requires them.
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-`Award → Competition` remains intentionally retained despite transitive reachability through Team because Award scope and Award recipient are distinct roles.
+PF-01 keeps all eighteen Concepts in the supported capability envelope because current scope spans preparation, blinded live judging, coordination, authoritative/correctable evidence, official outcome authority, optional recognition and controlled representation/release.
 
-# Validity and scope
+# Product-profile distinction
 
-```text
-dependence-valid
-  != meaningful MUDAC family member
-  != adopted in-scope variant
-```
+Concept support does not imply active use in every Competition.
 
-012-H confirms coherent unfamiliar subsets including single-cohort/no-Division, ad-hoc/no-Panel, evaluation contractions, official-without-Award, official-but-non-public, Export-without-Publication and public non-official material. Publication-without-Export remains invalid.
+The following remain profiles inside PF-01 rather than separate product variants:
 
-Working-only evaluation may omit Versioning/Provenance; authoritative evaluation may not. Paper/electronic/mixed capture remains a channel profile rather than a Concept-subset axis.
+- no Award in a particular Competition;
+- official outcome without Award;
+- official-but-non-public state;
+- Export without Publication;
+- controlled public non-official material;
+- public official-result release;
+- exceptional/no-result official disposition;
+- paper/electronic/mixed continuity.
+
+# Deferred scope
+
+Coherent contractions including truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred.
+
+No-Alias competitive judging is outside the current bias-control baseline. Authoritative evaluation without Versioning/Provenance remains invalid.
+
+No immediate Phase-011 reopening is required for PF-01.
 
 # Retrieval rule during reopened design
 
@@ -109,7 +117,7 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-I NEXT
+012 dependence / subsets / product-family / scope             IN PROGRESS — 012-J NEXT
   ↓
 013 mapping / representation revalidation
   ↓
@@ -122,4 +130,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
+The immediate next work is **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
