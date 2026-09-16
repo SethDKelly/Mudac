@@ -7,11 +7,12 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](synchronizations/) — current reconciled Phase-011 composition/synchronization authority.
-* [Dependence](dependence/) — current Phase-012 direct dependence, whole-graph validation and product-family scope.
+* [Dependence](dependence/) — current Phase-012 direct dependence, whole-graph validation and PF-01 product-family scope.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
-* [Experience](experience/) — current mapping/experience evidence, subject to Phase 013 revalidation.
+* [Experience](experience/) — Phase-013 entry authority plus pre-existing mapping evidence pending revalidation.
+* [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) — current mapping-entry precedence, explanation-order constraints and known mapping drift.
 
 # Governance
 
@@ -47,7 +48,9 @@ implementation authorization: NOT YET
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
 012-I: COMPLETE — PASS
-012-J: NEXT
+012-J: COMPLETE — PASS
+012-K: NEXT
+013: NOT STARTED
 ```
 
 # Current Concept authority
@@ -74,30 +77,32 @@ Dependence/scope does not replace synchronization; traceability or coordinated a
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen Concepts in the supported capability envelope because current scope spans preparation, blinded live judging, coordination, authoritative/correctable evidence, official outcome authority, optional recognition and controlled representation/release.
+PF-01 keeps all eighteen Concepts in the supported capability envelope. Product support does not require every Competition to exercise every capability.
 
-# Product-profile distinction
+# 012-J audit result
 
-Concept support does not imply active use in every Competition.
+The final counterexample/reopen audit before Phase-012 consolidation finds:
 
-The following remain profiles inside PF-01 rather than separate product variants:
+```text
+new dependence edge required: NO
+PF-01 scope change required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+Phase-013 mapping revalidation required: YES
+```
 
-- no Award in a particular Competition;
-- official outcome without Award;
-- official-but-non-public state;
-- Export without Publication;
-- controlled public non-official material;
-- public official-result release;
-- exceptional/no-result official disposition;
-- paper/electronic/mixed continuity.
+The mapping carry-forward is repository currentness: older Experience contracts still contain superseded `Encounter` and `Official Outcome Revision` language.
 
-# Deferred scope
+Until Phase 013 revalidates them, current Purpose/Concept/Synchronization/Dependence/PF-01 owners take precedence and [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) governs mapping entry.
 
-Coherent contractions including truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred.
+# Explanation-order boundary
 
-No-Alias competitive judging is outside the current bias-control baseline. Authoritative evaluation without Versioning/Provenance remains invalid.
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
 
-No immediate Phase-011 reopening is required for PF-01.
+A future mapping may organize experience differently, but it must preserve enough context, basis, authority, consequence and historical/currentness meaning to avoid a false conceptual model.
 
 # Retrieval rule during reopened design
 
@@ -106,9 +111,10 @@ For Phases 012–017:
 1. load the current phase record relevant to the task;
 2. load [Project Context & Purpose](project/) when purpose/scope assumptions matter;
 3. load task-relevant [Concepts](concepts/), [Synchronizations](synchronizations/) and [Dependence](dependence/);
-4. use older phase records for rationale/evidence rather than current ownership;
-5. load the [Design / Implementation Boundary](governance/design-implementation-boundary.md) and downstream quarantine;
-6. do not preload architecture/implementation except for explicit contamination/history work.
+4. for mapping work, load [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) before older Experience contracts;
+5. use older phase/experience records for rationale/evidence rather than current semantic ownership;
+6. load the [Design / Implementation Boundary](governance/design-implementation-boundary.md) and downstream quarantine;
+7. do not preload architecture/implementation except for explicit contamination/history work.
 
 # Completion runway
 
@@ -117,7 +123,7 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-J NEXT
+012 dependence / subsets / product-family / scope             IN PROGRESS — 012-K NEXT
   ↓
 013 mapping / representation revalidation
   ↓
@@ -130,4 +136,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
+The immediate next work is **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
