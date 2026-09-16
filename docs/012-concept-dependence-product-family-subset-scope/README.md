@@ -1,8 +1,8 @@
 # Phase 012 — Concept Dependence, Product-Family, Subset & Scope Analysis
 
-Status: **IN PROGRESS — 012-A through 012-G complete; 012-H next.**
+Status: **IN PROGRESS — 012-A through 012-H complete; 012-I next.**
 
-Phase 012 corresponds to Base Phase 006 / Daniel Jackson Concept dependence and subset analysis. Phase 010 established the eighteen independent Concepts; Phase 011 established composition; Phase 012 establishes which Concepts/capabilities must be co-included for coherent MUDAC application roles and which dependence-valid variants belong in scope.
+Phase 012 corresponds to Base Phase 006 / Daniel Jackson Concept dependence and subset analysis. Phase 010 established the eighteen independent Concepts; Phase 011 established composition; Phase 012 establishes which Concepts/capabilities must be co-included for coherent MUDAC application roles and which coherent variants are deliberately in scope.
 
 Architecture and implementation remain suspended.
 
@@ -37,63 +37,64 @@ implementation dependency
 | 012-E | [Authority Lineage, Provenance & Correctability Dependence](012-E-authority-lineage-provenance-correctability-dependence.md) | **Complete — PASS** |
 | 012-F | [Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) | **Complete — PASS** |
 | 012-G | [External Representation & Release Dependence](012-G-external-representation-release-dependence.md) | **Complete — PASS** |
-| 012-H | Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets | **Next** |
-| 012-I | Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation | Planned |
+| 012-H | [Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets](012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) | **Complete — PASS** |
+| 012-I | Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation | **Next** |
 | 012-J | Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit | Planned |
 | 012-K | Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff | Planned |
 
-## Canonical dependence through 012-G
+## Canonical dependence authority
 
-Current durable authority is [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md).
+Current direct edges and capability-conditioned rules remain owned by [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md).
 
-Direct edge families now cover Competition/actor/competitor, evaluation, outcome/recognition, and externalization. The externalization family adds exactly:
+Current whole-model validation is owned by [Whole-Graph Dependence & Subset Validation](../canonical/dependence/whole-graph-subset-validation.md).
+
+012-H establishes:
 
 ```text
-Publication → Export
+whole graph: ACYCLIC
+mutual-dependence / co-inclusion cycles: NONE
+new direct edges required: NONE
+Competition: only universal in-scope family anchor
+all other Concepts: globally optional, capability-conditionally required where applicable
 ```
 
-while preserving:
+`Award → Competition` is reachability-redundant through `Award → Team → Competition`, but remains semantically retained because Competition scope and Team recipient are distinct Award-role reasons.
+
+## Capability closures remain current
+
+Examples include:
 
 ```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
-```
+Authoritative Scorecard Evidence
+  ⇒ Competition + Team + Identity + Participation
+   + Rubric + Scorecard + Versioning + Provenance
 
-The full model therefore preserves:
-
-```text
-calculated != recognized != official != public != delivered
-source authority != Export representation != Publication release != transport delivery
-```
-
-## Externalization capability rules
-
-```text
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
 
 Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
+  ⇒ Competition + Outcome Declaration + Export + Publication
 ```
 
-A corrected successor release requires a successor/current Export plus an explicit Publication successor action; correction never silently retargets an old Publication.
+The exact official OutcomeBasis and Export SourceBasis remain variant-specific rather than fixed source-Concept bundles.
 
-Paper capture continuity does **not** universally require Export. Export is required only when a stable printable/external representation is itself part of the capability.
+## Unfamiliar-subset validation
 
-## Representative externalization subsets
+012-H confirms, among other cases:
 
-Dependence-coherent examples include:
+- single-cohort operation without Division — coherent;
+- ad-hoc judging without Panel — coherent;
+- judging-only without Award/Outcome Declaration — coherent;
+- official outcome without Award — coherent;
+- official-but-non-public — coherent;
+- Export without Publication — coherent;
+- Publication without Export — invalid;
+- no-Alias judging — coherent only outside the current blinded-judging profile;
+- working Rubric/Scorecard without Versioning/Provenance — coherent only without authoritative claims;
+- Obligation without Occurrence and Occurrence without Obligation — both coherent;
+- paper/electronic capture — channel profile, not a Concept-subset axis.
 
-- Export without Publication;
-- official Outcome Declaration without Export/Publication;
-- official representation prepared but unreleased;
-- public non-official material using Export + Publication;
-- public official result using Outcome Declaration + Export + Publication.
-
-These are not yet adopted product variants. 012-I owns scope selection.
+Dependence-valid still does not mean adopted.
 
 ## Current execution posture
 
@@ -110,7 +111,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -120,4 +122,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
