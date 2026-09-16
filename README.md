@@ -9,12 +9,12 @@ The current product definition is representation-independent: volunteer Judges a
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and current design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
-* [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
-* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current dependence, whole-graph and PF-01 scope authority after Phase 012 closure.
-* [`docs/canonical/dependence/product-family-scope.md`](docs/canonical/dependence/product-family-scope.md) — selected PF-01 product scope.
-* [`docs/canonical/experience/phase-013-entry-handoff.md`](docs/canonical/experience/phase-013-entry-handoff.md) — authorized Phase-013 mapping-entry authority.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md`](docs/012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md) — Phase-012 exit decision and formal mapping handoff.
+* [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
+* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current composition/application-action authority.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current dependence, whole-graph and PF-01 scope authority.
+* [`docs/canonical/experience/phase-013-entry-handoff.md`](docs/canonical/experience/phase-013-entry-handoff.md) — current Phase-013 mapping-entry authority and start-gate baseline.
+* [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013 mapping work.
+* [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — completed mapping start gate and approved workstream sequence.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -33,52 +33,49 @@ implementation authorization: NOT YET
 010 foundational completion: COMPLETE — PASS
 011 composition/synchronization revalidation: COMPLETE — PASS
 012 dependence/product-family/subset/scope: COMPLETE — PASS
-013 mapping/interaction/representation: AUTHORIZED
-013-A: NEXT
+013 mapping/interaction/representation: IN PROGRESS
+013-A: COMPLETE — READY
+013-B: NEXT
 ```
 
-## Current Concept catalog
-
-Phase 010 canonically converged the model to eighteen Concepts:
-
-Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
-
-`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
-
-Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
-
-## Current product-family scope
-
-Phase 012 is complete. The complete dependence graph is acyclic and survives counterexample audit without a new edge, scope change or upstream reopen.
+## Current product scope
 
 MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 supports the full eighteen-Concept capability envelope. Individual Competitions may legitimately omit use of Award, remain official-but-non-public, prepare Export without Publication, use paper/electronic/mixed capture, or pass through pre-closeout/correction states without becoming separate product variants.
+PF-01 supports the full eighteen-Concept capability envelope. Award absence/presence, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture and current/Affected/Superseded authority are profiles/states rather than separate products.
 
-Phase-012 exit confirms:
+## Phase-013 mapping posture
 
-```text
-new direct edge required: NO
-PF-01 scope change required: NO
-Phase-010 reopen required: NO
-Phase-011 reopen required: NO
-Phase-012 repair required: NO
-Phase-013 mapping revalidation required: YES
-```
+013-A confirms the incoming Purpose / Concept / Synchronization / Dependence / PF-01 model is sufficient for mapping without upstream reopening.
 
-## Mapping boundary entering Phase 013
+All twelve Base Phase-007 mapping dimensions require substantive revalidation. Existing Experience documents are useful incoming evidence but are not accepted as current Phase-013 authority as-is.
 
-The mapping carry-forward is documentation/currentness, not a semantic-model defect: earlier Experience contracts still contain `Encounter` and `Official Outcome Revision` language and enter Phase 013 as evidence to reconcile.
-
-Current Purpose, Concepts, Synchronizations, Dependence and PF-01 scope remain authoritative.
-
-Dependence informs explanation but not physical/interface order:
+Key rules remain:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+```
+
+Phase 013 maps the Phase-011 application action surface (`D / C / P / S / X`) and must preserve current authority, disclosure, history, correction and profile semantics without translating them into implementation architecture.
+
+## Approved Phase-013 flow
+
+```text
+013-A  start gate / coverage / risk / workstream planning          COMPLETE — READY
+013-B  corpus / terminology / authority / canonical ownership     NEXT
+013-C  context / identity / participation / access / Judge entry
+013-D  preparation / setup / readiness
+013-E  evaluation occurrence / obligation / judgment
+013-F  lineage / paper / correction / historical state
+013-G  live ops / exceptions / derived outcome state
+013-H  Award / finalization / Outcome Declaration
+013-I  Export / Publication / external recipient
+013-J  accessibility / degraded / status / recovery parity
+013-K  whole-experience mapping-integrity audit
+013-L  consolidation / Phase-014 handoff
 ```
 
 ## Completion runway
@@ -90,7 +87,7 @@ synchronization chain != mandatory wizard
   ↓
 012 dependence / product family / subsets / scope              COMPLETE — PASS
   ↓
-013 mapping / interaction / representation revalidation        AUTHORIZED — 013-A NEXT
+013 mapping / interaction / representation                     IN PROGRESS — 013-B NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
@@ -107,4 +104,4 @@ A successful future Phase 017 may establish readiness for a separate architectur
 
 ## Current direction
 
-Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
+Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
