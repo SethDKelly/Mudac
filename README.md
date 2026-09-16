@@ -11,10 +11,10 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence, capability and whole-graph validation authority through 012-H.
-* [`docs/canonical/dependence/whole-graph-subset-validation.md`](docs/canonical/dependence/whole-graph-subset-validation.md) — current whole-graph acyclicity, closure, optionality and subset validation.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence, whole-graph validation and product-family scope authority.
+* [`docs/canonical/dependence/product-family-scope.md`](docs/canonical/dependence/product-family-scope.md) — current adopted PF-01 scope and deferred contractions.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md`](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) — current Phase 012 whole-model result.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md`](docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) — current product-family scope decision.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -41,7 +41,8 @@ implementation authorization: NOT YET
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
-012-I: NEXT
+012-I: COMPLETE — PASS
+012-J: NEXT
 ```
 
 ## Current Concept catalog
@@ -54,42 +55,30 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
 
-## Current Phase 012 result
+## Current Phase 012 product-family result
 
-All family-local dependence has been resolved and the complete graph has now passed whole-model validation:
+The dependence graph is acyclic and the current product scope now selects one primary variant:
 
-```text
-whole direct graph: ACYCLIC
-co-inclusion cycles: NONE
-new direct edge required by closure: NONE
-```
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Competition is the only universal **in-scope family anchor**. Every other Concept is globally optional in the product-family sense, while named capabilities can make particular Concepts mandatory.
+PF-01 keeps all eighteen Concepts in the supported capability envelope because current scope spans preparation, blinded live judging, coordination, authoritative/correctable evidence, official outcome authority, optional recognition and controlled externalization/release.
 
-Examples:
+Concept support does not imply active use in every Competition. PF-01 supports, for example:
 
-```text
-Authoritative Scorecard Evidence
-  ⇒ Competition + Team + Identity + Participation
-   + Rubric + Scorecard + Versioning + Provenance
+- no Award in a particular Competition;
+- official outcome without Award;
+- official-but-non-public state;
+- Export prepared without Publication;
+- controlled public non-official material;
+- public official-result release;
+- exceptional/no-result official disposition;
+- paper/electronic/mixed continuity.
 
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
+These are profiles inside PF-01 rather than separate products.
 
-Public Official-Result Release
-  ⇒ Competition + Outcome Declaration + Export + Publication
-```
+Coherent reduced subsets such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred product-family options. No-Alias competitive judging is outside the current bias-control baseline. Authoritative evaluation without Versioning/Provenance remains invalid.
 
-The graph continues to preserve:
-
-```text
-calculated != recognized != official != public != delivered
-source authority != Export representation != Publication release != transport delivery
-```
-
-012-H confirms coherent unfamiliar subsets including single-cohort/no-Division, ad-hoc/no-Panel, judging-only, official-without-Award, official-but-non-public, Export-without-Publication, and public non-official material. Publication-without-Export is invalid.
-
-Dependence-valid still does not mean adopted. 012-I now decides which coherent variants MUDAC deliberately supports and which variant-specific Phase-011 composition/policy refinements are required.
+No immediate Phase-011 reopening is required for PF-01; current synchronization already covers the selected full product scope.
 
 ## Completion runway
 
@@ -98,7 +87,7 @@ Dependence-valid still does not mean adopted. 012-I now decides which coherent v
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-I NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-J NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -117,4 +106,4 @@ A successful future Phase 017 may establish readiness for a separate architectur
 
 ## Current direction
 
-Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
+Proceed to **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
