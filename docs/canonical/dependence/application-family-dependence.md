@@ -1,7 +1,7 @@
 ---
 type: Canonical Dependence Model
 title: MUDAC Application-Family Concept Dependence
-description: "Current accepted extrinsic Concept inclusion dependence and capability-conditioned co-inclusion for the MUDAC live student data competition judging-and-outcome family. Partial through Phase 012-F."
+description: "Current accepted extrinsic Concept inclusion dependence and capability-conditioned co-inclusion for the MUDAC live student data competition judging-and-outcome family. Complete through Phase 012-G concept-family analysis; whole-graph/subset validation continues in 012-H."
 status: stable
 tags: [canonical, dependence, product-family, subsets, phase-012]
 sources:
@@ -11,24 +11,26 @@ sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: ../concepts/
   - resource: ../synchronizations/
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-15T14:11:00-05:00 }
 ---
 
 # Purpose
 
 Own current **extrinsic Concept inclusion dependence** and material **capability-conditioned co-inclusion** for the MUDAC application family.
 
-This owner is separate from intrinsic Concept definitions, Phase-011 synchronization/composition, derived mechanisms/policies, and downstream implementation dependency.
+This owner is distinct from intrinsic Concept definitions, Phase-011 synchronization/composition, derived mechanisms/policies, and downstream implementation dependency.
 
 # Application-family context
 
 The analyzed family is:
 
 > **MUDAC live student data competition judging and outcome formation**, including preparation, independent evaluation, correction, explicit outcome authority, and optional controlled external representation/release.
+
+Every adopted in-scope MUDAC variant retains Competition as the application-family context. That scope rule is not a blanket `Competition → every capability` edge.
 
 # Dependence forms
 
@@ -47,45 +49,31 @@ Capability X
   ⇒ include Concept A + Concept B
 ```
 
-means the named capability is invalid without those Concepts, while the Concepts may still have meaningful reduced roles outside that capability.
+means the named capability is invalid without those Concepts, while the underlying Concepts may still serve meaningful reduced roles outside that capability.
 
-Do not flatten capability rules into false universal arrows.
+Neither form implies intrinsic specification coupling, runtime call direction, persistence ownership, UI ordering, deployment sequencing, or implementation architecture.
 
-Neither form implies intrinsic specification coupling, implementation call direction, persistence ownership, UI ordering, deployment sequencing, or runtime choreography.
-
-# Current completion state
+# Current methodology state
 
 ```text
-012-A  COMPLETE — start gate
-012-B  COMPLETE — candidate inventory
-012-C  COMPLETE — Competition / actor / competitor / bias-control
-012-D  COMPLETE — evaluation structure / responsibility / basis / judgment
-012-E  COMPLETE — authority lineage / Provenance / correctability
-012-F  COMPLETE — outcome / recognition / official authority
-012-G  NEXT
+012-A  COMPLETE — READY
+012-B  COMPLETE — PASS
+012-C  COMPLETE — PASS
+012-D  COMPLETE — PASS
+012-E  COMPLETE — PASS
+012-F  COMPLETE — PASS
+012-G  COMPLETE — PASS
+012-H  NEXT — whole graph / transitivity / co-inclusion / minimal subsets
 ```
 
-This owner is **partial through 012-F**. External representation/release dependence remains unresolved until 012-G.
+All Concept-family dependence questions are now resolved through 012-G. 012-H must validate the graph as a whole rather than adding family-local assumptions by default.
 
-# Family scope
+# Current direct dependence graph
 
-<a id="dep-family-001"></a>
-## DEP-FAMILY-001 — Competition anchors in-scope MUDAC variants
-
-Every in-scope MUDAC product/application variant retains Competition as the live student-competition context.
-
-This is a product-family scope rule, not:
-
-```text
-Competition → every other Concept
-```
-
-A dependence-valid reusable subset may be coherent outside adopted MUDAC scope without becoming an in-scope variant.
-
-# Accepted direct edges — Competition / actor / competitor
+## Competition / actor / competitor
 
 <a id="dep-c-001"></a>
-## DEP-C-001 — Team → Competition
+### DEP-C-001 — Team → Competition
 
 ```text
 Team → Competition
@@ -94,7 +82,7 @@ Team → Competition
 Team's MUDAC role is a student group competing in one Competition.
 
 <a id="dep-c-002"></a>
-## DEP-C-002 — Participation → Competition
+### DEP-C-002 — Participation → Competition
 
 ```text
 Participation → Competition
@@ -103,7 +91,7 @@ Participation → Competition
 Participation is time-bounded Judge/Organizer involvement in one Competition scope.
 
 <a id="dep-c-003"></a>
-## DEP-C-003 — Participation → Identity
+### DEP-C-003 — Participation → Identity
 
 ```text
 Participation → Identity
@@ -112,7 +100,7 @@ Participation → Identity
 Participation requires stable human continuity for attribution, recovery, authority separation, and historical correctness.
 
 <a id="dep-c-004"></a>
-## DEP-C-004 — Division → Team
+### DEP-C-004 — Division → Team
 
 ```text
 Division → Team
@@ -121,7 +109,7 @@ Division → Team
 Division partitions Team competitors into cohorts.
 
 <a id="dep-c-005"></a>
-## DEP-C-005 — Alias → Team
+### DEP-C-005 — Alias → Team
 
 ```text
 Alias → Team
@@ -130,7 +118,7 @@ Alias → Team
 Alias supplies alternate Judge-facing identity for Team competitors.
 
 <a id="dep-c-006"></a>
-## DEP-C-006 — Panel → Participation
+### DEP-C-006 — Panel → Participation
 
 ```text
 Panel → Participation
@@ -138,93 +126,77 @@ Panel → Participation
 
 Panel groups event-scoped Judge Participations rather than permanent human roles.
 
-# Accepted direct edges — evaluation
+## Evaluation
 
 <a id="dep-d-001"></a>
-## DEP-D-001 — Evaluation Occurrence → Team
+### DEP-D-001 — Evaluation Occurrence → Team
 
 ```text
 Evaluation Occurrence → Team
 ```
 
-Occurrence preserves presentation/evaluation truth for one Team.
-
 <a id="dep-d-002"></a>
-## DEP-D-002 — Evaluation Occurrence → Participation
+### DEP-D-002 — Evaluation Occurrence → Participation
 
 ```text
 Evaluation Occurrence → Participation
 ```
 
-Occurrence evaluator identities are event-scoped Judge Participations.
-
 <a id="dep-d-003"></a>
-## DEP-D-003 — Evaluation Occurrence → Rubric
+### DEP-D-003 — Evaluation Occurrence → Rubric
 
 ```text
 Evaluation Occurrence → Rubric
 ```
 
-MUDAC evaluation occurrences use Rubric-owned evaluation-basis semantics.
-
 <a id="dep-d-004"></a>
-## DEP-D-004 — Evaluation Obligation → Team
+### DEP-D-004 — Evaluation Obligation → Team
 
 ```text
 Evaluation Obligation → Team
 ```
 
-The responsibility concerns evaluation of one Team.
-
 <a id="dep-d-005"></a>
-## DEP-D-005 — Evaluation Obligation → Participation
+### DEP-D-005 — Evaluation Obligation → Participation
 
 ```text
 Evaluation Obligation → Participation
 ```
 
-The responsible evaluator is an event-scoped Judge Participation.
-
 <a id="dep-d-006"></a>
-## DEP-D-006 — Evaluation Obligation → Rubric
+### DEP-D-006 — Evaluation Obligation → Rubric
 
 ```text
 Evaluation Obligation → Rubric
 ```
 
-MUDAC evaluation responsibility is defined against Rubric-owned evaluation semantics.
-
 <a id="dep-d-007"></a>
-## DEP-D-007 — Scorecard → Team
+### DEP-D-007 — Scorecard → Team
 
 ```text
 Scorecard → Team
 ```
 
-A MUDAC Scorecard records one Judge's judgment of one Team.
-
 <a id="dep-d-008"></a>
-## DEP-D-008 — Scorecard → Participation
+### DEP-D-008 — Scorecard → Participation
 
 ```text
 Scorecard → Participation
 ```
 
-Scorecard semantic authorship is attributable to an event-scoped Judge Participation.
-
 <a id="dep-d-009"></a>
-## DEP-D-009 — Scorecard → Rubric
+### DEP-D-009 — Scorecard → Rubric
 
 ```text
 Scorecard → Rubric
 ```
 
-Rubric supplies response interpretation, validation, completeness, and scoring semantics.
+The three evaluation-work Concepts share Team, Judge Participation, and Rubric as their MUDAC role anchors without depending universally on one another.
 
-# Accepted direct edges — outcome / recognition
+## Outcome / recognition
 
 <a id="dep-f-001"></a>
-## DEP-F-001 — Award → Competition
+### DEP-F-001 — Award → Competition
 
 ```text
 Award → Competition
@@ -233,7 +205,7 @@ Award → Competition
 Award's MUDAC role is recognized achievement within a Competition scope.
 
 <a id="dep-f-002"></a>
-## DEP-F-002 — Award → Team
+### DEP-F-002 — Award → Team
 
 ```text
 Award → Team
@@ -241,10 +213,8 @@ Award → Team
 
 Current MUDAC Award recipients are Teams.
 
-The direct Competition edge is retained alongside this edge because recognition scope and recipient identity are distinct application-role reasons.
-
 <a id="dep-f-005"></a>
-## DEP-F-005 — Outcome Declaration → Competition
+### DEP-F-005 — Outcome Declaration → Competition
 
 ```text
 Outcome Declaration → Competition
@@ -252,7 +222,20 @@ Outcome Declaration → Competition
 
 Outcome Declaration establishes explicit official-result authority for one Competition scope.
 
-# Current minimal direct graph
+## Externalization / release
+
+<a id="dep-g-002"></a>
+### DEP-G-002 — Publication → Export
+
+```text
+Publication → Export
+```
+
+Publication is intrinsically generic over a supplied Representation, but within MUDAC Export is the only Concept that owns stable representation identity, exact SourceBasis, purpose/audience representation contract, and representation currency.
+
+A MUDAC Publication without Export would therefore lose the representation role required for deliberate release.
+
+# Minimal direct graph
 
 ```text
 Participation ─────→ Identity
@@ -280,15 +263,11 @@ Scorecard ─────────────────→ Team
           └────────────────→ Rubric
 
 Award ─────────────────────→ Competition
-
 Outcome Declaration ───────→ Competition
+Publication ────────────────→ Export
 ```
 
-No Phase-012-E direct edge was added; 012-E establishes capability profiles instead. 012-F adds only the three outcome/recognition edges above.
-
-# Transitive consequences
-
-Current reachability includes:
+# Key transitive consequences
 
 ```text
 Division → Team → Competition
@@ -300,9 +279,13 @@ Award    → Team → Competition
 
 Each Evaluation Occurrence, Evaluation Obligation, and Scorecard reaches Competition through Team/Participation and Identity through Participation.
 
-Do not duplicate transitive reachability as direct edges without a distinct role rationale.
+`Publication → Export` currently has no further fixed source-Concept consequence because Export SourceBasis is variant-specific.
 
-# Explicit universal non-edges — 012-C
+Do not duplicate transitive reachability as direct edges without a distinct application-role rationale.
+
+# Current universal non-edges
+
+## Competition / actor / competitor
 
 ```text
 Competition ↛ Division
@@ -316,9 +299,7 @@ Access      ↛ Identity
 
 Protected Judge/Organizer actions still use Participation-derived context plus Access through composition.
 
-# Explicit universal non-edges — 012-D
-
-Evaluation Occurrence, Evaluation Obligation, and Scorecard are not a mandatory co-inclusion group:
+## Evaluation non-cycle
 
 ```text
 Evaluation Occurrence ↛ Evaluation Obligation
@@ -329,42 +310,86 @@ Evaluation Obligation ↛ Scorecard
 Scorecard             ↛ Evaluation Obligation
 ```
 
-Rubric also remains meaningful as reusable instrument definition outside a full evaluation execution subset.
+Rubric remains meaningful as reusable instrument definition outside full evaluation execution.
 
-# Authority-support rules — 012-E
-
-<a id="dep-e-001"></a>
-## DEP-E-001 — Versioning and Provenance are not graph-wide sinks
-
-Meaningful history does not automatically create a Versioning or Provenance edge.
-
-Current universal non-edges include:
-
-```text
-Rubric                ↛ Versioning
-Rubric                ↛ Provenance
-Scorecard             ↛ Versioning
-Scorecard             ↛ Provenance
-Competition           ↛ Versioning
-Competition           ↛ Provenance
-Evaluation Occurrence ↛ Versioning
-Evaluation Occurrence ↛ Provenance
-Evaluation Obligation ↛ Versioning
-Evaluation Obligation ↛ Provenance
-```
-
-<a id="dep-e-002"></a>
-## DEP-E-002 — Versioning and Provenance do not universally require one another
+## Authority-support non-edges
 
 ```text
 Versioning ↛ Provenance
 Provenance ↛ Versioning
+Rubric     ↛ Versioning
+Rubric     ↛ Provenance
+Scorecard  ↛ Versioning
+Scorecard  ↛ Provenance
+Competition ↛ Versioning
+Competition ↛ Provenance
+Evaluation Occurrence ↛ Versioning
+Evaluation Occurrence ↛ Provenance
+Evaluation Obligation ↛ Versioning
+Evaluation Obligation ↛ Provenance
+Outcome Declaration ↛ Versioning
+Outcome Declaration ↛ Provenance
+Award ↛ Versioning
+Award ↛ Provenance
 ```
 
-They own distinct purposes even when they co-participate in high-assurance actions.
+Meaningful history alone does not make Versioning or Provenance universal graph sinks.
+
+## Recognition / official-authority separation
+
+```text
+Award               ↛ Outcome Declaration
+Outcome Declaration ↛ Award
+Award               ↛ Division
+Competition         ↛ Award
+Competition         ↛ Outcome Declaration
+Outcome Declaration ↛ Team
+Outcome Declaration ↛ Scorecard
+Outcome Declaration ↛ Evaluation Obligation
+Outcome Declaration ↛ Evaluation Occurrence
+Outcome Declaration ↛ Rubric
+```
+
+Traceability into an OutcomeBasis is not direct inclusion dependence.
+
+## Representation / release separation
+
+<a id="dep-g-001"></a>
+### DEP-G-001 — Export does not require Publication
+
+```text
+Export ↛ Publication
+```
+
+Generation/representation remains meaningful for print, download, preview, review, archival use, and prepared-but-unreleased material.
+
+<a id="dep-g-003"></a>
+### DEP-G-003 — Official authority may remain non-public
+
+```text
+Outcome Declaration ↛ Export
+Outcome Declaration ↛ Publication
+```
+
+Official authority does not require externalization.
+
+Additional current non-edges are:
+
+```text
+Export      ↛ Competition
+Export      ↛ Outcome Declaration
+Export      ↛ Award
+Publication ↛ Competition
+Publication ↛ Outcome Declaration
+Publication ↛ Award
+```
+
+Export and Publication may operate over different legitimate source/representation purposes; neither is fixed to official-result release.
+
+# Capability-conditioned authority rules
 
 <a id="dep-e-003"></a>
-## DEP-E-003 — Authoritative Rubric Basis requires Versioning + Provenance
+## DEP-E-003 — Authoritative Rubric Basis
 
 ```text
 Authoritative Rubric Basis
@@ -374,7 +399,7 @@ Authoritative Rubric Basis
 Working/preparation Rubric use does not trigger this profile.
 
 <a id="dep-e-004"></a>
-## DEP-E-004 — Authoritative Scorecard Evidence requires Versioning + Provenance
+## DEP-E-004 — Authoritative Scorecard Evidence
 
 ```text
 Authoritative Scorecard Evidence
@@ -384,7 +409,7 @@ Authoritative Scorecard Evidence
 Working non-authoritative Scorecard capture does not trigger this profile.
 
 <a id="dep-e-005"></a>
-## DEP-E-005 — Authoritative evaluation correction keeps both support roles
+## DEP-E-005 — Authoritative evaluation correction
 
 ```text
 Rubric authoritative supersession/invalidation
@@ -394,190 +419,142 @@ Scorecard semantic amendment/capture correction/invalidation
   ⇒ Versioning + Provenance
 ```
 
-<a id="dep-e-006"></a>
-## DEP-E-006 — Outcome Declaration owns its own authority lineage
-
-```text
-Outcome Declaration ↛ Versioning
-Outcome Declaration ↛ Provenance
-```
-
-Outcome Declaration intrinsically owns immutable OutcomeBasis, DeclaringAuthority, Current/Affected/Superseded meaning, predecessor/successor declarations, affected reason/basis, and reconstructible declaration history.
-
 <a id="dep-e-007"></a>
-## DEP-E-007 — Outcome-affecting Evaluation Policy history is cross-cutting
+## DEP-E-007 — Outcome-affecting Evaluation Policy history
+
+Once judging begins, outcome-affecting Evaluation Policy must remain reconstructible/versioned/provenanced under current MUDAC authority semantics.
 
 Evaluation Policy is not a Concept graph vertex.
 
-Once judging begins, outcome-affecting policy must remain reconstructible/versioned/provenanced under current MUDAC authority semantics.
-
-# Outcome / recognition rules — 012-F
+# Capability-conditioned outcome rules
 
 <a id="dep-f-003"></a>
-## DEP-F-003 — Rank-derived Award requires a Ranking Ready supplied basis
+## DEP-F-003 — Rank-derived Award
 
 ```text
 Rank-Derived Award capability
   ⇒ Award + legitimate Ranking Ready Rank SelectionBasis
 ```
 
-Coverage, Aggregate, Rank, Ranking Readiness, and Finalization Readiness remain derived mechanisms/policy facts rather than Concept vertices.
+Coverage, Aggregate, Rank, Ranking Readiness, and Finalization Readiness remain mechanisms/policy facts rather than Concept vertices.
 
 <a id="dep-f-004"></a>
-## DEP-F-004 — Current rank-derived Award is Division-contextual, not universally Award-dependent
+## DEP-F-004 — Current rank-derived Award is Division-contextual
 
-Current Rank is Division-scoped. Therefore a variant claiming current rank-derived Award capability includes Division as part of the ranking context.
+Current Rank is Division-scoped, so a variant claiming current rank-derived Award capability includes Division as ranking context.
 
-This does **not** establish:
-
-```text
-Award → Division
-```
-
-because discretionary and competition-wide recognition remain coherent without Division.
-
-If 012-I adopts a no-Division ranked variant, Rank/Award policy and synchronization must be revalidated/generalized rather than manufacturing a placeholder Division.
-
-<a id="dep-f-006"></a>
-## DEP-F-006 — Award and Outcome Declaration are not a co-inclusion cycle
-
-```text
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
-```
-
-Recognition and official declaration may synchronize in the full product while remaining independently meaningful application layers.
+This does not establish `Award → Division` because discretionary and competition-wide recognition remain coherent without Division.
 
 <a id="dep-f-007"></a>
-## DEP-F-007 — Ordinary official closeout includes Outcome Declaration
+## DEP-F-007 — Ordinary official closeout
 
 ```text
 Ordinary Official Closeout
   ⇒ Competition + Outcome Declaration
 ```
 
-Current ordinary closeout coordinates `Competition.finalize + OutcomeDeclaration.declare`.
-
-This does not establish `Competition → Outcome Declaration`, because Competition remains meaningful before closeout and in reduced judging/operation variants.
+Current ordinary closeout coordinates `Competition.finalize + OutcomeDeclaration.declare` without making Outcome Declaration mandatory for every Competition capability.
 
 <a id="dep-f-008"></a>
-## DEP-F-008 — Official OutcomeBasis is reconstructible without one fixed source-Concept bundle
+## DEP-F-008 — Reconstructible OutcomeBasis
 
-Any variant claiming official Outcome Declaration must supply a reconstructible accepted OutcomeBasis.
+Any variant claiming official Outcome Declaration must provide a reconstructible accepted OutcomeBasis.
 
-The exact source Concepts vary by outcome profile. Therefore do not add fixed direct edges from Outcome Declaration to every traceable source.
+The exact source Concept set is variant-specific. Exceptional/no-result declarations are a counterexample to one fixed evaluation-source bundle.
 
-Current universal non-edges include:
+# Capability-conditioned externalization rules
 
-```text
-Outcome Declaration ↛ Team
-Outcome Declaration ↛ Scorecard
-Outcome Declaration ↛ Evaluation Obligation
-Outcome Declaration ↛ Evaluation Occurrence
-Outcome Declaration ↛ Rubric
-```
-
-Authoritative judged-result variants may still include authoritative Scorecard evidence and therefore inherit the 012-E Versioning + Provenance profile.
-
-Exceptional/no-result declarations provide a counterexample to a fixed evaluation-source bundle.
-
-# Additional Award non-edges — 012-F
+<a id="dep-g-004"></a>
+## DEP-G-004 — Export requires an exact valid SourceBasis
 
 ```text
-Award ↛ Outcome Declaration
-Award ↛ Division
-Award ↛ Versioning
-Award ↛ Provenance
+External Representation capability
+  ⇒ Export
+  + exact reconstructible SourceBasis
+  + RepresentationProfile
+  + AudienceProfile
 ```
 
-Award owns attributable recognition definition/conferral/revocation/correction history sufficient for its current Concept role.
+SourceBasis may come from different current/historical source capabilities. No one source Concept is universally required by Export.
 
-# Competition does not universally require outcome layers
-
-012-F does not add:
+<a id="dep-g-005"></a>
+## DEP-G-005 — Public official-result release
 
 ```text
-Competition → Award
-Competition → Outcome Declaration
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Competition can coherently support preparation/live judging/operation without those layers at the dependence level.
+The representation must be legitimately releasable for the intended Public/Ceremony audience and Publication must have explicit publishing authority.
 
-Scope adoption belongs to 012-I.
+This does not create either `Outcome Declaration → Publication` or `Publication → Outcome Declaration` as universal edges.
 
-# Conditional product-family rules retained from 012-C
+<a id="dep-g-006"></a>
+## DEP-G-006 — Corrected successor release
 
-## Blinded judging
-
-A variant claiming the current blinded-judging baseline includes Alias.
-
-Current disclosure policy also names Division in Judge-facing representation. A single-cohort no-Division variant remains dependence-coherent but requires policy/composition revalidation before adoption.
-
-## Multi-cohort competition
-
-A variant supporting multiple competitive cohorts includes Division.
-
-## Reusable evaluator grouping
-
-A variant supporting reusable intended Judge groups includes Panel. Ad-hoc evaluator assignment may omit Panel.
-
-## Protected Judge/Organizer operations
-
-Protected Judge/Organizer operations use Participation context plus Access. Access itself has no universal outgoing edge to Participation or Identity.
-
-# Evaluation contractions retained from 012-D
-
-Dependence-valid capability contractions include:
+If corrected/current source meaning requires a replacement release:
 
 ```text
-Evaluation Occurrence + Team + Participation + Rubric
-without Evaluation Obligation / Scorecard
+successor/current Export
++ explicit Publication successor action
 ```
+
+are required.
+
+Historical Publication remains bound to its original exact Export; source correction never silently retargets or republishes it.
+
+<a id="dep-g-007"></a>
+## DEP-G-007 — Paper continuity is not Export dependence
+
+Paper capture/fallback uses the same evaluation semantics and may preserve physical source evidence without Export.
+
+Export is required when a stable printable/external representation is itself needed, not merely because paper is involved.
+
+# Representative dependence-valid subsets
+
+These examples explain the model; they are **not yet adopted product variants**.
+
+## Competition structure only
 
 ```text
-Evaluation Obligation + Team + Participation + Rubric
-without Evaluation Occurrence / Scorecard
+Competition + Team
 ```
+
+with optional Division/Alias according to the selected capability profile.
+
+## Evaluation occurrence history
 
 ```text
-Scorecard + Team + Participation + Rubric
-without Evaluation Occurrence / Evaluation Obligation
+Competition + Team + Identity + Participation + Rubric + Evaluation Occurrence
 ```
 
-These remain scope candidates until 012-I.
+without mandatory Obligation/Scorecard.
 
-# Authority-profile contractions retained from 012-E
-
-## Working Rubric preparation
+## Responsibility tracking
 
 ```text
-Rubric
-without Versioning
-without Provenance
+Competition + Team + Identity + Participation + Rubric + Evaluation Obligation
 ```
 
-Coherent only without claiming immutable authoritative judging basis.
+without mandatory Occurrence/Scorecard.
 
-## Working Scorecard capture
+## Working judgment capture
 
 ```text
-Scorecard + Team + Participation + Rubric
-without Versioning
-without Provenance
+Competition + Team + Identity + Participation + Rubric + Scorecard
 ```
 
-Coherent only without claiming authoritative evidence/current eligible lineage.
+without authoritative-evidence claim and without mandatory Occurrence/Obligation.
 
-## Invalid authority claims
+## Authoritative judgment capability
+
+The corresponding Scorecard/Rubric subset plus:
 
 ```text
-Authoritative Rubric Basis without Versioning
-Authoritative Rubric Basis without Provenance
-Authoritative Scorecard Evidence without Versioning
-Authoritative Scorecard Evidence without Provenance
+Versioning + Provenance
 ```
 
-# Outcome subsets introduced by 012-F
+under the authority-profile rules.
 
 ## Recognition without official declaration
 
@@ -585,105 +562,160 @@ Authoritative Scorecard Evidence without Provenance
 Competition + Team + Award
 ```
 
-Coherent for discretionary recognition without Outcome Declaration.
-
 ## Official declaration without Award
 
 ```text
 Competition + Outcome Declaration
 ```
 
-This is the minimum 012-F Concept requirement for declaration authority itself. A real adopted variant must additionally provide the source/policy capability necessary for a reconstructible accepted OutcomeBasis.
+plus whatever source/policy capability provides the accepted reconstructible OutcomeBasis.
 
-## Full recognition + declaration
+## Export without Publication
 
 ```text
-Competition + Team + Award + Outcome Declaration
+Export + valid SourceBasis capability
 ```
 
-Award and Outcome Declaration remain independent authority owners even when Award state is included in the declared basis.
+Coherent for internal/download/print/preview representation.
 
-## Judging/operation without outcome layers
-
-A Competition/evaluation subset may omit Award and Outcome Declaration at the dependence level. Scope adoption belongs to 012-I.
-
-# Invalid outcome claims
+## Official but non-public
 
 ```text
+Competition + Outcome Declaration
+without Export
+without Publication
+```
+
+## Official representation prepared but unreleased
+
+```text
+Competition + Outcome Declaration + Export
+without Publication
+```
+
+## Public non-official representation
+
+```text
+Export + Publication
+without Outcome Declaration
+```
+
+coherent when source authority/disclosure policy legitimately permit the released claim.
+
+## Public official result
+
+```text
+Competition + Outcome Declaration + Export + Publication
+```
+
+plus the appropriate accepted OutcomeBasis/disclosure/publishing-authority capabilities.
+
+# Invalid inclusion/capability claims
+
+Direct-dependence violations include:
+
+```text
+Team without Competition
+Participation without Competition
+Participation without Identity
+Division without Team
+Alias without Team
+Panel without Participation
+Evaluation Occurrence without Team / Participation / Rubric
+Evaluation Obligation without Team / Participation / Rubric
+Scorecard without Team / Participation / Rubric
 Award without Competition
 Award without Team
 Outcome Declaration without Competition
+Publication without Export
 ```
 
 Capability-level invalid claims include:
 
 ```text
+Authoritative Rubric Basis without Versioning or Provenance
+Authoritative Scorecard Evidence without Versioning or Provenance
 rank-derived Award without a legitimate Ranking Ready basis
 ordinary official closeout without Outcome Declaration
-official Outcome Declaration without a reconstructible accepted OutcomeBasis
+official Outcome Declaration without reconstructible accepted OutcomeBasis
+Export without exact valid SourceBasis/representation/audience contract
+public official-result release without Outcome Declaration
+public official-result release without a legitimately releasable Export
+Publication treated as proof of delivery
+Export generation treated as Publication
 ```
 
-# Correction boundary
+# Optionality and scope discipline
 
-Post-source correction may require Award review/correction and may make Outcome Declaration Affected.
+Dependence-valid does not mean adopted.
 
-That composition does not create Award↔Outcome Declaration dependence, and corrected calculation/recognition never becomes official automatically.
+Current coherent reductions that 012-I must later accept/reject explicitly include:
 
-Outcome Declaration retains explicit successor-confirmation authority.
+- single-cohort operation without Division;
+- ad-hoc Judge assignment without Panel;
+- evaluation variants omitting Occurrence and/or Obligation;
+- working-only Rubric/Scorecard capability without Versioning/Provenance;
+- judging/operation without Award;
+- judging/operation without Outcome Declaration;
+- recognition without official declaration;
+- official declaration without Award;
+- Export without Publication;
+- official-but-non-public operation;
+- public non-official material;
+- no-Division rank-derived recognition if Rank/Award policy is generalized.
 
-# No catch-all coordinator
+# Cross-cutting composition carry-forward
 
-Do not introduce Result, Outcome aggregate, Closeout, Winner, Finalization coordinator, Recognition coordinator, Official Result Version, Workflow, History, Audit, Correction, or Cascade as new semantic owners merely to connect existing concepts.
+If 012-I adopts a reduced or alternative variant, refine the natural Phase-011 synchronization owner where necessary rather than changing dependence merely to fit the incumbent full-product workflow.
+
+Known carry-forwards include:
+
+1. no-Division blinded judging → anonymity/disclosure and occurrence-presentation revalidation;
+2. evaluation variants omitting Occurrence and/or Obligation → evaluation synchronization revalidation;
+3. authoritative evaluation → retain Versioning + Provenance and reconstructible outcome-affecting Evaluation Policy history;
+4. no-Division rank-derived Award → Rank/Award policy/composition revalidation;
+5. judging/operation without Outcome Declaration → explicit lifecycle/closeout semantics that do not claim ordinary official closeout;
+6. externalization variants → preserve source authority ≠ Export representation ≠ Publication release ≠ transport delivery;
+7. public official-result release → explicit Outcome Declaration + Export + Publication composition;
+8. paper continuity → do not manufacture Export dependence unless a stable printable representation is actually part of the capability.
+
+# No hidden coordinator or transport Concept
+
+Do not introduce Result, Outcome Aggregate, Closeout Coordinator, Workflow, History, Audit, Correction, Representation, Artifact, Document, Release Manager, Delivery, Distribution, Channel Delivery, or similar catch-all Concepts merely to connect existing owners.
 
 Current ownership remains:
 
 ```text
-Coverage / Aggregate / Rank = derived facts
-Award                       = recognition
-Competition                 = lifecycle closure
-Outcome Declaration         = official authority
-Export / Publication        = externalization, resolved next
+Competition          = lifecycle context/closure
+Coverage/Aggregate/Rank = derived facts
+Award                = recognition
+Outcome Declaration  = official authority
+Export                = stable source-bound representation + currency
+Publication           = deliberate release + distribution history
+transport/delivery    = downstream realization
 ```
 
 # Upstream integrity
 
-No accepted Phase-012-C/D/F direct edge or 012-E/F capability rule exposes intrinsic Concept coupling.
+No accepted Phase-012 edge or capability rule exposes intrinsic Concept coupling.
 
-No Phase-010 reopening is required.
+No Phase-010 reopening is currently required.
 
-# Composition boundary
+Phase-011 composition remains authoritative and no immediate repair is required before whole-graph/subset analysis.
 
-Dependence does not replace Phase-011 synchronization.
+# Phase 012-H handoff
 
-Current full-product composition remains authoritative, including:
+012-H must now treat the direct graph and capability rules above as one complete candidate family model and analyze:
 
-- occurrence/responsibility/evaluation coordination;
-- authoritative Rubric/Scorecard support through Versioning + Provenance;
-- Coverage/Aggregate/Rank derivation;
-- explicit Award conferral/correction;
-- coordinated Competition Finalization + initial Outcome Declaration;
-- Affected/successor declaration handling after source correction.
+- transitive closure;
+- any genuine co-inclusion groups/cycles;
+- optionality;
+- minimal meaningful subsets;
+- unfamiliar but coherent subsets;
+- redundant direct edges;
+- direct-edge versus capability-rule consistency;
+- whether any whole-graph contradiction forces Phase-010/011 reopening.
 
-No immediate Phase-011 repair is required.
+The next subgroup is:
 
-# Policy/composition carry-forward
-
-1. A no-Division blinded variant, if adopted by 012-I, requires anonymity/disclosure and occurrence-presentation revalidation.
-2. A variant omitting Occurrence and/or Obligation requires its natural Phase-011 composition revalidation before adoption.
-3. Any authoritative-evaluation variant must preserve Versioning + Provenance for authoritative Rubric/Scorecard and outcome-affecting Evaluation Policy history.
-4. Outcome Declaration must not be routed through generic Versioning merely because it is authoritative.
-5. A no-Division rank-derived Award variant, if adopted, requires Rank/Award policy/composition revalidation.
-6. A judging/operation variant omitting Outcome Declaration must define its lifecycle/closeout scope explicitly rather than silently claiming ordinary official closeout.
-7. Official outcome variants must provide reconstructible OutcomeBasis support without assuming one fixed upstream Concept bundle.
-
-# Next unresolved family
-
-Phase 012-G owns Export, Publication, external-representation, and release dependence.
-
-It must preserve these current results:
-
-- official does not imply public;
-- Award and Outcome Declaration remain separate;
-- Outcome Declaration does not depend on Export/Publication merely because official state may later be represented/released;
-- current source authority must never be confused with Export representation or Publication release;
-- `Publication → Export` remains the strongest candidate from 012-B and must be tested rather than assumed.
+> **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**
