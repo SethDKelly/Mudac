@@ -11,9 +11,10 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence/capability authority through 012-G.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence, capability and whole-graph validation authority through 012-H.
+* [`docs/canonical/dependence/whole-graph-subset-validation.md`](docs/canonical/dependence/whole-graph-subset-validation.md) — current whole-graph acyclicity, closure, optionality and subset validation.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) — current externalization/release dependence result.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md`](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) — current Phase 012 whole-model result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -39,7 +40,8 @@ implementation authorization: NOT YET
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 ```
 
 ## Current Concept catalog
@@ -52,56 +54,42 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
 
-## Current Phase 012 dependence
+## Current Phase 012 result
 
-The direct graph now covers all Concept families analyzed through 012-G. The externalization result adds exactly:
-
-```text
-Publication → Export
-```
-
-while preserving:
+All family-local dependence has been resolved and the complete graph has now passed whole-model validation:
 
 ```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
+whole direct graph: ACYCLIC
+co-inclusion cycles: NONE
+new direct edge required by closure: NONE
 ```
 
-Therefore:
+Competition is the only universal **in-scope family anchor**. Every other Concept is globally optional in the product-family sense, while named capabilities can make particular Concepts mandatory.
+
+Examples:
+
+```text
+Authoritative Scorecard Evidence
+  ⇒ Competition + Team + Identity + Participation
+   + Rubric + Scorecard + Versioning + Provenance
+
+Ordinary Official Closeout
+  ⇒ Competition + Outcome Declaration
+
+Public Official-Result Release
+  ⇒ Competition + Outcome Declaration + Export + Publication
+```
+
+The graph continues to preserve:
 
 ```text
 calculated != recognized != official != public != delivered
 source authority != Export representation != Publication release != transport delivery
 ```
 
-Current capability rules include:
+012-H confirms coherent unfamiliar subsets including single-cohort/no-Division, ad-hoc/no-Panel, judging-only, official-without-Award, official-but-non-public, Export-without-Publication, and public non-official material. Publication-without-Export is invalid.
 
-```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
-
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
-
-Rank-Derived Award capability
-  ⇒ Award + legitimate Ranking Ready supplied Rank basis
-
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
-```
-
-Official-but-non-public operation, Export-without-Publication, and public non-official representation are all dependence-coherent. Publication-without-Export is not.
-
-Paper capture continuity does not itself require Export; prepared printable/external representations do.
+Dependence-valid still does not mean adopted. 012-I now decides which coherent variants MUDAC deliberately supports and which variant-specific Phase-011 composition/policy refinements are required.
 
 ## Completion runway
 
@@ -110,7 +98,7 @@ Paper capture continuity does not itself require Export; prepared printable/exte
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-H NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-I NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -129,4 +117,4 @@ A successful future Phase 017 may establish readiness for a separate architectur
 
 ## Current direction
 
-Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
