@@ -7,12 +7,12 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](synchronizations/) — current reconciled Phase-011 composition/synchronization authority.
-* [Dependence](dependence/) — current Phase-012 direct dependence, whole-graph validation and PF-01 product-family scope.
+* [Dependence](dependence/) — current direct dependence, whole-graph validation and PF-01 product-family scope after Phase 012 closure.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
 * [Experience](experience/) — Phase-013 entry authority plus pre-existing mapping evidence pending revalidation.
-* [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) — current mapping-entry precedence, explanation-order constraints and known mapping drift.
+* [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) — current authorized mapping-entry precedence, explanation-order constraints and known mapping drift.
 
 # Governance
 
@@ -38,19 +38,9 @@ implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
-012: IN PROGRESS
-012-A: COMPLETE — READY
-012-B: COMPLETE — PASS
-012-C: COMPLETE — PASS
-012-D: COMPLETE — PASS
-012-E: COMPLETE — PASS
-012-F: COMPLETE — PASS
-012-G: COMPLETE — PASS
-012-H: COMPLETE — PASS
-012-I: COMPLETE — PASS
-012-J: COMPLETE — PASS
-012-K: NEXT
-013: NOT STARTED
+012: COMPLETE — PASS
+013: AUTHORIZED
+013-A: NEXT
 ```
 
 # Current Concept authority
@@ -69,6 +59,8 @@ Dependence/scope does not replace synchronization; traceability or coordinated a
 
 # Current dependence and scope authority
 
+Phase 012 is **COMPLETE — PASS**.
+
 [MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns direct edges/non-edges and capability-conditioned rules.
 
 [Whole-Graph Dependence & Subset Validation](dependence/whole-graph-subset-validation.md) owns acyclicity, transitive closure and coherent-subset validation.
@@ -79,21 +71,21 @@ Dependence/scope does not replace synchronization; traceability or coordinated a
 
 PF-01 keeps all eighteen Concepts in the supported capability envelope. Product support does not require every Competition to exercise every capability.
 
-# 012-J audit result
-
-The final counterexample/reopen audit before Phase-012 consolidation finds:
+Phase-012 exit confirms:
 
 ```text
 new dependence edge required: NO
 PF-01 scope change required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
-Phase-013 mapping revalidation required: YES
+Phase-012 repair required: NO
 ```
 
-The mapping carry-forward is repository currentness: older Experience contracts still contain superseded `Encounter` and `Official Outcome Revision` language.
+# Phase-013 entry authority
 
-Until Phase 013 revalidates them, current Purpose/Concept/Synchronization/Dependence/PF-01 owners take precedence and [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) governs mapping entry.
+Phase 013 is authorized to begin with **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
+
+Older Experience contracts still contain superseded `Encounter` and `Official Outcome Revision` language. Until Phase 013 revalidates them, current Purpose/Concept/Synchronization/Dependence/PF-01 owners take precedence and [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) governs mapping entry.
 
 # Explanation-order boundary
 
@@ -102,14 +94,14 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-A future mapping may organize experience differently, but it must preserve enough context, basis, authority, consequence and historical/currentness meaning to avoid a false conceptual model.
+A mapping may organize experience differently, but it must preserve enough context, basis, authority, consequence and historical/currentness meaning to avoid a false conceptual model.
 
 # Retrieval rule during reopened design
 
-For Phases 012–017:
+For Phases 013–017:
 
-1. load the current phase record relevant to the task;
-2. load [Project Context & Purpose](project/) when purpose/scope assumptions matter;
+1. load the current phase/start-gate record relevant to the task;
+2. load [Project Context & Purpose](project/) when purpose assumptions matter;
 3. load task-relevant [Concepts](concepts/), [Synchronizations](synchronizations/) and [Dependence](dependence/);
 4. for mapping work, load [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) before older Experience contracts;
 5. use older phase/experience records for rationale/evidence rather than current semantic ownership;
@@ -123,9 +115,9 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-K NEXT
+012 dependence / subsets / product-family / scope             COMPLETE — PASS
   ↓
-013 mapping / representation revalidation
+013 mapping / representation revalidation                     AUTHORIZED — 013-A NEXT
   ↓
 014 familiarity / reuse / genericity / catalog refinement
   ↓
@@ -136,4 +128,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
+The immediate next work is **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
