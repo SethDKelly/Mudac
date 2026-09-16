@@ -1,33 +1,28 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture after Phase 012 dependence/product-family closure, with Phase 013 mapping entry authorized and downstream architecture/implementation authority still suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 013 mapping in progress after the 013-A start gate, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
-tags: [governance, methodology, design, implementation, boundary, jackson, dependence, mapping, reentry]
+tags: [governance, methodology, design, implementation, boundary, jackson, mapping, reentry]
 sources:
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
-  - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
-  - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
-  - resource: ../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
-  - resource: ../dependence/application-family-dependence.md
-  - resource: ../dependence/whole-graph-subset-validation.md
-  - resource: ../dependence/product-family-scope.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md
   - resource: ../experience/phase-013-entry-handoff.md
   - resource: downstream-authority-quarantine.md
 ---
 
 # Purpose
 
-Keep the boundary between reopened Jackson Concept Design, historical downstream work, the frozen 006-D bootstrap, future architecture/engineering handoff, implementation execution, and production readiness explicit.
+Keep the boundary between reopened Jackson Concept Design, historical downstream work, future architecture/engineering handoff, implementation execution and production readiness explicit.
 
 # Current state
 
-Phase 009 reopened the prior methodology exit. Phase 010 completed foundational Concept Design. Phase 011 completed representation-independent Concept composition/synchronization with **PASS**. Phase 012 completed Concept dependence, coherent-subset/product-family analysis, PF-01 scope selection and mapping handoff with **PASS**.
+Phases 009–012 are complete with PASS. Phase 013 is now **IN PROGRESS** after its mandatory start gate completed with READY.
 
-Phase 013 is now authorized to begin with its mandatory start gate:
+The only authorized next methodology work is:
 
-> **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**
+> **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -38,12 +33,13 @@ canonical implementation authority: SUSPENDED PENDING DESIGN CLOSURE
 implementation readiness: NOT READY
 new domain implementation: NOT STARTED
 implementation authorization: NOT YET
-Phase 009: COMPLETE — PASS
-Phase 010: COMPLETE — PASS
-Phase 011: COMPLETE — PASS
-Phase 012: COMPLETE — PASS
-Phase 013: AUTHORIZED
-013-A: NEXT
+009: COMPLETE — PASS
+010: COMPLETE — PASS
+011: COMPLETE — PASS
+012: COMPLETE — PASS
+013: IN PROGRESS
+013-A: COMPLETE — READY
+013-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -54,76 +50,56 @@ human product intent / evidence
         ↓
 canonical Project Context & Purpose
         ↓
-current canonical Concepts / mechanisms / policies / invariants
+current Concepts / mechanisms / policies / invariants
         ↓
-reconciled canonical synchronization/composition authority (Phase 011)
+current synchronization / application action authority
         ↓
-canonical direct dependence + capability rules
+current dependence / PF-01 scope
         ↓
-whole-graph validation / subset semantics
+Phase 013 Mapping Entry Authority
         ↓
-PF-01 product-family scope
+013-A approved mapping workstream plan
         ↓
-Phase-013 Mapping Entry Authority
-        ↓
-013-A mapping start gate
+active Phase-013 mapping work
 
 historical architecture / implementation / incumbent UI
         = evidence or contamination probe only
         ≠ Concept Design constraint
 ```
 
-# Current Concept boundary
+# Current mapping boundary
 
-Phase 010 converged and exited with eighteen Concepts:
+Phase 013 may define:
 
-Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
+- state/query visibility obligations;
+- application-action invocation/availability semantics;
+- feedback/result obligations;
+- terminology and semantically required distinctions;
+- synchronization/automation representation;
+- authority/disclosure/consequence visibility;
+- temporal/history/correction/recovery visibility;
+- PF-01 profile mapping;
+- accessibility/context-of-use semantic parity.
 
-Phase 012 confirms no Phase-010 reopening is required.
+It may not redefine upstream Concepts/composition/scope merely for representation convenience.
 
-# Current composition boundary
+If mapping exposes missing semantics, route the issue to its natural upstream owner.
 
-Phase 011 remains current authority for application actions and cross-Concept synchronization.
+# Application-action boundary
 
-Phase 012 confirms no Phase-011 reopening is currently required for PF-01.
+Phase 013 maps the Phase-011 `D / C / P / S / X` application action surface.
 
-Phase 013 must map the established application action surface rather than exposing every intrinsic Concept action as a generic user control.
+It must not expose composition-only or intentionally unavailable generic Concept actions merely because a UI could provide a control.
 
-# Current product-family authority
+# Experience evidence boundary
 
-[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects:
+Older `canonical/experience/` documents remain incoming evidence pending 013-B reconciliation.
 
-> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
+Known drift includes `Encounter`, `Official Outcome Revision`, archival synchronization routing and bounded stale mapping-relevant terminology outside Experience.
 
-PF-01 keeps all eighteen Concepts in the supported capability envelope. This is product scope, not blanket direct dependence and not a requirement that every Competition exercise every Concept.
-
-# Phase-012 exit result
-
-```text
-whole dependence graph: ACYCLIC
-new direct edge required: NO
-PF-01 scope change required: NO
-Phase-010 reopen required: NO
-Phase-011 reopen required: NO
-Phase-012 repair required: NO
-Phase-013 mapping revalidation required: YES
-```
-
-The mapping issue is currentness of older Experience material, not a semantic-model failure. Several earlier Experience records still use deprecated `Encounter` and `Official Outcome Revision` language.
-
-[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) establishes the current entry precedence:
-
-```text
-Purpose / Concepts / Synchronizations / Dependence / PF-01 scope
-  = current conceptual authority
-
-older Experience contracts
-  = incoming mapping evidence pending revalidation
-```
+No incumbent screen/workflow/document boundary becomes current semantic authority automatically.
 
 # Explanation-order boundary
-
-Dependence can constrain what must be intelligible without becoming UI structure:
 
 ```text
 dependence order != navigation order
@@ -132,45 +108,24 @@ synchronization chain != mandatory wizard
 
 Mapping may reorganize experience, but it may not hide or falsify material context, authority, target, currentness, consequence or history.
 
-# Reopening discipline during mapping
+# Reopening discipline
 
-- purpose conflict → reopen current project-purpose owner;
+- purpose conflict → current project-purpose owner;
 - undefined Concept behavior/state/action → current Concept/specification owner;
 - Concept boundary/independence defect → Phase 010;
 - missing/invalid application action or synchronization → Phase 011;
 - incorrect dependence/scope assumption → Phase 012;
+- stale wording/reference with clear meaning → repair natural current owner;
 - terminology/representation issue only → Phase 013.
 
-Do not solve an upstream semantic defect with presentation behavior.
+# Implementation prohibition
 
-# Phase-013 implementation prohibition
-
-Phase 013 may establish semantic representation obligations, state-query/view obligations, action mapping, terminology, required distinctions, feedback and accessibility/context-of-use semantics.
-
-It must **not** select or prescribe:
-
-- frontend framework/component library;
-- route tree or exact screen hierarchy;
-- CSS/design tokens;
-- client-state/view-model architecture;
-- API/endpoints/messages;
-- websocket/polling/subscription/cache strategy;
-- database/persistence realization;
-- AWS/runtime topology;
-- executable UI implementation/tests.
+Phase 013 must not select or prescribe frontend frameworks/libraries, route trees, exact screen/component hierarchy, CSS/design tokens, client-state/view-model architecture, APIs/messages/transports, polling/websocket/subscription/cache mechanisms, database/persistence realization, AWS/runtime topology or executable UI implementation/tests.
 
 # Suspended downstream authority
 
-Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only; 006-D remains frozen except narrow non-domain safety/build maintenance; Phase 008 remains halted.
-
-`GitHub → GitHub Actions → AWS ecosystem` remains only a downstream delivery constraint.
-
-# Meaning of future successful closure
-
-A successful Phase 017 may establish readiness for a **separate architecture/engineering re-entry**. It does not start implementation or automatically reactivate prior plans.
+Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to:
-
-> **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**
+Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
