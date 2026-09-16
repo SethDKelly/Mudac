@@ -1,24 +1,25 @@
 ---
 type: Canonical Product-Family Scope
 title: MUDAC Product-Family Scope
-description: "Current adopted MUDAC product-family scope after Phase 012-I: one full live-competition judging/outcome variant, its in-scope operating profiles, coherent but unadopted contractions, and future composition-revalidation routes."
+description: "Current adopted MUDAC product-family scope after Phase 012-J audit: one full live-competition judging/outcome variant, its in-scope operating profiles, coherent but unadopted contractions, future composition-revalidation routes, and confirmed no-upstream-reopen result."
 status: stable
 tags: [canonical, dependence, product-family, scope, variants, phase-012]
 sources:
   - resource: application-family-dependence.md
   - resource: whole-graph-subset-validation.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
 ---
 
 # Purpose
 
-Own current **product-family scope selection** after Phase 012 whole-graph validation.
+Own current **product-family scope selection** after Phase 012 whole-graph validation and counterexample audit.
 
 This owner answers which dependence-valid/coherent subsets are actually adopted as current MUDAC product variants.
 
-It does not redefine direct dependence or synchronization.
+It does not redefine direct dependence, synchronization or Phase-013 mapping.
 
 # Governing distinction
 
@@ -205,6 +206,32 @@ These are configuration, lifecycle, policy, authority, or channel profiles insid
 
 Phase 011 already models the full eighteen-Concept application family selected here and preserves the necessary distinctions among identity/participation/access, Panel/occurrence/responsibility, Draft/authority, calculation/recognition/officiality, and source/Export/Publication/delivery.
 
+# 012-J counterexample audit
+
+PF-01 survives the final pre-consolidation counterexample audit unchanged.
+
+```text
+new direct edge required: NO
+PF-01 scope change required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+```
+
+Representative challenges resolved without scope change include:
+
+- Competition with no Award;
+- official-but-non-public operation;
+- Export without Publication;
+- pre-closeout Competition state;
+- ad-hoc Judge substitution while Panel capability remains supported;
+- single-cohort operation while PF-01 retains current Division-sensitive ranking/disclosure semantics;
+- Access included for protected actions despite having no universal outgoing actor dependency;
+- authoritative evaluation requiring Versioning/Provenance by capability rather than universal direct edges;
+- exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
+- paper capture without universal Export dependence.
+
+The audit identifies mapping revalidation, not scope repair, as the next concern. See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+
 # Future variant revalidation routes
 
 If current unadopted contractions are promoted later, revalidate the natural owner instead of changing dependence to mimic incumbent composition.
@@ -242,7 +269,9 @@ Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping o
 
 ```text
 012-I  COMPLETE — PASS
-012-J  NEXT — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit
+012-J  COMPLETE — PASS
+012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
+013    NOT STARTED
 ```
 
-012-J should audit this scope decision rather than inventing additional variants unless counterevidence reveals a real gap.
+012-K should consolidate this scope decision and formalize Phase-013 entry only if the Phase-012 canonical audit remains clean.
