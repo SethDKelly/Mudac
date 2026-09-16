@@ -11,9 +11,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence/capability authority, partial through 012-F.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence/capability authority through 012-G.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md) — current outcome/recognition dependence result.
+* [`docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md`](docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) — current externalization/release dependence result.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -38,7 +38,8 @@ implementation authorization: NOT YET
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
-012-G: NEXT
+012-G: COMPLETE — PASS
+012-H: NEXT
 ```
 
 ## Current Concept catalog
@@ -47,34 +48,36 @@ Phase 010 canonically converged the model to eighteen Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-The former `Judging Encounter` and `Official Outcome Revision` paths remain deprecated historical adapters.
+`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
 
 ## Current Phase 012 dependence
 
-The current direct graph includes:
+The direct graph now covers all Concept families analyzed through 012-G. The externalization result adds exactly:
 
 ```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-
-Evaluation Occurrence → Team / Participation / Rubric
-Evaluation Obligation → Team / Participation / Rubric
-Scorecard             → Team / Participation / Rubric
-
-Award               → Competition
-Award               → Team
-Outcome Declaration → Competition
+Publication → Export
 ```
 
-The graph deliberately does **not** collapse Evaluation Occurrence/Obligation/Scorecard or Award/Outcome Declaration into mandatory cycles.
+while preserving:
 
-012-E authority profiles remain:
+```text
+Export ↛ Publication
+Outcome Declaration ↛ Export
+Outcome Declaration ↛ Publication
+Export ↛ Outcome Declaration
+Publication ↛ Outcome Declaration
+```
+
+Therefore:
+
+```text
+calculated != recognized != official != public != delivered
+source authority != Export representation != Publication release != transport delivery
+```
+
+Current capability rules include:
 
 ```text
 Authoritative Rubric Basis
@@ -82,30 +85,23 @@ Authoritative Rubric Basis
 
 Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
-```
 
-012-F preserves:
-
-```text
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
-```
-
-and rejects direct Outcome Declaration → Team/Scorecard/Obligation/Occurrence/Rubric edges based only on traceability.
-
-Current capability rules include:
-
-```text
 Ordinary Official Closeout
   ⇒ Competition + Outcome Declaration
 
 Rank-Derived Award capability
   ⇒ Award + legitimate Ranking Ready supplied Rank basis
+
+External Representation
+  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
+
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Current Rank is Division-scoped, so rank-derived recognition is Division-contextual without making `Award → Division` universal.
+Official-but-non-public operation, Export-without-Publication, and public non-official representation are all dependence-coherent. Publication-without-Export is not.
 
-Official OutcomeBasis must be reconstructible, but its exact source Concept set is variant-specific.
+Paper capture continuity does not itself require Export; prepared printable/external representations do.
 
 ## Completion runway
 
@@ -114,7 +110,7 @@ Official OutcomeBasis must be reconstructible, but its exact source Concept set 
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-G NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-H NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -133,4 +129,4 @@ A successful future Phase 017 may establish readiness for a separate architectur
 
 ## Current direction
 
-Proceed to **012-G — External Representation & Release Dependence**.
+Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
