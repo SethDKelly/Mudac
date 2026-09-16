@@ -11,10 +11,10 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/`](docs/canonical/project/) — current mandate and purpose baseline.
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog established by Phase 010.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence, whole-graph validation and product-family scope authority.
-* [`docs/canonical/dependence/product-family-scope.md`](docs/canonical/dependence/product-family-scope.md) — current adopted PF-01 scope and deferred contractions.
+* [`docs/canonical/dependence/`](docs/canonical/dependence/) — current Phase 012 dependence, whole-graph and PF-01 scope authority.
+* [`docs/canonical/dependence/product-family-scope.md`](docs/canonical/dependence/product-family-scope.md) — selected PF-01 product scope.
+* [`docs/canonical/experience/phase-013-entry-handoff.md`](docs/canonical/experience/phase-013-entry-handoff.md) — mapping-entry authority prepared by 012-J; Phase 013 has not started.
 * [`docs/012-concept-dependence-product-family-subset-scope/`](docs/012-concept-dependence-product-family-subset-scope/) — active Phase 012 work.
-* [`docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md`](docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) — current product-family scope decision.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
 ## Current status
@@ -42,7 +42,9 @@ implementation authorization: NOT YET
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
 012-I: COMPLETE — PASS
-012-J: NEXT
+012-J: COMPLETE — PASS
+012-K: NEXT
+013 mapping: NOT STARTED
 ```
 
 ## Current Concept catalog
@@ -55,30 +57,38 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage remains derived factual sufficiency with exception disposition separate; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context rather than an authority-owning Concept.
 
-## Current Phase 012 product-family result
+## Current Phase 012 result
 
-The dependence graph is acyclic and the current product scope now selects one primary variant:
+The complete dependence graph is acyclic and survives the 012-J counterexample audit without a new edge, scope change or upstream reopen.
+
+Current product scope adopts one variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen Concepts in the supported capability envelope because current scope spans preparation, blinded live judging, coordination, authoritative/correctable evidence, official outcome authority, optional recognition and controlled externalization/release.
+PF-01 supports the full eighteen-Concept capability envelope. Individual Competitions may legitimately omit use of Award, remain official-but-non-public, prepare Export without Publication, use paper/electronic/mixed capture, or pass through pre-closeout/correction states without becoming separate product variants.
 
-Concept support does not imply active use in every Competition. PF-01 supports, for example:
+012-J confirms:
 
-- no Award in a particular Competition;
-- official outcome without Award;
-- official-but-non-public state;
-- Export prepared without Publication;
-- controlled public non-official material;
-- public official-result release;
-- exceptional/no-result official disposition;
-- paper/electronic/mixed continuity.
+```text
+new direct edge required: NO
+PF-01 scope change required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+Phase-013 mapping revalidation required: YES
+```
 
-These are profiles inside PF-01 rather than separate products.
+The mapping carry-forward is documentation/currentness, not a semantic model defect: earlier Experience contracts still contain `Encounter` and `Official Outcome Revision` language and now enter Phase 013 as mapping evidence to reconcile.
 
-Coherent reduced subsets such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred product-family options. No-Alias competitive judging is outside the current bias-control baseline. Authoritative evaluation without Versioning/Provenance remains invalid.
+## Mapping boundary entering Phase 013
 
-No immediate Phase-011 reopening is required for PF-01; current synchronization already covers the selected full product scope.
+Dependence informs explanation but not physical/interface order:
+
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
+
+Current Purpose, Concepts, Synchronizations, Dependence and PF-01 scope remain authoritative. Existing Experience files are incoming mapping evidence until Phase 013 revalidates them.
 
 ## Completion runway
 
@@ -87,7 +97,7 @@ No immediate Phase-011 reopening is required for PF-01; current synchronization 
   ↓
 011 composition / synchronization revalidation                 COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope              IN PROGRESS — 012-J NEXT
+012 dependence / product family / subsets / scope              IN PROGRESS — 012-K NEXT
   ↓
 013 mapping / interaction / representation revalidation
   ↓
@@ -106,4 +116,4 @@ A successful future Phase 017 may establish readiness for a separate architectur
 
 ## Current direction
 
-Proceed to **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
+Proceed to **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
