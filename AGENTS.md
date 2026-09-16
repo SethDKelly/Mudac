@@ -7,10 +7,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md) and [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 3. Read [Project Context & Purpose](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
-4. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics; treat [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as candidate evidence only.
-5. Use 012-C through [012-G](docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) plus [MUDAC Application-Family Concept Dependence](docs/canonical/dependence/application-family-dependence.md) for accepted current dependence.
-6. Use canonical synchronization owners for current interaction rules; dependence never replaces composition.
-7. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
+4. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics; treat [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as provisional/candidate evidence only.
+5. Use 012-C through [012-G](docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) for family-local decisions.
+6. Use [012-H](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) and [Whole-Graph Dependence & Subset Validation](docs/canonical/dependence/whole-graph-subset-validation.md) for the integrated dependence/subset model.
+7. Use canonical synchronization owners for interaction rules; dependence never replaces composition.
+8. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
 
@@ -35,7 +36,8 @@ implementation authorization: NOT YET
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 ```
 
 ## Current Concept authority
@@ -88,9 +90,9 @@ implementation dependency
   = out of scope
 ```
 
-Do not derive dependence from synchronization, traceability, imports, schemas, service calls, UI layout, deployment topology, or ordinary workflow.
+Never derive Concept dependence mechanically from synchronization, traceability, imports, schemas, service calls, UI layout, deployment topology, current workflow, or implementation convenience.
 
-## Current direct dependence through 012-G
+## Current direct dependence
 
 ```text
 Team          → Competition
@@ -111,31 +113,27 @@ Outcome Declaration → Competition
 Publication → Export
 ```
 
-Use transitivity rather than duplicating edges without a distinct role rationale.
+Use transitivity rather than duplicating direct edges without a distinct application-role rationale.
 
-## Key non-cycles and separations
+## Whole-graph validation
 
-Do not turn ordinary composition into mandatory inclusion:
+012-H establishes:
 
 ```text
-Evaluation Occurrence / Evaluation Obligation / Scorecard
-  are not a co-inclusion cycle
-
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
-
-Export              ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export              ↛ Outcome Declaration
-Publication         ↛ Outcome Declaration
+whole graph: ACYCLIC
+mutual-dependence / co-inclusion cycles: NONE
+new direct edge required by closure: NONE
 ```
 
-Outcome Declaration has no direct Team/Scorecard/Obligation/Occurrence/Rubric edge merely because its accepted basis can be traced to those sources.
+`Award → Competition` is reachability-redundant through `Award → Team → Competition`, but remains semantically retained because Award scope and Award recipient are distinct roles.
+
+Competition is the only universal **in-scope MUDAC family anchor**.
+
+Every other Concept is globally optional. This means a coherent family variant exists without it; it does **not** mean the Concept is unimportant.
 
 ## Capability rules
 
-Preserve:
+Preserve at least:
 
 ```text
 Authoritative Rubric Basis
@@ -157,49 +155,65 @@ Public Official-Result Release
   ⇒ Outcome Declaration + Export + Publication
 ```
 
-Current Rank is Division-scoped, making current rank-derived recognition Division-contextual without universal `Award → Division`.
+Current Rank is Division-scoped. Current rank-derived Award capability therefore includes Division context without creating universal `Award → Division`.
 
-Paper capture continuity does not universally require Export. Export is required only where a stable printable/external representation is part of the capability.
+Paper capture continuity does not universally require Export. Paper/electronic/mixed capture is a channel profile, not a Concept-subset axis.
 
-## Externalization discipline
-
-`Publication → Export` is current application-family dependence because Export is the MUDAC owner of stable source-bound representation identity/currentness.
-
-Do not infer the reverse edge. Generated Export can remain internal/unreleased.
-
-Do not make official authority depend on externalization. Official-but-non-public is coherent.
-
-Do not make Publication depend on Outcome Declaration. Legitimate non-official material can be published.
-
-Publication means authorized release, not delivery success. Delivery/transport remains downstream realization.
-
-## Canonical dependence authority
-
-[`docs/canonical/dependence/application-family-dependence.md`](docs/canonical/dependence/application-family-dependence.md) is current dependence authority through all family-local analysis completed in 012-G.
-
-012-H now owns whole-graph validation: transitive closure, genuine co-inclusion groups/cycles, optionality, minimal meaningful subsets, unfamiliar subsets, redundant edges, and consistency between direct edges and capability rules.
-
-## Approved Phase 012 order
+## Validity versus scope
 
 ```text
-012-A  scope / semantics / questions / plan                            COMPLETE — READY
-012-B  application-family roles / candidate inventory                  COMPLETE — PASS
-012-C  Competition / actor / competitor / bias-control dependence      COMPLETE — PASS
-012-D  evaluation structure / responsibility / basis / judgment        COMPLETE — PASS
-012-E  authority lineage / Provenance / correctability                  COMPLETE — PASS
-012-F  outcome / Award / official-authority dependence                  COMPLETE — PASS
-012-G  Export / Publication / external-representation dependence        COMPLETE — PASS
-012-H  whole graph / transitivity / co-inclusion / minimal subsets      NEXT
-012-I  product-family variants / scope / composition revalidation       PLANNED
-012-J  counterexamples / upstream reopen / Phase 013 handoff audit      PLANNED
-012-K  canonical reconciliation / Phase 012 exit / Phase 013 handoff    PLANNED
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
 ```
+
+Do not treat singleton formal closures such as Access, Versioning, Provenance, Rubric or Export as supported products merely because they satisfy the direct graph.
+
+012-I owns product-family scope selection.
+
+## Coherent subset results to preserve
+
+Dependence-coherent examples include:
+
+- single-cohort operation without Division;
+- ad-hoc Judge assignment without Panel;
+- occurrence-history without Obligation/Scorecard;
+- responsibility tracking without Occurrence/Scorecard;
+- working Scorecard capture without Occurrence/Obligation;
+- official outcome without Award;
+- recognition without official declaration;
+- judging/operation without Outcome Declaration;
+- Export without Publication;
+- official-but-non-public operation;
+- public non-official material;
+- discretionary Award without Division.
+
+Conditional examples:
+
+- no-Alias judging is coherent only when the variant does not claim the current blinded-judging profile;
+- working Rubric/Scorecard may omit Versioning/Provenance only when no authoritative claim is made;
+- no-Division ranked recognition requires Rank/Award policy/composition generalization if adopted.
+
+Invalid examples include Publication without Export and any direct-edge closure violation.
+
+## 012-I discipline
+
+012-I must decide **scope**, not invent commercial tiers.
+
+For each material coherent variant:
+
+- classify it as in scope or coherent-but-out-of-scope;
+- justify that decision from project purpose/mandate;
+- identify capability-conditioned requirements;
+- identify any variant-specific Phase-011 synchronization/policy revalidation;
+- preserve capture channel as a profile rather than a false Concept variant;
+- do not use implementation architecture or current UI as scope evidence.
 
 ## Reopening rules
 
 - unjustified purpose/scope role → revisit the natural Phase-010 project/purpose owner;
 - intrinsic Concept coupling → reopen the natural Phase-010 Concept owner;
-- accepted subset exposes missing composition → reopen/refine the natural Phase-011 synchronization owner;
+- adopted subset exposes missing composition → reopen/refine the natural Phase-011 synchronization owner;
 - derived mechanism appears to require Concept status → review upstream classification first;
 - user-visible mapping issue without inclusion change → carry to Phase 013.
 
@@ -207,10 +221,10 @@ Publication means authorized release, not delivery success. Delivery/transport r
 
 Do not resume implementation, derive Concept dependence from source/package/service/database structure, turn the dependence graph into architecture or implementation order, or design commercial tiers from Concept subsets.
 
-Keep accepted current meaning in canonical owners and rejected/counterexample reasoning in numbered phase history.
+Keep current meaning in canonical owners and exploratory/rejected reasoning in numbered phase history.
 
 ## Current next task
 
 Proceed to:
 
-> **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**
+> **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**
