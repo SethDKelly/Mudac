@@ -14,12 +14,12 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current Phase 012 direct dependence, whole-graph validation and selected product-family scope.
-* [Whole-Graph Dependence & Subset Validation](canonical/dependence/whole-graph-subset-validation.md) — acyclicity, closure, optionality and subset validation.
-* [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md) — adopted PF-01 variant, in-scope profiles and deferred contractions.
+* [Dependence](canonical/dependence/) — current Phase 012 direct dependence, whole-graph validation and selected PF-01 scope.
+* [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md) — adopted PF-01 variant, profiles and deferred contractions.
+* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — mapping-entry precedence and revalidation risks prepared by 012-J.
+* [Experience](canonical/experience/) — pre-Phase-013 mapping evidence plus the current entry handoff.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
-* [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
 * [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
 * [Architecture](canonical/architecture/) — suspended downstream candidates.
 * [Implementation](canonical/implementation/) — suspended downstream candidates plus frozen bootstrap facts.
@@ -28,9 +28,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), and active [Phase 012](012-concept-dependence-product-family-subset-scope/).
 
-Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics and [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as candidate evidence.
-
-Use 012-C through 012-G for family-local dependence, [012-H](012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) for whole-graph validation, and [012-I](012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) plus [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md) for current scope selection.
+Use 012-C through 012-G for family-local dependence, [012-H](012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) for whole-graph validation, [012-I](012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) for scope selection, and [012-J](012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md) for the final counterexample/mapping-handoff audit before consolidation.
 
 # Current methodology state
 
@@ -49,7 +47,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
 012-I: COMPLETE — PASS
-012-J: NEXT
+012-J: COMPLETE — PASS
+012-K: NEXT
+013: NOT STARTED
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -63,21 +63,20 @@ MUDAC currently adopts one primary product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen current Concepts in the supported product capability envelope.
+PF-01 keeps all eighteen current Concepts in the supported product capability envelope. Concept support does not mean every Competition actively exercises every capability.
 
-This means the product supports their owned capabilities; it does not mean every Competition must actively instantiate or exercise every Concept.
+# 012-J audit posture
 
-In-scope PF-01 profiles include Award-optional official outcome, official-but-non-public operation, Export without Publication, controlled public non-official material, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed continuity.
+The Phase-012 model survives counterexample audit without a new edge, scope change or Phase-010/011 reopening.
 
-Coherent contractions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only are retained as design knowledge but are not adopted as separate current products.
+The remaining carry-forward is mapping currentness: earlier Experience material includes superseded `Encounter` and `Official Outcome Revision` language. Until Phase 013 revalidates that corpus, current Concept/synchronization/dependence/PF-01 authority takes precedence.
 
-No-Alias competitive judging is outside the current bias-control baseline. Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
+Dependence informs explanation, not UI sequence:
 
-# Composition posture
-
-No immediate Phase-011 reopening is required for PF-01. The current synchronization corpus already describes the selected full application family and the supported PF-01 profiles.
-
-Deferred contractions have explicit future revalidation routes in [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md).
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
 
 # Completion runway
 
@@ -86,7 +85,7 @@ Deferred contractions have explicit future revalidation routes in [MUDAC Product
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-J NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-K NEXT
   ↓
 013 mapping / representation
   ↓
@@ -101,4 +100,4 @@ Deferred contractions have explicit future revalidation routes in [MUDAC Product
 
 A successful future Phase 017 may authorize only a separate downstream architecture/engineering re-entry; it does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
+The immediate next task is **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
