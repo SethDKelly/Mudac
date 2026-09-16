@@ -7,7 +7,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Project Context & Purpose](project/) — current mandate, scope, constraints, purpose obligations, needs, success situations and tensions.
 * [Concepts](concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](synchronizations/) — current reconciled Phase-011 composition/synchronization authority.
-* [Dependence](dependence/) — current accepted Phase-012 direct dependence and capability-conditioned co-inclusion through 012-G.
+* [Dependence](dependence/) — current Phase-012 direct dependence, capability-conditioned co-inclusion and whole-graph validation through 012-H.
 * [Mechanisms](mechanisms/) — current derived/supporting subjects and processes.
 * [Policies](policies/) — current governing/configurable competition semantics.
 * [Invariants](invariants/) — current cross-cutting conceptual constraints.
@@ -45,7 +45,8 @@ implementation authorization: NOT YET
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 ```
 
 # Current Concept authority
@@ -64,49 +65,31 @@ Dependence does not replace synchronization; traceability or coordinated action 
 
 # Current dependence authority
 
-[MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns current Phase-012 dependence truth through all family-local analysis completed in 012-G.
+[MUDAC Application-Family Concept Dependence](dependence/application-family-dependence.md) owns direct edges/non-edges and capability-conditioned rules.
 
-The final direct family-local edge added is:
-
-```text
-Publication → Export
-```
-
-Externalization remains asymmetric:
+[Whole-Graph Dependence & Subset Validation](dependence/whole-graph-subset-validation.md) owns the current integrated model after 012-H:
 
 ```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
+whole direct graph: ACYCLIC
+mutual-dependence / co-inclusion groups: NONE
+new direct edge required by closure: NONE
 ```
 
-Current capability rules include:
+Competition is the only universal **in-scope family anchor**. All other Concepts are globally optional while remaining mandatory where a named capability requires them.
+
+`Award → Competition` remains intentionally retained despite transitive reachability through Team because Award scope and Award recipient are distinct roles.
+
+# Validity and scope
 
 ```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
-
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
-
-Rank-Derived Award capability
-  ⇒ Award + legitimate Ranking Ready supplied Rank basis
-
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
 ```
 
-Official-but-non-public operation, Export-without-Publication, and public non-official representation are dependence-coherent. Publication-without-Export is invalid.
+012-H confirms coherent unfamiliar subsets including single-cohort/no-Division, ad-hoc/no-Panel, evaluation contractions, official-without-Award, official-but-non-public, Export-without-Publication and public non-official material. Publication-without-Export remains invalid.
 
-Paper capture continuity does not universally require Export; stable printable/external representation does.
+Working-only evaluation may omit Versioning/Provenance; authoritative evaluation may not. Paper/electronic/mixed capture remains a channel profile rather than a Concept-subset axis.
 
 # Retrieval rule during reopened design
 
@@ -126,7 +109,7 @@ For Phases 012–017:
   ↓
 011 composition / synchronization revalidation                COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope             IN PROGRESS — 012-H NEXT
+012 dependence / subsets / product-family / scope             IN PROGRESS — 012-I NEXT
   ↓
 013 mapping / representation revalidation
   ↓
@@ -139,4 +122,4 @@ For Phases 012–017:
 017 methodology completeness / canonical closure
 ```
 
-The immediate next work is **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+The immediate next work is **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
