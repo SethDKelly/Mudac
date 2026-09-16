@@ -1,7 +1,7 @@
 ---
 type: Canonical Dependence Validation
 title: Whole-Graph Dependence & Subset Validation
-description: "Current whole-graph validation of MUDAC Concept dependence after Phase 012-J counterexample audit, including acyclicity, transitive closure, optionality, minimal closures and unfamiliar-subset results; product scope remains separately owned by PF-01 scope authority."
+description: "Current whole-graph validation of MUDAC Concept dependence after Phase 012 consolidation, including acyclicity, transitive closure, optionality, minimal closures and representative unfamiliar-subset results; product scope remains separately owned by PF-01 scope authority."
 status: stable
 tags: [canonical, dependence, transitivity, optionality, subsets, phase-012]
 sources:
@@ -9,11 +9,12 @@ sources:
   - resource: product-family-scope.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
 ---
 
 # Purpose
 
-Validate the current MUDAC application-family dependence graph **as a whole** after family-local analysis completed through 012-G and counterexample audit in 012-J.
+Validate the current MUDAC application-family dependence graph **as a whole** after family-local analysis, counterexample audit and final Phase-012 reconciliation.
 
 This document does not replace [MUDAC Application-Family Concept Dependence](application-family-dependence.md), which owns direct edges, universal non-edges and capability-conditioned rules.
 
@@ -27,16 +28,17 @@ It also does not select product scope. [MUDAC Product-Family Scope](product-fami
 whole direct graph: ACYCLIC
 strongly connected components > 1 Concept: NONE
 new direct edge required by closure: NONE
-new direct edge required by 012-J counterexamples: NONE
+new direct edge required by counterexamples: NONE
 Phase-010 reopening: NOT REQUIRED
 Phase-011 reopening: NOT REQUIRED
+Phase-012 repair: NOT REQUIRED
 ```
 
 No current Concept pair forms a genuine mutual-dependence/co-inclusion group.
 
 # Family anchor versus optionality
 
-`Competition` is the only universal **in-scope MUDAC family anchor** established by Phase 012.
+`Competition` is the universal **in-scope MUDAC family anchor** established by Phase 012.
 
 Every other Concept is globally optional in the mathematical product family: at least one coherent capability/subset can omit it.
 
@@ -124,7 +126,7 @@ Singleton formal closures exist for Identity, Rubric, Access, Versioning, Proven
 
 Formal closure does not establish a meaningful or adopted MUDAC product variant.
 
-# Unfamiliar-subset results
+# Representative unfamiliar-subset results
 
 | Probe | Result |
 | --- | --- |
@@ -156,7 +158,7 @@ The capability-conditioned rules remain consistent with direct closure:
 - corrected release preserves `Publication → Export` and explicit successor action;
 - paper continuity remains channel behavior unless stable printable representation is required.
 
-# Scope after 012-I
+# Scope after Phase 012
 
 The current adopted variant is:
 
@@ -166,22 +168,21 @@ PF-01 keeps all eighteen Concepts in its supported capability envelope.
 
 The coherent contractions above remain counterexamples and future design options, not automatically supported products.
 
-# 012-J counterexample result
+# Final counterexample/consolidation result
 
-012-J specifically re-challenged the whole model with product/state/profile, exceptional-outcome, paper, correction, Access, authority-support and externalization counterexamples.
-
-No challenge requires a graph change.
+No Phase-012 counterexample or final reconciliation finding requires a graph change.
 
 The one material carry-forward is mapping revalidation: earlier Experience material still contains superseded terms and must be reconciled in Phase 013. That finding does not alter whole-graph validity.
 
-# Current methodology handoff
+# Methodology handoff
 
 ```text
 012-H  COMPLETE — PASS
 012-I  COMPLETE — PASS
 012-J  COMPLETE — PASS
-012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
-013    NOT STARTED
+012-K  COMPLETE — PASS
+Phase 012 COMPLETE — PASS
+Phase 013 AUTHORIZED — 013-A NEXT
 ```
 
-012-K should consolidate the current dependence/scope owners and formally authorize Phase 013 only if documentation integrity remains clean.
+Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
