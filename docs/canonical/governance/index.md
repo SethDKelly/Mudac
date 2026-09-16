@@ -35,7 +35,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
-012-G: NEXT
+012-G: COMPLETE — PASS
+012-H: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -49,26 +50,25 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns current Phase-012 inclusion dependence and capability-conditioned co-inclusion, partial through 012-F.
+[Canonical Dependence](../dependence/) owns current Phase-012 direct dependence and capability-conditioned co-inclusion through 012-G.
 
-Current outcome edges are:
-
-```text
-Award               → Competition
-Award               → Team
-Outcome Declaration → Competition
-```
-
-Recognition and declaration remain independent:
+The externalization result is:
 
 ```text
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
+Publication → Export
 ```
 
-Do not infer direct declaration dependencies on Team or evaluation-source Concepts from traceability alone.
+with these important non-edges:
 
-012-E authority-profile support remains:
+```text
+Export ↛ Publication
+Outcome Declaration ↛ Export
+Outcome Declaration ↛ Publication
+Export ↛ Outcome Declaration
+Publication ↛ Outcome Declaration
+```
+
+Current capability rules include:
 
 ```text
 Authoritative Rubric Basis
@@ -76,32 +76,33 @@ Authoritative Rubric Basis
 
 Authoritative Scorecard Evidence
   ⇒ Versioning + Provenance
-```
 
-012-F capability rules include:
-
-```text
 Ordinary Official Closeout
   ⇒ Competition + Outcome Declaration
 
 Rank-Derived Award capability
   ⇒ Award + legitimate Ranking Ready supplied Rank basis
+
+External Representation
+  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
+
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Current Rank is Division-scoped without making `Award → Division` universal.
+Paper capture continuity does not universally require Export. Publication means release authority, not delivery success.
 
-Any official declaration must have a reconstructible accepted OutcomeBasis, but source support is variant-specific.
+# Current scope posture
 
-# Current scope conclusions
-
-- Competition remains the family anchor.
-- Division, Panel and Award remain optional in coherent variants where their capabilities are absent.
-- Evaluation Occurrence, Evaluation Obligation and Scorecard remain independently includable at the dependence level.
-- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim current authoritative-evaluation semantics.
-- Outcome Declaration may exist without Award; Award may exist without Outcome Declaration.
-- Competition does not universally depend on either outcome layer.
-- official and public remain separate; 012-G resolves Export/Publication inclusion next.
+- Competition remains the family anchor for adopted MUDAC variants.
+- Division, Panel, Award, Outcome Declaration, Export and Publication can be optional in coherent variants when their capabilities are absent.
+- Evaluation Occurrence, Evaluation Obligation and Scorecard are not a universal co-inclusion group.
+- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim authoritative evaluation.
+- Official-but-non-public, Export-without-Publication, and public non-official representation are dependence-coherent.
+- Publication-without-Export is invalid in the current MUDAC application family.
 
 # Current handoff
 
-Proceed to **012-G — External Representation & Release Dependence**.
+012-H now owns whole-graph transitivity, co-inclusion/cycles, optionality, minimal meaningful subsets, unfamiliar subsets, redundant-edge review, and consistency between direct edges and capability-conditioned rules.
+
+Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
