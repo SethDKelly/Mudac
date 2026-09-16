@@ -25,9 +25,13 @@ Each Concept owner exposes representation-independent Purpose, State, Actions/Qu
 17. [Export](export.md) — stable source-bound external representation and representation currency.
 18. [Publication](publication.md) — deliberate release/withdrawal/supersession of an identified representation.
 
-## Superseded Concept boundary
+## Superseded Concept boundaries
 
 [Judging Encounter](judging-encounter.md) remains only a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
+
+`Official Outcome Revision` is likewise superseded as a current classification; explicit official authority is owned by **Outcome Declaration**.
+
+Historical phase/experience evidence may preserve those names according to the design that existed when written. They must not override the current catalog.
 
 ## Explicit non-Concept classifications
 
@@ -46,7 +50,7 @@ Preserve:
 - calculated ≠ recognized ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-## Active methodology work — Phase 012
+## Current Phase-012 authority
 
 Direct dependence and capability-conditioned co-inclusion live in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
@@ -54,20 +58,44 @@ Whole-graph validation lives in [Whole-Graph Dependence & Subset Validation](../
 
 Current product-family scope lives in [MUDAC Product-Family Scope](../dependence/product-family-scope.md).
 
-012-I selects one current adopted product variant:
+The adopted current product variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
 PF-01 keeps all eighteen current Concepts in the supported capability envelope. This does not create intrinsic coupling and does not mean every Competition must exercise every Concept.
 
-Examples of profiles inside PF-01 rather than separate products include Award-optional official outcome, official-but-non-public state, Export without Publication, controlled public non-official material, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed continuity.
+## 012-J Concept-boundary audit
 
-Coherent reductions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred product-family candidates.
+012-J re-challenged the dependence/scope model with counterexamples and finds:
 
-No-Alias competitive judging remains outside current scope under the bias-control baseline. Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
+```text
+new Concept required: NO
+current Concept split/merge required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+```
 
-These are contextual product-family conclusions. Do **not** rewrite them into intrinsic Concept specifications.
+A real downstream mapping-currentness issue was identified: pre-existing Experience contracts still use terms such as `Encounter` and `Official Outcome Revision`.
 
-No Phase-010 Concept owner requires reopening from 012-I.
+That does **not** justify restoring or changing current Concept boundaries.
 
-Next: **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
+Phase 013 must instead reconcile each old mapping to current semantics. In particular, `Encounter` may have represented one or both of:
+
+```text
+Evaluation Occurrence
+Evaluation Obligation
+```
+
+so a blind terminology substitution would itself risk semantic loss.
+
+[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current mapping-entry interpretation boundary.
+
+## Current methodology handoff
+
+```text
+012-J  COMPLETE — PASS
+012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
+013    NOT STARTED
+```
+
+No current Concept owner should be modified merely to match stale Experience language during the handoff.
