@@ -48,33 +48,44 @@ Preserve:
 
 ## Active methodology work — Phase 012
 
-Current durable dependence lives in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md), now complete through family-local analysis in 012-G.
+Direct dependence and capability-conditioned co-inclusion live in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
-012-G establishes contextual MUDAC inclusion:
+Current integrated validation lives in [Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md).
 
-```text
-Publication → Export
-```
-
-This does **not** change intrinsic Publication semantics. Publication remains generic over a supplied Representation; MUDAC contextually uses Export because Export is the current Concept that owns stable source-bound representation identity/currentness.
-
-Do not rewrite Export to depend on Publication. Representation remains meaningful without release.
-
-Do not rewrite Outcome Declaration to depend on Export or Publication. Official authority may remain non-public.
-
-Do not rewrite Publication to depend on Outcome Declaration. Legitimate non-official material may be released when source/disclosure/publishing authority permit it.
-
-Current externalization capability rule is:
+012-H confirms:
 
 ```text
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
+whole direct graph: ACYCLIC
+co-inclusion cycles: NONE
+new direct edge required: NONE
 ```
 
-That capability rule must not be flattened into false universal edges between Outcome Declaration and Publication.
+No Concept boundary requires reopening.
 
-Paper capture continuity does not intrinsically or contextually require Export merely because paper is involved. Export becomes required when the capability includes a stable printable/external representation.
+Competition is the only universal **in-scope family anchor**. All other Concepts are globally optional across the product family while remaining mandatory where a named capability requires them.
 
-No Phase-010 Concept owner requires reopening from 012-G.
+This is contextual product-family optionality, not intrinsic weakening of any Concept.
 
-Next: **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+Examples:
+
+- Evaluation Occurrence, Evaluation Obligation and Scorecard remain independently includable at the dependence level;
+- Versioning and Provenance become mandatory for named authoritative evaluation profiles without becoming intrinsic Rubric/Scorecard dependencies;
+- Award and Outcome Declaration remain independent recognition/official-authority layers;
+- Publication contextually depends on Export, while Export remains meaningful without Publication;
+- Outcome Declaration remains independent of Export/Publication because official may remain non-public.
+
+`Award → Competition` is retained even though Competition is also transitively reachable through `Award → Team → Competition`; the two direct Award edges express distinct scope and recipient roles.
+
+Do not rewrite these contextual conclusions into intrinsic Concept specifications.
+
+## Scope-selection handoff
+
+```text
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
+```
+
+012-I now decides which coherent variants MUDAC supports and which adopted alternatives require Phase-011 composition/policy refinement.
+
+Next: **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
