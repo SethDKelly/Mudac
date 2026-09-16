@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 012 product-family scope selected through 012-I, counterexample/mapping-handoff audit next, and downstream architecture/implementation authority suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 012 counterexample/mapping-handoff audit complete through 012-J, canonical consolidation next, Phase 013 not yet started, and downstream architecture/implementation authority suspended through Phase 017 closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, dependence, reentry]
 sources:
@@ -9,10 +9,11 @@ sources:
   - resource: ../../009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md
   - resource: ../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md
-  - resource: ../../012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
   - resource: ../dependence/application-family-dependence.md
   - resource: ../dependence/whole-graph-subset-validation.md
   - resource: ../dependence/product-family-scope.md
+  - resource: ../experience/phase-013-entry-handoff.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -24,11 +25,11 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 Phase 009 reopened the prior methodology exit. Phase 010 completed foundational Concept Design. Phase 011 completed representation-independent Concept composition/synchronization with **PASS**.
 
-Phase 012 has completed family-local dependence, whole-graph validation, and product-family scope selection through 012-I with **PASS**.
+Phase 012 has completed family-local dependence, whole-graph validation, product-family scope selection, and final counterexample/upstream-reopen/mapping-handoff audit through 012-J with **PASS**.
 
 The only authorized next methodology work is:
 
-> **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**
+> **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**
 
 ```text
 Jackson Concept Design methodology: REOPENED / IN PROGRESS
@@ -52,7 +53,9 @@ Phase 012: IN PROGRESS
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
 012-I: COMPLETE — PASS
-012-J: NEXT
+012-J: COMPLETE — PASS
+012-K: NEXT
+Phase 013: NOT STARTED
 production readiness: NOT ESTABLISHED
 ```
 
@@ -71,13 +74,13 @@ canonical direct dependence + capability rules
         ↓
 whole-graph validation / subset semantics
         ↓
-product-family scope selection (012-I)
+PF-01 product-family scope
         ↓
-012-J counterexample / reopen / explanation-order / mapping-handoff audit
+012-J counterexample / reopen / explanation-order audit
         ↓
-012-K consolidation + Phase-013 handoff
+012-K canonical consolidation + formal Phase-013 handoff
         ↓
-future Phase 013 mapping and later validation
+future Phase 013 mapping
 
 historical architecture / implementation
         = evidence or contamination probe only
@@ -90,41 +93,68 @@ Phase 010 converged and exited with eighteen Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-Phase 012-C through 012-I found no intrinsic Concept coupling requiring Phase-010 reopening.
+012-J confirms no Phase-010 reopening is required.
 
 # Current product-family authority
 
-[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects the current adopted variant:
+[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen Concepts in the supported capability envelope. This is product scope, not a blanket direct-dependence relation and not a requirement that every Competition exercise every Concept.
+PF-01 keeps all eighteen Concepts in the supported capability envelope. This is product scope, not blanket direct dependence and not a requirement that every Competition exercise every Concept.
 
-In-scope profiles include Award-optional official outcome, official-but-non-public state, Export without Publication, controlled public non-official material, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed continuity.
+# 012-J audit result
 
-# Unadopted/deferred contractions
+```text
+new direct edge required: NO
+PF-01 scope change required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+Phase-013 mapping revalidation required: YES
+```
 
-Coherent contractions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only, completed judging-only and no-Division ranked recognition remain unadopted/deferred.
+The mapping issue is currentness of older Experience material, not a semantic-model failure. Several earlier Experience records still use deprecated `Encounter` and `Official Outcome Revision` language.
 
-Intentionally non-blinded competitive judging is outside the current bias-control scope.
+[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) now establishes the entry precedence:
 
-Authoritative evaluation without Versioning/Provenance remains invalid under current authority semantics.
+```text
+Purpose / Concepts / Synchronizations / Dependence / PF-01 scope
+  = current conceptual authority
 
-# Composition revalidation result
+older Experience contracts
+  = incoming mapping evidence pending revalidation
+```
 
-**No immediate Phase-011 reopening is required for PF-01.**
+Phase 013 has **not started**; 012-K must formally close Phase 012 first.
 
-The selected product variant is the same complete application family Phase 011 synchronized. Current synchronization already supports the selected distinctions among Award/officiality, official/public, Export/Publication, correction, and paper/electronic continuity.
+# Explanation-order boundary
 
-If a deferred contraction is promoted later, refine its natural Phase-011/policy owner according to [MUDAC Product-Family Scope](../dependence/product-family-scope.md) rather than distorting dependence.
+Dependence can constrain what must be intelligible without becoming UI structure:
+
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
+
+Mapping may reorganize experience, but it may not hide or falsify material context, authority, target, currentness, consequence or history.
 
 # Reopening discipline
 
-If Phase 012-J exposes unjustified purpose, intrinsic Concept coupling, missing composition for PF-01, pressure to promote a derived mechanism into a Concept, or purely user-visible mapping concerns, route the issue to the natural Phase-010, Phase-011, classification, or Phase-013 owner respectively.
+During future mapping:
+
+- purpose conflict → reopen current project-purpose owner;
+- Concept behavior/boundary defect → reopen natural Phase-010 owner;
+- missing/invalid application action or synchronization → reopen Phase 011;
+- incorrect dependence/scope assumption → reopen Phase 012;
+- terminology/representation issue only → repair in Phase 013.
+
+Do not solve an upstream semantic defect with presentation behavior.
 
 # Implementation prohibition
 
-Dependence/subset/scope work must not be translated into package/module/service dependencies, imports, database relationships, API direction, event/queue topology, deployment units, AWS services, UI/component hierarchy, source-tree organization, implementation order, or commercial packaging alone.
+Dependence/subset/scope/mapping work must not be translated into package/module/service dependencies, imports, database relationships, API direction, event/queue topology, deployment units, AWS services, UI component hierarchy, source-tree organization, implementation order, or commercial packaging alone.
+
+Phase 013 may establish semantic representation obligations; it must not start frontend/runtime implementation.
 
 # Suspended downstream authority
 
@@ -140,4 +170,4 @@ A successful Phase 017 may establish readiness for a **separate architecture/eng
 
 Proceed to:
 
-> **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**
+> **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**
