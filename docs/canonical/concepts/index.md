@@ -1,106 +1,76 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 modularity convergence and Phase 012 dependence/scope closure.
+Current canonical Concept catalog after Phase 010 convergence and Phase 012 dependence/scope closure.
 
-Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC inclusion requirements and product-family scope belong to [Canonical Dependence](../dependence/), not intrinsic Concept definitions.
+Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual inclusion requirements belong to [Canonical Dependence](../dependence/); user-visible representation belongs to Phase 013 mapping.
 
 ## Current eighteen-Concept catalog
 
-1. [Competition](competition.md) — lifecycle and governing context for one competition occurrence.
-2. [Division](division.md) — scoped competitive cohort definition and member assignment.
-3. [Team](team.md) — stable scoped administrative competitor representation.
-4. [Panel](panel.md) — reusable scoped grouping of evaluator members.
-5. [Evaluation Occurrence](evaluation-occurrence.md) — bounded historical evaluation occurrence and actual presented/participant context.
-6. [Evaluation Obligation](evaluation-obligation.md) — one evaluator's responsibility to produce a qualifying independent evaluation.
-7. [Rubric](rubric.md) — structured evaluation instrument and response interpretation/validation semantics.
-8. [Scorecard](scorecard.md) — one evaluator's independent judgment under supplied context and evaluation basis.
-9. [Award](award.md) — scoped recognition definition and attributable conferral.
-10. [Identity](identity.md) — stable human identity continuity independent of event capacity/permission.
-11. [Participation](participation.md) — scoped, time-bounded involvement in a particular capacity.
-12. [Alias](alias.md) — scoped alternate identity preserving historical mapping.
-13. [Access](access.md) — contextual capability/disclosure decision over supplied facts and rules.
-14. [Versioning](versioning.md) — immutable authoritative-state lineage, eligibility, invalidation and currentness.
-15. [Provenance](provenance.md) — meaningful origin, actor, represented-authority and correction history.
-16. [Outcome Declaration](outcome-declaration.md) — explicit declared outcome authority with Affected/successor history.
-17. [Export](export.md) — stable source-bound external representation and representation currency.
-18. [Publication](publication.md) — deliberate release/withdrawal/supersession of an identified representation.
+1. [Competition](competition.md)
+2. [Division](division.md)
+3. [Team](team.md)
+4. [Panel](panel.md)
+5. [Evaluation Occurrence](evaluation-occurrence.md)
+6. [Evaluation Obligation](evaluation-obligation.md)
+7. [Rubric](rubric.md)
+8. [Scorecard](scorecard.md)
+9. [Award](award.md)
+10. [Identity](identity.md)
+11. [Participation](participation.md)
+12. [Alias](alias.md)
+13. [Access](access.md)
+14. [Versioning](versioning.md)
+15. [Provenance](provenance.md)
+16. [Outcome Declaration](outcome-declaration.md)
+17. [Export](export.md)
+18. [Publication](publication.md)
 
-## Superseded Concept boundaries
+## Superseded boundaries
 
-[Judging Encounter](judging-encounter.md) remains only a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
+[Judging Encounter](judging-encounter.md) remains a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
 
-`Official Outcome Revision` is likewise superseded as a current classification; explicit official authority is owned by **Outcome Declaration**.
+`Official Outcome Revision` is likewise superseded; explicit official authority/currentness/history is owned by **Outcome Declaration**.
 
-Historical phase/experience evidence may preserve those names according to the design that existed when written. They must not override the current catalog.
+Historical mapping evidence may preserve those old names, but it must not override the current catalog.
 
 ## Explicit non-Concept classifications
 
-Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains Organizer process/work context; Recovery/Continuity remains a cross-cutting purpose obligation; correction remains owner-specific behavior/composition.
+Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Current composition authority
+## Composition and scope
 
-Phase 011 is **COMPLETE — PASS**. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
+Phase 011 is **COMPLETE — PASS** and [Canonical Synchronizations](../synchronizations/) owns current application composition.
 
-Preserve:
+Phase 012 is **COMPLETE — PASS** and [Canonical Dependence](../dependence/) owns current inclusion dependence and PF-01 scope.
 
-- occurrence participation ≠ responsibility ≠ Scorecard evidence;
-- historical satisfaction ≠ current evidence eligibility;
-- Rank ≠ Award authority;
-- Competition Finalization ≠ Outcome Declaration;
-- calculated ≠ recognized ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
-
-## Current dependence and scope authority
-
-Phase 012 is **COMPLETE — PASS**.
-
-Direct dependence and capability-conditioned co-inclusion live in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
-
-Whole-graph validation lives in [Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md).
-
-Current product-family scope lives in [MUDAC Product-Family Scope](../dependence/product-family-scope.md).
-
-The adopted current product variant is:
+The sole adopted variant is:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen current Concepts in the supported capability envelope. This does not create intrinsic coupling and does not mean every Competition must exercise every Concept.
+PF-01 keeps all eighteen Concepts in the supported capability envelope without creating intrinsic coupling or requiring every Competition to exercise every capability.
 
-Phase-012 exit confirms:
+Preserve at least:
 
 ```text
-new Concept required: NO
-current Concept split/merge required: NO
-Phase-010 reopen required: NO
-Phase-011 reopen required: NO
-Phase-012 repair required: NO
+occurrence participation != responsibility != Scorecard evidence
+historical satisfaction != current evidence eligibility
+Rank != Award authority
+Competition Finalization != Outcome Declaration
+calculated != recognized != official != public != delivered
+source authority != Export representation != Publication release != transport delivery
 ```
 
 ## Phase-013 mapping boundary
 
-A real downstream mapping-currentness issue remains: pre-existing Experience contracts still use terms such as `Encounter` and `Official Outcome Revision`.
+Phase 013 is **IN PROGRESS**. [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the mapping start gate with READY.
 
-That does **not** justify restoring or changing current Concept boundaries.
+Pre-convergence Experience records still contain `Encounter` and `Official Outcome Revision`. Mapping must reconcile each old use to current semantics rather than alter Concept boundaries to fit stale terminology.
 
-Phase 013 must reconcile each old mapping to current semantics. In particular, `Encounter` may have represented one or both of:
-
-```text
-Evaluation Occurrence
-Evaluation Obligation
-```
-
-so a blind terminology substitution risks semantic loss.
-
-[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current mapping-entry interpretation boundary.
-
-## Current methodology handoff
+[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current entry/planning boundary.
 
 ```text
-Phase 010 COMPLETE — PASS
-Phase 011 COMPLETE — PASS
-Phase 012 COMPLETE — PASS
-Phase 013 AUTHORIZED
-013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+013-A  COMPLETE — READY
+013-B  NEXT — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline
 ```
 
-No current Concept owner should be modified merely to match stale Experience language during mapping.
+No Concept owner should be modified merely to match incumbent UI or stale Experience language. If mapping exposes genuinely undefined Concept behavior or a boundary defect, route it upstream explicitly.
