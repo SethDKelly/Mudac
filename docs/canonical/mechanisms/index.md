@@ -1,6 +1,6 @@
 # Derived and Supporting Mechanisms
 
-Current MUDAC subjects modeled as derived/supporting mechanisms or processes rather than independent Concepts after Phase 010 convergence.
+Current MUDAC subjects modeled as derived/supporting mechanisms or processes rather than independent Concepts.
 
 * [Team Attributes](team-attributes.md) — disclosure-controlled descriptive Team metadata, including optional Team Name.
 * [Criterion & Notes](criterion-notes.md) — Rubric/Scorecard subordinate evaluation structure.
@@ -13,37 +13,31 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 
 ## Deprecated classification adapter
 
-[Official Outcome Revision](official-outcome-revision.md) is retained only as a `deprecated` historical adapter. Its former authority-bearing behavior is now owned by the current [Outcome Declaration](../concepts/outcome-declaration.md) Concept and it is **not** a current mechanism.
+[Official Outcome Revision](official-outcome-revision.md) is retained only as a deprecated historical adapter. Current official authority is owned by [Outcome Declaration](../concepts/outcome-declaration.md).
 
 ## Current classification rules
 
-- **Coverage / Evaluation Sufficiency** remains derived. Its factual answer is `Satisfied` or `Incomplete`; accepted exception disposition may permit a specific consequence while factual Coverage remains Incomplete.
-- **Aggregate** remains numerical derivation over current eligible authoritative individual judgments and does not establish Coverage or rank eligibility.
-- **Rank** remains a derived, non-editable ordering over a supplied rank-eligible Team set and declared policy.
-- **Readiness** remains derived. In particular, calculated Rank is distinct from **Ranking Readiness**, and Finalization Readiness is distinct from Competition lifecycle/Outcome Declaration authority.
-- **Reconciliation** remains process/work mode rather than independent ticket-like source state.
-- **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
-- No separate `Representation Currency`, `Release`, `Delivery`, or `Distribution` mechanism is required: Export owns representation currency, Publication owns release state, and transport/delivery remains downstream realization.
+- Coverage remains `Satisfied | Incomplete`; governed exception does not rewrite factual sufficiency.
+- Aggregate is derived numerical state and does not establish Coverage/rank eligibility.
+- Rank is derived/non-editable.
+- Readiness is derived; Ranking Readiness and Finalization Readiness remain distinct from Rank and lifecycle/official authority.
+- Reconciliation remains process/work context rather than ticket/workflow authority.
+- Recovery/Continuity remains a cross-cutting purpose obligation.
+- Export owns representation currency; Publication owns release state; transport/delivery remains downstream realization.
 
-## Current composition relationship
+## Composition and scope
 
-Phase 011 is **COMPLETE — PASS** and current composition lives under [Canonical Synchronizations](../synchronizations/).
+Phase 011 is **COMPLETE — PASS** and [Canonical Synchronizations](../synchronizations/) owns composition.
 
-[External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md) establishes that exact source/purpose/audience binding and Export currency are Concept-owned by Export, while explicit release/withdrawal/succession and release history are Concept-owned by Publication. Those meanings do not require an additional derived coordinator.
+Phase 012 is **COMPLETE — PASS** and [MUDAC Product-Family Scope](../dependence/product-family-scope.md) owns PF-01 scope.
 
-[Application Action Surface, Chaining & Automation Composition](../synchronizations/application-action-surface-composition.md) owns the whole-application D/C/P/S/X action surface, chaining and automation limits.
+A future no-Division ranked variant would require explicit Rank/Ranking Readiness/Award revalidation rather than promoting Rank into a Concept or inventing placeholder Division state.
 
-## Current dependence/scope relationship
+## Phase-013 mapping boundary
 
-Phase 012 is **COMPLETE — PASS**.
+Phase 013 is **IN PROGRESS**. [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the mapping start gate with READY.
 
-Mechanisms such as Coverage, Aggregate, Rank and Readiness remain non-Concepts even where they participate in capability rules or mapping explanation.
-
-[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects PF-01 and preserves current Division-scoped Rank semantics. A future no-Division ranked variant would require explicit Rank/Ranking Readiness/Award revalidation rather than promoting Rank into a Concept or inventing placeholder Division state.
-
-## Current mapping handoff
-
-Phase 013 is authorized to map these mechanisms where they affect user understanding while preserving source-versus-derived distinctions such as:
+Mappings must preserve source-versus-derived direction:
 
 ```text
 eligible authoritative evidence
@@ -51,7 +45,7 @@ eligible authoritative evidence
   → rank eligibility / Rank
 ```
 
-Derived values must not be represented as editable source truth.
+Derived state must never appear as an independently editable source of truth. Readiness/Reconciliation/exception projections must not become hidden workflow Concepts through representation.
 
 See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
@@ -59,6 +53,7 @@ See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md
 Phase 010 COMPLETE — PASS
 Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
-Phase 013 AUTHORIZED
-013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+Phase 013 IN PROGRESS
+013-A COMPLETE — READY
+013-B NEXT
 ```
