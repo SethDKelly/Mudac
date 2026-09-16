@@ -31,9 +31,7 @@ Each Concept owner exposes representation-independent Purpose, State, Actions/Qu
 
 ## Explicit non-Concept classifications
 
-Current non-Concept knowledge remains under [Mechanisms](../mechanisms/), [Policies](../policies/), [Invariants](../invariants/), and [Experience](../experience/).
-
-Coverage/Evaluation Sufficiency is derived factual sufficiency; Aggregate, Rank and Readiness are derived mechanisms; Reconciliation is Organizer process/work context; Recovery/Continuity is a cross-cutting purpose obligation; correction remains owner-specific behavior/composition.
+Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains Organizer process/work context; Recovery/Continuity remains a cross-cutting purpose obligation; correction remains owner-specific behavior/composition.
 
 ## Current composition authority
 
@@ -46,45 +44,37 @@ Preserve:
 - Rank ≠ Award authority;
 - Competition Finalization ≠ Outcome Declaration;
 - calculated ≠ recognized ≠ official ≠ public ≠ delivered;
-- source authority ≠ Export representation ≠ Publication release.
+- source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
 ## Active methodology work — Phase 012
 
-Current durable dependence lives in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md), now partial through 012-F.
+Current durable dependence lives in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md), now complete through family-local analysis in 012-G.
 
-Current outcome edges are:
-
-```text
-Award               → Competition
-Award               → Team
-Outcome Declaration → Competition
-```
-
-These are contextual application dependencies and do not modify the independent Award, Competition, Team, or Outcome Declaration specifications.
-
-Recognition and declaration remain independent:
+012-G establishes contextual MUDAC inclusion:
 
 ```text
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
+Publication → Export
 ```
 
-Do not rewrite Outcome Declaration to directly depend on Team, Scorecard, Evaluation Obligation, Evaluation Occurrence, or Rubric merely because its supplied OutcomeBasis can be traced to those sources.
+This does **not** change intrinsic Publication semantics. Publication remains generic over a supplied Representation; MUDAC contextually uses Export because Export is the current Concept that owns stable source-bound representation identity/currentness.
 
-Do not rewrite Award to depend universally on Division; current rank-derived recognition is Division-contextual because the current Rank mechanism is Division-scoped, while discretionary/competition-wide recognition remains coherent without Division.
+Do not rewrite Export to depend on Publication. Representation remains meaningful without release.
 
-012-E authority-profile rules remain contextual rather than intrinsic:
+Do not rewrite Outcome Declaration to depend on Export or Publication. Official authority may remain non-public.
+
+Do not rewrite Publication to depend on Outcome Declaration. Legitimate non-official material may be released when source/disclosure/publishing authority permit it.
+
+Current externalization capability rule is:
 
 ```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
-
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Likewise do not rewrite Outcome Declaration as a Versioning wrapper; it intrinsically owns declaration/currentness/successor history.
+That capability rule must not be flattened into false universal edges between Outcome Declaration and Publication.
 
-No Phase-010 Concept owner requires reopening from 012-F.
+Paper capture continuity does not intrinsically or contextually require Export merely because paper is involved. Export becomes required when the capability includes a stable printable/external representation.
 
-Next: **012-G — External Representation & Release Dependence**.
+No Phase-010 Concept owner requires reopening from 012-G.
+
+Next: **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
