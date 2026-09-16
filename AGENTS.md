@@ -7,11 +7,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md) and [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 3. Read [Project Context & Purpose](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
-4. Use [012-H](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) for integrated whole-graph validation.
-5. Use [012-I](docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) and [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01 scope.
-6. Use [012-J](docs/012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md) and [Phase 013 Mapping Entry Authority](docs/canonical/experience/phase-013-entry-handoff.md) for the current pre-mapping audit/handoff.
+4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for the sole adopted PF-01 variant.
+5. Read [Phase 013 Mapping Entry Authority](docs/canonical/experience/phase-013-entry-handoff.md) before loading older Experience material.
+6. Treat older files under `docs/canonical/experience/` as **incoming mapping evidence pending Phase-013 revalidation** where they conflict with newer Concept/composition/dependence/scope authority.
 7. Use canonical synchronization owners for interaction rules; dependence/scope never replaces composition.
-8. Treat older files under `docs/canonical/experience/` as **incoming mapping evidence pending Phase-013 revalidation** where they conflict with newer Concept/composition/dependence/scope authority.
+8. Load [012-K](docs/012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md) when Phase-012 exit rationale or mapping handoff evidence is needed.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -29,19 +29,9 @@ implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
-012: IN PROGRESS
-012-A: COMPLETE — READY
-012-B: COMPLETE — PASS
-012-C: COMPLETE — PASS
-012-D: COMPLETE — PASS
-012-E: COMPLETE — PASS
-012-F: COMPLETE — PASS
-012-G: COMPLETE — PASS
-012-H: COMPLETE — PASS
-012-I: COMPLETE — PASS
-012-J: COMPLETE — PASS
-012-K: NEXT
-013: NOT STARTED
+012: COMPLETE — PASS
+013: AUTHORIZED
+013-A: NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
 ```
 
 ## Current Concept authority
@@ -99,7 +89,7 @@ implementation dependency
   = out of scope
 ```
 
-Never derive Concept dependence or product scope mechanically from synchronization, traceability, imports, schemas, service calls, UI layout, deployment topology, current workflow, or implementation convenience.
+Never derive Concept dependence, product scope or mapping semantics mechanically from imports, schemas, service calls, UI layout, deployment topology, incumbent workflow, or implementation convenience.
 
 ## Current PF-01 scope
 
@@ -113,23 +103,21 @@ Profiles inside PF-01 include Award-optional outcome, official-but-non-public, E
 
 Coherent reduced subsets remain future design options, not current editions.
 
-## 012-J counterexample result
-
-The Phase-012 model survives the audit:
+## Phase-012 exit result
 
 ```text
+whole direct graph: ACYCLIC
 new direct edge required: NO
 PF-01 scope change required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
+Phase-012 repair required: NO
 Phase-013 mapping revalidation required: YES
 ```
 
-The mapping carry-forward is real but downstream: earlier Experience contracts still contain `Encounter` and `Official Outcome Revision` language.
+## Phase-013 mapping-entry authority
 
-## Mapping-entry authority
-
-Until Phase 013 revalidates the Experience corpus:
+Until Phase 013 revalidates the older Experience corpus:
 
 ```text
 Purpose / Concepts / Synchronizations / Dependence / PF-01 scope
@@ -151,23 +139,43 @@ synchronization chain != mandatory wizard
 
 Do not run a blind terminology replacement. `Encounter` may have represented either/both Evaluation Occurrence and Evaluation Obligation meanings; Phase 013 must remap semantics explicitly.
 
-## Reopening rules
+## 013-A start-gate discipline
 
-- unjustified purpose/scope role → revisit the natural Phase-010 project/purpose owner;
-- intrinsic Concept coupling → reopen the natural Phase-010 Concept owner;
-- missing/invalid application action or synchronization → reopen/refine Phase 011;
-- incorrect dependence/scope assumption → reopen Phase 012;
-- derived mechanism appears to require Concept status → review upstream classification first;
-- terminology/representation issue only → resolve in Phase 013.
+013-A must validate the incoming conceptual authority and assess at least:
 
-## Design-only rules for Phases 012–017
+- Concept/application-state visibility;
+- application-action invocation and availability;
+- semantic feedback/results;
+- terminology/naming/symbols;
+- semantically required structural distinctions;
+- synchronization/automation representation;
+- authority/disclosure/consequence visibility;
+- temporal/history/correction/recovery visibility;
+- PF-01 profile mapping;
+- accessibility/context-of-use obligations;
+- misleading-mental-model risks.
 
-Do not resume implementation, derive Concept dependence from source/package/service/database structure, turn the dependence graph into architecture or implementation order, or design commercial tiers from Concept subsets.
+It must identify actor/affected-party perspectives and derive the project-specific Phase-013 subgroup sequence before substantive mapping.
 
-Do not let existing UI, route, component or stale Experience structure become Concept authority.
+## Reopening rules during mapping
+
+- unjustified purpose/scope role → current project-purpose owner;
+- undefined Concept behavior/state/action → natural Concept/specification owner;
+- Concept boundary/independence defect → Phase 010;
+- missing/invalid application action or synchronization → Phase 011;
+- incorrect dependence/scope assumption → Phase 012;
+- terminology/representation issue only → Phase 013.
+
+Do not solve an upstream semantic defect with presentation behavior.
+
+## Design-only rules for Phases 013–017
+
+Do not resume implementation or let existing UI, route, component, API, database, source/package/service, deployment, AWS or test structure become Concept/mapping authority.
+
+Phase 013 may define semantic representation obligations but must not select frontend frameworks, component libraries, route structures, CSS systems, view-model/client-state architecture, APIs, polling/subscriptions, persistence realization or executable UI implementation/tests.
 
 ## Current next task
 
 Proceed to:
 
-> **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**
+> **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**
