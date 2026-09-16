@@ -4,7 +4,7 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A through 012-G complete; 012-H next.**
+**In Progress — 012-A through 012-H complete; 012-I next.**
 
 ## Records
 
@@ -15,47 +15,34 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 - [012-E — Authority Lineage, Provenance & Correctability Dependence](012-E-authority-lineage-provenance-correctability-dependence.md) — **Complete — PASS**.
 - [012-F — Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) — **Complete — PASS**.
 - [012-G — External Representation & Release Dependence](012-G-external-representation-release-dependence.md) — **Complete — PASS**.
-- **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets** — Next.
-- 012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation — Planned.
+- [012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets](012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) — **Complete — PASS**.
+- **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation** — Next.
 - 012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit — Planned.
 - 012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff — Planned.
 
-## Current canonical owner
+## Current canonical owners
 
-[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current direct dependence and capability-conditioned co-inclusion through 012-G.
+- [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) — direct dependence and capability-conditioned rules.
+- [Whole-Graph Dependence & Subset Validation](../canonical/dependence/whole-graph-subset-validation.md) — acyclicity, transitive closure, optionality, minimal closures, unfamiliar-subset outcomes and scope candidates.
 
-The final family-local edge added by 012-G is:
-
-```text
-Publication → Export
-```
-
-Important externalization non-edges are:
+## 012-H result
 
 ```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
+whole direct graph: ACYCLIC
+co-inclusion cycles: NONE
+new direct edge required: NONE
+Competition: universal in-scope family anchor
+all other Concepts: globally optional, capability-conditionally required
 ```
 
-Current capability rules include:
+`Award → Competition` is retained despite transitive reachability through Team because its recognition-scope rationale is independent from the Team-recipient rationale.
 
-```text
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
-```
-
-Official-but-non-public operation, Export-without-Publication, and public non-official representation are all dependence-coherent. Publication-without-Export is not.
-
-Paper capture continuity does not itself require Export; a stable printable/external representation does.
+No Phase-010 reopening or immediate Phase-011 repair is required.
 
 ## Immediate handoff
 
-012-H now owns whole-graph validation across every family resolved in 012-C through 012-G. It must test transitive closure, co-inclusion/cycles, optionality, minimal meaningful subsets, unfamiliar subsets, redundant edges, and consistency between direct edges and capability-conditioned rules.
+012-I now owns deliberate product-family scope selection. It must classify coherent variants as **in scope** or **coherent but out of scope** and identify any variant-specific Phase-011 synchronization/policy revalidation required by adopted alternatives.
 
-Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+This is not commercial-tier design and not implementation architecture.
+
+Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
