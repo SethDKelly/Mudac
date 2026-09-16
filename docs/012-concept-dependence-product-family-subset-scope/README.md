@@ -1,12 +1,8 @@
 # Phase 012 — Concept Dependence, Product-Family, Subset & Scope Analysis
 
-Status: **IN PROGRESS — 012-A through 012-F complete; 012-G next.**
+Status: **IN PROGRESS — 012-A through 012-G complete; 012-H next.**
 
-## Role in the completion runway
-
-Phase 012 corresponds to Base Phase 006 / Daniel Jackson Concept dependence and subset analysis.
-
-Phase 010 established the current eighteen independent Concepts. Phase 011 established how included Concepts interact. Phase 012 asks which Concepts must, may, conditionally, or alternatively be co-included for coherent MUDAC application roles; which subsets are coherent; and which coherent variants are actually in scope.
+Phase 012 corresponds to Base Phase 006 / Daniel Jackson Concept dependence and subset analysis. Phase 010 established the eighteen independent Concepts; Phase 011 established composition; Phase 012 establishes which Concepts/capabilities must be co-included for coherent MUDAC application roles and which dependence-valid variants belong in scope.
 
 Architecture and implementation remain suspended.
 
@@ -20,12 +16,11 @@ synchronization / composition
   = how already-included Concepts interact
 
 extrinsic inclusion dependence
-  = contextual rule that including A requires B
-    for A's intended MUDAC application role
+  = including A requires B for A's intended MUDAC role
 
 capability-conditioned co-inclusion
-  = a named application capability requires a Concept set
-    without making every underlying Concept universally depend on that set
+  = a named capability requires a Concept set
+    without making each Concept universally depend on that set
 
 implementation dependency
   = out of scope
@@ -41,108 +36,64 @@ implementation dependency
 | 012-D | [Evaluation Structure, Responsibility, Basis & Judgment Dependence](012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) | **Complete — PASS** |
 | 012-E | [Authority Lineage, Provenance & Correctability Dependence](012-E-authority-lineage-provenance-correctability-dependence.md) | **Complete — PASS** |
 | 012-F | [Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) | **Complete — PASS** |
-| 012-G | External Representation & Release Dependence | **Next** |
-| 012-H | Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets | Planned |
+| 012-G | [External Representation & Release Dependence](012-G-external-representation-release-dependence.md) | **Complete — PASS** |
+| 012-H | Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets | **Next** |
 | 012-I | Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation | Planned |
 | 012-J | Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit | Planned |
 | 012-K | Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff | Planned |
 
-## Current canonical dependence
+## Canonical dependence through 012-G
 
-Current durable dependence lives in [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md), now **partial through 012-F**.
+Current durable authority is [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md).
 
-### Competition / actor / competitor
-
-```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-```
-
-### Evaluation
+Direct edge families now cover Competition/actor/competitor, evaluation, outcome/recognition, and externalization. The externalization family adds exactly:
 
 ```text
-Evaluation Occurrence → Team / Participation / Rubric
-Evaluation Obligation → Team / Participation / Rubric
-Scorecard             → Team / Participation / Rubric
+Publication → Export
 ```
 
-### Outcome / recognition
+while preserving:
 
 ```text
-Award               → Competition
-Award               → Team
-Outcome Declaration → Competition
+Export ↛ Publication
+Outcome Declaration ↛ Export
+Outcome Declaration ↛ Publication
+Export ↛ Outcome Declaration
+Publication ↛ Outcome Declaration
 ```
 
-## Important non-cycles
-
-The graph intentionally does **not** collapse:
+The full model therefore preserves:
 
 ```text
-Evaluation Occurrence ↔ Evaluation Obligation ↔ Scorecard
-Award ↔ Outcome Declaration
+calculated != recognized != official != public != delivered
+source authority != Export representation != Publication release != transport delivery
 ```
 
-The full application synchronizes these layers, but synchronization is not universal inclusion dependence.
-
-## Authority-profile rules
-
-012-E remains current:
+## Externalization capability rules
 
 ```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
+External Representation
+  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
 
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-Rubric/Scorecard authoritative correction or invalidation
-  ⇒ Versioning + Provenance
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Versioning and Provenance remain independent support Concepts rather than graph-wide sinks.
+A corrected successor release requires a successor/current Export plus an explicit Publication successor action; correction never silently retargets an old Publication.
 
-Outcome Declaration owns its own declaration/currentness/successor lineage and does not universally depend on Versioning or Provenance.
+Paper capture continuity does **not** universally require Export. Export is required only when a stable printable/external representation is itself part of the capability.
 
-## 012-F outcome result
+## Representative externalization subsets
 
-012-F establishes:
+Dependence-coherent examples include:
 
-- Award depends on Competition and Team;
-- Outcome Declaration depends on Competition;
-- Award does not depend on Outcome Declaration;
-- Outcome Declaration does not depend on Award;
-- Outcome Declaration does not acquire direct Scorecard/Obligation/Occurrence/Rubric edges merely because its accepted OutcomeBasis is traceable to those sources;
-- Competition does not universally depend on Award or Outcome Declaration;
-- ordinary official closeout is a capability rule requiring Competition + Outcome Declaration;
-- current rank-derived Award capability uses a Ranking Ready basis and is Division-contextual under the current Rank mechanism, without creating universal `Award → Division`;
-- official OutcomeBasis must be reconstructible, but the source Concept set is variant-specific rather than one fixed graph bundle.
+- Export without Publication;
+- official Outcome Declaration without Export/Publication;
+- official representation prepared but unreleased;
+- public non-official material using Export + Publication;
+- public official result using Outcome Declaration + Export + Publication.
 
-Derived Coverage/Aggregate/Rank/Readiness remain mechanisms, not Concept vertices.
-
-## Scope carry-forwards
-
-012-I must later decide whether to adopt coherent variants such as:
-
-- judging/operation without Award;
-- judging/operation without Outcome Declaration;
-- official outcome without Award;
-- recognition without official declaration;
-- discretionary Award without Division;
-- no-Division rank-derived recognition, with required Rank/Award policy revalidation;
-- exceptional/no-result official declarations with a different source-basis profile from ordinary ranked closeout.
-
-Dependence-valid does not mean adopted.
-
-## Design-only boundary
-
-Phase 012 does not define package/module dependencies, service/database graphs, API direction, deployment order, UI hierarchy, commercial tiers, or implementation sequencing.
-
-If subset analysis exposes a real composition gap, reopen/refine the natural Phase-011 owner. If it exposes intrinsic Concept coupling, reopen the natural Phase-010 owner.
+These are not yet adopted product variants. 012-I owns scope selection.
 
 ## Current execution posture
 
@@ -158,7 +109,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-D: COMPLETE — PASS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
-012-G: NEXT
+012-G: COMPLETE — PASS
+012-H: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -168,4 +120,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **012-G — External Representation & Release Dependence**.
+Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
