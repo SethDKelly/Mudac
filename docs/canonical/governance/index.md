@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — Daniel Jackson Concept Design, Base lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, historical preservation and routing boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, Phase 012 audit/consolidation boundary, frozen 006-D bootstrap and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, completed Phase 012 dependence/scope boundary, authorized Phase 013 mapping start gate, frozen 006-D bootstrap and suspended downstream authority.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -28,19 +28,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 009 realignment/gap map: COMPLETE — PASS
 010 foundational completion: COMPLETE — PASS
 011 composition/synchronization: COMPLETE — PASS
-012 dependence/product-family/subset/scope: IN PROGRESS
-012-A: COMPLETE — READY
-012-B: COMPLETE — PASS
-012-C: COMPLETE — PASS
-012-D: COMPLETE — PASS
-012-E: COMPLETE — PASS
-012-F: COMPLETE — PASS
-012-G: COMPLETE — PASS
-012-H: COMPLETE — PASS
-012-I: COMPLETE — PASS
-012-J: COMPLETE — PASS
-012-K: NEXT
-013 mapping: NOT STARTED
+012 dependence/product-family/subset/scope: COMPLETE — PASS
+013 mapping/interaction/representation: AUTHORIZED
+013-A: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -54,27 +44,27 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns direct inclusion dependence, whole-graph validation and PF-01 product-family scope.
+[Canonical Dependence](../dependence/) owns direct inclusion dependence, whole-graph validation and PF-01 product-family scope after Phase 012 closure.
 
 [MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects the single current variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current pre-Phase-013 mapping handoff and interpretation boundary.
+[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current mapping-entry precedence, risk register and explanation-order constraints.
 
-# 012-J audit result
-
-The pre-consolidation counterexample audit finds:
+# Phase-012 exit result
 
 ```text
 new dependence edge required: NO
 PF-01 scope change required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
+Phase-012 repair required: NO
 Phase-013 mapping revalidation required: YES
+Phase-013 entry: AUTHORIZED
 ```
 
-The mapping issue is that older Experience contracts still contain pre-convergence `Encounter` and `Official Outcome Revision` language. They are incoming mapping evidence until Phase 013 revalidates them; they cannot override newer Concept/composition/dependence authority.
+The mapping issue is that older Experience contracts still contain pre-convergence `Encounter` and `Official Outcome Revision` language. They remain incoming mapping evidence until Phase 013 revalidates them; they cannot override newer Concept/composition/dependence authority.
 
 # Explanation-order rule
 
@@ -87,6 +77,6 @@ Phase 013 may reorganize the experience while preserving material context, basis
 
 # Current handoff
 
-012-K now owns canonical reconciliation, Phase-012 consolidation, documentation-integrity review, exit decision and formal Phase-013 authorization.
+Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
 
-Proceed to **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
+013-A is a mandatory design start gate and does not authorize frontend/runtime implementation.
