@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 modularity convergence and exit.
+Current canonical Concept catalog after Phase 010 modularity convergence and Phase 012 dependence/scope closure.
 
 Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC inclusion requirements and product-family scope belong to [Canonical Dependence](../dependence/), not intrinsic Concept definitions.
 
@@ -39,7 +39,7 @@ Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, 
 
 ## Current composition authority
 
-Phase 011 is complete. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
+Phase 011 is **COMPLETE — PASS**. Current composition rules live under [Canonical Synchronizations](../synchronizations/).
 
 Preserve:
 
@@ -50,7 +50,9 @@ Preserve:
 - calculated ≠ recognized ≠ official ≠ public ≠ delivered;
 - source authority ≠ Export representation ≠ Publication release ≠ transport delivery.
 
-## Current Phase-012 authority
+## Current dependence and scope authority
+
+Phase 012 is **COMPLETE — PASS**.
 
 Direct dependence and capability-conditioned co-inclusion live in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
@@ -58,44 +60,47 @@ Whole-graph validation lives in [Whole-Graph Dependence & Subset Validation](../
 
 Current product-family scope lives in [MUDAC Product-Family Scope](../dependence/product-family-scope.md).
 
-The adopted current product variant remains:
+The adopted current product variant is:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
 PF-01 keeps all eighteen current Concepts in the supported capability envelope. This does not create intrinsic coupling and does not mean every Competition must exercise every Concept.
 
-## 012-J Concept-boundary audit
-
-012-J re-challenged the dependence/scope model with counterexamples and finds:
+Phase-012 exit confirms:
 
 ```text
 new Concept required: NO
 current Concept split/merge required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
+Phase-012 repair required: NO
 ```
 
-A real downstream mapping-currentness issue was identified: pre-existing Experience contracts still use terms such as `Encounter` and `Official Outcome Revision`.
+## Phase-013 mapping boundary
+
+A real downstream mapping-currentness issue remains: pre-existing Experience contracts still use terms such as `Encounter` and `Official Outcome Revision`.
 
 That does **not** justify restoring or changing current Concept boundaries.
 
-Phase 013 must instead reconcile each old mapping to current semantics. In particular, `Encounter` may have represented one or both of:
+Phase 013 must reconcile each old mapping to current semantics. In particular, `Encounter` may have represented one or both of:
 
 ```text
 Evaluation Occurrence
 Evaluation Obligation
 ```
 
-so a blind terminology substitution would itself risk semantic loss.
+so a blind terminology substitution risks semantic loss.
 
 [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) owns the current mapping-entry interpretation boundary.
 
 ## Current methodology handoff
 
 ```text
-012-J  COMPLETE — PASS
-012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
-013    NOT STARTED
+Phase 010 COMPLETE — PASS
+Phase 011 COMPLETE — PASS
+Phase 012 COMPLETE — PASS
+Phase 013 AUTHORIZED
+013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
 ```
 
-No current Concept owner should be modified merely to match stale Experience language during the handoff.
+No current Concept owner should be modified merely to match stale Experience language during mapping.
