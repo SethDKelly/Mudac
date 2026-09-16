@@ -1,7 +1,7 @@
 ---
 type: Canonical Product-Family Scope
 title: MUDAC Product-Family Scope
-description: "Current adopted MUDAC product-family scope after Phase 012-J audit: one full live-competition judging/outcome variant, its in-scope operating profiles, coherent but unadopted contractions, future composition-revalidation routes, and confirmed no-upstream-reopen result."
+description: "Current adopted MUDAC product-family scope after Phase 012 consolidation: one full live-competition judging/outcome variant, its in-scope operating profiles, coherent but unadopted contractions, future composition-revalidation routes, and confirmed no-upstream-reopen result."
 status: stable
 tags: [canonical, dependence, product-family, scope, variants, phase-012]
 sources:
@@ -9,13 +9,14 @@ sources:
   - resource: whole-graph-subset-validation.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
 ---
 
 # Purpose
 
-Own current **product-family scope selection** after Phase 012 whole-graph validation and counterexample audit.
+Own current **product-family scope selection** after Phase 012 whole-graph validation, counterexample audit and final consolidation.
 
 This owner answers which dependence-valid/coherent subsets are actually adopted as current MUDAC product variants.
 
@@ -38,7 +39,7 @@ Concept has no active instance in one Competition
 
 # Current adopted product family
 
-MUDAC currently adopts **one primary product/application variant**:
+MUDAC adopts exactly one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
@@ -77,7 +78,7 @@ It does not mean Competition directly depends on every Concept or that every Com
 
 # Baseline product posture
 
-PF-01 currently preserves:
+PF-01 preserves:
 
 - Competition + Team as the live competitor context;
 - Division as current competitive/ranking context;
@@ -96,9 +97,7 @@ These are **not separate product variants**.
 
 ## Award-optional Competition
 
-A Competition may define/confer no Award.
-
-Official Outcome Declaration does not require Award.
+A Competition may define/confer no Award. Official Outcome Declaration does not require Award.
 
 ## Official but non-public
 
@@ -134,15 +133,11 @@ These remain capture/channel profiles over the same semantic product variant.
 
 ## Truly no-Division product
 
-**Coherent, not adopted.**
-
-Current blinded disclosure and Rank semantics are Division-sensitive. Future adoption requires explicit policy/composition generalization; do not manufacture placeholder Division state.
+**Coherent, not adopted.** Current blinded disclosure and Rank semantics are Division-sensitive. Future adoption requires explicit policy/composition generalization; do not manufacture placeholder Division state.
 
 ## No-Panel product
 
-**Coherent, not adopted as a separate variant.**
-
-PF-01 retains reusable evaluator grouping. Operational reassignment does not remove Panel capability from product scope.
+**Coherent, not adopted as a separate variant.** PF-01 retains reusable evaluator grouping. Operational reassignment does not remove Panel capability from product scope.
 
 ## Occurrence-only product
 
@@ -158,21 +153,15 @@ PF-01 retains reusable evaluator grouping. Operational reassignment does not rem
 
 ## Completed judging-only product without Outcome Declaration
 
-**Coherent at dependence level, not adopted.**
-
-Current project purpose includes official outcome formation.
+**Coherent at dependence level, not adopted.** Current project purpose includes official outcome formation.
 
 ## Recognition-only final product
 
-**Coherent, not adopted.**
-
-Recognition does not replace official result authority.
+**Coherent, not adopted.** Recognition does not replace official result authority.
 
 ## Intentionally non-blinded competitive judging
 
-**Out of current scope.**
-
-Current purpose/policy requires bias-aware protected Team identity during ordinary judging. Future adoption requires explicit purpose/policy reassessment.
+**Out of current scope.** Current purpose/policy requires bias-aware protected Team identity during ordinary judging. Future adoption requires explicit purpose/policy reassessment.
 
 ## Authoritative evaluation without Versioning/Provenance
 
@@ -180,9 +169,7 @@ Current purpose/policy requires bias-aware protected Team identity during ordina
 
 ## No-Division rank-derived recognition
 
-**Deferred / not adopted.**
-
-Current Rank is Division-scoped; future adoption requires Rank/Ranking Readiness/Award generalization.
+**Deferred / not adopted.** Current Rank is Division-scoped; future adoption requires Rank/Ranking Readiness/Award generalization.
 
 # Product-versus-state rule
 
@@ -206,15 +193,16 @@ These are configuration, lifecycle, policy, authority, or channel profiles insid
 
 Phase 011 already models the full eighteen-Concept application family selected here and preserves the necessary distinctions among identity/participation/access, Panel/occurrence/responsibility, Draft/authority, calculation/recognition/officiality, and source/Export/Publication/delivery.
 
-# 012-J counterexample audit
+# Final Phase-012 audit
 
-PF-01 survives the final pre-consolidation counterexample audit unchanged.
+PF-01 survives counterexample audit and final canonical reconciliation unchanged.
 
 ```text
 new direct edge required: NO
 PF-01 scope change required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
+Phase-012 repair required: NO
 ```
 
 Representative challenges resolved without scope change include:
@@ -230,7 +218,7 @@ Representative challenges resolved without scope change include:
 - exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
 - paper capture without universal Export dependence.
 
-The audit identifies mapping revalidation, not scope repair, as the next concern. See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+The remaining concern is mapping revalidation, not scope repair. See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
 # Future variant revalidation routes
 
@@ -238,12 +226,7 @@ If current unadopted contractions are promoted later, revalidate the natural own
 
 ## No-Division
 
-Revalidate:
-
-- anonymity/disclosure policy;
-- occurrence presented-context composition;
-- Division-scoped Rank;
-- rank-derived Award/outcome composition.
+Revalidate anonymity/disclosure policy, occurrence presented-context composition, Division-scoped Rank, Ranking Readiness, and rank-derived Award/outcome composition.
 
 ## No-Panel
 
@@ -265,13 +248,14 @@ Revisit P-02/P-08 and anonymity/disclosure policy before composition.
 
 Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping of ranking context.
 
-# Current Phase-012 handoff
+# Methodology handoff
 
 ```text
-012-I  COMPLETE — PASS
-012-J  COMPLETE — PASS
-012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
-013    NOT STARTED
+012-I     COMPLETE — PASS
+012-J     COMPLETE — PASS
+012-K     COMPLETE — PASS
+Phase 012 COMPLETE — PASS
+Phase 013 AUTHORIZED — 013-A NEXT
 ```
 
-012-K should consolidate this scope decision and formalize Phase-013 entry only if the Phase-012 canonical audit remains clean.
+Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**. Phase 013 must preserve PF-01 as the sole adopted product variant unless mapping exposes a genuine upstream scope defect.
