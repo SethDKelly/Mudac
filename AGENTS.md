@@ -7,11 +7,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 1. Start at [`docs/index.md`](docs/index.md).
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md) and [`Downstream Architecture & Implementation Authority Quarantine`](docs/canonical/governance/downstream-authority-quarantine.md).
 3. Read [Project Context & Purpose](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
-4. Use [012-A](docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics; treat [012-B](docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) as provisional/candidate evidence only.
-5. Use 012-C through 012-G for family-local dependence decisions.
-6. Use [012-H](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) and [Whole-Graph Dependence & Subset Validation](docs/canonical/dependence/whole-graph-subset-validation.md) for integrated closure/optionality.
-7. Use [012-I](docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) and [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for current adopted scope.
-8. Use canonical synchronization owners for interaction rules; dependence/scope never replaces composition.
+4. Use [012-H](docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) for integrated whole-graph validation.
+5. Use [012-I](docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) and [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01 scope.
+6. Use [012-J](docs/012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md) and [Phase 013 Mapping Entry Authority](docs/canonical/experience/phase-013-entry-handoff.md) for the current pre-mapping audit/handoff.
+7. Use canonical synchronization owners for interaction rules; dependence/scope never replaces composition.
+8. Treat older files under `docs/canonical/experience/` as **incoming mapping evidence pending Phase-013 revalidation** where they conflict with newer Concept/composition/dependence/scope authority.
 9. Load older phase records only when rationale, alternatives, chronology or evidence materially help the current methodology question.
 
 ## Current methodology posture
@@ -39,7 +39,9 @@ implementation authorization: NOT YET
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
 012-I: COMPLETE — PASS
-012-J: NEXT
+012-J: COMPLETE — PASS
+012-K: NEXT
+013: NOT STARTED
 ```
 
 ## Current Concept authority
@@ -48,7 +50,7 @@ The canonical catalog contains eighteen Concepts:
 
 Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
 
-`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
+`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters. Do not restore them because older UX material still uses those terms.
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context. Recovery/Continuity remains a cross-cutting purpose obligation.
 
@@ -72,7 +74,7 @@ Governing automation rule:
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-## Dependence semantics
+## Dependence and scope semantics
 
 ```text
 intrinsic Concept dependence
@@ -85,11 +87,13 @@ extrinsic inclusion dependence
   = including A requires B for A's intended MUDAC role
 
 capability-conditioned co-inclusion
-  = a named capability requires a Concept set
-    without making each Concept universally depend on that set
+  = named capability requires a Concept set without universal reverse edges
 
 product-family scope
-  = which coherent capability envelope is deliberately supported
+  = deliberately supported capability envelope
+
+mapping / representation
+  = how current meaning becomes perceivable/actionable
 
 implementation dependency
   = out of scope
@@ -97,93 +101,73 @@ implementation dependency
 
 Never derive Concept dependence or product scope mechanically from synchronization, traceability, imports, schemas, service calls, UI layout, deployment topology, current workflow, or implementation convenience.
 
-## Whole-graph validation
+## Current PF-01 scope
 
-012-H establishes:
-
-```text
-whole graph: ACYCLIC
-mutual-dependence / co-inclusion cycles: NONE
-new direct edge required by closure: NONE
-```
-
-Competition is the only universal in-scope family anchor. Every other Concept is globally optional across the mathematical family; this does not mean it is omitted from the selected product variant.
-
-## Current product-family scope
-
-MUDAC currently adopts one primary product/application variant:
+MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen current Concepts in the supported capability envelope.
+PF-01 keeps all eighteen Concepts in the supported capability envelope. Product support does not mean every Competition actively uses every capability.
 
-Do not confuse product support with active use in one Competition.
+Profiles inside PF-01 include Award-optional outcome, official-but-non-public, Export without Publication, public non-official release, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed capture.
 
-Examples of profiles inside PF-01 rather than separate product variants:
+Coherent reduced subsets remain future design options, not current editions.
 
-- Award absent in a Competition;
-- official outcome without Award;
-- official-but-non-public;
-- Export prepared but unpublished;
-- public non-official material;
-- public official-result release;
-- exceptional/no-result official disposition;
-- paper/electronic/mixed capture;
-- Draft versus authoritative states;
-- current versus Affected/Superseded authority.
+## 012-J counterexample result
 
-## Current unadopted/deferred contractions
+The Phase-012 model survives the audit:
 
-Preserve these as coherent design knowledge, not current supported editions:
+```text
+new direct edge required: NO
+PF-01 scope change required: NO
+Phase-010 reopen required: NO
+Phase-011 reopen required: NO
+Phase-013 mapping revalidation required: YES
+```
 
-- truly no-Division product;
-- no-Panel product;
-- occurrence-only product;
-- obligation-only product;
-- working Scorecard-only product;
-- completed judging-only product without Outcome Declaration;
-- recognition-only final product;
-- no-Division rank-derived recognition.
+The mapping carry-forward is real but downstream: earlier Experience contracts still contain `Encounter` and `Official Outcome Revision` language.
 
-No-Alias competitive judging is outside current scope under the bias-control baseline.
+## Mapping-entry authority
 
-Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
+Until Phase 013 revalidates the Experience corpus:
 
-## Composition-revalidation posture
+```text
+Purpose / Concepts / Synchronizations / Dependence / PF-01 scope
+  = current conceptual authority
 
-No immediate Phase-011 reopening is required for PF-01. The selected product variant is the same complete application family Phase 011 synchronized.
+Phase 013 Mapping Entry Authority
+  = current mapping-entry authority
 
-If an unadopted contraction is promoted later, use the revalidation routes in [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) rather than adding false dependence edges.
+older Experience contracts
+  = incoming mapping evidence/candidates
+```
 
-## 012-J discipline
+Dependence informs intelligibility but not UI order:
 
-012-J audits the selected scope rather than inventing new product variants by default.
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
 
-It must test:
-
-- PF-01 against counterexamples and current purpose evidence;
-- whether any unadopted/deferred contraction reveals a hidden Phase-010 or Phase-011 defect;
-- whether any scope/profile relies on an unstated dependence edge;
-- dependence-implied explanation order for Phase 013;
-- mapping/representation issues that belong in Phase 013 rather than Phase 012;
-- final reopen/no-reopen posture before 012-K consolidation.
+Do not run a blind terminology replacement. `Encounter` may have represented either/both Evaluation Occurrence and Evaluation Obligation meanings; Phase 013 must remap semantics explicitly.
 
 ## Reopening rules
 
 - unjustified purpose/scope role → revisit the natural Phase-010 project/purpose owner;
 - intrinsic Concept coupling → reopen the natural Phase-010 Concept owner;
-- adopted subset exposes missing composition → reopen/refine the natural Phase-011 synchronization owner;
+- missing/invalid application action or synchronization → reopen/refine Phase 011;
+- incorrect dependence/scope assumption → reopen Phase 012;
 - derived mechanism appears to require Concept status → review upstream classification first;
-- user-visible mapping issue without inclusion change → carry to Phase 013.
+- terminology/representation issue only → resolve in Phase 013.
 
 ## Design-only rules for Phases 012–017
 
 Do not resume implementation, derive Concept dependence from source/package/service/database structure, turn the dependence graph into architecture or implementation order, or design commercial tiers from Concept subsets.
 
-Keep current meaning in canonical owners and exploratory/rejected reasoning in numbered phase history.
+Do not let existing UI, route, component or stale Experience structure become Concept authority.
 
 ## Current next task
 
 Proceed to:
 
-> **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**
+> **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**
