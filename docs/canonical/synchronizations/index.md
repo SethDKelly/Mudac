@@ -72,7 +72,7 @@ This allows guards, derived recalculation, defined currentness/affectedness reac
 
 ## Phase 011 exit
 
-[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the final exit decision:
+[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the Phase-011 exit decision:
 
 ```text
 PHASE 011                     COMPLETE — PASS
@@ -83,20 +83,26 @@ UNRESOLVED ACTION CLASS       NONE
 HIDDEN COORDINATOR REQUIRED   NO
 SEMANTIC CYCLE BLOCKER        NONE
 PHASE 010 REOPEN REQUIRED     NO
-PHASE 012 ENTRY               AUTHORIZED
-IMPLEMENTATION READINESS      NOT READY
 ```
 
-## Phase 012 boundary
+## Current downstream methodology boundary
 
-The next methodology phase is:
+Phase 012 has now completed with **PASS**. It established contextual inclusion dependence and selected PF-01 without changing current synchronization semantics or requiring a Phase-011 reopen.
 
-> **Phase 012 — Concept Dependence, Product-Family, Subset & Scope Analysis**
+Phase 013 is authorized to map the current application action surface and Concept state into user-visible semantics.
 
-Phase 012 asks **which Concepts must or may be co-included in coherent application/product variants**. Phase 011 answered **how Concepts interact when included together**.
+For mapping entry use:
 
-A synchronization edge is therefore evidence for Phase 012, not automatically an inclusion-dependence edge.
+- [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
+- [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
-Recommended next subgroup:
+The mapping phase must use these synchronization owners—not the archival adapter—as the source for application-action meaning.
 
-> **012-A — Dependence Scope, Subset Semantics, Product-Family Questions & Subphase Planning**
+## Current handoff
+
+```text
+Phase 011 COMPLETE — PASS
+Phase 012 COMPLETE — PASS
+Phase 013 AUTHORIZED
+013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+```
