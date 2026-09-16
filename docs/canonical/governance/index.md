@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — Daniel Jackson Concept Design, Base lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, historical preservation and routing boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, active Phase 012 scope-selection boundary, frozen 006-D bootstrap and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, Phase 012 scope-selection result, frozen 006-D bootstrap and suspended downstream authority.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -37,7 +37,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
 012-H: COMPLETE — PASS
-012-I: NEXT
+012-I: COMPLETE — PASS
+012-J: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -51,62 +52,44 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns direct inclusion dependence, capability-conditioned co-inclusion, and the current whole-graph validation result.
+[Canonical Dependence](../dependence/) owns direct inclusion dependence, whole-graph validation and product-family scope.
 
-[Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md) establishes:
+[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects:
 
-```text
-whole graph: ACYCLIC
-co-inclusion cycles: NONE
-new direct edge required: NONE
-```
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Competition is the only universal in-scope family anchor. Every other Concept is globally optional, while named capabilities may require particular Concepts.
+as the single current adopted product/application variant.
 
-# Current capability posture
+PF-01 keeps all eighteen Concepts in the supported capability envelope without requiring every Competition to exercise every capability.
 
-Examples include:
+# In-scope profiles
 
-```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
+Profiles inside PF-01 include:
 
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
-```
-
-Current rank-derived recognition remains Division-contextual without making all Awards Division-dependent.
-
-# Current scope posture
-
-012-H confirms the model contains multiple coherent contractions and alternatives. Among them:
-
-- single-cohort/no-Division;
-- ad-hoc/no-Panel;
-- occurrence-history, responsibility-only and working-Scorecard evaluation contractions;
-- official outcome without Award;
-- recognition without official declaration;
-- judging/operation without Outcome Declaration;
+- Award-optional official outcome;
+- official-but-non-public state;
 - Export without Publication;
-- official-but-non-public;
-- public non-official material.
+- controlled public non-official material;
+- public official-result release;
+- exceptional/no-result official disposition;
+- paper/electronic/mixed continuity.
 
-Conditional cases include no-Alias judging outside the current blinded profile, working-only evaluation without Versioning/Provenance, and possible no-Division ranked recognition subject to policy/composition generalization.
+These are not separate product variants.
 
-```text
-dependence-valid
-  != meaningful MUDAC family member
-  != adopted in-scope variant
-```
+# Unadopted/deferred contractions
+
+Coherent reductions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only, completed judging-only and no-Division ranked recognition remain design knowledge but are not current supported products.
+
+No-Alias competitive judging is outside the current fairness/disclosure baseline. Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
+
+# Composition result
+
+No immediate Phase-011 reopening is required for PF-01. Current composition already models the full selected application family and the supported operating profiles.
+
+Future promotion of a deferred contraction must revalidate its natural Phase-011/policy owners rather than changing dependence to match incumbent composition.
 
 # Current handoff
 
-012-I now owns deliberate product-family scope selection and variant-specific Phase-011 composition/policy revalidation for any alternative subset MUDAC chooses to support.
+012-J now audits the selected PF-01 scope against counterexamples, upstream-reopen criteria, dependence-implied explanation order, and Phase-013 mapping concerns.
 
-Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
+Proceed to **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
