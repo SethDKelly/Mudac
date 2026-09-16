@@ -14,9 +14,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current Phase 012 direct dependence, whole-graph validation and selected PF-01 scope.
+* [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and selected PF-01 scope after Phase 012 closure.
 * [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md) — adopted PF-01 variant, profiles and deferred contractions.
-* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — mapping-entry precedence and revalidation risks prepared by 012-J.
+* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — authorized mapping-entry precedence and revalidation risks.
 * [Experience](canonical/experience/) — pre-Phase-013 mapping evidence plus the current entry handoff.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
@@ -26,9 +26,11 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), and active [Phase 012](012-concept-dependence-product-family-subset-scope/).
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), and [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md).
 
-Use 012-C through 012-G for family-local dependence, [012-H](012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) for whole-graph validation, [012-I](012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) for scope selection, and [012-J](012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md) for the final counterexample/mapping-handoff audit before consolidation.
+Phase 012 is closed. Its final consolidation record is [012-K](012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md).
+
+Older Experience contracts remain incoming mapping evidence pending Phase-013 revalidation.
 
 # Current methodology state
 
@@ -37,19 +39,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
-012: IN PROGRESS
-012-A: COMPLETE — READY
-012-B: COMPLETE — PASS
-012-C: COMPLETE — PASS
-012-D: COMPLETE — PASS
-012-E: COMPLETE — PASS
-012-F: COMPLETE — PASS
-012-G: COMPLETE — PASS
-012-H: COMPLETE — PASS
-012-I: COMPLETE — PASS
-012-J: COMPLETE — PASS
-012-K: NEXT
-013: NOT STARTED
+012: COMPLETE — PASS
+013: AUTHORIZED
+013-A: NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -59,17 +51,17 @@ implementation authorization: NOT YET
 
 # Current product-family scope
 
-MUDAC currently adopts one primary product/application variant:
+MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
 PF-01 keeps all eighteen current Concepts in the supported product capability envelope. Concept support does not mean every Competition actively exercises every capability.
 
-# 012-J audit posture
+# Phase-012 exit posture
 
-The Phase-012 model survives counterexample audit without a new edge, scope change or Phase-010/011 reopening.
+The completed Phase-012 model survives whole-graph and counterexample audit without a new edge, scope change or Phase-010/011 reopening.
 
-The remaining carry-forward is mapping currentness: earlier Experience material includes superseded `Encounter` and `Official Outcome Revision` language. Until Phase 013 revalidates that corpus, current Concept/synchronization/dependence/PF-01 authority takes precedence.
+The remaining carry-forward is mapping currentness: earlier Experience material includes superseded `Encounter` and `Official Outcome Revision` language. Current Concept/synchronization/dependence/PF-01 authority takes precedence while Phase 013 revalidates that corpus.
 
 Dependence informs explanation, not UI sequence:
 
@@ -78,6 +70,14 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
+# Phase-013 start gate
+
+Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
+
+013-A must validate incoming authority, complete the Base Phase-007 mapping-coverage assessment, identify actor/affected-party perspectives and risk hotspots, and derive the MUDAC-specific Phase-013 subgroup sequence before substantive mapping.
+
+It must not select frontend/runtime implementation architecture.
+
 # Completion runway
 
 ```text
@@ -85,9 +85,9 @@ synchronization chain != mandatory wizard
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-K NEXT
+012 dependence / product family / subsets / scope                      COMPLETE — PASS
   ↓
-013 mapping / representation
+013 mapping / representation                                           AUTHORIZED — 013-A NEXT
   ↓
 014 familiarity / reuse / catalog refinement
   ↓
@@ -99,5 +99,3 @@ synchronization chain != mandatory wizard
 ```
 
 A successful future Phase 017 may authorize only a separate downstream architecture/engineering re-entry; it does not automatically reactivate prior architecture or implementation planning.
-
-The immediate next task is **012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff**.
