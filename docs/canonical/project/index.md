@@ -2,15 +2,22 @@
 
 Current representation-independent project/intake and purpose knowledge for MUDAC.
 
-- [MUDAC Project Mandate & Current Context](mandate-context.md) — current mandate, actors/affected parties, capability scope/non-goals, operational constraints, converged Concept context and remaining design questions.
-- [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) — product purpose, actor needs, nine purpose obligations, success situations, tensions and traceability to the current Concept catalog.
+- [MUDAC Project Mandate & Current Context](mandate-context.md) — current mandate, actors/affected parties, capability scope/non-goals, operational constraints and Concept context.
+- [MUDAC Purpose, Needs, Success & Tensions](purpose-needs-success-tensions.md) — product purpose, actor needs, nine purpose obligations, success situations, tensions and Concept traceability.
 
-Phase 010 completed the foundational Concept Design work needed before composition and established the current eighteen-Concept catalog.
+Phase 010 established the current purpose baseline and eighteen-Concept catalog. Phases 011 and 012 subsequently completed composition and product-family/dependence analysis without reopening that baseline.
 
-Phase 011 is active. [011-B](../../011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md) owns the complete legacy/action baseline. Current family records through [011-H](../../011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md) now establish lifecycle/access, occurrence/responsibility, evaluation-authority/capture, temporal correction/invalidation/successor, internal outcome/Award/finalization/declaration, and external representation/release composition.
+Current downstream conceptual authority is routed through:
 
-Current externalization authority preserves the project-purpose requirements for historical truth, explainability and bias-sensitive disclosure: Export binds exact source/purpose/audience meaning; actor Access does not set audience disclosure; Export currency remains separate from Publication release state; generation never implies release; source correction never rewrites the historical representation/release; and withdrawal/supersession cannot make prior external exposure not have happened.
+- [Canonical Concepts](../concepts/);
+- [Canonical Synchronizations](../synchronizations/);
+- [Canonical Dependence](../dependence/);
+- [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
-The current Concept catalog is owned by [Canonical Concepts](../concepts/), and current synchronization-family authority is routed through [Canonical Synchronizations](../synchronizations/).
+Phase 013 is **IN PROGRESS**. [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the mapping start gate with READY.
 
-Current methodology handoff: **Phase 011 in progress; 011-A/B/C/D/E/F/G/H complete; 011-I next**.
+The current project-purpose baseline remains representation-independent input to mapping; Phase 013 must not rewrite purpose merely to fit an incumbent interface.
+
+Current methodology handoff:
+
+> **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**
