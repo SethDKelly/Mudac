@@ -1,12 +1,13 @@
 # Concept Dependence & Product-Family Inclusion
 
-Current canonical knowledge for **extrinsic Concept inclusion dependence** and material **capability-conditioned co-inclusion** in the MUDAC application family.
+Current canonical knowledge for **extrinsic Concept inclusion dependence**, material **capability-conditioned co-inclusion**, and whole-graph subset validation in the MUDAC application family.
 
-Phase 012 owns this knowledge. It is distinct from intrinsic Concept specifications, Phase-011 synchronization/composition, and downstream implementation dependency.
+Phase 012 owns this knowledge. It remains distinct from intrinsic Concept specifications, Phase-011 synchronization/composition, and downstream implementation dependency.
 
-## Current owner
+## Current owners
 
-- [MUDAC Application-Family Concept Dependence](application-family-dependence.md) — current direct edges, transitive consequences, explicit non-edges, capability rules, representative subsets, and scope carry-forwards.
+- [MUDAC Application-Family Concept Dependence](application-family-dependence.md) — current direct edges, universal non-edges and capability-conditioned rules established through family-local analysis.
+- [Whole-Graph Dependence & Subset Validation](whole-graph-subset-validation.md) — current whole-model acyclicity, transitive closure, optionality, minimal closures, unfamiliar-subset validation and the scope-decision set for 012-I.
 
 ## Current methodology state
 
@@ -18,10 +19,23 @@ Phase 012 owns this knowledge. It is distinct from intrinsic Concept specificati
 012-E  COMPLETE — PASS
 012-F  COMPLETE — PASS
 012-G  COMPLETE — PASS
-012-H  NEXT — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets
+012-H  COMPLETE — PASS
+012-I  NEXT — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation
 ```
 
-All Concept-family dependence analysis is now complete through 012-G. 012-H validates the whole graph and capability model.
+## Whole-graph result
+
+012-H validates the current model without adding a new direct edge:
+
+```text
+whole direct graph: ACYCLIC
+strongly connected Concept groups > 1: NONE
+new direct edge required by closure: NONE
+```
+
+Competition is the only universal **in-scope MUDAC family anchor**. Every other Concept is globally optional, while named capabilities may make particular Concepts mandatory.
+
+`Award → Competition` is reachability-redundant through `Award → Team → Competition`, but remains semantically retained because recognition scope and recipient type are distinct Award-role reasons.
 
 ## Direct edge families
 
@@ -42,22 +56,6 @@ Award               → Team
 Outcome Declaration → Competition
 
 Publication → Export
-```
-
-## Key separations
-
-```text
-Evaluation Occurrence / Evaluation Obligation / Scorecard
-  are not a mandatory co-inclusion group
-
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
-
-Export              ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export              ↛ Outcome Declaration
-Publication         ↛ Outcome Declaration
 ```
 
 ## Capability-conditioned rules
@@ -82,36 +80,28 @@ Public Official-Result Release
   ⇒ Outcome Declaration + Export + Publication
 ```
 
-Current Rank is Division-scoped, so rank-derived recognition is Division-contextual without making `Award → Division` universal.
+Current rank-derived recognition is Division-contextual because current Rank is Division-scoped, without creating universal `Award → Division`.
 
-Paper capture continuity does not universally require Export. Export is required when a stable printable/external representation is itself part of the capability.
+## Validity versus scope
 
-## Current scope rule
+```text
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
+```
 
-Every adopted in-scope MUDAC variant retains Competition as the live student-competition context. This scope rule does not imply direct `Competition → every optional capability` edges.
+012-H confirms many unfamiliar reductions are coherent, including single-cohort/no-Division, ad-hoc/no-Panel, judging-only, official-without-Award, official-but-non-public, Export-without-Publication, and public non-official material. Publication-without-Export remains invalid.
+
+Working-only evaluation may omit Versioning/Provenance; authoritative evaluation may not.
+
+Paper versus electronic capture is a channel profile, not a Concept-subset axis.
 
 ## Interpretation boundary
 
-```text
-intrinsic Concept dependence
-  = upstream Concept-boundary defect
+Do not infer Concept edges from implementation structure, current workflow, UI layout, traceability, synchronized action, or deployment topology.
 
-synchronization / composition
-  = how included Concepts interact
-
-extrinsic inclusion dependence
-  = which Concepts must be co-included for the intended MUDAC role
-
-capability-conditioned co-inclusion
-  = a named capability requires a Concept set
-    without making each Concept universally depend on that set
-
-implementation dependency
-  = out of scope
-```
-
-Do not infer edges from implementation structure, workflow, UI layout, traceability, or frequent synchronization alone.
+Do not interpret optionality as low value. It means only that at least one coherent family variant omits the Concept.
 
 ## Next
 
-Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
