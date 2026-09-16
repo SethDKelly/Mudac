@@ -4,7 +4,7 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A through 012-F complete; 012-G next.**
+**In Progress — 012-A through 012-G complete; 012-H next.**
 
 ## Records
 
@@ -14,79 +14,48 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 - [012-D — Evaluation Structure, Responsibility, Basis & Judgment Dependence](012-D-evaluation-structure-responsibility-basis-judgment-dependence.md) — **Complete — PASS**.
 - [012-E — Authority Lineage, Provenance & Correctability Dependence](012-E-authority-lineage-provenance-correctability-dependence.md) — **Complete — PASS**.
 - [012-F — Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) — **Complete — PASS**.
-- **012-G — External Representation & Release Dependence** — Next.
-- 012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets — Planned.
+- [012-G — External Representation & Release Dependence](012-G-external-representation-release-dependence.md) — **Complete — PASS**.
+- **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets** — Next.
 - 012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation — Planned.
 - 012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit — Planned.
 - 012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff — Planned.
 
 ## Current canonical owner
 
-[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current accepted dependence and capability-conditioned co-inclusion, partial through **012-F**.
+[MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) owns current direct dependence and capability-conditioned co-inclusion through 012-G.
 
-## Current direct edge families
-
-```text
-Team          → Competition
-Participation → Competition
-Participation → Identity
-Division      → Team
-Alias         → Team
-Panel         → Participation
-
-Evaluation Occurrence → Team / Participation / Rubric
-Evaluation Obligation → Team / Participation / Rubric
-Scorecard             → Team / Participation / Rubric
-
-Award               → Competition
-Award               → Team
-Outcome Declaration → Competition
-```
-
-## 012-E authority profile
+The final family-local edge added by 012-G is:
 
 ```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
-
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
+Publication → Export
 ```
 
-Versioning and Provenance are not universal sinks or a mandatory pair outside those named authority capabilities.
-
-## 012-F outcome result
-
-Recognition and official declaration remain separate capability layers:
+Important externalization non-edges are:
 
 ```text
-Award               ↛ Outcome Declaration
-Outcome Declaration ↛ Award
+Export ↛ Publication
+Outcome Declaration ↛ Export
+Outcome Declaration ↛ Publication
+Export ↛ Outcome Declaration
+Publication ↛ Outcome Declaration
 ```
-
-Outcome Declaration also does not acquire direct Scorecard, Evaluation Obligation, Evaluation Occurrence, Rubric, or Team edges merely because an ordinary declared basis can be traced to those inputs.
 
 Current capability rules include:
 
 ```text
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
+External Representation
+  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
 
-Rank-Derived Award capability
-  ⇒ Award + legitimate Ranking Ready supplied Rank basis
+Public Official-Result Release
+  ⇒ Outcome Declaration + Export + Publication
 ```
 
-Current Rank is Division-scoped, so rank-derived Award capability is Division-contextual under present policy/mechanisms without making `Award → Division` universal.
+Official-but-non-public operation, Export-without-Publication, and public non-official representation are all dependence-coherent. Publication-without-Export is not.
 
-Official OutcomeBasis must be reconstructible, but its source Concept set is variant-specific.
+Paper capture continuity does not itself require Export; a stable printable/external representation does.
 
 ## Immediate handoff
 
-012-G now owns Export, Publication, external-representation and release dependence while preserving:
+012-H now owns whole-graph validation across every family resolved in 012-C through 012-G. It must test transitive closure, co-inclusion/cycles, optionality, minimal meaningful subsets, unfamiliar subsets, redundant edges, and consistency between direct edges and capability-conditioned rules.
 
-- official ≠ public;
-- source authority ≠ Export representation ≠ Publication release;
-- Award and Outcome Declaration independence;
-- explicit release authority rather than automatic publication.
-
-Proceed to **012-G — External Representation & Release Dependence**.
+Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
