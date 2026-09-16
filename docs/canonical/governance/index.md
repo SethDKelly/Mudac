@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md) — Daniel Jackson Concept Design, Base lifecycle, OKF v0.2, MUDAC terminology and downstream realization layers.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md) — current-owner precedence, one-owner discipline, historical preservation and routing boundaries.
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, active Phase 012 dependence/subset boundary, frozen 006-D bootstrap and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened Concept Design posture, active Phase 012 scope-selection boundary, frozen 006-D bootstrap and suspended downstream authority.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md) — prevents premature downstream material from constraining reopened Concept Design.
 
 # Retrieval and change governance
@@ -36,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,25 +51,21 @@ implementation authorization: NOT YET
 
 [Canonical Synchronizations](../synchronizations/) owns application composition after Phase 011.
 
-[Canonical Dependence](../dependence/) owns current Phase-012 direct dependence and capability-conditioned co-inclusion through 012-G.
+[Canonical Dependence](../dependence/) owns direct inclusion dependence, capability-conditioned co-inclusion, and the current whole-graph validation result.
 
-The externalization result is:
-
-```text
-Publication → Export
-```
-
-with these important non-edges:
+[Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md) establishes:
 
 ```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
+whole graph: ACYCLIC
+co-inclusion cycles: NONE
+new direct edge required: NONE
 ```
 
-Current capability rules include:
+Competition is the only universal in-scope family anchor. Every other Concept is globally optional, while named capabilities may require particular Concepts.
+
+# Current capability posture
+
+Examples include:
 
 ```text
 Authoritative Rubric Basis
@@ -80,29 +77,36 @@ Authoritative Scorecard Evidence
 Ordinary Official Closeout
   ⇒ Competition + Outcome Declaration
 
-Rank-Derived Award capability
-  ⇒ Award + legitimate Ranking Ready supplied Rank basis
-
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
-
 Public Official-Result Release
   ⇒ Outcome Declaration + Export + Publication
 ```
 
-Paper capture continuity does not universally require Export. Publication means release authority, not delivery success.
+Current rank-derived recognition remains Division-contextual without making all Awards Division-dependent.
 
 # Current scope posture
 
-- Competition remains the family anchor for adopted MUDAC variants.
-- Division, Panel, Award, Outcome Declaration, Export and Publication can be optional in coherent variants when their capabilities are absent.
-- Evaluation Occurrence, Evaluation Obligation and Scorecard are not a universal co-inclusion group.
-- Working Rubric/Scorecard profiles may omit Versioning/Provenance but cannot claim authoritative evaluation.
-- Official-but-non-public, Export-without-Publication, and public non-official representation are dependence-coherent.
-- Publication-without-Export is invalid in the current MUDAC application family.
+012-H confirms the model contains multiple coherent contractions and alternatives. Among them:
+
+- single-cohort/no-Division;
+- ad-hoc/no-Panel;
+- occurrence-history, responsibility-only and working-Scorecard evaluation contractions;
+- official outcome without Award;
+- recognition without official declaration;
+- judging/operation without Outcome Declaration;
+- Export without Publication;
+- official-but-non-public;
+- public non-official material.
+
+Conditional cases include no-Alias judging outside the current blinded profile, working-only evaluation without Versioning/Provenance, and possible no-Division ranked recognition subject to policy/composition generalization.
+
+```text
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
+```
 
 # Current handoff
 
-012-H now owns whole-graph transitivity, co-inclusion/cycles, optionality, minimal meaningful subsets, unfamiliar subsets, redundant-edge review, and consistency between direct edges and capability-conditioned rules.
+012-I now owns deliberate product-family scope selection and variant-specific Phase-011 composition/policy revalidation for any alternative subset MUDAC chooses to support.
 
-Proceed to **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
