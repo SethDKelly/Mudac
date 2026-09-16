@@ -14,17 +14,15 @@ This index is the canonical navigation entry point for current MUDAC composition
 6. [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md) — exact-source Export generation/currentness/revalidation, audience disclosure and explicit Publication release/withdrawal/succession.
 7. [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md) — final D/C/P/S/X action surface, cross-family chaining, automation limits, cycle prevention, over/under-synchronization and application synergy.
 
-The first six documents own semantically cohesive composition families. The seventh constrains and composes them at whole-application scope; it does not replace their family-specific rules.
+The first six documents own cohesive composition families. The seventh constrains/composes them at whole-application scope.
 
 ## Historical evidence
 
-[Historical Concept Synchronization Contracts — Pre-Phase-011](concept-synchronizations.md) is an archival routing adapter to the superseded sixteen-contract corpus. It is **not current authority**. The full former body remains available in Git history at the Phase-011 exit entry baseline `f5cdd4a231861cf09ac2e5eee824104a70b8a477`.
+[Historical Concept Synchronization Contracts — Pre-Phase-011](concept-synchronizations.md) is an archival routing adapter and **not current authority**.
 
-Numbered records under [`docs/011-concept-composition-synchronization/`](../../011-concept-composition-synchronization/) preserve phase rationale, alternatives, audits and provenance. Current rules belong to the canonical owners above.
+Current rules belong to the seven owners above.
 
 ## Whole-application interpretation rules
-
-Current composition preserves these distinctions:
 
 ```text
 Identity != Participation != Access
@@ -40,69 +38,41 @@ calculated != official != public != delivered
 source authority != Export representation != Publication release != transport delivery
 ```
 
-Additional rules:
-
-- terminal Evaluation Obligations never reopen;
-- missing evidence is never converted to zero;
-- recalculation never silently moves Award authority;
-- an Affected Outcome Declaration remains the latest declared authority until explicit successor confirmation;
-- Export generation never implies Publication;
-- Publication withdrawal/supersession preserves historical release;
-- one Identity with multiple Participations never receives unioned capabilities;
-- Versioning and Provenance generic actions remain composition-only;
-- no synchronization owns canonical domain state.
+Additional rules include terminal obligations never reopening, missing evidence never becoming zero, recalculation never silently moving Award authority, affected declarations remaining historically declared until explicit successor confirmation, Export generation never implying Publication, and no synchronization owning canonical domain state.
 
 ## Application action classes
 
-The current MUDAC action surface uses:
+```text
+D — direct application action
+C — coordinated application action
+P — composition-only participant
+S — system-triggered conceptual reaction
+X — intentionally unavailable generic action
+```
 
-- **D** — direct application action;
-- **C** — coordinated application action;
-- **P** — composition-only participant;
-- **S** — system-triggered conceptual reaction;
-- **X** — intentionally unavailable generic action.
-
-No unresolved `U` class remains. See [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md) for the final per-Concept classification.
-
-## Automation rule
+No unresolved `U` remains.
 
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-This allows guards, derived recalculation, defined currentness/affectedness reactions and bounded consequences of an already-authorized application action. It does not automatically author/finalize Judge judgment, create successor responsibility, move Awards, Finalize Competition, establish/confirm official declarations, generate replacement Exports, publish/withdraw/supersede releases, or restore prior capability after exceptional resume.
+## Mapping boundary
 
-## Phase 011 exit
+Phase 012 completed with PASS and selected PF-01 without requiring a Phase-011 reopen.
 
-[011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff](../../011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md) records the Phase-011 exit decision:
+Phase 013 is now **IN PROGRESS**. [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the mapping start gate with READY.
 
-```text
-PHASE 011                     COMPLETE — PASS
-LEGACY CONTRACTS 01–16        FULLY DISPOSITIONED
-CO-01 THROUGH CO-12           CLOSED
-R-01 THROUGH R-12             CLOSED
-UNRESOLVED ACTION CLASS       NONE
-HIDDEN COORDINATOR REQUIRED   NO
-SEMANTIC CYCLE BLOCKER        NONE
-PHASE 010 REOPEN REQUIRED     NO
-```
+Phase 013 must map this application action surface rather than the archival adapter or an arbitrary union of Concept actions.
 
-## Current downstream methodology boundary
-
-Phase 012 has now completed with **PASS**. It established contextual inclusion dependence and selected PF-01 without changing current synchronization semantics or requiring a Phase-011 reopen.
-
-Phase 013 is authorized to map the current application action surface and Concept state into user-visible semantics.
-
-For mapping entry use:
+For current mapping entry use:
 
 - [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
 - [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
-
-The mapping phase must use these synchronization owners—not the archival adapter—as the source for application-action meaning.
 
 ## Current handoff
 
 ```text
 Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
-Phase 013 AUTHORIZED
-013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+Phase 013 IN PROGRESS
+013-A COMPLETE — READY
+013-B NEXT — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline
 ```
