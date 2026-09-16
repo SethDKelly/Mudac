@@ -14,7 +14,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
 * [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current accepted Phase 012 direct dependence and capability-conditioned co-inclusion through 012-G.
+* [Dependence](canonical/dependence/) — current Phase 012 direct dependence, capability-conditioned co-inclusion and whole-graph validation through 012-H.
+* [Whole-Graph Dependence & Subset Validation](canonical/dependence/whole-graph-subset-validation.md) — current acyclicity, transitive closure, optionality, minimal closures and subset validation.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Experience](canonical/experience/) — mapping/experience evidence subject to Phase 013.
@@ -28,7 +29,7 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root,
 
 Use [012-A](012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md) for Phase-012 semantics; [012-B](012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md) remains candidate evidence only.
 
-Use 012-C through [012-G](012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) plus [MUDAC Application-Family Concept Dependence](canonical/dependence/application-family-dependence.md) for current accepted dependence.
+Use 012-C through [012-G](012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md) for family-local decisions and [012-H](012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) plus [Whole-Graph Dependence & Subset Validation](canonical/dependence/whole-graph-subset-validation.md) for the current integrated model.
 
 # Current methodology state
 
@@ -45,7 +46,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012-E: COMPLETE — PASS
 012-F: COMPLETE — PASS
 012-G: COMPLETE — PASS
-012-H: NEXT
+012-H: COMPLETE — PASS
+012-I: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -53,53 +55,29 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current dependence posture
+# Whole-graph dependence posture
 
-All Concept-family passes are now complete through 012-G. The final family-local edge is:
+012-H validates the complete current graph as a DAG with no mutual-dependence/co-inclusion group and no additional direct edge required by closure.
 
-```text
-Publication → Export
-```
+Competition is the only universal **in-scope family anchor**. Every other Concept is globally optional, while capability profiles may require particular Concept sets.
 
-Externalization remains asymmetric:
+`Award → Competition` remains intentionally retained even though Competition is also reachable through `Award → Team → Competition`, because recognition scope and recipient type are distinct roles.
 
-```text
-Export ↛ Publication
-Outcome Declaration ↛ Export
-Outcome Declaration ↛ Publication
-Export ↛ Outcome Declaration
-Publication ↛ Outcome Declaration
-```
+Representative coherent reductions include single-cohort/no-Division, ad-hoc/no-Panel, evaluation contractions, official outcome without Award, official-but-non-public, Export-without-Publication, and public non-official release. Publication-without-Export is invalid.
 
-Current capability profiles include:
+Working-only Rubric/Scorecard capability may omit Versioning/Provenance; authoritative evaluation may not.
 
-```text
-Authoritative Rubric Basis
-  ⇒ Versioning + Provenance
-
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-Ordinary Official Closeout
-  ⇒ Competition + Outcome Declaration
-
-Rank-Derived Award capability
-  ⇒ Award + legitimate Ranking Ready supplied Rank basis
-
-External Representation
-  ⇒ Export + exact SourceBasis + RepresentationProfile + AudienceProfile
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
-```
-
-Official-but-non-public, Export-without-Publication, and public non-official material are dependence-coherent. Publication-without-Export is invalid in the MUDAC family.
-
-Paper capture continuity does not itself require Export; stable printable/external representation does.
+Paper/electronic/mixed capture remains a channel profile rather than a Concept-subset axis.
 
 # Scope discipline
 
-Dependence-valid does not mean adopted. Phase 012-H now validates the whole relation and representative subsets; 012-I later selects which coherent product-family variants are actually in scope and identifies any required variant-specific Phase-011 refinement.
+```text
+dependence-valid
+  != meaningful MUDAC family member
+  != adopted in-scope variant
+```
+
+012-I now decides which coherent variants are deliberately supported and which adopted alternatives require variant-specific Phase-011 composition/policy refinement.
 
 # Completion runway
 
@@ -108,7 +86,7 @@ Dependence-valid does not mean adopted. Phase 012-H now validates the whole rela
   ↓
 011 composition / synchronization                                      COMPLETE — PASS
   ↓
-012 dependence / product family / subsets / scope                      IN PROGRESS — 012-H NEXT
+012 dependence / product family / subsets / scope                      IN PROGRESS — 012-I NEXT
   ↓
 013 mapping / representation
   ↓
@@ -123,4 +101,4 @@ Dependence-valid does not mean adopted. Phase 012-H now validates the whole rela
 
 A successful future Phase 017 may authorize only a separate downstream architecture/engineering re-entry; it does not automatically reactivate prior architecture or implementation planning.
 
-The immediate next task is **012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets**.
+The immediate next task is **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
