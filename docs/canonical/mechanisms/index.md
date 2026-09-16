@@ -23,12 +23,42 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - **Readiness** remains derived. In particular, calculated Rank is distinct from **Ranking Readiness**, and Finalization Readiness is distinct from Competition lifecycle/Outcome Declaration authority.
 - **Reconciliation** remains process/work mode rather than independent ticket-like source state.
 - **Recovery / Continuity** remains a cross-cutting purpose obligation expressed through current Concept-owned state/history/authority semantics rather than a standalone Concept.
-- No separate `Representation Currency`, `Release`, `Delivery`, or `Distribution` mechanism is required by 011-H: Export owns representation currency, Publication owns release state, and transport/delivery remains downstream realization.
+- No separate `Representation Currency`, `Release`, `Delivery`, or `Distribution` mechanism is required: Export owns representation currency, Publication owns release state, and transport/delivery remains downstream realization.
 
-Phase 011 current family authority through 011-H now covers all semantic synchronization families.
+## Current composition relationship
+
+Phase 011 is **COMPLETE — PASS** and current composition lives under [Canonical Synchronizations](../synchronizations/).
 
 [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md) establishes that exact source/purpose/audience binding and Export currency are Concept-owned by Export, while explicit release/withdrawal/succession and release history are Concept-owned by Publication. Those meanings do not require an additional derived coordinator.
 
-011-I now performs the whole-application action-surface/chaining/automation/over-under/authority/synergy closure across the complete family set.
+[Application Action Surface, Chaining & Automation Composition](../synchronizations/application-action-surface-composition.md) owns the whole-application D/C/P/S/X action surface, chaining and automation limits.
 
-Next: **011-I — Application Action Surface, Chaining, Automation, Over/Under-Synchronization, Authority & Synergy Closure**.
+## Current dependence/scope relationship
+
+Phase 012 is **COMPLETE — PASS**.
+
+Mechanisms such as Coverage, Aggregate, Rank and Readiness remain non-Concepts even where they participate in capability rules or mapping explanation.
+
+[MUDAC Product-Family Scope](../dependence/product-family-scope.md) selects PF-01 and preserves current Division-scoped Rank semantics. A future no-Division ranked variant would require explicit Rank/Ranking Readiness/Award revalidation rather than promoting Rank into a Concept or inventing placeholder Division state.
+
+## Current mapping handoff
+
+Phase 013 is authorized to map these mechanisms where they affect user understanding while preserving source-versus-derived distinctions such as:
+
+```text
+eligible authoritative evidence
+  → Coverage / Aggregate
+  → rank eligibility / Rank
+```
+
+Derived values must not be represented as editable source truth.
+
+See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+
+```text
+Phase 010 COMPLETE — PASS
+Phase 011 COMPLETE — PASS
+Phase 012 COMPLETE — PASS
+Phase 013 AUTHORIZED
+013-A NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+```
