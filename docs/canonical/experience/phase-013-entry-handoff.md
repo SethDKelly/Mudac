@@ -1,11 +1,12 @@
 ---
 type: Canonical Mapping Handoff
 title: Phase 013 Mapping Entry Authority
-description: "Current entry authority for Phase 013 concept mapping after Phase 012-J: defines incoming conceptual authority, explanation-order constraints, known mapping drift, risk hotspots, and the temporary evidence status of pre-convergence Experience contracts pending mapping revalidation."
+description: "Current authorized entry authority for Phase 013 concept mapping after successful Phase 012-K exit: defines incoming conceptual authority, explanation-order constraints, known mapping drift, risk hotspots, and the evidence status of pre-convergence Experience contracts pending mapping revalidation."
 status: stable
 tags: [canonical, experience, mapping, phase-013, handoff, authority, terminology]
 sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
   - resource: ../project/mandate-context.md
   - resource: ../project/purpose-needs-success-tensions.md
   - resource: ../concepts/
@@ -17,9 +18,13 @@ sources:
 
 # Purpose
 
-Provide the **current mapping-entry authority** prepared by Phase 012-J for the future Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation.
+Provide the **current authorized mapping-entry authority** for Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation.
 
-This document does not perform Phase 013 mapping and does not authorize Phase 013 to begin before Phase 012-K exits successfully.
+Phase 012-K has completed successfully. Phase 013 may now begin with its mandatory start gate:
+
+> **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**
+
+This document does not itself perform mapping and does not authorize implementation.
 
 It prevents older Experience material from silently overriding the Concept/composition/dependence model established in Phases 010–012.
 
@@ -41,7 +46,7 @@ THIS Phase-013 Entry Handoff
 pre-existing Experience documents as incoming mapping evidence
 ```
 
-Historical architecture/implementation remains downstream evidence only.
+Historical architecture/implementation and the incumbent UI remain downstream evidence only.
 
 # Current product variant entering mapping
 
@@ -195,7 +200,7 @@ Mappings must distinguish current, historical, invalidated, superseded, affected
 | MAP-R02 | `Official Outcome Revision` restores superseded model | map Outcome Declaration and successor history |
 | MAP-R03 | Concept action shown as application action | use Phase-011 D/C/P/S/X surface |
 | MAP-R04 | Identity/Participation/Access conflation | role/navigation must not manufacture authority |
-| MAP-R05 | Panel/membership/actual participant/responsibility/evidence conflation | expose distinctions only as needed to avoid false conclusions |
+| MAP-R05 | Panel/membership/actual participant/responsibility/evidence conflation | expose distinctions as needed to avoid false conclusions |
 | MAP-R06 | Draft/persistence/authority conflation | feedback must state working versus authoritative meaning |
 | MAP-R07 | missing/zero/incomplete/exception conflation | missing remains missing; exception does not falsify sufficiency |
 | MAP-R08 | Rank/Award/official collapse | preserve calculated/recognized/official distinction |
@@ -234,7 +239,7 @@ Do not assume one generic user perspective.
 
 # Mapping coverage dimensions
 
-Phase 013-A should assess and decompose at least:
+013-A must assess and decompose at least:
 
 - Concept/application-state visibility;
 - application-action invocation;
@@ -277,7 +282,7 @@ terminology/representation problem only
 
 # Explicit non-goals
 
-This handoff and Phase 013 must not choose or prescribe:
+Phase 013 must not choose or prescribe:
 
 - frontend framework/component library;
 - route tree;
@@ -290,16 +295,15 @@ This handoff and Phase 013 must not choose or prescribe:
 - AWS/runtime topology;
 - executable UI implementation/tests.
 
-# Entry gating
-
-Phase 013 may begin only after Phase 012-K formally exits Phase 012.
-
-The immediate methodology state after 012-J is:
+# Entry state
 
 ```text
-012-J  COMPLETE — PASS
-012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
-013    NOT STARTED
+Phase 012  COMPLETE — PASS
+Phase 013  AUTHORIZED
+013-A      NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+architecture authority: SUSPENDED
+implementation readiness: NOT READY
+implementation authorization: NOT YET
 ```
 
-Phase 013-A should use the Base Phase-007 start-gate discipline to derive the project-specific mapping workstreams from this handoff.
+013-A must use the Base Phase-007 start-gate discipline to derive MUDAC-specific mapping workstreams from this handoff before substantive mapping begins.
