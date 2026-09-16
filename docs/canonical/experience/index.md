@@ -4,7 +4,9 @@ This directory contains MUDAC user-visible interaction/mapping material.
 
 ## Current authority status
 
-Phase 012-J found that several pre-existing Experience contracts still encode **pre-Phase-010 Concept language** such as `Encounter` and `Official Outcome Revision`.
+Phase 012 is **COMPLETE — PASS** and Phase 013 entry is authorized.
+
+Several pre-existing Experience contracts still encode **pre-Phase-010 Concept language** such as `Encounter` and `Official Outcome Revision`.
 
 Therefore, until Phase 013 revalidates the corpus:
 
@@ -12,7 +14,7 @@ Therefore, until Phase 013 revalidates the corpus:
 
 The current entry authority is:
 
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — current incoming-authority set, explanation-order constraints, mapping-risk register, and revalidation rules prepared by Phase 012-J.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — authoritative incoming-knowledge order, explanation-order constraints, mapping-risk register, reopen rules and 013-A start-gate requirements.
 
 Current conceptual meaning continues to come from:
 
@@ -40,10 +42,10 @@ Known examples requiring semantic revalidation include:
 
 ```text
 Encounter
-  → must be reconciled to Evaluation Occurrence + Evaluation Obligation
+  → reconcile to Evaluation Occurrence + Evaluation Obligation meaning
 
 Official Outcome Revision
-  → must be reconciled to Outcome Declaration
+  → reconcile to Outcome Declaration
 ```
 
 This is **not** a search-and-replace instruction. Phase 013 must determine which current Concept/application-action meaning each old representation was trying to communicate.
@@ -62,9 +64,9 @@ Mappings must expose enough context, basis, authority, consequence, currentness 
 ## Current methodology state
 
 ```text
-012-J  COMPLETE — PASS
-012-K  NEXT — Phase 012 consolidation / formal Phase 013 handoff
-013    NOT STARTED
+Phase 012  COMPLETE — PASS
+Phase 013  AUTHORIZED
+013-A      NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
 ```
 
-Phase 013 may begin only after successful 012-K exit.
+013-A is the mandatory start gate. Substantive mapping begins only after that gate derives the MUDAC-specific Phase-013 workstreams.
