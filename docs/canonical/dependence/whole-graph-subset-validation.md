@@ -1,11 +1,12 @@
 ---
 type: Canonical Dependence Validation
 title: Whole-Graph Dependence & Subset Validation
-description: "Current whole-graph validation of MUDAC Concept dependence after Phase 012-H, including acyclicity, transitive closure, optionality, minimal closures, representative unfamiliar subsets, and scope candidates for Phase 012-I."
+description: "Current whole-graph validation of MUDAC Concept dependence after Phase 012-H, including acyclicity, transitive closure, optionality, minimal closures and unfamiliar-subset results; product scope is selected separately by Phase 012-I."
 status: stable
 tags: [canonical, dependence, transitivity, optionality, subsets, phase-012]
 sources:
   - resource: application-family-dependence.md
+  - resource: product-family-scope.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md
 ---
 
@@ -13,9 +14,9 @@ sources:
 
 Validate the current MUDAC application-family dependence graph **as a whole** after family-local analysis completed through 012-G.
 
-This document does not replace [MUDAC Application-Family Concept Dependence](application-family-dependence.md), which remains the owner of direct edges, universal non-edges, and capability-conditioned co-inclusion rules.
+This document does not replace [MUDAC Application-Family Concept Dependence](application-family-dependence.md), which owns direct edges, universal non-edges and capability-conditioned rules.
 
-This owner records the durable whole-model conclusions needed for product-family scope selection.
+It also does not select product scope. [MUDAC Product-Family Scope](product-family-scope.md) owns the Phase-012-I adoption decision.
 
 # Validation result
 
@@ -26,37 +27,18 @@ whole direct graph: ACYCLIC
 strongly connected components > 1 Concept: NONE
 new direct edge required by closure: NONE
 Phase-010 reopening: NOT REQUIRED
-immediate Phase-011 reopening: NOT REQUIRED
+immediate Phase-011 reopening from graph closure: NOT REQUIRED
 ```
 
 No current Concept pair forms a genuine mutual-dependence/co-inclusion group.
 
 # Family anchor versus optionality
 
-`Competition` is the only universal **in-scope MUDAC family anchor**.
+`Competition` is the only universal **in-scope MUDAC family anchor** established by Phase 012.
 
-Every other Concept is globally optional in the precise sense that at least one coherent MUDAC-family capability/subset can omit it.
+Every other Concept is globally optional in the mathematical product family: at least one coherent capability/subset can omit it.
 
-That statement does not rank importance. A globally optional Concept may still be mandatory for a named capability.
-
-Examples:
-
-```text
-Authoritative Scorecard Evidence
-  ⇒ Versioning + Provenance
-
-current rank-derived Award capability
-  ⇒ Division context
-
-Ordinary Official Closeout
-  ⇒ Outcome Declaration
-
-Publication
-  → Export
-
-Public Official-Result Release
-  ⇒ Outcome Declaration + Export + Publication
-```
+This is not a value ranking and does not mean the Concept is omitted from the selected PF-01 product variant.
 
 # Complete transitive closure by Concept
 
@@ -81,7 +63,7 @@ Public Official-Result Release
 | Export | none |
 | Publication | Export |
 
-This is graph closure only. Capability-conditioned rules add Concepts for the named capability without creating reverse universal edges.
+This is graph closure only. Capability-conditioned rules may add Concepts for a named capability without creating reverse universal edges.
 
 # Reachability-redundant direct edge
 
@@ -94,31 +76,22 @@ Award → Team → Competition
 but is intentionally retained because its rationale is independent:
 
 ```text
-Award → Competition
-  = recognition scope
-
-Award → Team
-  = recipient type
+Award → Competition = recognition scope
+Award → Team        = recipient type
 ```
 
-It is therefore **reachability-redundant but semantically non-redundant**.
+It is **reachability-redundant but semantically non-redundant**.
 
 No other accepted direct edge requires pruning.
 
-# Minimal direct closures
+# Representative minimal closures
 
 ```text
-Competition
-  → {Competition}
-
 Team
   → {Team, Competition}
 
 Division
   → {Division, Team, Competition}
-
-Alias
-  → {Alias, Team, Competition}
 
 Participation
   → {Participation, Identity, Competition}
@@ -145,101 +118,9 @@ Publication
   → {Publication, Export}
 ```
 
-Singleton formal closures exist for:
+Singleton formal closures exist for Identity, Rubric, Access, Versioning, Provenance and Export.
 
-```text
-Identity
-Rubric
-Access
-Versioning
-Provenance
-Export
-```
-
-Formal closure does not by itself establish a meaningful MUDAC product variant.
-
-# Meaningful representative capability closures
-
-## Competitor structure
-
-```text
-Competition + Team
-```
-
-## Scoped human participation
-
-```text
-Competition + Identity + Participation
-```
-
-## Evaluation occurrence history
-
-```text
-Competition + Team + Identity + Participation + Rubric + Evaluation Occurrence
-```
-
-## Responsibility tracking
-
-```text
-Competition + Team + Identity + Participation + Rubric + Evaluation Obligation
-```
-
-## Working judgment capture
-
-```text
-Competition + Team + Identity + Participation + Rubric + Scorecard
-```
-
-## Authoritative judgment
-
-```text
-Competition
-+ Team
-+ Identity
-+ Participation
-+ Rubric
-+ Scorecard
-+ Versioning
-+ Provenance
-```
-
-## Discretionary recognition
-
-```text
-Competition + Team + Award
-```
-
-## Official disposition
-
-```text
-Competition + Outcome Declaration
-```
-
-plus a reconstructible accepted OutcomeBasis capability.
-
-## Prepared representation
-
-```text
-Competition + Export
-```
-
-plus a valid SourceBasis capability.
-
-## Deliberate non-official release
-
-```text
-Competition + Export + Publication
-```
-
-plus legitimate source/disclosure/publishing authority.
-
-## Public official-result release
-
-```text
-Competition + Outcome Declaration + Export + Publication
-```
-
-plus accepted source/disclosure/publishing capability.
+Formal closure does not establish a meaningful or adopted MUDAC product variant.
 
 # Unfamiliar-subset results
 
@@ -260,69 +141,37 @@ plus accepted source/disclosure/publishing capability.
 | paper versus electronic | not a Concept-subset axis |
 | public non-official material | coherent |
 | discretionary Award without Division | coherent |
-| official no-result disposition without Team-result content | coherent with reconstructible accepted basis |
+| official no-result disposition without normal Team-result content | coherent with reconstructible accepted basis |
 
 # Capability consistency
 
 The capability-conditioned rules remain consistent with direct closure:
 
 - authoritative evaluation adds Versioning + Provenance but no reverse support edges;
-- rank-derived Award adds Division context under current Rank policy but does not make every Award Division-dependent;
-- ordinary official closeout includes Outcome Declaration while other Competition capabilities may omit it;
-- public official-result release combines Outcome Declaration + Export + Publication without creating official/public mutual dependence;
+- rank-derived Award adds Division context under current Rank policy without universal `Award → Division`;
+- ordinary official closeout includes Outcome Declaration while earlier Competition states may omit current declaration;
+- public official-result release combines Outcome Declaration + Export + Publication without official/public mutual dependence;
 - corrected release preserves `Publication → Export` and explicit successor action;
-- paper continuity remains channel behavior unless a stable printable representation is required.
+- paper continuity remains channel behavior unless stable printable representation is required.
 
-# Invalid whole-model claims
+# Scope selection after 012-I
 
-```text
-Team without Competition
-Participation without Competition or Identity
-Division without Team
-Alias without Team
-Panel without Participation
-Evaluation Occurrence without Team / Participation / Rubric
-Evaluation Obligation without Team / Participation / Rubric
-Scorecard without Team / Participation / Rubric
-Award without Team or Competition
-Outcome Declaration without Competition
-Publication without Export
-```
+Phase 012-I has now selected current scope. See [MUDAC Product-Family Scope](product-family-scope.md).
 
-Capability-invalid examples include authoritative evaluation without required Versioning/Provenance, ordinary official closeout without Outcome Declaration, an official declaration without reconstructible accepted OutcomeBasis, Export without an exact valid SourceBasis contract, and public official-result release without Outcome Declaration + Export + Publication plus legitimate authority/disclosure.
+The current adopted variant is:
 
-# Product-family candidates for 012-I
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Phase 012-I must deliberately select scope rather than treating every coherent subset as supported.
+PF-01 keeps all eighteen Concepts in its supported capability envelope.
 
-The decision set includes at least:
-
-- single-cohort versus multi-cohort;
-- blinded versus intentionally non-blinded judging;
-- ad-hoc versus Panel-based evaluator organization;
-- occurrence-history, responsibility-only, working Scorecard and authoritative evaluation contractions;
-- recognition with or without official declaration;
-- official declaration with or without Award;
-- judging/operation without official declaration;
-- Export without Publication;
-- official-but-non-public;
-- public non-official;
-- public official-result release;
-- current Division-contextual rank-derived recognition;
-- possible no-Division ranked recognition requiring policy/composition generalization;
-- paper/electronic/mixed capture as channel profiles rather than Concept-subset variants.
-
-# Composition carry-forward
-
-If 012-I adopts an alternative/reduced variant, refine the natural Phase-011 synchronization owner where necessary rather than changing dependence to match the incumbent full-product workflow.
-
-Known candidates include no-Division blinded judging, evaluation variants omitting Occurrence/Obligation, no-Division ranked recognition, lifecycle semantics for variants omitting Outcome Declaration, and release profiles that preserve source authority / representation / publication / transport separation.
+The coherent contractions above remain valuable counterexamples and future design options, but are not automatically supported products.
 
 # Current methodology handoff
 
 ```text
 012-H  COMPLETE — PASS
-012-I  NEXT — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation
+012-I  COMPLETE — PASS
+012-J  NEXT — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit
 ```
 
-The next task is scope selection, not additional family-local edge discovery unless new evidence reveals a contradiction.
+012-J should audit the selected scope and graph against counterexamples rather than reopening family-local edge discovery without new contradictory evidence.
