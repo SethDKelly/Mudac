@@ -11,26 +11,34 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 # Current Canonical Knowledge
 
 * [Canonical Knowledge](canonical/) — current conceptual product knowledge and governance.
-* [Project Context & Purpose](canonical/project/) — current representation-independent mandate and purpose baseline.
-* [Concepts](canonical/concepts/) — current eighteen-Concept catalog after Phase 010 convergence.
-* [Synchronizations](canonical/synchronizations/) — current reconciled composition/synchronization authority after Phase 011.
-* [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and selected PF-01 scope after Phase 012 closure.
-* [MUDAC Product-Family Scope](canonical/dependence/product-family-scope.md) — adopted PF-01 variant, profiles and deferred contractions.
-* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — authorized mapping-entry precedence and revalidation risks.
-* [Experience](canonical/experience/) — pre-Phase-013 mapping evidence plus the current entry handoff.
+* [Project Context & Purpose](canonical/project/) — current mandate and purpose baseline.
+* [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
+* [Synchronizations](canonical/synchronizations/) — current composition and application-action authority.
+* [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and PF-01 scope.
+* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — current mapping-entry precedence, risks and approved Phase-013 workstream sequence.
+* [Experience](canonical/experience/) — mapping authority/evidence family; older contracts remain provisional pending 013-B reconciliation.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
-* [Governance](canonical/governance/) — methodology, documentation/change governance and design/implementation boundary.
+* [Invariants](canonical/invariants/) — cross-cutting semantic constraints.
+* [Governance](canonical/governance/) — methodology and design/implementation boundary.
 * [Architecture](canonical/architecture/) — suspended downstream candidates.
 * [Implementation](canonical/implementation/) — suspended downstream candidates plus frozen bootstrap facts.
 
+# Active phase
+
+[Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **IN PROGRESS**.
+
+[013-A](013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the Base Phase-007 start gate with **READY TO BEGIN PHASE 013 SUBPHASES**.
+
+The next work is:
+
+> **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**
+
 # Agent bootstrap
 
-Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), and [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md).
+Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md), and the active [Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
-Phase 012 is closed. Its final consolidation record is [012-K](012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md).
-
-Older Experience contracts remain incoming mapping evidence pending Phase-013 revalidation.
+Older Experience contracts are evidence pending reconciliation, not authority to contradict the current model.
 
 # Current methodology state
 
@@ -40,8 +48,9 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: AUTHORIZED
-013-A: NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+013: IN PROGRESS
+013-A: COMPLETE — READY
+013-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -49,34 +58,37 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current product-family scope
+# Mapping boundary
 
-MUDAC adopts one current product/application variant:
+The sole current product variant is **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
-
-PF-01 keeps all eighteen current Concepts in the supported product capability envelope. Concept support does not mean every Competition actively exercises every capability.
-
-# Phase-012 exit posture
-
-The completed Phase-012 model survives whole-graph and counterexample audit without a new edge, scope change or Phase-010/011 reopening.
-
-The remaining carry-forward is mapping currentness: earlier Experience material includes superseded `Encounter` and `Official Outcome Revision` language. Current Concept/synchronization/dependence/PF-01 authority takes precedence while Phase 013 revalidates that corpus.
-
-Dependence informs explanation, not UI sequence:
+Phase 013 maps semantic state/action/authority/history/disclosure/profile meaning without prescribing frontend/runtime realization.
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-# Phase-013 start gate
+The application mapping surface is the Phase-011 `D / C / P / S / X` action surface rather than every intrinsic Concept action.
 
-Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
+# 013-A coverage result
 
-013-A must validate incoming authority, complete the Base Phase-007 mapping-coverage assessment, identify actor/affected-party perspectives and risk hotspots, and derive the MUDAC-specific Phase-013 subgroup sequence before substantive mapping.
+All twelve Base mapping dimensions require substantive work:
 
-It must not select frontend/runtime implementation architecture.
+- state visibility;
+- application-action invocation;
+- action availability;
+- result/feedback;
+- terminology;
+- semantically necessary structure;
+- synchronization/automation representation;
+- authority/disclosure/consequence;
+- lifecycle/history/correction/recovery;
+- PF-01 profile mapping;
+- accessibility/context-of-use;
+- mental-model integrity.
+
+The incoming conceptual model is sufficient; no Phase-010/011/012 reopening is required to begin.
 
 # Completion runway
 
@@ -87,7 +99,7 @@ It must not select frontend/runtime implementation architecture.
   ↓
 012 dependence / product family / subsets / scope                      COMPLETE — PASS
   ↓
-013 mapping / representation                                           AUTHORIZED — 013-A NEXT
+013 mapping / representation                                           IN PROGRESS — 013-B NEXT
   ↓
 014 familiarity / reuse / catalog refinement
   ↓
