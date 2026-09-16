@@ -1,7 +1,7 @@
 ---
 type: Canonical Dependence Model
 title: MUDAC Application-Family Concept Dependence
-description: "Current accepted extrinsic Concept inclusion dependence and capability-conditioned co-inclusion for the MUDAC live student data competition judging-and-outcome family after Phase 012-J counterexample audit."
+description: "Current accepted extrinsic Concept inclusion dependence and capability-conditioned co-inclusion for the MUDAC live student data competition judging-and-outcome family after Phase 012 consolidation."
 status: stable
 tags: [canonical, dependence, product-family, subsets, phase-012]
 sources:
@@ -12,6 +12,7 @@ sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md
+  - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
   - resource: whole-graph-subset-validation.md
   - resource: product-family-scope.md
 ---
@@ -121,7 +122,7 @@ Outcome Declaration ───────→ Competition
 Publication ────────────────→ Export
 ```
 
-Phase 012-H/J validate this relation as acyclic with no mutual-dependence/co-inclusion group and no additional direct edge required.
+Phase 012-H/J/K validate this relation as acyclic with no mutual-dependence/co-inclusion group and no additional direct edge required.
 
 # Current universal non-edges
 
@@ -300,9 +301,9 @@ PF-01: sole adopted current product variant
 
 Global optionality does not mean omission from PF-01 or low importance.
 
-# 012-J counterexample audit
+# Final Phase-012 audit
 
-012-J re-challenged the direct graph and capability rules with product/state/profile, Access, authoritative-history, exceptional-outcome, paper, correction and externalization counterexamples.
+Phase 012 re-challenged the direct graph and capability rules with product/state/profile, Access, authoritative-history, exceptional-outcome, paper, correction and externalization counterexamples and then reconciled all current canonical owners.
 
 Result:
 
@@ -310,11 +311,13 @@ Result:
 new direct edge required: NO
 existing edge removal required: NO
 capability-rule change required: NO
+PF-01 scope change required: NO
 Phase-010 reopen required: NO
 Phase-011 reopen required: NO
+Phase-012 repair required: NO
 ```
 
-The only material carry-forward is Phase-013 mapping revalidation of pre-convergence Experience language. That does not change dependence semantics.
+The material carry-forward is Phase-013 mapping revalidation of pre-convergence Experience language. That does not change dependence semantics.
 
 # Mapping boundary
 
@@ -327,12 +330,12 @@ synchronization chain != mandatory wizard
 
 See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
-# Current methodology handoff
+# Methodology handoff
 
 ```text
-012-J  COMPLETE — PASS
-012-K  NEXT — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff
-013    NOT STARTED
+Phase 012  COMPLETE — PASS
+Phase 013  AUTHORIZED
+013-A      NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
 ```
 
-No Phase-010 reopening or immediate Phase-011 repair is required by the current dependence model.
+No Phase-010 reopening, Phase-011 reopening or Phase-012 repair is required by the current dependence model.
