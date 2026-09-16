@@ -1,31 +1,33 @@
-# Experience Mapping Evidence & Phase 013 Entry
+# Experience Mapping Authority & Evidence
 
-This directory contains MUDAC user-visible interaction/mapping material.
+This directory contains MUDAC user-visible interaction/mapping knowledge.
 
 ## Current authority status
 
-Phase 012 is **COMPLETE — PASS** and Phase 013 entry is authorized.
+Phase 013 is **IN PROGRESS**.
 
-Several pre-existing Experience contracts still encode **pre-Phase-010 Concept language** such as `Encounter` and `Official Outcome Revision`.
+```text
+Phase 012  COMPLETE — PASS
+013-A      COMPLETE — READY
+013-B      NEXT — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline
+```
 
-Therefore, until Phase 013 revalidates the corpus:
+The current entry/start-gate authority is:
 
-> **the older Experience contracts below are incoming mapping evidence/candidates, not authority to contradict the current Concept, synchronization, dependence, or PF-01 scope model.**
-
-The current entry authority is:
-
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — authoritative incoming-knowledge order, explanation-order constraints, mapping-risk register, reopen rules and 013-A start-gate requirements.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — incoming conceptual precedence, explanation-order constraints, mapping-risk register, reopen rules, mapping-coverage result and approved Phase-013 sequence.
+* [013-A Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — Phase-013 start-gate evidence and detailed workstream plan.
 
 Current conceptual meaning continues to come from:
 
 * [Project Context & Purpose](../project/);
 * [Concepts](../concepts/);
-* [Synchronizations](../synchronizations/);
-* [Dependence](../dependence/), including [PF-01 Product-Family Scope](../dependence/product-family-scope.md).
+* [Synchronizations](../synchronizations/), especially the application action surface;
+* [Dependence](../dependence/), including [PF-01 Product-Family Scope](../dependence/product-family-scope.md);
+* mapping-relevant [Policies](../policies/) and [Invariants](../invariants/).
 
-## Pre-Phase-013 experience evidence
+## Pre-convergence Experience evidence
 
-The following documents remain valuable design evidence and should be reconciled—not blindly copied—during Phase 013:
+The following documents remain valuable incoming evidence but have **not yet been accepted as final Phase-013 canonical owners**:
 
 * [Experience Context & Role Modes](context-role-modes.md)
 * [Experience Action, State & Authority Traceability](action-authority-traceability.md)
@@ -38,35 +40,48 @@ The following documents remain valuable design evidence and should be reconciled
 * [Accessibility & Resilience](accessibility-resilience.md)
 * [Status, Feedback & Recovery](status-feedback-recovery.md)
 
-Known examples requiring semantic revalidation include:
+013-B must disposition each as retain/rewrite/split/merge/supersede/replace before later workstreams rely on it as durable current mapping authority.
+
+## Known reconciliation issues
 
 ```text
 Encounter
-  → reconcile to Evaluation Occurrence + Evaluation Obligation meaning
+  → reconcile to Evaluation Occurrence / Evaluation Obligation meaning
 
 Official Outcome Revision
   → reconcile to Outcome Declaration
+
+archival concept-synchronizations routing
+  → reconcile to current synchronization owners
 ```
 
-This is **not** a search-and-replace instruction. Phase 013 must determine which current Concept/application-action meaning each old representation was trying to communicate.
+This is not a search-and-replace task. Mapping must identify the semantic meaning each older representation intended.
+
+013-A also identified bounded stale `Encounter` wording in at least one current mapping-relevant policy. Where meaning is already clear, 013-B should repair the natural owner; genuine semantic ambiguity must be routed upstream.
 
 ## Mapping interpretation rule
-
-Dependence may inform explanation/context, but:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-Mappings must expose enough context, basis, authority, consequence, currentness and history for users to understand the state/action without turning conceptual structure into interface architecture.
+Mappings must expose enough context, basis, authority, consequence, currentness and history for correct understanding without turning Concept structure into interface architecture.
 
-## Current methodology state
+## Application-action rule
+
+Phase 013 maps the established application action classes:
 
 ```text
-Phase 012  COMPLETE — PASS
-Phase 013  AUTHORIZED
-013-A      NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+D — direct
+C — coordinated
+P — composition-only participant
+S — system-triggered reaction
+X — intentionally unavailable generic action
 ```
 
-013-A is the mandatory start gate. Substantive mapping begins only after that gate derives the MUDAC-specific Phase-013 workstreams.
+Do not expose `P` or `X` as generic user controls.
+
+## Next
+
+Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
