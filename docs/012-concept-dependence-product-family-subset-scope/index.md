@@ -4,7 +4,7 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 
 ## Status
 
-**In Progress — 012-A through 012-H complete; 012-I next.**
+**In Progress — 012-A through 012-I complete; 012-J next.**
 
 ## Records
 
@@ -16,33 +16,36 @@ Phase 012 is the active Jackson/Base dependence phase after the Phase 011 compos
 - [012-F — Outcome, Recognition & Official-Authority Dependence](012-F-outcome-recognition-official-authority-dependence.md) — **Complete — PASS**.
 - [012-G — External Representation & Release Dependence](012-G-external-representation-release-dependence.md) — **Complete — PASS**.
 - [012-H — Whole-Graph Transitivity, Co-Inclusion, Optionality & Minimal/Unfamiliar Subsets](012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md) — **Complete — PASS**.
-- **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation** — Next.
-- 012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit — Planned.
+- [012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation](012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md) — **Complete — PASS**.
+- **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit** — Next.
 - 012-K — Canonical Dependence Reconciliation, Phase 012 Consolidation & Phase 013 Handoff — Planned.
 
 ## Current canonical owners
 
 - [MUDAC Application-Family Concept Dependence](../canonical/dependence/application-family-dependence.md) — direct dependence and capability-conditioned rules.
-- [Whole-Graph Dependence & Subset Validation](../canonical/dependence/whole-graph-subset-validation.md) — acyclicity, transitive closure, optionality, minimal closures, unfamiliar-subset outcomes and scope candidates.
+- [Whole-Graph Dependence & Subset Validation](../canonical/dependence/whole-graph-subset-validation.md) — whole-model validation and subset closure.
+- [MUDAC Product-Family Scope](../canonical/dependence/product-family-scope.md) — adopted PF-01 scope and deferred contractions.
 
-## 012-H result
+## Current adopted product variant
 
-```text
-whole direct graph: ACYCLIC
-co-inclusion cycles: NONE
-new direct edge required: NONE
-Competition: universal in-scope family anchor
-all other Concepts: globally optional, capability-conditionally required
-```
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-`Award → Competition` is retained despite transitive reachability through Team because its recognition-scope rationale is independent from the Team-recipient rationale.
+PF-01 retains all eighteen current Concepts in the supported capability envelope. This is not a claim that all Concept owners must have active state in every Competition.
 
-No Phase-010 reopening or immediate Phase-011 repair is required.
+Examples of in-scope profiles inside PF-01 include Award-optional official outcome, official-but-non-public operation, Export without Publication, controlled public non-official material, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed continuity.
+
+## Scope exclusions/deferred contractions
+
+Coherent contractions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only, completed judging-only, and no-Division ranked recognition remain unadopted or deferred.
+
+No-Alias competitive judging is out of current scope under the current bias-control purpose/policy. Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
+
+## Composition result
+
+No immediate Phase-011 reopening is required for PF-01. The current synchronization model already covers the selected full product scope and its supported operating profiles.
 
 ## Immediate handoff
 
-012-I now owns deliberate product-family scope selection. It must classify coherent variants as **in scope** or **coherent but out of scope** and identify any variant-specific Phase-011 synchronization/policy revalidation required by adopted alternatives.
+012-J now audits the selected scope and dependence model against counterexamples, upstream-reopen criteria, explanation order, and Phase-013 mapping concerns.
 
-This is not commercial-tier design and not implementation architecture.
-
-Proceed to **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
+Proceed to **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
