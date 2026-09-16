@@ -2,7 +2,7 @@
 
 Current canonical Concept catalog after Phase 010 modularity convergence and exit.
 
-Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC inclusion requirements belong to [Canonical Dependence](../dependence/), not intrinsic Concept definitions.
+Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual MUDAC inclusion requirements and product-family scope belong to [Canonical Dependence](../dependence/), not intrinsic Concept definitions.
 
 ## Current eighteen-Concept catalog
 
@@ -50,42 +50,24 @@ Preserve:
 
 Direct dependence and capability-conditioned co-inclusion live in [MUDAC Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
-Current integrated validation lives in [Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md).
+Whole-graph validation lives in [Whole-Graph Dependence & Subset Validation](../dependence/whole-graph-subset-validation.md).
 
-012-H confirms:
+Current product-family scope lives in [MUDAC Product-Family Scope](../dependence/product-family-scope.md).
 
-```text
-whole direct graph: ACYCLIC
-co-inclusion cycles: NONE
-new direct edge required: NONE
-```
+012-I selects one current adopted product variant:
 
-No Concept boundary requires reopening.
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Competition is the only universal **in-scope family anchor**. All other Concepts are globally optional across the product family while remaining mandatory where a named capability requires them.
+PF-01 keeps all eighteen current Concepts in the supported capability envelope. This does not create intrinsic coupling and does not mean every Competition must exercise every Concept.
 
-This is contextual product-family optionality, not intrinsic weakening of any Concept.
+Examples of profiles inside PF-01 rather than separate products include Award-optional official outcome, official-but-non-public state, Export without Publication, controlled public non-official material, public official-result release, exceptional/no-result official disposition, and paper/electronic/mixed continuity.
 
-Examples:
+Coherent reductions such as truly no-Division, no-Panel, occurrence-only, obligation-only, working-Scorecard-only and completed judging-only remain unadopted/deferred product-family candidates.
 
-- Evaluation Occurrence, Evaluation Obligation and Scorecard remain independently includable at the dependence level;
-- Versioning and Provenance become mandatory for named authoritative evaluation profiles without becoming intrinsic Rubric/Scorecard dependencies;
-- Award and Outcome Declaration remain independent recognition/official-authority layers;
-- Publication contextually depends on Export, while Export remains meaningful without Publication;
-- Outcome Declaration remains independent of Export/Publication because official may remain non-public.
+No-Alias competitive judging remains outside current scope under the bias-control baseline. Authoritative evaluation without Versioning/Provenance is invalid under current authority semantics.
 
-`Award → Competition` is retained even though Competition is also transitively reachable through `Award → Team → Competition`; the two direct Award edges express distinct scope and recipient roles.
+These are contextual product-family conclusions. Do **not** rewrite them into intrinsic Concept specifications.
 
-Do not rewrite these contextual conclusions into intrinsic Concept specifications.
+No Phase-010 Concept owner requires reopening from 012-I.
 
-## Scope-selection handoff
-
-```text
-dependence-valid
-  != meaningful MUDAC family member
-  != adopted in-scope variant
-```
-
-012-I now decides which coherent variants MUDAC supports and which adopted alternatives require Phase-011 composition/policy refinement.
-
-Next: **012-I — Product-Family Variants, Scope Selection & Variant-Specific Composition Revalidation**.
+Next: **012-J — Counterexample, Upstream-Reopen, Explanation-Order & Phase 013 Mapping Handoff Audit**.
