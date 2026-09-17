@@ -12,9 +12,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — current dependence, whole-graph and PF-01 scope authority.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence baseline through 013-G.
-* [`docs/canonical/experience/live-operations.md`](docs/canonical/experience/live-operations.md) — current Organizer live-operations/remaining-work mapping.
-* [`docs/canonical/experience/reconciliation-derived-state.md`](docs/canonical/experience/reconciliation-derived-state.md) — current reconciliation/evidence-eligibility/Coverage/Aggregate/Rank/readiness mapping.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence baseline through 013-H.
+* [`docs/canonical/experience/reconciliation-derived-state.md`](docs/canonical/experience/reconciliation-derived-state.md) — current reconciliation/evidence/Coverage/Aggregate/Rank/readiness mapping.
+* [`docs/canonical/experience/outcome-officiality.md`](docs/canonical/experience/outcome-officiality.md) — current Award/finalization/Outcome Declaration/successor-authority mapping.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013 mapping work.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
@@ -34,7 +34,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
 013-G: COMPLETE — PASS
-013-H: NEXT
+013-H: COMPLETE — PASS
+013-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -52,27 +53,25 @@ PF-01 supports the full eighteen-Concept capability envelope. Award absence/pres
 
 ## Phase-013 mapping posture
 
-013-G establishes current live-operations, remaining-work, exception/reconciliation and derived outcome-state mapping.
-
-Key accepted rules now include:
+013-H establishes current recognition, closeout and official-result mapping:
 
 ```text
-Remaining Work = projection over Outstanding Evaluation Obligations
-Event Completed != all Judge work done
-historically Satisfied != currently eligible evidence
-ineligible evidence != reopened obligation != automatic successor work
-warning != blocker != governed exception != correction != technical intervention
-Reconciliation = source-directed work, not ticket/lifecycle authority
-Coverage = factual Satisfied | Incomplete
-Coverage exception disposition is separate
-Aggregate exists != Coverage Satisfied != rank eligible
-Rank = derived/non-editable
-calculated Rank != Ranking Readiness != official authority
-Ranking Readiness / Finalization Readiness = derived/non-editable
-calculated != recognized != official != public
+calculated != ranking ready != recognized != Finalized != official != public != delivered
+Ranking Ready candidate != conferred Award
+rank-derived Award != discretionary Award
+later Rank/source change != automatic Award transfer
+Finalization Readiness != Competition Finalized
+ordinary closeout = Competition.finalize + OutcomeDeclaration.declare
+ordinary closeout success = Competition Finalized + current Outcome Declaration
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
+corrected calculation != successor official authority
+same visible result != same declared basis
+successor declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
 
-The former mixed `reconciliation-finalization.md` contract is now historical/admitted evidence only. Its reconciliation/derived-state semantics moved to `reconciliation-derived-state.md`; Award/finalization/officiality mapping remains pending 013-H.
+The former mixed `reconciliation-finalization.md` contract is historical evidence only. Current Award/finalization/officiality mapping lives in `outcome-officiality.md`.
 
 Global rules remain:
 
@@ -83,4 +82,4 @@ synchronization chain != mandatory wizard
 
 ## Current direction
 
-Proceed to **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**.
+Proceed to **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**.
