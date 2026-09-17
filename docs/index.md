@@ -15,9 +15,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — current composition and application-action authority.
 * [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification, terminology contract and Experience-owner topology.
-* [Phase 013 Mapping Entry Authority](canonical/experience/phase-013-entry-handoff.md) — mapping-entry precedence, risks and reopen rules.
-* [Experience](canonical/experience/) — current mapping authority plus explicitly classified pre-convergence evidence.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and Experience-owner topology through 013-C.
+* [Experience](canonical/experience/) — current accepted mapping owners plus explicitly classified admitted evidence.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting semantic constraints.
@@ -32,22 +31,40 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 Completed:
 
 - [013-A](013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — mapping start gate: **READY**.
-- [013-B](013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — Experience corpus/terminology/authority/ownership reconciliation: **PASS**.
+- [013-B](013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — corpus/terminology/authority/ownership reconciliation: **PASS**.
+- [013-C](013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) — operating-context, Identity/Participation/Access, bias-control and Judge-entry mapping: **PASS**.
 
 The next work is:
 
-> **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping**
+> **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**
+
+# Current accepted mapping owners
+
+013-C accepts:
+
+- [Experience Context and Participation Modes](canonical/experience/context-role-modes.md);
+- [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md).
+
+Key current rules:
+
+```text
+Identity != Participation != Access
+role/capacity mode = representation of one current Participation context
+capabilities never union across multi-capacity Participations
+Judge context carries Judge-safe disclosure posture
+Panel membership != occurrence participation != responsibility != evidence
+Ready to Judge = derived explanation, not writable state
+```
+
+Remaining older Experience contracts are admitted evidence until their assigned workstream explicitly accepts or rewrites them.
 
 # Agent bootstrap
 
 Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root, [Project Context & Purpose](canonical/project/), [Concepts](canonical/concepts/), [Synchronizations](canonical/synchronizations/), [Dependence](canonical/dependence/), [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md), and the active [Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
-Older Experience contracts are admitted evidence/candidates until their assigned Phase-013 workstream explicitly accepts or rewrites them.
-
 # Current methodology state
 
 ```text
-Jackson Concept Design: REOPENED / IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
@@ -55,7 +72,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013: IN PROGRESS
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
-013-C: NEXT
+013-C: COMPLETE — PASS
+013-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -67,27 +85,12 @@ implementation authorization: NOT YET
 
 The sole current product variant is **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Phase 013 maps semantic state/action/authority/history/disclosure/profile meaning without prescribing frontend/runtime realization.
-
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
 The application mapping surface is the Phase-011 `D / C / P / S / X` action surface rather than every intrinsic Concept action.
-
-# 013-B authority result
-
-The pre-convergence Experience corpus no longer competes with the converged model merely because it resides under `canonical/experience/`.
-
-Current mapping authority is ordered from Purpose → Concepts → Synchronizations/action surface → Dependence/PF-01 → Policies/Invariants → mapping entry/baseline → explicitly reworked Experience owners.
-
-Deprecated adapters remain non-authoritative:
-
-```text
-Encounter                 → interpret by current semantic meaning
-Official Outcome Revision → Outcome Declaration
-```
 
 # Completion runway
 
@@ -98,7 +101,7 @@ Official Outcome Revision → Outcome Declaration
   ↓
 012 dependence / product family / subsets / scope                      COMPLETE — PASS
   ↓
-013 mapping / representation                                           IN PROGRESS — 013-C NEXT
+013 mapping / representation                                           IN PROGRESS — 013-D NEXT
   ↓
 014 familiarity / reuse / catalog refinement
   ↓
