@@ -27,11 +27,9 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen current Concepts in its supported capability envelope. This is product scope rather than blanket direct dependence and does not require every Competition to exercise every capability.
+PF-01 keeps all eighteen current Concepts in its supported capability envelope. Product-family inclusion does not collapse their authority or require every Competition to exercise every optional capability.
 
 ## Mapping boundary
-
-Dependence may inform what context/basis must be intelligible, but:
 
 ```text
 dependence order != navigation order
@@ -45,20 +43,23 @@ dependence-valid
   != mapped user experience
 ```
 
-013-E preserves this in active evaluation: the Judge-facing work representation may explain the occurrence, obligation, exact basis and Scorecard together without merging their ownership or converting the dependence/composition graph into a mandatory interaction sequence.
-
-In particular:
+013-F applies this to authority history:
 
 ```text
-Panel support in PF-01
-  != Panel membership creates responsibility
+Scorecard depends on its structural context/basis
+  != structural identity may be edited in place
 
-Evaluation Obligation included in PF-01
-  != placeholder Scorecard required before work starts
+Versioning/Provenance included in PF-01
+  != generic Version/Provenance administration is a user capability
 
-Scorecard included in PF-01
-  != every obligation is already judged
+replacement occurrence supported
+  != replacement automatically inherits predecessor participants/responsibility/evidence
+
+Evaluation Obligation successor supported
+  != invalid evidence automatically creates new Judge work
 ```
+
+Paper/electronic/mixed capture remains a profile within PF-01 and preserves the same Concept/evaluation identities rather than forming separate product variants.
 
 ## Current handoff
 
@@ -70,7 +71,8 @@ Phase 013  IN PROGRESS
 013-C      COMPLETE — PASS
 013-D      COMPLETE — PASS
 013-E      COMPLETE — PASS
-013-F      NEXT
+013-F      COMPLETE — PASS
+013-G      NEXT
 ```
 
-Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
