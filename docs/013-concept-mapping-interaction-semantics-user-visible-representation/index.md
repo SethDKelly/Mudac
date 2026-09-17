@@ -11,8 +11,8 @@ Phase 013 is **IN PROGRESS**.
 - [013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping](013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md) — **Complete — PASS**.
 - [013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping](013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md) — **Complete — PASS**.
 - [013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping](013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md) — **Complete — PASS**.
-- **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping** — Next.
-- 013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping.
+- [013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping](013-H-award-competition-finalization-outcome-declaration-officiality-successor-authority-mapping.md) — **Complete — PASS**.
+- **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping** — Next.
 - 013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping.
 - 013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit.
 - 013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff.
@@ -29,35 +29,31 @@ Start with:
 - [Authority Lineage, Capture & Correction Mapping](../canonical/experience/authority-lineage-correction.md);
 - [Organizer Live Operations & Remaining Work Mapping](../canonical/experience/live-operations.md);
 - [Reconciliation & Derived Outcome-State Mapping](../canonical/experience/reconciliation-derived-state.md);
+- [Award, Finalization & Outcome Officiality Mapping](../canonical/experience/outcome-officiality.md);
 - current [Concepts](../canonical/concepts/), [Synchronizations](../canonical/synchronizations/), [Dependence](../canonical/dependence/), [Policies](../canonical/policies/) and [Invariants](../canonical/invariants/).
 
-Remaining older Experience documents are admitted/historical evidence until their assigned workstream explicitly accepts, rewrites or supersedes them.
-
-## Current mapping rules through 013-G
+## Current mapping rules through 013-H
 
 ```text
 Identity != Participation != Access
-role/capacity mode = representation, not authority
 Panel membership != occurrence participation != responsibility != evidence
-Occurrence Complete != obligation Satisfied != Scorecard Finalized
-one Evaluation Obligation → at most one logical Scorecard
 Scorecard Draft != authoritative judgment
 capture Actor != Judge semantic author
-Judge amendment != source-faithful capture correction
-superseded != invalidated != replaced != affected != stale
 historical obligation satisfaction != current evidence eligibility
-terminal Evaluation Obligation never reopens
-Remaining Work = projection over Outstanding obligations
-Event Completed != all Judge work done
-ineligible evidence != reopened obligation != automatic successor work
-warning != blocker != governed exception != correction != technical intervention
-Reconciliation = source-directed work, not lifecycle/ticket authority
+Remaining Work = Outstanding obligations projection
 Coverage fact != exception disposition
-Aggregate exists != Coverage Satisfied != rank eligible
 Rank = derived/non-editable
-calculated Rank != Ranking Readiness != official outcome
-Ranking Readiness / Finalization Readiness = derived/non-editable
-calculated != recognized != official != public
+calculated != ranking ready != recognized != Finalized != official != public != delivered
+Ranking Ready candidate != conferred Award
+rank-derived Award != discretionary Award
+Finalization Readiness != Competition Finalized
+ordinary closeout = Competition.finalize + OutcomeDeclaration.declare
+Competition lifecycle ownership != Outcome Declaration ownership
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
+corrected calculation != successor official authority
+successor declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
 
 ## Boundary
@@ -70,7 +66,8 @@ calculated != recognized != official != public
 013-E  COMPLETE — PASS
 013-F  COMPLETE — PASS
 013-G  COMPLETE — PASS
-013-H  NEXT
+013-H  COMPLETE — PASS
+013-I  NEXT
 architecture / implementation  SUSPENDED
 ```
 
