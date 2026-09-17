@@ -13,8 +13,8 @@ Current foundational truth is:
 - [Current Synchronizations](canonical/synchronizations/);
 - [Current Dependence / PF-01 Scope](canonical/dependence/);
 - [Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
-- [Organizer Live Operations & Remaining Work Mapping](canonical/experience/live-operations.md);
 - [Reconciliation & Derived Outcome-State Mapping](canonical/experience/reconciliation-derived-state.md);
+- [Award, Finalization & Outcome Officiality Mapping](canonical/experience/outcome-officiality.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -31,7 +31,7 @@ Current foundational truth is:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-H next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-I next**
 
 ## Current posture
 
@@ -55,31 +55,32 @@ implementation authorization: NOT YET
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
 013-G: COMPLETE — PASS
-013-H: NEXT
+013-H: COMPLETE — PASS
+013-I: NEXT
 ```
 
 ## Current Phase-013 mapping posture
 
-013-G establishes:
+013-H establishes:
 
 ```text
-Remaining Work = projection over Outstanding Evaluation Obligations
-Event Completed != all Judge work done
-historically Satisfied != currently eligible evidence
-ineligible evidence != reopened obligation != automatic successor work
-warning != blocker != governed exception != correction != technical intervention
-Reconciliation = source-directed work, not lifecycle/ticket authority
-Coverage fact != exception disposition
-Aggregate exists != Coverage Satisfied != rank eligible
-Rank = derived/non-editable
-calculated Rank != Ranking Readiness != official authority
-Ranking Readiness / Finalization Readiness = derived/non-editable
-calculated != recognized != official != public
+calculated != ranking ready != recognized != Finalized != official != public != delivered
+Ranking Ready candidate != conferred Award
+rank-derived Award != discretionary Award
+Finalization Readiness != Competition Finalized
+ordinary closeout success = Competition Finalized + current Outcome Declaration
+Competition lifecycle ownership != Outcome Declaration ownership
+Outcome Declaration currentness = Current | Affected | Superseded
+Affected != Superseded
+corrected calculations != successor official authority
+same visible result != same declared basis
+successor declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
 
-A governed exception preserves the source shortfall and changes only its specifically permitted consequence.
+An Affected declaration remains the latest declared official authority until an explicit successor is confirmed. Officiality does not publish results.
 
-The old `canonical/experience/reconciliation-finalization.md` is now historical/admitted evidence only. Reconciliation/derived-state mapping moved to `reconciliation-derived-state.md`; Award/finalization/officiality evidence awaits 013-H.
+The old `canonical/experience/reconciliation-finalization.md` is now historical evidence only.
 
 Global mapping rules remain:
 
@@ -97,7 +98,7 @@ synchronization chain != mandatory wizard
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-H NEXT
+013 mapping / representation                   IN PROGRESS — 013-I NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
@@ -112,4 +113,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**.
+Proceed to **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**.
