@@ -17,6 +17,7 @@ Current foundational truth is:
 - [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md);
 - [Organizer Competition Preparation & Readiness Mapping](canonical/experience/organizer-preparation.md);
 - [Judge Active Evaluation Mapping](canonical/experience/judge-evaluation.md);
+- [Authority Lineage, Capture & Correction Mapping](canonical/experience/authority-lineage-correction.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -33,7 +34,7 @@ Current foundational truth is:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-F next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-G next**
 
 ## Current posture
 
@@ -55,28 +56,29 @@ implementation authorization: NOT YET
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
-013-F: NEXT
+013-F: COMPLETE — PASS
+013-G: NEXT
 ```
 
 ## Current Phase-013 mapping posture
 
-013-E rewrote and accepted the ordinary active Judge-evaluation owner. Preserve:
+013-F created the current natural owner for authority lineage, capture and correction. Preserve:
 
 ```text
-Panel membership != Evaluation Occurrence participation != Evaluation Obligation != Scorecard evidence
-Prepared occurrence != begun occurrence != responsibility
-Occurrence Complete != obligation Satisfied != Scorecard Finalized
-Outstanding obligation + no Scorecard = Not Started work
-one Evaluation Obligation → at most one logical Scorecard
-Scorecard Draft != authority
-Draft complete/valid != Finalized
-exact bound Evaluation Basis != latest working Rubric
-presentation end / navigation / autosave != Judge Finalization intent
-uncertain authoritative result != confirmed success
-Organizer/support capability != Judge authorship
+paper / assisted / electronic capture = same evaluation model
+capture Actor != Judge semantic author / RepresentedAuthority
+Finalized Scorecard != reopenable initial Draft
+Judge amendment != source-faithful capture correction
+superseded != invalidated != replaced != affected != stale
+structural Scorecard identity cannot silently change
+historical obligation satisfaction != current evidence eligibility
+terminal obligation never reopens
+successor responsibility != predecessor mutation
+replacement occurrence != cloned responsibility/evidence
+current correction != silent historical rewrite
 ```
 
-After initial Finalization, amendment/correction/history routes to 013-F instead of ordinary Edit/Reopen behavior.
+The old `canonical/experience/paper-export-publication.md` is now only a historical/evidence adapter. Paper/correction mapping has moved to `authority-lineage-correction.md`; remaining external-representation/release evidence awaits 013-I.
 
 Global mapping rules remain:
 
@@ -84,8 +86,6 @@ Global mapping rules remain:
 dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
-
-Remaining older Experience contracts are admitted evidence until their assigned Phase-013 workstream explicitly accepts, rewrites or supersedes them.
 
 ## Completion runway
 
@@ -96,7 +96,7 @@ Remaining older Experience contracts are admitted evidence until their assigned 
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-F NEXT
+013 mapping / representation                   IN PROGRESS — 013-G NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
@@ -111,4 +111,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
+Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
