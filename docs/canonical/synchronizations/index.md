@@ -50,22 +50,20 @@ X — intentionally unavailable generic action
 
 ## Phase-013 mapping boundary
 
-Phase 013 maps this application action surface rather than the archival adapter or an arbitrary union of Concept actions.
+Phase 013 maps this action surface rather than the archival adapter or an arbitrary union of Concept actions.
 
-Accepted mapping through 013-D preserves:
+013-E maps the evaluation family into user-visible semantics without changing composition:
 
 ```text
-one protected operation = one explicit Participation context
-role/capacity mode = representation, not authority
-multi-capacity capabilities never union
-Access.check remains composition-only/system guard behavior
-Panel membership != evaluation responsibility
-preparation = view over source truth, not workflow authority
-Competition Readiness = derived, not writable
-readiness true != lifecycle Ready
-Mark Competition Ready = explicit coordinated action
-Ready != Active
-working Rubric != authoritative Rubric Version
+Prepared occurrence != begun occurrence != responsibility
+Panel membership != confirmed starting evaluator set
+Occurrence Complete != obligation Satisfied
+Outstanding obligation + no Scorecard = Not Started work
+one Evaluation Obligation → at most one logical Scorecard
+Scorecard Draft != authoritative judgment
+Finalize Evaluation = explicit coordinated authority establishment
+Versioning/Provenance/obligation satisfaction remain composition-only participants
+uncertain Finalization != confirmed success
 ```
 
 For current mapping work use:
@@ -74,7 +72,8 @@ For current mapping work use:
 - [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md);
 - [Context and Participation Modes](../experience/context-role-modes.md);
 - [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md);
-- [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md).
+- [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md);
+- [Judge Active Evaluation Mapping](../experience/judge-evaluation.md).
 
 ## Current handoff
 
@@ -86,5 +85,6 @@ Phase 013 IN PROGRESS
 013-B COMPLETE — PASS
 013-C COMPLETE — PASS
 013-D COMPLETE — PASS
-013-E NEXT — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping
+013-E COMPLETE — PASS
+013-F NEXT — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping
 ```
