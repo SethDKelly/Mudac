@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [Project Context & Purpose](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
-6. Read current accepted Experience owners relevant to the work. 013-C has accepted [Context and Participation Modes](docs/canonical/experience/context-role-modes.md) and [Judge Entry, Participation & Readiness Mapping](docs/canonical/experience/judge-onboarding.md).
+6. Read current accepted Experience owners relevant to the work: [Context and Participation Modes](docs/canonical/experience/context-role-modes.md), [Judge Entry, Participation & Readiness Mapping](docs/canonical/experience/judge-onboarding.md), and [Organizer Competition Preparation & Readiness Mapping](docs/canonical/experience/organizer-preparation.md).
 7. Read the active [Phase 013](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) record.
 8. Treat remaining older `docs/canonical/experience/` contracts as admitted evidence/candidates unless their assigned Phase-013 workstream has explicitly accepted/reworked them.
 9. Use current synchronization owners for interaction/composition rules; mapping does not replace composition.
@@ -26,7 +26,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
-013-D: NEXT
+013-D: COMPLETE — PASS
+013-E: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,6 +56,13 @@ Preserve:
 - Judge context carries Judge-safe disclosure posture;
 - Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence;
 - `Ready to Judge` is derived explanation, not writable state or responsibility;
+- preparation is a composed view over source truth, not an owning Workflow/Setup Concept;
+- Competition Readiness is derived and has no write action;
+- readiness satisfaction != Competition lifecycle Ready;
+- `Mark Competition Ready` is an explicit coordinated lifecycle commitment;
+- Competition Ready != Active;
+- working/validated Rubric != authoritative Rubric Version;
+- Judge-safe preview != Judge authority;
 - Scorecard Draft != authority;
 - missing evidence != zero;
 - Coverage/Aggregate/Rank != Award authority != Outcome Declaration;
@@ -75,15 +83,17 @@ X — intentionally unavailable generic application action
 
 Do not expose `P` or `X` as generic user actions.
 
-## Explanation-order rule
+## Explanation-order rules
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+preparation dependency != setup step number
+readiness blocker != closable task row
 ```
 
 ## Current next task
 
 Proceed to:
 
-> **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**
+> **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**
