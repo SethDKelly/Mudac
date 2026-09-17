@@ -15,7 +15,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — current composition and application-action authority.
 * [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and Experience-owner topology through 013-C.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and Experience-owner topology through 013-D.
 * [Experience](canonical/experience/) — current accepted mapping owners plus explicitly classified admitted evidence.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
@@ -33,17 +33,19 @@ Completed:
 - [013-A](013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — mapping start gate: **READY**.
 - [013-B](013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — corpus/terminology/authority/ownership reconciliation: **PASS**.
 - [013-C](013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) — operating-context, Identity/Participation/Access, bias-control and Judge-entry mapping: **PASS**.
+- [013-D](013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md) — Organizer preparation, competitor/grouping/basis setup and Competition Readiness mapping: **PASS**.
 
 The next work is:
 
-> **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**
+> **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**
 
 # Current accepted mapping owners
 
-013-C accepts:
+Current accepted Experience authority includes:
 
 - [Experience Context and Participation Modes](canonical/experience/context-role-modes.md);
-- [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md).
+- [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md);
+- [Organizer Competition Preparation & Readiness Mapping](canonical/experience/organizer-preparation.md).
 
 Key current rules:
 
@@ -54,6 +56,13 @@ capabilities never union across multi-capacity Participations
 Judge context carries Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
 Ready to Judge = derived explanation, not writable state
+preparation = view over source truth, not owning workflow state
+Competition Readiness = derived, not editable
+readiness true != Competition lifecycle Ready
+Mark Competition Ready = explicit lifecycle commitment
+Competition Ready != Active
+working Rubric != authoritative Rubric Version
+Judge-safe preview != Judge authority
 ```
 
 Remaining older Experience contracts are admitted evidence until their assigned workstream explicitly accepts or rewrites them.
@@ -73,7 +82,8 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root,
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
-013-D: NEXT
+013-D: COMPLETE — PASS
+013-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -88,6 +98,7 @@ The sole current product variant is **PF-01 — MUDAC Live Competition Judging &
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+preparation dependency != setup step number
 ```
 
 The application mapping surface is the Phase-011 `D / C / P / S / X` action surface rather than every intrinsic Concept action.
@@ -101,7 +112,7 @@ The application mapping surface is the Phase-011 `D / C / P / S / X` action surf
   ↓
 012 dependence / product family / subsets / scope                      COMPLETE — PASS
   ↓
-013 mapping / representation                                           IN PROGRESS — 013-D NEXT
+013 mapping / representation                                           IN PROGRESS — 013-E NEXT
   ↓
 014 familiarity / reuse / catalog refinement
   ↓
