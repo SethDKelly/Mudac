@@ -22,20 +22,16 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Rank is derived/non-editable.
 - Readiness is derived; `Ready to Judge`, Competition Readiness, Ranking Readiness and Finalization Readiness never become independent writable authority.
 - Reconciliation remains process/work context rather than ticket/workflow authority.
-- Recovery/Continuity remains a cross-cutting purpose obligation.
+- Award recognition is not a derived mechanism; Award owns explicit conferral/revocation/correction authority.
+- Competition Finalization is lifecycle authority, not a derived readiness result.
+- Outcome Declaration owns explicit official-result authority/currentness/history.
 - Export owns representation currency; Publication owns release state; transport/delivery remains downstream realization.
 
-## 013-G mapping semantics
+## 013-G/H mapping semantics
 
 ```text
 Remaining Work
   = current Outstanding-obligation projection
-
-historically Satisfied obligation
-  != current evidence eligibility
-
-ineligible evidence
-  != automatic successor responsibility
 
 Coverage = factual sufficiency
 exception disposition = separate consequence authority
@@ -53,11 +49,25 @@ Rank
 Ranking Readiness / Finalization Readiness
   = derived permission-to-proceed projections
   != writable source truth
+
+Ranking Ready candidate
+  != conferred Award
+
+Finalization Readiness = true
+  != Competition Finalized
+  != Outcome Declaration exists
+
+calculated / derived state
+  != recognized
+  != official
+
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
 ```
 
-Derived results are basis-relative. Material source changes make prior derivations non-current/affected and require recomputation; recomputation never mutates source Concepts.
+Derived results are basis-relative. Material source changes make prior derivations non-current/affected and require recomputation; recomputation never mutates source Concepts or silently changes Award/official authority.
 
-See [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md) and [Organizer Live Operations & Remaining Work Mapping](../experience/live-operations.md).
+See [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md) and [Award, Finalization & Outcome Officiality Mapping](../experience/outcome-officiality.md).
 
 ## Composition and scope
 
@@ -77,5 +87,6 @@ Phase 013 IN PROGRESS
 013-E COMPLETE — PASS
 013-F COMPLETE — PASS
 013-G COMPLETE — PASS
-013-H NEXT
+013-H COMPLETE — PASS
+013-I NEXT
 ```
