@@ -12,9 +12,10 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
 * [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-C.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-D.
 * [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C operating-context/multi-capacity mapping.
 * [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C Judge-entry/readiness mapping.
+* [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D preparation/readiness mapping.
 
 # Governance
 
@@ -37,7 +38,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
-013-D: NEXT
+013-D: COMPLETE — PASS
+013-E: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -61,7 +63,7 @@ Mapping Authority Baseline
 accepted Experience owners from completed Phase-013 workstreams
 ```
 
-013-C establishes:
+Current accepted mapping includes:
 
 ```text
 Identity != Participation != Access
@@ -71,6 +73,13 @@ multi-capacity capabilities never union
 Judge context = Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
 Ready to Judge = derived explanation, not editable state
+preparation = composed source view, not workflow authority
+Competition Readiness = derived, not editable
+readiness true != Competition lifecycle Ready
+Mark Competition Ready = explicit lifecycle commitment
+Competition Ready != Active
+working Rubric != authoritative Rubric Version
+Judge-safe preview != Judge authority
 ```
 
 Remaining older Experience contracts are admitted evidence until their assigned workstream explicitly accepts or rewrites them.
@@ -84,4 +93,4 @@ Remaining older Experience contracts are admitted evidence until their assigned 
 5. use remaining older Experience material only as admitted evidence;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
+Next: **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
