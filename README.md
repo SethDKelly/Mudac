@@ -15,6 +15,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence/ownership baseline.
 * [`docs/canonical/experience/context-role-modes.md`](docs/canonical/experience/context-role-modes.md) — current operating-context and multi-capacity mapping accepted in 013-C.
 * [`docs/canonical/experience/judge-onboarding.md`](docs/canonical/experience/judge-onboarding.md) — current Judge-entry/readiness mapping accepted in 013-C.
+* [`docs/canonical/experience/organizer-preparation.md`](docs/canonical/experience/organizer-preparation.md) — current Organizer preparation/readiness mapping accepted in 013-D.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013 mapping work.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
@@ -30,7 +31,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
-013-D: NEXT
+013-D: COMPLETE — PASS
+013-E: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -48,9 +50,9 @@ PF-01 supports the full eighteen-Concept capability envelope. Award absence/pres
 
 ## Phase-013 mapping posture
 
-013-A established mapping readiness. 013-B reconciled the pre-convergence Experience corpus, terminology, authority and canonical ownership. 013-C established current user-visible operating-context and Judge-entry semantics.
+013-A established mapping readiness. 013-B reconciled the pre-convergence Experience corpus, terminology, authority and canonical ownership. 013-C established current operating-context/Judge-entry semantics. 013-D now establishes current Organizer preparation/readiness semantics.
 
-Key accepted 013-C rules:
+Key accepted rules include:
 
 ```text
 Identity != Participation != Access
@@ -60,16 +62,23 @@ multi-capacity capabilities never union
 Judge context = Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
 Ready to Judge = derived explanation, not editable state
-support privilege != Competition authority
+preparation = composed source view, not workflow authority
+Competition Readiness = derived, not editable
+readiness true != Competition lifecycle Ready
+Mark Competition Ready = explicit lifecycle commitment
+Competition Ready != Active
+working Rubric != authoritative Rubric Version
+Judge-safe preview != Judge authority
 ```
 
-Key global rules remain:
+Key global mapping rules remain:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+preparation dependency != setup step number
 ```
 
 ## Current direction
 
-Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
+Proceed to **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
