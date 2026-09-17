@@ -52,7 +52,7 @@ X — intentionally unavailable generic action
 
 Phase 013 maps this application action surface rather than the archival adapter or an arbitrary union of Concept actions.
 
-013-C has accepted the current user-visible context mapping:
+Accepted mapping through 013-D preserves:
 
 ```text
 one protected operation = one explicit Participation context
@@ -60,6 +60,12 @@ role/capacity mode = representation, not authority
 multi-capacity capabilities never union
 Access.check remains composition-only/system guard behavior
 Panel membership != evaluation responsibility
+preparation = view over source truth, not workflow authority
+Competition Readiness = derived, not writable
+readiness true != lifecycle Ready
+Mark Competition Ready = explicit coordinated action
+Ready != Active
+working Rubric != authoritative Rubric Version
 ```
 
 For current mapping work use:
@@ -67,7 +73,8 @@ For current mapping work use:
 - [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
 - [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md);
 - [Context and Participation Modes](../experience/context-role-modes.md);
-- [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md).
+- [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md);
+- [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md).
 
 ## Current handoff
 
@@ -78,5 +85,6 @@ Phase 013 IN PROGRESS
 013-A COMPLETE — READY
 013-B COMPLETE — PASS
 013-C COMPLETE — PASS
-013-D NEXT — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping
+013-D COMPLETE — PASS
+013-E NEXT — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping
 ```
