@@ -4,19 +4,20 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/) — mandate, scope, purpose obligations, needs, success situations and tensions.
+* [Project Context & Purpose](project/) — current mandate and purpose baseline.
 * [Concepts](concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](synchronizations/) — current composition/application-action authority.
 * [Dependence](dependence/) — current dependence, whole-graph validation and PF-01 scope.
 * [Mechanisms](mechanisms/) — derived/supporting subjects and processes.
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
-* [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-E.
-* [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C operating-context/multi-capacity mapping.
-* [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C Judge-entry/readiness mapping.
-* [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D preparation/readiness mapping.
-* [Judge Active Evaluation Mapping](experience/judge-evaluation.md) — accepted 013-E active occurrence/obligation/Scorecard/finalization mapping.
+* [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted/historical evidence.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-F.
+* [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C mapping.
+* [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C mapping.
+* [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D mapping.
+* [Judge Active Evaluation Mapping](experience/judge-evaluation.md) — accepted 013-E mapping.
+* [Authority Lineage, Capture & Correction Mapping](experience/authority-lineage-correction.md) — accepted 013-F mapping.
 
 # Governance
 
@@ -41,7 +42,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
-013-F: NEXT
+013-F: COMPLETE — PASS
+013-G: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -65,21 +67,23 @@ Mapping Authority Baseline
 accepted Experience owners from completed Phase-013 workstreams
 ```
 
-013-E adds these active-evaluation distinctions:
+013-F adds these authority-lineage distinctions:
 
 ```text
-Panel membership != occurrence participation != responsibility != evidence
-Occurrence Complete != obligation Satisfied != Scorecard Finalized
-one Evaluation Obligation → at most one logical Scorecard
-Scorecard Draft != authoritative judgment
-Draft complete/valid != Finalized
-exact bound Evaluation Basis != latest working Rubric
-Finalize Evaluation = explicit Judge semantic commitment
-uncertain authoritative result != confirmed success
-Organizer/support capability != Judge authorship
+capture Actor != Judge semantic author / RepresentedAuthority
+Finalized Scorecard != reopenable initial Draft
+Judge amendment != source-faithful capture correction
+superseded != invalidated != replaced != affected != stale
+historical obligation satisfaction != current evidence eligibility
+terminal obligation never reopens
+successor responsibility != predecessor mutation
+replacement occurrence != cloned responsibility/evidence
+current correction != silent historical rewrite
 ```
 
-After confirmed initial Finalization, amendment/correction/history is not ordinary active evaluation and routes to 013-F.
+Paper/electronic/assisted capture remain one evaluation model and one logical Scorecard per obligation.
+
+The old `paper-export-publication.md` file is no longer paper/correction authority; it remains historical/admitted evidence for Export/Publication until 013-I.
 
 # Retrieval rule during Phase 013
 
@@ -87,7 +91,7 @@ After confirmed initial Finalization, amendment/correction/history is not ordina
 2. load [Mapping Authority Baseline](experience/mapping-authority-baseline.md);
 3. load task-relevant Project / Concepts / Synchronizations / Dependence / Policies / Invariants;
 4. load accepted Experience owners relevant to the task;
-5. use remaining older Experience material only as admitted evidence;
+5. use remaining older Experience material only as admitted/historical evidence;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
+Next: **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
