@@ -12,10 +12,11 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
 * [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-D.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-E.
 * [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C operating-context/multi-capacity mapping.
 * [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C Judge-entry/readiness mapping.
 * [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D preparation/readiness mapping.
+* [Judge Active Evaluation Mapping](experience/judge-evaluation.md) — accepted 013-E active occurrence/obligation/Scorecard/finalization mapping.
 
 # Governance
 
@@ -39,7 +40,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
-013-E: NEXT
+013-E: COMPLETE — PASS
+013-F: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -63,26 +65,21 @@ Mapping Authority Baseline
 accepted Experience owners from completed Phase-013 workstreams
 ```
 
-Current accepted mapping includes:
+013-E adds these active-evaluation distinctions:
 
 ```text
-Identity != Participation != Access
-one protected operation = one current Participation context
-role/capacity mode = representation, not authority
-multi-capacity capabilities never union
-Judge context = Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
-Ready to Judge = derived explanation, not editable state
-preparation = composed source view, not workflow authority
-Competition Readiness = derived, not editable
-readiness true != Competition lifecycle Ready
-Mark Competition Ready = explicit lifecycle commitment
-Competition Ready != Active
-working Rubric != authoritative Rubric Version
-Judge-safe preview != Judge authority
+Occurrence Complete != obligation Satisfied != Scorecard Finalized
+one Evaluation Obligation → at most one logical Scorecard
+Scorecard Draft != authoritative judgment
+Draft complete/valid != Finalized
+exact bound Evaluation Basis != latest working Rubric
+Finalize Evaluation = explicit Judge semantic commitment
+uncertain authoritative result != confirmed success
+Organizer/support capability != Judge authorship
 ```
 
-Remaining older Experience contracts are admitted evidence until their assigned workstream explicitly accepts or rewrites them.
+After confirmed initial Finalization, amendment/correction/history is not ordinary active evaluation and routes to 013-F.
 
 # Retrieval rule during Phase 013
 
@@ -93,4 +90,4 @@ Remaining older Experience contracts are admitted evidence until their assigned 
 5. use remaining older Experience material only as admitted evidence;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
+Next: **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
