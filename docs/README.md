@@ -11,23 +11,27 @@ Current foundational truth is:
 - [Project Context & Purpose](canonical/project/);
 - [Current eighteen-Concept catalog](canonical/concepts/);
 - [Current Synchronizations](canonical/synchronizations/);
-- [Active Phase 011](011-concept-composition-synchronization/) for composition/synchronization revalidation;
-- [011-I](011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md) for the completed whole-application action/chaining/automation closure;
-- [Application Action Surface, Chaining & Automation Composition](canonical/synchronizations/application-action-surface-composition.md) for durable whole-application action authority.
+- [Current Dependence / PF-01 Scope](canonical/dependence/);
+- [Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
+- [Experience Context and Participation Modes](canonical/experience/context-role-modes.md);
+- [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md);
+- [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
 
 * Phase 001 — Concept Design Foundation: **Reusable design evidence**
 * Phase 002 — Concept Specification: **Reusable design evidence**
-* Phase 003 — Conceptual UX Architecture: **Reusable mapping/experience evidence**
+* Phase 003 — Conceptual UX Architecture: **Reusable pre-convergence mapping evidence**
 * Phase 004 — Knowledge Architecture / OKF Governance: **Current governance foundation**
 * Phase 005 — Architecture: **Historical / suspended as Concept Design constraint**
 * Phase 006 — Implementation Planning/Bootstrap: **Historical; 006-D frozen non-domain substrate**
-* Phase 007 — Design Refinement: **Reusable evidence; 007-I closure superseded**
+* Phase 007 — Design Refinement: **Reusable evidence; former closure superseded**
 * Phase 008 — Implementation Re-entry: **Halted after 008-E**
 * Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **In Progress — 011-A/B/C/D/E/F/G/H/I complete; 011-J next**
+* Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
+* Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-D next**
 
 ## Current posture
 
@@ -41,58 +45,57 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 009: COMPLETE — PASS
 010: COMPLETE — PASS
-011: IN PROGRESS
-011-A: COMPLETE — READY
-011-B: COMPLETE — PASS
-011-C: COMPLETE — PASS
-011-D: COMPLETE — PASS
-011-E: COMPLETE — PASS
-011-F: COMPLETE — PASS
-011-G: COMPLETE — PASS
-011-H: COMPLETE — PASS
-011-I: COMPLETE — PASS
-011-J: NEXT
+011: COMPLETE — PASS
+012: COMPLETE — PASS
+013: IN PROGRESS
+013-A: COMPLETE — READY
+013-B: COMPLETE — PASS
+013-C: COMPLETE — PASS
+013-D: NEXT
 ```
 
-## Phase 011 composition posture
+## Current Phase-013 mapping posture
 
-Phase 010's current catalog contains eighteen independent Concepts:
+013-B established the mapping authority/evidence baseline and prevented pre-convergence Experience documents from overriding the converged model merely because they reside under `canonical/experience/`.
 
-Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
+013-C rewrote and accepted the current context/Judge-entry owners. Preserve:
 
-011-C through 011-H provide current canonical family authorities. 011-I now closes the composed application as a whole.
+```text
+Identity != Participation != Access
+one protected operation = one explicit Participation context
+role/capacity mode = representation, not authority
+multi-capacity capabilities never union
+Judge context = Judge-safe disclosure posture
+Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence
+Ready to Judge = derived explanation, not writable state
+technical support privilege != Competition decision authority
+```
 
-011-I establishes that:
+Global mapping rules remain:
 
-- every Concept action family has a deliberate `D` / `C` / `P` / `S` / `X` application classification and no unresolved `U` remains;
-- no global Workflow/Coordinator/Process Concept is required;
-- accepted automation may propagate derived knowledge/currentness, apply guards, or execute bounded consequences already authorized by an explicit initiating action;
-- automation may not manufacture Judge judgment, successor responsibility, Award authority, Competition Finalization, Outcome Declaration authority, Export generation, or Publication authority;
-- the material authority graph is acyclic;
-- over-synchronization and under-synchronization audits both pass;
-- nine bounded application-level synergy claims are retained;
-- Phase 012 inclusion/dependence and Phase 013 mapping/interaction remain separate concerns.
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
 
-`Export.request` remains a direct application action under the current 011-I closure, while `generate` is coordinated and Publication release remains explicit. Generic Access/Versioning/Provenance administration remains intentionally unavailable.
-
-011-J now owns canonical reconciliation, stale-reference cleanup, the final Phase 011 exit test, and Phase 012 handoff. No semantic family is currently queued for redesign.
+Remaining older Experience contracts are admitted evidence until their assigned Phase-013 workstream explicitly accepts or rewrites them.
 
 ## Completion runway
 
 ```text
-010 foundational completion                         COMPLETE — PASS
+010 foundational completion                    COMPLETE — PASS
   ↓
-011 composition / synchronization revalidation      IN PROGRESS — 011-J NEXT
+011 composition / synchronization              COMPLETE — PASS
   ↓
-012 dependence / subsets / product-family / scope
+012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation revalidation
+013 mapping / representation                   IN PROGRESS — 013-D NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
 015 integrity / interference
   ↓
-016 final scenario / misfit validation
+016 scenario / misfit / failure / adversarial
   ↓
 017 methodology closure
 ```
@@ -101,4 +104,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **011-J — Canonical Synchronization Reconciliation, Phase 011 Consolidation & Phase 012 Handoff**.
+Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
