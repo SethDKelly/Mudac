@@ -12,11 +12,12 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — current dependence, whole-graph and PF-01 scope authority.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence/ownership baseline through 013-E.
-* [`docs/canonical/experience/context-role-modes.md`](docs/canonical/experience/context-role-modes.md) — current operating-context and multi-capacity mapping.
-* [`docs/canonical/experience/judge-onboarding.md`](docs/canonical/experience/judge-onboarding.md) — current Judge-entry/readiness mapping.
-* [`docs/canonical/experience/organizer-preparation.md`](docs/canonical/experience/organizer-preparation.md) — current Organizer preparation/readiness mapping.
-* [`docs/canonical/experience/judge-evaluation.md`](docs/canonical/experience/judge-evaluation.md) — current active Judge evaluation/finalization mapping.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence baseline through 013-F.
+* [`docs/canonical/experience/context-role-modes.md`](docs/canonical/experience/context-role-modes.md) — operating-context and multi-capacity mapping.
+* [`docs/canonical/experience/judge-onboarding.md`](docs/canonical/experience/judge-onboarding.md) — Judge-entry/readiness mapping.
+* [`docs/canonical/experience/organizer-preparation.md`](docs/canonical/experience/organizer-preparation.md) — Organizer preparation/readiness mapping.
+* [`docs/canonical/experience/judge-evaluation.md`](docs/canonical/experience/judge-evaluation.md) — active Judge evaluation/finalization mapping.
+* [`docs/canonical/experience/authority-lineage-correction.md`](docs/canonical/experience/authority-lineage-correction.md) — amendment, paper/assisted capture, correction, invalidation, replacement and historical-authority mapping.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013 mapping work.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
@@ -34,7 +35,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
-013-F: NEXT
+013-F: COMPLETE — PASS
+013-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -52,24 +54,24 @@ PF-01 supports the full eighteen-Concept capability envelope. Award absence/pres
 
 ## Phase-013 mapping posture
 
-013-A established mapping readiness. 013-B reconciled the pre-convergence Experience corpus. 013-C established context/Judge-entry semantics. 013-D established Organizer preparation/readiness mapping. 013-E establishes ordinary active evaluation through initial authoritative Finalization.
+013-F establishes current authority-lineage and correction mapping after 013-E's ordinary active evaluation path.
 
-Key accepted active-evaluation rules:
+Key accepted rules now include:
 
 ```text
-Panel membership != occurrence participation != responsibility != evidence
-Occurrence Complete != obligation Satisfied != Scorecard Finalized
-Outstanding obligation + no Scorecard = Not Started work
-one Evaluation Obligation → at most one logical Scorecard
-Scorecard Draft != authoritative judgment
-Draft complete/valid != Finalized
-exact bound Evaluation Basis != latest working Rubric
-Finalize Evaluation = explicit Judge semantic commitment
-uncertain authoritative result != confirmed success
-Organizer/support capability != Judge authorship
+paper / assisted / electronic capture = same evaluation model
+capture Actor != Judge semantic author / RepresentedAuthority
+Finalized Scorecard != reopenable initial Draft
+Judge amendment != source-faithful capture correction
+superseded != invalidated != replaced != affected != stale
+historical obligation satisfaction != current evidence eligibility
+terminal Evaluation Obligation never reopens
+legitimate repeat responsibility = successor obligation + new logical Scorecard
+replacement occurrence does not clone responsibility/evidence
+current correction != silent historical rewrite
 ```
 
-After confirmed initial Finalization, amendment/correction/history is not ordinary active evaluation and routes to 013-F.
+The former mixed `paper-export-publication.md` contract is now historical/admitted evidence only. Its paper/correction semantics moved to `authority-lineage-correction.md`; Export/Publication mapping remains pending 013-I.
 
 Global rules remain:
 
@@ -80,4 +82,4 @@ synchronization chain != mandatory wizard
 
 ## Current direction
 
-Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
+Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
