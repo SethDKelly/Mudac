@@ -15,9 +15,10 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — current composition and application-action authority.
 * [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and owner topology through 013-F.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and owner topology through 013-G.
 * [Experience](canonical/experience/) — current accepted mapping owners plus explicitly classified admitted/historical evidence.
-* [Authority Lineage, Capture & Correction Mapping](canonical/experience/authority-lineage-correction.md) — current amendment, paper/assisted capture, correction, invalidation, replacement and history mapping accepted in 013-F.
+* [Organizer Live Operations & Remaining Work Mapping](canonical/experience/live-operations.md) — current 013-G event-day operational/remaining-work mapping.
+* [Reconciliation & Derived Outcome-State Mapping](canonical/experience/reconciliation-derived-state.md) — current 013-G evidence eligibility/Coverage/Aggregate/Rank/readiness mapping.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting semantic constraints.
@@ -36,28 +37,31 @@ Completed:
 - [013-C](013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) — **PASS**;
 - [013-D](013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md) — **PASS**;
 - [013-E](013-concept-mapping-interaction-semantics-user-visible-representation/013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md) — **PASS**;
-- [013-F](013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md) — **PASS**.
+- [013-F](013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md) — **PASS**;
+- [013-G](013-concept-mapping-interaction-semantics-user-visible-representation/013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md) — **PASS**.
 
 The next work is:
 
-> **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**
+> **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**
 
-# Current authority-lineage rules
+# Current live / derived-state rules
 
 ```text
-paper / assisted / electronic capture = same evaluation model
-capture Actor != Judge semantic author / RepresentedAuthority
-Finalized Scorecard != reopenable initial Draft
-Judge amendment != source-faithful capture correction
-superseded != invalidated != replaced != affected != stale
-historical obligation satisfaction != current evidence eligibility
-terminal obligation never reopens
-legitimate repeat work = successor obligation + new logical Scorecard
-replacement occurrence does not clone responsibility/evidence
-current correction != silent historical rewrite
+Remaining Work = projection over Outstanding Evaluation Obligations
+Event Completed != all Judge work done
+historically Satisfied != currently eligible evidence
+ineligible evidence != reopened obligation != automatic successor work
+warning != blocker != governed exception != correction != technical intervention
+Reconciliation = source-directed work, not ticket/lifecycle authority
+Coverage fact != exception disposition
+Aggregate exists != Coverage Satisfied != rank eligible
+Rank = derived/non-editable
+calculated Rank != Ranking Readiness != official authority
+Ranking Readiness / Finalization Readiness = derived, non-editable
+calculated != recognized != official != public
 ```
 
-The old `canonical/experience/paper-export-publication.md` is now only a historical/evidence adapter. Paper/correction authority moved to `authority-lineage-correction.md`; remaining Export/Publication evidence awaits 013-I.
+The old `canonical/experience/reconciliation-finalization.md` is now only a historical/evidence adapter. Reconciliation/derived-state authority moved to `reconciliation-derived-state.md`; remaining Award/finalization/officiality evidence awaits 013-H.
 
 # Agent bootstrap
 
@@ -77,7 +81,8 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root,
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
-013-G: NEXT
+013-G: COMPLETE — PASS
+013-H: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -105,7 +110,7 @@ The application mapping surface remains the Phase-011 `D / C / P / S / X` action
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-G NEXT
+013 mapping / representation                   IN PROGRESS — 013-H NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
