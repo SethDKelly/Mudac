@@ -52,19 +52,20 @@ X — intentionally unavailable generic action
 
 Phase 013 maps this action surface rather than the archival adapter or an arbitrary union of Concept actions.
 
-013-E maps the evaluation family into user-visible semantics without changing composition:
+013-F maps temporal/correction composition into user-visible authority lineage without changing Phase-011 semantics:
 
 ```text
-Prepared occurrence != begun occurrence != responsibility
-Panel membership != confirmed starting evaluator set
-Occurrence Complete != obligation Satisfied
-Outstanding obligation + no Scorecard = Not Started work
-one Evaluation Obligation → at most one logical Scorecard
-Scorecard Draft != authoritative judgment
-Finalize Evaluation = explicit coordinated authority establishment
-Versioning/Provenance/obligation satisfaction remain composition-only participants
-uncertain Finalization != confirmed success
+paper / assisted / electronic capture = same logical evaluation model
+capture Actor != Judge RepresentedAuthority
+Judge amendment != capture correction
+supersession != invalidation != replacement
+historical satisfaction != current evidence eligibility
+terminal obligation never reopens
+successor responsibility is deliberate, not an invalidation side effect
+replacement occurrence does not clone participants/obligations/evidence
 ```
+
+Generic Versioning/Provenance administration remains unavailable. Purpose-specific amendment/correction/invalidation actions compose those owners.
 
 For current mapping work use:
 
@@ -73,7 +74,8 @@ For current mapping work use:
 - [Context and Participation Modes](../experience/context-role-modes.md);
 - [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md);
 - [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md);
-- [Judge Active Evaluation Mapping](../experience/judge-evaluation.md).
+- [Judge Active Evaluation Mapping](../experience/judge-evaluation.md);
+- [Authority Lineage, Capture & Correction Mapping](../experience/authority-lineage-correction.md).
 
 ## Current handoff
 
@@ -86,5 +88,6 @@ Phase 013 IN PROGRESS
 013-C COMPLETE — PASS
 013-D COMPLETE — PASS
 013-E COMPLETE — PASS
-013-F NEXT — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping
+013-F COMPLETE — PASS
+013-G NEXT — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping
 ```
