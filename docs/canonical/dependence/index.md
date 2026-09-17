@@ -36,6 +36,7 @@ Dependence may inform what context/basis must be intelligible, but:
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+preparation dependency != setup step number
 ```
 
 ```text
@@ -45,7 +46,9 @@ dependence-valid
   != mapped user experience
 ```
 
-013-C applies this directly to Judge entry: Panel capability/support inside PF-01 does not make current Panel assignment a universal prerequisite unless current policy/readiness requires it for that Competition profile.
+013-C applies this to Judge entry: Panel capability/support inside PF-01 does not make current Panel assignment a universal prerequisite unless current policy/readiness requires it for that Competition profile.
+
+013-D applies the same principle to Organizer preparation: Award/material presence, final event-day staffing and similar supported capabilities remain profile/policy-dependent rather than universal setup gates. A dependence relation may constrain explanation/validity without becoming an ordered setup step.
 
 ## Current handoff
 
@@ -55,7 +58,8 @@ Phase 013  IN PROGRESS
 013-A      COMPLETE — READY
 013-B      COMPLETE — PASS
 013-C      COMPLETE — PASS
-013-D      NEXT
+013-D      COMPLETE — PASS
+013-E      NEXT
 ```
 
-Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
