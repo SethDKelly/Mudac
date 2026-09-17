@@ -12,8 +12,9 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
 * [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline.
-* [Phase 013 Mapping Entry Authority](experience/phase-013-entry-handoff.md) — entry/start-gate authority and reopen rules.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/terminology/ownership baseline through 013-C.
+* [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C operating-context/multi-capacity mapping.
+* [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C Judge-entry/readiness mapping.
 
 # Governance
 
@@ -35,7 +36,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013: IN PROGRESS
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
-013-C: NEXT
+013-C: COMPLETE — PASS
+013-D: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,7 +47,7 @@ implementation authorization: NOT YET
 
 # Current mapping authority
 
-013-B established that pre-convergence Experience files are admitted evidence/candidates rather than authority as-is. Current mapping knowledge follows:
+Current mapping knowledge follows:
 
 ```text
 Purpose / Concepts / Synchronizations / Dependence / PF-01
@@ -56,17 +58,30 @@ Phase 013 Mapping Entry Authority
   ↓
 Mapping Authority Baseline
   ↓
-Experience owners explicitly reworked by 013-C through 013-K
+accepted Experience owners from completed Phase-013 workstreams
 ```
 
-Deprecated `Encounter` and `Official Outcome Revision` terminology cannot override current Evaluation Occurrence / Evaluation Obligation / Scorecard / Outcome Declaration semantics.
+013-C establishes:
+
+```text
+Identity != Participation != Access
+one protected operation = one current Participation context
+role/capacity mode = representation, not authority
+multi-capacity capabilities never union
+Judge context = Judge-safe disclosure posture
+Panel membership != occurrence participation != responsibility != evidence
+Ready to Judge = derived explanation, not editable state
+```
+
+Remaining older Experience contracts are admitted evidence until their assigned workstream explicitly accepts or rewrites them.
 
 # Retrieval rule during Phase 013
 
 1. load the active Phase-013 record for the task;
 2. load [Mapping Authority Baseline](experience/mapping-authority-baseline.md);
 3. load task-relevant Project / Concepts / Synchronizations / Dependence / Policies / Invariants;
-4. use older Experience material only as admitted evidence unless explicitly accepted/reworked;
-5. do not preload architecture/implementation except for explicit contamination/history work.
+4. load accepted Experience owners relevant to the task;
+5. use remaining older Experience material only as admitted evidence;
+6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping**.
+Next: **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
