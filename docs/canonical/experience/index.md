@@ -13,17 +13,19 @@ Phase 012  COMPLETE — PASS
 013-C      COMPLETE — PASS
 013-D      COMPLETE — PASS
 013-E      COMPLETE — PASS
-013-F      NEXT — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping
+013-F      COMPLETE — PASS
+013-G      NEXT — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping
 ```
 
 Start with:
 
-* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification, terminology contract and owner topology through 013-E.
-* [Experience Context and Participation Modes](context-role-modes.md) — operating-context, multi-capacity, role-mode and disclosure-context mapping accepted by 013-C.
-* [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — Judge-entry, Competition Participation and Ready-to-Judge mapping accepted by 013-C.
-* [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — non-linear preparation, competitor/grouping/basis setup, Competition Readiness, explicit Ready lifecycle commitment and Judge-safe preview accepted by 013-D.
-* [Judge Active Evaluation Mapping](judge-evaluation.md) — Evaluation Occurrence/Obligation distinction, one logical Scorecard Draft, exact bound basis, explicit Finalization, action availability and truthful feedback accepted by 013-E.
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — Phase-013 entry/start-gate precedence, explanation-order constraints, risk register and reopen rules.
+* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification and owner topology through 013-F.
+* [Experience Context and Participation Modes](context-role-modes.md) — 013-C current context/multi-capacity mapping.
+* [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — 013-C Judge-entry/readiness mapping.
+* [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — 013-D preparation/readiness mapping.
+* [Judge Active Evaluation Mapping](judge-evaluation.md) — 013-E active evaluation mapping through confirmed initial Finalization.
+* [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) — 013-F paper/assisted capture, amendment, correction, invalidation, replacement, successor responsibility and historical/current authority mapping.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — Phase-013 start-gate precedence and reopen rules.
 
 Current conceptual meaning continues to come from Project Purpose, Concepts, Synchronizations, Dependence/PF-01, Policies and Invariants.
 
@@ -33,8 +35,9 @@ Current conceptual meaning continues to come from Project Purpose, Concepts, Syn
 | --- | --- | --- |
 | [Experience Context and Participation Modes](context-role-modes.md) | Identity/Participation/Access operating context, capacity modes, multi-capacity isolation, disclosure context, current/history distinction | 013-C |
 | [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) | Judge Competition entry, Identity continuity, Judge Participation, check-in/event attributes, Panel planning context, derived Ready-to-Judge semantics | 013-C |
-| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | non-linear Organizer preparation, Team/Division/Alias setup, Judge/Panel planning, Rubric/evaluation-basis setup, Competition Readiness, explicit Ready commitment, Judge-safe preview | 013-D |
-| [Judge Active Evaluation Mapping](judge-evaluation.md) | active occurrence/responsibility/judgment mapping, exact basis, one logical Scorecard Draft, explicit Finalization, action availability and active-evaluation feedback | 013-E |
+| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | non-linear preparation, competitor/grouping/basis setup, Competition Readiness, explicit Ready commitment, Judge-safe preview | 013-D |
+| [Judge Active Evaluation Mapping](judge-evaluation.md) | active occurrence/responsibility/judgment mapping, exact basis, one logical Scorecard Draft, explicit Finalization, action availability and feedback | 013-E |
+| [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) | paper/assisted capture authority, amendment, source-faithful correction, invalidation, replacement, successor responsibility, Provenance and current/historical authority | 013-F |
 
 ## Remaining admitted Experience evidence
 
@@ -43,74 +46,51 @@ Current conceptual meaning continues to come from Project Purpose, Concepts, Syn
 | [Experience Action, State & Authority Traceability](action-authority-traceability.md) | retain/revalidate cross-cutting; final acceptance audit | 013-C–K |
 | [Live Operations](live-operations.md) | rewrite/revalidate in place | 013-G |
 | [Reconciliation & Finalization](reconciliation-finalization.md) | split into derived reconciliation + officiality owners, then supersede | 013-G/H |
-| [Paper, Export & Publication](paper-export-publication.md) | paper/correction semantics move to 013-F; external release moves to 013-I; then supersede | 013-F/I |
+| [Legacy Paper / Export / Publication Experience Evidence](paper-export-publication.md) | paper/correction migrated to 013-F; retain Export/Publication evidence only until 013-I | 013-I |
 | [Accessibility & Resilience](accessibility-resilience.md) | rewrite/revalidate in place | 013-J |
-| [Status, Feedback & Recovery](status-feedback-recovery.md) | rewrite/revalidate in place; preserve 013-E domain feedback distinctions | 013-J |
+| [Status, Feedback & Recovery](status-feedback-recovery.md) | rewrite/revalidate in place; preserve 013-E/F truthful-authority distinctions | 013-J |
 
-## Current active-evaluation rules
+## Current authority-lineage rules
 
 ```text
-Panel membership
-  != occurrence participation
-  != Evaluation Obligation
-  != Scorecard evidence
+paper / assisted / electronic capture = same evaluation model
+capture Actor != Judge semantic author / RepresentedAuthority
+Finalized Scorecard != reopenable initial Draft
+Judge amendment != source-faithful capture correction
+superseded != invalidated != replaced != affected != stale
+structural Scorecard identity cannot change through amendment/capture correction
+historical obligation satisfaction != current evidence eligibility
+terminal obligation never reopens
+legitimate repeat work = successor obligation + new logical Scorecard
+replacement occurrence does not clone participants/responsibility/evidence
+current correction != silent historical rewrite
+```
 
-Prepared occurrence != begun occurrence != responsibility
+Paper-origin transcription remains non-authoritative until the identified source and Judge completed/committed intent are verified. Ambiguous Judge intent remains ambiguous.
+
+## Active-evaluation rules retained
+
+```text
+Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence
 Occurrence Complete != obligation Satisfied != Scorecard Finalized
-Outstanding obligation + no Scorecard = legitimate Not Started work
 one Evaluation Obligation → at most one logical Scorecard
 Scorecard Draft != authoritative judgment
 Draft complete/valid != Finalized
-presentation end / navigation / autosave != Finalization
 Finalize Evaluation = explicit Judge semantic commitment
-uncertain Finalization != confirmed success
-```
-
-The Judge evaluates against the exact bound authoritative Rubric Version. Current/latest working Rubric state never silently rebinds active work.
-
-Judge Independence continues to hide peer Scorecards/Notes, Panel mean, Coverage, Aggregate, Rank and standings during ordinary judging.
-
-## Current context/preparation rules retained
-
-```text
-Identity != Participation != Access
-one protected operation = one explicit Participation context
-role/capacity mode = representation, not authority
-multi-capacity capabilities never union
-Judge context = Judge-safe disclosure posture
-Ready to Judge = derived, not writable
-preparation = view over source truth, not a Workflow/Setup Concept
-Competition Readiness = derived, not editable
-readiness true != Competition lifecycle Ready
-Mark Competition Ready = explicit coordinated lifecycle action
-Competition Ready != Active
-working Rubric != authoritative Rubric Version
-Judge-safe preview != Judge authority
-```
-
-## Approved future owner additions
-
-Create these only when their workstream has substantive durable mapping knowledge:
-
-```text
-authority-lineage-correction.md       013-F
-reconciliation-derived-state.md       013-G
-outcome-officiality.md                013-H
-external-representation-release.md    013-I
+uncertain authority != confirmed success
 ```
 
 ## Terminology baseline
 
 ```text
 Encounter
-  → deprecated adapter; interpret by meaning as Evaluation Occurrence,
-    Evaluation Obligation, Scorecard, Panel, Participation or Access
+  → deprecated adapter; interpret by current semantic meaning
 
 Official Outcome Revision
   → deprecated; current official authority/history is Outcome Declaration
 
 Ready to Judge / Competition Readiness / Ranking Readiness / Finalization Readiness
-  → derived projections, not Concepts or editable workflow state
+  → derived projections, not writable Concepts
 
 Reconciliation
   → work/process context, not a Competition lifecycle state or Concept
@@ -124,7 +104,7 @@ synchronization chain != mandatory wizard
 preparation dependency != setup step number
 ```
 
-The active-evaluation authority chain is explanatory rather than a mandatory interface sequence.
+Authority lineage and correction history are semantic explanation, not a hidden workflow engine.
 
 ## Application-action rule
 
@@ -136,8 +116,8 @@ S — system-triggered reaction
 X — intentionally unavailable generic action
 ```
 
-Do not expose `P` or `X` as generic user controls. In particular, Versioning/Provenance and Evaluation Obligation satisfaction participate in Finalize Evaluation without becoming generic Judge controls.
+Do not expose `P` or `X` as generic controls. In particular, Versioning and Provenance remain composition participants inside purpose-specific authority actions.
 
 ## Next
 
-Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
+Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
