@@ -1,7 +1,7 @@
 ---
 type: Canonical Mapping Authority Baseline
 title: Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline
-description: "Current Phase-013 authority/evidence classification and Experience-owner topology, advanced through 013-F authority-lineage/correction mapping."
+description: "Current Phase-013 authority/evidence classification and Experience-owner topology, advanced through 013-G live-operations/reconciliation/derived-state mapping."
 status: stable
 tags: [canonical, experience, mapping, authority, evidence, terminology, ownership, phase-013]
 sources:
@@ -11,6 +11,7 @@ sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md
   - resource: phase-013-entry-handoff.md
   - resource: ../concepts/
   - resource: ../synchronizations/
@@ -45,18 +46,20 @@ THIS Mapping Authority Baseline
 Experience owners explicitly accepted/reworked by completed Phase-013 workstreams
 ```
 
-# Current mapping authority through 013-F
+# Current mapping authority through 013-G
 
 Current mapping authority includes:
 
 - `phase-013-entry-handoff.md`;
 - this baseline;
-- completed Phase-013 records 013-A through 013-F;
+- completed Phase-013 records 013-A through 013-G;
 - [Experience Context and Participation Modes](context-role-modes.md);
 - [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md);
 - [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md);
 - [Judge Active Evaluation Mapping](judge-evaluation.md);
-- [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md).
+- [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md);
+- [Organizer Live Operations & Remaining Work Mapping](live-operations.md);
+- [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md).
 
 These owners are current mapping authority for their natural subjects.
 
@@ -65,9 +68,8 @@ These owners are current mapping authority for their natural subjects.
 The following remain admitted evidence/candidates until their assigned workstream accepts, rewrites or supersedes them:
 
 - `action-authority-traceability.md` — cross-cutting; final acceptance audit in 013-K;
-- `live-operations.md` — 013-G;
-- `reconciliation-finalization.md` — 013-G/H then supersede;
-- `paper-export-publication.md` — **historical evidence adapter only** after 013-F; paper/correction mapping has moved to `authority-lineage-correction.md`, while Export/Publication evidence remains pending 013-I;
+- `reconciliation-finalization.md` — **historical evidence adapter only after 013-G**; reconciliation/derived-state mapping moved to `reconciliation-derived-state.md`, while Award/finalization/officiality evidence remains pending 013-H;
+- `paper-export-publication.md` — historical evidence adapter only after 013-F; Export/Publication evidence remains pending 013-I;
 - `accessibility-resilience.md` — 013-J;
 - `status-feedback-recovery.md` — 013-J.
 
@@ -78,11 +80,12 @@ The following remain admitted evidence/candidates until their assigned workstrea
 | `context-role-modes.md` | **current mapping authority** | rewritten/accepted 013-C |
 | `judge-onboarding.md` | **current mapping authority** | rewritten/accepted 013-C |
 | `organizer-preparation.md` | **current mapping authority** | rewritten/accepted 013-D |
-| `judge-evaluation.md` | **current mapping authority** | rewritten/accepted 013-E for ordinary active evaluation |
+| `judge-evaluation.md` | **current mapping authority** | rewritten/accepted 013-E |
 | `authority-lineage-correction.md` | **current mapping authority** | created/accepted 013-F |
+| `live-operations.md` | **current mapping authority** | rewritten/accepted 013-G |
+| `reconciliation-derived-state.md` | **current mapping authority** | created/accepted 013-G |
 | `action-authority-traceability.md` | admitted cross-cutting evidence | revalidate incrementally; final audit 013-K |
-| `live-operations.md` | admitted evidence | rewrite/revalidate 013-G |
-| `reconciliation-finalization.md` | admitted evidence | replace through 013-G/H owners then supersede |
+| `reconciliation-finalization.md` | historical/admitted evidence adapter | reconciliation migrated 013-G; Award/finalization/officiality migrate 013-H |
 | `paper-export-publication.md` | historical/admitted evidence adapter | paper/correction migrated 013-F; Export/Publication migrate 013-I |
 | `accessibility-resilience.md` | admitted evidence | rewrite/revalidate 013-J |
 | `status-feedback-recovery.md` | admitted evidence | rewrite/revalidate 013-J |
@@ -93,9 +96,10 @@ The following remain admitted evidence/candidates until their assigned workstrea
 context-role-modes.md              → current authority after 013-C
 judge-onboarding.md                → current authority after 013-C
 organizer-preparation.md           → current authority after 013-D
-judge-evaluation.md                → current authority after 013-E active evaluation
+judge-evaluation.md                → current authority after 013-E
 authority-lineage-correction.md    → current authority after 013-F
-live-operations.md                 → 013-G live-event operations
+live-operations.md                 → current authority after 013-G
+reconciliation-derived-state.md    → current authority after 013-G
 accessibility-resilience.md        → 013-J
 status-feedback-recovery.md        → 013-J
 action-authority-traceability.md   → cross-cutting, final audit 013-K
@@ -104,7 +108,6 @@ action-authority-traceability.md   → cross-cutting, final audit 013-K
 Future owners are created only when substantive content exists:
 
 ```text
-reconciliation-derived-state.md       013-G
 outcome-officiality.md                013-H
 external-representation-release.md    013-I
 ```
@@ -126,7 +129,7 @@ Mechanical replacement is prohibited.
 
 `Official Outcome Revision` remains deprecated; current official authority/currentness/successor history is owned by Outcome Declaration.
 
-Derived/projection terms such as `Ready to Judge`, `Competition Readiness`, `Ranking Readiness`, `Finalization Readiness`, Coverage, Aggregate, Rank and reconciliation/exception projections do not become editable Concepts.
+Derived/projection terms such as `Ready to Judge`, `Competition Readiness`, Remaining Work, Coverage, Aggregate, Rank, `Ranking Readiness`, `Finalization Readiness`, reconciliation items and exception projections do not become editable Concepts.
 
 # Current context / preparation / active-evaluation contracts
 
@@ -138,7 +141,7 @@ role/capacity mode = representation, not authority
 multi-capacity capabilities are never unioned
 Judge context carries Judge-safe disclosure posture
 Ready to Judge = derived, not writable
-preparation = composed source view, not owning Workflow/Setup state
+preparation = composed source view, not workflow authority
 Competition Readiness = derived, not editable
 source sufficiency != Competition lifecycle Ready
 Competition Ready != Active
@@ -149,59 +152,95 @@ one Evaluation Obligation → at most one logical Scorecard
 Scorecard Draft != authoritative judgment
 Draft complete/valid != Finalized
 exact bound Evaluation Basis != latest working Rubric
-presentation end / navigation / autosave != Judge Finalization
 uncertain authoritative result != confirmed success
 Organizer/support capability != Judge authorship
 ```
 
 # 013-F authority-lineage contract
 
-013-F establishes:
+Preserve:
 
 ```text
-paper / assisted / electronic capture
-  = same evaluation semantics and one logical Scorecard
-
-capture Actor
-  != Judge semantic author / RepresentedAuthority
-
-initial Finalized authority
-  != reopenable Draft
-
-Judge semantic amendment
-  != source-faithful capture correction
-
-superseded
-  != invalidated
-  != replaced
-  != affected
-  != stale
-
-structural Scorecard identity
-  = Evaluator + Subject + OccurrenceContext + EvaluationBasis
-  → never silently changed through amendment/capture correction
-
-historical obligation satisfaction
-  != current evidence eligibility
-
-terminal Evaluation Obligation
-  → never reopened
-
-legitimate repeat responsibility
-  → successor Evaluation Obligation + new logical Scorecard
-
-replacement occurrence
-  → distinct history; no automatic participant/obligation/evidence cloning
-
-current correction
-  != silent historical rewrite
+paper / assisted / electronic capture = same evaluation model
+capture Actor != Judge semantic author / RepresentedAuthority
+initial Finalized authority != reopenable Draft
+Judge semantic amendment != source-faithful capture correction
+superseded != invalidated != replaced != affected != stale
+structural Scorecard identity never silently changes through amendment/capture correction
+historical obligation satisfaction != current evidence eligibility
+terminal Evaluation Obligation never reopens
+legitimate repeat responsibility = successor Evaluation Obligation + new logical Scorecard
+replacement occurrence creates distinct history; no automatic participant/obligation/evidence cloning
+current correction != silent historical rewrite
 ```
 
-Paper-origin transcription is non-authoritative until source fidelity and Judge completed/committed intent are established. Ambiguous Judge intent remains ambiguous.
+# 013-G live-operations / reconciliation contract
 
-Judge amendment creates successor authority for the same logical Scorecard while preserving one vote. Capture correction similarly creates successor authority for the same logical Scorecard, but records unchanged Judge intent from a verified source and may have a different capture/correction Actor.
+013-G establishes:
 
-Invalidation retains history, does not revive older predecessors automatically, and does not itself create replacement or successor work.
+```text
+Live Operations
+  = Organizer work context, not Concept/lifecycle authority
+
+Remaining Work
+  = projection over current Outstanding Evaluation Obligations
+  != manually maintained task state
+
+Event Completed
+  != all obligations terminal
+  != all Scorecards Finalized
+  != Coverage Satisfied
+  != reconciliation complete
+
+historically Satisfied obligation
+  != current evidence eligibility
+
+ineligible evidence
+  != reopened predecessor obligation
+  != automatic successor Judge work
+
+warning
+  != blocker
+  != governed exception
+  != correction
+  != technical intervention
+
+acknowledge / hide / suppress
+  != source resolution
+
+Reconciliation
+  = source-directed Organizer work
+  != Competition lifecycle state
+  != generic ticket system
+
+Coverage = Satisfied | Incomplete
+Coverage exception disposition is separate
+
+Aggregate existence
+  != Coverage Satisfied
+  != rank eligibility
+  != Ranking Ready
+  != official outcome
+
+Rank
+  = derived / non-editable
+  != Ranking Readiness
+  != Award authority
+  != official outcome
+
+Ranking Readiness / Finalization Readiness
+  = derived permission-to-proceed projections
+  != writable authority
+
+calculated
+  != recognized
+  != official
+  != public
+```
+
+A governed exception preserves the source shortfall and changes only the explicitly permitted consequence. It cannot rewrite Coverage, fabricate evidence, transfer Judge authorship or bypass unrelated policy.
+
+Derived currentness follows source change → affected/non-current derivation → recomputation against current authoritative basis. Recalculation never edits source truth.
 
 # Application-action rule
 
@@ -217,23 +256,9 @@ X — intentionally unavailable generic application action
 
 Do not expose `P` or `X` as generic user controls.
 
-Generic Versioning and Provenance administration remains intentionally unavailable. Purpose-specific actions such as Finalize Evaluation, Finalize Judge Amendment, Correct Authoritative Capture, evidence/occurrence invalidation and governed successor-work decisions compose those Concepts without exposing them as raw administration.
+Generic Versioning/Provenance administration, manual Coverage/Rank editing, generic reconciliation `resolve`, and universal `override` remain unavailable.
 
-# Action / consequence explanation rule
-
-For high-consequence authority actions, the mapping must make the semantic target and consequence intelligible without prescribing a particular UI control.
-
-At minimum distinguish:
-
-- what current authority will be succeeded or invalidated;
-- whether history remains;
-- whether Judge judgment changes;
-- who acts versus whose authority/content is represented;
-- whether structural identity is preserved;
-- whether current eligibility changes;
-- whether replacement or successor work is automatic (**it is not**).
-
-Unknown authoritative outcomes must never be represented as confirmed success.
+Purpose-specific source actions, governed exceptions and owner-specific correction paths change the underlying state; derived projections then recompute.
 
 # Explanation-order rule
 
@@ -243,7 +268,7 @@ synchronization chain != mandatory wizard
 preparation dependency != setup step number
 ```
 
-Authority lineage is explanatory history, not a required screen sequence or workflow engine.
+Live Operations and Reconciliation may group source conditions for understanding without becoming source ownership or a mandatory workflow engine.
 
 # PF-01 mapping scope
 
@@ -251,48 +276,40 @@ The sole current product/application variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Paper/electronic/mixed capture remains a PF-01 profile, not a separate product. 013-F establishes semantic parity across those paths.
+Paper/electronic/mixed capture, optional Awards, public/non-public operation and other supported profiles remain states/capabilities rather than product variants.
 
 # Workstream-to-owner baseline
 
 ## Completed 013-C
-
 - `context-role-modes.md`;
 - `judge-onboarding.md`.
 
 ## Completed 013-D
-
 - `organizer-preparation.md`.
 
 ## Completed 013-E
-
-- `judge-evaluation.md` for ordinary active evaluation.
+- `judge-evaluation.md`.
 
 ## Completed 013-F
+- `authority-lineage-correction.md`;
+- `paper-export-publication.md` demoted to historical/evidence adapter.
 
-- `authority-lineage-correction.md` for amendment, paper/assisted capture authority, source-faithful correction, invalidation, replacement, successor responsibility and current/historical authority;
-- `paper-export-publication.md` demoted to a historical/evidence adapter; its remaining Export/Publication content is pending 013-I.
-
-## 013-G
-
+## Completed 013-G
 - `live-operations.md`;
-- `reconciliation-derived-state.md`.
+- `reconciliation-derived-state.md`;
+- `reconciliation-finalization.md` demoted to historical/evidence adapter for remaining 013-H material.
 
 ## 013-H
-
 - `outcome-officiality.md`.
 
 ## 013-I
-
 - `external-representation-release.md`.
 
 ## 013-J
-
 - `accessibility-resilience.md`;
 - `status-feedback-recovery.md`.
 
 ## 013-K
-
 - final cross-owner reconciliation;
 - acceptance/rewrite of `action-authority-traceability.md`;
 - terminology/authority consistency audit;
@@ -330,7 +347,8 @@ mapping terminology/representation/ownership defect → Phase 013
 013-D  COMPLETE — PASS
 013-E  COMPLETE — PASS
 013-F  COMPLETE — PASS
-013-G  NEXT
+013-G  COMPLETE — PASS
+013-H  NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
