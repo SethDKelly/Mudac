@@ -9,7 +9,7 @@ Phase 012 is **COMPLETE — PASS**. This knowledge remains distinct from intrins
 - [MUDAC Application-Family Concept Dependence](application-family-dependence.md) — direct edges, universal non-edges and capability-conditioned rules.
 - [Whole-Graph Dependence & Subset Validation](whole-graph-subset-validation.md) — acyclicity, closure, optionality and representative subset validation.
 - [MUDAC Product-Family Scope](product-family-scope.md) — adopted PF-01 variant, in-scope profiles, coherent-but-unadopted contractions and future revalidation routes.
-- [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) — downstream mapping constraints; it does not replace dependence authority.
+- [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) — downstream mapping authority/evidence baseline; it does not replace dependence authority.
 
 ## Final Phase-012 result
 
@@ -31,7 +31,7 @@ PF-01 keeps all eighteen current Concepts in its supported capability envelope. 
 
 ## Mapping boundary
 
-013-A has completed with **READY**. Dependence may inform what context/basis must be intelligible, but:
+Dependence may inform what context/basis must be intelligible, but:
 
 ```text
 dependence order != navigation order
@@ -45,7 +45,7 @@ dependence-valid
   != mapped user experience
 ```
 
-Phase 013 must preserve Concept/dependence meaning without turning the dependence graph into interface architecture.
+013-C applies this directly to Judge entry: Panel capability/support inside PF-01 does not make current Panel assignment a universal prerequisite unless current policy/readiness requires it for that Competition profile.
 
 ## Current handoff
 
@@ -53,7 +53,9 @@ Phase 013 must preserve Concept/dependence meaning without turning the dependenc
 Phase 012  COMPLETE — PASS
 Phase 013  IN PROGRESS
 013-A      COMPLETE — READY
-013-B      NEXT
+013-B      COMPLETE — PASS
+013-C      COMPLETE — PASS
+013-D      NEXT
 ```
 
-Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline** using [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
