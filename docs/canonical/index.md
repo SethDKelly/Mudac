@@ -12,7 +12,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
 * [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted/historical evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-G.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-H.
 * [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C mapping.
 * [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C mapping.
 * [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D mapping.
@@ -20,6 +20,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Authority Lineage, Capture & Correction Mapping](experience/authority-lineage-correction.md) — accepted 013-F mapping.
 * [Organizer Live Operations & Remaining Work Mapping](experience/live-operations.md) — accepted 013-G live-operation mapping.
 * [Reconciliation & Derived Outcome-State Mapping](experience/reconciliation-derived-state.md) — accepted 013-G reconciliation/derived-state mapping.
+* [Award, Finalization & Outcome Officiality Mapping](experience/outcome-officiality.md) — accepted 013-H Award/finalization/declaration/successor mapping.
 
 # Governance
 
@@ -46,7 +47,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
 013-G: COMPLETE — PASS
-013-H: NEXT
+013-H: COMPLETE — PASS
+013-I: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -70,25 +72,27 @@ Mapping Authority Baseline
 accepted Experience owners from completed Phase-013 workstreams
 ```
 
-013-G adds:
+013-H adds:
 
 ```text
-Remaining Work = Outstanding-obligation projection
-Event Completed != all Judge work complete
-historically Satisfied != currently eligible evidence
-ineligible evidence != automatic successor work
-Reconciliation = source-directed work, not lifecycle/ticket state
-Coverage fact != exception disposition
-Aggregate existence != Coverage/rank readiness
-Rank = derived/non-editable
-calculated Rank != Ranking Readiness != Award/official authority
-Ranking Readiness / Finalization Readiness = derived, non-editable
-calculated != recognized != official != public
+calculated != ranking ready != recognized != Finalized != official != public != delivered
+Ranking Ready candidate != conferred Award
+rank-derived Award != discretionary Award
+later Rank/source change != automatic Award transfer
+Finalization Readiness != Competition Finalized
+ordinary closeout = Competition.finalize + OutcomeDeclaration.declare
+ordinary closeout success = Competition Finalized + current Outcome Declaration
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
+corrected calculation != successor official authority
+same visible result != same declared basis
+successor declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
 
-Governed exceptions preserve the source shortfall and change only the explicitly permitted consequence.
+Official authority arises only from explicit Outcome Declaration. An Affected declaration remains the latest declared official authority until an explicit successor is confirmed.
 
-The old `reconciliation-finalization.md` file is no longer reconciliation/derived-state authority; it remains historical/admitted evidence for Award/finalization/officiality until 013-H.
+The old `reconciliation-finalization.md` file is historical evidence only; it owns no current mapping semantics.
 
 # Retrieval rule during Phase 013
 
@@ -99,4 +103,4 @@ The old `reconciliation-finalization.md` file is no longer reconciliation/derive
 5. use remaining older Experience material only as admitted/historical evidence;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**.
+Next: **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**.
