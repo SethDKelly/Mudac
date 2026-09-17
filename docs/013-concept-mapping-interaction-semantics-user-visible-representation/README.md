@@ -1,6 +1,6 @@
 # Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation
 
-Status: **IN PROGRESS — 013-A/B/C/D complete; 013-E next.**
+Status: **IN PROGRESS — 013-A/B/C/D/E complete; 013-F next.**
 
 Phase 013 corresponds to Base Phase 007 / Daniel Jackson Concept Mapping. It maps the completed Purpose / Concept / Synchronization / Dependence / PF-01 model into faithful user-visible interaction and representation semantics without selecting frontend/runtime implementation architecture.
 
@@ -34,27 +34,27 @@ Use [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](../ca
 
 Current accepted Experience owners include:
 
-- [Experience Context and Participation Modes](../canonical/experience/context-role-modes.md) — accepted 013-C;
-- [Judge Entry, Participation & Readiness Mapping](../canonical/experience/judge-onboarding.md) — accepted 013-C;
-- [Organizer Competition Preparation & Readiness Mapping](../canonical/experience/organizer-preparation.md) — accepted 013-D.
+- [Experience Context and Participation Modes](../canonical/experience/context-role-modes.md) — 013-C;
+- [Judge Entry, Participation & Readiness Mapping](../canonical/experience/judge-onboarding.md) — 013-C;
+- [Organizer Competition Preparation & Readiness Mapping](../canonical/experience/organizer-preparation.md) — 013-D;
+- [Judge Active Evaluation Mapping](../canonical/experience/judge-evaluation.md) — 013-E.
 
-Current mapping rules now include:
+Current active-evaluation rules include:
 
 ```text
-Identity != Participation != Access
-role/capacity mode = representation of one current Participation context
-multi-capacity capabilities never union
-Judge context carries Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
-Ready to Judge = derived explanation, not writable state
-preparation = composed source view, not owning Workflow/Setup state
-Competition Readiness = derived and non-editable
-readiness true != Competition lifecycle Ready
-Mark Competition Ready = explicit lifecycle commitment
-Competition Ready != Active
-working Rubric != authoritative Rubric Version
-Judge-safe preview != Judge authority
+Prepared occurrence != begun occurrence != responsibility
+Occurrence Complete != obligation Satisfied != Scorecard Finalized
+Outstanding obligation + no Scorecard = Not Started work
+one Evaluation Obligation → at most one logical Scorecard
+Scorecard Draft != authoritative judgment
+Draft complete/valid != Finalized
+presentation end / navigation / autosave != Finalization
+Finalize Evaluation = explicit Judge semantic commitment
+uncertain authoritative result != confirmed success
 ```
+
+The exact authoritative Rubric Version bound to the occurrence/obligation remains the Judge's Evaluation Basis; a later working/current Rubric does not silently rebind active work.
 
 ## Approved subgroup sequence
 
@@ -64,8 +64,8 @@ Judge-safe preview != Judge authority
 | 013-B | [Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline](013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) | **Complete — PASS** |
 | 013-C | [Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping](013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) | **Complete — PASS** |
 | 013-D | [Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping](013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md) | **Complete — PASS** |
-| 013-E | Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping | **Next** |
-| 013-F | Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping | Planned |
+| 013-E | [Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping](013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md) | **Complete — PASS** |
+| 013-F | Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping | **Next** |
 | 013-G | Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping | Planned |
 | 013-H | Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping | Planned |
 | 013-I | Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping | Planned |
@@ -73,19 +73,22 @@ Judge-safe preview != Judge authority
 | 013-K | Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit | Planned |
 | 013-L | Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff | Planned exit review |
 
-## 013-D result
+## 013-E result
 
 ```text
-Organizer preparation mapping:          CURRENT / ACCEPTED
-preparation as mandatory wizard:        PROHIBITED
-readiness as editable checklist state:  PROHIBITED
-readiness == lifecycle Ready:           PROHIBITED
-Ready == Active:                        PROHIBITED
-Panel assignment as responsibility:     PROHIBITED
-working Rubric as authoritative basis:  PROHIBITED
-Judge-safe preview grants authority:    PROHIBITED
+active Judge evaluation mapping:        CURRENT / ACCEPTED
+Encounter as current Concept:           PROHIBITED
+Panel membership as responsibility:     PROHIBITED
+occurrence completion as Finalization:  PROHIBITED
+Draft completeness as authority:        PROHIBITED
+more than one logical Scorecard:        PROHIBITED
+peer/outcome disclosure while judging:  PROHIBITED
+uncertain Finalization as success:      PROHIBITED
+Organizer as Judge author:              PROHIBITED
 Phase-010/011/012 reopen:                NO
 ```
+
+013-E intentionally stops at confirmed initial Finalization. Amendment, paper/assisted capture, correction, invalidation, replacement, successor responsibility and current/historical authority move to 013-F rather than being represented as ordinary `Edit`/`Reopen` behavior.
 
 ## Current execution posture
 
@@ -99,7 +102,8 @@ Phase-010/011/012 reopen:                NO
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
-013-E: NEXT
+013-E: COMPLETE — PASS
+013-F: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -109,4 +113,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
+Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
