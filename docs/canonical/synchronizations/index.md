@@ -28,7 +28,7 @@ Coverage factual sufficiency != governed exception disposition
 Aggregate existence != rank eligibility
 Rank != Award authority
 Competition Finalization != Outcome Declaration
-calculated != official != public != delivered
+calculated != recognized != official != public != delivered
 source authority != Export representation != Publication release != transport delivery
 ```
 
@@ -46,27 +46,31 @@ X — intentionally unavailable generic action
 
 ## Phase-013 mapping boundary
 
-013-G maps the current outcome-derived composition into user-visible operational semantics without changing Phase-011 ownership:
+013-H maps the current Award/finalization/declaration composition into user-visible authority semantics without changing Phase-011 ownership:
 
 ```text
-Remaining Work = Outstanding-obligation projection
-Event Completed != all Judge work complete
-historical satisfaction != current evidence eligibility
-ineligible evidence != automatic successor responsibility
-Coverage fact != governed exception disposition
-Aggregate exists != Coverage/rank readiness
-Rank = derived/non-editable
-calculated Rank != Ranking Readiness != Award/official authority
-Ranking Readiness / Finalization Readiness = derived
-Reconciliation = source-directed work, not lifecycle/ticket authority
+Ranking Ready candidate != conferred Award
+rank-derived selection != discretionary selection
+later Rank/source change != automatic Award transfer
+Finalization Readiness != Competition Finalized
+ordinary closeout = Competition.finalize + OutcomeDeclaration.declare
+ordinary closeout success = Competition Finalized + current Outcome Declaration
+Competition lifecycle ownership != declaration content/currentness ownership
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
+corrected calculation != successor official authority
+successor declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
+
+An Affected declaration remains the latest explicitly declared official authority until an explicit successor is confirmed. Identical visible result values do not eliminate the need for successor authority when the declared basis materially changed.
 
 For current mapping work use:
 
 - [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
 - [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md);
-- [Organizer Live Operations & Remaining Work Mapping](../experience/live-operations.md);
 - [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md);
+- [Award, Finalization & Outcome Officiality Mapping](../experience/outcome-officiality.md);
 - [Authority Lineage, Capture & Correction Mapping](../experience/authority-lineage-correction.md).
 
 ## Current handoff
@@ -82,5 +86,6 @@ Phase 013 IN PROGRESS
 013-E COMPLETE — PASS
 013-F COMPLETE — PASS
 013-G COMPLETE — PASS
-013-H NEXT — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping
+013-H COMPLETE — PASS
+013-I NEXT — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping
 ```
