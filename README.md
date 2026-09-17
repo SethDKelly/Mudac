@@ -12,7 +12,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — current composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — current dependence, whole-graph and PF-01 scope authority.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence/terminology/ownership baseline.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — current Phase-013 mapping authority/evidence/ownership baseline.
+* [`docs/canonical/experience/context-role-modes.md`](docs/canonical/experience/context-role-modes.md) — current operating-context and multi-capacity mapping accepted in 013-C.
+* [`docs/canonical/experience/judge-onboarding.md`](docs/canonical/experience/judge-onboarding.md) — current Judge-entry/readiness mapping accepted in 013-C.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013 mapping work.
 * [`docs/canonical/governance/design-implementation-boundary.md`](docs/canonical/governance/design-implementation-boundary.md) — current execution/readiness boundary.
 
@@ -27,7 +29,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013 mapping/interaction/representation: IN PROGRESS
 013-A: COMPLETE — READY
 013-B: COMPLETE — PASS
-013-C: NEXT
+013-C: COMPLETE — PASS
+013-D: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,24 +48,28 @@ PF-01 supports the full eighteen-Concept capability envelope. Award absence/pres
 
 ## Phase-013 mapping posture
 
-013-A established mapping readiness. 013-B reconciled the pre-convergence Experience corpus, deprecated terminology, mapping authority and canonical ownership.
+013-A established mapping readiness. 013-B reconciled the pre-convergence Experience corpus, terminology, authority and canonical ownership. 013-C established current user-visible operating-context and Judge-entry semantics.
 
-Older Experience contracts remain admitted evidence/candidates until their assigned workstream explicitly accepts or rewrites them.
+Key accepted 013-C rules:
 
-Key rules remain:
+```text
+Identity != Participation != Access
+one protected operation = one current Participation context
+role/capacity mode = representation, not authority
+multi-capacity capabilities never union
+Judge context = Judge-safe disclosure posture
+Panel membership != occurrence participation != responsibility != evidence
+Ready to Judge = derived explanation, not editable state
+support privilege != Competition authority
+```
+
+Key global rules remain:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-Deprecated adapters remain non-authoritative:
-
-```text
-Encounter                 → interpret by current semantic meaning
-Official Outcome Revision → Outcome Declaration
-```
-
 ## Current direction
 
-Proceed to **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping**.
+Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
