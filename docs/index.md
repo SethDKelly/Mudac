@@ -15,10 +15,10 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — current composition and application-action authority.
 * [Dependence](canonical/dependence/) — current direct dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification and owner topology through 013-G.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence classification through 013-H.
 * [Experience](canonical/experience/) — current accepted mapping owners plus explicitly classified admitted/historical evidence.
-* [Organizer Live Operations & Remaining Work Mapping](canonical/experience/live-operations.md) — current 013-G event-day operational/remaining-work mapping.
-* [Reconciliation & Derived Outcome-State Mapping](canonical/experience/reconciliation-derived-state.md) — current 013-G evidence eligibility/Coverage/Aggregate/Rank/readiness mapping.
+* [Reconciliation & Derived Outcome-State Mapping](canonical/experience/reconciliation-derived-state.md) — current 013-G evidence/Coverage/Aggregate/Rank/readiness mapping.
+* [Award, Finalization & Outcome Officiality Mapping](canonical/experience/outcome-officiality.md) — current 013-H recognition/finalization/declaration/successor mapping.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing/configurable conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting semantic constraints.
@@ -30,38 +30,30 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **IN PROGRESS**.
 
-Completed:
-
-- [013-A](013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — **READY**;
-- [013-B](013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — **PASS**;
-- [013-C](013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) — **PASS**;
-- [013-D](013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md) — **PASS**;
-- [013-E](013-concept-mapping-interaction-semantics-user-visible-representation/013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md) — **PASS**;
-- [013-F](013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md) — **PASS**;
-- [013-G](013-concept-mapping-interaction-semantics-user-visible-representation/013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md) — **PASS**.
+Completed: 013-A **READY**; 013-B through 013-H **PASS**.
 
 The next work is:
 
-> **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**
+> **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**
 
-# Current live / derived-state rules
+# Current officiality rules
 
 ```text
-Remaining Work = projection over Outstanding Evaluation Obligations
-Event Completed != all Judge work done
-historically Satisfied != currently eligible evidence
-ineligible evidence != reopened obligation != automatic successor work
-warning != blocker != governed exception != correction != technical intervention
-Reconciliation = source-directed work, not ticket/lifecycle authority
-Coverage fact != exception disposition
-Aggregate exists != Coverage Satisfied != rank eligible
-Rank = derived/non-editable
-calculated Rank != Ranking Readiness != official authority
-Ranking Readiness / Finalization Readiness = derived, non-editable
-calculated != recognized != official != public
+calculated != ranking ready != recognized != Finalized != official != public != delivered
+Ranking Ready candidate != conferred Award
+rank-derived Award != discretionary Award
+Finalization Readiness != Competition Finalized
+ordinary closeout success = Competition Finalized + current Outcome Declaration
+Competition lifecycle ownership != Outcome Declaration ownership
+Outcome Declaration = Current | Affected | Superseded
+Affected != Superseded
+corrected calculation != successor official authority
+same visible result != same declared basis
+successor Outcome Declaration != re-finalize Competition
+Outcome Declaration != Export != Publication != delivery
 ```
 
-The old `canonical/experience/reconciliation-finalization.md` is now only a historical/evidence adapter. Reconciliation/derived-state authority moved to `reconciliation-derived-state.md`; remaining Award/finalization/officiality evidence awaits 013-H.
+The old `canonical/experience/reconciliation-finalization.md` is historical evidence only. All current reconciliation/derived-state meaning lives in `reconciliation-derived-state.md`; all current Award/finalization/officiality meaning lives in `outcome-officiality.md`.
 
 # Agent bootstrap
 
@@ -82,7 +74,8 @@ Repository agents begin with [`AGENTS.md`](../AGENTS.md), then this bundle root,
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
 013-G: COMPLETE — PASS
-013-H: NEXT
+013-H: COMPLETE — PASS
+013-I: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -110,7 +103,7 @@ The application mapping surface remains the Phase-011 `D / C / P / S / X` action
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-H NEXT
+013 mapping / representation                   IN PROGRESS — 013-I NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
