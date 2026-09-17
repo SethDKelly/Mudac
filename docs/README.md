@@ -16,6 +16,7 @@ Current foundational truth is:
 - [Experience Context and Participation Modes](canonical/experience/context-role-modes.md);
 - [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md);
 - [Organizer Competition Preparation & Readiness Mapping](canonical/experience/organizer-preparation.md);
+- [Judge Active Evaluation Mapping](canonical/experience/judge-evaluation.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -32,7 +33,7 @@ Current foundational truth is:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-E next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-F next**
 
 ## Current posture
 
@@ -53,45 +54,38 @@ implementation authorization: NOT YET
 013-B: COMPLETE — PASS
 013-C: COMPLETE — PASS
 013-D: COMPLETE — PASS
-013-E: NEXT
+013-E: COMPLETE — PASS
+013-F: NEXT
 ```
 
 ## Current Phase-013 mapping posture
 
-013-B established the mapping authority/evidence baseline and prevented pre-convergence Experience documents from overriding the converged model merely because they reside under `canonical/experience/`.
-
-013-C rewrote and accepted the current context/Judge-entry owners. 013-D rewrote and accepted the Organizer preparation/readiness owner.
-
-Preserve:
+013-E rewrote and accepted the ordinary active Judge-evaluation owner. Preserve:
 
 ```text
-Identity != Participation != Access
-one protected operation = one explicit Participation context
-role/capacity mode = representation, not authority
-multi-capacity capabilities never union
-Judge context = Judge-safe disclosure posture
-Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence
-Ready to Judge = derived explanation, not writable state
-preparation = composed view over source truth, not owning workflow state
-Competition Readiness = derived, not editable
-readiness true != Competition lifecycle Ready
-Mark Competition Ready = explicit lifecycle commitment
-Competition Ready != Active
-working Rubric != authoritative Rubric Version
-Judge-safe preview != Judge authority
-technical support privilege != Competition decision authority
+Panel membership != Evaluation Occurrence participation != Evaluation Obligation != Scorecard evidence
+Prepared occurrence != begun occurrence != responsibility
+Occurrence Complete != obligation Satisfied != Scorecard Finalized
+Outstanding obligation + no Scorecard = Not Started work
+one Evaluation Obligation → at most one logical Scorecard
+Scorecard Draft != authority
+Draft complete/valid != Finalized
+exact bound Evaluation Basis != latest working Rubric
+presentation end / navigation / autosave != Judge Finalization intent
+uncertain authoritative result != confirmed success
+Organizer/support capability != Judge authorship
 ```
+
+After initial Finalization, amendment/correction/history routes to 013-F instead of ordinary Edit/Reopen behavior.
 
 Global mapping rules remain:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
-preparation dependency != setup step number
-readiness blocker != closable task row
 ```
 
-Remaining older Experience contracts are admitted evidence until their assigned Phase-013 workstream explicitly accepts or rewrites them.
+Remaining older Experience contracts are admitted evidence until their assigned Phase-013 workstream explicitly accepts, rewrites or supersedes them.
 
 ## Completion runway
 
@@ -102,7 +96,7 @@ Remaining older Experience contracts are admitted evidence until their assigned 
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-E NEXT
+013 mapping / representation                   IN PROGRESS — 013-F NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
@@ -117,4 +111,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
+Proceed to **013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping**.
