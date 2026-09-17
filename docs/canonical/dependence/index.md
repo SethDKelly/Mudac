@@ -6,9 +6,9 @@ Phase 012 is **COMPLETE — PASS**. This knowledge remains distinct from intrins
 
 ## Current owners
 
-- [MUDAC Application-Family Concept Dependence](application-family-dependence.md) — direct edges, universal non-edges and capability-conditioned rules.
-- [Whole-Graph Dependence & Subset Validation](whole-graph-subset-validation.md) — acyclicity, closure, optionality and representative subset validation.
-- [MUDAC Product-Family Scope](product-family-scope.md) — adopted PF-01 variant, in-scope profiles, coherent-but-unadopted contractions and future revalidation routes.
+- [MUDAC Application-Family Concept Dependence](application-family-dependence.md).
+- [Whole-Graph Dependence & Subset Validation](whole-graph-subset-validation.md).
+- [MUDAC Product-Family Scope](product-family-scope.md).
 - [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) — downstream mapping authority/evidence baseline; it does not replace dependence authority.
 
 ## Final Phase-012 result
@@ -27,7 +27,7 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen current Concepts in its supported capability envelope. Product-family inclusion does not collapse their authority or require every Competition to exercise every optional capability.
+PF-01 keeps all eighteen current Concepts in its supported capability envelope. This is product scope rather than blanket direct dependence and does not require every Competition to exercise every capability.
 
 ## Mapping boundary
 
@@ -43,23 +43,23 @@ dependence-valid
   != mapped user experience
 ```
 
-013-F applies this to authority history:
+013-G preserves that distinction in operational/outcome mapping:
 
 ```text
-Scorecard depends on its structural context/basis
-  != structural identity may be edited in place
+Evaluation Obligation present
+  != remaining work unless currently Outstanding
 
-Versioning/Provenance included in PF-01
-  != generic Version/Provenance administration is a user capability
+historically Satisfied obligation
+  != current evidence eligibility
 
-replacement occurrence supported
-  != replacement automatically inherits predecessor participants/responsibility/evidence
+Coverage / Aggregate / Rank included in PF-01
+  != editable domain state
 
-Evaluation Obligation successor supported
-  != invalid evidence automatically creates new Judge work
+Award / Outcome Declaration included in PF-01
+  != derived Rank automatically owns recognition/officiality
 ```
 
-Paper/electronic/mixed capture remains a profile within PF-01 and preserves the same Concept/evaluation identities rather than forming separate product variants.
+PF-01 support for exceptions does not create a universal override capability; exception permission remains policy/consequence specific.
 
 ## Current handoff
 
@@ -72,7 +72,8 @@ Phase 013  IN PROGRESS
 013-D      COMPLETE — PASS
 013-E      COMPLETE — PASS
 013-F      COMPLETE — PASS
-013-G      NEXT
+013-G      COMPLETE — PASS
+013-H      NEXT
 ```
 
-Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
