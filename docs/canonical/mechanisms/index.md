@@ -20,7 +20,7 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Coverage remains `Satisfied | Incomplete`; governed exception does not rewrite factual sufficiency.
 - Aggregate is derived numerical state and does not establish Coverage/rank eligibility.
 - Rank is derived/non-editable.
-- Readiness is derived; `Ready to Judge`, Competition Readiness, Ranking Readiness and Finalization Readiness never become independent writable authority.
+- Readiness is derived; Judge/Competition/Ranking/Finalization Readiness never become independent writable authority.
 - Reconciliation remains process/work context rather than ticket/workflow authority.
 - Recovery/Continuity remains a cross-cutting purpose obligation.
 - Export owns representation currency; Publication owns release state; transport/delivery remains downstream realization.
@@ -41,35 +41,33 @@ Mappings preserve source-versus-derived direction:
 source facts
   → derived readiness / operational explanation
 
-eligible authoritative evidence
+current eligible authoritative evidence
   → Coverage / Aggregate
   → rank eligibility / Rank
 ```
 
-Derived state must never appear as an independently editable source of truth.
-
-013-E establishes that active Judge work is upstream of downstream evidence mechanisms:
+013-F establishes that historical authority and current eligibility may diverge:
 
 ```text
-Outstanding obligation
-  → Scorecard Draft
-  → explicit Finalize Evaluation
-  → authoritative qualifying evidence
-  → later Coverage/Aggregate eligibility evaluation
+historically Satisfied obligation
+  != currently eligible evidence
+
+Superseded Scorecard Version
+  = retained historical authority, not current eligible Version
+
+Invalidated Scorecard/occurrence dependency
+  → evidence may become ineligible
+  != historical evaluation erased
+  != automatic successor Judge work
 ```
 
-Therefore:
+Therefore 013-G must derive live remaining-work/reconciliation/Coverage/Aggregate/Rank explanations from current source/evidence eligibility while preserving historical satisfaction and correction lineage.
 
-```text
-Draft score/total != Aggregate input
-Occurrence completion != Coverage satisfaction
-Obligation Outstanding != zero evidence
-Finalized Scorecard existence != automatic current evidence eligibility forever
-```
+Missing or ineligible evidence remains missing/ineligible rather than becoming zero.
 
-Current evidence eligibility after correction/invalidation is mapped further in 013-F/G; historical satisfaction remains distinct from current eligibility.
+A governed exception may permit a downstream consequence while preserving factual Coverage `Incomplete`; exception disposition does not manufacture evidence.
 
-See [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) and [Judge Active Evaluation Mapping](../experience/judge-evaluation.md).
+See [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md), [Judge Active Evaluation Mapping](../experience/judge-evaluation.md), and [Authority Lineage, Capture & Correction Mapping](../experience/authority-lineage-correction.md).
 
 ```text
 Phase 010 COMPLETE — PASS
@@ -81,5 +79,6 @@ Phase 013 IN PROGRESS
 013-C COMPLETE — PASS
 013-D COMPLETE — PASS
 013-E COMPLETE — PASS
-013-F NEXT
+013-F COMPLETE — PASS
+013-G NEXT
 ```
