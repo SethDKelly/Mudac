@@ -6,19 +6,15 @@ This index is the canonical navigation entry point for current MUDAC composition
 
 ## Current canonical synchronization owners
 
-1. [Competition Lifecycle, Participation & Contextual Access Composition](competition-participation-access.md) — Identity→Participation binding, one explicit operating context, contextual Access, Competition readiness/lifecycle and exceptional resume.
-2. [Competitor Context, Evaluation Occurrence & Obligation Composition](evaluation-occurrence-obligation.md) — Team/Division/Alias presentation context, Panel intended grouping, actual Evaluation Occurrence participation, Evaluation Obligation establishment and occurrence completion.
-3. [Evaluation Basis, Scorecard Authority & Capture Composition](evaluation-basis-scorecard-authority.md) — authoritative Rubric Version/Evaluation Basis, one logical Scorecard, Finalization/amendment, Versioning/Provenance, obligation satisfaction and paper/electronic parity.
-4. [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md) — supersession, invalidation, replacement, capture correction, evidence/occurrence invalidation, successor responsibility and affected-state propagation.
-5. [Evaluation Outcome, Award, Finalization & Declaration Composition](evaluation-outcome-finalization-declaration.md) — current eligible evidence, Coverage/Aggregate/Rank, Award authority, Competition Finalization and explicit Outcome Declaration including affected/successor official outcomes.
-6. [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md) — exact-source Export generation/currentness/revalidation, audience disclosure and explicit Publication release/withdrawal/succession.
-7. [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md) — final D/C/P/S/X action surface, cross-family chaining, automation limits, cycle prevention, over/under-synchronization and application synergy.
+1. [Competition Lifecycle, Participation & Contextual Access Composition](competition-participation-access.md).
+2. [Competitor Context, Evaluation Occurrence & Obligation Composition](evaluation-occurrence-obligation.md).
+3. [Evaluation Basis, Scorecard Authority & Capture Composition](evaluation-basis-scorecard-authority.md).
+4. [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md).
+5. [Evaluation Outcome, Award, Finalization & Declaration Composition](evaluation-outcome-finalization-declaration.md).
+6. [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md).
+7. [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md).
 
 The first six documents own cohesive composition families. The seventh constrains/composes them at whole-application scope.
-
-## Historical evidence
-
-[Historical Concept Synchronization Contracts — Pre-Phase-011](concept-synchronizations.md) is an archival routing adapter and **not current authority**.
 
 ## Whole-application interpretation rules
 
@@ -50,31 +46,27 @@ X — intentionally unavailable generic action
 
 ## Phase-013 mapping boundary
 
-Phase 013 maps this action surface rather than the archival adapter or an arbitrary union of Concept actions.
-
-013-F maps temporal/correction composition into user-visible authority lineage without changing Phase-011 semantics:
+013-G maps the current outcome-derived composition into user-visible operational semantics without changing Phase-011 ownership:
 
 ```text
-paper / assisted / electronic capture = same logical evaluation model
-capture Actor != Judge RepresentedAuthority
-Judge amendment != capture correction
-supersession != invalidation != replacement
+Remaining Work = Outstanding-obligation projection
+Event Completed != all Judge work complete
 historical satisfaction != current evidence eligibility
-terminal obligation never reopens
-successor responsibility is deliberate, not an invalidation side effect
-replacement occurrence does not clone participants/obligations/evidence
+ineligible evidence != automatic successor responsibility
+Coverage fact != governed exception disposition
+Aggregate exists != Coverage/rank readiness
+Rank = derived/non-editable
+calculated Rank != Ranking Readiness != Award/official authority
+Ranking Readiness / Finalization Readiness = derived
+Reconciliation = source-directed work, not lifecycle/ticket authority
 ```
-
-Generic Versioning/Provenance administration remains unavailable. Purpose-specific amendment/correction/invalidation actions compose those owners.
 
 For current mapping work use:
 
 - [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
 - [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md);
-- [Context and Participation Modes](../experience/context-role-modes.md);
-- [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md);
-- [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md);
-- [Judge Active Evaluation Mapping](../experience/judge-evaluation.md);
+- [Organizer Live Operations & Remaining Work Mapping](../experience/live-operations.md);
+- [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md);
 - [Authority Lineage, Capture & Correction Mapping](../experience/authority-lineage-correction.md).
 
 ## Current handoff
@@ -89,5 +81,6 @@ Phase 013 IN PROGRESS
 013-D COMPLETE — PASS
 013-E COMPLETE — PASS
 013-F COMPLETE — PASS
-013-G NEXT — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping
+013-G COMPLETE — PASS
+013-H NEXT — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping
 ```
