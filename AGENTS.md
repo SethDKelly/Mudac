@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read [Project Context & Purpose](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
-6. Read current accepted Experience owners relevant to the work. Through 013-F these include [Context and Participation Modes](docs/canonical/experience/context-role-modes.md), [Judge Entry, Participation & Readiness Mapping](docs/canonical/experience/judge-onboarding.md), [Organizer Competition Preparation & Readiness Mapping](docs/canonical/experience/organizer-preparation.md), [Judge Active Evaluation Mapping](docs/canonical/experience/judge-evaluation.md), and [Authority Lineage, Capture & Correction Mapping](docs/canonical/experience/authority-lineage-correction.md).
+6. Read current accepted Experience owners relevant to the work. Through 013-G these include [Context and Participation Modes](docs/canonical/experience/context-role-modes.md), [Judge Entry, Participation & Readiness Mapping](docs/canonical/experience/judge-onboarding.md), [Organizer Competition Preparation & Readiness Mapping](docs/canonical/experience/organizer-preparation.md), [Judge Active Evaluation Mapping](docs/canonical/experience/judge-evaluation.md), [Authority Lineage, Capture & Correction Mapping](docs/canonical/experience/authority-lineage-correction.md), [Organizer Live Operations & Remaining Work Mapping](docs/canonical/experience/live-operations.md), and [Reconciliation & Derived Outcome-State Mapping](docs/canonical/experience/reconciliation-derived-state.md).
 7. Read the active [Phase 013](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) record.
 8. Treat remaining older `docs/canonical/experience/` contracts as admitted/historical evidence unless their assigned Phase-013 workstream has explicitly accepted/reworked/superseded them.
 9. Use current synchronization owners for interaction/composition rules; mapping does not replace composition.
@@ -29,7 +29,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
-013-G: NEXT
+013-G: COMPLETE — PASS
+013-H: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,14 +46,13 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 `Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters. Do not restore them because older UX material uses those terms.
 
-Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation remains process/work context.
+Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation and Live Operations remain work/process contexts rather than Concepts.
 
 ## Composition and mapping authority
 
 Preserve:
 
 - Identity != Participation != Access;
-- one protected operation uses one explicit current Participation context;
 - role/capacity mode is representation, not authority;
 - multi-capacity capabilities never union;
 - Judge context carries Judge-safe disclosure posture;
@@ -64,23 +64,29 @@ Preserve:
 - exact bound Evaluation Basis != latest working Rubric;
 - Judge Finalization requires explicit semantic intent;
 - uncertain authoritative result != confirmed success;
-- paper/electronic/assisted capture preserve the same evaluation meaning and weight;
 - capture Actor != Judge semantic author / RepresentedAuthority;
-- Finalized Scorecard != reopenable initial Draft;
 - Judge amendment != source-faithful capture correction;
 - supersession != invalidation != replacement != affectedness/staleness;
-- structural Scorecard identity cannot silently change through amendment/capture correction;
 - historical Evaluation Obligation satisfaction != current evidence eligibility;
 - terminal obligations never reopen;
 - legitimate repeated responsibility uses a successor obligation + new logical Scorecard;
 - replacement occurrence never auto-clones participants/responsibility/evidence;
-- current correction never silently rewrites history;
-- Organizer/support privilege != Judge authorship or correction authority;
+- Remaining Work is projected from current Outstanding obligations;
+- Event Completed != all Judge work done;
+- ineligible evidence != reopened obligation != automatic successor responsibility;
+- warning != blocker != governed exception != correction != technical intervention;
+- acknowledgement/hide/suppress != semantic resolution;
+- Reconciliation is source-directed work, not ticket/lifecycle authority;
+- Coverage factual state != governed exception disposition;
+- Aggregate existence != Coverage satisfaction or rank eligibility;
+- Rank is derived and non-editable;
+- calculated Rank != Ranking Readiness != Award authority != Outcome Declaration;
+- Ranking Readiness and Finalization Readiness are derived/non-editable;
 - missing evaluation != zero;
-- Coverage/Aggregate/Rank != Award authority != Outcome Declaration;
-- Competition Finalization != Outcome Declaration;
 - calculated != recognized != official != public != delivered;
-- source authority != Export != Publication != transport delivery.
+- Competition Finalization != Outcome Declaration;
+- source authority != Export != Publication != transport delivery;
+- Organizer/support privilege != Judge authorship or generic exception authority.
 
 Map the established action surface:
 
@@ -92,7 +98,7 @@ S — system-triggered conceptual reaction
 X — intentionally unavailable generic application action
 ```
 
-Do not expose `P` or `X` as generic user actions. Generic Versioning and Provenance administration remain unavailable; they participate only through purpose-specific application actions.
+Do not expose `P` or `X` as generic user actions. Generic Versioning/Provenance administration, manual Coverage/Rank editing, generic reconciliation `resolve`, and universal `override` remain unavailable.
 
 ## Explanation-order rule
 
@@ -101,12 +107,13 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-## Historical Experience adapter rule
+## Historical Experience adapter rules
 
-`docs/canonical/experience/paper-export-publication.md` is now a historical/evidence adapter only. Paper/correction mapping is owned by `authority-lineage-correction.md`; remaining Export/Publication evidence awaits 013-I.
+- `docs/canonical/experience/paper-export-publication.md` is historical/evidence only; remaining Export/Publication evidence awaits 013-I.
+- `docs/canonical/experience/reconciliation-finalization.md` is historical/evidence only; remaining Award/finalization/officiality evidence awaits 013-H.
 
 ## Current next task
 
 Proceed to:
 
-> **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**
+> **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**
