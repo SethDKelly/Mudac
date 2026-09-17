@@ -20,8 +20,6 @@ The first six documents own cohesive composition families. The seventh constrain
 
 [Historical Concept Synchronization Contracts — Pre-Phase-011](concept-synchronizations.md) is an archival routing adapter and **not current authority**.
 
-Current rules belong to the seven owners above.
-
 ## Whole-application interpretation rules
 
 ```text
@@ -38,8 +36,6 @@ calculated != official != public != delivered
 source authority != Export representation != Publication release != transport delivery
 ```
 
-Additional rules include terminal obligations never reopening, missing evidence never becoming zero, recalculation never silently moving Award authority, affected declarations remaining historically declared until explicit successor confirmation, Export generation never implying Publication, and no synchronization owning canonical domain state.
-
 ## Application action classes
 
 ```text
@@ -50,22 +46,28 @@ S — system-triggered conceptual reaction
 X — intentionally unavailable generic action
 ```
 
-No unresolved `U` remains.
-
 > **Automation may propagate knowledge/currentness and execute already-authorized bounded composition consequences; automation may not manufacture semantic authority.**
 
-## Mapping boundary
+## Phase-013 mapping boundary
 
-Phase 012 completed with PASS and selected PF-01 without requiring a Phase-011 reopen.
+Phase 013 maps this application action surface rather than the archival adapter or an arbitrary union of Concept actions.
 
-Phase 013 is now **IN PROGRESS**. [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) completed the mapping start gate with READY.
+013-C has accepted the current user-visible context mapping:
 
-Phase 013 must map this application action surface rather than the archival adapter or an arbitrary union of Concept actions.
+```text
+one protected operation = one explicit Participation context
+role/capacity mode = representation, not authority
+multi-capacity capabilities never union
+Access.check remains composition-only/system guard behavior
+Panel membership != evaluation responsibility
+```
 
-For current mapping entry use:
+For current mapping work use:
 
 - [MUDAC Product-Family Scope](../dependence/product-family-scope.md);
-- [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+- [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md);
+- [Context and Participation Modes](../experience/context-role-modes.md);
+- [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md).
 
 ## Current handoff
 
@@ -74,5 +76,7 @@ Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
 Phase 013 IN PROGRESS
 013-A COMPLETE — READY
-013-B NEXT — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline
+013-B COMPLETE — PASS
+013-C COMPLETE — PASS
+013-D NEXT — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping
 ```
