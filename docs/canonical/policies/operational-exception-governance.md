@@ -25,7 +25,7 @@ This policy does not create an `Exception` Concept, ticket lifecycle, or univers
 
 An accepted exception may change a declared permission, eligibility, or proceed consequence of a known condition only where policy explicitly permits it.
 
-It must preserve the underlying observed fact or shortfall. An exception cannot make missing evidence appear present, make a degraded Panel objectively compliant, rewrite who participated in an Encounter, or otherwise falsify historical/current source truth merely to clear a gate.
+It must preserve the underlying observed fact or shortfall. An exception cannot make missing evidence appear present, make a degraded Panel objectively compliant, rewrite who actually participated in an Evaluation Occurrence, or otherwise falsify historical/current source truth merely to clear a gate.
 
 <a id="opg-002"></a>
 ## OPG-002 — Exception authority is explicit, scoped, attributable, and reasoned

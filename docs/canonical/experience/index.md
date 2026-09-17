@@ -9,13 +9,16 @@ Phase 013 is **IN PROGRESS**.
 ```text
 Phase 012  COMPLETE — PASS
 013-A      COMPLETE — READY
-013-B      NEXT — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline
+013-B      COMPLETE — PASS
+013-C      NEXT — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping
 ```
 
-The current entry/start-gate authority is:
+Start with:
 
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — incoming conceptual precedence, explanation-order constraints, mapping-risk register, reopen rules, mapping-coverage result and approved Phase-013 sequence.
-* [013-A Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — Phase-013 start-gate evidence and detailed workstream plan.
+* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification, terminology contract, corpus disposition and natural owner topology established by 013-B.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — Phase-013 entry/start-gate precedence, explanation-order constraints, risk register and reopen rules.
+* [013-A Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — start-gate evidence and approved workstream sequence.
+* [013-B Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — reconciliation evidence and decision rationale.
 
 Current conceptual meaning continues to come from:
 
@@ -27,37 +30,52 @@ Current conceptual meaning continues to come from:
 
 ## Pre-convergence Experience evidence
 
-The following documents remain valuable incoming evidence but have **not yet been accepted as final Phase-013 canonical owners**:
+The following documents are **admitted evidence/candidates, not current mapping authority as-is**. Their historical `stable` metadata does not override the 013-B authority baseline.
 
-* [Experience Context & Role Modes](context-role-modes.md)
-* [Experience Action, State & Authority Traceability](action-authority-traceability.md)
-* [Judge Onboarding](judge-onboarding.md)
-* [Judge Evaluation](judge-evaluation.md)
-* [Organizer Preparation](organizer-preparation.md)
-* [Live Operations](live-operations.md)
-* [Reconciliation & Finalization](reconciliation-finalization.md)
-* [Paper, Export & Publication](paper-export-publication.md)
-* [Accessibility & Resilience](accessibility-resilience.md)
-* [Status, Feedback & Recovery](status-feedback-recovery.md)
+| File | 013-B disposition | Subphase |
+| --- | --- | --- |
+| [Experience Context & Role Modes](context-role-modes.md) | rewrite/revalidate in place | 013-C |
+| [Experience Action, State & Authority Traceability](action-authority-traceability.md) | retain/revalidate cross-cutting; final acceptance audit | 013-C–K |
+| [Judge Onboarding](judge-onboarding.md) | rewrite/revalidate in place | 013-C |
+| [Judge Evaluation](judge-evaluation.md) | retain active evaluation; split amendment/correction/history | 013-E/F |
+| [Organizer Preparation](organizer-preparation.md) | rewrite/revalidate in place | 013-D |
+| [Live Operations](live-operations.md) | rewrite/revalidate in place | 013-G |
+| [Reconciliation & Finalization](reconciliation-finalization.md) | split into derived reconciliation + officiality owners, then supersede | 013-G/H |
+| [Paper, Export & Publication](paper-export-publication.md) | split paper/correction from external release, then supersede | 013-F/I |
+| [Accessibility & Resilience](accessibility-resilience.md) | rewrite/revalidate in place | 013-J |
+| [Status, Feedback & Recovery](status-feedback-recovery.md) | rewrite/revalidate in place | 013-J |
 
-013-B must disposition each as retain/rewrite/split/merge/supersede/replace before later workstreams rely on it as durable current mapping authority.
+## Approved future owner additions
 
-## Known reconciliation issues
+Create these only when their workstream has substantive durable mapping knowledge:
+
+```text
+authority-lineage-correction.md       013-F
+reconciliation-derived-state.md       013-G
+outcome-officiality.md                013-H
+external-representation-release.md    013-I
+```
+
+No empty placeholders are needed.
+
+## Terminology baseline
 
 ```text
 Encounter
-  → reconcile to Evaluation Occurrence / Evaluation Obligation meaning
+  → deprecated adapter; interpret by meaning as Evaluation Occurrence,
+    Evaluation Obligation, Scorecard, Panel, Participation or Access
 
 Official Outcome Revision
-  → reconcile to Outcome Declaration
+  → deprecated; current official authority/history is Outcome Declaration
 
-archival concept-synchronizations routing
-  → reconcile to current synchronization owners
+Ready to Judge / Competition Ready / Ranking Readiness / Finalization Readiness
+  → derived projections, not Concepts or editable workflow state
+
+Reconciliation
+  → work/process context, not a Competition lifecycle state or Concept
 ```
 
-This is not a search-and-replace task. Mapping must identify the semantic meaning each older representation intended.
-
-013-A also identified bounded stale `Encounter` wording in at least one current mapping-relevant policy. Where meaning is already clear, 013-B should repair the natural owner; genuine semantic ambiguity must be routed upstream.
+No blind search-and-replace is permitted.
 
 ## Mapping interpretation rule
 
@@ -66,7 +84,7 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-Mappings must expose enough context, basis, authority, consequence, currentness and history for correct understanding without turning Concept structure into interface architecture.
+Mappings expose enough context, basis, authority, consequence, currentness and history for correct understanding without turning Concept structure into interface architecture.
 
 ## Application-action rule
 
@@ -82,6 +100,10 @@ X — intentionally unavailable generic action
 
 Do not expose `P` or `X` as generic user controls.
 
+## Current natural-owner rule
+
+Experience owns only additional user-visible semantics. Concept definitions, synchronization authority, scope/dependence, policies, invariants and derived mechanism truth remain in their natural canonical owners and are referenced rather than duplicated here.
+
 ## Next
 
-Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
+Proceed to **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping**.

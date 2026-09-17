@@ -32,6 +32,6 @@ Disclosure rules apply to interactive views, search, deep links, QR payloads, fi
 
 A denied disclosure attempt creates no authority merely because a user possesses a URL, route, device, prior rendering, or other navigation artifact.
 
-If protected information is actually exposed, later Access revocation can prevent further disclosure but cannot retroactively make the exposure not have happened. The occurrence must remain attributable enough for integrity/correction review. Material impact on blinded or independent evaluation is determined explicitly; it may require invalidating affected Encounter/evidence and establishing a replacement/rejudge, but exposure does not automatically invalidate unrelated evaluation and must not be erased through silent rewrite.
+If protected information is actually exposed, later Access revocation can prevent further disclosure but cannot retroactively make the exposure not have happened. The occurrence must remain attributable enough for integrity/correction review. Material impact on blinded or independent evaluation is determined explicitly; it may require invalidating an affected Evaluation Occurrence and/or dependent evaluation evidence and establishing legitimate replacement/rejudge work, but exposure does not automatically invalidate unrelated evaluation and must not be erased through silent rewrite.
 
 See [Access](../concepts/access.md#acc-001), [Correction & Authority](correction-authority.md), and [Export](../concepts/export.md#export-001).

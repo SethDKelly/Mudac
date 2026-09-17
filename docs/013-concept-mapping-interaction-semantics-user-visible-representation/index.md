@@ -5,8 +5,8 @@ Phase 013 is **IN PROGRESS**.
 ## Records
 
 - [013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning](013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) — **Complete — READY**.
-- **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline** — Next.
-- 013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping.
+- [013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline](013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) — **Complete — PASS**.
+- **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping** — Next.
 - 013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping.
 - 013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping.
 - 013-F — Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping.
@@ -21,6 +21,7 @@ Phase 013 is **IN PROGRESS**.
 
 Start with:
 
+- [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](../canonical/experience/mapping-authority-baseline.md);
 - [Phase 013 Mapping Entry Authority](../canonical/experience/phase-013-entry-handoff.md);
 - [Project Context & Purpose](../canonical/project/);
 - [Concepts](../canonical/concepts/);
@@ -28,13 +29,14 @@ Start with:
 - [Dependence and PF-01 Scope](../canonical/dependence/);
 - mapping-relevant [Policies](../canonical/policies/) and [Invariants](../canonical/invariants/).
 
-Older Experience documents are incoming evidence pending reconciliation beginning in 013-B.
+Older Experience documents are admitted evidence/candidates until their assigned Phase-013 workstream explicitly accepts or rewrites them.
 
 ## Boundary
 
 ```text
 013-A  COMPLETE — READY
-013-B  NEXT
+013-B  COMPLETE — PASS
+013-C  NEXT
 architecture / implementation  SUSPENDED
 ```
 

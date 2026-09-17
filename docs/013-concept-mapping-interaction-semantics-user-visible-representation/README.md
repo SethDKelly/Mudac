@@ -1,6 +1,6 @@
 # Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation
 
-Status: **IN PROGRESS — 013-A complete; 013-B next.**
+Status: **IN PROGRESS — 013-A/B complete; 013-C next.**
 
 Phase 013 corresponds to Base Phase 007 / Daniel Jackson Concept Mapping. It maps the completed Purpose / Concept / Synchronization / Dependence / PF-01 model into faithful user-visible interaction and representation semantics without selecting frontend/runtime implementation architecture.
 
@@ -39,19 +39,28 @@ The sole adopted current variant is:
 
 Award absence/presence, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, current/Affected/Superseded official authority and similar conditions are profiles/states inside PF-01, not separate products.
 
-## Current Experience evidence posture
+## Current mapping authority
 
-Older files under `docs/canonical/experience/` are valuable incoming evidence but are not automatically current Phase-013 authority. They contain pre-convergence terms such as `Encounter` and `Official Outcome Revision` and must be semantically reconciled rather than search-and-replaced.
+Use [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](../canonical/experience/mapping-authority-baseline.md) as the current Experience authority/evidence baseline.
 
-[Phase 013 Mapping Entry Authority](../canonical/experience/phase-013-entry-handoff.md) defines the current incoming authority order.
+013-B established that the ten older Experience contracts are admitted evidence/candidates rather than current mapping authority as-is. Their terminology and document boundaries cannot override current Concepts, synchronizations, dependence/scope, policies or invariants.
+
+Deprecated adapters remain:
+
+```text
+Encounter                 → interpret by current semantic meaning
+Official Outcome Revision → Outcome Declaration
+```
+
+No blind search-and-replace is permitted.
 
 ## Approved subgroup sequence
 
 | Group | Topic | Status |
 | --- | --- | --- |
 | 013-A | [Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning](013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) | **Complete — READY** |
-| 013-B | Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline | **Next** |
-| 013-C | Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping | Planned |
+| 013-B | [Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline](013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md) | **Complete — PASS** |
+| 013-C | Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping | **Next** |
 | 013-D | Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping | Planned |
 | 013-E | Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping | Planned |
 | 013-F | Authority Lineage, Paper Capture, Amendment, Correction & Historical-State Mapping | Planned |
@@ -62,42 +71,31 @@ Older files under `docs/canonical/experience/` are valuable incoming evidence bu
 | 013-K | Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit | Planned |
 | 013-L | Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff | Planned exit review |
 
-## 013-A gate result
-
-All twelve Base mapping dimensions require substantive work, but incoming conceptual authority is sufficient.
+## 013-B result
 
 ```text
-013-A start gate:             COMPLETE — READY
-incoming model sufficient:    YES
-Phase-010 reopen required:    NO
-Phase-011 reopen required:    NO
-Phase-012 reopen required:    NO
-Experience corpus current:    NO
-substantive mapping started:  NO
-013-B:                        NEXT
+013-B corpus reconciliation:          COMPLETE — PASS
+incoming Experience files:            ALL DISPOSITIONED
+current mapping baseline:              ESTABLISHED
+current policy terminology drift:      BOUNDED / REPAIRED
+Phase-010 reopen required:             NO
+Phase-011 reopen required:             NO
+Phase-012 reopen required:             NO
+substantive mapping begins:            013-C
 ```
 
-## Actor / affected-party perspectives
+The natural owner topology deliberately splits only where old document boundaries encode false semantic coupling:
 
-Phase 013 covers, where relevant:
+- active Judge evaluation is separated from correction/history;
+- paper capture/correction is separated from Export/Publication release;
+- derived reconciliation state is separated from official outcome authority.
 
-- Judge;
-- Organizer;
-- technical administrator/support operator;
-- Student Team as materially affected non-user;
-- external recipient of deliberately released material.
+## Primary mapping risks carried forward
 
-Do not collapse these into one generic user perspective where authority, disclosure, authorship, consequence or affected-party meaning differs.
+Phase 013 continues to close risks including:
 
-## Primary mapping risks
-
-Phase 013 must close or explicitly route risks including:
-
-- `Encounter` collapsing Evaluation Occurrence and Evaluation Obligation;
-- `Official Outcome Revision` restoring a superseded outcome model;
-- raw Concept actions leaking into the application action surface;
 - Identity / Participation / Access conflation;
-- Panel membership / actual participation / responsibility / evidence conflation;
+- Panel membership / actual participant / responsibility / evidence conflation;
 - Draft / persistence / authority conflation;
 - missing / zero / incomplete / exception conflation;
 - Rank / Award / Outcome Declaration collapse;
@@ -119,7 +117,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 012: COMPLETE — PASS
 013: IN PROGRESS
 013-A: COMPLETE — READY
-013-B: NEXT
+013-B: COMPLETE — PASS
+013-C: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -129,4 +128,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
+Proceed to **013-C — Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping**.
