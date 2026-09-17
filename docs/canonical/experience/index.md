@@ -11,16 +11,17 @@ Phase 012  COMPLETE — PASS
 013-A      COMPLETE — READY
 013-B      COMPLETE — PASS
 013-C      COMPLETE — PASS
-013-D      NEXT — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping
+013-D      COMPLETE — PASS
+013-E      NEXT — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping
 ```
 
 Start with:
 
-* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification, terminology contract and owner topology through 013-C.
+* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification, terminology contract and owner topology through 013-D.
 * [Experience Context and Participation Modes](context-role-modes.md) — current operating-context, multi-capacity, role-mode and disclosure-context mapping accepted by 013-C.
 * [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — current Judge-entry, Competition Participation and Ready-to-Judge mapping accepted by 013-C.
+* [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — current non-linear preparation, competitor/grouping/basis setup, Competition Readiness, explicit Ready lifecycle commitment and Judge-safe preview mapping accepted by 013-D.
 * [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — Phase-013 entry/start-gate precedence, explanation-order constraints, risk register and reopen rules.
-* [013-C Context, Identity, Participation, Access, Bias-Control & Judge Entry Mapping](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md) — current phase evidence/rationale for accepted context and Judge-entry mapping.
 
 Current conceptual meaning continues to come from:
 
@@ -32,12 +33,11 @@ Current conceptual meaning continues to come from:
 
 ## Current accepted Experience owners
 
-The following are now current mapping authority for their natural subjects:
-
 | File | Accepted mapping subject | Phase |
 | --- | --- | --- |
-| [Experience Context and Participation Modes](context-role-modes.md) | Identity/Participation/Access operating context, role/capacity modes, multi-capacity isolation, context disclosure, current/history distinction | 013-C |
+| [Experience Context and Participation Modes](context-role-modes.md) | Identity/Participation/Access operating context, capacity modes, multi-capacity isolation, context disclosure, current/history distinction | 013-C |
 | [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) | Judge Competition entry, Identity continuity, Judge Participation, check-in/event attributes, Panel planning context, derived Ready-to-Judge semantics | 013-C |
+| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | non-linear Organizer preparation, Team/Division/Alias setup, Judge/Panel planning, Rubric/evaluation-basis setup, Competition Readiness, explicit Ready commitment, Judge-safe preview | 013-D |
 
 ## Remaining admitted Experience evidence
 
@@ -47,7 +47,6 @@ These documents remain admitted evidence/candidates until their assigned workstr
 | --- | --- | --- |
 | [Experience Action, State & Authority Traceability](action-authority-traceability.md) | retain/revalidate cross-cutting; final acceptance audit | 013-C–K |
 | [Judge Evaluation](judge-evaluation.md) | retain active evaluation; split amendment/correction/history | 013-E/F |
-| [Organizer Preparation](organizer-preparation.md) | rewrite/revalidate in place | 013-D |
 | [Live Operations](live-operations.md) | rewrite/revalidate in place | 013-G |
 | [Reconciliation & Finalization](reconciliation-finalization.md) | split into derived reconciliation + officiality owners, then supersede | 013-G/H |
 | [Paper, Export & Publication](paper-export-publication.md) | split paper/correction from external release, then supersede | 013-F/I |
@@ -56,7 +55,7 @@ These documents remain admitted evidence/candidates until their assigned workstr
 
 Historical `stable` metadata on an admitted candidate does not override the current mapping baseline.
 
-## 013-C context rules
+## Current context/preparation rules
 
 ```text
 Identity != Participation != Access
@@ -66,10 +65,16 @@ multi-capacity capabilities never union
 Judge context = Judge-safe disclosure posture
 Panel membership != occurrence participation != responsibility != evidence
 Ready to Judge = derived explanation, not writable state
-technical support privilege != Competition authority
+preparation = view over source truth, not a Workflow/Setup Concept
+Competition Readiness = derived, not editable
+readiness true != Competition lifecycle Ready
+Mark Competition Ready = explicit coordinated lifecycle action
+Competition Ready != Active
+working Rubric != authoritative Rubric Version
+Judge-safe preview != Judge authority
 ```
 
-Judge-safe competitor identity remains **Alias + Division** during blinded judging. Organizer-sensitive information does not leak into Judge context simply because the same Identity also has Organizer Participation.
+Readiness blockers are remediated at their natural source or through a specifically permitted governed exception. Hiding/acknowledging a blocker does not make readiness true.
 
 ## Approved future owner additions
 
@@ -94,7 +99,7 @@ Encounter
 Official Outcome Revision
   → deprecated; current official authority/history is Outcome Declaration
 
-Ready to Judge / Competition Ready / Ranking Readiness / Finalization Readiness
+Ready to Judge / Competition Readiness / Ranking Readiness / Finalization Readiness
   → derived projections, not Concepts or editable workflow state
 
 Reconciliation
@@ -108,6 +113,7 @@ No blind search-and-replace is permitted.
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+preparation dependency != setup step number
 ```
 
 Mappings expose enough context, basis, authority, consequence, currentness and history for correct understanding without turning Concept structure into interface architecture.
@@ -128,4 +134,4 @@ Do not expose `P` or `X` as generic user controls.
 
 ## Next
 
-Proceed to **013-D — Competition Preparation, Competitor/Panel/Rubric Setup, Readiness & Organizer Configuration Mapping**.
+Proceed to **013-E — Evaluation Occurrence, Obligation, Judgment, Action Availability & Feedback Mapping**.
