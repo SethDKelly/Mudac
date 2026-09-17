@@ -13,11 +13,8 @@ Current foundational truth is:
 - [Current Synchronizations](canonical/synchronizations/);
 - [Current Dependence / PF-01 Scope](canonical/dependence/);
 - [Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
-- [Experience Context and Participation Modes](canonical/experience/context-role-modes.md);
-- [Judge Entry, Participation & Readiness Mapping](canonical/experience/judge-onboarding.md);
-- [Organizer Competition Preparation & Readiness Mapping](canonical/experience/organizer-preparation.md);
-- [Judge Active Evaluation Mapping](canonical/experience/judge-evaluation.md);
-- [Authority Lineage, Capture & Correction Mapping](canonical/experience/authority-lineage-correction.md);
+- [Organizer Live Operations & Remaining Work Mapping](canonical/experience/live-operations.md);
+- [Reconciliation & Derived Outcome-State Mapping](canonical/experience/reconciliation-derived-state.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -34,7 +31,7 @@ Current foundational truth is:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-G next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-H next**
 
 ## Current posture
 
@@ -57,28 +54,32 @@ implementation authorization: NOT YET
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
-013-G: NEXT
+013-G: COMPLETE — PASS
+013-H: NEXT
 ```
 
 ## Current Phase-013 mapping posture
 
-013-F created the current natural owner for authority lineage, capture and correction. Preserve:
+013-G establishes:
 
 ```text
-paper / assisted / electronic capture = same evaluation model
-capture Actor != Judge semantic author / RepresentedAuthority
-Finalized Scorecard != reopenable initial Draft
-Judge amendment != source-faithful capture correction
-superseded != invalidated != replaced != affected != stale
-structural Scorecard identity cannot silently change
-historical obligation satisfaction != current evidence eligibility
-terminal obligation never reopens
-successor responsibility != predecessor mutation
-replacement occurrence != cloned responsibility/evidence
-current correction != silent historical rewrite
+Remaining Work = projection over Outstanding Evaluation Obligations
+Event Completed != all Judge work done
+historically Satisfied != currently eligible evidence
+ineligible evidence != reopened obligation != automatic successor work
+warning != blocker != governed exception != correction != technical intervention
+Reconciliation = source-directed work, not lifecycle/ticket authority
+Coverage fact != exception disposition
+Aggregate exists != Coverage Satisfied != rank eligible
+Rank = derived/non-editable
+calculated Rank != Ranking Readiness != official authority
+Ranking Readiness / Finalization Readiness = derived/non-editable
+calculated != recognized != official != public
 ```
 
-The old `canonical/experience/paper-export-publication.md` is now only a historical/evidence adapter. Paper/correction mapping has moved to `authority-lineage-correction.md`; remaining external-representation/release evidence awaits 013-I.
+A governed exception preserves the source shortfall and changes only its specifically permitted consequence.
+
+The old `canonical/experience/reconciliation-finalization.md` is now historical/admitted evidence only. Reconciliation/derived-state mapping moved to `reconciliation-derived-state.md`; Award/finalization/officiality evidence awaits 013-H.
 
 Global mapping rules remain:
 
@@ -96,7 +97,7 @@ synchronization chain != mandatory wizard
   ↓
 012 dependence / product-family / scope        COMPLETE — PASS
   ↓
-013 mapping / representation                   IN PROGRESS — 013-G NEXT
+013 mapping / representation                   IN PROGRESS — 013-H NEXT
   ↓
 014 familiarity / reuse / genericity
   ↓
@@ -111,4 +112,4 @@ Phase 005 architecture, Phase 006 planning/bootstrap and Phase 008 planning rema
 
 ## Current next work
 
-Proceed to **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
+Proceed to **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**.
