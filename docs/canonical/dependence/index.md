@@ -43,23 +43,26 @@ dependence-valid
   != mapped user experience
 ```
 
-013-G preserves that distinction in operational/outcome mapping:
+013-H preserves optionality/ownership in outcome authority:
 
 ```text
-Evaluation Obligation present
-  != remaining work unless currently Outstanding
+Rank present in PF-01
+  != Rank owns Award recognition
 
-historically Satisfied obligation
-  != current evidence eligibility
+Award capability present
+  != every Competition requires every Award
 
-Coverage / Aggregate / Rank included in PF-01
-  != editable domain state
+Competition Finalization + Outcome Declaration supported
+  != one merged Concept
 
-Award / Outcome Declaration included in PF-01
-  != derived Rank automatically owns recognition/officiality
+Outcome Declaration supported
+  != every official result must be public
+
+Export / Publication supported
+  != automatic consequence of officiality
 ```
 
-PF-01 support for exceptions does not create a universal override capability; exception permission remains policy/consequence specific.
+Official-but-non-public and Export-without-Publication remain valid PF-01 profiles/states rather than distinct product variants.
 
 ## Current handoff
 
@@ -73,7 +76,8 @@ Phase 013  IN PROGRESS
 013-E      COMPLETE — PASS
 013-F      COMPLETE — PASS
 013-G      COMPLETE — PASS
-013-H      NEXT
+013-H      COMPLETE — PASS
+013-I      NEXT
 ```
 
-Proceed to **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
