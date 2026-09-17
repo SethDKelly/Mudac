@@ -1,12 +1,13 @@
 ---
 type: Canonical Mapping Authority Baseline
 title: Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline
-description: "Current Phase-013 authority/evidence classification and Experience-owner topology established by 013-B before substantive mapping begins."
+description: "Current Phase-013 authority/evidence classification and Experience-owner topology, advanced through 013-C context and Judge-entry mapping."
 status: stable
 tags: [canonical, experience, mapping, authority, evidence, terminology, ownership, phase-013]
 sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md
   - resource: phase-013-entry-handoff.md
   - resource: ../concepts/
   - resource: ../synchronizations/
@@ -17,11 +18,9 @@ sources:
 
 # Purpose
 
-Provide the durable Phase-013 baseline for deciding **what mapping knowledge is current authority, what is admitted evidence, and where later user-visible semantic knowledge belongs**.
+Provide the durable Phase-013 baseline for deciding **what mapping knowledge is current authority, what remains admitted evidence, and where later user-visible semantic knowledge belongs**.
 
 This document prevents pre-convergence UX language or document structure from overriding the current MUDAC Concept model.
-
-It is an authority/ownership baseline, not a finished UX specification.
 
 # Current authority order
 
@@ -40,99 +39,69 @@ Phase 013 Mapping Entry Authority
   ↓
 THIS Mapping Authority Baseline
   ↓
-Experience owners explicitly accepted/reworked by 013-C through 013-K
+Experience owners explicitly accepted/reworked by completed Phase-013 workstreams
 ```
 
 Architecture, implementation and incumbent interface structure are not mapping authority.
 
-# Authority classes
+# Current mapping authority through 013-C
 
-## Current conceptual authority
-
-Current meaning remains owned by:
-
-- `docs/canonical/project/`;
-- `docs/canonical/concepts/`;
-- `docs/canonical/synchronizations/`;
-- `docs/canonical/dependence/`;
-- current `docs/canonical/policies/`;
-- current `docs/canonical/invariants/`.
-
-## Current mapping authority
-
-Before later substantive work is accepted, current mapping authority consists of:
+Current mapping authority now includes:
 
 - `phase-013-entry-handoff.md`;
 - this baseline;
-- accepted rules in completed Phase-013 records.
+- completed Phase-013 records 013-A through 013-C;
+- [Experience Context and Participation Modes](context-role-modes.md) for operating-context, capacity-mode, multi-capacity, disclosure-context and historical-context mapping;
+- [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) for Judge-entry, Identity continuity, Competition Participation, entry readiness and Panel-planning context mapping.
 
-As 013-C through 013-K complete, their reconciled canonical Experience owners become current mapping authority for their natural subjects.
+These two Experience owners were substantively rewritten in 013-C and are no longer merely pre-convergence candidates for their natural subjects.
 
-## Admitted Experience evidence
+# Remaining admitted Experience evidence
 
-The ten pre-convergence Experience contracts remain useful design evidence but **are not authoritative as-is**:
+The following remain admitted evidence/candidates until their assigned workstream accepts or rewrites them:
 
-- `context-role-modes.md`;
-- `action-authority-traceability.md`;
-- `judge-onboarding.md`;
-- `judge-evaluation.md`;
-- `organizer-preparation.md`;
-- `live-operations.md`;
-- `reconciliation-finalization.md`;
-- `paper-export-publication.md`;
-- `accessibility-resilience.md`;
-- `status-feedback-recovery.md`.
+- `action-authority-traceability.md` — cross-cutting, final acceptance audit in 013-K;
+- `judge-evaluation.md` — 013-E/F;
+- `organizer-preparation.md` — 013-D;
+- `live-operations.md` — 013-G;
+- `reconciliation-finalization.md` — 013-G/H then supersede;
+- `paper-export-publication.md` — 013-F/I then supersede;
+- `accessibility-resilience.md` — 013-J;
+- `status-feedback-recovery.md` — 013-J.
 
-If one conflicts with a current Concept, synchronization, dependence, policy, invariant or this baseline, the newer conceptual authority wins.
+If admitted evidence conflicts with current Concept, synchronization, dependence, policy, invariant or accepted Phase-013 mapping authority, the newer authority wins.
 
-# Corpus disposition
+# Owner disposition and status
 
-| Existing Experience owner | Authority now | Planned disposition | Subphase |
-| --- | --- | --- | --- |
-| `context-role-modes.md` | admitted evidence | rewrite/revalidate in place | 013-C |
-| `action-authority-traceability.md` | admitted cross-cutting evidence | retain and revalidate across workstreams; final acceptance audit | 013-C–K |
-| `judge-onboarding.md` | admitted evidence | rewrite/revalidate in place | 013-C |
-| `judge-evaluation.md` | admitted evidence | retain active-evaluation mapping; move amendment/correction/history semantics to distinct owner | 013-E/F |
-| `organizer-preparation.md` | admitted evidence | rewrite/revalidate in place | 013-D |
-| `live-operations.md` | admitted evidence | rewrite/revalidate in place | 013-G |
-| `reconciliation-finalization.md` | admitted evidence | replace through separate reconciliation-derived-state and outcome-officiality owners, then supersede | 013-G/H |
-| `paper-export-publication.md` | admitted evidence | split paper/correction from external representation/release, then supersede | 013-F/I |
-| `accessibility-resilience.md` | admitted evidence | rewrite/revalidate in place | 013-J |
-| `status-feedback-recovery.md` | admitted evidence | rewrite/revalidate in place | 013-J |
-
-No file becomes current mapping authority merely because its path contains `canonical` or its historical front matter says `stable`.
+| Experience owner | Current authority status | Planned/accepted disposition |
+| --- | --- | --- |
+| `context-role-modes.md` | **current mapping authority** | rewritten/accepted 013-C |
+| `judge-onboarding.md` | **current mapping authority** | rewritten/accepted 013-C |
+| `action-authority-traceability.md` | admitted cross-cutting evidence | revalidate incrementally; final audit 013-K |
+| `organizer-preparation.md` | admitted evidence | rewrite/revalidate 013-D |
+| `judge-evaluation.md` | admitted evidence | active evaluation 013-E; correction/history split 013-F |
+| `live-operations.md` | admitted evidence | rewrite/revalidate 013-G |
+| `reconciliation-finalization.md` | admitted evidence | replace through 013-G/H owners then supersede |
+| `paper-export-publication.md` | admitted evidence | split through 013-F/I owners then supersede |
+| `accessibility-resilience.md` | admitted evidence | rewrite/revalidate 013-J |
+| `status-feedback-recovery.md` | admitted evidence | rewrite/revalidate 013-J |
 
 # Approved natural owner topology
 
-## Existing owners retained
+Existing retained owners:
 
 ```text
-context-role-modes.md
-  context / role-mode / operating-context representation
-
-judge-onboarding.md
-  Judge entry / current Competition / Participation / readiness mapping
-
-organizer-preparation.md
-  preparation / configuration / derived readiness mapping
-
-judge-evaluation.md
-  active evaluation / basis / responsibility / Draft / Finalization mapping
-
-live-operations.md
-  event-day exception-first operational mapping
-
-accessibility-resilience.md
-  accessible / device / degraded semantic parity
-
-status-feedback-recovery.md
-  status dimensions / uncertainty / feedback / recovery grammar
-
-action-authority-traceability.md
-  cross-cutting mapping-to-semantic-owner traceability
+context-role-modes.md              → current authority after 013-C
+judge-onboarding.md                → current authority after 013-C
+organizer-preparation.md           → 013-D
+judge-evaluation.md                → 013-E active evaluation
+live-operations.md                 → 013-G live-event operations
+accessibility-resilience.md        → 013-J
+status-feedback-recovery.md        → 013-J
+action-authority-traceability.md   → cross-cutting, final audit 013-K
 ```
 
-## New owners created only when substantive content exists
+New owners are created only when substantive content exists:
 
 ```text
 authority-lineage-correction.md       013-F
@@ -141,98 +110,48 @@ outcome-officiality.md                013-H
 external-representation-release.md    013-I
 ```
 
-Do not create empty placeholders before their workstream produces durable mapping knowledge.
-
-## Owners to supersede after migration
+Owners to supersede after all valid rules migrate:
 
 ```text
 reconciliation-finalization.md
 paper-export-publication.md
 ```
 
-They remain evidence until all still-valid rules have a current natural owner.
-
 # Terminology contract
 
-## Encounter is deprecated
-
-`Judging Encounter` / `Encounter` is not a current Concept.
-
-Interpret older uses by meaning:
+`Judging Encounter` / `Encounter` is not a current Concept. Interpret older uses by actual meaning:
 
 ```text
-bounded evaluation event/history/participants
-  → Evaluation Occurrence
-
-individual evaluator responsibility/outstanding work
-  → Evaluation Obligation
-
-Judge-authored evaluation artifact/evidence
-  → Scorecard
-
-planned evaluator grouping
-  → Panel
-
-actor-to-Competition relationship
-  → Participation
-
-permission to perceive/invoke
-  → Access
+bounded evaluation event/history/participants → Evaluation Occurrence
+individual evaluator responsibility          → Evaluation Obligation
+Judge-authored evaluation evidence            → Scorecard
+planned evaluator grouping                    → Panel
+actor-to-Competition relationship             → Participation
+permission/disclosure decision                → Access
 ```
 
 Mechanical replacement is prohibited.
 
-## Official Outcome Revision is deprecated
+`Official Outcome Revision` remains deprecated; current official authority/currentness/successor history is owned by Outcome Declaration.
 
-Current declared official authority is **Outcome Declaration**.
+Derived/projection terms such as `Ready to Judge`, `Competition Ready`, `Ranking Readiness`, `Finalization Readiness`, Coverage, Aggregate, Rank and reconciliation/exception projections do not become editable Concepts.
 
-```text
-current declaration
-Affected declaration
-successor declaration
-Superseded historical declaration
-```
+# 013-C context contract
 
-are Outcome Declaration meanings, not an `Official Outcome Revision` Concept.
-
-## Derived/projection terms remain derived
-
-The following may be represented and explained but do not become independently editable Concepts:
-
-```text
-Ready to Judge
-Competition Ready
-Ranking Readiness
-Finalization Readiness
-Coverage
-Aggregate
-Rank
-reconciliation/exception projections
-```
-
-A user acts on authoritative sources or an explicitly governed exception/correction action, not on the projection as if it owned source truth.
-
-## Role/navigation vocabulary does not create authority
-
-A selected role mode, route, work area, tab, link, QR code or navigation context cannot create Identity, Participation, Access, responsibility or domain authority.
-
-# Required conceptual distinctions
-
-All later mappings preserve, where material:
+013-C establishes:
 
 ```text
 Identity != Participation != Access
-Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence
-Draft/preserved work != authoritative Scorecard
-historical satisfaction != current evidence eligibility
-missing != zero != incomplete != governed exception
-Coverage/Aggregate/Rank != Award authority
-Competition Finalization != Outcome Declaration
-calculated != recognized != official != public != delivered
-source authority != Export != Publication != transport delivery
-supersession != invalidation != replacement != successor
-technical privilege != competition decision authority
+role/capacity mode = representation of one current Participation context
+mode/navigation != authority
+multi-capacity capabilities are never unioned
+Judge context carries Judge-safe disclosure posture
+Panel membership != occurrence participation != responsibility != evidence
+Ready to Judge = derived explanation, not writable state or responsibility
+technical support privilege != Competition decision authority
 ```
+
+One protected operation is interpreted under one explicit current Participation context. A context switch selects another legitimate Participation for representation; it does not mutate Participation or grant Access.
 
 # Application-action rule
 
@@ -243,12 +162,12 @@ D — direct application action
 C — coordinated application action
 P — composition-only participant
 S — system-triggered conceptual reaction
-X — intentionally unavailable generic action
+X — intentionally unavailable generic application action
 ```
 
-Do not expose `P` or `X` as generic user controls merely because an intrinsic Concept action exists.
+Do not expose `P` or `X` as generic user controls.
 
-Cross-Concept composition questions route to the seven current synchronization owners. `concept-synchronizations.md` is historical routing evidence only.
+In particular, `Access.check` remains composition-only/system guard behavior and generic Access grant/revoke administration remains unavailable absent purpose-specific composition.
 
 # Explanation-order rule
 
@@ -261,31 +180,22 @@ Represent enough upstream context, basis and authority for downstream state/acti
 
 # PF-01 mapping scope
 
-The sole current product/application variant is:
+The sole current product/application variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-The following remain profiles/states within PF-01 rather than separate products:
+Panel use/assignment, paper/electronic capture, Award presence, public/non-public operation and other supported conditions remain profiles/states unless a future product-family decision says otherwise.
 
-- Award present/absent;
-- public/non-public;
-- Export without Publication;
-- paper/electronic/mixed capture;
-- Draft/authoritative Scorecard;
-- Event Completed/Finalized;
-- current/Affected/Superseded declaration authority;
-- ordinary/successor declaration;
-- discretionary/rank-derived Award selection.
+013-C specifically prevents absence of a current Panel assignment from becoming a universal product blocker unless current policy/readiness actually requires it.
 
 # Workstream-to-owner baseline
 
-## 013-C
+## Completed 013-C
 
-Primary destinations:
+Current destinations:
 
 - `context-role-modes.md`;
-- `judge-onboarding.md`;
-- cross-cutting updates to `action-authority-traceability.md` where accepted.
+- `judge-onboarding.md`.
 
 ## 013-D
 
@@ -299,24 +209,18 @@ Primary destination:
 
 - `judge-evaluation.md`.
 
-Amendment/correction/history rules that are not ordinary active evaluation move to 013-F rather than remaining bundled here.
-
 ## 013-F
 
 Primary new destination:
 
 - `authority-lineage-correction.md`.
 
-This owner absorbs current user-visible semantics for amendment, paper capture, represented authority, correction, invalidation/replacement, successor work and current/historical distinctions.
-
 ## 013-G
 
 Primary destinations:
 
 - `live-operations.md`;
-- new `reconciliation-derived-state.md`.
-
-The latter owns explanation of outstanding work, Coverage/Aggregate/Rank/Readiness and reconciliation projections without making them editable workflow state.
+- `reconciliation-derived-state.md`.
 
 ## 013-H
 
@@ -324,15 +228,11 @@ Primary new destination:
 
 - `outcome-officiality.md`.
 
-It owns user-visible distinctions among calculated result, Award/recognition, Competition Finalization, Outcome Declaration, affected authority and successor declaration.
-
 ## 013-I
 
 Primary new destination:
 
 - `external-representation-release.md`.
-
-It owns Export source/currentness/audience semantics and Publication release/withdrawal/supersession/external-recipient meaning.
 
 ## 013-J
 
@@ -350,15 +250,6 @@ Primary responsibilities:
 - terminology/authority consistency audit;
 - duplicate/supersession cleanup.
 
-# Current policy terminology repairs
-
-013-B repaired two bounded active-policy references whose meaning was already unambiguous:
-
-- anonymity/disclosure exposure consequences now refer to affected **Evaluation Occurrence and/or dependent evaluation evidence** rather than `Encounter/evidence`;
-- operational exception governance now preserves who actually participated in an **Evaluation Occurrence** rather than who participated in an `Encounter`.
-
-Historical phase filenames and source links are provenance and remain unchanged.
-
 # Retrieval discipline during Phase 013
 
 For a mapping task:
@@ -366,53 +257,29 @@ For a mapping task:
 1. load the active Phase-013 workstream record;
 2. load this baseline;
 3. load task-relevant current Concept/synchronization/dependence/policy/invariant owners;
-4. load only the incoming Experience candidates relevant to that workstream;
-5. treat their unreconciled claims as evidence, not as authority;
-6. write durable new mapping truth only to the natural owner established here or explicitly justified by the workstream;
-7. do not preload architecture/implementation unless the task is explicitly contamination/history analysis.
+4. load current accepted Experience owners relevant to the task;
+5. load remaining admitted Experience candidates only as evidence;
+6. write durable mapping truth only to the natural owner;
+7. do not preload architecture/implementation unless explicitly analyzing contamination/history.
 
 # Reopen routing
 
 ```text
-purpose conflict
-  → project-purpose authority
-
-undefined Concept behavior/state/action
-  → natural Concept owner / Phase 010 if boundary-level
-
-missing/invalid application action or synchronization
-  → Phase 011
-
-incorrect dependence/scope/PF-01 assumption
-  → Phase 012
-
-stale wording/reference with clear current meaning
-  → repair natural current owner
-
-mapping terminology/representation/ownership defect
-  → Phase 013
+purpose conflict → project-purpose authority
+undefined Concept behavior/state/action → natural Concept owner / Phase 010 if boundary-level
+missing/invalid application action or synchronization → Phase 011
+incorrect dependence/scope/PF-01 assumption → Phase 012
+stale wording/reference with clear current meaning → repair natural owner
+mapping terminology/representation/ownership defect → Phase 013
 ```
-
-# Non-goals
-
-This baseline does not define:
-
-- exact screen/page hierarchy;
-- route tree;
-- frontend framework or component system;
-- visual design tokens;
-- view-model/client state architecture;
-- API or transport behavior;
-- persistence schema;
-- runtime/AWS topology;
-- executable UI implementation/tests.
 
 # Current state
 
 ```text
 013-A  COMPLETE — READY
 013-B  COMPLETE — PASS
-013-C  NEXT
+013-C  COMPLETE — PASS
+013-D  NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
