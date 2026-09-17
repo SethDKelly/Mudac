@@ -35,7 +35,7 @@ Phase 012 is **COMPLETE — PASS** and [MUDAC Product-Family Scope](../dependenc
 
 Phase 013 is **IN PROGRESS**.
 
-Mappings must preserve source-versus-derived direction:
+Mappings preserve source-versus-derived direction:
 
 ```text
 source facts
@@ -48,38 +48,28 @@ eligible authoritative evidence
 
 Derived state must never appear as an independently editable source of truth.
 
-013-C establishes:
+013-E establishes that active Judge work is upstream of downstream evidence mechanisms:
 
 ```text
-Ready to Judge
-  = derived explanation over current Identity / Participation /
-    relevant preparation/lifecycle/context facts
-  != Participation state
-  != Panel membership
-  != Evaluation Obligation
-  != Access grant
+Outstanding obligation
+  → Scorecard Draft
+  → explicit Finalize Evaluation
+  → authoritative qualifying evidence
+  → later Coverage/Aggregate eligibility evaluation
 ```
 
-013-D establishes:
+Therefore:
 
 ```text
-Competition Readiness
-  = derived permission-to-mark-ready projection over current preparation sources
-  != Competition lifecycle Ready
-  != editable checklist state
-
-readiness satisfied
-  → may make Mark Competition Ready available
-  != automatic lifecycle transition
-
-blocking source change while Competition Ready
-  → readiness recomputes blocking
-  → current composition returns Competition to Draft
+Draft score/total != Aggregate input
+Occurrence completion != Coverage satisfaction
+Obligation Outstanding != zero evidence
+Finalized Scorecard existence != automatic current evidence eligibility forever
 ```
 
-A readiness blocker is remediated through its natural source or an explicitly permitted governed exception, not by acknowledging or editing the readiness projection.
+Current evidence eligibility after correction/invalidation is mapped further in 013-F/G; historical satisfaction remains distinct from current eligibility.
 
-See [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md), [Judge Entry, Participation & Readiness Mapping](../experience/judge-onboarding.md), and [Organizer Competition Preparation & Readiness Mapping](../experience/organizer-preparation.md).
+See [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) and [Judge Active Evaluation Mapping](../experience/judge-evaluation.md).
 
 ```text
 Phase 010 COMPLETE — PASS
@@ -90,5 +80,6 @@ Phase 013 IN PROGRESS
 013-B COMPLETE — PASS
 013-C COMPLETE — PASS
 013-D COMPLETE — PASS
-013-E NEXT
+013-E COMPLETE — PASS
+013-F NEXT
 ```
