@@ -12,12 +12,14 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/) — governing/configurable competition semantics.
 * [Invariants](invariants/) — cross-cutting conceptual constraints.
 * [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted/historical evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-F.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-G.
 * [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C mapping.
 * [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C mapping.
 * [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D mapping.
 * [Judge Active Evaluation Mapping](experience/judge-evaluation.md) — accepted 013-E mapping.
 * [Authority Lineage, Capture & Correction Mapping](experience/authority-lineage-correction.md) — accepted 013-F mapping.
+* [Organizer Live Operations & Remaining Work Mapping](experience/live-operations.md) — accepted 013-G live-operation mapping.
+* [Reconciliation & Derived Outcome-State Mapping](experience/reconciliation-derived-state.md) — accepted 013-G reconciliation/derived-state mapping.
 
 # Governance
 
@@ -43,7 +45,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-D: COMPLETE — PASS
 013-E: COMPLETE — PASS
 013-F: COMPLETE — PASS
-013-G: NEXT
+013-G: COMPLETE — PASS
+013-H: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -67,23 +70,25 @@ Mapping Authority Baseline
 accepted Experience owners from completed Phase-013 workstreams
 ```
 
-013-F adds these authority-lineage distinctions:
+013-G adds:
 
 ```text
-capture Actor != Judge semantic author / RepresentedAuthority
-Finalized Scorecard != reopenable initial Draft
-Judge amendment != source-faithful capture correction
-superseded != invalidated != replaced != affected != stale
-historical obligation satisfaction != current evidence eligibility
-terminal obligation never reopens
-successor responsibility != predecessor mutation
-replacement occurrence != cloned responsibility/evidence
-current correction != silent historical rewrite
+Remaining Work = Outstanding-obligation projection
+Event Completed != all Judge work complete
+historically Satisfied != currently eligible evidence
+ineligible evidence != automatic successor work
+Reconciliation = source-directed work, not lifecycle/ticket state
+Coverage fact != exception disposition
+Aggregate existence != Coverage/rank readiness
+Rank = derived/non-editable
+calculated Rank != Ranking Readiness != Award/official authority
+Ranking Readiness / Finalization Readiness = derived, non-editable
+calculated != recognized != official != public
 ```
 
-Paper/electronic/assisted capture remain one evaluation model and one logical Scorecard per obligation.
+Governed exceptions preserve the source shortfall and change only the explicitly permitted consequence.
 
-The old `paper-export-publication.md` file is no longer paper/correction authority; it remains historical/admitted evidence for Export/Publication until 013-I.
+The old `reconciliation-finalization.md` file is no longer reconciliation/derived-state authority; it remains historical/admitted evidence for Award/finalization/officiality until 013-H.
 
 # Retrieval rule during Phase 013
 
@@ -94,4 +99,4 @@ The old `paper-export-publication.md` file is no longer paper/correction authori
 5. use remaining older Experience material only as admitted/historical evidence;
 6. do not preload architecture/implementation except for explicit contamination/history work.
 
-Next: **013-G — Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping**.
+Next: **013-H — Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping**.
