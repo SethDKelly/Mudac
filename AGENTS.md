@@ -8,10 +8,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
-5. Read [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
-6. For cross-owner interaction work, read [Whole-Experience Action, Explanation & Authority Traceability](docs/canonical/experience/action-authority-traceability.md), then the natural subject-specific Experience owner(s).
-7. Read the active [Phase 013](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) record.
-8. Treat `reconciliation-finalization.md` and `paper-export-publication.md` as historical evidence only.
+5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
+6. Read current accepted Experience owners relevant to the work, especially [Whole-Experience Action, Explanation & Authority Traceability](docs/canonical/experience/action-authority-traceability.md).
+7. For current methodology work, read [Phase 014 — Familiarity, Reuse & Genericity](docs/014-familiarity-reuse-genericity/).
+8. Treat older Experience adapters as historical evidence unless the Mapping Authority Baseline says otherwise.
 9. Use current synchronization owners for composition; mapping does not replace composition.
 10. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -22,19 +22,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: IN PROGRESS
-013-A: COMPLETE — READY
-013-B: COMPLETE — PASS
-013-C: COMPLETE — PASS
-013-D: COMPLETE — PASS
-013-E: COMPLETE — PASS
-013-F: COMPLETE — PASS
-013-G: COMPLETE — PASS
-013-H: COMPLETE — PASS
-013-I: COMPLETE — PASS
-013-J: COMPLETE — PASS
-013-K: COMPLETE — PASS
-013-L: NEXT
+013: COMPLETE — PASS
+014: NOT STARTED — START GATE NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -52,42 +41,19 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation and Live Operations remain work/process contexts rather than Concepts.
 
-## Whole-experience explanation rule
-
-Where materially relevant:
-
-```text
-current Competition / capacity / audience context
-  → subject/resource
-  → current authoritative or working state
-  → qualification / blocker / uncertainty
-  → legitimate purpose-specific action
-  → consequence
-  → confirmed result + retained history
-```
-
-This is explanation order, not navigation architecture.
-
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-explanation order != mandatory screen order
-```
-
-## Composition and mapping authority
+## Final Phase-013 mapping authority
 
 Preserve:
 
 - Identity != Participation != Access;
-- Judge + Organizer capabilities never union merely because one Identity has both Participations;
-- Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence;
-- Event Completed != all obligations terminal != all Scorecards Finalized != universal hidden Access revocation;
+- Panel membership != Evaluation Occurrence participation != Evaluation Obligation != Scorecard evidence;
 - one Evaluation Obligation maps to at most one logical Scorecard;
 - Scorecard Draft != authority;
 - capture Actor != Judge semantic author / RepresentedAuthority;
 - Judge amendment != source-faithful capture correction;
 - supersession != invalidation != replacement != affectedness/staleness;
 - historical obligation satisfaction != current evidence eligibility;
+- Event Completed != universal hidden Access revocation;
 - Remaining Work = current Outstanding-obligation projection;
 - Coverage factual state != exception disposition;
 - Rank is derived/non-editable;
@@ -97,17 +63,17 @@ Preserve:
 - Export currency != Publication distribution state;
 - successor Outcome Declaration != successor Export != successor Publication;
 - withdrawal/supersession never erases historical release or external copies;
-- ordinary/accessible/responsive/degraded/paper paths preserve the same domain semantics;
+- accessible/responsive/degraded/paper paths preserve the same domain semantics;
+- assistance does not transfer semantic authorship;
 - device/session/route/QR possession != current Access;
 - local working state != confirmed persistence != authoritative domain state;
-- paper fallback != second evaluation model;
 - unknown authoritative result != confirmed success or confirmed failure;
-- retry/recovery reconciles current authority and converges rather than duplicates effects;
+- retry/recovery must reconcile current authority and converge rather than duplicate effects;
 - stale local state cannot overwrite newer authority;
-- status remains multidimensional and subject-qualified;
-- technical/support/recovery privilege != Judge, Organizer, exception, declaring, disclosure or publishing authority.
+- status is multidimensional and subject-qualified;
+- technical recovery privilege != broader Access, disclosure or domain authority.
 
-## Application action surface
+Map the established action surface:
 
 ```text
 D — direct application action
@@ -117,38 +83,26 @@ S — system-triggered conceptual reaction
 X — intentionally unavailable generic application action
 ```
 
-Do not expose `P` or `X` as generic controls. Screens, routes, work modes, checklists, confirmation dialogs, status badges and recovery states create no extra authority/action class.
+Do not expose `P` or `X` as generic user actions.
 
-Use purpose-specific owner verbs for consequential actions rather than generic `Resolve`, `Fix`, `Force`, `Reset`, `Delete`, `Override` or `Submit` when those labels obscure retained history or authority consequence.
-
-## Profiles and disclosure
-
-Judge-safe, Organizer-sensitive, Ceremony-safe, Public and history/audit views are disclosure profiles over the same source authority.
-
-A profile may omit or faithfully transform information; it may not invent/promote source truth or erase history.
+## Explanation-order rule
 
 ```text
-actor can inspect fact
-  != fact may appear in Export
-  != fact may be released to Audience
+dependence order != navigation order
+synchronization chain != mandatory wizard
+explanation order != mandatory screen order
 ```
 
-## Current versus historical
+The final Phase-013 Experience corpus is complete and non-competing. `reconciliation-finalization.md` and `paper-export-publication.md` remain historical evidence only.
 
-```text
-current != historical
-superseded != invalidated != replaced != affected != stale
-```
+## Phase 014 boundary
 
-Historical presence does not restore current authority.
+Phase 014 evaluates familiarity, reuse and genericity of the existing design. It must not treat familiar implementation/UI conventions as authority, merge Concepts merely because they resemble one another, or introduce abstraction for abstraction's sake.
 
-## Historical Experience adapters
-
-- `docs/canonical/experience/reconciliation-finalization.md` — historical only.
-- `docs/canonical/experience/paper-export-publication.md` — historical only.
+The start gate owns Phase-014 subgroup planning before substantive work.
 
 ## Current next task
 
 Proceed to:
 
-> **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**
+> **Phase 014 start gate — Familiarity, Reuse & Genericity**
