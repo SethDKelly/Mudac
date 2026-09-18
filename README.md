@@ -12,9 +12,9 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — dependence and PF-01 scope.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — Phase-013 mapping authority through 013-I.
-* [`docs/canonical/experience/outcome-officiality.md`](docs/canonical/experience/outcome-officiality.md) — internal officiality mapping.
-* [`docs/canonical/experience/external-representation-release.md`](docs/canonical/experience/external-representation-release.md) — Export/audience/Publication/release mapping.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — Phase-013 mapping authority through 013-J.
+* [`docs/canonical/experience/accessibility-resilience.md`](docs/canonical/experience/accessibility-resilience.md) — accessibility/responsive/degraded-operation semantic parity.
+* [`docs/canonical/experience/status-feedback-recovery.md`](docs/canonical/experience/status-feedback-recovery.md) — multidimensional status, uncertainty and recovery grammar.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013.
 
 ## Current status
@@ -35,7 +35,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
-013-J: NEXT
+013-J: COMPLETE — PASS
+013-K: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -49,26 +50,24 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Optional Awards, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture and Current/Affected/Superseded authority are profiles/states rather than separate products.
+Accessibility, degraded operation, paper/electronic/mixed capture, optional Awards, official-but-non-public operation and other supported profiles are states/capabilities rather than separate products.
 
 ## Phase-013 mapping posture
 
-013-I establishes current external representation/disclosure/release mapping:
+013-J establishes:
 
 ```text
-source authority != Export representation != Publication release != delivery
-actor Access != audience disclosure
-Export generation != Publication
-Export SourceBasis remains exact / historically stable
-Export currency != Publication distribution state
-new/corrected source → new Export
-successor Outcome Declaration != successor Export != successor Publication
-withdrawal/supersession != historical release erasure
-recipient possession != current release authority / Access
-Publication Published != transport/delivery/viewing success
+accessible / responsive / degraded / paper paths = same domain semantics
+assistive actor != semantic author
+device / route / session / QR possession != Access
+local working state != confirmed persistence != authority
+result unknown != success != failure
+retry/recovery reconciles current authority and converges
+stale local state cannot overwrite newer authority
+status = multidimensional / subject-qualified
+working persistence feedback != semantic commitment
+technical recovery capability != broader Access/disclosure/authority
 ```
-
-The former `paper-export-publication.md` and `reconciliation-finalization.md` contracts are historical evidence only.
 
 Global rules remain:
 
@@ -79,4 +78,4 @@ synchronization chain != mandatory wizard
 
 ## Current direction
 
-Proceed to **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**.
+Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
