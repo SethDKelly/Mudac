@@ -12,7 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/domain-vocabulary-expectation-transfer.md`](docs/canonical/project/domain-vocabulary-expectation-transfer.md) — current cross-catalog terminology/expectation-transfer authority.
 * [`docs/canonical/project/reusable-design-knowledge.md`](docs/canonical/project/reusable-design-knowledge.md) — reusable concept/pattern candidate registry; links to natural owners and does not duplicate Concept truth.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — completed Phase 014 refinement record.
-* [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — Phase 015 start-gate handoff.
+* [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — active Phase 015 integrity audit.
 
 ## Current status
 
@@ -24,7 +24,9 @@ Jackson Concept Design: IN PROGRESS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: NOT STARTED — 015-A START GATE NEXT
+015: IN PROGRESS
+015-A: COMPLETE — READY
+015-B: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -35,7 +37,8 @@ Jackson Concept Design: IN PROGRESS
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -75,4 +78,4 @@ conceptual reuse != implementation reuse
 
 ## Current direction
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
