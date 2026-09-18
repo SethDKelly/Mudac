@@ -28,7 +28,8 @@ Jackson Concept Design: IN PROGRESS
 014: COMPLETE — PASS
 015: IN PROGRESS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -40,7 +41,8 @@ Jackson Concept Design: IN PROGRESS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -97,10 +99,10 @@ Export currency != Publication state
 3. use [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons, never as a substitute specification;
 4. use completed Phase-013 mapping for user-visible semantics;
 5. use the Phase-014 exit review as the authoritative refinement handoff; detailed 014-A–I records remain evidence/provenance;
-6. for Phase 015, start at the Phase-015 README and 015-A start gate before deriving substantive integrity subphases;
+6. for Phase 015, read the Phase-015 README, 015-A start gate, and 015-B purpose/interference baseline before substantive cluster analysis;
 7. use historical adapters only as explicit comparison/counterexample evidence;
 8. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
