@@ -9,6 +9,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current conceptual product knowledge.
+* [`docs/canonical/project/domain-vocabulary-expectation-transfer.md`](docs/canonical/project/domain-vocabulary-expectation-transfer.md) — current cross-catalog terminology/expectation-transfer authority.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — active Phase 014.
 
 ## Current status
@@ -26,7 +27,8 @@ Jackson Concept Design: IN PROGRESS
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
-014-F: NEXT
+014-F: COMPLETE — PASS
+014-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -42,32 +44,34 @@ MUDAC adopts one current product/application variant:
 
 ## Phase-014 posture
 
-All three concept-family familiarity audits are now complete without renaming, merging or replacing any current Concept.
+All three Concept-family familiarity audits retain the eighteen current Concept names/boundaries.
 
-Family-3 confirms:
+014-F now governs the language around those Concepts:
 
 ```text
-Versioning          ≈ authoritative version/snapshot lineage
-Provenance          ≈ origin / represented-authority explanation
-Award               ≈ explicit recognition
-Outcome Declaration ≈ explicit official-result declaration
-Export              ≈ exact-source external representation + currency
-Publication         ≈ deliberate release to audience/channel
+T1 canonical semantic term
+T2 qualified explanatory label
+T3 analogy-only term
+T4 high-risk generic term
 ```
+
+The major false-familiarity risk is generic glue vocabulary rather than the canonical catalog itself.
 
 Preserve:
 
 ```text
+Identity != Participation != Access
+Evaluation Occurrence != Evaluation Obligation != Scorecard
 Versioning != Provenance
 Rank / selection basis != Award recognition
 Competition Finalized != Outcome Declaration
-Outcome Declaration != Export
-Export currency != Publication state
-Publication Published != delivery / possession
+Outcome Declaration != Export != Publication != delivery
 ```
 
-Familiar `revision`, `winner`, `official result`, `report`, `publish`, or `release` language is not allowed to erase these distinctions.
+Avoid generic terminology such as `role`, `task`, `submit`, `final result`, `winner`, `revision`, `resolve`, `share` or universal `status` where it would hide the natural semantic owner.
+
+Prefer owner-specific actions and states such as `Finalize Evaluation`, `Complete Live Event`, `Confirm Successor Outcome Declaration`, `Generate Export`, `Publish Representation` and `Withdraw Publication`.
 
 ## Current direction
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
