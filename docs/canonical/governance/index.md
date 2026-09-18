@@ -14,12 +14,6 @@ Current repository/design-governance knowledge for MUDAC.
 * [Agent Context & Progressive Retrieval](agent-context.md)
 * [Canonical Change & Conflict Governance](change-governance.md)
 
-## Product-language authority
-
-Cross-catalog product vocabulary is owned by [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
-
-Methodology terminology and product/domain terminology remain separate authority layers.
-
 ## Current methodology posture
 
 ```text
@@ -36,7 +30,8 @@ Jackson Concept Design: IN PROGRESS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
-014-G: NEXT
+014-G: COMPLETE — PASS
+014-H: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -48,43 +43,29 @@ implementation authorization: NOT YET
 
 Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-Phase 014 owns familiarity/reuse/genericity analysis only. 014-B established the evidence hierarchy; 014-C through 014-E completed the three Concept-family familiarity audits; 014-F reconciled cross-catalog terminology and expectation transfer.
+Phase 014 owns familiarity/reuse/genericity analysis only. 014-F established product-domain vocabulary authority; 014-G completed the broader genericity/duplication-pressure audit.
 
-No familiarity or terminology finding may overwrite canonical semantics merely because a precedent or word is familiar or widespread.
+## Broader genericity governance
 
-## Completed terminology governance
-
-All eighteen Concept names/boundaries remain current.
-
-Terminology classes are:
+Adopt:
 
 ```text
-T1 canonical semantic term
-T2 qualified explanatory label
-T3 analogy-only term
-T4 high-risk generic term
+Generic at the boundary; specific in purpose.
+shared parameter != shared purpose
+shared history shape != shared lifecycle
+implementation reuse != Concept identity
 ```
 
-Preserve especially:
+014-G adopts one narrow semantic broadening: Team intrinsically represents a competing group/unit, while PF-01 binds it to student teams.
 
-```text
-Identity != Participation != Access
-Evaluation Occurrence != Evaluation Obligation != Scorecard
-Rubric != exact authoritative Evaluation Basis
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration != Export != Publication != delivery
-```
+It rejects speculative super-concepts such as generic Group, Scoped Relationship, Task, Result, Historical Record and merged representation/release ownership.
 
-Generic wording may not create or bypass semantic authority. `Role`, `Task`, `Submission`, `Revision`, `Result`, `Status`, `Share`, `Resolve`, `Override` and similar familiar terms must remain subordinate to natural owners.
-
-014-C routed and repaired one genuine Phase-011 composition defect. 014-D through 014-F found no additional upstream defect requiring reopen.
+Reusable patterns identified by 014-G remain candidates for 014-H knowledge/catalog disposition and do not become canonical Concepts merely because they recur.
 
 ## Design / implementation boundary
 
-Architecture and implementation remain quarantined through the remaining Concept Design runway. Conceptual reuse/genericity must never be inferred from shared libraries, schemas, storage models, workflow engines, authorization frameworks, revision systems, report generators or publishing infrastructure.
+Architecture and implementation remain quarantined through the remaining Concept Design runway. Conceptual reuse must never be inferred from shared libraries, storage models, inheritance, workflow engines, authorization frameworks, revision systems, report generators or publishing infrastructure.
 
 ## Current handoff
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
