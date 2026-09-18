@@ -6,6 +6,7 @@ status: stable
 tags: [experience, mapping, judge, onboarding, identity, participation, access, readiness, phase-013]
 sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md
   - resource: ../concepts/identity.md
   - resource: ../concepts/participation.md
   - resource: ../concepts/access.md
@@ -17,39 +18,47 @@ sources:
 
 # Purpose
 
-Define the semantic information and action mapping required for a Judge to enter the correct Competition context and become prepared for ordinary judging without conflating identity, event participation, grouping, Access or evaluation responsibility.
+Define the semantic information and action mapping required for a Judge to enter the correct Competition context and become prepared for ordinary judging without conflating Identity, Participation, grouping, Access or evaluation responsibility.
 
 # Judge-entry questions
 
-Judge entry must let the person understand, as applicable:
+Judge entry should make these questions answerable where applicable:
 
 ```text
 Which Competition am I entering?
 Which human Identity is being used?
-Is current verification/reverification sufficient?
+Is verification/reverification sufficient?
 Do I have a current Judge Participation for this Competition?
-What current Participation state or event-specific attributes require attention?
-Am I checked in / active as required by current policy?
-Is there current Panel/grouping information relevant to me?
-Am I presently prepared to enter ordinary judging work?
-If not, which source condition blocks preparation and what legitimate next action exists?
+What Participation state or event attributes need attention?
+Am I checked in / active where policy requires it?
+What current Panel/grouping context is relevant?
+Am I prepared to enter ordinary judging work?
+If not, which authoritative source condition blocks me?
 ```
 
-These questions need not appear as a wizard or fixed sequence.
+This is an explanation set, not a required wizard.
 
-# Competition context precedes authority interpretation
+# Competition context before authority interpretation
 
-The current Competition must be unambiguous before event-scoped Participation or readiness is interpreted.
+The current Competition must be unambiguous before Competition-scoped Participation or readiness is interpreted.
 
-An event code, QR code, invitation, deep link or bookmarked route may identify/navigate toward a Competition, but it does not establish Identity, Participation, Panel membership, Access or evaluation responsibility.
+An invitation, event code, QR, deep link or bookmark may identify/navigate toward a Competition, but it does not establish:
 
-A non-camera path remains required at the semantic level because QR/camera is an optional navigation mechanism rather than authority.
+- Identity;
+- Judge Participation;
+- Panel membership;
+- Access;
+- Evaluation Occurrence participation;
+- Evaluation Obligation;
+- Scorecard authority.
 
-# Identity continuity
+A non-camera path remains required semantically because QR/camera is navigation convenience rather than authority.
 
-A first-time volunteer may establish and verify Identity. A returning volunteer may reuse recognized Identity continuity and reverify as required.
+# Identity continuity is not event authority
 
-Entry feedback must distinguish successful Identity continuity from current event authority.
+A first-time volunteer may establish/verify Identity; a returning volunteer may reuse recognized Identity continuity and reverify as required.
+
+Preserve:
 
 ```text
 recognized Identity
@@ -60,71 +69,69 @@ recognized Identity
   != Evaluation Obligation
 ```
 
-Prior Competition history must never be represented as though it automatically resumes current authority.
+Historical Competition participation never resumes current authority automatically.
 
 # Competition-specific Judge Participation
 
-Every Competition uses a distinct Judge Participation even when Identity is reused.
+Each Competition uses a distinct Judge Participation even when Identity is reused.
 
 Judge entry may expose current Participation facts such as:
 
 - Judge capacity and Competition scope;
-- enrollment/current status;
+- enrollment/current state;
 - check-in state;
-- current-event declared expertise/profile attributes where relevant;
+- current-event declared expertise/profile attributes;
 - Active/Completed/Withdrawn state;
-- an exceptional restoration requirement where policy permits restoration.
+- exceptional restoration requirements where policy permits restoration.
 
-Participation actions retain their Phase-011 application semantics:
+Application actions retain Phase-011 semantics:
 
-- `enroll`, `checkIn`, `updateDeclaredAttributes`, `withdraw` are direct application actions;
-- `activate` is coordinated/readiness-gated;
-- `restore` is exceptional/coordinated;
-- completion may occur directly or as a composed consequence of live-event completion.
+- `enroll`, `checkIn`, `updateDeclaredAttributes`, `withdraw` — direct;
+- `activate` — coordinated/readiness-gated;
+- `restore` — exceptional/coordinated;
+- completion — direct or composed/system consequence where current synchronization defines it.
 
-The mapping must make the target Competition and Judge capacity clear for any consequential Participation action.
+Consequential Participation actions must make target Competition and Judge capacity clear.
 
 # Event-specific profile / expertise
 
-Expertise or similar Judge attributes are current Participation metadata where used by MUDAC.
+Expertise or similar Judge attributes are current Participation metadata where used.
 
-Reusing a returning Identity does not silently carry event-specific participation attributes forward as current truth unless current Participation semantics explicitly establish them.
+Returning Identity continuity does not silently carry prior event-specific attributes forward as current truth.
 
-Confirming expertise does not grant Access, create Panel membership or establish responsibility.
+Confirming expertise does not grant Access, create Panel membership or establish evaluation responsibility.
 
-# Panel assignment at entry
+# Panel assignment is planning context
 
-Panel assignment may be useful operational context, but Panel represents intended reusable evaluator grouping.
+Panel represents intended reusable evaluator grouping.
 
-Showing a Judge that they are assigned to a Panel must not imply that:
+Showing a Judge's Panel assignment must not imply:
 
-- they will participate in every Evaluation Occurrence associated with that Panel;
-- an occurrence has already begun;
-- they currently have an Evaluation Obligation;
+- actual participation in every Evaluation Occurrence;
+- an occurrence has begun;
+- an Evaluation Obligation exists;
 - a Scorecard exists;
-- they can access a specific Team/evaluation artifact.
+- Access to a Team/evaluation artifact exists.
 
-Likewise, absence of a Panel assignment must not be represented as a universal blocker unless current competition policy/readiness actually requires one for the relevant PF-01 profile.
+Absence of Panel assignment is not a universal blocker unless current Competition policy/readiness makes it one.
 
-# Derived `Ready to Judge`
+# Derived Ready to Judge
 
-`Ready to Judge` is an explanatory projection over current source facts.
+`Ready to Judge` is an explanatory projection answering:
 
-Its question is:
+> Is this Judge currently prepared to enter ordinary judging work for this Competition?
 
-> **Is this Judge currently prepared to enter ordinary judging work for this Competition?**
-
-It may summarize relevant current conditions such as:
+It may summarize current facts such as:
 
 - legitimate Identity continuity/reverification;
-- current Competition-specific Judge Participation;
+- current Judge Participation;
 - required check-in/activation state;
-- required event-specific declared attributes;
-- Organizer-governed grouping/preparation facts where current policy makes them relevant;
-- Competition lifecycle/readiness facts relevant to Judge entry;
-- current contextual capability/disclosure expectations.
+- required event-specific attributes;
+- Organizer-governed grouping/preparation facts where policy makes them relevant;
+- Competition lifecycle facts relevant to entry;
+- contextual capability/disclosure expectations.
 
-`Ready to Judge` is not:
+It is not:
 
 ```text
 Participation lifecycle state
@@ -133,85 +140,98 @@ Evaluation Occurrence participation
 Evaluation Obligation
 Scorecard existence
 persisted Access grant
-a manually editable checklist item
+manually editable checklist state
 ```
 
-There is no generic `Set Ready`, `Mark Ready to Judge` or readiness override action.
+There is no generic `Set Ready` or readiness override.
 
-When the projection is not satisfied, the representation should identify the authoritative source condition and legitimate next action where the current actor can perform one. A displayed ready result never substitutes for a fresh Access decision when a protected operation is attempted.
+When readiness is false, identify the authoritative source condition and legitimate next action where doing so does not leak protected information. A displayed ready result never substitutes for a fresh Access decision on a protected operation.
 
-# Judge-safe disclosure during entry
+# Judge-safe disclosure
 
-Judge entry adopts the Judge-safe disclosure posture.
+Judge entry adopts Judge-safe disclosure.
 
-During blinded judging, competitor-facing context uses **Alias + Division** and withholds institution/administrative identity and optional Team Name by default.
+During blinded judging, competitor context uses **Alias + Division** and withholds institution/administrative identity and optional Team Name by default.
 
-The same human having an Organizer Participation does not make Organizer-sensitive information visible in Judge context. Capability/disclosure does not union across Participations.
+The same Identity holding Organizer Participation does not make Organizer-sensitive information visible in Judge context. Capabilities/disclosure never union across Participations.
 
-Detailed Team/evaluation task presentation is owned by later evaluation mapping; 013-C establishes only the entry/context disclosure boundary.
+Detailed evaluation subject/basis presentation is owned by [Judge Active Evaluation Mapping](judge-evaluation.md).
 
 # Availability and feedback
 
-Judge entry should distinguish semantically different reasons that change the legitimate next action, including:
+Entry should distinguish materially different causes when they imply different legitimate next actions, including:
 
-- Identity needs establishment/reverification;
-- no Judge Participation exists for this Competition;
-- Participation exists but needs check-in or another required state transition;
-- Participation is Withdrawn/Completed;
-- current Competition lifecycle does not permit ordinary live Judge work;
-- an expected grouping/preparation source is incomplete;
-- the Judge is entry-ready but has no current evaluation responsibility/work;
-- a protected operation is denied by current Access.
+- Identity establishment/reverification required;
+- no Judge Participation for this Competition;
+- check-in/activation or another Participation transition required;
+- Participation Withdrawn/Completed;
+- Competition lifecycle does not permit ordinary live Judge entry;
+- required grouping/preparation source incomplete;
+- Judge is entry-ready but has no current Evaluation Obligation;
+- protected action denied by current Access.
 
-A generic `Unauthorized`, disabled control or hidden route is insufficient when it would cause the person to infer the wrong source condition. Denial explanation must still avoid leaking protected information.
+A generic `Unauthorized`, hidden route or disabled control is insufficient where it would imply the wrong source condition. Explanation must still preserve disclosure/privacy.
 
-For direct/coordinated entry actions, successful feedback should confirm the semantic result actually established—Identity continuity, Participation enrollment/check-in/activation, or current readiness—without implying downstream authority not established by that action.
+Successful feedback confirms only the semantic result actually established—such as Identity continuity, Participation enrollment/check-in/activation or current readiness—without implying downstream responsibility or judgment authority.
 
-# Multi-capacity Judge / Organizer identities
+# Multi-capacity Identity
 
-If one Identity has both Judge and Organizer Participations, Judge entry selects the Judge Participation context only.
+If one Identity has both Judge and Organizer Participations, Judge entry selects only the Judge Participation context.
 
-Switching to/from Organizer context does not mutate either Participation and does not merge Access.
+Switching context does not mutate either Participation and does not merge Access.
 
-The destination Competition/capacity and materially different disclosure posture must be intelligible before protected information/action meaning changes.
+The destination Competition/capacity and materially different disclosure posture must be intelligible before protected meaning changes.
 
 See [Experience Context and Participation Modes](context-role-modes.md).
 
-# Event completion / later access
+# Event completion and remaining Judge work
 
-Ordinary live Judge Participation completes as part of live-event completion where current composition applies, and ordinary private-evaluation Access is then denied by current context.
+Competition `Event Completed` ends the ordinary live-event entry/readiness context. It does **not** by itself prove that every Judge obligation is terminal or universally revoke every form of permitted Judge work.
 
-Historical Participation/evaluation records may remain inspectable where separately permitted, but history does not restore ordinary live Judge mode or capability.
+Preserve:
 
-A later legitimate correction path uses narrow current authority rather than pretending the event-day Participation never ended.
+```text
+Event Completed
+  != all Evaluation Obligations terminal
+  != all Scorecards Finalized
+  != universal hidden Access revocation
+```
 
-Detailed correction/history mapping belongs to 013-F.
+If an Outstanding Evaluation Obligation remains after Event Completed and current policy plus current Access permit continuation, the Judge may continue the **same logical evaluation** under [Judge Active Evaluation Mapping](judge-evaluation.md).
+
+Historical Participation/evaluation records may also remain inspectable where separately permitted. History does not restore ordinary live-event entry mode.
+
+Later amendment, correction or other exceptional historical action uses narrow current authority under [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md), rather than pretending event-day authority never ended.
 
 # Support and recovery boundary
 
-Technical support may help re-establish technical access or legitimate context but cannot mark a Judge ready, create Participation, assign domain authority, expose protected competitor identity or author evaluation merely through support privilege.
+Technical support may help re-establish operation or legitimate context but cannot mark a Judge ready, create Participation, create evaluation responsibility, expose protected competitor identity or author judgment through support privilege.
 
-If technical recovery restores a session, the application must still evaluate current Identity/Participation/Competition/Access facts.
+Recovery still evaluates current Identity, Participation, Competition, target resource and Access facts.
+
+See [Accessibility, Responsive & Degraded-Operation Mapping](accessibility-resilience.md) and [Status, Feedback & Recovery Mapping](status-feedback-recovery.md).
 
 # Structural mapping constraints
 
-Judge entry must preserve these semantics regardless of downstream interface design:
+Judge entry preserves these semantics regardless of downstream interface design:
 
-1. Competition context is clear enough to avoid cross-event authority confusion.
-2. Identity continuity is visibly distinct from Competition-specific Participation.
-3. Participation state/required source conditions can be understood without treating Access as a role flag.
-4. Panel assignment is visibly planning/grouping context rather than responsibility.
-5. `Ready to Judge` is presented as derived/explanatory rather than writable authority.
+1. Competition context is clear enough to avoid cross-event confusion.
+2. Identity continuity is distinct from Competition-specific Participation.
+3. Participation state is understandable without treating Access as a role flag.
+4. Panel assignment is planning/grouping context rather than responsibility.
+5. `Ready to Judge` is derived/explanatory rather than writable authority.
 6. Judge-safe disclosure applies before detailed evaluation work begins.
-7. entry mechanisms such as QR/deep links do not appear to grant authority.
-8. historical participation does not appear current.
+7. QR/deep links/navigation do not grant authority.
+8. historical Participation does not appear current.
+9. Event Completed ends ordinary live entry context without silently erasing legitimate remaining work.
 
-No exact page order, component, route, account/session provider or authentication workflow is prescribed.
+No page order, component, route, account/session provider or authentication workflow is prescribed.
 
 # Related mapping
 
-Operating-context/multi-capacity rules are owned by [Experience Context and Participation Modes](context-role-modes.md).
-
-Detailed occurrence/obligation/judgment/Scorecard action mapping belongs to 013-E.
-
-Accessibility/degraded interaction parity is re-audited in 013-J.
+- operating context / multi-capacity → [Experience Context and Participation Modes](context-role-modes.md);
+- active occurrence/obligation/judgment → [Judge Active Evaluation Mapping](judge-evaluation.md);
+- correction/history → [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md);
+- live remaining-work semantics → [Organizer Live Operations & Remaining Work Mapping](live-operations.md);
+- accessibility/recovery parity → [Accessibility, Responsive & Degraded-Operation Mapping](accessibility-resilience.md) and [Status, Feedback & Recovery Mapping](status-feedback-recovery.md);
+- whole-experience integrity → [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md).
