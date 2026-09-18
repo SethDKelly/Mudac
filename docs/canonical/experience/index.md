@@ -14,10 +14,11 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 ```
 
-Phase 014 familiarity/genericity analysis must compare any broader abstraction against the actual mapped user-visible semantics established here rather than state/data shape alone.
+Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
 
 ## Current accepted Experience owners
 
@@ -39,30 +40,30 @@ Phase 014 familiarity/genericity analysis must compare any broader abstraction a
 - `reconciliation-finalization.md` — historical only;
 - `paper-export-publication.md` — historical only.
 
-## Genericity / mapping constraint
+## Reusable-knowledge / mapping constraint
 
-014-G confirms:
+014-H identifies reusable Concept and pattern knowledge but does not create alternate user-facing semantics.
 
-```text
-Generic at the boundary; specific in purpose.
-```
-
-A broader abstraction is invalid if users would lose the ability to distinguish the natural owner/action/history consequence.
-
-Therefore mapped experiences continue to preserve:
+Reusable lessons remain subordinate to current mapping owners. For example:
 
 ```text
-Participation context != Access
-Panel planning != occurrence participation
-remaining work != task authority
-Scorecard Draft != finalized judgment
-Rank != recognition
-Finalization != official declaration
-Export != Publication != delivery
+context capability without authorship transfer
+  → reinforces Participation / Access / author boundaries
+
+historical accomplishment vs current eligibility
+  → reinforces obligation/evidence mapping
+
+derivation → recognition → declaration
+  → reinforces Rank / Award / Outcome Declaration mapping
+
+source → representation → release → delivery
+  → reinforces Export / Publication / recipient mapping
 ```
 
-Team's intrinsic genericity refinement does not change Judge/Organizer mappings: current PF-01 still represents the competing unit as a student Team and applies existing Alias/disclosure semantics.
+Catalog candidacy never permits a generic UI workflow, status or action label to replace owner-specific mapped semantics.
+
+Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organizer representation: current product context remains student competition judging with the existing Alias/disclosure behavior.
 
 ## Current next work
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
