@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the retained-novelty/reusable-knowledge audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the propagation/reopen/obvious-integrity gate, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, genericity, reuse, reentry]
 sources:
@@ -11,6 +11,7 @@ sources:
   - resource: ../../014-familiarity-reuse-genericity/014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md
+  - resource: ../../014-familiarity-reuse-genericity/014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -21,7 +22,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-H.
+Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-I.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -45,7 +46,8 @@ implementation authorization: NOT YET
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
 014-H: COMPLETE — PASS
-014-I: NEXT
+014-I: COMPLETE — PASS
+014-J: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -112,7 +114,20 @@ The Team refinement from 014-G is conceptual only: intrinsic Team semantics no l
 
 Reusable pattern knowledge such as exact-basis binding, explicit successor without silent rewrite, represented-authority provenance, historical-accomplishment/current-eligibility separation and source→representation→release layering remains design knowledge rather than architecture.
 
-# Reopening discipline
+# 014-I propagation conclusion
+
+014-I confirms:
+
+```text
+adopted semantic refinement → natural canonical owner
+historical superseded wording → retained only with explicit later-refinement/correction context
+reusable lesson → registry linked to natural owner
+known Phase-014 contradiction deferred to Phase 015 → NONE
+```
+
+The 014-C Event Completed/Access defect is repaired in the current Phase-011 synchronization owner; the historical 011-C record is annotated rather than rewritten. The 014-G Team refinement is current in the Team owner while PF-01 remains student-team specific. Vocabulary and reusable-knowledge registries remain non-overriding.
+
+
 
 - purpose/boundary defect → natural Concept owner / Phase 010 as appropriate;
 - composition/action defect → Phase 011;
@@ -121,7 +136,7 @@ Reusable pattern knowledge such as exact-basis binding, explicit successor witho
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
 
-014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen.
+014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified all adopted Phase-014 refinements against their natural owners, repaired two historical-provenance ambiguities, and found no remaining known Phase-014 semantic blocker.
 
 # Suspended downstream authority
 
@@ -129,4 +144,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
+Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
