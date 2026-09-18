@@ -15,10 +15,11 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — composition and application-action authority.
 * [Dependence](canonical/dependence/) — dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — Phase-013 authority/evidence topology through 013-I.
-* [Experience](canonical/experience/) — accepted mapping owners plus classified historical/admitted evidence.
-* [Award, Finalization & Outcome Officiality Mapping](canonical/experience/outcome-officiality.md) — current internal officiality mapping.
-* [External Representation, Disclosure & Release Mapping](canonical/experience/external-representation-release.md) — current Export/audience/Publication/external-recipient mapping.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — Phase-013 authority/evidence topology through 013-J.
+* [Experience](canonical/experience/) — accepted mapping owners plus historical evidence adapters.
+* [External Representation, Disclosure & Release Mapping](canonical/experience/external-representation-release.md) — 013-I.
+* [Accessibility, Responsive & Degraded-Operation Mapping](canonical/experience/accessibility-resilience.md) — 013-J.
+* [Status, Feedback & Recovery Mapping](canonical/experience/status-feedback-recovery.md) — 013-J.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
@@ -28,29 +29,28 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **IN PROGRESS**.
 
-Completed: 013-A through 013-I. The next work is:
+Completed: 013-A through 013-J. The next work is:
 
-> **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**
+> **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**
 
-# Current externalization rules
+# Current semantic-parity / recovery rules
 
 ```text
-source authority != Export representation != Publication release != delivery
-actor Access != audience disclosure
-Export generated != Publication
-Export SourceBasis is exact and historically stable
-Export currency = Current | Affected | Stale | Superseded | Retired
-Export currency != Publication distribution state
-new/corrected source → new Export
-successor Outcome Declaration != successor Export != successor Publication
-withdrawal/supersession != historical release erasure
-recipient possession != current release authority or Access
-Publication Published != transport/delivery success
+accessible / responsive / degraded / paper paths = same domain semantics
+assistive actor != semantic author by assistance alone
+device / route / session / QR possession != current Access
+interruption / device change / retry → recover same logical work
+local working state != confirmed persistence != authoritative state
+paper fallback != second evaluation model
+result unknown != success != failure
+retry/recovery reconciles current authority before repeating intent
+stale local state cannot overwrite newer authority
+status is multidimensional / subject-qualified
+working persistence feedback != semantic commitment
+technical recovery capability != broader Access/disclosure/authority
 ```
 
-Official-but-non-public and Export-without-Publication are legitimate PF-01 states.
-
-The legacy `canonical/experience/paper-export-publication.md` and `reconciliation-finalization.md` files are historical evidence only.
+External representation/release distinctions from 013-I remain intact across accessible/degraded/recovery paths.
 
 # Current methodology state
 
@@ -69,7 +69,8 @@ The legacy `canonical/experience/paper-export-publication.md` and `reconciliatio
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
-013-J: NEXT
+013-J: COMPLETE — PASS
+013-K: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -86,7 +87,7 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-The application mapping surface remains the Phase-011 `D / C / P / S / X` action surface rather than every intrinsic Concept action.
+Accessibility/degraded operation changes interaction mechanics or capability availability, not application authority semantics.
 
 # Completion runway
 
@@ -94,7 +95,7 @@ The application mapping surface remains the Phase-011 `D / C / P / S / X` action
 010 foundational completion     COMPLETE — PASS
 011 composition/synchronization COMPLETE — PASS
 012 dependence/product-family   COMPLETE — PASS
-013 mapping/representation      IN PROGRESS — 013-J NEXT
+013 mapping/representation      IN PROGRESS — 013-K NEXT
 014 familiarity/reuse/genericity
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
