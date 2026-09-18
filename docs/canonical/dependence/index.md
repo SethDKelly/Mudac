@@ -34,28 +34,33 @@ PF-01 supports all eighteen current Concepts in its capability envelope without 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+explanation order != mandatory screen order
 ```
 
-013-J preserves scope versus operating profile:
+013-K confirms that Experience profiles do not create new product-family variants or dependence edges:
 
 ```text
-accessible interaction
-  != separate product variant
-
-degraded connectivity
-  != separate authority model
-
-paper fallback
-  != separate evaluation capability family
-
-mobile / shared-device / alternate-input use
-  != different Concept inclusion
-
-recovery capability
-  != broader Access or semantic authority
+Judge-safe vs Organizer-sensitive context
+Ceremony/Public representation profiles
+optional Award capability
+official-but-non-public operation
+Export without Publication
+paper/electronic/mixed capture
+accessible/degraded operation
+Current/Affected/Superseded history
 ```
 
-Accessibility, responsive presentation, degraded operation and recovery are mapping/operating profiles over PF-01, not new product-family variants or direct dependence edges.
+All remain coherent PF-01 states/profiles.
+
+Likewise:
+
+```text
+role/capacity switch != product switch
+profile difference != source-truth difference
+recovery path != capability-family fork
+```
+
+No Phase-012 scope repair is required.
 
 ## Current handoff
 
@@ -72,7 +77,8 @@ Phase 013 IN PROGRESS
 013-H COMPLETE — PASS
 013-I COMPLETE — PASS
 013-J COMPLETE — PASS
-013-K NEXT
+013-K COMPLETE — PASS
+013-L NEXT
 ```
 
-Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
