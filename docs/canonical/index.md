@@ -4,7 +4,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/)
+* [Project Context, Purpose & Vocabulary](project/)
 * [Concepts](concepts/)
 * [Synchronizations](synchronizations/)
 * [Dependence](dependence/)
@@ -29,7 +29,8 @@ Jackson Concept Design: IN PROGRESS
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
-014-F: NEXT
+014-F: COMPLETE — PASS
+014-G: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -41,7 +42,7 @@ implementation authorization: NOT YET
 
 Current canonical knowledge remains the semantic target. Familiar precedents remain comparison evidence only.
 
-The completed family audits retain all eighteen current Concept names/boundaries.
+014-C through 014-E retain all eighteen current Concept names/boundaries. 014-F establishes the durable [MUDAC Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md).
 
 ## Cross-family seams retained
 
@@ -55,32 +56,33 @@ Versioning != Provenance
 Rank / selection basis != Award recognition
 Competition Finalized != Outcome Declaration
 Outcome Declaration != Export != Publication != delivery
+Export currency != Publication state
 ```
 
-## Family-3 result
-
-014-E retains Versioning, Provenance, Award, Outcome Declaration, Export and Publication with explicit familiarity constraints.
+## Terminology discipline
 
 ```text
-Versioning          = authoritative committed-state lineage
-Provenance          = meaningful origin / actor / represented-authority explanation
-Award               = explicit recognition
-Outcome Declaration = explicit official authority over an exact basis
-Export              = exact-source external representation + currency
-Publication         = explicit release of an exact representation
+T1 canonical semantic term
+T2 qualified explanatory label
+T3 analogy-only term
+T4 high-risk generic term
 ```
 
-Do not collapse these into one generic `revision`, `result`, `report`, `publish`, or `audit` abstraction.
+Familiar words such as `role`, `task`, `session`, `submit`, `final`, `winner`, `revision`, `share`, `status`, `current`, `complete` or `published` must not imply stronger or different semantics than their natural owner.
+
+Owner-qualified state/action language is preferred whenever ambiguity could change behavior or authority.
+
+Historical `Judging Encounter` and `Official Outcome Revision` remain counterexample evidence only.
 
 # Retrieval rule
 
 1. start at the natural canonical owner for current meaning;
-2. use completed Phase-013 mapping for user-visible semantics;
-3. for Phase-014 work, load 014-A/014-B plus completed family audits 014-C through 014-E;
-4. add only precedent evidence needed for the current question;
+2. use [Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md) when familiar wording could cross owner boundaries;
+3. use completed Phase-013 mapping for user-visible semantics;
+4. for Phase-014 work, load 014-A/014-B plus relevant completed 014-C through 014-F records;
 5. use historical adapters only as explicit comparison/counterexample evidence;
 6. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
