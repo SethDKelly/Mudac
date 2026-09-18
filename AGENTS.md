@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-6. For current methodology work, read [Phase 014](docs/014-familiarity-reuse-genericity/), especially 014-A/014-B and the latest completed family audit.
+6. For Phase 014, read [014-A](docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md), [014-B](docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md), and the completed family audits 014-C through 014-E before cross-catalog terminology work.
 7. Treat historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
 8. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -26,7 +26,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
-014-E: NEXT
+014-E: COMPLETE — PASS
+014-F: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -44,90 +45,51 @@ Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation
 
 Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation and Live Operations remain work/process contexts rather than Concepts.
 
-## Phase-014 familiarity evidence rule
+## Phase-014 familiarity rule
 
-014-B establishes E1 current MUDAC authority as the semantic target and E2–E7 precedent classes as comparison evidence only. The PT-01..PT-13 taxonomy creates no Concepts or authority.
+Only current MUDAC canonical semantics define MUDAC meaning. Familiar precedents are comparison evidence.
 
 Do not infer semantic fit from name similarity, popularity, UI resemblance or implementation reuse.
 
-## Accepted Family-1 dispositions from 014-C
+## Accepted family constraints
 
-```text
-Competition    → semantic fit / bounded competition occurrence
-Division       → semantic fit / scoped competitive cohort
-Team           → semantic fit / competing unit
-Panel          → semantic fit with constraints / intended evaluator grouping
-Identity       → semantic fit / stable human identity continuity
-Participation  → semantic fit with constraints / scoped involvement/capacity
-Alias          → semantic fit with constraints / scoped alternate identity
-Access         → semantic fit with constraints / contextual authorization
-```
-
-Preserve:
+Preserve at least:
 
 ```text
 Identity != Participation != Access
 Panel membership != occurrence participation != responsibility != evidence
-Access permission != semantic authorship
-```
-
-Do not replace this model with generic `User / Role / Permission / Group` semantics.
-
-## Accepted Family-2 dispositions from 014-D
-
-```text
-Evaluation Occurrence → semantic fit with constraints / bounded evaluation event
-Evaluation Obligation → semantic fit with constraints / scoped evaluation duty
-Rubric                → strong semantic fit / evaluation instrument
-Scorecard             → semantic fit with constraints / one evaluator judgment record
-```
-
-Preserve:
-
-```text
-occurrence participation != responsibility
-responsibility != judgment evidence
+Evaluation Occurrence != Evaluation Obligation != Scorecard
 Rubric definition != exact authoritative Evaluation Basis
 Scorecard Draft != authoritative judgment
 historical obligation satisfaction != current evidence eligibility
+Versioning != Provenance
+Rank / selection basis != Award recognition
+Competition Finalized != Outcome Declaration
+Outcome Declaration Affected != Superseded
+Outcome Declaration != Export
+Export currency != Publication state
+Publication Published != delivery / recipient possession
 ```
 
-Do not collapse these Concepts into generic `Session / Assignment / Task / Form / Submission / Attempt` semantics.
+Do not replace these with generic `User`, `Role`, `Permission`, `Session`, `Task`, `Form`, `Submission`, `Revision`, `Result`, `Report`, or `Publish` abstractions when those terms erase ownership or history.
 
-`Encounter` remains a negative historical precedent; `Session`, `Attempt`, `Assignment`, `Task`, `Ballot`, `Submission` and `Form` are analogies only where their transferred expectations remain valid.
+## Family-3 familiarity result
 
-## Corrected event-completion seam
-
-014-C repaired the current Phase-011 synchronization rule:
+014-E retains:
 
 ```text
-Event Completed
-  → broad/new ordinary live-event Judge capability closes
-  != universal hidden Access revocation
-
-existing Outstanding obligation
-  + current policy permits continuation
-  + fresh Access permits the specific operation
-  → same logical evaluation may continue
+Versioning          → authoritative version/snapshot lineage with strong constraints
+Provenance          → origin / derivation / represented-authority explanation
+Award               → explicit recognition
+Outcome Declaration → explicit official-result declaration with Affected/successor semantics
+Export              → exact-source representation + currency
+Publication         → deliberate audience/channel release
 ```
 
-This does not reactivate Participation, reopen Competition, create another obligation or restore general event-day capability.
-
-## Retained authority invariants
-
-Preserve at least:
-
-- one Evaluation Obligation → at most one logical Scorecard;
-- Scorecard Draft != authority;
-- historical obligation satisfaction != current evidence eligibility;
-- Rank != Award authority;
-- Competition Finalization != Outcome Declaration;
-- Outcome Declaration != Export != Publication != delivery;
-- accessible/degraded/paper paths preserve the same authority model;
-- result unknown != success != failure.
+Versioning is not generic user-facing edit/revert/branch authority. Provenance does not create authority. Award recognition is not implied by Rank. Officiality is not implied by Finalization or publication. Export generation does not publish. Publication does not prove delivery or erase external copies after withdrawal.
 
 ## Current next task
 
 Proceed to:
 
-> **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**
+> **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**
