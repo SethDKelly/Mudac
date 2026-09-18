@@ -17,7 +17,6 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Dependence](canonical/dependence/) — dependence, whole-graph validation and PF-01 scope.
 * [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
 * [Experience](canonical/experience/) — complete current mapping-owner set plus historical evidence adapters.
-* [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md) — final cross-owner mapping integrity owner.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
@@ -31,42 +30,37 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 ```text
 014-A  COMPLETE — READY
-014-B  NEXT — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register
+014-B  COMPLETE — PASS
+014-C  NEXT — Family-1 Familiarity / Reuse Audit
 ```
 
-014-A establishes that familiarity is judged by correct expectation transfer about purpose/behavior rather than name, popularity or implementation resemblance. It also establishes the dependency-safe family/cross-catalog audit sequence through 014-J.
+014-B establishes the evidence and precedent baseline used by later Phase-014 judgments. It makes no current semantic-fit decision.
 
-# Phase-014 governing rules
+# Phase-014 evidence discipline
 
 ```text
-familiarity != implementation mimicry
-reuse != Concept merging by resemblance
-genericity != abstraction for abstraction's sake
-common vocabulary != lost authority boundary
-profile reuse != capability union
+E1 current MUDAC semantic authority
+E2 authoritative Concept Design / documented concept precedent
+E3 established domain concepts
+E4 widely used cross-application software concepts
+E5 MUDAC historical alternatives / prior audits
+E6 comparable product / interface convention
+E7 quarantined architecture / implementation evidence
 ```
 
-A proposed familiar precedent must be compared against purpose, operational principle, state/actions, lifecycle/finality, authority/authorship, history/correction, scope, composition/dependence and mapped experience where material.
+Only E1 defines current MUDAC meaning. E2–E7 are comparison evidence.
 
-# Final Phase-013 mapping rules retained
+The PT-01..PT-13 precedent taxonomy organizes comparison candidates without creating super-concepts or a universal taxonomy.
+
+# Familiarity rule
 
 ```text
-context / capacity / audience
-  → subject/resource
-  → current authoritative or working state
-  → qualification / blocker / uncertainty
-  → legitimate purpose-specific action
-  → consequence
-  → confirmed result + retained history
+same-looking name / interface != familiar Concept
+popularity != semantic fit
+implementation resemblance != conceptual reuse
 ```
 
-Preserve:
-
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-explanation order != mandatory screen order
-```
+A candidate precedent must be tested for mostly correct expectation transfer about purpose, behavior, authority, lifecycle/history, composition and mapping.
 
 # Current methodology state
 
@@ -78,7 +72,8 @@ explanation order != mandatory screen order
 013: COMPLETE — PASS
 014: IN PROGRESS
 014-A: COMPLETE — READY
-014-B: NEXT
+014-B: COMPLETE — PASS
+014-C: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -99,7 +94,7 @@ Phase 014 may critique familiarity, reuse, naming and broader genericity, but it
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-B NEXT
+014 familiarity/reuse/genericity IN PROGRESS — 014-C NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
