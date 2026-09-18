@@ -12,7 +12,8 @@ Phase 014 is **IN PROGRESS**.
 - [014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit](014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md) — **Complete — PASS**.
 - [014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) — **Complete — PASS**.
 - [014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit](014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md) — **Complete — PASS**.
-- **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check** — Next.
+- [014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check](014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md) — **Complete — PASS**.
+- **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff** — Next.
 - 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
 
 ## Current authority
@@ -107,8 +108,9 @@ No external/universal concept catalog is created by Phase 014. Future catalog pr
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
 014-H COMPLETE — PASS
-014-I NEXT
+014-I COMPLETE — PASS
+014-J NEXT
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
+Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
