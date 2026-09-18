@@ -12,10 +12,11 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
-014-F NEXT
+014-F COMPLETE — PASS
+014-G NEXT
 ```
 
-Phase 014 familiarity analysis must compare precedent expectations against the actual mapped user-visible semantics established here rather than concept names alone.
+Phase 014 familiarity/genericity analysis must compare precedent expectations against the actual mapped user-visible semantics established here rather than concept names alone.
 
 ## Current accepted Experience owners
 
@@ -37,25 +38,36 @@ Phase 014 familiarity analysis must compare precedent expectations against the a
 - `reconciliation-finalization.md` — historical only;
 - `paper-export-publication.md` — historical only.
 
-## Cross-catalog familiarity constraints
+## Cross-catalog vocabulary authority
 
-Completed family audits establish that user-facing familiar vocabulary must not erase these mapped meanings:
+014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
+
+User-facing vocabulary may be more familiar than canonical Concept names only when the mapping remains honest.
+
+Examples:
 
 ```text
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Scorecard Draft != authoritative judgment
-Versioning != Provenance
-calculated != recognized != official != public != delivered
-Outcome Declaration Affected != Superseded
-Export currency != Publication state
-Publication Published != delivery / possession
+Judge/Organizer mode     → Participation context; mode creates no authority
+assigned evaluation      → Evaluation Obligation; not a reopenable Task
+judging event            → Evaluation Occurrence; completion != responsibility satisfaction
+Judge Scorecard          → Scorecard; not Aggregate/Rank
+Finalize Evaluation      → authority-establishing Judge action; not generic Submit
+current official outcome → Outcome Declaration; official != public
+report / snapshot        → Export only when exact-source representation semantics apply
+release                  → Publication; Published != delivered
 ```
 
-014-F should now audit words such as `role`, `assignment`, `session`, `submit`, `complete`, `revision`, `official`, `final`, `report`, `export`, `publish`, `release`, `withdraw`, `affected`, `stale`, `superseded`, `replace`, and `delivered` across all accepted mappings.
+Keep state vocabulary owner-qualified:
 
-The goal is consistent expectation transfer, not one universal vocabulary that flattens distinct Concept semantics.
+```text
+Competition Ready != Competition Readiness != Ranking Readiness != Finalization Readiness
+Occurrence Complete != Obligation Satisfied != Scorecard Finalized
+Event Completed != Competition Finalized
+Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
+```
+
+Generic `status`, `done`, `submit`, `edit`, `reopen`, `resolve`, `override`, `share` or similar labels must not create UI-owned workflow authority.
 
 ## Current next work
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**. Experience terminology remains an integrity constraint on any proposed generalization.
