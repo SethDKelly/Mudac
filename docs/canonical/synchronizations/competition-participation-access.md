@@ -1,11 +1,12 @@
 ---
 type: Synchronization Contract
 title: Competition Lifecycle, Participation & Contextual Access Composition
-description: "Current cross-Concept composition for Identity continuity, Competition-scoped Participation, contextual Access, Competition readiness/activation/completion/resume, Team/Division/Alias readiness contribution, and operating-context isolation after Phase 011-C."
+description: "Current cross-Concept composition for Identity continuity, Competition-scoped Participation, contextual Access, Competition readiness/activation/completion/resume, Team/Division/Alias readiness contribution, and operating-context isolation after Phase 011-C, with the event-completion Access seam corrected by 014-C."
 status: stable
 tags: [synchronization, competition, identity, participation, access, readiness, context, phase-011]
 sources:
   - resource: ../../011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md
+  - resource: ../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
   - resource: ../concepts/competition.md
   - resource: ../concepts/identity.md
   - resource: ../concepts/participation.md
@@ -15,6 +16,7 @@ sources:
   - resource: ../policies/operational-exception-governance.md
   - resource: ../invariants/judge-independence.md
   - resource: ../experience/judge-onboarding.md
+  - resource: ../experience/judge-evaluation.md
   - resource: ../experience/organizer-preparation.md
   - resource: ../experience/context-role-modes.md
   - resource: ../experience/action-authority-traceability.md
@@ -26,6 +28,8 @@ generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
 Define current MUDAC application composition among [Competition](../concepts/competition.md), [Identity](../concepts/identity.md), [Participation](../concepts/participation.md), [Access](../concepts/access.md), and derived [Readiness](../mechanisms/readiness.md) without collapsing their independent ownership.
 
 This document supersedes the current-authority meaning of legacy synchronization contracts 01–04, the readiness half of legacy 05, and the semantic Access-context half of legacy 16. The remaining legacy synchronization body stays pre-011 evidence until its owning Phase 011 subgroup establishes replacement semantics.
+
+014-C later corrected one over-strong Phase-011 composition statement: Event Completed closes broad ordinary live-event Judge capability, but it is **not** a universal prohibition on completing the same already-established Outstanding Evaluation Obligation when current policy and a fresh Access decision permit narrow continuation.
 
 # Authority boundary
 
@@ -63,6 +67,8 @@ Disabling/restoring Identity never rewrites Participation history. Current Acces
 
 `Participation.withdraw` changes Participation truth. It is not an Access edit. `Participation.restore` is governed by current policy/context and does not restore whatever capability existed previously.
 
+A Participation in `Completed` state no longer represents ordinary live-event involvement. That does not erase the relationship/history needed to evaluate a narrowly scoped protected action on an already-established responsibility.
+
 # Semantic operating context
 
 Each protected MUDAC operation is evaluated under exactly one explicit current Participation context containing the relevant semantic facts, including:
@@ -75,7 +81,7 @@ Each protected MUDAC operation is evaluated under exactly one explicit current P
 - current Competition lifecycle facts;
 - resource/relationship/purpose facts needed by the applicable Access rule.
 
-The Participation must belong to the supplied Identity and Competition scope and be legitimate for the requested operation.
+The Participation must belong to the supplied Identity and Competition scope and be legitimate for the requested operation. `Legitimate` is operation-specific: an Active Judge Participation may be required for ordinary new live-event work, while a completed Participation may still supply attributable context for a narrowly permitted action on an existing Outstanding Evaluation Obligation.
 
 If one Identity holds multiple Participations, their capabilities are **not unioned**. Judge context does not inherit Organizer disclosure/decision capability, and Organizer context cannot rewrite Judge authorship.
 
@@ -159,7 +165,35 @@ Coordinated Participation consequence:
 
 Outstanding Evaluation Obligations do **not** block event completion merely because judging work remains incomplete. Event completion does not finalize/delete Scorecards or erase responsibility history.
 
-After Event Completed, ordinary Judge private-evaluation capability is denied by current `Access.check` context. No ordinary persisted `Access.expire` action is required for that denial.
+## Broad live-event capability closes
+
+After Event Completed, completed Judge Participations no longer support ordinary **new live-event judging** simply because they were previously active.
+
+Without an explicit permitted continuation/resume path, Access denies actions such as:
+
+- beginning new ordinary Evaluation Occurrences from the ended live event;
+- treating completed Judge Participation as still Active;
+- manufacturing new ordinary Evaluation Obligations from prior live context;
+- regaining broad event-day capability merely through navigation/session history.
+
+No ordinary persisted `Access.expire` action is required for this broad capability change.
+
+## Existing responsibility may continue narrowly
+
+Event Completed is not a universal hidden Access revocation.
+
+An already-established Outstanding Evaluation Obligation may remain actionable when all of the following are true:
+
+- the obligation already existed under a legitimate begun occurrence;
+- the same evaluator/subject/occurrence/basis binding remains legitimate;
+- governing policy permits finishing that pre-existing responsibility after live-event end;
+- the current Participation record remains attributable to the Judge/Competition/capacity even though ordinary live Participation is Completed;
+- fresh `Access.check` permits the specific obligation-scoped read/write/finalize capability;
+- no correction/invalidation condition independently blocks the work.
+
+In that case the Judge may start/resume/finalize the **same logical evaluation**. This does not reactivate Participation, reopen Competition, create another obligation or restore general event-day capability.
+
+If genuinely new live-event participation or ordinary new occurrence/responsibility is needed, use explicit event-resume/Participation-restoration composition. If later correction requires genuinely new responsibility, use the established successor-work semantics rather than reopening the terminal predecessor.
 
 # Exceptional event resume
 
@@ -211,11 +245,12 @@ When judging begins, the applicable presented context must be preserved by the E
 3. Access permission is not semantic authorship or decision authority.
 4. Readiness is not lifecycle authority.
 5. Competition activation is not mass Participation activation.
-6. Event completion is not evaluation-responsibility completion.
-7. Active Competition history is not rolled back by later readiness degradation.
-8. Exceptional resume cannot resurrect prior capability automatically.
-9. One protected operation uses one explicit Participation context; capabilities never union across role contexts.
-10. Team/Division/Alias current corrections do not rewrite historical presented judging context.
+6. Event completion is not evaluation-responsibility completion and is not a universal Access revocation.
+7. Completed live Participation does not authorize new ordinary live-event work, while an existing Outstanding obligation may remain narrowly actionable when current policy and Access permit it.
+8. Active Competition history is not rolled back by later readiness degradation.
+9. Exceptional resume cannot resurrect prior capability automatically.
+10. One protected operation uses one explicit Participation context; capabilities never union across role contexts.
+11. Team/Division/Alias current corrections do not rewrite historical presented judging context.
 
 # Chaining summary
 
@@ -235,7 +270,8 @@ blocking source change while Ready
 ```text
 Competition.completeEvent
   → active live Judge Participations complete
-  → ordinary Judge protected Access subsequently denies
+  → broad/new ordinary live-event Judge capability closes
+  → existing Outstanding obligation may still continue narrowly when policy + fresh Access permit
 ```
 
 ```text
