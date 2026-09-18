@@ -23,7 +23,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
-* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — next methodology phase; start gate only.
+* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — active methodology phase; 015-A complete, 015-B next.
 
 # Current phase
 
@@ -31,7 +31,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) is **COMPLETE — PASS**.
 
-[Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **NOT STARTED — START GATE NEXT**.
+[Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **IN PROGRESS — 015-A COMPLETE — READY; 015-B NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -44,7 +44,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 014-H  COMPLETE — PASS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 ```
 
 # Current Phase-014 result
@@ -133,7 +134,9 @@ Identity != Participation != Access
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: NOT STARTED — 015-A START GATE NEXT
+015: IN PROGRESS
+015-A: COMPLETE — READY
+015-B: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -166,7 +169,7 @@ Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and in
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity COMPLETE — PASS
-015 integrity/interference       NOT STARTED — 015-A NEXT
+015 integrity/interference       IN PROGRESS — 015-B NEXT
 016 scenario/misfit/failure/adversarial
 017 methodology closure
 ```
