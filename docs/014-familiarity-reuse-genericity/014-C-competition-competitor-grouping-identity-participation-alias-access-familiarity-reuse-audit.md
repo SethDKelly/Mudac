@@ -20,6 +20,8 @@ sources:
   - resource: ../canonical/experience/context-role-modes.md
   - resource: ../canonical/experience/judge-onboarding.md
   - resource: ../canonical/experience/judge-evaluation.md
+  - resource: 014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md
+  - resource: 014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md
   - resource: https://csrc.nist.gov/pubs/sp/800/63/4/final
     title: NIST SP 800-63-4 Digital Identity Guidelines
   - resource: https://csrc.nist.gov/pubs/sp/800/162/upd2/final
@@ -48,6 +50,17 @@ Access
 # Decision
 
 **COMPLETE — PASS after one targeted Phase-011 canonical synchronization repair. Proceed to 014-D.**
+
+# Later Phase-014 refinement note
+
+This record preserves the Family-1 disposition as reached at 014-C. Two later Phase-014 refinements affect how parts of the record should now be read:
+
+1. **014-F completed the terminology audit** and retained `Access` as the canonical Concept name with the documented contextual-authorization constraints. Any 014-C wording saying Access was retained "pending 014-F" is therefore resolved rather than still pending.
+2. **014-G removed incidental `student` specificity from Team's intrinsic Concept semantics.** Current Team means a scoped competing group acting as one unit; PF-01 continues to bind that Concept to student teams. The 014-C passages describing Team as a student group record the then-current product-specific wording and are not current intrinsic Team authority.
+
+Neither refinement changes the 014-C familiarity result that Team and Access remain valid Concepts. Current Team semantics are owned by [Team](../canonical/concepts/team.md); current cross-catalog terminology is owned by [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md).
+
+The Event Completed Access defect discovered here remains repaired in the current [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md); the earlier 011-C phase record is now explicitly annotated as historical at that seam.
 
 ```text
 014-A start gate                                   COMPLETE — READY
