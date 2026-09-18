@@ -11,9 +11,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 5. Use [Reusable Concept Knowledge & Design Patterns](docs/canonical/project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons; never treat it as a substitute Concept specification or architecture mandate.
 6. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 7. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-8. For Phase 014, read [014-A](docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md), [014-B](docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md), and completed records through the current subphase.
-9. Treat historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
-10. Do not preload architecture/implementation except for explicit contamination/history analysis.
+8. Read the [Phase-014 exit review](docs/014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) for the post-refinement baseline and Phase-015 audit targets.
+9. For Phase 015, start at [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](docs/015-concept-integrity-cross-concept-coherence-interference/README.md). Do not begin substantive integrity work before 015-A defines its scope/subphases.
+10. Treat detailed Phase-014 comparison records and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
+11. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
 ## Current methodology posture
 
