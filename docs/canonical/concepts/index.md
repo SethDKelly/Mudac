@@ -1,8 +1,8 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 011 composition closure, Phase 012 dependence/scope closure and Phase 013 mapping closure.
+Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure and Phase 013 mapping closure.
 
-Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries. Contextual inclusion requirements belong to [Canonical Dependence](../dependence/); user-visible representation belongs to the completed Phase-013 Experience corpus.
+Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries.
 
 ## Current eighteen-Concept catalog
 
@@ -29,58 +29,58 @@ Each Concept owner exposes representation-independent Purpose, State, Actions/Qu
 
 [Judging Encounter](judging-encounter.md) remains a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
 
-`Official Outcome Revision` is likewise superseded; explicit official authority/currentness/history is owned by **Outcome Declaration**.
-
-Historical evidence may preserve those old names, but it must not override the current catalog or re-enter through Phase-014 familiarity merely because the old terms look conventional.
+`Official Outcome Revision` is superseded; explicit official authority/currentness/history is owned by **Outcome Declaration**.
 
 ## Explicit non-Concept classifications
 
 Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Composition, scope and mapping
+## Current composition / scope / mapping
 
-Phase 011 is **COMPLETE — PASS** and [Canonical Synchronizations](../synchronizations/) owns current application composition.
+Phase 011 is **COMPLETE — PASS** and Synchronizations own application composition.
 
-Phase 012 is **COMPLETE — PASS** and [Canonical Dependence](../dependence/) owns current inclusion dependence and PF-01 scope.
+Phase 012 is **COMPLETE — PASS** and Dependence owns inclusion dependence and PF-01 scope.
 
-Phase 013 is **COMPLETE — PASS** and [Canonical Experience](../experience/) owns current user-visible mapping semantics.
+Phase 013 is **COMPLETE — PASS** and Experience owns current user-visible mapping.
 
 The sole adopted variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-PF-01 keeps all eighteen Concepts in the supported capability envelope without creating intrinsic coupling or requiring every Competition to exercise every capability.
+## Phase-014 familiarity boundary
 
-Preserve at least:
-
-```text
-occurrence participation != responsibility != Scorecard evidence
-historical satisfaction != current evidence eligibility
-Rank != Award authority
-Competition Finalization != Outcome Declaration
-calculated != recognized != official != public != delivered
-source authority != Export representation != Publication release != transport delivery
-```
-
-## Phase-014 familiarity / reuse boundary
-
-Phase 014 is **IN PROGRESS** after 014-A completed the start gate with READY.
-
-Phase 014 evaluates whether familiar precedents transfer correct understanding, whether current names create false familiarity, whether broader safe genericity exists, and which retained novel Concepts require explicit justification/reusable knowledge.
-
-It does not treat common software entities, UI patterns or implementation reuse as Concept authority.
+Phase 014 is **IN PROGRESS**.
 
 ```text
-familiar name != semantic fit
-similar state shape != same Concept
-genericity != maximum abstraction
+014-A COMPLETE — READY
+014-B COMPLETE — PASS
+014-C NEXT
 ```
 
-All eighteen Concepts receive deliberate family-level review in 014-C through 014-E after 014-B establishes the comparison evidence baseline.
+014-B creates comparison evidence for every current Concept but changes none of them.
 
-No Concept owner should be changed merely to conform to a conventional pattern. If Phase 014 exposes a genuine purpose/boundary, composition, scope or mapping defect, route it explicitly to the natural Phase-010/011/012/013 owner.
+The principal precedent-family coverage is:
 
 ```text
-014-A  COMPLETE — READY
-014-B  NEXT — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register
+PT-01 bounded event / competition context
+PT-02 classification / competitor / grouping
+PT-03 human identity / membership / capacity
+PT-04 alternate identity / authorization / disclosure
+PT-05 bounded occurrence / session / attempt
+PT-06 responsibility / assignment / duty
+PT-07 evaluation instrument / criteria template
+PT-08 authored judgment / ballot / response record
+PT-09 version / history / provenance
+PT-10 recognition / award
+PT-11 declaration / certification / official record
+PT-12 representation / export / snapshot
+PT-13 publication / release / distribution
 ```
+
+These families are comparison taxonomy only. They are not super-Concepts and do not alter the eighteen-Concept catalog.
+
+No current Concept should be renamed/merged/generalized from precedent resemblance alone. Later Phase-014 family audits must test actual expectation transfer and route substantive defects to their natural owner.
+
+## Next
+
+Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
