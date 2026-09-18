@@ -122,7 +122,7 @@ source authority != Export != Publication != delivery
 Identity != Participation != Access
 ```
 
-014-C repaired the event-completion Access seam. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified propagation, annotated the historical 011-C/014-C records where later refinements could be misread, and found no remaining known Phase-014 semantic blocker. 014-I verified propagation, repaired two historical-provenance ambiguities, and found no remaining known Phase-014 semantic blocker.
+014-C repaired the event-completion Access seam. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified propagation and repaired two historical-provenance ambiguities. 014-J closes Phase 014 **COMPLETE — PASS** with no known Phase-014 semantic defect deferred.
 
 # Current methodology state
 
@@ -165,10 +165,8 @@ Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and in
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
-015 integrity/interference
+014 familiarity/reuse/genericity COMPLETE — PASS
+015 integrity/interference       NOT STARTED — 015-A NEXT
 016 scenario/misfit/failure/adversarial
 017 methodology closure
 ```
