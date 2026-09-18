@@ -11,68 +11,89 @@ Phase 014 is **IN PROGRESS**.
 - [014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit](014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md) — **Complete — PASS**.
 - [014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit](014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md) — **Complete — PASS**.
 - [014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) — **Complete — PASS**.
-- **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit** — Next.
-- 014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check.
+- [014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit](014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md) — **Complete — PASS**.
+- **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check** — Next.
 - 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
 
 ## Current authority
 
-Phase 014 consumes current canonical authority from Project Purpose, the 18 current Concepts, Phase-011 synchronization/application-action authority, Phase-012 dependence/PF-01 scope, Policies/Invariants, completed Phase-013 Experience mapping, and 013-L.
+Phase 014 consumes current canonical authority from Project Purpose, the eighteen current Concepts, Phase-011 synchronization/application-action authority, Phase-012 dependence/PF-01 scope, Policies/Invariants, completed Phase-013 Experience mapping, and 013-L.
 
 The Base/Jackson Phase-008 methodology definition is comparison-method authority, not MUDAC product-semantic authority.
 
-## Familiarity and terminology status
+## Completed Phase-014 findings through 014-H
 
-All three Concept-family audits are complete and all eighteen current Concept names remain retained.
+All eighteen current Concept identities remain retained.
 
-014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md) with T1 canonical, T2 explanatory, T3 analogy-only and T4 high-risk generic terminology classes.
+014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md).
 
-## 014-G broader-genericity result
-
-014-G adopts the rule:
+014-G adopts:
 
 ```text
 Generic at the boundary; specific in purpose.
 ```
 
-The mature abstract parameterization from 010-G remains sufficient for almost all Concepts.
+with one narrow Team refinement removing intrinsic `student` specificity while retaining PF-01 student-team binding.
 
-One safe refinement is adopted:
+014-H establishes [Reusable Concept Knowledge & Design Patterns](../canonical/project/reusable-design-knowledge.md) as a candidate/lesson registry rather than a second Concept catalog.
 
-```text
-Team intrinsic semantics:
-student competing group → competing group
-
-PF-01 binding:
-competing group → student team
-```
-
-No super-Concept or concept merge is adopted.
-
-Rejected mergers/generalizations include:
+### Broad reusable concept-knowledge candidates
 
 ```text
-Group                over Team / Division / Panel
-Scoped Relationship  over Participation / assignment / membership / Alias
-Occurrence           over Competition / Evaluation Occurrence
-Task / Work Item     over obligation / remaining-work semantics
-Evaluation Record    over Rubric / Scorecard / Aggregate / Rank
-Historical Record    over owner-specific correction/currentness lifecycles
-Result               over Aggregate / Rank / Award / Outcome Declaration
-Representation       as a merger of Export / Publication
+Identity
+Participation
+Alias
+Access
+Versioning
+Provenance
+Outcome Declaration
+Export
+Publication
 ```
 
-Preserve:
+### Domain-family reusable candidates
 
 ```text
-shared parameter != shared purpose
-shared history shape != shared lifecycle
-shared implementation possibility != Concept identity
+Competition
+Division
+Team
+Panel
+Evaluation Occurrence
+Evaluation Obligation
+Rubric
+Scorecard
+Award
 ```
 
-Reusable pattern candidates carried to 014-H include exact-basis binding, scoped opaque-reference parameterization, explicit successor without silent rewrite, actor/represented-authority/source separation, historical-satisfaction/current-eligibility separation, and source→representation→release / derivation→recognition→declaration layering.
+### Reusable pattern candidates
 
-014-G finds no Phase-010/011/012/013 reopen requirement.
+```text
+scoped opaque-reference parameterization
+exact-basis binding
+explicit successor without silent historical rewrite
+actor / represented authority / source separation
+historical accomplishment vs current eligibility
+derivation → recognition → declaration
+source → representation → release → delivery
+context capability without authorship transfer
+```
+
+### Retained novelty
+
+Preserve especially:
+
+```text
+Evaluation Occurrence != Evaluation Obligation
+historical obligation satisfaction != current evidence eligibility
+Outcome Declaration Affected != Superseded
+Aggregate / Rank != Award != Outcome Declaration
+source authority != Export != Publication != delivery
+Identity != Participation != Access
+```
+
+No external/universal concept catalog is created by Phase 014. Future catalog promotion requires independent cross-context evidence.
+
+014-H finds no Phase-010/011/012/013 reopen requirement.
 
 ## Boundary
 
@@ -85,8 +106,9 @@ Reusable pattern candidates carried to 014-H include exact-basis binding, scoped
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
