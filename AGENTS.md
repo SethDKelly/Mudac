@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-6. For current methodology work, read [Phase 014](docs/014-familiarity-reuse-genericity/), especially [014-A](docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md), [014-B](docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md), and the latest completed family audit.
+6. For current methodology work, read [Phase 014](docs/014-familiarity-reuse-genericity/), especially 014-A/014-B and the latest completed family audit.
 7. Treat historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
 8. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -25,7 +25,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
-014-D: NEXT
+014-D: COMPLETE — PASS
+014-E: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,21 +46,7 @@ Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliatio
 
 ## Phase-014 familiarity evidence rule
 
-014-B establishes:
-
-```text
-E1 current MUDAC authority
-E2 documented Concept Design precedent
-E3 established domain concept
-E4 widespread cross-application concept
-E5 MUDAC historical alternative/prior audit
-E6 comparable product/interface convention
-E7 quarantined architecture/implementation evidence
-```
-
-Only E1 defines MUDAC meaning. E2–E7 are comparison evidence.
-
-The PT-01..PT-13 precedent taxonomy organizes comparison candidates; it creates no new Concepts or authority.
+014-B establishes E1 current MUDAC authority as the semantic target and E2–E7 precedent classes as comparison evidence only. The PT-01..PT-13 taxonomy creates no Concepts or authority.
 
 Do not infer semantic fit from name similarity, popularity, UI resemblance or implementation reuse.
 
@@ -76,16 +63,38 @@ Alias          → semantic fit with constraints / scoped alternate identity
 Access         → semantic fit with constraints / contextual authorization
 ```
 
-No Family-1 Concept was renamed, merged or replaced.
+Preserve:
+
+```text
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
+```
+
+Do not replace this model with generic `User / Role / Permission / Group` semantics.
+
+## Accepted Family-2 dispositions from 014-D
+
+```text
+Evaluation Occurrence → semantic fit with constraints / bounded evaluation event
+Evaluation Obligation → semantic fit with constraints / scoped evaluation duty
+Rubric                → strong semantic fit / evaluation instrument
+Scorecard             → semantic fit with constraints / one evaluator judgment record
+```
 
 Preserve:
 
-- Identity != Participation != Access;
-- Panel membership != occurrence participation != responsibility != evidence;
-- Access permission != semantic authorship;
-- Judge/Organizer capabilities never union merely because one Identity holds both Participations.
+```text
+occurrence participation != responsibility
+responsibility != judgment evidence
+Rubric definition != exact authoritative Evaluation Basis
+Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
+```
 
-Do not replace this model with generic `User / Role / Permission / Group` semantics for familiarity or implementation convenience.
+Do not collapse these Concepts into generic `Session / Assignment / Task / Form / Submission / Attempt` semantics.
+
+`Encounter` remains a negative historical precedent; `Session`, `Attempt`, `Assignment`, `Task`, `Ballot`, `Submission` and `Form` are analogies only where their transferred expectations remain valid.
 
 ## Corrected event-completion seam
 
@@ -104,10 +113,11 @@ existing Outstanding obligation
 
 This does not reactivate Participation, reopen Competition, create another obligation or restore general event-day capability.
 
-## Retained Phase-013 invariants
+## Retained authority invariants
 
 Preserve at least:
 
+- one Evaluation Obligation → at most one logical Scorecard;
 - Scorecard Draft != authority;
 - historical obligation satisfaction != current evidence eligibility;
 - Rank != Award authority;
@@ -120,4 +130,4 @@ Preserve at least:
 
 Proceed to:
 
-> **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**
+> **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**
