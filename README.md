@@ -12,9 +12,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — dependence and PF-01 scope.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — Phase-013 mapping authority through 013-J.
-* [`docs/canonical/experience/accessibility-resilience.md`](docs/canonical/experience/accessibility-resilience.md) — accessibility/responsive/degraded-operation semantic parity.
-* [`docs/canonical/experience/status-feedback-recovery.md`](docs/canonical/experience/status-feedback-recovery.md) — multidimensional status, uncertainty and recovery grammar.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — Phase-013 mapping authority through 013-K.
+* [`docs/canonical/experience/action-authority-traceability.md`](docs/canonical/experience/action-authority-traceability.md) — whole-experience action/explanation integrity.
 * [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013.
 
 ## Current status
@@ -36,7 +35,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
 013-J: COMPLETE — PASS
-013-K: NEXT
+013-K: COMPLETE — PASS
+013-L: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,32 +50,45 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Accessibility, degraded operation, paper/electronic/mixed capture, optional Awards, official-but-non-public operation and other supported profiles are states/capabilities rather than separate products.
+Judge/Organizer views, audience profiles, optional Awards, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessible/degraded interaction and temporal currentness are profiles/states rather than separate products.
 
-## Phase-013 mapping posture
+## Phase-013 whole-experience posture
 
-013-J establishes:
+013-K established a coherent explanation grammar across all accepted Experience owners:
 
 ```text
-accessible / responsive / degraded / paper paths = same domain semantics
-assistive actor != semantic author
-device / route / session / QR possession != Access
-local working state != confirmed persistence != authority
-result unknown != success != failure
-retry/recovery reconciles current authority and converges
-stale local state cannot overwrite newer authority
-status = multidimensional / subject-qualified
-working persistence feedback != semantic commitment
-technical recovery capability != broader Access/disclosure/authority
+context / capacity / audience
+  → subject/resource
+  → current authoritative or working state
+  → qualification / blocker / uncertainty
+  → legitimate purpose-specific action
+  → consequence
+  → confirmed result + retained history
 ```
+
+Key whole-corpus rules include:
+
+```text
+Identity != Participation != Access
+Judge + Organizer capability != unioned capability
+Panel membership != occurrence participation != responsibility != evidence
+Event Completed != universal hidden Access revocation
+profile differences != competing source truth
+derived projection != editable source
+result unknown != success != failure
+source authority != officiality != Export != Publication != delivery
+```
+
+The former mixed `paper-export-publication.md` and `reconciliation-finalization.md` contracts are historical evidence only.
 
 Global rules remain:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+explanation order != mandatory screen order
 ```
 
 ## Current direction
 
-Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
+Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
