@@ -15,6 +15,7 @@ sources:
   - resource: ../../014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/README.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -25,7 +26,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -53,7 +54,8 @@ implementation authorization: NOT YET
 014-J: COMPLETE — PASS
 014: COMPLETE — PASS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -150,6 +152,8 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 
 # Phase-015 integrity boundary
 
+015-B establishes a phase-evidence register of all eighteen Concept purpose promises and 48 directional `DIR-*` interference probes. Those probes do not alter current semantics and are not themselves violations. Material `INT-F*` findings begin only when later cluster audits establish an actual purpose-preservation concern.
+
 Phase 015 audits **purpose preservation under composition**.
 
 ```text
@@ -178,4 +182,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
