@@ -2,7 +2,7 @@
 
 Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation is **COMPLETE — PASS**.
 
-Current synchronization owners remain authoritative for composition. Phase 014 familiarity/reuse work compares those semantics with familiar precedents but does not own synchronization changes unless a genuine composition defect is explicitly reopened.
+Current synchronization owners remain authoritative for composition. Phase 014 familiarity/reuse/genericity work compares and generalizes around those semantics but does not own synchronization changes unless a genuine composition defect is explicitly reopened.
 
 ## Current interpretation rules
 
@@ -17,28 +17,32 @@ calculated != recognized != official != public != delivered
 source authority != Export representation != Publication release != delivery
 ```
 
-## Phase-014 terminology result
+## Phase-014 genericity result
 
-014-C through 014-E retained current synchronization seams. 014-F now constrains familiar action vocabulary through [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
-
-Familiar workflow verbs are not composition authority by themselves.
-
-Preserve:
+014-G confirms that shared action shapes, status vocabulary or successor/history structure do not justify a common synchronization owner.
 
 ```text
-Begin Evaluation Occurrence != Start Evaluation
-Complete Evaluation Occurrence != Evaluation Obligation Satisfied
-Complete Live Event != Competition Finalized
-Finalize Evaluation != Finalize Competition & Declare Outcome
-Rank candidate != Award.confer
-Competition.finalize != OutcomeDeclaration.declare
-OutcomeDeclaration successor != successor Export != successor Publication
-Export currency transition != Publication distribution transition
+shared parameter != shared purpose
+shared successor shape != shared lifecycle
 ```
 
-Generic `Submit`, `Done`, `Close`, `Edit`, `Reopen`, `Reset`, `Revert`, `Delete`, `Resolve`, `Fix`, `Force`, `Override`, `Approve`, `Share` or `Send` may not be used to bypass an established direct/coordinated owner-specific action.
+Do not create composition shortcuts such as:
 
-`Revision` remains especially unsafe as a generic composition abstraction: Version successor, Judge amendment, source-faithful correction, successor Outcome Declaration, successor Export and successor Publication are different actions/history meanings.
+```text
+generic Group update
+  → Team / Division / Panel authority
+
+generic Task completion
+  → occurrence / obligation / Scorecard completion
+
+generic Result finalization
+  → Rank / Award / Outcome Declaration authority
+
+generic Revision
+  → Version / amendment / successor declaration / Export / Publication correction
+```
+
+The one 014-G refinement to Team removes incidental student-specific intrinsic wording only; it changes no synchronization.
 
 ## Application action classes
 
@@ -64,7 +68,8 @@ Phase 013 COMPLETE — PASS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 ```
 
-Proceed to 014-G using current synchronization semantics as E1 authority. Shared vocabulary or similar action shapes are not evidence for shared Concept ownership or automatic composition.
+Proceed to 014-H using current synchronization semantics as authority while deciding which concepts/patterns contain reusable knowledge.
