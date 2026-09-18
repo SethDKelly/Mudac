@@ -13,8 +13,7 @@ Current foundational truth includes:
 - [Current Synchronizations](canonical/synchronizations/);
 - [Current Dependence / PF-01 Scope](canonical/dependence/);
 - [Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
-- [Accessibility, Responsive & Degraded-Operation Mapping](canonical/experience/accessibility-resilience.md);
-- [Status, Feedback & Recovery Mapping](canonical/experience/status-feedback-recovery.md);
+- [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -23,7 +22,7 @@ Current foundational truth includes:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-K next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-L next**
 
 ```text
 013-A: COMPLETE — READY
@@ -36,7 +35,8 @@ Current foundational truth includes:
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
 013-J: COMPLETE — PASS
-013-K: NEXT
+013-K: COMPLETE — PASS
+013-L: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -44,20 +44,28 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-## Current 013-J posture
+## Current whole-experience posture
 
 ```text
-accessible / responsive / degraded / paper paths = same domain semantics
-assistive actor != semantic author
-device/session/route/QR possession != Access
-local working state != confirmed persistence != authoritative state
-paper fallback != second evaluation model
+context / capacity / audience
+  → subject/resource
+  → current state
+  → qualification / blocker / uncertainty
+  → legitimate purpose-specific action
+  → consequence
+  → confirmed result + retained history
+```
+
+Preserve:
+
+```text
+Identity != Participation != Access
+Judge + Organizer capability != unioned capability
+Event Completed != universal hidden Access revocation
+profile differences != competing source truth
+derived projection != editable source
 result unknown != success != failure
-retry/recovery reconciles current authority and converges
-stale local state cannot overwrite newer authority
-status is multidimensional / subject-qualified
-working persistence feedback != semantic commitment
-technical recovery capability != broader Access/disclosure/authority
+source authority != officiality != Export != Publication != delivery
 ```
 
 The old `canonical/experience/paper-export-publication.md` and `reconciliation-finalization.md` are historical evidence only.
@@ -68,7 +76,7 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 010 foundational completion                    COMPLETE — PASS
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
-013 mapping / representation                   IN PROGRESS — 013-K NEXT
+013 mapping / representation                   IN PROGRESS — 013-L NEXT
 014 familiarity / reuse / genericity
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
@@ -77,4 +85,4 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 
 ## Current next work
 
-Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
+Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
