@@ -16,9 +16,9 @@ MUDAC adopts one current product/application variant:
 
 PF-01 supports all eighteen current Concepts in its capability envelope without requiring every Competition to exercise every capability.
 
-## Phase-014 genericity boundary
+## Phase-014 reuse boundary
 
-014-C through 014-G retain all current Concept identities and introduce no dependence-edge or PF-01 change.
+014-C through 014-H retain all current Concept identities and introduce no dependence-edge or PF-01 change.
 
 ```text
 familiar precedent != inclusion dependence
@@ -26,13 +26,15 @@ reuse analogy != co-inclusion requirement
 shared history pattern != one Concept
 broader genericity != automatic product-family broadening
 shared parameter != dependence edge
+catalog candidate != PF-01 inclusion node
+pattern candidate != Concept dependency
 ```
 
-014-G removes incidental `student` specificity from Team's intrinsic Concept meaning while preserving PF-01's binding to student teams. This does not make Team optional/different in PF-01 and creates no new variant.
+014-G removes incidental `student` specificity from Team's intrinsic Concept meaning while preserving PF-01's binding to student teams. This creates no new product variant or inclusion change.
 
-Rejected super-concepts such as Group, Task, Result or Historical Record do not alter current dependence because they are not MUDAC Concepts.
+014-H identifies broad and domain-family reusable **knowledge candidates** plus cross-cutting design patterns. Those classifications do not alter PF-01 capability inclusion or direct dependence.
 
-If later reusable-knowledge work in 014-H identifies cross-context design patterns, those patterns remain knowledge assets rather than PF-01 inclusion nodes unless an explicit later Concept-design decision establishes otherwise.
+If a future shared catalog reuses a MUDAC Concept elsewhere, that new application's dependence graph must be analyzed independently rather than inheriting PF-01 edges.
 
 ## Current handoff
 
@@ -46,5 +48,8 @@ Phase 013 COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 ```
+
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
