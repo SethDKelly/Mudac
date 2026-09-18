@@ -2,14 +2,14 @@
 
 Current MUDAC subjects modeled as derived/supporting mechanisms or processes rather than independent Concepts.
 
-* [Team Attributes](team-attributes.md) — disclosure-controlled descriptive Team metadata, including optional Team Name.
-* [Criterion & Notes](criterion-notes.md) — Rubric/Scorecard subordinate evaluation structure.
-* [Panel Membership & Composition](panel-membership-composition.md) — current Panel relational/composition support semantics.
-* [Readiness](readiness.md) — derived permission-to-proceed projections, including Competition, Judge, Ranking and Finalization Readiness.
-* [Coverage](coverage.md) — derived factual sufficiency of qualifying evaluation evidence; exception disposition is separate.
-* [Aggregate](aggregate.md) — numerical combination of eligible authoritative individual judgments.
-* [Rank](rank.md) — derived ordering under declared comparison policy.
-* [Reconciliation](reconciliation.md) — Organizer process/work mode for resolving outcome-affecting source conditions.
+* [Team Attributes](team-attributes.md)
+* [Criterion & Notes](criterion-notes.md)
+* [Panel Membership & Composition](panel-membership-composition.md)
+* [Readiness](readiness.md)
+* [Coverage](coverage.md)
+* [Aggregate](aggregate.md)
+* [Rank](rank.md)
+* [Reconciliation](reconciliation.md)
 
 ## Deprecated classification adapter
 
@@ -17,63 +17,32 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 
 ## Current classification rules
 
-- Coverage remains `Satisfied | Incomplete`; governed exception does not rewrite factual sufficiency.
+- Coverage remains factual `Satisfied | Incomplete`; exception disposition is separate.
 - Aggregate is derived numerical state and does not establish Coverage/rank eligibility.
 - Rank is derived/non-editable.
-- Readiness is derived; `Ready to Judge`, Competition Readiness, Ranking Readiness and Finalization Readiness never become independent writable authority.
-- Reconciliation remains process/work context rather than ticket/workflow authority.
-- Award recognition is not a derived mechanism; Award owns explicit conferral/revocation/correction authority.
-- Competition Finalization is lifecycle authority, not a derived readiness result.
-- Outcome Declaration owns explicit official-result authority/currentness/history.
-- Export owns representation currency; Publication owns release state; transport/delivery remains downstream realization.
+- Readiness is derived and never writable authority.
+- Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
+- Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## 013-G/H mapping semantics
+## Phase-013 mapping semantics through 013-I
 
 ```text
-Remaining Work
-  = current Outstanding-obligation projection
-
-Coverage = factual sufficiency
-exception disposition = separate consequence authority
-
-Aggregate exists
-  != Coverage Satisfied
-  != rank eligible
-
-Rank
-  = derived / non-editable
-  != Ranking Readiness
-  != Award authority
-  != official outcome
-
-Ranking Readiness / Finalization Readiness
-  = derived permission-to-proceed projections
-  != writable source truth
-
-Ranking Ready candidate
-  != conferred Award
-
-Finalization Readiness = true
-  != Competition Finalized
-  != Outcome Declaration exists
-
-calculated / derived state
-  != recognized
-  != official
-
-Outcome Declaration = Current | Affected | Superseded
-Affected != Superseded
+calculated != recognized != official != public != delivered
+Outcome Declaration != Export != Publication != delivery
+source authority != Export representation
+Export currency != Publication state
+new/corrected source → new Export
+successor Outcome Declaration != successor Export != successor Publication
+Publication Published != transport/delivery success
 ```
 
-Derived results are basis-relative. Material source changes make prior derivations non-current/affected and require recomputation; recomputation never mutates source Concepts or silently changes Award/official authority.
+Derived outcome state remains upstream source/basis for later explicit authority actions; externalization never turns a derived mechanism into source authority.
 
-See [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md) and [Award, Finalization & Outcome Officiality Mapping](../experience/outcome-officiality.md).
+See:
 
-## Composition and scope
-
-Phase 011 is **COMPLETE — PASS** and [Canonical Synchronizations](../synchronizations/) owns composition.
-
-Phase 012 is **COMPLETE — PASS** and [MUDAC Product-Family Scope](../dependence/product-family-scope.md) owns PF-01 scope.
+- [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md);
+- [Award, Finalization & Outcome Officiality Mapping](../experience/outcome-officiality.md);
+- [External Representation, Disclosure & Release Mapping](../experience/external-representation-release.md).
 
 ```text
 Phase 010 COMPLETE — PASS
@@ -88,5 +57,6 @@ Phase 013 IN PROGRESS
 013-F COMPLETE — PASS
 013-G COMPLETE — PASS
 013-H COMPLETE — PASS
-013-I NEXT
+013-I COMPLETE — PASS
+013-J NEXT
 ```
