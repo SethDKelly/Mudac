@@ -75,11 +75,12 @@ Phase 013 COMPLETE — PASS
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 ```
 
-Phase 015 is **IN PROGRESS**. Current synchronization semantics remain composition authority and may change only through an explicit integrity finding routed to the natural synchronization owner.
+Phase 015 is **IN PROGRESS**. Current synchronization semantics remain composition authority. 015-B records candidate interference directions only; synchronization semantics may change only through an explicit material integrity finding routed to the natural owner.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**. The 015-B directional register is phase evidence only; current family ownership remains unchanged until an explicit Phase-015 `INT-F*` finding routes a correction to its natural owner.
