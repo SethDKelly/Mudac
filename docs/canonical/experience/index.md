@@ -18,7 +18,8 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-I COMPLETE — PASS
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
-015-A NEXT — START GATE
+015-A COMPLETE — READY
+015-B NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -69,8 +70,8 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Whole-system Concept Integrity / Cross-Concept Coherence & Interference begins only at **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
