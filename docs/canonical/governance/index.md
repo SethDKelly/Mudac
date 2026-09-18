@@ -31,7 +31,8 @@ Jackson Concept Design: IN PROGRESS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
-014-H: NEXT
+014-H: COMPLETE — PASS
+014-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -43,29 +44,36 @@ implementation authorization: NOT YET
 
 Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-Phase 014 owns familiarity/reuse/genericity analysis only. 014-F established product-domain vocabulary authority; 014-G completed the broader genericity/duplication-pressure audit.
+Phase 014 owns familiarity/reuse/genericity analysis only. 014-F established product-domain vocabulary authority; 014-G completed broader genericity/duplication pressure; 014-H established reusable-knowledge candidate disposition.
 
-## Broader genericity governance
+## Reusable-knowledge governance
 
-Adopt:
+[Reusable Concept Knowledge & Design Patterns](../project/reusable-design-knowledge.md) is a candidate/lesson registry, not another semantic catalog.
 
 ```text
-Generic at the boundary; specific in purpose.
-shared parameter != shared purpose
-shared history shape != shared lifecycle
-implementation reuse != Concept identity
+natural Concept owner = current MUDAC truth
+reusable registry = cross-context candidate / transferable lesson
+shared external catalog = not established
 ```
 
-014-G adopts one narrow semantic broadening: Team intrinsically represents a competing group/unit, while PF-01 binds it to student teams.
+Broad candidates include Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication. Competition/evaluation-domain candidates include Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard and Award.
 
-It rejects speculative super-concepts such as generic Group, Scoped Relationship, Task, Result, Historical Record and merged representation/release ownership.
+Cross-cutting patterns such as exact-basis binding, successor-without-rewrite, represented-authority provenance and source→representation→release layering remain knowledge patterns rather than Concepts.
 
-Reusable patterns identified by 014-G remain candidates for 014-H knowledge/catalog disposition and do not become canonical Concepts merely because they recur.
+A future shared catalog claim requires evidence beyond MUDAC itself; abstractness or repository quality is insufficient.
 
 ## Design / implementation boundary
 
-Architecture and implementation remain quarantined through the remaining Concept Design runway. Conceptual reuse must never be inferred from shared libraries, storage models, inheritance, workflow engines, authorization frameworks, revision systems, report generators or publishing infrastructure.
+Architecture and implementation remain quarantined through the remaining Concept Design runway.
+
+Conceptual reuse/catalog candidacy does **not** authorize shared libraries, inheritance, generic tables, workflow engines, universal status machines, correction services, authorization systems, version-control infrastructure, report generation or publishing infrastructure.
+
+```text
+conceptual reuse != code reuse
+pattern reuse != architecture mandate
+shared parameter != base class
+```
 
 ## Current handoff
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
