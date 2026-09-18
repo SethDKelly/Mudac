@@ -1,13 +1,14 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 Familiarity, Reuse & Genericity active after its 014-A start gate, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity in progress after the 014-B precedent/evidence baseline, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
-tags: [governance, methodology, design, implementation, boundary, jackson, reentry]
+tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, reentry]
 sources:
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md
   - resource: ../../014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md
+  - resource: ../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -17,11 +18,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete with PASS. Phase 014 is **IN PROGRESS** after 014-A completed with READY.
-
-The only authorized next methodology work is:
-
-> **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**
+Phases 009–013 are complete. Phase 014 is **IN PROGRESS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -37,9 +34,9 @@ implementation authorization: NOT YET
 011: COMPLETE — PASS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
-014: IN PROGRESS
 014-A: COMPLETE — READY
-014-B: NEXT
+014-B: COMPLETE — PASS
+014-C: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -58,7 +55,7 @@ current dependence / PF-01 scope
         ↓
 completed Phase-013 mapping authority
         ↓
-Phase-014 familiarity / reuse / genericity audit
+Phase-014 familiarity / reuse / genericity analysis
         ↓
 later Jackson design phases
 
@@ -67,90 +64,40 @@ historical architecture / implementation / incumbent UI
         ≠ Concept Design constraint
 ```
 
-# Completed mapping boundary
+# Phase-014 evidence boundary
 
-Phase 013 owns the current user-visible mapping model through its final Mapping Authority Baseline and natural Experience owners.
+014-B establishes an explicit evidence hierarchy.
 
-Phase 014 consumes that mapping as current design authority. It may identify false familiarity or naming/genericity pressure, but it may not weaken established authority/disclosure/history semantics simply to match convention.
+Current MUDAC canonical semantics are the comparison target. Documented concept precedents, domain vocabulary, common software concepts, historical alternatives and product conventions are comparison evidence only.
 
-# Phase-014 boundary
-
-Phase 014 may evaluate:
-
-- conceptual familiarity and comprehensibility;
-- semantic reuse of known conceptual patterns;
-- correct versus false expectation transfer;
-- broader genericity versus product/scenario overfitting;
-- duplication and specialization pressure;
-- retained novelty and its learning burden;
-- reusable concept knowledge/catalog candidacy;
-- naming/operational-principle clarity across representative contexts.
-
-A proposed familiar precedent must be tested against purpose and behavior rather than title or prevalence.
-
-Phase 014 must not:
-
-- use familiar UI/framework/library/service conventions as conceptual authority;
-- equate code/implementation reuse with concept reuse;
-- merge Concepts solely because they resemble common software entities;
-- introduce abstractions merely to reduce apparent concept count;
-- weaken authority/disclosure/history seams established through Phase 013;
-- create duplicate catalog specifications parallel to current Concept owners;
-- select frontend, persistence, API, runtime or infrastructure realization.
-
-If familiarity/genericity review exposes a genuine upstream defect, reopen or route to the natural semantic owner explicitly rather than patching it through a Phase-014 convenience abstraction.
-
-# Phase-014 comparison discipline
+Architecture/implementation remains the weakest, quarantined evidence class and cannot justify conceptual familiarity or reuse.
 
 ```text
-familiarity != implementation mimicry
-reuse != Concept merging by resemblance
-genericity != abstraction for abstraction's sake
-common vocabulary != lost authority boundary
-profile reuse != capability union
+familiarity != implementation reuse
+UI convention != Concept authority
+common technical term != semantic fit
 ```
 
-A meaningful familiarity comparison considers, where material:
+# Phase-014 design boundary
 
-- purpose / operational principle;
-- state / actions / queries;
-- lifecycle / finality / reversibility;
-- authority / authorship / delegation;
-- historical retention / correction;
-- target/scope/generic parameters;
-- synchronization/dependence;
-- mapped/disclosure expectations.
+Phase 014 may evaluate conceptual familiarity, expectation transfer, false familiarity, reuse-oriented genericity, retained novelty and reusable design knowledge.
 
-# Application-action boundary
+It must not:
 
-The Phase-011 `D / C / P / S / X` action surface remains current application composition authority, and Phase 013 remains its current mapping authority.
-
-Phase 014 may critique familiarity of names/patterns around that surface but does not gain generic authority to expose `P` or `X` as user controls.
-
-# Explanation-order boundary
-
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-explanation order != mandatory screen order
-```
-
-Familiarity review may improve names or explanatory structure only while preserving semantic prerequisites, authority, consequence and history.
+- select code libraries/packages/frameworks/vendors;
+- use shared implementation as evidence that concepts are the same;
+- merge Concepts merely because technical representations resemble one another;
+- alter synchronization/dependence/mapping semantics without explicitly reopening the natural owner;
+- weaken authority, disclosure, history or PF-01 boundaries for conventionality.
 
 # Reopening discipline
 
-- purpose conflict / boundary defect → current Project/Concept owner / Phase 010 as appropriate;
-- missing/invalid application action or synchronization → Phase 011;
-- incorrect dependence/PF-01 scope assumption → Phase 012;
-- mapping terminology/representation/ownership defect → current natural Experience owner / Phase 013 lineage;
-- familiarity/reuse/broader-genericity issue with otherwise valid semantics → Phase 014;
+- purpose/boundary defect → natural Concept owner / Phase 010 as appropriate;
+- composition/action defect → Phase 011;
+- dependence/PF-01 defect → Phase 012;
+- mapping/terminology defect → Phase 013 natural Experience owner;
+- familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
-
-# Implementation prohibition
-
-Remaining Concept Design phases must not select or prescribe frontend frameworks/libraries, route/component hierarchy, client-state architecture, APIs/messages/transports, database/persistence realization, AWS/runtime topology or executable domain implementation/tests merely to make conceptual analysis concrete.
-
-Phase 014 additionally must not choose reusable implementation modules, shared services, libraries, templates or component systems under the label of conceptual reuse.
 
 # Suspended downstream authority
 
@@ -158,4 +105,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
+Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit** using the 014-B evidence baseline.
