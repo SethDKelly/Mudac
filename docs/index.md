@@ -32,14 +32,15 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 014-A  COMPLETE — READY
 014-B  COMPLETE — PASS
 014-C  COMPLETE — PASS
-014-D  NEXT — Evaluation Occurrence / Obligation / Rubric / Scorecard audit
+014-D  COMPLETE — PASS
+014-E  NEXT — Versioning / Provenance / Award / Outcome Declaration / Export / Publication audit
 ```
 
 # Current Phase-014 result
 
 014-B established the E1–E7 evidence hierarchy and PT-01..PT-13 precedent register.
 
-014-C completed the first concept-family dispositions:
+014-C retained the Family-1 concepts as familiar but non-collapsed:
 
 ```text
 Competition    ≈ bounded competition occurrence
@@ -52,17 +53,29 @@ Alias          ≈ scoped alternate/pseudonymous identity
 Access         ≈ contextual authorization/disclosure decision
 ```
 
-All eight current names/boundaries are retained. Familiarity does not justify collapsing them into generic `User / Role / Permission / Group` semantics.
+014-D retains Family 2 with these expectation-transfer constraints:
 
-Preserve:
+```text
+Evaluation Occurrence ≈ bounded assessment/evaluation event
+Evaluation Obligation ≈ scoped evaluation duty/responsibility
+Rubric                ≈ scoring/evaluation rubric
+Scorecard             ≈ one evaluator's judgment record
+```
+
+Preserve across both families:
 
 ```text
 Identity != Participation != Access
 Panel membership != occurrence participation != responsibility != evidence
+occurrence participation != responsibility
+responsibility != judgment evidence
+Rubric definition != exact authoritative Evaluation Basis
+Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
 Access permission != semantic authorship
 ```
 
-014-C also repaired one earlier synchronization contradiction:
+014-C's event-completion correction remains current:
 
 ```text
 Event Completed
@@ -75,7 +88,7 @@ existing Outstanding obligation
   → same logical evaluation may continue
 ```
 
-This narrow continuation does not reactivate Participation or authorize new ordinary live-event responsibility.
+014-D found no additional upstream contradiction requiring repair.
 
 # Familiarity rule
 
@@ -99,7 +112,8 @@ A candidate precedent must be tested for mostly correct expectation transfer abo
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
-014-D: NEXT
+014-D: COMPLETE — PASS
+014-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -120,7 +134,7 @@ Phase 014 may critique familiarity, reuse, naming and broader genericity, but it
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-D NEXT
+014 familiarity/reuse/genericity IN PROGRESS — 014-E NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
