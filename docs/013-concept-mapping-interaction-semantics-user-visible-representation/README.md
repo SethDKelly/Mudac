@@ -1,8 +1,8 @@
 # Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation
 
-Status: **IN PROGRESS — 013-A through 013-J complete; 013-K next.**
+Status: **IN PROGRESS — 013-A through 013-K complete; 013-L next.**
 
-Phase 013 corresponds to Base Phase 007 / Daniel Jackson Concept Mapping. It maps completed Purpose / Concept / Synchronization / Dependence / PF-01 semantics into faithful user-visible interaction and representation without selecting frontend/runtime implementation architecture.
+Phase 013 corresponds to Base Phase 007 / Daniel Jackson Concept Mapping. It maps completed Purpose / Concept / Synchronization / Dependence / PF-01 semantics into faithful user-visible interaction and representation without selecting frontend/runtime architecture.
 
 Architecture and implementation remain suspended.
 
@@ -24,17 +24,14 @@ Preserve:
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
+explanation order != mandatory screen order
 ```
 
 ## Current mapping authority
 
-Use [Phase 013 Mapping Authority Baseline](../canonical/experience/mapping-authority-baseline.md).
+Use [Phase 013 Mapping Authority Baseline](../canonical/experience/mapping-authority-baseline.md) and [Experience index](../canonical/experience/).
 
-Current accepted owners now include all subject owners through 013-J, including:
-
-- [External Representation, Disclosure & Release Mapping](../canonical/experience/external-representation-release.md) — 013-I;
-- [Accessibility, Responsive & Degraded-Operation Mapping](../canonical/experience/accessibility-resilience.md) — 013-J;
-- [Status, Feedback & Recovery Mapping](../canonical/experience/status-feedback-recovery.md) — 013-J.
+The current Experience owner set is complete through 013-K. [Whole-Experience Action, Explanation & Authority Traceability](../canonical/experience/action-authority-traceability.md) owns the final cross-cutting explanation/action integrity rules.
 
 ## Approved subgroup sequence
 
@@ -49,41 +46,39 @@ Current accepted owners now include all subject owners through 013-J, including:
 | 013-G | Live Operations, Remaining Work, Exception/Reconciliation & Derived Outcome-State Mapping | **Complete — PASS** |
 | 013-H | Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping | **Complete — PASS** |
 | 013-I | Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping | **Complete — PASS** |
-| 013-J | [Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping](013-J-accessibility-degraded-operation-status-feedback-recovery-semantic-parity-mapping.md) | **Complete — PASS** |
-| 013-K | Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit | **Next** |
-| 013-L | Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff | Planned exit review |
+| 013-J | Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping | **Complete — PASS** |
+| 013-K | [Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit](013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md) | **Complete — PASS** |
+| 013-L | Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff | **Next — exit review** |
 
-## 013-J result
-
-```text
-accessible/degraded semantic parity:        CURRENT / ACCEPTED
-status/feedback/recovery mapping:           CURRENT / ACCEPTED
-accessible path == alternate authority:     PROHIBITED
-assistive actor == semantic author:         PROHIBITED
-device/session/QR possession == Access:     PROHIBITED
-local working state == authority:           PROHIBITED
-unknown result == success:                  PROHIBITED
-retry creates duplicate effect:             PROHIBITED
-stale local overwrites newer authority:     PROHIBITED
-paper fallback creates second evaluation:   PROHIBITED
-generic status collapses dimensions:        PROHIBITED
-Phase-010/011/012 reopen:                   NO
-```
-
-Current parity/recovery boundary:
+## 013-K result
 
 ```text
-accessible / responsive / degraded / paper path
-  → same domain semantics
-
-result unknown
-  != confirmed success
-  != confirmed failure
-
-retry / recovery
-  → reconcile current authority
-  → converge on one legitimate result
+whole-experience explanation order:      COHERENT
+cross-role consistency:                  PASS
+cross-profile consistency:               PASS
+action/authority traceability:           CURRENT / ACCEPTED
+Judge Event Completed access drift:      REPAIRED
+legacy Encounter/revision assumptions:   REMOVED FROM CURRENT TRACEABILITY
+current Experience owners complete:      YES
+new Concept required:                    NO
+new synchronization required:            NO
+new product variant required:            NO
+Phase-010/011/012 reopen:                NO
 ```
+
+Current whole-experience grammar:
+
+```text
+context
+  → subject/resource
+  → current authoritative or working state
+  → qualification / blocker / uncertainty
+  → legitimate purpose-specific action
+  → consequence
+  → confirmed result + retained history
+```
+
+This grammar explains meaning without prescribing navigation.
 
 ## Current execution posture
 
@@ -103,7 +98,8 @@ retry / recovery
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
 013-J: COMPLETE — PASS
-013-K: NEXT
+013-K: COMPLETE — PASS
+013-L: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -113,4 +109,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
+Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
