@@ -17,7 +17,7 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
-* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-I next**
+* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-J next**
 
 ```text
 014-A: COMPLETE — READY
@@ -28,7 +28,8 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
 014-H: COMPLETE — PASS
-014-I: NEXT
+014-I: COMPLETE — PASS
+014-J: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -48,7 +49,7 @@ Generic at the boundary; specific in purpose.
 
 and one narrow Team refinement removing intrinsic `student` specificity while preserving PF-01 student-team binding.
 
-014-H completes the retained-novelty/reusable-knowledge audit. The durable registry distinguishes broad (`CK-1`) and domain-family (`CK-2`) reusable Concept knowledge from cross-cutting pattern knowledge (`PK`) while preserving current Concept specifications as the sole semantic owners.
+014-H completes the retained-novelty/reusable-knowledge audit. 014-I completes the propagation/reopen/obvious-integrity gate. The durable registry distinguishes broad (`CK-1`) and domain-family (`CK-2`) reusable Concept knowledge from cross-cutting pattern knowledge (`PK`) while preserving current Concept specifications as the sole semantic owners.
 
 Retained novelty includes:
 
@@ -70,7 +71,8 @@ No external/universal catalog is created by Phase 014, and no Phase-010/011/012/
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
-014 familiarity / reuse / genericity           IN PROGRESS — 014-I NEXT
+014 familiarity / reuse / genericity           IN PROGRESS — 014-I: COMPLETE — PASS
+014-J: NEXT
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
 017 methodology closure
