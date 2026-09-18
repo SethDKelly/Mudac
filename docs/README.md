@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-Current foundational truth includes Project Context/Purpose/Vocabulary, the eighteen current Concepts, current Synchronizations, Dependence/PF-01 scope, the final Phase-013 Mapping Authority Baseline, completed Phase 014 refinement authority, and the Phase-015 start-gate handoff.
+Current foundational truth includes Project Context/Purpose/Vocabulary, the eighteen current Concepts, current Synchronizations, Dependence/PF-01 scope, the final Phase-013 Mapping Authority Baseline, completed Phase 014 refinement authority, and active Phase-015 integrity authority.
 
 For cross-catalog naming and familiar-language questions, use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](canonical/project/domain-vocabulary-expectation-transfer.md). For cross-context reuse/candidate lessons, use [Reusable Concept Knowledge & Design Patterns](canonical/project/reusable-design-knowledge.md) without treating it as a substitute Concept specification.
 
@@ -18,7 +18,7 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
 * Phase 014 — Familiarity, Reuse & Genericity: **Complete — PASS**
-* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **Not started — 015-A start gate next**
+* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **In progress — 015-A complete; 015-B next**
 
 ```text
 014-A: COMPLETE — READY
@@ -31,7 +31,8 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -74,7 +75,7 @@ No external/universal catalog is created by Phase 014, and no Phase-010/011/012/
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
 014 familiarity / reuse / genericity           COMPLETE — PASS
-015 integrity / interference                   NOT STARTED — 015-A NEXT
+015 integrity / interference                   IN PROGRESS — 015-B NEXT
 016 scenario / misfit / failure / adversarial
 017 methodology closure
 ```
