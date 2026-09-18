@@ -54,33 +54,39 @@ Phase 014 is **IN PROGRESS**.
 ```text
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
-014-C NEXT
+014-C COMPLETE — PASS
+014-D NEXT
 ```
 
-014-B creates comparison evidence for every current Concept but changes none of them.
+014-B establishes comparison evidence and the PT-01..PT-13 precedent taxonomy; those families are comparison categories only and never super-Concepts.
 
-The principal precedent-family coverage is:
+014-C dispositions the first eight current Concepts:
+
+| Concept | Familiarity disposition | Current boundary/name |
+| --- | --- | --- |
+| Competition | semantic fit with bounded competition occurrence | retain |
+| Division | semantic fit with competitive cohort/category | retain |
+| Team | semantic fit with competing unit | retain |
+| Panel | semantic fit with constraints as intended evaluator grouping | retain |
+| Identity | semantic fit with stable human identity continuity | retain |
+| Participation | semantic fit with constraints as scoped involvement/capacity | retain |
+| Alias | semantic fit with constraints as scoped alternate/pseudonymous identity | retain |
+| Access | semantic fit with constraints as contextual authorization/disclosure | retain pending cross-catalog terminology audit |
+
+No Family-1 Concept is renamed, merged, replaced or generalized by 014-C.
+
+Preserve:
 
 ```text
-PT-01 bounded event / competition context
-PT-02 classification / competitor / grouping
-PT-03 human identity / membership / capacity
-PT-04 alternate identity / authorization / disclosure
-PT-05 bounded occurrence / session / attempt
-PT-06 responsibility / assignment / duty
-PT-07 evaluation instrument / criteria template
-PT-08 authored judgment / ballot / response record
-PT-09 version / history / provenance
-PT-10 recognition / award
-PT-11 declaration / certification / official record
-PT-12 representation / export / snapshot
-PT-13 publication / release / distribution
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
 ```
 
-These families are comparison taxonomy only. They are not super-Concepts and do not alter the eighteen-Concept catalog.
+Familiarity does not justify replacing these concepts with generic `User`, `Role`, `Permission`, `Group` or `Session` semantics.
 
-No current Concept should be renamed/merged/generalized from precedent resemblance alone. Later Phase-014 family audits must test actual expectation transfer and route substantive defects to their natural owner.
+014-C also corrected the current Phase-011 event-completion/Access composition seam. See [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
 
 ## Next
 
-Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
+Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
