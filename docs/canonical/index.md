@@ -26,7 +26,9 @@ Jackson Concept Design: IN PROGRESS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: NOT STARTED — 015-A START GATE NEXT
+015: IN PROGRESS
+015-A: COMPLETE — READY
+015-B: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -37,7 +39,8 @@ Jackson Concept Design: IN PROGRESS
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -100,4 +103,4 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
