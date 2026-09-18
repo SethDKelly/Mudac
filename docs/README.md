@@ -17,7 +17,7 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
-* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-G next**
+* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-H next**
 
 ```text
 014-A: COMPLETE — READY
@@ -26,7 +26,8 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
-014-G: NEXT
+014-G: COMPLETE — PASS
+014-H: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -36,39 +37,21 @@ implementation authorization: NOT YET
 
 ## Phase-014 posture
 
-014-B established familiarity evidence and precedent taxonomy. 014-C through 014-E completed the three Concept-family audits and retained all eighteen current Concept names/boundaries.
+014-B established familiarity evidence and precedent taxonomy. 014-C through 014-E completed the three Concept-family audits and retained all eighteen current Concept names/boundaries. 014-F completed the cross-catalog terminology audit.
 
-014-F completes the cross-catalog terminology audit. It distinguishes:
-
-```text
-T1 canonical semantic terms
-T2 qualified explanatory labels
-T3 analogy-only terms
-T4 high-risk generic terms
-```
-
-Cross-family constraints include:
+014-G completes the broader genericity/duplication pressure test:
 
 ```text
-Identity != Participation != Access
-Evaluation Occurrence != Evaluation Obligation != Scorecard
-Rubric definition != exact authoritative Evaluation Basis
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration != Export != Publication != delivery
+Generic at the boundary; specific in purpose.
 ```
 
-State/action vocabulary remains owner-qualified:
+The existing abstract parameterization is generally sufficient. One narrow safe refinement removes `student` from Team's intrinsic semantics while preserving PF-01's student-team product binding.
 
-```text
-Occurrence Complete != Obligation Satisfied != Scorecard Finalized
-Event Completed != Competition Finalized
-Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
-Published != public != delivered
-```
+Rejected abstractions include generic `Group`, `Scoped Relationship`, `Occurrence`, `Task/Work Item`, `Evaluation Record`, `Historical/Correctable Record`, `Result`, and merged representation/release ownership.
 
-No new upstream defect was found in 014-D through 014-F. The one Phase-014 upstream repair remains the 014-C event-completion Access seam.
+Potential reusable pattern knowledge is carried to 014-H rather than promoted to new Concepts.
+
+No Phase-010/011/012/013 reopen is required by 014-G.
 
 ## Completion runway
 
@@ -77,7 +60,7 @@ No new upstream defect was found in 014-D through 014-F. The one Phase-014 upstr
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
-014 familiarity / reuse / genericity           IN PROGRESS — 014-G NEXT
+014 familiarity / reuse / genericity           IN PROGRESS — 014-H NEXT
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
 017 methodology closure
