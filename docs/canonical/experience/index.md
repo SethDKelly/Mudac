@@ -13,10 +13,11 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 ```
 
-Phase 014 familiarity/genericity analysis must compare precedent expectations against the actual mapped user-visible semantics established here rather than concept names alone.
+Phase 014 familiarity/genericity analysis must compare any broader abstraction against the actual mapped user-visible semantics established here rather than state/data shape alone.
 
 ## Current accepted Experience owners
 
@@ -38,36 +39,30 @@ Phase 014 familiarity/genericity analysis must compare precedent expectations ag
 - `reconciliation-finalization.md` — historical only;
 - `paper-export-publication.md` — historical only.
 
-## Cross-catalog vocabulary authority
+## Genericity / mapping constraint
 
-014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
-
-User-facing vocabulary may be more familiar than canonical Concept names only when the mapping remains honest.
-
-Examples:
+014-G confirms:
 
 ```text
-Judge/Organizer mode     → Participation context; mode creates no authority
-assigned evaluation      → Evaluation Obligation; not a reopenable Task
-judging event            → Evaluation Occurrence; completion != responsibility satisfaction
-Judge Scorecard          → Scorecard; not Aggregate/Rank
-Finalize Evaluation      → authority-establishing Judge action; not generic Submit
-current official outcome → Outcome Declaration; official != public
-report / snapshot        → Export only when exact-source representation semantics apply
-release                  → Publication; Published != delivered
+Generic at the boundary; specific in purpose.
 ```
 
-Keep state vocabulary owner-qualified:
+A broader abstraction is invalid if users would lose the ability to distinguish the natural owner/action/history consequence.
+
+Therefore mapped experiences continue to preserve:
 
 ```text
-Competition Ready != Competition Readiness != Ranking Readiness != Finalization Readiness
-Occurrence Complete != Obligation Satisfied != Scorecard Finalized
-Event Completed != Competition Finalized
-Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
+Participation context != Access
+Panel planning != occurrence participation
+remaining work != task authority
+Scorecard Draft != finalized judgment
+Rank != recognition
+Finalization != official declaration
+Export != Publication != delivery
 ```
 
-Generic `status`, `done`, `submit`, `edit`, `reopen`, `resolve`, `override`, `share` or similar labels must not create UI-owned workflow authority.
+Team's intrinsic genericity refinement does not change Judge/Organizer mappings: current PF-01 still represents the competing unit as a student Team and applies existing Alias/disclosure semantics.
 
 ## Current next work
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**. Experience terminology remains an integrity constraint on any proposed generalization.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
