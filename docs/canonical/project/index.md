@@ -11,7 +11,7 @@ Current representation-independent project/intake, purpose, cross-catalog vocabu
 
 Phase 010 established the current purpose baseline and eighteen-Concept catalog. Phase 011 completed composition/application-action authority, Phase 012 completed dependence/PF-01 scope, and Phase 013 completed user-visible Concept mapping.
 
-Phase 014 is auditing familiarity, reuse and genericity without reopening purpose merely for conventionality.
+Phase 014 has completed familiarity, reuse, genericity, reusable-knowledge disposition and propagation checks; 014-J remains the final exit review.
 
 Current downstream conceptual authority is routed through:
 
@@ -39,7 +39,8 @@ Current downstream conceptual authority is routed through:
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
 014-H COMPLETE — PASS
-014-I NEXT
+014-I COMPLETE — PASS
+014-J NEXT
 architecture / implementation SUSPENDED
 ```
 
@@ -86,4 +87,4 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
+Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
