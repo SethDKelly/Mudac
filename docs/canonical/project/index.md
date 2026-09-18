@@ -36,13 +36,12 @@ Current downstream conceptual authority is routed through:
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 architecture / implementation SUSPENDED
 ```
 
 ## Vocabulary authority
-
-014-C through 014-E retained all eighteen current Concept names/boundaries.
 
 014-F establishes the cross-catalog terminology rule:
 
@@ -53,26 +52,22 @@ same state label != same authority
 same verb != same consequence
 ```
 
-Use the vocabulary owner to distinguish:
+Use the vocabulary owner to distinguish T1 canonical, T2 qualified explanatory, T3 analogy-only and T4 high-risk generic terms.
+
+## Broader genericity authority
+
+014-G establishes:
 
 ```text
-T1 canonical semantic term
-T2 qualified explanatory label
-T3 analogy-only term
-T4 high-risk generic term
+Generic at the boundary; specific in purpose.
+shared parameter != shared purpose
+shared history shape != shared lifecycle
 ```
 
-The vocabulary owner does not supersede natural semantic owners. It governs how familiar language refers to them without collapsing distinctions such as:
+The existing parameterized Concept boundaries are generally sufficient. One current refinement removes intrinsic `student` specificity from Team while PF-01 continues to bind Team to student competitors.
 
-```text
-Identity != Participation != Access
-Occurrence != Obligation != Scorecard
-Versioning != Provenance
-Rank != Award
-Competition Finalized != Outcome Declaration
-Outcome Declaration != Export != Publication != delivery
-```
+Potential reusable patterns such as exact-basis binding, represented-authority provenance and source→representation→release separation remain Phase-014 knowledge candidates, not new application Concepts.
 
 ## Current handoff
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
