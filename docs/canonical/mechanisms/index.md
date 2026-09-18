@@ -24,36 +24,29 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-014 familiarity posture
+## Phase-014 familiarity status
 
-014-B registered familiar analogies for derived/work-context terms without promoting them to Concepts.
+The completed family audits do not promote any derived/work-context term to Concept status.
 
-014-C reinforces that grouping/capacity/access should not be replaced by writable workflow abstractions.
-
-014-D likewise rejects using familiar task/form/submission metaphors to turn derived or source-owned conditions into editable workflow state. In particular:
+Family-3 reinforces:
 
 ```text
-Remaining Work
-  = projection over Outstanding Evaluation Obligations
-  != generic task list authority
-
-criterion/note structures
-  = subordinate Rubric / Scorecard structure
-  != independent form-field Concepts
+Rank-derived candidate != Award recognition
+calculated result != Outcome Declaration
+Official Outcome Revision remains deprecated
+Export currency != Publication state
+Publication state != delivery observation
 ```
 
-Family-2 familiarity also preserves the current mechanism/source distinction:
+A familiar `leaderboard`, `winner`, `final result`, `revision`, `report`, or `publication status` metaphor must not convert derived state into source authority.
 
-```text
-Rubric owns evaluation-response semantics
-Scorecard owns one evaluator judgment
-Aggregate / Rank remain downstream derivations
-```
+014-F will perform the cross-catalog terminology audit, including false familiarity around task/checklist/leaderboard/ticket/result/revision/report/release language.
 
 ```text
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
-014-E NEXT
+014-E COMPLETE — PASS
+014-F NEXT
 ```
