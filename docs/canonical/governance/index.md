@@ -6,20 +6,13 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md)
 * [Documentation Authority & Canonical Ownership](documentation-authority.md)
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened-design boundary; Phase 014 active and downstream authority still suspended.
+* [Design / Implementation Boundary](design-implementation-boundary.md)
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md)
 
 ## Retrieval and change governance
 
 * [Agent Context & Progressive Retrieval](agent-context.md)
 * [Canonical Change & Conflict Governance](change-governance.md)
-
-## Lineage, metadata and validation
-
-* [Source Lineage and Historical Design Records](source-lineage.md)
-* [OKF Metadata, Trust, Verification, Lifecycle & Freshness](metadata-trust-lifecycle.md)
-* [Knowledge Validation & CI Enforcement](validation-enforcement.md)
-* [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md)
 
 ## Current methodology posture
 
@@ -32,7 +25,8 @@ Jackson Concept Design: IN PROGRESS
 013: COMPLETE — PASS
 014: IN PROGRESS
 014-A: COMPLETE — READY
-014-B: NEXT
+014-B: COMPLETE — PASS
+014-C: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -42,34 +36,25 @@ implementation authorization: NOT YET
 
 ## Current authority
 
-[Canonical Concepts](../concepts/) owns the eighteen-Concept catalog.
+Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-[Canonical Synchronizations](../synchronizations/) owns application composition/action authority.
+Phase 014 owns familiarity/reuse/genericity analysis only. [014-B](../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md) establishes the evidence hierarchy and precedent register; it does not change current semantics.
 
-[Canonical Dependence](../dependence/) owns inclusion dependence and PF-01 product-family scope.
-
-[Final Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) plus natural Experience owners own current user-visible mapping semantics.
-
-[Phase 014](../../014-familiarity-reuse-genericity/) now owns the current familiarity/reuse/genericity audit records only; adopted semantic changes still belong to their natural canonical owners.
-
-## Phase-014 governance rule
+## Familiarity evidence governance
 
 ```text
-familiar precedent = comparison evidence
-                    != automatic design authority
-
-implementation convention = contamination probe / evidence only
-                          != conceptual reuse authority
+current canonical MUDAC knowledge = semantic authority
+precedent / domain / software convention = comparison evidence
+historical MUDAC alternatives = lineage / counterexample evidence
+architecture / implementation = quarantined evidence only
 ```
 
-014-A requires explicit semantic comparison and explicit reopen routing when a familiarity/generalization proposal exposes a real upstream defect.
-
-The phase must not create duplicate catalog specifications beside current Concept owners.
+No precedent source can overwrite current MUDAC semantics merely because it is familiar or widespread.
 
 ## Design / implementation boundary
 
-Architecture and implementation remain quarantined through the remaining Concept Design runway. Phase 014 may study conceptual reuse but may not select code, framework, service, UI-component, storage or runtime reuse.
+Architecture and implementation remain quarantined through the remaining Concept Design runway. Phase-014 conceptual reuse must never be implemented/library/framework reuse.
 
 ## Current handoff
 
-Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
+Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
