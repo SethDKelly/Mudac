@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity in progress after the 014-B precedent/evidence baseline, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity in progress after the 014-C Family-1 audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, reentry]
 sources:
@@ -9,6 +9,7 @@ sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md
   - resource: ../../014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md
   - resource: ../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md
+  - resource: ../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -36,7 +37,8 @@ implementation authorization: NOT YET
 013: COMPLETE — PASS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -78,6 +80,34 @@ UI convention != Concept authority
 common technical term != semantic fit
 ```
 
+# Accepted Family-1 familiarity result
+
+014-C retains the current names/boundaries for Competition, Division, Team, Panel, Identity, Participation, Alias and Access.
+
+The familiar reuse result is intentionally **non-collapsing**:
+
+```text
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
+```
+
+A conventional `User / Role / Permission / Group` implementation vocabulary is not a valid conceptual substitution when it erases these meanings.
+
+# Targeted upstream repair rule
+
+014-C exposed one pre-existing Phase-011 composition contradiction and repaired the natural canonical synchronization owner.
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+```
+
+An existing Outstanding obligation may remain narrowly actionable when current policy and fresh Access permit the same bound evaluation work. This does not reactivate Participation, reopen Competition, create new responsibility or authorize new ordinary live-event operation.
+
+This targeted design repair does not authorize implementation work and does not weaken the downstream quarantine.
+
 # Phase-014 design boundary
 
 Phase 014 may evaluate conceptual familiarity, expectation transfer, false familiarity, reuse-oriented genericity, retained novelty and reusable design knowledge.
@@ -87,13 +117,13 @@ It must not:
 - select code libraries/packages/frameworks/vendors;
 - use shared implementation as evidence that concepts are the same;
 - merge Concepts merely because technical representations resemble one another;
-- alter synchronization/dependence/mapping semantics without explicitly reopening the natural owner;
+- alter synchronization/dependence/mapping semantics without explicitly routing the change to the natural owner;
 - weaken authority, disclosure, history or PF-01 boundaries for conventionality.
 
 # Reopening discipline
 
 - purpose/boundary defect → natural Concept owner / Phase 010 as appropriate;
-- composition/action defect → Phase 011;
+- composition/action defect → Phase 011 natural synchronization owner;
 - dependence/PF-01 defect → Phase 012;
 - mapping/terminology defect → Phase 013 natural Experience owner;
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
@@ -105,4 +135,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit** using the 014-B evidence baseline.
+Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit** using the 014-B evidence baseline and current corrected synchronization authority.
