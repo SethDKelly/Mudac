@@ -14,6 +14,7 @@ sources:
   - resource: ../../014-familiarity-reuse-genericity/014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md
   - resource: ../../014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/README.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -24,7 +25,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **NOT STARTED — START GATE NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -51,7 +52,8 @@ implementation authorization: NOT YET
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
 014: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -146,10 +148,34 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 
 014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified propagation and repaired two historical-provenance ambiguities. 014-J closes Phase 014 **PASS** with no remaining known Phase-014 semantic blocker.
 
+# Phase-015 integrity boundary
+
+Phase 015 audits **purpose preservation under composition**.
+
+```text
+integrity finding
+  = evidence that composed conceptual behavior threatens a retained purpose
+
+integrity finding
+  != replacement semantic authority
+```
+
+Confirmed corrections route to the natural current owner:
+
+- Project/Concept purpose, behavior or boundary → Phase 010 as appropriate;
+- composition/application action/automation → Phase 011;
+- dependence/PF-01 scope → Phase 012;
+- mapping/terminology/profile representation → Phase 013;
+- familiarity/genericity/reusable-knowledge framing → Phase 014.
+
+After a semantic correction, affected Phase-015 integrity analysis must be repeated before closure.
+
+Phase 015 does not authorize runtime race-condition analysis, transaction/locking design, distributed consistency mechanisms, service/API coupling, queue/event-bus design, retry/backoff, cache invalidation, authorization middleware, executable integration tests or architecture implementation choices merely because a conceptual counterexample mentions timing, failure or automation.
+
 # Suspended downstream authority
 
 Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
