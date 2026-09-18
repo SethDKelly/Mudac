@@ -1,15 +1,17 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the broader-genericity audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the retained-novelty/reusable-knowledge audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
-tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, genericity, reentry]
+tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, genericity, reuse, reentry]
 sources:
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md
   - resource: ../../014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md
   - resource: ../../014-familiarity-reuse-genericity/014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md
+  - resource: ../../014-familiarity-reuse-genericity/014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md
+  - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -19,7 +21,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-G.
+Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-H.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -42,7 +44,8 @@ implementation authorization: NOT YET
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
-014-H: NEXT
+014-H: COMPLETE — PASS
+014-I: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -70,7 +73,7 @@ historical architecture / implementation / incumbent UI
         ≠ Concept Design constraint
 ```
 
-# Phase-014 genericity boundary
+# Phase-014 genericity / reuse boundary
 
 014-G adopts:
 
@@ -78,7 +81,20 @@ historical architecture / implementation / incumbent UI
 Generic at the boundary; specific in purpose.
 ```
 
-Conceptual parameterization means peer identities/bases may be supplied abstractly without importing peer internals. It does **not** authorize implementation abstraction choices.
+014-H adds:
+
+```text
+natural Concept owner
+  = current semantic truth
+
+reusable registry
+  = cross-context candidate / transferable lesson
+
+external shared catalog
+  = not established here
+```
+
+Conceptual parameterization or catalog candidacy does **not** authorize implementation abstraction choices.
 
 In particular, Phase 014 does not authorize:
 
@@ -88,9 +104,13 @@ In particular, Phase 014 does not authorize:
 - one universal status/currentness machine;
 - generic correction/revision services that erase owner-specific history;
 - shared authorization/version/report/publishing infrastructure as conceptual evidence;
-- implementation inheritance or schema unification based on abstract parameter notation.
+- implementation inheritance or schema unification based on abstract parameter notation;
+- reusable code modules merely because Concepts/patterns are catalog candidates;
+- an external/shared concept catalog without additional cross-context evidence.
 
 The Team refinement from 014-G is conceptual only: intrinsic Team semantics no longer require competitors to be students, while PF-01 still binds Team to student teams. It does not authorize a generic competitor framework.
+
+Reusable pattern knowledge such as exact-basis binding, explicit successor without silent rewrite, represented-authority provenance, historical-accomplishment/current-eligibility separation and source→representation→release layering remains design knowledge rather than architecture.
 
 # Reopening discipline
 
@@ -101,7 +121,7 @@ The Team refinement from 014-G is conceptual only: intrinsic Team semantics no l
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
 
-014-C found and repaired one Phase-011 defect. 014-D through 014-G found no additional upstream contradiction requiring reopen.
+014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen.
 
 # Suspended downstream authority
 
@@ -109,4 +129,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
