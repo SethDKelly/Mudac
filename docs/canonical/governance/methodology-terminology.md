@@ -1,13 +1,14 @@
 ---
 type: Documentation Authority
 title: Methodology, OKF Adoption & Terminology
-description: Defines the authority relationship among Daniel Jackson Concept Design, the Base lifecycle operationalization, OKF, MUDAC terminology, and downstream architecture/implementation structure.
+description: Defines the authority relationship among Daniel Jackson Concept Design, the Base lifecycle operationalization, OKF, methodology/document terminology, MUDAC product-domain vocabulary, and downstream architecture/implementation structure.
 status: stable
 tags: [governance, methodology, jackson, base, okf, terminology]
 sources:
   - resource: ../../004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
+  - resource: ../project/domain-vocabulary-expectation-transfer.md
   - resource: https://github.com/SethDKelly/Base/blob/main/docs/methodology/concept-design-lifecycle.md
 ---
 
@@ -53,6 +54,20 @@ OKF does not redefine MUDAC Concepts, authority, lifecycle, policies, synchroniz
 `MUDAC Concept` means a Daniel Jackson application Concept accepted through the current Concept Design process.
 
 An `OKF knowledge document` is a unit of repository knowledge. Creating a document for Coverage, Rank, a policy, an invariant, a mapping, an architecture decision or an implementation choice does not promote that subject into the MUDAC Concept catalog.
+
+# Methodology terminology versus product-domain vocabulary
+
+This governance owner defines **methodology/documentation terminology** such as Concept Design, OKF knowledge, canonical authority, source lineage and design/implementation boundaries.
+
+Current **MUDAC product/domain vocabulary and expectation-transfer rules** are owned separately by [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
+
+```text
+methodology/document terminology
+  != product/domain terminology
+  != UI wording authority by itself
+```
+
+The domain-vocabulary owner may classify familiar words as canonical, qualified explanatory, analogy-only or high-risk. It does not redefine methodology terms, and this governance document does not override natural product semantic owners.
 
 # Design versus downstream terminology
 
