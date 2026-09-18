@@ -134,4 +134,4 @@ Phase 010 canonical convergence establishes the current purpose and Concept-boun
 
 # Current handoff
 
-Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Use this document as current purpose authority for **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B is **COMPLETE — PASS**. Use this document as current purpose authority for **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity** and all later Phase-015 cluster audits.
