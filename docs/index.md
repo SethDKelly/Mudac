@@ -15,11 +15,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — composition and application-action authority.
 * [Dependence](canonical/dependence/) — dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — Phase-013 authority/evidence topology through 013-J.
-* [Experience](canonical/experience/) — accepted mapping owners plus historical evidence adapters.
-* [External Representation, Disclosure & Release Mapping](canonical/experience/external-representation-release.md) — 013-I.
-* [Accessibility, Responsive & Degraded-Operation Mapping](canonical/experience/accessibility-resilience.md) — 013-J.
-* [Status, Feedback & Recovery Mapping](canonical/experience/status-feedback-recovery.md) — 013-J.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — Phase-013 authority/evidence topology through 013-K.
+* [Experience](canonical/experience/) — complete current mapping-owner set plus historical evidence adapters.
+* [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md) — final cross-owner mapping integrity owner accepted in 013-K.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
@@ -29,28 +27,44 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **IN PROGRESS**.
 
-Completed: 013-A through 013-J. The next work is:
+Completed: 013-A through 013-K. The next work is:
 
-> **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**
+> **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**
 
-# Current semantic-parity / recovery rules
+013-L is a consolidation/exit review. It should not invent new mapping semantics unless reconciliation exposes a genuine defect.
+
+# Whole-experience mapping rules
 
 ```text
-accessible / responsive / degraded / paper paths = same domain semantics
-assistive actor != semantic author by assistance alone
-device / route / session / QR possession != current Access
-interruption / device change / retry → recover same logical work
-local working state != confirmed persistence != authoritative state
-paper fallback != second evaluation model
-result unknown != success != failure
-retry/recovery reconciles current authority before repeating intent
-stale local state cannot overwrite newer authority
-status is multidimensional / subject-qualified
-working persistence feedback != semantic commitment
-technical recovery capability != broader Access/disclosure/authority
+context / capacity / audience
+  → subject/resource
+  → current authoritative or working state
+  → qualification / blocker / uncertainty
+  → legitimate purpose-specific action
+  → consequence
+  → confirmed result + retained history
 ```
 
-External representation/release distinctions from 013-I remain intact across accessible/degraded/recovery paths.
+Preserve:
+
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+explanation order != mandatory screen order
+```
+
+Cross-owner integrity includes:
+
+```text
+Identity != Participation != Access
+Judge + Organizer capabilities != unioned capability
+Panel membership != occurrence participation != responsibility != evidence
+Event Completed != universal hidden Access revocation
+profile differences != competing source truth
+derived projection != editable source
+result unknown != success != failure
+source authority != officiality != Export != Publication != delivery
+```
 
 # Current methodology state
 
@@ -70,7 +84,8 @@ External representation/release distinctions from 013-I remain intact across acc
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
 013-J: COMPLETE — PASS
-013-K: NEXT
+013-K: COMPLETE — PASS
+013-L: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -80,14 +95,9 @@ implementation authorization: NOT YET
 
 # Mapping boundary
 
-The sole current product variant is **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
+The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-```
-
-Accessibility/degraded operation changes interaction mechanics or capability availability, not application authority semantics.
+Judge/Organizer views, audience profiles, Awards, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessibility/degraded operation and temporal currentness are profiles/states rather than product variants.
 
 # Completion runway
 
@@ -95,7 +105,7 @@ Accessibility/degraded operation changes interaction mechanics or capability ava
 010 foundational completion     COMPLETE — PASS
 011 composition/synchronization COMPLETE — PASS
 012 dependence/product-family   COMPLETE — PASS
-013 mapping/representation      IN PROGRESS — 013-K NEXT
+013 mapping/representation      IN PROGRESS — 013-L NEXT
 014 familiarity/reuse/genericity
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
