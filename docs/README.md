@@ -22,12 +22,13 @@ Current foundational truth includes:
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
-* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-C next**
+* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-D next**
 
 ```text
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -35,18 +36,32 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-## Phase-014 evidence posture
+## Phase-014 posture
 
-014-B establishes E1–E7 familiarity evidence classes and PT-01..PT-13 precedent families. The comparison register covers all 18 Concepts plus the major derived/work-context terms.
+014-B establishes E1–E7 familiarity evidence classes and PT-01..PT-13 precedent families.
 
-No current semantic-fit decision was made by 014-B.
+014-C completes the first disposition-forming family audit. Competition, Division, Team, Panel, Identity, Participation, Alias and Access remain current Concept names/boundaries, with explicit expectation-transfer constraints rather than generic actor-model collapse.
 
 ```text
-current MUDAC semantics = comparison target
-precedents = comparison evidence
-precedent taxonomy != new Concept hierarchy
-historical adapters != restoration candidates
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
 ```
+
+014-C also corrects the canonical event-completion Access seam:
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+
+existing Outstanding obligation
+  + current policy permits continuation
+  + fresh Access permits specific work
+  → same logical evaluation may continue
+```
+
+The historical 011-C decision remains provenance; current composition authority lives under `canonical/synchronizations/`.
 
 ## Completion runway
 
@@ -55,7 +70,7 @@ historical adapters != restoration candidates
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
-014 familiarity / reuse / genericity           IN PROGRESS — 014-C NEXT
+014 familiarity / reuse / genericity           IN PROGRESS — 014-D NEXT
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
 017 methodology closure
@@ -63,4 +78,4 @@ historical adapters != restoration candidates
 
 ## Current next work
 
-Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
+Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
