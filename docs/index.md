@@ -39,7 +39,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 014-F  COMPLETE — PASS
 014-G  COMPLETE — PASS
 014-H  COMPLETE — PASS
-014-I  NEXT — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check
+014-I: COMPLETE — PASS
+014-J: NEXT
 ```
 
 # Current Phase-014 result
@@ -117,7 +118,7 @@ source authority != Export != Publication != delivery
 Identity != Participation != Access
 ```
 
-014-C repaired the event-completion Access seam. 014-D through 014-H found no additional upstream contradiction requiring reopen.
+014-C repaired the event-completion Access seam. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified propagation, annotated the historical 011-C/014-C records where later refinements could be misread, and found no remaining known Phase-014 semantic blocker. 014-I verified propagation, repaired two historical-provenance ambiguities, and found no remaining known Phase-014 semantic blocker.
 
 # Current methodology state
 
@@ -136,7 +137,8 @@ Identity != Participation != Access
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
 014-H: COMPLETE — PASS
-014-I: NEXT
+014-I: COMPLETE — PASS
+014-J: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -157,7 +159,8 @@ Phase 014 may critique familiarity, reuse, terminology, broader genericity and r
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-I NEXT
+014 familiarity/reuse/genericity IN PROGRESS — 014-I: COMPLETE — PASS
+014-J: NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
