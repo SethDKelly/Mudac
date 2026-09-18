@@ -4,7 +4,7 @@ This directory contains current MUDAC user-visible interaction/mapping authority
 
 ## Current authority status
 
-Phase 013 is **IN PROGRESS**.
+Phase 013 is **COMPLETE — PASS**.
 
 ```text
 Phase 012  COMPLETE — PASS
@@ -19,14 +19,16 @@ Phase 012  COMPLETE — PASS
 013-I      COMPLETE — PASS
 013-J      COMPLETE — PASS
 013-K      COMPLETE — PASS
-013-L      NEXT — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff
+013-L      COMPLETE — PASS
+Phase 013  COMPLETE — PASS
+Phase 014  NOT STARTED — START GATE NEXT
 ```
 
 Start with:
 
-* [Phase 013 Mapping Authority Baseline](mapping-authority-baseline.md) — current authority/evidence classification through 013-K.
-* [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) — cross-owner integrity and explanation-order guardrails accepted in 013-K.
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — entry precedence and reopen routing.
+* [Phase 013 Mapping Authority Baseline](mapping-authority-baseline.md) — final reconciled authority/evidence classification after 013-L.
+* [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) — cross-owner integrity and explanation-order guardrails.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — retained entry precedence/history for Phase 013.
 
 ## Current accepted Experience owners
 
@@ -44,6 +46,8 @@ Start with:
 | [Accessibility, Responsive & Degraded-Operation Mapping](accessibility-resilience.md) | accessible/responsive/degraded/paper semantic parity | 013-J |
 | [Status, Feedback & Recovery Mapping](status-feedback-recovery.md) | multidimensional status, uncertainty, confirmation and recovery | 013-J |
 | [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) | action traceability, explanation order, role/profile consistency and integrity rules | 013-K |
+
+This is the complete current Experience owner set after Phase 013.
 
 ## Historical Experience evidence only
 
@@ -85,7 +89,7 @@ actor can inspect fact != fact may appear in Export != fact may be released
 
 Judge-safe, Organizer-sensitive, Ceremony-safe, Public and history/audit views are disclosure profiles over the same source authority, not competing truth models.
 
-## Event-completion rule reconciled in 013-K
+## Event-completion rule
 
 ```text
 Event Completed
@@ -133,10 +137,12 @@ local working state != confirmed persistence != authoritative state
 stale local state cannot overwrite newer authority
 ```
 
-## Mapping-risk status
+## Phase-013 exit
 
-The 013-K whole-corpus audit found no unresolved semantic blocker across MAP-R01 through MAP-R16. 013-L still owns final canonical reconciliation and Phase-013 exit decision.
+013-L found the canonical mapping corpus reconciled, non-competing and free of unresolved MAP-R01–MAP-R16 semantic blockers. No upstream reopen or PF-01 change is required.
+
+Architecture/implementation remain suspended.
 
 ## Next
 
-Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
+Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**. See [`../../014-familiarity-reuse-genericity/`](../../014-familiarity-reuse-genericity/).
