@@ -33,62 +33,65 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 014-B  COMPLETE — PASS
 014-C  COMPLETE — PASS
 014-D  COMPLETE — PASS
-014-E  NEXT — Versioning / Provenance / Award / Outcome Declaration / Export / Publication audit
+014-E  COMPLETE — PASS
+014-F  NEXT — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit
 ```
 
 # Current Phase-014 result
 
 014-B established the E1–E7 evidence hierarchy and PT-01..PT-13 precedent register.
 
-014-C retained the Family-1 concepts as familiar but non-collapsed:
+Family audits 014-C through 014-E retain all eighteen current Concept names/boundaries. Familiarity is accepted only where transferred expectations remain compatible with current semantics.
 
 ```text
-Competition    ≈ bounded competition occurrence
-Division       ≈ scoped competitive cohort/category
-Team           ≈ competing unit
-Panel          ≈ intended evaluator grouping
-Identity       ≈ stable human identity continuity
-Participation  ≈ scoped involvement/capacity
-Alias          ≈ scoped alternate/pseudonymous identity
-Access         ≈ contextual authorization/disclosure decision
+Family 1
+Competition / Division / Team / Panel
+Identity / Participation / Alias / Access
+
+Family 2
+Evaluation Occurrence / Evaluation Obligation
+Rubric / Scorecard
+
+Family 3
+Versioning / Provenance / Award
+Outcome Declaration / Export / Publication
 ```
 
-014-D retains Family 2 with these expectation-transfer constraints:
-
-```text
-Evaluation Occurrence ≈ bounded assessment/evaluation event
-Evaluation Obligation ≈ scoped evaluation duty/responsibility
-Rubric                ≈ scoring/evaluation rubric
-Scorecard             ≈ one evaluator's judgment record
-```
-
-Preserve across both families:
+Preserve especially:
 
 ```text
 Identity != Participation != Access
 Panel membership != occurrence participation != responsibility != evidence
-occurrence participation != responsibility
-responsibility != judgment evidence
 Rubric definition != exact authoritative Evaluation Basis
 Scorecard Draft != authoritative judgment
 historical obligation satisfaction != current evidence eligibility
-Access permission != semantic authorship
+Versioning != Provenance
+Rank / selection basis != Award recognition
+Competition Finalized != Outcome Declaration
+Outcome Declaration Affected != Superseded
+Outcome Declaration != Export
+Export currency != Publication state
+Publication Published != delivery / recipient possession
 ```
 
-014-C's event-completion correction remains current:
+014-C repaired the event-completion Access seam. 014-D and 014-E found no additional upstream contradiction requiring repair.
+
+# Family-3 authority ladder
+
+014-E confirms:
 
 ```text
-Event Completed
-  → broad/new ordinary live-event Judge capability closes
-  != universal hidden Access revocation
-
-existing Outstanding obligation
-  + policy permits continuation
-  + fresh Access permits specific work
-  → same logical evaluation may continue
+committed version history
+  != provenance explanation
+  != calculated result
+  != recognized Award
+  != official Outcome Declaration
+  != Export representation
+  != Publication release
+  != delivery / recipient possession
 ```
 
-014-D found no additional upstream contradiction requiring repair.
+Familiar `revision`, `winner`, `official result`, `report`, `publish`, or `release` vocabulary must not collapse these owners.
 
 # Familiarity rule
 
@@ -113,7 +116,8 @@ A candidate precedent must be tested for mostly correct expectation transfer abo
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
-014-E: NEXT
+014-E: COMPLETE — PASS
+014-F: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -134,7 +138,7 @@ Phase 014 may critique familiarity, reuse, naming and broader genericity, but it
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-E NEXT
+014 familiarity/reuse/genericity IN PROGRESS — 014-F NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
