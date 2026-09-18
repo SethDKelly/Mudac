@@ -218,7 +218,7 @@ Representative challenges resolved without scope change include:
 - exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
 - paper capture without universal Export dependence.
 
-The remaining concern is mapping revalidation, not scope repair. See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
+Phase 013 mapping and Phase 014 familiarity/genericity refinement are now complete. PF-01 remains the sole adopted variant entering Phase 015 whole-system integrity analysis.
 
 # Future variant revalidation routes
 
@@ -248,14 +248,15 @@ Revisit P-02/P-08 and anonymity/disclosure policy before composition.
 
 Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping of ranking context.
 
-# Methodology handoff
+# Current methodology handoff
 
 ```text
-012-I     COMPLETE — PASS
-012-J     COMPLETE — PASS
-012-K     COMPLETE — PASS
 Phase 012 COMPLETE — PASS
-Phase 013 AUTHORIZED — 013-A NEXT
+Phase 013 COMPLETE — PASS
+Phase 014 COMPLETE — PASS
+Phase 015 IN PROGRESS
+015-A COMPLETE — READY
+015-B NEXT
 ```
 
-Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**. Phase 013 must preserve PF-01 as the sole adopted product variant unless mapping exposes a genuine upstream scope defect.
+Phase 015 must preserve PF-01 as the sole adopted product variant unless an explicit integrity finding demonstrates a genuine dependence/scope defect and reopens Phase 012.
