@@ -24,32 +24,36 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-014 familiarity baseline
+## Phase-014 familiarity posture
 
-014-B registers familiar analogies for derived/work-context terms without promoting them to Concepts:
+014-B registered familiar analogies for derived/work-context terms without promoting them to Concepts.
+
+014-C reinforces that grouping/capacity/access should not be replaced by writable workflow abstractions.
+
+014-D likewise rejects using familiar task/form/submission metaphors to turn derived or source-owned conditions into editable workflow state. In particular:
 
 ```text
-Readiness              ↔ checklist / gate / eligibility
-Remaining Work         ↔ task list / work queue
-Coverage               ↔ completeness / quorum / sufficiency
-Aggregate              ↔ total / average / composite score
-Rank                   ↔ leaderboard / standing / placement
-Reconciliation         ↔ exception queue / case management
-Live Operations        ↔ operations center / control room
-Finalization Readiness ↔ approval gate / closeout checklist
+Remaining Work
+  = projection over Outstanding Evaluation Obligations
+  != generic task list authority
+
+criterion/note structures
+  = subordinate Rubric / Scorecard structure
+  != independent form-field Concepts
 ```
 
-These are comparison hypotheses only.
+Family-2 familiarity also preserves the current mechanism/source distinction:
 
-014-C changes no mechanism classification. Its Family-1 audit reinforces that Panel grouping, Participation capacity and Access decision semantics must not be replaced by writable workflow/checklist abstractions merely because those metaphors are familiar.
-
-The corrected event-completion seam also preserves Remaining Work as a projection over Outstanding obligations: Event Completed does not erase remaining responsibility merely because broad live-event capability closes.
-
-Phase 014 must continue to test whether familiar task/checklist/leaderboard/ticket metaphors would falsely imply writable authority, editable Rank, generic resolution, missing=zero, or other semantics the current design rejects.
+```text
+Rubric owns evaluation-response semantics
+Scorecard owns one evaluator judgment
+Aggregate / Rank remain downstream derivations
+```
 
 ```text
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
-014-D NEXT
+014-D COMPLETE — PASS
+014-E NEXT
 ```
