@@ -55,38 +55,35 @@ Phase 014 is **IN PROGRESS**.
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
-014-D NEXT
+014-D COMPLETE — PASS
+014-E NEXT
 ```
 
-014-B establishes comparison evidence and the PT-01..PT-13 precedent taxonomy; those families are comparison categories only and never super-Concepts.
+014-C retains the Family-1 Concept boundaries/names and 014-D retains the Family-2 boundaries/names.
 
-014-C dispositions the first eight current Concepts:
+Family-2 familiarity is deliberately constrained:
 
-| Concept | Familiarity disposition | Current boundary/name |
-| --- | --- | --- |
-| Competition | semantic fit with bounded competition occurrence | retain |
-| Division | semantic fit with competitive cohort/category | retain |
-| Team | semantic fit with competing unit | retain |
-| Panel | semantic fit with constraints as intended evaluator grouping | retain |
-| Identity | semantic fit with stable human identity continuity | retain |
-| Participation | semantic fit with constraints as scoped involvement/capacity | retain |
-| Alias | semantic fit with constraints as scoped alternate/pseudonymous identity | retain |
-| Access | semantic fit with constraints as contextual authorization/disclosure | retain pending cross-catalog terminology audit |
-
-No Family-1 Concept is renamed, merged, replaced or generalized by 014-C.
+```text
+Evaluation Occurrence ≈ bounded evaluation event
+Evaluation Obligation ≈ scoped evaluation duty/responsibility
+Rubric                ≈ scoring/evaluation rubric
+Scorecard             ≈ one evaluator's judgment record
+```
 
 Preserve:
 
 ```text
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Access permission != semantic authorship
+occurrence participation != responsibility
+responsibility != judgment evidence
+Rubric definition != exact authoritative Evaluation Basis
+Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
 ```
 
-Familiarity does not justify replacing these concepts with generic `User`, `Role`, `Permission`, `Group` or `Session` semantics.
+`Session`, `Attempt`, `Encounter`, `Assignment`, `Task`, `Form`, `Submission` and `Ballot` do not replace these concepts merely because they are more colloquial. The deprecated Encounter remains historical/counterexample evidence only.
 
-014-C also corrected the current Phase-011 event-completion/Access composition seam. See [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md).
+No Concept owner should be changed from precedent resemblance alone. Any later familiarity/generalization change must propagate through the natural owner and explicit reopen discipline.
 
 ## Next
 
-Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
+Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
