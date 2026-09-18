@@ -24,22 +24,29 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-014 genericity status
+## Phase-014 reusable-knowledge status
 
-014-G does not promote any derived/work-context term to Concept status.
+014-H does not promote any derived/work-context term to Concept or catalog-Concept status.
 
-Reject genericity shortcuts such as:
+Reusable pattern knowledge may describe relationships involving these mechanisms, for example:
 
 ```text
-Remaining Work → Task / Work Item Concept
-Readiness      → generic writable Gate/Status
-Reconciliation → Ticket / Case Concept
-Aggregate/Rank → Result Concept
+historical accomplishment vs current eligibility
+derivation → recognition → declaration
 ```
 
-These mechanisms are useful precisely because they derive/explain other owners rather than becoming another source of truth.
+but preserve:
 
-Potential cross-context lessons such as historical satisfaction versus current eligibility and derive→recognize→declare layering move to 014-H as reusable knowledge candidates, not new mechanism/Concept hierarchy.
+```text
+Remaining Work != Task / Work Item authority
+Readiness != generic writable Gate/Status
+Reconciliation != Ticket / Case authority
+Aggregate / Rank != Result authority
+Rank != Award recognition
+calculated != official
+```
+
+The [Reusable Concept Knowledge & Design Patterns](../project/reusable-design-knowledge.md) registry therefore records the transferable layering/correction lesson, not a new mechanism hierarchy.
 
 ```text
 014-A COMPLETE — READY
@@ -49,5 +56,8 @@ Potential cross-context lessons such as historical satisfaction versus current e
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 ```
+
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
