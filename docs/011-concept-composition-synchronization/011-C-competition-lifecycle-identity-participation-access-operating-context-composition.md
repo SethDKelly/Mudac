@@ -19,6 +19,7 @@ sources:
   - resource: ../canonical/experience/organizer-preparation.md
   - resource: ../canonical/experience/context-role-modes.md
   - resource: ../canonical/experience/action-authority-traceability.md
+  - resource: ../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
   - resource: ../canonical/synchronizations/concept-synchronizations.md
   - resource: https://github.com/SethDKelly/Base/blob/main/docs/phases/005/composition-synchronization-contract.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
@@ -60,6 +61,28 @@ The key results are:
 9. Team/Division/Alias current state contributes to Competition readiness; historical judging presentation remains 011-D/Evaluation Occurrence work.
 
 The durable current synchronization rules are promoted to [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md).
+
+# Later Phase-014 correction note
+
+This Phase-011 record preserves the conclusion reached at 011-C for historical provenance. **014-C later found that its categorical Event Completed Access conclusion was too strong and repaired the current canonical synchronization.**
+
+Accordingly, statements in this historical record that ordinary Judge private-evaluation capability is categorically unavailable after Event Completed must now be read with this correction:
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+
+existing Outstanding Evaluation Obligation
+  + same legitimate evaluator / subject / occurrence / basis
+  + current policy permits post-event completion
+  + fresh Access.check permits that specific work
+  → same logical evaluation may continue
+```
+
+This continuation does not reactivate Participation, reopen Competition, create a new obligation, begin a new ordinary occurrence, or restore general event-day capability.
+
+Current authority is [Competition Lifecycle, Participation & Contextual Access Composition](../canonical/synchronizations/competition-participation-access.md). The original 011-C wording remains below only as the historical decision that 014-C later refined.
 
 # 1. Composition discipline
 
