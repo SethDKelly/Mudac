@@ -8,11 +8,11 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
-5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
-6. Read current accepted Experience owners relevant to the work, especially [Whole-Experience Action, Explanation & Authority Traceability](docs/canonical/experience/action-authority-traceability.md).
-7. For current methodology work, read [Phase 014 — Familiarity, Reuse & Genericity](docs/014-familiarity-reuse-genericity/).
-8. Treat older Experience adapters as historical evidence unless the Mapping Authority Baseline says otherwise.
-9. Use current synchronization owners for composition; mapping does not replace composition.
+5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant Experience owners.
+6. For current methodology work, read [Phase 014 — Familiarity, Reuse & Genericity](docs/014-familiarity-reuse-genericity/) and the active Phase-014 record.
+7. Treat older Experience adapters and deprecated Concepts as historical evidence only.
+8. Use current synchronization/dependence owners for composition/scope; Phase 014 does not supersede them.
+9. Load external/domain familiar precedents only as comparison evidence and test semantic fit explicitly.
 10. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
 ## Current methodology posture
@@ -23,7 +23,9 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 011: COMPLETE — PASS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
-014: NOT STARTED — START GATE NEXT
+014: IN PROGRESS
+014-A: COMPLETE — READY
+014-B: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,8 +52,6 @@ Preserve:
 - one Evaluation Obligation maps to at most one logical Scorecard;
 - Scorecard Draft != authority;
 - capture Actor != Judge semantic author / RepresentedAuthority;
-- Judge amendment != source-faithful capture correction;
-- supersession != invalidation != replacement != affectedness/staleness;
 - historical obligation satisfaction != current evidence eligibility;
 - Event Completed != universal hidden Access revocation;
 - Remaining Work = current Outstanding-obligation projection;
@@ -59,19 +59,10 @@ Preserve:
 - Rank is derived/non-editable;
 - calculated != recognized != Competition Finalized != official != public != delivered;
 - Outcome Declaration != Export != Publication != delivery;
-- actor Access != audience disclosure permission;
 - Export currency != Publication distribution state;
-- successor Outcome Declaration != successor Export != successor Publication;
-- withdrawal/supersession never erases historical release or external copies;
 - accessible/responsive/degraded/paper paths preserve the same domain semantics;
-- assistance does not transfer semantic authorship;
-- device/session/route/QR possession != current Access;
-- local working state != confirmed persistence != authoritative domain state;
-- unknown authoritative result != confirmed success or confirmed failure;
-- retry/recovery must reconcile current authority and converge rather than duplicate effects;
-- stale local state cannot overwrite newer authority;
-- status is multidimensional and subject-qualified;
-- technical recovery privilege != broader Access, disclosure or domain authority.
+- result unknown != confirmed success or confirmed failure;
+- stale local state cannot overwrite newer authority.
 
 Map the established action surface:
 
@@ -85,6 +76,33 @@ X — intentionally unavailable generic application action
 
 Do not expose `P` or `X` as generic user actions.
 
+## Phase-014 familiarity / reuse discipline
+
+Phase 014 asks whether prior conceptual understanding would transfer correctly.
+
+```text
+familiarity != implementation mimicry
+reuse != Concept merging by resemblance
+genericity != abstraction for abstraction's sake
+common vocabulary != lost authority boundary
+profile reuse != capability union
+```
+
+For a proposed familiar precedent, compare materially relevant:
+
+- purpose and operational principle;
+- state, actions and queries;
+- lifecycle/finality/reversibility;
+- authority/authorship/delegation;
+- history/correction semantics;
+- scope/parameters;
+- synchronization/dependence consequences;
+- mapped/disclosure expectations.
+
+Popularity, framework similarity, UI shape or database resemblance is not sufficient evidence.
+
+If a familiarity/generalization finding exposes an actual purpose/boundary defect, composition defect, scope defect or mapping defect, route it to the natural Phase-010/011/012/013 owner instead of silently rewriting semantics in Phase 014.
+
 ## Explanation-order rule
 
 ```text
@@ -93,16 +111,13 @@ synchronization chain != mandatory wizard
 explanation order != mandatory screen order
 ```
 
-The final Phase-013 Experience corpus is complete and non-competing. `reconciliation-finalization.md` and `paper-export-publication.md` remain historical evidence only.
+## Historical Experience adapters
 
-## Phase 014 boundary
-
-Phase 014 evaluates familiarity, reuse and genericity of the existing design. It must not treat familiar implementation/UI conventions as authority, merge Concepts merely because they resemble one another, or introduce abstraction for abstraction's sake.
-
-The start gate owns Phase-014 subgroup planning before substantive work.
+- `docs/canonical/experience/reconciliation-finalization.md` — historical only.
+- `docs/canonical/experience/paper-export-publication.md` — historical only.
 
 ## Current next task
 
 Proceed to:
 
-> **Phase 014 start gate — Familiarity, Reuse & Genericity**
+> **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**
