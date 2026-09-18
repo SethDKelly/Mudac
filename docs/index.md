@@ -23,12 +23,15 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
+* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — next methodology phase; start gate only.
 
 # Current phase
 
 [Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **COMPLETE — PASS**.
 
-[Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) is **IN PROGRESS**.
+[Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) is **COMPLETE — PASS**.
+
+[Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **NOT STARTED — START GATE NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -40,7 +43,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 014-G  COMPLETE — PASS
 014-H  COMPLETE — PASS
 014-I: COMPLETE — PASS
-014-J: NEXT
+014-J: COMPLETE — PASS
+015-A: NEXT — START GATE
 ```
 
 # Current Phase-014 result
@@ -128,7 +132,8 @@ Identity != Participation != Access
 011: COMPLETE — PASS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
-014: IN PROGRESS
+014: COMPLETE — PASS
+015: NOT STARTED — 015-A START GATE NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -138,7 +143,8 @@ Identity != Participation != Access
 014-G: COMPLETE — PASS
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
-014-J: NEXT
+014-J: COMPLETE — PASS
+015-A: NEXT — START GATE
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -150,7 +156,7 @@ implementation authorization: NOT YET
 
 The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Phase 014 may critique familiarity, reuse, terminology, broader genericity and reusable design knowledge, but conventional UI/software structures may not bypass current Concept, synchronization, dependence, mapping or authority distinctions.
+Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and interference, but conventional UI/software structures may not bypass current Concept, synchronization, dependence, mapping or authority distinctions.
 
 # Completion runway
 
@@ -160,7 +166,8 @@ Phase 014 may critique familiarity, reuse, terminology, broader genericity and r
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity IN PROGRESS — 014-I: COMPLETE — PASS
-014-J: NEXT
+014-J: COMPLETE — PASS
+015-A: NEXT — START GATE
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
