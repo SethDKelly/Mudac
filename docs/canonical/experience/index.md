@@ -19,7 +19,8 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -70,8 +71,8 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**. The 015-B directional register is phase evidence only; current family ownership remains unchanged until an explicit Phase-015 `INT-F*` finding routes a correction to its natural owner.
