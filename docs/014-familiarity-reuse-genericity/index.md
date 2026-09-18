@@ -9,8 +9,8 @@ Phase 014 is **IN PROGRESS**.
 - [014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit](014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md) — **Complete — PASS**.
 - [014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit](014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md) — **Complete — PASS**.
 - [014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit](014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md) — **Complete — PASS**.
-- **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit** — Next.
-- 014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit.
+- [014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit](014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md) — **Complete — PASS**.
+- **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit** — Next.
 - 014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit.
 - 014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check.
 - 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
@@ -21,9 +21,9 @@ Phase 014 consumes current canonical authority from Project Purpose, the 18 curr
 
 The Base/Jackson Phase-008 methodology definition is comparison-method authority, not MUDAC product-semantic authority.
 
-## Family audit status
+## Completed Concept-family audits
 
-### Family 1 — complete
+### Family 1
 
 ```text
 Competition    ≈ bounded competition occurrence
@@ -36,7 +36,7 @@ Alias          ≈ scoped alternate/pseudonymous identity
 Access         ≈ contextual authorization/disclosure decision
 ```
 
-### Family 2 — complete
+### Family 2
 
 ```text
 Evaluation Occurrence ≈ bounded assessment/evaluation event
@@ -45,7 +45,7 @@ Rubric                ≈ scoring/evaluation rubric
 Scorecard             ≈ one evaluator's judgment record
 ```
 
-### Family 3 — complete
+### Family 3
 
 ```text
 Versioning          ≈ authoritative version/snapshot lineage
@@ -56,7 +56,22 @@ Export              ≈ exact-source external representation + currency
 Publication         ≈ deliberate release to audience/channel
 ```
 
-Preserve across the completed family audits:
+All eighteen current names/boundaries remain retained.
+
+## Cross-catalog terminology result
+
+014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md) as the durable vocabulary authority.
+
+Terminology classes are:
+
+```text
+T1 canonical semantic term
+T2 qualified explanatory label
+T3 analogy-only term
+T4 high-risk generic term
+```
+
+Preserve across the full catalog:
 
 ```text
 Identity != Participation != Access
@@ -70,7 +85,21 @@ Outcome Declaration != Export != Publication != delivery
 Export currency != Publication state
 ```
 
-014-D and 014-E found no Phase-010/011/012/013 defect requiring reopen. The one upstream defect found so far remains the 014-C event-completion Access seam, already repaired in its natural Phase-011 synchronization owner.
+Also preserve owner-qualified lifecycle/currentness vocabulary:
+
+```text
+Competition Ready != Competition Readiness != Ranking Readiness != Finalization Readiness
+Occurrence Complete != Obligation Satisfied != Scorecard Finalized
+Event Completed != Competition Finalized
+Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
+Published != public != delivered
+```
+
+Generic `Submit`, `Done`, `Close`, `Edit`, `Reopen`, `Reset`, `Revision`, `Resolve`, `Fix`, `Force`, `Override`, `Share` or `Send` must not hide owner-specific consequences.
+
+`Judging Encounter` and `Official Outcome Revision` remain historical/counterexample vocabulary only.
+
+014-F found no new Phase-010/011/012/013 defect requiring reopen.
 
 ## Boundary
 
@@ -81,8 +110,9 @@ Export currency != Publication state
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
-014-F NEXT
+014-F COMPLETE — PASS
+014-G NEXT
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
