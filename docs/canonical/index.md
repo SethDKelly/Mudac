@@ -12,17 +12,7 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/)
 * [Invariants](invariants/)
 * [Experience](experience/)
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
-* [Whole-Experience Action, Explanation & Authority Traceability](experience/action-authority-traceability.md) — final Phase-013 cross-owner mapping-integrity owner.
-
-# Governance
-
-* [Governance](governance/) — methodology, documentation/change governance and design/implementation boundary.
-
-# Suspended downstream knowledge
-
-* [Architecture](architecture/) — preserved downstream candidates; suspended.
-* [Implementation](implementation/) — preserved downstream candidates/tooling plus frozen bootstrap facts; suspended as current domain authority.
+* [Governance](governance/)
 
 # Current methodology posture
 
@@ -35,7 +25,8 @@ Jackson Concept Design: IN PROGRESS
 013: COMPLETE — PASS
 014: IN PROGRESS
 014-A: COMPLETE — READY
-014-B: NEXT
+014-B: COMPLETE — PASS
+014-C: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -43,34 +34,33 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Current Phase-014 review boundary
+# Phase-014 comparison authority
 
-Phase 014 consumes current canonical truth; it does not create a parallel concept catalog.
+Current MUDAC canonical knowledge remains the semantic target. Phase-014 precedents are evidence for comparison only.
 
 ```text
-familiar name / common UI shape
-  != familiar Concept
-
-familiarity candidate
-  → compare purpose + operational principle
-  → compare state/actions/lifecycle/history/authority
-  → compare composition/dependence/mapping expectations
-  → accept reuse only when expectation transfer is mostly correct
+E1 current MUDAC authority                     semantic target
+E2 documented Concept Design precedent         comparison evidence
+E3 established domain concept                  comparison evidence
+E4 widespread cross-application concept        comparison evidence
+E5 MUDAC historical alternative/prior audit    historical comparison evidence
+E6 product/interface convention                weak hypothesis evidence
+E7 architecture/implementation                 quarantined contamination/history evidence
 ```
 
-Phase 014 may identify false familiarity, safe broader genericity, retained novelty and reusable design knowledge. Adopted semantic changes must propagate to their natural canonical owners.
+The PT-01..PT-13 taxonomy organizes precedent families and creates no new canonical Concept hierarchy.
 
-Historical architecture/implementation remains comparison or contamination evidence only.
+014-B changes no current semantic owner.
 
-# Retrieval rule during Phase 014
+# Retrieval rule
 
-1. start at the current canonical owner for the subject;
-2. load Phase-014 active record / plan relevant to the work;
-3. load synchronization, dependence, policy, invariant and Experience owners whose semantics materially affect the comparison;
-4. load external/domain/familiar precedents only as comparison evidence;
-5. use historical MUDAC design evidence only when rationale/alternative comparison is material;
-6. do not preload architecture/implementation except for explicit contamination/history analysis.
+1. start at the natural canonical owner for current meaning;
+2. use completed Phase-013 mapping for user-visible semantics;
+3. for Phase-014 work, load 014-A/014-B before selecting familiarity precedents;
+4. add only the precedent evidence needed for the current concept family;
+5. use historical adapters only as explicit comparison/counterexample evidence;
+6. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register** under [Phase 014](../014-familiarity-reuse-genericity/).
+Proceed to [014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit](../014-familiarity-reuse-genericity/).
