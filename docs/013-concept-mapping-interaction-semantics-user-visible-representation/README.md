@@ -1,6 +1,6 @@
 # Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation
 
-Status: **IN PROGRESS — 013-A through 013-K complete; 013-L next.**
+Status: **COMPLETE — PASS.**
 
 Phase 013 corresponds to Base Phase 007 / Daniel Jackson Concept Mapping. It maps completed Purpose / Concept / Synchronization / Dependence / PF-01 semantics into faithful user-visible interaction and representation without selecting frontend/runtime architecture.
 
@@ -27,13 +27,13 @@ synchronization chain != mandatory wizard
 explanation order != mandatory screen order
 ```
 
-## Current mapping authority
+## Final mapping authority
 
 Use [Phase 013 Mapping Authority Baseline](../canonical/experience/mapping-authority-baseline.md) and [Experience index](../canonical/experience/).
 
-The current Experience owner set is complete through 013-K. [Whole-Experience Action, Explanation & Authority Traceability](../canonical/experience/action-authority-traceability.md) owns the final cross-cutting explanation/action integrity rules.
+[Whole-Experience Action, Explanation & Authority Traceability](../canonical/experience/action-authority-traceability.md) owns the final cross-cutting explanation/action integrity rules.
 
-## Approved subgroup sequence
+## Completed subgroup sequence
 
 | Group | Topic | Status |
 | --- | --- | --- |
@@ -47,29 +47,28 @@ The current Experience owner set is complete through 013-K. [Whole-Experience Ac
 | 013-H | Award, Competition Finalization, Outcome Declaration, Officiality & Successor-Authority Mapping | **Complete — PASS** |
 | 013-I | Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping | **Complete — PASS** |
 | 013-J | Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping | **Complete — PASS** |
-| 013-K | [Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit](013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md) | **Complete — PASS** |
-| 013-L | Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff | **Next — exit review** |
+| 013-K | Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit | **Complete — PASS** |
+| 013-L | [Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff](013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md) | **Complete — PASS** |
 
-## 013-K result
+## Exit result
 
 ```text
-whole-experience explanation order:      COHERENT
-cross-role consistency:                  PASS
-cross-profile consistency:               PASS
-action/authority traceability:           CURRENT / ACCEPTED
-Judge Event Completed access drift:      REPAIRED
-legacy Encounter/revision assumptions:   REMOVED FROM CURRENT TRACEABILITY
-current Experience owners complete:      YES
-new Concept required:                    NO
-new synchronization required:            NO
-new product variant required:            NO
-Phase-010/011/012 reopen:                NO
+Phase 013:                                  COMPLETE — PASS
+canonical mapping corpus:                  RECONCILED
+current Experience owner set:              COMPLETE / NON-COMPETING
+historical Experience adapters:            CLASSIFIED / NON-AUTHORITATIVE
+MAP-R01..MAP-R16 unresolved blockers:      NONE
+new Concept required:                      NO
+new synchronization required:              NO
+PF-01 change required:                     NO
+Phase-010/011/012 reopen:                  NO
+architecture / implementation re-entry:    NOT AUTHORIZED
 ```
 
-Current whole-experience grammar:
+Current whole-experience grammar remains:
 
 ```text
-context
+context / capacity / audience
   → subject/resource
   → current authoritative or working state
   → qualification / blocker / uncertainty
@@ -78,28 +77,14 @@ context
   → confirmed result + retained history
 ```
 
-This grammar explains meaning without prescribing navigation.
-
-## Current execution posture
+## Final execution posture
 
 ```text
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: IN PROGRESS
-013-A: COMPLETE — READY
-013-B: COMPLETE — PASS
-013-C: COMPLETE — PASS
-013-D: COMPLETE — PASS
-013-E: COMPLETE — PASS
-013-F: COMPLETE — PASS
-013-G: COMPLETE — PASS
-013-H: COMPLETE — PASS
-013-I: COMPLETE — PASS
-013-J: COMPLETE — PASS
-013-K: COMPLETE — PASS
-013-L: NEXT
+013: COMPLETE — PASS
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -107,6 +92,8 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-## Next
+## Handoff
 
-Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
+Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**.
+
+See [Phase 014](../014-familiarity-reuse-genericity/). Its subgroup sequence is intentionally not yet canonical; the start gate owns scope, criteria, evidence and subphase planning.
