@@ -17,31 +17,28 @@ calculated != recognized != official != public != delivered
 source authority != Export representation != Publication release != delivery
 ```
 
-## Phase-014 family-audit result
+## Phase-014 terminology result
 
-014-C through 014-E retain the current synchronization seams. Familiar precedents do not justify collapsing coordinated owners into one workflow action.
+014-C through 014-E retained current synchronization seams. 014-F now constrains familiar action vocabulary through [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
 
-Family-3 specifically preserves:
+Familiar workflow verbs are not composition authority by themselves.
+
+Preserve:
 
 ```text
-Versioning commit/currentness
-  != Provenance explanation
-
-Rank / SelectionBasis
-  != Award.confer
-
-Competition.finalize
-  != OutcomeDeclaration.declare
-
-OutcomeDeclaration successor
-  != successor Export
-  != successor Publication
-
-Export currency transition
-  != Publication distribution transition
+Begin Evaluation Occurrence != Start Evaluation
+Complete Evaluation Occurrence != Evaluation Obligation Satisfied
+Complete Live Event != Competition Finalized
+Finalize Evaluation != Finalize Competition & Declare Outcome
+Rank candidate != Award.confer
+Competition.finalize != OutcomeDeclaration.declare
+OutcomeDeclaration successor != successor Export != successor Publication
+Export currency transition != Publication distribution transition
 ```
 
-Common `revision`, `winner`, `final result`, `report update`, `publish`, `republish`, or `withdraw` workflows are not composition authority by themselves.
+Generic `Submit`, `Done`, `Close`, `Edit`, `Reopen`, `Reset`, `Revert`, `Delete`, `Resolve`, `Fix`, `Force`, `Override`, `Approve`, `Share` or `Send` may not be used to bypass an established direct/coordinated owner-specific action.
+
+`Revision` remains especially unsafe as a generic composition abstraction: Version successor, Judge amendment, source-faithful correction, successor Outcome Declaration, successor Export and successor Publication are different actions/history meanings.
 
 ## Application action classes
 
@@ -66,7 +63,8 @@ Phase 013 COMPLETE — PASS
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
-014-F NEXT
+014-F COMPLETE — PASS
+014-G NEXT
 ```
 
-Proceed to 014-F using current synchronization semantics as E1 authority and the completed family audits as expectation-transfer evidence.
+Proceed to 014-G using current synchronization semantics as E1 authority. Shared vocabulary or similar action shapes are not evidence for shared Concept ownership or automatic composition.
