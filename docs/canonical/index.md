@@ -26,7 +26,8 @@ Jackson Concept Design: IN PROGRESS
 014: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,17 +51,54 @@ E7 architecture/implementation                 quarantined contamination/history
 
 The PT-01..PT-13 taxonomy organizes precedent families and creates no new canonical Concept hierarchy.
 
-014-B changes no current semantic owner.
+# Accepted Family-1 familiarity result
+
+014-C retains the current Concept boundaries/names for:
+
+```text
+Competition
+Division
+Team
+Panel
+Identity
+Participation
+Alias
+Access
+```
+
+The family is intentionally familiar **without collapsing authority seams**.
+
+Preserve:
+
+```text
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
+```
+
+The strongest defined cross-application precedent for Access is contextual authorization/ABAC-like decision semantics; this is conceptual comparison evidence, not an implementation prescription.
+
+# Event-completion correction
+
+014-C repaired [Competition Lifecycle, Participation & Contextual Access Composition](synchronizations/competition-participation-access.md):
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+```
+
+An existing Outstanding obligation may continue on the same logical evaluation only when current policy and a fresh Access decision permit that specific work. This does not reactivate Participation or create new live-event responsibility.
 
 # Retrieval rule
 
 1. start at the natural canonical owner for current meaning;
 2. use completed Phase-013 mapping for user-visible semantics;
-3. for Phase-014 work, load 014-A/014-B before selecting familiarity precedents;
-4. add only the precedent evidence needed for the current concept family;
+3. for Phase-014 work, load 014-A/014-B plus the latest completed family audit;
+4. add only precedent evidence needed for the current concept family;
 5. use historical adapters only as explicit comparison/counterexample evidence;
 6. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to [014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit](../014-familiarity-reuse-genericity/).
+Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
