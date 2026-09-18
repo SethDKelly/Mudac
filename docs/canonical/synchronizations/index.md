@@ -77,7 +77,7 @@ Phase 014 COMPLETE — PASS
 015-A NEXT — START GATE
 ```
 
-Proceed to 014-I using current synchronization semantics as authoritative while checking propagation and obvious integrity after Phase-014 refinements.
+Phase 014 is **COMPLETE — PASS**. Phase 015 uses current synchronization semantics as composition authority and may alter them only through an explicit integrity finding routed to the natural synchronization owner.
 
 ## Phase 015 handoff
 
