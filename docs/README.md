@@ -13,8 +13,8 @@ Current foundational truth includes:
 - [Current Synchronizations](canonical/synchronizations/);
 - [Current Dependence / PF-01 Scope](canonical/dependence/);
 - [Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
-- [Award, Finalization & Outcome Officiality Mapping](canonical/experience/outcome-officiality.md);
-- [External Representation, Disclosure & Release Mapping](canonical/experience/external-representation-release.md);
+- [Accessibility, Responsive & Degraded-Operation Mapping](canonical/experience/accessibility-resilience.md);
+- [Status, Feedback & Recovery Mapping](canonical/experience/status-feedback-recovery.md);
 - [Active Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/).
 
 ## Status
@@ -23,7 +23,7 @@ Current foundational truth includes:
 * Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-J next**
+* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **In progress — 013-K next**
 
 ```text
 013-A: COMPLETE — READY
@@ -35,7 +35,8 @@ Current foundational truth includes:
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
-013-J: NEXT
+013-J: COMPLETE — PASS
+013-K: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -43,22 +44,21 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-## Current external representation posture
+## Current 013-J posture
 
 ```text
-source authority != Export representation != Publication release != delivery
-actor Access != audience disclosure
-Export generation != Publication
-Export SourceBasis = exact / historically stable
-Export currency != Publication distribution state
-new/corrected source → new Export
-successor Outcome Declaration != successor Export != successor Publication
-withdrawal/supersession != historical release erasure
-recipient possession != current release authority / Access
-Publication Published != delivery/viewing success
+accessible / responsive / degraded / paper paths = same domain semantics
+assistive actor != semantic author
+device/session/route/QR possession != Access
+local working state != confirmed persistence != authoritative state
+paper fallback != second evaluation model
+result unknown != success != failure
+retry/recovery reconciles current authority and converges
+stale local state cannot overwrite newer authority
+status is multidimensional / subject-qualified
+working persistence feedback != semantic commitment
+technical recovery capability != broader Access/disclosure/authority
 ```
-
-Official-but-non-public and Export-without-Publication remain legitimate PF-01 states.
 
 The old `canonical/experience/paper-export-publication.md` and `reconciliation-finalization.md` are historical evidence only.
 
@@ -68,7 +68,7 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 010 foundational completion                    COMPLETE — PASS
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
-013 mapping / representation                   IN PROGRESS — 013-J NEXT
+013 mapping / representation                   IN PROGRESS — 013-K NEXT
 014 familiarity / reuse / genericity
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
@@ -77,4 +77,4 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 
 ## Current next work
 
-Proceed to **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**.
+Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
