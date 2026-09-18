@@ -31,7 +31,9 @@ Current downstream conceptual authority is routed through:
 012 COMPLETE — PASS
 013 COMPLETE — PASS
 014 COMPLETE — PASS
-015 NOT STARTED — 015-A START GATE NEXT
+015 IN PROGRESS
+015-A COMPLETE — READY
+015-B NEXT
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
@@ -43,7 +45,8 @@ Current downstream conceptual authority is routed through:
 014-I COMPLETE — PASS
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
-015-A NEXT — START GATE
+015-A COMPLETE — READY
+015-B NEXT
 architecture / implementation SUSPENDED
 ```
 
@@ -90,8 +93,8 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Whole-system Concept Integrity / Cross-Concept Coherence & Interference begins only at **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
