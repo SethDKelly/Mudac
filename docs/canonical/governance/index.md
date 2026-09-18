@@ -6,7 +6,7 @@ Current repository/design-governance knowledge for MUDAC.
 
 * [Methodology, OKF Adoption & Terminology](methodology-terminology.md)
 * [Documentation Authority & Canonical Ownership](documentation-authority.md)
-* [Design / Implementation Boundary](design-implementation-boundary.md) — current Phase-013 mapping boundary and suspended downstream authority.
+* [Design / Implementation Boundary](design-implementation-boundary.md) — current reopened-design boundary; Phase 013 complete and downstream authority still suspended.
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md)
 
 ## Retrieval and change governance
@@ -24,14 +24,13 @@ Current repository/design-governance knowledge for MUDAC.
 ## Current methodology posture
 
 ```text
-Jackson Concept Design: REOPENED / IN PROGRESS
+Jackson Concept Design: IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: IN PROGRESS
-013-A: COMPLETE — READY
-013-B: NEXT
+013: COMPLETE — PASS
+014: NOT STARTED — START GATE NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -47,19 +46,16 @@ implementation authorization: NOT YET
 
 [Canonical Dependence](../dependence/) owns inclusion dependence and PF-01 product-family scope.
 
-[Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md) plus [013-A](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md) own the current mapping-entry and workstream plan.
+[Final Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) plus the natural Experience owners own current user-visible mapping semantics.
 
-Older Experience documents are incoming evidence pending 013-B disposition.
+[Phase 013 Exit Review](../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md) records mapping closure and the Phase-014 handoff.
 
-## Mapping boundary
+## Design / implementation boundary
 
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-```
+Architecture and implementation remain quarantined through the remaining Concept Design runway. Phase 013 completion is **not** implementation authorization.
 
-Phase 013 maps the established `D / C / P / S / X` application action surface and must preserve current authority/history/disclosure semantics without prescribing frontend/runtime realization.
+The next methodology activity is the [Phase 014 — Familiarity, Reuse & Genericity](../../014-familiarity-reuse-genericity/) start gate.
 
 ## Current handoff
 
-Proceed to **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**.
+Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**.
