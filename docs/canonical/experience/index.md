@@ -4,31 +4,20 @@ This directory contains current MUDAC user-visible interaction/mapping authority
 
 ## Current authority status
 
-Phase 013 is **COMPLETE — PASS**.
+Phase 013 is **COMPLETE — PASS**. Phase 014 is **IN PROGRESS** after 014-A completed with READY.
 
 ```text
-Phase 012  COMPLETE — PASS
-013-A      COMPLETE — READY
-013-B      COMPLETE — PASS
-013-C      COMPLETE — PASS
-013-D      COMPLETE — PASS
-013-E      COMPLETE — PASS
-013-F      COMPLETE — PASS
-013-G      COMPLETE — PASS
-013-H      COMPLETE — PASS
-013-I      COMPLETE — PASS
-013-J      COMPLETE — PASS
-013-K      COMPLETE — PASS
-013-L      COMPLETE — PASS
 Phase 013  COMPLETE — PASS
-Phase 014  NOT STARTED — START GATE NEXT
+Phase 014  IN PROGRESS
+014-A      COMPLETE — READY
+014-B      NEXT — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register
 ```
 
 Start with:
 
 * [Phase 013 Mapping Authority Baseline](mapping-authority-baseline.md) — final reconciled authority/evidence classification after 013-L.
 * [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) — cross-owner integrity and explanation-order guardrails.
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — retained entry precedence/history for Phase 013.
+* [Phase 014](../../014-familiarity-reuse-genericity/) — current familiarity/reuse/genericity audit records.
 
 ## Current accepted Experience owners
 
@@ -47,7 +36,7 @@ Start with:
 | [Status, Feedback & Recovery Mapping](status-feedback-recovery.md) | multidimensional status, uncertainty, confirmation and recovery | 013-J |
 | [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) | action traceability, explanation order, role/profile consistency and integrity rules | 013-K |
 
-This is the complete current Experience owner set after Phase 013.
+This remains the complete current Experience owner set.
 
 ## Historical Experience evidence only
 
@@ -78,71 +67,36 @@ synchronization chain != mandatory wizard
 explanation order != mandatory screen order
 ```
 
-## Cross-role / profile integrity
+## Phase-014 mapping/familiarity boundary
+
+Phase 014 may use Experience mapping to test what users would actually infer from familiar names and conceptual precedents.
+
+```text
+familiar label
+  != correct expectation transfer
+
+role/profile similarity
+  != capability union
+
+familiar UI metaphor
+  != Concept authority
+```
+
+A Phase-014 naming/generalization proposal that materially changes mapped meaning must be propagated to the natural Experience owner or explicitly reopen Phase-013 lineage as appropriate. Phase-014 records do not become a competing mapping source.
+
+## Authority seams retained
 
 ```text
 Identity != Participation != Access
-Judge + Organizer capabilities != unioned capability
 Panel membership != occurrence participation != responsibility != evidence
-actor can inspect fact != fact may appear in Export != fact may be released
-```
-
-Judge-safe, Organizer-sensitive, Ceremony-safe, Public and history/audit views are disclosure profiles over the same source authority, not competing truth models.
-
-## Event-completion rule
-
-```text
-Event Completed
-  → ordinary live-entry/readiness context ends
-  != all obligations terminal
-  != all Scorecards Finalized
-  != universal hidden Access revocation
-```
-
-Outstanding Judge work may continue on the same logical evaluation when current policy and Access permit it.
-
-## Authority ladder retained
-
-```text
-calculated
-  != ranking ready
-  != recognized
-  != Competition Finalized
-  != official
-  != Export representation
-  != Publication release
-  != delivered
-```
-
-## Application-action rule
-
-```text
-D — direct
-C — coordinated
-P — composition-only participant
-S — system-triggered reaction
-X — intentionally unavailable generic action
-```
-
-No screen, route, work mode, checklist, status badge, confirmation or recovery state creates another authority/action class.
-
-## Semantic-parity / recovery rule
-
-```text
-ordinary / accessible / responsive / degraded / paper paths
-  = same domain semantics where the same operation is available
-
+Event Completed != universal hidden Access revocation
+calculated != recognized != Competition Finalized != official != Export != Publication != delivered
+ordinary / accessible / responsive / degraded / paper paths preserve the same semantics
 result unknown != success != failure
-local working state != confirmed persistence != authoritative state
-stale local state cannot overwrite newer authority
 ```
-
-## Phase-013 exit
-
-013-L found the canonical mapping corpus reconciled, non-competing and free of unresolved MAP-R01–MAP-R16 semantic blockers. No upstream reopen or PF-01 change is required.
 
 Architecture/implementation remain suspended.
 
 ## Next
 
-Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**. See [`../../014-familiarity-reuse-genericity/`](../../014-familiarity-reuse-genericity/).
+Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
