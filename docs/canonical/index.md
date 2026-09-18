@@ -4,7 +4,9 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context, Purpose & Vocabulary](project/)
+* [Project Context, Purpose, Vocabulary & Reusable Design Knowledge](project/)
+* [Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md)
+* [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md)
 * [Concepts](concepts/)
 * [Synchronizations](synchronizations/)
 * [Dependence](dependence/)
@@ -31,7 +33,8 @@ Jackson Concept Design: IN PROGRESS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
-014-H: NEXT
+014-H: COMPLETE — PASS
+014-I: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -39,24 +42,30 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Phase-014 comparison authority
+# Phase-014 comparison / reuse authority
 
-Current canonical knowledge remains the semantic target. Familiar precedents remain comparison evidence only.
+Current canonical knowledge remains the semantic target. Familiar precedents and reusable-knowledge dispositions remain comparison/candidate evidence only.
 
-014-C through 014-E retain all eighteen current Concept names/boundaries. 014-F establishes the durable [MUDAC Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md).
+014-C through 014-E retain all eighteen current Concept names/boundaries. 014-F establishes the durable [MUDAC Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md). 014-G establishes `Generic at the boundary; specific in purpose.` 014-H establishes the [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) registry without creating a second Concept catalog.
 
-014-G establishes the broader-genericity contract:
+## Reuse authority split
 
 ```text
-Generic at the boundary; specific in purpose.
-shared parameter != shared purpose
-shared fields != shared lifecycle
-shared history shape != shared authority
+natural Concept owner
+  = current MUDAC semantic truth
+
+reusable registry
+  = cross-context candidate status + transferable lesson
+
+external/shared catalog
+  = not established by MUDAC Phase 014
 ```
 
-The 010-G abstract parameterization remains sufficient for almost all Concepts. One safe broader refinement removes `student` from Team's intrinsic semantics while PF-01 continues to bind Team to student teams.
+Broad reusable Concept-knowledge candidates include Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication.
 
-No generic `Group`, `Scoped Relationship`, `Occurrence`, `Task`, `Result`, `Historical Record` or merged representation/release super-Concept is current authority.
+Competition/evaluation-family candidates include Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard and Award.
+
+Reusable cross-cutting patterns include exact-basis binding, explicit successor without silent historical rewrite, actor/represented-authority/source separation, historical-accomplishment/current-eligibility separation, derivation→recognition→declaration and source→representation→release→delivery.
 
 ## Cross-family seams retained
 
@@ -66,9 +75,11 @@ Panel membership != occurrence participation != responsibility != evidence
 Evaluation Occurrence != Evaluation Obligation != Scorecard
 Rubric definition != exact authoritative Evaluation Basis
 Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
 Versioning != Provenance
 Rank / selection basis != Award recognition
 Competition Finalized != Outcome Declaration
+Outcome Declaration Affected != Superseded
 Outcome Declaration != Export != Publication != delivery
 Export currency != Publication state
 ```
@@ -77,12 +88,12 @@ Export currency != Publication state
 
 1. start at the natural canonical owner for current meaning;
 2. use [Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md) when familiar wording could cross owner boundaries;
-3. use completed Phase-013 mapping for user-visible semantics;
-4. for Phase-014 work, load 014-A/014-B plus relevant completed 014-C through 014-G records;
-5. treat reusable-pattern hypotheses as Phase-014 evidence, not new Concepts, until 014-H disposition;
+3. use [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons, never as a substitute specification;
+4. use completed Phase-013 mapping for user-visible semantics;
+5. for Phase-014 work, load 014-A/014-B plus relevant completed 014-C through 014-H records;
 6. use historical adapters only as explicit comparison/counterexample evidence;
 7. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
