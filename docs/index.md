@@ -27,13 +27,28 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **COMPLETE — PASS**.
 
-The next work is the start gate for:
+[Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) is **IN PROGRESS**.
 
-> **[Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/)**
+```text
+014-A  COMPLETE — READY
+014-B  NEXT — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register
+```
 
-Phase 014 is **NOT STARTED**. Its start gate owns scope, criteria, evidence selection and dependency-safe subphase planning before substantive review begins.
+014-A establishes that familiarity is judged by correct expectation transfer about purpose/behavior rather than name, popularity or implementation resemblance. It also establishes the dependency-safe family/cross-catalog audit sequence through 014-J.
 
-# Final Phase-013 mapping rules
+# Phase-014 governing rules
+
+```text
+familiarity != implementation mimicry
+reuse != Concept merging by resemblance
+genericity != abstraction for abstraction's sake
+common vocabulary != lost authority boundary
+profile reuse != capability union
+```
+
+A proposed familiar precedent must be compared against purpose, operational principle, state/actions, lifecycle/finality, authority/authorship, history/correction, scope, composition/dependence and mapped experience where material.
+
+# Final Phase-013 mapping rules retained
 
 ```text
 context / capacity / audience
@@ -53,19 +68,6 @@ synchronization chain != mandatory wizard
 explanation order != mandatory screen order
 ```
 
-Cross-owner integrity includes:
-
-```text
-Identity != Participation != Access
-Judge + Organizer capabilities != unioned capability
-Panel membership != occurrence participation != responsibility != evidence
-Event Completed != universal hidden Access revocation
-profile differences != competing source truth
-derived projection != editable source
-result unknown != success != failure
-source authority != officiality != Export != Publication != delivery
-```
-
 # Current methodology state
 
 ```text
@@ -74,7 +76,9 @@ source authority != officiality != Export != Publication != delivery
 011: COMPLETE — PASS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
-014: NOT STARTED — START GATE NEXT
+014: IN PROGRESS
+014-A: COMPLETE — READY
+014-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -82,20 +86,20 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-# Mapping boundary
+# Product/methodology boundary
 
 The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Judge/Organizer views, audience profiles, Awards, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessibility/degraded operation and temporal currentness are profiles/states rather than product variants.
+Phase 014 may critique familiarity, reuse, naming and broader genericity, but it may not use conventional UI/software patterns to bypass current Concept, synchronization, dependence, mapping or authority distinctions.
 
 # Completion runway
 
 ```text
-010 foundational completion     COMPLETE — PASS
-011 composition/synchronization COMPLETE — PASS
-012 dependence/product-family   COMPLETE — PASS
-013 mapping/representation      COMPLETE — PASS
-014 familiarity/reuse/genericity NOT STARTED — START GATE NEXT
+010 foundational completion      COMPLETE — PASS
+011 composition/synchronization  COMPLETE — PASS
+012 dependence/product-family    COMPLETE — PASS
+013 mapping/representation       COMPLETE — PASS
+014 familiarity/reuse/genericity IN PROGRESS — 014-B NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
