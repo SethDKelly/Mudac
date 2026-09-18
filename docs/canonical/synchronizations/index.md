@@ -2,17 +2,9 @@
 
 Phase 011 — Concept Composition, Synchronization, Application Action Surface & Automation Revalidation is **COMPLETE — PASS**.
 
-Current canonical synchronization owners remain:
+Current synchronization owners remain authoritative for composition. Phase 014 familiarity/reuse work may compare those semantics with familiar precedents but does not own synchronization changes unless a genuine composition defect is explicitly reopened.
 
-1. [Competition Lifecycle, Participation & Contextual Access Composition](competition-participation-access.md)
-2. [Competitor Context, Evaluation Occurrence & Obligation Composition](evaluation-occurrence-obligation.md)
-3. [Evaluation Basis, Scorecard Authority & Capture Composition](evaluation-basis-scorecard-authority.md)
-4. [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md)
-5. [Evaluation Outcome, Award, Finalization & Declaration Composition](evaluation-outcome-finalization-declaration.md)
-6. [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md)
-7. [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md)
-
-## Whole-application interpretation rules
+## Current interpretation rules
 
 ```text
 Identity != Participation != Access
@@ -25,19 +17,17 @@ calculated != official != public != delivered
 source authority != Export representation != Publication release != delivery
 ```
 
-## Final Phase-013 mapping boundary
+## Phase-014 evidence boundary
 
-Phase 013 maps the synchronization model into user-visible semantics without changing Phase-011 composition.
+014-B establishes comparison evidence only:
 
 ```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-explanation order != mandatory screen order
-Event Completed != universal hidden Access revocation
-accessible / responsive / degraded / paper path != new synchronization
+precedent resemblance != synchronization equivalence
+common workflow pattern != application-action authority
+shared implementation mechanism != conceptual reuse
 ```
 
-For current mapping use the [Final Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md) and [Whole-Experience Action, Explanation & Authority Traceability](../experience/action-authority-traceability.md).
+The PT-01..PT-13 precedent families are not synchronization owners and cannot be used to expose `P`/`X` actions or collapse existing coordinated seams.
 
 ## Application action classes
 
@@ -51,27 +41,15 @@ X — intentionally unavailable generic action
 
 > Automation may propagate knowledge/currentness and execute already-authorized bounded consequences; automation may not manufacture semantic authority.
 
-## Phase-014 familiarity boundary
-
-Phase 014 is **IN PROGRESS** after 014-A completed with READY.
-
-Familiarity/reuse review may compare synchronization patterns and action expectations, but similarity does not authorize a composition change. If a precedent exposes a genuine synchronization defect, explicitly reopen the natural Phase-011 owner.
-
-```text
-common orchestration pattern != same conceptual synchronization
-familiar action name != same preconditions/postconditions
-implementation workflow != composition authority
-```
-
 ## Current handoff
 
 ```text
 Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
 Phase 013 COMPLETE — PASS
-Phase 014 IN PROGRESS
 014-A COMPLETE — READY
-014-B NEXT
+014-B COMPLETE — PASS
+014-C NEXT
 ```
 
-Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register** using the completed synchronization model as current authority.
+Proceed to 014-C using current synchronization semantics as E1 authority and the 014-B precedent register as comparison evidence.
