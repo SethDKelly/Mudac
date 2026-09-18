@@ -31,26 +31,51 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 ```text
 014-A  COMPLETE — READY
 014-B  COMPLETE — PASS
-014-C  NEXT — Family-1 Familiarity / Reuse Audit
+014-C  COMPLETE — PASS
+014-D  NEXT — Evaluation Occurrence / Obligation / Rubric / Scorecard audit
 ```
 
-014-B establishes the evidence and precedent baseline used by later Phase-014 judgments. It makes no current semantic-fit decision.
+# Current Phase-014 result
 
-# Phase-014 evidence discipline
+014-B established the E1–E7 evidence hierarchy and PT-01..PT-13 precedent register.
+
+014-C completed the first concept-family dispositions:
 
 ```text
-E1 current MUDAC semantic authority
-E2 authoritative Concept Design / documented concept precedent
-E3 established domain concepts
-E4 widely used cross-application software concepts
-E5 MUDAC historical alternatives / prior audits
-E6 comparable product / interface convention
-E7 quarantined architecture / implementation evidence
+Competition    ≈ bounded competition occurrence
+Division       ≈ scoped competitive cohort/category
+Team           ≈ competing unit
+Panel          ≈ intended evaluator grouping
+Identity       ≈ stable human identity continuity
+Participation  ≈ scoped involvement/capacity
+Alias          ≈ scoped alternate/pseudonymous identity
+Access         ≈ contextual authorization/disclosure decision
 ```
 
-Only E1 defines current MUDAC meaning. E2–E7 are comparison evidence.
+All eight current names/boundaries are retained. Familiarity does not justify collapsing them into generic `User / Role / Permission / Group` semantics.
 
-The PT-01..PT-13 precedent taxonomy organizes comparison candidates without creating super-concepts or a universal taxonomy.
+Preserve:
+
+```text
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
+```
+
+014-C also repaired one earlier synchronization contradiction:
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+
+existing Outstanding obligation
+  + policy permits continuation
+  + fresh Access permits specific work
+  → same logical evaluation may continue
+```
+
+This narrow continuation does not reactivate Participation or authorize new ordinary live-event responsibility.
 
 # Familiarity rule
 
@@ -73,7 +98,8 @@ A candidate precedent must be tested for mostly correct expectation transfer abo
 014: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -94,7 +120,7 @@ Phase 014 may critique familiarity, reuse, naming and broader genericity, but it
 011 composition/synchronization  COMPLETE — PASS
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
-014 familiarity/reuse/genericity IN PROGRESS — 014-C NEXT
+014 familiarity/reuse/genericity IN PROGRESS — 014-D NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
