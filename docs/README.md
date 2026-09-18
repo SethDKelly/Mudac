@@ -15,7 +15,7 @@ Current foundational truth includes:
 - [Final Phase 013 Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md);
 - [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md);
 - [Completed Phase 013](013-concept-mapping-interaction-semantics-user-visible-representation/);
-- [Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) — start gate next.
+- [Active Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/).
 
 ## Status
 
@@ -24,23 +24,13 @@ Current foundational truth includes:
 * Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
-* Phase 014 — Familiarity, Reuse & Genericity: **Not started — start gate next**
+* Phase 014 — Familiarity, Reuse & Genericity: **In progress — 014-A complete; 014-B next**
 
 ```text
-013-A: COMPLETE — READY
-013-B: COMPLETE — PASS
-013-C: COMPLETE — PASS
-013-D: COMPLETE — PASS
-013-E: COMPLETE — PASS
-013-F: COMPLETE — PASS
-013-G: COMPLETE — PASS
-013-H: COMPLETE — PASS
-013-I: COMPLETE — PASS
-013-J: COMPLETE — PASS
-013-K: COMPLETE — PASS
-013-L: COMPLETE — PASS
 PHASE 013: COMPLETE — PASS
-PHASE 014: NOT STARTED — START GATE NEXT
+PHASE 014: IN PROGRESS
+014-A: COMPLETE — READY
+014-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -48,17 +38,18 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-## Final Phase-013 posture
+## Phase-014 audit posture
 
 ```text
-canonical Experience ownership: COMPLETE / NON-COMPETING
-MAP-R01..MAP-R16 blockers: NONE
-PF-01 change required: NO
-upstream reopen required: NO
-architecture / implementation re-entry: NOT AUTHORIZED
+familiarity != implementation mimicry
+reuse != Concept merging by resemblance
+genericity != abstraction for abstraction's sake
+common vocabulary != lost authority boundary
 ```
 
-The old `canonical/experience/paper-export-publication.md` and `reconciliation-finalization.md` remain historical evidence only.
+014-A requires familiarity comparisons to examine purpose/behavior, lifecycle, authority, history, composition/dependence and mapping expectations rather than names or popularity alone.
+
+All 18 current Concepts are explicitly covered by 014-C through 014-E after 014-B establishes concrete precedent evidence. Later subphases reconcile false familiarity, broader genericity, retained novelty/reusable knowledge and propagation.
 
 ## Completion runway
 
@@ -67,7 +58,7 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 011 composition / synchronization              COMPLETE — PASS
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
-014 familiarity / reuse / genericity           NOT STARTED — START GATE NEXT
+014 familiarity / reuse / genericity           IN PROGRESS — 014-B NEXT
 015 integrity / interference
 016 scenario / misfit / failure / adversarial
 017 methodology closure
@@ -75,4 +66,4 @@ The old `canonical/experience/paper-export-publication.md` and `reconciliation-f
 
 ## Current next work
 
-Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**.
+Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
