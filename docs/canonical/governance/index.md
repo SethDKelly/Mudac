@@ -26,7 +26,8 @@ Jackson Concept Design: IN PROGRESS
 014: COMPLETE — PASS
 015: IN PROGRESS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -39,7 +40,8 @@ Jackson Concept Design: IN PROGRESS
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -83,4 +85,4 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
