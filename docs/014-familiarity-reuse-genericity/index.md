@@ -10,8 +10,8 @@ Phase 014 is **IN PROGRESS**.
 - [014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit](014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md) — **Complete — PASS**.
 - [014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit](014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md) — **Complete — PASS**.
 - [014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit](014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md) — **Complete — PASS**.
-- **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit** — Next.
-- 014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit.
+- [014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) — **Complete — PASS**.
+- **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit** — Next.
 - 014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check.
 - 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
 
@@ -21,85 +21,58 @@ Phase 014 consumes current canonical authority from Project Purpose, the 18 curr
 
 The Base/Jackson Phase-008 methodology definition is comparison-method authority, not MUDAC product-semantic authority.
 
-## Completed Concept-family audits
+## Familiarity and terminology status
 
-### Family 1
+All three Concept-family audits are complete and all eighteen current Concept names remain retained.
 
-```text
-Competition    ≈ bounded competition occurrence
-Division       ≈ scoped competitive cohort/category
-Team           ≈ competing unit
-Panel          ≈ intended evaluator grouping
-Identity       ≈ stable human identity continuity
-Participation  ≈ scoped involvement/capacity
-Alias          ≈ scoped alternate/pseudonymous identity
-Access         ≈ contextual authorization/disclosure decision
-```
+014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md) with T1 canonical, T2 explanatory, T3 analogy-only and T4 high-risk generic terminology classes.
 
-### Family 2
+## 014-G broader-genericity result
+
+014-G adopts the rule:
 
 ```text
-Evaluation Occurrence ≈ bounded assessment/evaluation event
-Evaluation Obligation ≈ scoped evaluation duty/responsibility
-Rubric                ≈ scoring/evaluation rubric
-Scorecard             ≈ one evaluator's judgment record
+Generic at the boundary; specific in purpose.
 ```
 
-### Family 3
+The mature abstract parameterization from 010-G remains sufficient for almost all Concepts.
+
+One safe refinement is adopted:
 
 ```text
-Versioning          ≈ authoritative version/snapshot lineage
-Provenance          ≈ origin / derivation / represented-authority history
-Award               ≈ explicit recognition
-Outcome Declaration ≈ explicit official-result declaration / attestation
-Export              ≈ exact-source external representation + currency
-Publication         ≈ deliberate release to audience/channel
+Team intrinsic semantics:
+student competing group → competing group
+
+PF-01 binding:
+competing group → student team
 ```
 
-All eighteen current names/boundaries remain retained.
+No super-Concept or concept merge is adopted.
 
-## Cross-catalog terminology result
-
-014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md) as the durable vocabulary authority.
-
-Terminology classes are:
+Rejected mergers/generalizations include:
 
 ```text
-T1 canonical semantic term
-T2 qualified explanatory label
-T3 analogy-only term
-T4 high-risk generic term
+Group                over Team / Division / Panel
+Scoped Relationship  over Participation / assignment / membership / Alias
+Occurrence           over Competition / Evaluation Occurrence
+Task / Work Item     over obligation / remaining-work semantics
+Evaluation Record    over Rubric / Scorecard / Aggregate / Rank
+Historical Record    over owner-specific correction/currentness lifecycles
+Result               over Aggregate / Rank / Award / Outcome Declaration
+Representation       as a merger of Export / Publication
 ```
 
-Preserve across the full catalog:
+Preserve:
 
 ```text
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Rubric definition != exact authoritative Evaluation Basis
-Scorecard Draft != authoritative judgment
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration != Export != Publication != delivery
-Export currency != Publication state
+shared parameter != shared purpose
+shared history shape != shared lifecycle
+shared implementation possibility != Concept identity
 ```
 
-Also preserve owner-qualified lifecycle/currentness vocabulary:
+Reusable pattern candidates carried to 014-H include exact-basis binding, scoped opaque-reference parameterization, explicit successor without silent rewrite, actor/represented-authority/source separation, historical-satisfaction/current-eligibility separation, and source→representation→release / derivation→recognition→declaration layering.
 
-```text
-Competition Ready != Competition Readiness != Ranking Readiness != Finalization Readiness
-Occurrence Complete != Obligation Satisfied != Scorecard Finalized
-Event Completed != Competition Finalized
-Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
-Published != public != delivered
-```
-
-Generic `Submit`, `Done`, `Close`, `Edit`, `Reopen`, `Reset`, `Revision`, `Resolve`, `Fix`, `Force`, `Override`, `Share` or `Send` must not hide owner-specific consequences.
-
-`Judging Encounter` and `Official Outcome Revision` remain historical/counterexample vocabulary only.
-
-014-F found no new Phase-010/011/012/013 defect requiring reopen.
+014-G finds no Phase-010/011/012/013 reopen requirement.
 
 ## Boundary
 
@@ -111,8 +84,9 @@ Generic `Submit`, `Done`, `Close`, `Edit`, `Reopen`, `Reset`, `Revision`, `Resol
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
