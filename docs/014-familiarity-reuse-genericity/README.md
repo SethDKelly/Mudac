@@ -1,6 +1,6 @@
 # Phase 014 — Familiarity, Reuse & Genericity
 
-Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G PASS; 014-H PASS; 014-I next.**
+Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G PASS; 014-H PASS; 014-I PASS; 014-J next.**
 
 Phase 014 follows completed Phase 013 Concept Mapping. It audits whether the mature MUDAC concept system uses familiar conceptual ideas where they genuinely transfer correct expectations, avoids false familiarity, removes incidental product-specificity where safe, justifies retained novelty, and preserves reusable design knowledge without weakening established authority boundaries.
 
@@ -22,6 +22,7 @@ Architecture and implementation remain suspended.
 014-F terminology/expectation-transfer      COMPLETE — PASS
 014-G broader genericity/duplication audit  COMPLETE — PASS
 014-H novelty/reusable-knowledge audit      COMPLETE — PASS
+014-I propagation/obvious-integrity gate     COMPLETE — PASS
 ```
 
 Start from current canonical knowledge under `docs/canonical/`. Historical adapters and quarantined architecture/implementation remain evidence only where explicitly relevant.
@@ -143,8 +144,8 @@ No external/universal catalog is created by Phase 014. Candidate promotion requi
 | 014-F | Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit | **Complete — PASS** |
 | 014-G | Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit | **Complete — PASS** |
 | 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | **Complete — PASS** |
-| 014-I | Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check | **Next** |
-| 014-J | Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff | Planned exit review |
+| 014-I | Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check | **Complete — PASS** |
+| 014-J | Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff | **Next** |
 
 ## Current boundary
 
@@ -159,7 +160,8 @@ Phase 014 IN PROGRESS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
 014-H COMPLETE — PASS
-014-I NEXT
+014-I COMPLETE — PASS
+014-J NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -169,4 +171,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
+Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
