@@ -33,7 +33,8 @@ Current downstream conceptual authority is routed through:
 014 COMPLETE — PASS
 015 IN PROGRESS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
@@ -46,7 +47,8 @@ Current downstream conceptual authority is routed through:
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 architecture / implementation SUSPENDED
 ```
 
@@ -93,8 +95,8 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**. The 015-B directional register is phase evidence only; current family ownership remains unchanged until an explicit Phase-015 `INT-F*` finding routes a correction to its natural owner.
