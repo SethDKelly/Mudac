@@ -93,9 +93,10 @@ Export currency != Publication state
 2. use [Domain Vocabulary & Expectation-Transfer Rules](project/domain-vocabulary-expectation-transfer.md) when familiar wording could cross owner boundaries;
 3. use [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons, never as a substitute specification;
 4. use completed Phase-013 mapping for user-visible semantics;
-5. for Phase-014 work, load 014-A/014-B plus relevant completed 014-C through 014-H records;
-6. use historical adapters only as explicit comparison/counterexample evidence;
-7. do not preload architecture/implementation except for contamination/history analysis.
+5. use the Phase-014 exit review as the authoritative refinement handoff; detailed 014-A–I records remain evidence/provenance;
+6. for Phase 015, start at the Phase-015 README and 015-A start gate before deriving substantive integrity subphases;
+7. use historical adapters only as explicit comparison/counterexample evidence;
+8. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
