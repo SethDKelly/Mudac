@@ -1,6 +1,6 @@
 # Phase 014 — Familiarity, Reuse & Genericity
 
-Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G next.**
+Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G PASS; 014-H next.**
 
 Phase 014 follows completed Phase 013 Concept Mapping. It audits whether the mature MUDAC concept system uses familiar conceptual ideas where they genuinely transfer correct expectations, avoids false familiarity, removes incidental product-specificity where safe, justifies retained novelty, and preserves reusable design knowledge without weakening established authority boundaries.
 
@@ -20,19 +20,23 @@ Architecture and implementation remain suspended.
 014-D Family-2 familiarity/reuse audit      COMPLETE — PASS
 014-E Family-3 familiarity/reuse audit      COMPLETE — PASS
 014-F terminology/expectation-transfer      COMPLETE — PASS
+014-G broader genericity/duplication audit  COMPLETE — PASS
 ```
 
 Start from current canonical knowledge under `docs/canonical/`. Historical adapters and quarantined architecture/implementation remain evidence only where explicitly relevant.
 
-## Governing familiarity rule
+## Governing familiarity / genericity rules
 
 > A familiar precedent is useful only when prior understanding would transfer mostly correct expectations about MUDAC purpose and behavior.
+
+> **Generic at the boundary; specific in purpose.**
 
 ```text
 familiarity != implementation mimicry
 reuse != Concept merging by resemblance
 genericity != abstraction for abstraction's sake
-common vocabulary != lost authority boundary
+shared parameter != shared purpose
+shared history shape != shared lifecycle
 ```
 
 ## Completed Concept-family results
@@ -68,46 +72,39 @@ T4 high-risk generic term
 
 The durable current vocabulary owner is [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md).
 
-The main false-familiarity pressure now lies in generic glue language such as:
+## Broader genericity result
+
+[014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) confirms that the 010-G parameterized boundaries are generally sufficient.
+
+One narrow broader-genericity refinement is adopted:
 
 ```text
-User / Account / Role / Permission / Group
-Session / Encounter / Attempt
-Task / Assignment / Work Item
-Form / Submission
-Status / Current / Complete / Final
-Result / Winner / Score
-Revision / Edit / Reopen / Revert
-Resolve / Fix / Override / Force
-Report / Download / Share / Publish / Deliver
+Team intrinsic purpose
+  student competing group
+    → competing group acting as one unit
+
+PF-01 product binding
+  competing group
+    → student team
 ```
 
-These words are not universally forbidden, but where they could hide an authority/lifecycle/history transition they must be replaced or qualified by the natural owner.
+No Concept merge, split or new super-Concept is adopted.
 
-Examples:
+Rejected super-concepts include generic `Group`, `Scoped Relationship`, `Occurrence`, `Task/Work Item`, `Evaluation Record`, `Historical/Correctable Record`, `Result`, and merged `Representation/Artifact` ownership.
+
+Repeated structures are treated as reusable design-pattern candidates, not new application Concepts:
 
 ```text
-Judge mode / role            → Participation / Capacity context
-assigned evaluation          → Evaluation Obligation
-judging/evaluation event     → Evaluation Occurrence
-Judge Scorecard              → Scorecard
-Finalize Evaluation          → explicit Judge semantic commitment
-current official outcome     → Outcome Declaration authority
-Generate Export              → exact-source representation
-Publish Representation       → Publication release authority
+scoped opaque-reference parameterization
+exact-basis binding
+explicit successor without silent historical rewrite
+actor vs represented authority vs source
+historical satisfaction vs current eligibility
+source authority → representation → release
+derivation → recognition → official declaration
 ```
 
-Preserve owner-qualified state vocabulary:
-
-```text
-Competition Ready != Competition Readiness != Ranking Readiness != Finalization Readiness
-Occurrence Complete != Obligation Satisfied != Scorecard Finalized
-Event Completed != Competition Finalized
-Affected != Superseded != Invalidated != Replaced != Stale != Retired != Withdrawn
-Published != public != delivered
-```
-
-`Judging Encounter` and `Official Outcome Revision` remain historical only.
+These move to 014-H for reusable-knowledge/catalog disposition.
 
 ## Approved subgroup sequence
 
@@ -119,8 +116,8 @@ Published != public != delivered
 | 014-D | Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit | **Complete — PASS** |
 | 014-E | Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit | **Complete — PASS** |
 | 014-F | Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit | **Complete — PASS** |
-| 014-G | Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit | **Next** |
-| 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | Planned |
+| 014-G | Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit | **Complete — PASS** |
+| 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | **Next** |
 | 014-I | Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check | Planned |
 | 014-J | Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff | Planned exit review |
 
@@ -135,7 +132,8 @@ Phase 014 IN PROGRESS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -145,4 +143,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
