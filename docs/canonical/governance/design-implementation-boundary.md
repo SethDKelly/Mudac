@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through all three Concept-family audits, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the cross-catalog terminology audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, reentry]
 sources:
@@ -12,6 +12,8 @@ sources:
   - resource: ../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md
+  - resource: ../../014-familiarity-reuse-genericity/014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md
+  - resource: ../project/domain-vocabulary-expectation-transfer.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -21,7 +23,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-E.
+Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-F.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -42,7 +44,8 @@ implementation authorization: NOT YET
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
-014-F: NEXT
+014-F: COMPLETE — PASS
+014-G: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -51,7 +54,7 @@ production readiness: NOT ESTABLISHED
 ```text
 human product intent / evidence
         ↓
-canonical Project Context & Purpose
+canonical Project Context, Purpose & Vocabulary
         ↓
 current Concepts / mechanisms / policies / invariants
         ↓
@@ -72,9 +75,9 @@ historical architecture / implementation / incumbent UI
 
 # Phase-014 design boundary
 
-014-C through 014-E have now dispositioned all eighteen current Concepts for familiarity/reuse without authorizing any architecture or implementation choice.
+014-C through 014-E dispositioned all eighteen current Concepts for familiarity/reuse. 014-F reconciled cross-catalog terminology and expectation transfer. None authorizes architecture or implementation choice.
 
-Familiarity must not collapse:
+Familiarity/genericity must not collapse:
 
 ```text
 Identity / Participation / Access
@@ -88,7 +91,22 @@ Outcome Declaration / Export / Publication / delivery
 
 into familiar technical/workflow entities merely for conventionality.
 
-Conceptual reuse is not code, service, schema, workflow-engine, authorization-framework, version-control, reporting or publishing-infrastructure reuse.
+Likewise generic words such as `Role`, `Task`, `Status`, `Submission`, `Revision`, `Result`, `Workflow`, `Share` or `Publish` cannot become design authority merely because an implementation framework exposes similarly named constructs.
+
+Conceptual reuse/genericity is not code, service, schema, workflow-engine, authorization-framework, version-control, reporting or publishing-infrastructure reuse.
+
+# 014-G genericity guardrail
+
+Broader genericity may be adopted only when it removes incidental specificity **without weakening purpose, authority, lifecycle/history, disclosure or mapped understanding**.
+
+```text
+shared data shape != shared Concept
+shared vocabulary != shared Concept
+shared implementation possibility != shared Concept
+shared predecessor/successor pattern != shared history semantics
+```
+
+If broader generalization changes purpose/boundary, composition, dependence or mapping semantics, route/reopen the natural owner rather than treating the change as a harmless Phase-014 abstraction.
 
 # Reopening discipline
 
@@ -99,7 +117,7 @@ Conceptual reuse is not code, service, schema, workflow-engine, authorization-fr
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
 
-014-C found and repaired one Phase-011 defect. 014-D and 014-E found no additional upstream contradiction requiring reopen.
+014-C found and repaired one Phase-011 defect. 014-D through 014-F found no additional upstream contradiction requiring reopen.
 
 # Suspended downstream authority
 
@@ -107,4 +125,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
