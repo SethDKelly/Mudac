@@ -18,17 +18,28 @@ PF-01 supports all eighteen current Concepts in its capability envelope without 
 
 ## Phase-014 familiarity boundary
 
-014-C and 014-D retain their current Concept boundaries/names and require no dependence/PF-01 reopen.
+014-C through 014-E retain all current Concept identities and introduce no dependence-edge or PF-01 change.
 
 ```text
 familiar precedent != inclusion dependence
 reuse analogy != co-inclusion requirement
+shared history pattern != one Concept
 broader genericity hypothesis != product-family change
 ```
 
-For Family 2, familiar all-in-one `Session / Assignment / Form / Submission` models do not change the current dependence model merely because they package multiple meanings together elsewhere.
+Family-3 familiarity does not alter current inclusion relationships merely because Versioning, Provenance, Award, Outcome Declaration, Export and Publication may appear together in authoritative-result flows.
 
-Preserve the conceptual distinction between occurrence, responsibility, basis and judgment; any later generalization that actually invalidates a dependence/scope decision must explicitly reopen Phase 012.
+In particular:
+
+```text
+Outcome Declaration != automatic Export inclusion at runtime
+Export != Publication state
+Publication != delivery Concept
+```
+
+PF-01 capability inclusion remains as previously established; actual use remains profile/capability-conditioned.
+
+If later 014-G generalization genuinely invalidates a dependence or scope decision, Phase 012 must be explicitly reopened rather than rewritten inside Phase 014.
 
 ## Current handoff
 
@@ -39,7 +50,6 @@ Phase 013 COMPLETE — PASS
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
-014-E NEXT
+014-E COMPLETE — PASS
+014-F NEXT
 ```
-
-Proceed to 014-E using current PF-01/dependence knowledge as E1 authority.
