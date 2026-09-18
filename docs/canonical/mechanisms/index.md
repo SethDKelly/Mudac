@@ -24,45 +24,22 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-014 terminology result
+## Phase-014 genericity status
 
-014-F does not promote any derived/work-context term to Concept status.
+014-G does not promote any derived/work-context term to Concept status.
 
-Use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md) to avoid false familiarity:
+Reject genericity shortcuts such as:
 
 ```text
-Competition lifecycle Ready
-  != Competition Readiness
-  != Ranking Readiness
-  != Finalization Readiness
-
-Remaining Work
-  = projection over Outstanding Evaluation Obligations
-  != writable Task list
-
-Coverage Incomplete
-  != zero
-  != Satisfied because an exception was accepted
-
-Aggregate
-  != final score / official result
-
-Rank
-  != editable/public Leaderboard by implication
-  != Award recognition
-  != official outcome
-
-Reconciliation
-  != ticket/case lifecycle
-  != generic Resolve authority
-
-Live Operations
-  != Competition lifecycle state
+Remaining Work → Task / Work Item Concept
+Readiness      → generic writable Gate/Status
+Reconciliation → Ticket / Case Concept
+Aggregate/Rank → Result Concept
 ```
 
-`Official Outcome Revision` remains historical/counterexample vocabulary only.
+These mechanisms are useful precisely because they derive/explain other owners rather than becoming another source of truth.
 
-Shared status words or similar derivation shapes are not evidence that these mechanisms should become one generic workflow/readiness/result super-concept.
+Potential cross-context lessons such as historical satisfaction versus current eligibility and derive→recognize→declare layering move to 014-H as reusable knowledge candidates, not new mechanism/Concept hierarchy.
 
 ```text
 014-A COMPLETE — READY
@@ -71,5 +48,6 @@ Shared status words or similar derivation shapes are not evidence that these mec
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 ```
