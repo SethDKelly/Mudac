@@ -12,9 +12,10 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/)
 * [Invariants](invariants/)
 * [Experience](experience/)
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence topology through 013-I.
-* [Award, Finalization & Outcome Officiality Mapping](experience/outcome-officiality.md) — accepted 013-H mapping.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence topology through 013-J.
 * [External Representation, Disclosure & Release Mapping](experience/external-representation-release.md) — accepted 013-I mapping.
+* [Accessibility, Responsive & Degraded-Operation Mapping](experience/accessibility-resilience.md) — accepted 013-J mapping.
+* [Status, Feedback & Recovery Mapping](experience/status-feedback-recovery.md) — accepted 013-J mapping.
 
 # Governance
 
@@ -43,7 +44,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
-013-J: NEXT
+013-J: COMPLETE — PASS
+013-K: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -67,22 +69,20 @@ Mapping Authority Baseline
 accepted Experience owners
 ```
 
-013-I adds:
+013-J adds:
 
 ```text
-source authority != Export representation != Publication release != delivery
-actor Access != audience disclosure
-Export SourceBasis = exact / historically stable
-Export generation != Publication
-Export currency != Publication distribution state
-new/corrected source → new Export
-successor Outcome Declaration != successor Export != successor Publication
-withdrawal/supersession != historical release erasure
-recipient possession != current release authority / Access
-Publication Published != delivery/viewing success
+accessible / responsive / degraded / paper paths = same semantics
+device/session/QR possession != Access
+local working state != confirmed persistence != authority
+unknown result != success != failure
+retry/recovery reconciles current authority and converges
+stale local state cannot overwrite newer authority
+status is multidimensional / subject-qualified
+technical recovery capability != domain authority/disclosure
 ```
 
-The old `paper-export-publication.md` and `reconciliation-finalization.md` files are historical evidence only.
+The old `paper-export-publication.md` and `reconciliation-finalization.md` files remain historical evidence only.
 
 # Retrieval rule during Phase 013
 
@@ -93,4 +93,4 @@ The old `paper-export-publication.md` and `reconciliation-finalization.md` files
 5. use historical Experience material only as evidence;
 6. do not preload architecture/implementation except for explicit contamination/history analysis.
 
-Next: **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**.
+Next: **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
