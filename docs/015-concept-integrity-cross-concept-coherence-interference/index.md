@@ -5,8 +5,8 @@ Phase 015 is **IN PROGRESS**.
 ## Records
 
 - [015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning](015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md) — **Complete — READY**.
-- **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register** — Next.
-- 015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity.
+- [015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register](015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md) — **Complete — PASS**.
+- **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity** — Next.
 - 015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity.
 - 015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity.
 - 015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity.
@@ -40,9 +40,10 @@ The Base/Jackson Phase-009 definition, start gate and integrity/interference con
 014 COMPLETE — PASS
 015 IN PROGRESS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
