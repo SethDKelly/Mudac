@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -28,6 +28,21 @@ Phase 014 is **COMPLETE — PASS**. Current entry authority is [014-J — Phase 
 - the dependency-safe A–K sequence below.
 
 The gate does not itself certify integrity.
+
+## 015-B baseline result
+
+[015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register](015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md) is **COMPLETE — PASS**.
+
+It establishes:
+
+- concise integrity-subject baselines for all eighteen Concepts;
+- P-01–P-09 purpose-obligation coverage;
+- INV-001–INV-010 and T-01–T-10 audit anchors;
+- 48 directional `DIR-*` interference probes;
+- later `INT-F*` material-finding structure;
+- direct coverage of every retained Concept before whole-system closure.
+
+A `DIR-*` probe is planning evidence, not a finding or violation.
 
 ## Current integrity rule
 
@@ -63,8 +78,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | Group | Topic | Status |
 | --- | --- | --- |
 | 015-A | Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning | **Complete — READY** |
-| 015-B | Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register | **Next** |
-| 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | Planned |
+| 015-B | Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register | **Complete — PASS** |
+| 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | **Next** |
 | 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | Planned |
 | 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | Planned |
 | 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | Planned |
@@ -163,7 +178,8 @@ A confirmed structural integrity violation must be corrected in Phase 015.
 Phase 014 COMPLETE — PASS
 Phase 015 IN PROGRESS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -176,4 +192,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
