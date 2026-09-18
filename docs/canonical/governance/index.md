@@ -26,7 +26,8 @@ Jackson Concept Design: IN PROGRESS
 014: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -38,7 +39,35 @@ implementation authorization: NOT YET
 
 Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-Phase 014 owns familiarity/reuse/genericity analysis only. [014-B](../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md) establishes the evidence hierarchy and precedent register; it does not change current semantics.
+Phase 014 owns familiarity/reuse/genericity analysis only. [014-B](../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md) establishes the evidence hierarchy and precedent register. [014-C](../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md) completes the first concept-family dispositions.
+
+## Family-1 familiarity result
+
+014-C retains Competition, Division, Team, Panel, Identity, Participation, Alias and Access as current Concept names/boundaries.
+
+Preserve:
+
+```text
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Access permission != semantic authorship
+```
+
+Familiarity does not authorize collapse into generic `User / Role / Permission / Group` semantics.
+
+## Upstream repair governance
+
+014-C exposed one genuine pre-existing composition contradiction and repaired the natural Phase-011 canonical synchronization owner rather than hiding the issue inside a familiarity record.
+
+Current rule:
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+```
+
+An existing Outstanding obligation may remain narrowly actionable only when current policy and fresh Access permit that specific work. The historical 011-C record remains provenance and a later-correction note documents the change.
 
 ## Familiarity evidence governance
 
@@ -57,4 +86,4 @@ Architecture and implementation remain quarantined through the remaining Concept
 
 ## Current handoff
 
-Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
+Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
