@@ -9,9 +9,9 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md).
-6. Read current accepted Experience owners relevant to the work, including [Outcome Officiality](docs/canonical/experience/outcome-officiality.md) and [External Representation, Disclosure & Release](docs/canonical/experience/external-representation-release.md).
+6. Read current accepted Experience owners relevant to the work, including [Accessibility, Responsive & Degraded-Operation Mapping](docs/canonical/experience/accessibility-resilience.md) and [Status, Feedback & Recovery Mapping](docs/canonical/experience/status-feedback-recovery.md).
 7. Read the active [Phase 013](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) record.
-8. Treat older Experience adapters as historical/admitted evidence unless the Mapping Authority Baseline says otherwise.
+8. Treat older Experience adapters as historical evidence unless the Mapping Authority Baseline says otherwise.
 9. Use current synchronization owners for composition; mapping does not replace composition.
 10. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -32,7 +32,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
-013-J: NEXT
+013-J: COMPLETE — PASS
+013-K: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,7 +56,7 @@ Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliatio
 Preserve:
 
 - Identity != Participation != Access;
-- Panel membership != Evaluation Occurrence participation != Evaluation Obligation != Scorecard evidence;
+- Panel membership != occurrence participation != Evaluation Obligation != Scorecard evidence;
 - one Evaluation Obligation maps to at most one logical Scorecard;
 - Scorecard Draft != authority;
 - capture Actor != Judge semantic author / RepresentedAuthority;
@@ -66,18 +67,22 @@ Preserve:
 - Coverage factual state != exception disposition;
 - Rank is derived/non-editable;
 - calculated != recognized != Competition Finalized != official != public != delivered;
-- Outcome Declaration Current/Affected/Superseded currentness remains explicit;
-- source authority != Export representation != Publication release != delivery;
+- Outcome Declaration != Export != Publication != delivery;
 - actor Access != audience disclosure permission;
-- Export generation != Publication;
-- Export SourceBasis remains exact and historically stable;
 - Export currency != Publication distribution state;
-- corrected/new source that must be represented uses a new Export;
 - successor Outcome Declaration != successor Export != successor Publication;
 - withdrawal/supersession never erases historical release or external copies;
-- possession of URL/QR/file/printout != current release authority or Access;
-- Publication Published != transport/delivery/viewing success;
-- Organizer/support/technical privilege != Judge, exception, declaring, disclosure or publishing authority.
+- accessible/responsive/degraded/paper paths preserve the same domain semantics;
+- assistance does not transfer semantic authorship;
+- device/session/route/QR possession != current Access;
+- local working state != confirmed persistence != authoritative domain state;
+- paper fallback != second evaluation model;
+- unknown authoritative result != confirmed success or confirmed failure;
+- retry/recovery must reconcile current authority and converge rather than duplicate effects;
+- stale local state cannot overwrite newer authority;
+- status is multidimensional and subject-qualified, not one universal badge;
+- working persistence feedback != semantic commitment;
+- technical recovery privilege != broader Access, disclosure or domain authority.
 
 Map the established action surface:
 
@@ -89,7 +94,7 @@ S — system-triggered conceptual reaction
 X — intentionally unavailable generic application action
 ```
 
-Do not expose `P` or `X` as generic user actions. Automatic declaration→publication, correction→auto-withdraw/regenerate/republish, generic Versioning/Provenance administration, manual Coverage/Rank editing and universal override remain unavailable.
+Do not expose `P` or `X` as generic user actions. Accessibility/recovery does not invent new authority actions or weaker substitutes for unavailable high-consequence actions.
 
 ## Explanation-order rule
 
@@ -98,13 +103,15 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
+Accessible/responsive/degraded presentation may change mechanics or information density but cannot waive semantic prerequisites or consequences.
+
 ## Historical Experience adapters
 
-- `docs/canonical/experience/reconciliation-finalization.md` — historical only; current semantics migrated in 013-G/H.
-- `docs/canonical/experience/paper-export-publication.md` — historical only; current semantics migrated in 013-F/I.
+- `docs/canonical/experience/reconciliation-finalization.md` — historical only.
+- `docs/canonical/experience/paper-export-publication.md` — historical only.
 
 ## Current next task
 
 Proceed to:
 
-> **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**
+> **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**
