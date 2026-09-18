@@ -1,19 +1,15 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the cross-catalog terminology audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the broader-genericity audit, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
-tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, reentry]
+tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, genericity, reentry]
 sources:
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md
   - resource: ../../014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md
-  - resource: ../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md
-  - resource: ../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
-  - resource: ../../014-familiarity-reuse-genericity/014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md
-  - resource: ../../014-familiarity-reuse-genericity/014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md
-  - resource: ../project/domain-vocabulary-expectation-transfer.md
+  - resource: ../../014-familiarity-reuse-genericity/014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md
   - resource: downstream-authority-quarantine.md
 ---
 
@@ -23,7 +19,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-F.
+Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-G.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -45,7 +41,8 @@ implementation authorization: NOT YET
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
-014-G: NEXT
+014-G: COMPLETE — PASS
+014-H: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -54,7 +51,7 @@ production readiness: NOT ESTABLISHED
 ```text
 human product intent / evidence
         ↓
-canonical Project Context, Purpose & Vocabulary
+canonical Project Context & Purpose
         ↓
 current Concepts / mechanisms / policies / invariants
         ↓
@@ -73,40 +70,27 @@ historical architecture / implementation / incumbent UI
         ≠ Concept Design constraint
 ```
 
-# Phase-014 design boundary
+# Phase-014 genericity boundary
 
-014-C through 014-E dispositioned all eighteen current Concepts for familiarity/reuse. 014-F reconciled cross-catalog terminology and expectation transfer. None authorizes architecture or implementation choice.
-
-Familiarity/genericity must not collapse:
+014-G adopts:
 
 ```text
-Identity / Participation / Access
-Panel / Evaluation Occurrence / Evaluation Obligation
-Rubric / exact Evaluation Basis / Scorecard authority
-Versioning / Provenance
-Rank basis / Award recognition
-Competition Finalization / Outcome Declaration
-Outcome Declaration / Export / Publication / delivery
+Generic at the boundary; specific in purpose.
 ```
 
-into familiar technical/workflow entities merely for conventionality.
+Conceptual parameterization means peer identities/bases may be supplied abstractly without importing peer internals. It does **not** authorize implementation abstraction choices.
 
-Likewise generic words such as `Role`, `Task`, `Status`, `Submission`, `Revision`, `Result`, `Workflow`, `Share` or `Publish` cannot become design authority merely because an implementation framework exposes similarly named constructs.
+In particular, Phase 014 does not authorize:
 
-Conceptual reuse/genericity is not code, service, schema, workflow-engine, authorization-framework, version-control, reporting or publishing-infrastructure reuse.
+- generic entity/base-class hierarchies;
+- common database tables because state shapes resemble one another;
+- workflow engines because multiple Concepts have lifecycle actions;
+- one universal status/currentness machine;
+- generic correction/revision services that erase owner-specific history;
+- shared authorization/version/report/publishing infrastructure as conceptual evidence;
+- implementation inheritance or schema unification based on abstract parameter notation.
 
-# 014-G genericity guardrail
-
-Broader genericity may be adopted only when it removes incidental specificity **without weakening purpose, authority, lifecycle/history, disclosure or mapped understanding**.
-
-```text
-shared data shape != shared Concept
-shared vocabulary != shared Concept
-shared implementation possibility != shared Concept
-shared predecessor/successor pattern != shared history semantics
-```
-
-If broader generalization changes purpose/boundary, composition, dependence or mapping semantics, route/reopen the natural owner rather than treating the change as a harmless Phase-014 abstraction.
+The Team refinement from 014-G is conceptual only: intrinsic Team semantics no longer require competitors to be students, while PF-01 still binds Team to student teams. It does not authorize a generic competitor framework.
 
 # Reopening discipline
 
@@ -117,7 +101,7 @@ If broader generalization changes purpose/boundary, composition, dependence or m
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
 
-014-C found and repaired one Phase-011 defect. 014-D through 014-F found no additional upstream contradiction requiring reopen.
+014-C found and repaired one Phase-011 defect. 014-D through 014-G found no additional upstream contradiction requiring reopen.
 
 # Suspended downstream authority
 
@@ -125,4 +109,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
