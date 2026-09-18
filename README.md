@@ -10,6 +10,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
 * [`docs/canonical/`](docs/canonical/) — current conceptual product knowledge.
 * [`docs/canonical/project/domain-vocabulary-expectation-transfer.md`](docs/canonical/project/domain-vocabulary-expectation-transfer.md) — current cross-catalog terminology/expectation-transfer authority.
+* [`docs/canonical/project/reusable-design-knowledge.md`](docs/canonical/project/reusable-design-knowledge.md) — reusable concept/pattern candidate registry; links to natural owners and does not duplicate Concept truth.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — active Phase 014.
 
 ## Current status
@@ -29,7 +30,8 @@ Jackson Concept Design: IN PROGRESS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
 014-G: COMPLETE — PASS
-014-H: NEXT
+014-H: COMPLETE — PASS
+014-I: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,9 +47,7 @@ MUDAC adopts one current product/application variant:
 
 ## Phase-014 posture
 
-All three Concept-family familiarity audits retain the eighteen current Concept names/boundaries. 014-F governs safe familiar vocabulary around those owners.
-
-014-G confirms:
+All three Concept-family familiarity audits retain the eighteen current Concept names/boundaries. 014-F governs safe familiar vocabulary. 014-G establishes:
 
 ```text
 Generic at the boundary; specific in purpose.
@@ -57,10 +57,18 @@ shared history shape != shared lifecycle
 
 One narrow canonical refinement removes incidental `student` specificity from the intrinsic Team Concept; PF-01 still binds Team to student teams.
 
-No `Group`, `Task`, `Result`, `Historical Record`, generic `Occurrence`, or merged Export/Publication super-Concept is introduced.
+014-H now preserves reusable design knowledge without creating another catalog specification.
 
-Potential reusable knowledge such as exact-basis binding, explicit successor history, represented-authority provenance, and source→representation→release separation moves to 014-H for deliberate disposition rather than becoming another MUDAC catalog.
+Broad reusable Concept-knowledge candidates include Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication. Competition/evaluation-family candidates include Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard and Award.
+
+Reusable pattern knowledge includes exact-basis binding, explicit successor without silent rewrite, actor/represented-authority/source separation, historical-accomplishment/current-eligibility separation, derivation→recognition→declaration and source→representation→release→delivery.
+
+```text
+catalog candidate != second Concept specification
+pattern candidate != new MUDAC Concept
+conceptual reuse != implementation reuse
+```
 
 ## Current direction
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
