@@ -11,7 +11,8 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
-014-E NEXT
+014-E COMPLETE — PASS
+014-F NEXT
 ```
 
 Phase 014 familiarity analysis must compare precedent expectations against the actual mapped user-visible semantics established here rather than concept names alone.
@@ -36,34 +37,25 @@ Phase 014 familiarity analysis must compare precedent expectations against the a
 - `reconciliation-finalization.md` — historical only;
 - `paper-export-publication.md` — historical only.
 
-## Familiarity comparison rule after 014-D
+## Cross-catalog familiarity constraints
 
-Mapped terminology may use familiar explanatory language only while preserving current semantics.
-
-```text
-Evaluation Occurrence != generic session/task
-Evaluation Obligation != writable task/work-item authority
-Rubric current working definition != exact bound Evaluation Basis
-Scorecard Draft != submitted/finalized authority
-Scorecard != Aggregate / Rank / official outcome
-```
-
-Where useful, `assigned evaluation`, `evaluation responsibility`, `Judge Scorecard` or similar explanatory labels may be evaluated later in 014-F, but terminology must not alter source ownership, finality, history or action authority.
-
-Preserve especially:
+Completed family audits establish that user-facing familiar vocabulary must not erase these mapped meanings:
 
 ```text
-occurrence participation != responsibility
-responsibility != judgment evidence
-historical obligation satisfaction != current evidence eligibility
-one Evaluation Obligation → at most one logical Scorecard
-result unknown != success != failure
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Scorecard Draft != authoritative judgment
+Versioning != Provenance
+calculated != recognized != official != public != delivered
+Outcome Declaration Affected != Superseded
+Export currency != Publication state
+Publication Published != delivery / possession
 ```
 
-014-D required no Phase-013 mapping reopen.
+014-F should now audit words such as `role`, `assignment`, `session`, `submit`, `complete`, `revision`, `official`, `final`, `report`, `export`, `publish`, `release`, `withdraw`, `affected`, `stale`, `superseded`, `replace`, and `delivered` across all accepted mappings.
 
-`Judging Encounter` remains historical/counterexample evidence and is not restored by familiarity.
+The goal is consistent expectation transfer, not one universal vocabulary that flattens distinct Concept semantics.
 
 ## Current next work
 
-Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
+Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
