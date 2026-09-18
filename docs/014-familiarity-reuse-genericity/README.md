@@ -1,6 +1,6 @@
 # Phase 014 — Familiarity, Reuse & Genericity
 
-Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G PASS; 014-H next.**
+Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E PASS; 014-F PASS; 014-G PASS; 014-H PASS; 014-I next.**
 
 Phase 014 follows completed Phase 013 Concept Mapping. It audits whether the mature MUDAC concept system uses familiar conceptual ideas where they genuinely transfer correct expectations, avoids false familiarity, removes incidental product-specificity where safe, justifies retained novelty, and preserves reusable design knowledge without weakening established authority boundaries.
 
@@ -21,27 +21,43 @@ Architecture and implementation remain suspended.
 014-E Family-3 familiarity/reuse audit      COMPLETE — PASS
 014-F terminology/expectation-transfer      COMPLETE — PASS
 014-G broader genericity/duplication audit  COMPLETE — PASS
+014-H novelty/reusable-knowledge audit      COMPLETE — PASS
 ```
 
 Start from current canonical knowledge under `docs/canonical/`. Historical adapters and quarantined architecture/implementation remain evidence only where explicitly relevant.
 
-## Governing familiarity / genericity rules
+## Governing rules
 
 > A familiar precedent is useful only when prior understanding would transfer mostly correct expectations about MUDAC purpose and behavior.
 
 > **Generic at the boundary; specific in purpose.**
+
+> **Reuse the behavioral idea and accumulated design knowledge, not merely the noun, data shape, workflow, or implementation mechanism.**
 
 ```text
 familiarity != implementation mimicry
 reuse != Concept merging by resemblance
 genericity != abstraction for abstraction's sake
 shared parameter != shared purpose
-shared history shape != shared lifecycle
+catalog candidate != duplicate specification
+pattern candidate != new MUDAC Concept
 ```
 
-## Completed Concept-family results
+## Completed Concept-family / terminology / genericity results
 
-014-C through 014-E retain all eighteen current Concept names/boundaries.
+014-C through 014-E retain all eighteen current Concept names/boundaries. 014-F establishes [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md). 014-G confirms the mature parameterized boundaries and adopts one narrow Team refinement:
+
+```text
+Team intrinsic purpose
+  student competing group
+    → competing group acting as one unit
+
+PF-01 product binding
+  competing group
+    → student team
+```
+
+No Concept merge, split or super-Concept is adopted.
 
 Preserve especially:
 
@@ -57,54 +73,63 @@ Outcome Declaration != Export != Publication != delivery
 Export currency != Publication state
 ```
 
-014-C repaired one event-completion Access composition defect. 014-D and 014-E found no additional upstream contradiction requiring reopen.
+## 014-H reusable-knowledge result
 
-## Cross-catalog terminology result
+[014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit](014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md) establishes [Reusable Concept Knowledge & Design Patterns](../canonical/project/reusable-design-knowledge.md) as a durable candidate/lesson registry without creating a second Concept catalog.
 
-[014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit](014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md) retains the eighteen-Concept vocabulary and establishes four terminology classes:
-
-```text
-T1 canonical semantic term
-T2 qualified explanatory label
-T3 analogy-only term
-T4 high-risk generic term
-```
-
-The durable current vocabulary owner is [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../canonical/project/domain-vocabulary-expectation-transfer.md).
-
-## Broader genericity result
-
-[014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) confirms that the 010-G parameterized boundaries are generally sufficient.
-
-One narrow broader-genericity refinement is adopted:
+Broad reusable Concept-knowledge candidates (`CK-1`) are:
 
 ```text
-Team intrinsic purpose
-  student competing group
-    → competing group acting as one unit
-
-PF-01 product binding
-  competing group
-    → student team
+Identity
+Participation
+Alias
+Access
+Versioning
+Provenance
+Outcome Declaration
+Export
+Publication
 ```
 
-No Concept merge, split or new super-Concept is adopted.
+Domain-family reusable candidates (`CK-2`) are:
 
-Rejected super-concepts include generic `Group`, `Scoped Relationship`, `Occurrence`, `Task/Work Item`, `Evaluation Record`, `Historical/Correctable Record`, `Result`, and merged `Representation/Artifact` ownership.
+```text
+Competition
+Division
+Team
+Panel
+Evaluation Occurrence
+Evaluation Obligation
+Rubric
+Scorecard
+Award
+```
 
-Repeated structures are treated as reusable design-pattern candidates, not new application Concepts:
+Reusable pattern candidates (`PK`) include:
 
 ```text
 scoped opaque-reference parameterization
 exact-basis binding
 explicit successor without silent historical rewrite
 actor vs represented authority vs source
-historical satisfaction vs current eligibility
-source authority → representation → release
-derivation → recognition → official declaration
+historical accomplishment vs current eligibility
+derivation → recognition → declaration
+source → representation → release → delivery
+context capability without authorship transfer
 ```
 
-These move to 014-H for reusable-knowledge/catalog disposition.
+Retained novelty is justified particularly around:
+
+```text
+Evaluation Occurrence != Evaluation Obligation
+historical satisfaction != current evidence eligibility
+Outcome Declaration Affected != Superseded
+calculated != recognized != official
+source authority != representation != release != delivery
+Identity != Participation != Access
+```
+
+No external/universal catalog is created by Phase 014. Candidate promotion requires additional cross-context evidence.
 
 ## Approved subgroup sequence
 
@@ -117,8 +142,8 @@ These move to 014-H for reusable-knowledge/catalog disposition.
 | 014-E | Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit | **Complete — PASS** |
 | 014-F | Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit | **Complete — PASS** |
 | 014-G | Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit | **Complete — PASS** |
-| 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | **Next** |
-| 014-I | Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check | Planned |
+| 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | **Complete — PASS** |
+| 014-I | Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check | **Next** |
 | 014-J | Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff | Planned exit review |
 
 ## Current boundary
@@ -133,7 +158,8 @@ Phase 014 IN PROGRESS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -143,4 +169,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
