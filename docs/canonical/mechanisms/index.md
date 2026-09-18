@@ -30,22 +30,28 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 calculated != recognized != official != public != delivered
 Outcome Declaration != Export != Publication != delivery
 Export currency != Publication state
-
-accessible / responsive / degraded / paper representation
-  != alternate derived-state semantics
-
-local/cached derived presentation
-  != current authoritative derivation
-
-result unknown
-  != permission to present derived/currentness state as confirmed
-
-recovery
-  → re-establish current source/authority
-  → recompute or re-explain derived state as needed
+accessible / responsive / degraded / paper representation != alternate derived-state semantics
+local/cached derived presentation != current authoritative derivation
+result unknown != confirmed current derived state
 ```
 
-Derived mechanisms remain projections from current authoritative sources even when presented offline/degraded. A cached Aggregate, Rank or readiness result does not become current merely because it is locally available.
+Derived mechanisms remain projections from current authoritative sources even when presented offline/degraded.
+
+## Phase-014 familiarity boundary
+
+Phase 014 is **IN PROGRESS** after 014-A completed with READY.
+
+Cross-catalog familiarity review must include mechanism/work-context names such as Readiness, Remaining Work, Coverage, Aggregate, Rank and Reconciliation because familiar vocabulary can import false expectations even when the subject is correctly not a Concept.
+
+```text
+familiar workflow/task/status term
+  != source authority
+
+familiar ranking/coverage term
+  != permission to make derived state writable
+```
+
+Phase 014 may improve terminology or reusable explanatory knowledge, but it must not promote these mechanisms/processes into Concepts merely to match a conventional application pattern.
 
 See:
 
@@ -53,12 +59,12 @@ See:
 - [Whole-Experience Action, Explanation & Authority Traceability](../experience/action-authority-traceability.md);
 - [Final Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
 
-Phase 014 may evaluate familiarity/reuse/genericity of these mechanisms but must not promote a derived mechanism into source authority merely to make the model look more conventional.
-
 ```text
 Phase 010 COMPLETE — PASS
 Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
 Phase 013 COMPLETE — PASS
-Phase 014 NOT STARTED — START GATE NEXT
+Phase 014 IN PROGRESS
+014-A COMPLETE — READY
+014-B NEXT
 ```
