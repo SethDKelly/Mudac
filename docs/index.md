@@ -15,25 +15,25 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Concepts](canonical/concepts/) — current eighteen-Concept catalog.
 * [Synchronizations](canonical/synchronizations/) — composition and application-action authority.
 * [Dependence](canonical/dependence/) — dependence, whole-graph validation and PF-01 scope.
-* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — Phase-013 authority/evidence topology through 013-K.
+* [Mapping Authority Baseline](canonical/experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
 * [Experience](canonical/experience/) — complete current mapping-owner set plus historical evidence adapters.
-* [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md) — final cross-owner mapping integrity owner accepted in 013-K.
+* [Whole-Experience Action, Explanation & Authority Traceability](canonical/experience/action-authority-traceability.md) — final cross-owner mapping integrity owner.
 * [Mechanisms](canonical/mechanisms/) — derived/supporting subjects and processes.
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
 
-# Active phase
+# Current phase
 
-[Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **IN PROGRESS**.
+[Phase 013 — Concept Mapping, Interaction Semantics & User-Visible Representation](013-concept-mapping-interaction-semantics-user-visible-representation/) is **COMPLETE — PASS**.
 
-Completed: 013-A through 013-K. The next work is:
+The next work is the start gate for:
 
-> **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**
+> **[Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/)**
 
-013-L is a consolidation/exit review. It should not invent new mapping semantics unless reconciliation exposes a genuine defect.
+Phase 014 is **NOT STARTED**. Its start gate owns scope, criteria, evidence selection and dependency-safe subphase planning before substantive review begins.
 
-# Whole-experience mapping rules
+# Final Phase-013 mapping rules
 
 ```text
 context / capacity / audience
@@ -73,19 +73,8 @@ source authority != officiality != Export != Publication != delivery
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: IN PROGRESS
-013-A: COMPLETE — READY
-013-B: COMPLETE — PASS
-013-C: COMPLETE — PASS
-013-D: COMPLETE — PASS
-013-E: COMPLETE — PASS
-013-F: COMPLETE — PASS
-013-G: COMPLETE — PASS
-013-H: COMPLETE — PASS
-013-I: COMPLETE — PASS
-013-J: COMPLETE — PASS
-013-K: COMPLETE — PASS
-013-L: NEXT
+013: COMPLETE — PASS
+014: NOT STARTED — START GATE NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -105,8 +94,8 @@ Judge/Organizer views, audience profiles, Awards, official-but-non-public operat
 010 foundational completion     COMPLETE — PASS
 011 composition/synchronization COMPLETE — PASS
 012 dependence/product-family   COMPLETE — PASS
-013 mapping/representation      IN PROGRESS — 013-L NEXT
-014 familiarity/reuse/genericity
+013 mapping/representation      COMPLETE — PASS
+014 familiarity/reuse/genericity NOT STARTED — START GATE NEXT
 015 integrity/interference
 016 scenario/misfit/failure/adversarial
 017 methodology closure
