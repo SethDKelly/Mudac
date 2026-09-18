@@ -70,7 +70,9 @@ current dependence / PF-01 scope
         ↓
 completed Phase-013 mapping authority
         ↓
-Phase-014 familiarity / reuse / genericity analysis
+completed Phase-014 familiarity / reuse / genericity refinement
+        ↓
+Phase-015 whole-system integrity audit
         ↓
 later Jackson design phases
 
@@ -118,7 +120,7 @@ The Team refinement from 014-G is conceptual only: intrinsic Team semantics no l
 
 Reusable pattern knowledge such as exact-basis binding, explicit successor without silent rewrite, represented-authority provenance, historical-accomplishment/current-eligibility separation and source→representation→release layering remains design knowledge rather than architecture.
 
-# 014-I propagation conclusion
+# Phase-014 exit conclusion
 
 014-I confirms:
 
@@ -132,6 +134,8 @@ known Phase-014 contradiction deferred to Phase 015 → NONE
 The 014-C Event Completed/Access defect is repaired in the current Phase-011 synchronization owner; the historical 011-C record is annotated rather than rewritten. The 014-G Team refinement is current in the Team owner while PF-01 remains student-team specific. Vocabulary and reusable-knowledge registries remain non-overriding.
 
 
+
+# Reopening discipline
 
 - purpose/boundary defect → natural Concept owner / Phase 010 as appropriate;
 - composition/action defect → Phase 011;
