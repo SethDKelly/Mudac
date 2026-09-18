@@ -36,29 +36,26 @@ dependence order != navigation order
 synchronization chain != mandatory wizard
 ```
 
-013-I preserves scope versus user-visible mapping:
+013-J preserves scope versus operating profile:
 
 ```text
-Export included in PF-01
-  != every source state must be exported
+accessible interaction
+  != separate product variant
 
-Publication included in PF-01
-  != every Export must be published
+degraded connectivity
+  != separate authority model
 
-official Outcome Declaration
-  != Publication required
+paper fallback
+  != separate evaluation capability family
 
-Export without Publication
-  = coherent PF-01 state
+mobile / shared-device / alternate-input use
+  != different Concept inclusion
 
-official-but-non-public
-  = coherent PF-01 state
-
-recipient possession
-  != Access inclusion/dependence
+recovery capability
+  != broader Access or semantic authority
 ```
 
-Audience profiles and release state are mapping/composition semantics, not new product-family variants.
+Accessibility, responsive presentation, degraded operation and recovery are mapping/operating profiles over PF-01, not new product-family variants or direct dependence edges.
 
 ## Current handoff
 
@@ -74,7 +71,8 @@ Phase 013 IN PROGRESS
 013-G COMPLETE — PASS
 013-H COMPLETE — PASS
 013-I COMPLETE — PASS
-013-J NEXT
+013-J COMPLETE — PASS
+013-K NEXT
 ```
 
-Proceed to **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+Proceed to **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit** using [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
