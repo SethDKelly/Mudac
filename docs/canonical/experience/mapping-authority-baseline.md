@@ -1,20 +1,21 @@
 ---
 type: Canonical Mapping Authority Baseline
 title: Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline
-description: "Current Phase-013 authority/evidence classification and Experience-owner topology through 013-K whole-experience mapping-integrity audit."
+description: "Final reconciled Phase-013 authority/evidence classification and Experience-owner topology after 013-L exit review."
 status: stable
 tags: [canonical, experience, mapping, authority, evidence, terminology, ownership, phase-013]
 sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md
   - resource: phase-013-entry-handoff.md
 ---
 
 # Purpose
 
-Provide the durable Phase-013 baseline for deciding what mapping knowledge is current authority, what is historical evidence, and where user-visible semantics belong.
+Provide the durable final Phase-013 baseline for deciding what mapping knowledge is current authority, what is historical evidence, and where user-visible semantics belong.
 
-Architecture and implementation remain outside mapping authority.
+Phase 013 is **COMPLETE — PASS**. Architecture and implementation remain outside mapping authority and remain suspended pending later methodology closure.
 
 # Authority order
 
@@ -29,7 +30,7 @@ Current Dependence / PF-01 Scope
   ↓
 Policies + Invariants
   ↓
-Phase 013 Entry Authority
+Phase 013 Mapping Entry Authority
   ↓
 THIS baseline
   ↓
@@ -38,7 +39,7 @@ accepted Experience owners
 
 Experience mapping explains and exposes current semantics; it does not replace upstream ownership.
 
-# Current accepted Experience owners through 013-K
+# Final accepted Experience owners
 
 | Owner | Natural subject | Accepted |
 | --- | --- | --- |
@@ -55,11 +56,11 @@ Experience mapping explains and exposes current semantics; it does not replace u
 | [Status, Feedback & Recovery Mapping](status-feedback-recovery.md) | multidimensional status, uncertainty, confirmation and recovery | 013-J |
 | [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) | cross-owner explanation order, action traceability, role/profile consistency and mapping-integrity guardrails | 013-K |
 
-These owners are the complete current Experience mapping corpus entering 013-L.
+This is the complete current Experience mapping corpus after Phase 013.
 
 # Historical Experience evidence only
 
-The following remain in the repository for provenance and must not compete with current owners:
+The following remain for provenance and must not compete with current owners:
 
 - `reconciliation-finalization.md` — historical mixed adapter; current semantics migrated by 013-G/H;
 - `paper-export-publication.md` — historical mixed adapter; current semantics migrated by 013-F/I.
@@ -82,6 +83,7 @@ Owner-qualified state vocabularies remain distinct:
 Outcome Declaration: Current | Affected | Superseded
 Export currency:      Current | Affected | Stale | Superseded | Retired
 Publication:          Published | Withdrawn | Superseded
+Evaluation Obligation: Outstanding | Satisfied | Excused | Cancelled
 ```
 
 `Complete`, `Finalized`, `Satisfied`, `Ready`, `Current`, `Published` and `Resolved` are subject-qualified meanings, not generic workflow status.
@@ -106,7 +108,7 @@ terminal obligations never reopen
 
 # Event-completion reconciliation
 
-013-K repairs an earlier Judge-entry overstatement.
+013-K repaired an earlier Judge-entry overstatement:
 
 ```text
 Event Completed
@@ -268,11 +270,17 @@ The sole current product/application variant remains:
 
 Judge/Organizer profiles, Award absence/presence, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessible/degraded operation, and Current/Affected/Superseded history are profiles/states—not product variants.
 
-# Phase-013 risk status after 013-K
+# Phase-013 risk closure
 
 MAP-R01 through MAP-R16 have no unresolved semantic blocker in the current Experience corpus.
 
-013-L must verify canonical reconciliation and exit criteria; this risk status does not authorize architecture/implementation re-entry.
+Future defects reopen the natural semantic owner under change governance; Phase-013 closure does not make mapping immutable.
+
+# Phase-014 handoff
+
+Phase 014 is **Familiarity, Reuse & Genericity**.
+
+Its start gate owns subgroup planning. Phase 014 may evaluate names, conceptual familiarity, reusable patterns, genericity and specialization pressure, but it must preserve the authority seams locked by this baseline unless a genuine upstream defect is explicitly reopened.
 
 # Reopen routing
 
@@ -281,11 +289,11 @@ purpose conflict → Project Purpose authority
 undefined Concept behavior/state/action → natural Concept owner / Phase 010 if boundary-level
 missing/invalid application composition → Phase 011
 incorrect dependence/PF-01 scope → Phase 012
-mapping terminology/representation/ownership defect → Phase 013 natural Experience owner
+mapping terminology/representation/ownership defect → current natural Experience owner
 stale historical wording with clear current meaning → repair current owner, do not reopen upstream
 ```
 
-# Current state
+# Final Phase-013 state
 
 ```text
 013-A  COMPLETE — READY
@@ -299,7 +307,9 @@ stale historical wording with clear current meaning → repair current owner, do
 013-I  COMPLETE — PASS
 013-J  COMPLETE — PASS
 013-K  COMPLETE — PASS
-013-L  NEXT
+013-L  COMPLETE — PASS
+PHASE 013 COMPLETE — PASS
+PHASE 014 NOT STARTED — START GATE NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
