@@ -4,32 +4,26 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 
 # Current conceptual knowledge
 
-* [Project Context & Purpose](project/) — current mandate and purpose baseline.
-* [Concepts](concepts/) — current eighteen-Concept catalog.
-* [Synchronizations](synchronizations/) — current composition/application-action authority.
-* [Dependence](dependence/) — current dependence, whole-graph validation and PF-01 scope.
-* [Mechanisms](mechanisms/) — derived/supporting subjects and processes.
-* [Policies](policies/) — governing/configurable competition semantics.
-* [Invariants](invariants/) — cross-cutting conceptual constraints.
-* [Experience](experience/) — current Phase-013 mapping authority plus explicitly classified admitted/historical evidence.
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current mapping authority/evidence/ownership baseline through 013-H.
-* [Experience Context and Participation Modes](experience/context-role-modes.md) — accepted 013-C mapping.
-* [Judge Entry, Participation & Readiness Mapping](experience/judge-onboarding.md) — accepted 013-C mapping.
-* [Organizer Competition Preparation & Readiness Mapping](experience/organizer-preparation.md) — accepted 013-D mapping.
-* [Judge Active Evaluation Mapping](experience/judge-evaluation.md) — accepted 013-E mapping.
-* [Authority Lineage, Capture & Correction Mapping](experience/authority-lineage-correction.md) — accepted 013-F mapping.
-* [Organizer Live Operations & Remaining Work Mapping](experience/live-operations.md) — accepted 013-G live-operation mapping.
-* [Reconciliation & Derived Outcome-State Mapping](experience/reconciliation-derived-state.md) — accepted 013-G reconciliation/derived-state mapping.
-* [Award, Finalization & Outcome Officiality Mapping](experience/outcome-officiality.md) — accepted 013-H Award/finalization/declaration/successor mapping.
+* [Project Context & Purpose](project/)
+* [Concepts](concepts/)
+* [Synchronizations](synchronizations/)
+* [Dependence](dependence/)
+* [Mechanisms](mechanisms/)
+* [Policies](policies/)
+* [Invariants](invariants/)
+* [Experience](experience/)
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence topology through 013-I.
+* [Award, Finalization & Outcome Officiality Mapping](experience/outcome-officiality.md) — accepted 013-H mapping.
+* [External Representation, Disclosure & Release Mapping](experience/external-representation-release.md) — accepted 013-I mapping.
 
 # Governance
 
-* [Governance](governance/) — methodology, documentation/change governance, validation and design/implementation boundary.
+* [Governance](governance/) — methodology, documentation/change governance and design/implementation boundary.
 
 # Suspended downstream knowledge
 
-* [Architecture](architecture/) — preserved downstream candidates; suspended as Concept Design constraints.
-* [Implementation](implementation/) — preserved implementation candidates/tooling plus frozen bootstrap facts; suspended as current domain realization authority.
+* [Architecture](architecture/) — preserved downstream candidates; suspended.
+* [Implementation](implementation/) — preserved downstream candidates/tooling plus frozen bootstrap facts; suspended as current domain authority.
 
 # Current methodology posture
 
@@ -48,7 +42,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-F: COMPLETE — PASS
 013-G: COMPLETE — PASS
 013-H: COMPLETE — PASS
-013-I: NEXT
+013-I: COMPLETE — PASS
+013-J: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -69,38 +64,33 @@ Phase 013 Mapping Entry Authority
   ↓
 Mapping Authority Baseline
   ↓
-accepted Experience owners from completed Phase-013 workstreams
+accepted Experience owners
 ```
 
-013-H adds:
+013-I adds:
 
 ```text
-calculated != ranking ready != recognized != Finalized != official != public != delivered
-Ranking Ready candidate != conferred Award
-rank-derived Award != discretionary Award
-later Rank/source change != automatic Award transfer
-Finalization Readiness != Competition Finalized
-ordinary closeout = Competition.finalize + OutcomeDeclaration.declare
-ordinary closeout success = Competition Finalized + current Outcome Declaration
-Outcome Declaration = Current | Affected | Superseded
-Affected != Superseded
-corrected calculation != successor official authority
-same visible result != same declared basis
-successor declaration != re-finalize Competition
-Outcome Declaration != Export != Publication != delivery
+source authority != Export representation != Publication release != delivery
+actor Access != audience disclosure
+Export SourceBasis = exact / historically stable
+Export generation != Publication
+Export currency != Publication distribution state
+new/corrected source → new Export
+successor Outcome Declaration != successor Export != successor Publication
+withdrawal/supersession != historical release erasure
+recipient possession != current release authority / Access
+Publication Published != delivery/viewing success
 ```
 
-Official authority arises only from explicit Outcome Declaration. An Affected declaration remains the latest declared official authority until an explicit successor is confirmed.
-
-The old `reconciliation-finalization.md` file is historical evidence only; it owns no current mapping semantics.
+The old `paper-export-publication.md` and `reconciliation-finalization.md` files are historical evidence only.
 
 # Retrieval rule during Phase 013
 
-1. load the active Phase-013 record for the task;
+1. load the active Phase-013 record;
 2. load [Mapping Authority Baseline](experience/mapping-authority-baseline.md);
-3. load task-relevant Project / Concepts / Synchronizations / Dependence / Policies / Invariants;
+3. load relevant current Project / Concepts / Synchronizations / Dependence / Policies / Invariants;
 4. load accepted Experience owners relevant to the task;
-5. use remaining older Experience material only as admitted/historical evidence;
-6. do not preload architecture/implementation except for explicit contamination/history work.
+5. use historical Experience material only as evidence;
+6. do not preload architecture/implementation except for explicit contamination/history analysis.
 
-Next: **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**.
+Next: **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**.
