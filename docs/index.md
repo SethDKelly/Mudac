@@ -147,7 +147,8 @@ Identity != Participation != Access
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
-015-A: NEXT — START GATE
+015-A: COMPLETE — READY
+015-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
