@@ -151,7 +151,8 @@ No external/universal catalog is created by Phase 014. Candidate promotion requi
 
 ```text
 Phase 013 COMPLETE — PASS
-Phase 014 IN PROGRESS
+Phase 014 COMPLETE — PASS
+015 NOT STARTED — 015-A START GATE NEXT
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
