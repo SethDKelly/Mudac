@@ -16,112 +16,81 @@ Phase 012  COMPLETE — PASS
 013-F      COMPLETE — PASS
 013-G      COMPLETE — PASS
 013-H      COMPLETE — PASS
-013-I      NEXT — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping
+013-I      COMPLETE — PASS
+013-J      NEXT — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping
 ```
 
 Start with:
 
-* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification and owner topology through 013-H.
-* [Experience Context and Participation Modes](context-role-modes.md) — 013-C current context/multi-capacity mapping.
-* [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — 013-C Judge-entry/readiness mapping.
-* [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — 013-D preparation/readiness mapping.
-* [Judge Active Evaluation Mapping](judge-evaluation.md) — 013-E active evaluation through initial Finalization.
-* [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) — 013-F amendment/capture/correction/invalidation/replacement/history mapping.
-* [Organizer Live Operations & Remaining Work Mapping](live-operations.md) — 013-G event-day coordination and remaining work.
-* [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) — 013-G reconciliation, evidence eligibility, Coverage/Aggregate/Rank/readiness.
-* [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) — 013-H Award recognition, Competition Finalization, Outcome Declaration currentness and successor official authority.
-* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md) — Phase-013 start-gate precedence and reopen rules.
-
-Current conceptual meaning continues to come from Project Purpose, Concepts, Synchronizations, Dependence/PF-01, Policies and Invariants.
+* [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) — current authority/evidence classification through 013-I.
+* [Experience Context and Participation Modes](context-role-modes.md) — 013-C.
+* [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — 013-C.
+* [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — 013-D.
+* [Judge Active Evaluation Mapping](judge-evaluation.md) — 013-E.
+* [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) — 013-F.
+* [Organizer Live Operations & Remaining Work Mapping](live-operations.md) — 013-G.
+* [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) — 013-G.
+* [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) — 013-H.
+* [External Representation, Disclosure & Release Mapping](external-representation-release.md) — 013-I.
+* [Phase 013 Mapping Entry Authority](phase-013-entry-handoff.md).
 
 ## Current accepted Experience owners
 
 | File | Accepted mapping subject | Phase |
 | --- | --- | --- |
-| [Experience Context and Participation Modes](context-role-modes.md) | Identity/Participation/Access operating context, capacity modes, multi-capacity isolation, disclosure context | 013-C |
-| [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) | Judge Competition entry, Participation/readiness and bias-safe context | 013-C |
-| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | non-linear preparation, source setup, Competition Readiness and explicit Ready commitment | 013-D |
-| [Judge Active Evaluation Mapping](judge-evaluation.md) | active occurrence/responsibility/judgment, exact basis, one logical Scorecard and initial Finalization | 013-E |
-| [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) | paper/assisted capture, amendment, correction, invalidation, replacement, successor responsibility and history | 013-F |
-| [Organizer Live Operations & Remaining Work Mapping](live-operations.md) | event-day coordination, actual occurrence/responsibility state, remaining Judge work and operational exception semantics | 013-G |
-| [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) | source-directed reconciliation, eligible evidence, Coverage/Aggregate/Rank and readiness | 013-G |
-| [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) | Award recognition, coordinated closeout, explicit Outcome Declaration, Affected/Superseded and successor authority | 013-H |
+| [Experience Context and Participation Modes](context-role-modes.md) | operating context, Participation modes, disclosure context | 013-C |
+| [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) | Judge entry/readiness and bias-safe context | 013-C |
+| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | preparation, source setup, Competition Readiness | 013-D |
+| [Judge Active Evaluation Mapping](judge-evaluation.md) | occurrence/responsibility/judgment and initial Finalization | 013-E |
+| [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) | capture, amendment, correction, invalidation, replacement, history | 013-F |
+| [Organizer Live Operations & Remaining Work Mapping](live-operations.md) | live coordination and remaining-work semantics | 013-G |
+| [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) | reconciliation, eligible evidence, Coverage/Aggregate/Rank/readiness | 013-G |
+| [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) | Award recognition, closeout, Outcome Declaration and successor authority | 013-H |
+| [External Representation, Disclosure & Release Mapping](external-representation-release.md) | Export, audience disclosure, representation currency, Publication release/withdrawal/succession | 013-I |
 
-## Remaining admitted/historical Experience evidence
+## Remaining admitted / historical Experience evidence
 
 | File | Disposition | Subphase |
 | --- | --- | --- |
-| [Experience Action, State & Authority Traceability](action-authority-traceability.md) | retain/revalidate cross-cutting; final acceptance audit | 013-C–K |
-| [Legacy Reconciliation / Finalization Experience Evidence](reconciliation-finalization.md) | historical evidence only; all current semantics migrated by 013-G/H | historical |
-| [Legacy Paper / Export / Publication Experience Evidence](paper-export-publication.md) | paper/correction migrated to 013-F; retain Export/Publication evidence only until 013-I | 013-I |
-| [Accessibility & Resilience](accessibility-resilience.md) | rewrite/revalidate in place | 013-J |
-| [Status, Feedback & Recovery](status-feedback-recovery.md) | rewrite/revalidate in place; preserve truthful-authority distinctions from 013-E–H | 013-J |
+| [Experience Action, State & Authority Traceability](action-authority-traceability.md) | admitted cross-cutting evidence; final audit | 013-K |
+| [Legacy Reconciliation / Finalization Experience Evidence](reconciliation-finalization.md) | historical only; all current semantics migrated | historical |
+| [Legacy Paper / Export / Publication Experience Evidence](paper-export-publication.md) | historical only; all current semantics migrated by 013-F/I | historical |
+| [Accessibility & Resilience](accessibility-resilience.md) | rewrite/revalidate | 013-J |
+| [Status, Feedback & Recovery](status-feedback-recovery.md) | rewrite/revalidate | 013-J |
 
-## Current officiality rules
+## Current external representation / release rules
 
 ```text
-calculated
-  != ranking ready
-  != recognized
-  != Competition Finalized
-  != official
-  != public
-  != delivered
+source authority
+  != Export representation
+  != Publication release
+  != delivery / recipient possession
 
-Ranking Ready candidate != conferred Award
-rank-derived Award != discretionary Award
-Finalization Readiness != Competition Finalized
-Competition Finalized != Outcome Declaration ownership
+actor can inspect fact
+  != fact may appear in Export
+  != fact may be released to Audience
+
+Export generation != Publication
+Export SourceBasis is exact and historically stable
+Export currency = Current | Affected | Stale | Superseded | Retired
+Export currency != Publication distribution state
+new/corrected source required → new Export, never rewrite old Export
+successor Outcome Declaration != successor Export != successor Publication
+Publication Published != delivery/viewing success
+withdrawal/supersession != erasure of historical release/external copies
+recipient possession != current release authority or interactive Access
+```
+
+Official-but-non-public and Export-without-Publication are legitimate PF-01 states/profiles.
+
+## Officiality rules retained
+
+```text
+calculated != ranking ready != recognized != Competition Finalized != official != public != delivered
 ordinary closeout success = Competition Finalized + current Outcome Declaration
 Outcome Declaration currentness = Current | Affected | Superseded
 Affected != Superseded
 corrected calculation != successor official authority
-successor Outcome Declaration != re-finalize Competition
-Outcome Declaration != Export != Publication != delivery
-```
-
-A materially Affected declared basis requires explicit successor confirmation even when visible winner/rank/Award values remain unchanged.
-
-## Live/reconciliation rules retained
-
-```text
-Remaining Work = projection over Outstanding Evaluation Obligations
-ineligible historical evidence != reopened obligation != automatic successor work
-Coverage exception disposition != Coverage Satisfied
-Aggregate exists != Coverage/rank readiness
-Rank = derived/non-editable
-Ranking Readiness / Finalization Readiness = derived/non-editable
-```
-
-## Authority-lineage rules retained
-
-```text
-capture Actor != Judge semantic author / RepresentedAuthority
-Judge amendment != source-faithful capture correction
-superseded != invalidated != replaced != affected != stale
-historical obligation satisfaction != current evidence eligibility
-terminal obligation never reopens
-```
-
-## Terminology baseline
-
-```text
-Encounter
-  → deprecated adapter; interpret by current semantic meaning
-
-Official Outcome Revision
-  → deprecated; current official authority/history is Outcome Declaration
-
-Readiness / Remaining Work / Coverage / Aggregate / Rank / reconciliation projections
-  → derived, not writable Concepts
-```
-
-## Mapping interpretation rule
-
-```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-preparation dependency != setup step number
 ```
 
 ## Application-action rule
@@ -134,8 +103,15 @@ S — system-triggered reaction
 X — intentionally unavailable generic action
 ```
 
-Do not expose `P` or `X` as generic controls. Manual Coverage/Rank editing, generic `Resolve`/`Override`, generic declaration editing and automatic publication remain unavailable.
+Do not expose `P` or `X` as generic controls. Automatic declaration→publication, correction→auto-withdraw/republish, generic `Resolve`/`Override`, and manual Coverage/Rank editing remain unavailable.
+
+## Mapping interpretation rule
+
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+```
 
 ## Next
 
-Proceed to **013-I — Export, Publication, Audience Disclosure, External Recipient & Representation/Release Mapping**.
+Proceed to **013-J — Accessibility, Degraded Operation, Status/Feedback, Recovery & Semantic-Parity Mapping**.
