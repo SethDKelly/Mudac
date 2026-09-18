@@ -41,10 +41,15 @@ Finalization Readiness ↔ approval gate / closeout checklist
 
 These are comparison hypotheses only.
 
-Phase 014 must specifically test whether familiar task/checklist/leaderboard/ticket metaphors would falsely imply writable authority, editable Rank, generic resolution, missing=zero, or other semantics the current design rejects.
+014-C changes no mechanism classification. Its Family-1 audit reinforces that Panel grouping, Participation capacity and Access decision semantics must not be replaced by writable workflow/checklist abstractions merely because those metaphors are familiar.
+
+The corrected event-completion seam also preserves Remaining Work as a projection over Outstanding obligations: Event Completed does not erase remaining responsibility merely because broad live-event capability closes.
+
+Phase 014 must continue to test whether familiar task/checklist/leaderboard/ticket metaphors would falsely imply writable authority, editable Rank, generic resolution, missing=zero, or other semantics the current design rejects.
 
 ```text
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
-014-C NEXT
+014-C COMPLETE — PASS
+014-D NEXT
 ```
