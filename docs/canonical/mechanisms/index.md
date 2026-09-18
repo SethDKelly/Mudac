@@ -24,56 +24,41 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-013 whole-experience semantics through 013-K
+## Final Phase-013 mapping semantics
 
 ```text
-source authority
-  != derived projection
-  != official declaration
-  != Export representation
-  != Publication release
-  != delivery observation
-```
+calculated != recognized != official != public != delivered
+Outcome Declaration != Export != Publication != delivery
+Export currency != Publication state
 
-Derived values remain projections regardless of role/profile, device or recovery condition.
+accessible / responsive / degraded / paper representation
+  != alternate derived-state semantics
 
-```text
-cached/local Aggregate or Rank
+local/cached derived presentation
   != current authoritative derivation
-
-readiness presentation
-  != lifecycle transition
-
-reconciliation item
-  != writable source truth
 
 result unknown
   != permission to present derived/currentness state as confirmed
+
+recovery
+  → re-establish current source/authority
+  → recompute or re-explain derived state as needed
 ```
 
-013-K also confirms that Judge/Organizer/profile differences do not create alternate mechanism semantics. Audience/profile views may disclose different projections but may not rewrite Coverage, Aggregate, Rank, Readiness or Reconciliation meaning.
+Derived mechanisms remain projections from current authoritative sources even when presented offline/degraded. A cached Aggregate, Rank or readiness result does not become current merely because it is locally available.
 
 See:
 
 - [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md);
 - [Whole-Experience Action, Explanation & Authority Traceability](../experience/action-authority-traceability.md);
-- [Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+- [Final Phase 013 Mapping Authority Baseline](../experience/mapping-authority-baseline.md).
+
+Phase 014 may evaluate familiarity/reuse/genericity of these mechanisms but must not promote a derived mechanism into source authority merely to make the model look more conventional.
 
 ```text
 Phase 010 COMPLETE — PASS
 Phase 011 COMPLETE — PASS
 Phase 012 COMPLETE — PASS
-Phase 013 IN PROGRESS
-013-A COMPLETE — READY
-013-B COMPLETE — PASS
-013-C COMPLETE — PASS
-013-D COMPLETE — PASS
-013-E COMPLETE — PASS
-013-F COMPLETE — PASS
-013-G COMPLETE — PASS
-013-H COMPLETE — PASS
-013-I COMPLETE — PASS
-013-J COMPLETE — PASS
-013-K COMPLETE — PASS
-013-L NEXT
+Phase 013 COMPLETE — PASS
+Phase 014 NOT STARTED — START GATE NEXT
 ```
