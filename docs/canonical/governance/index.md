@@ -14,6 +14,12 @@ Current repository/design-governance knowledge for MUDAC.
 * [Agent Context & Progressive Retrieval](agent-context.md)
 * [Canonical Change & Conflict Governance](change-governance.md)
 
+## Product-language authority
+
+Cross-catalog product vocabulary is owned by [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
+
+Methodology terminology and product/domain terminology remain separate authority layers.
+
 ## Current methodology posture
 
 ```text
@@ -29,7 +35,8 @@ Jackson Concept Design: IN PROGRESS
 014-C: COMPLETE — PASS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
-014-F: NEXT
+014-F: COMPLETE — PASS
+014-G: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -41,13 +48,22 @@ implementation authorization: NOT YET
 
 Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-Phase 014 owns familiarity/reuse/genericity analysis only. 014-B established the evidence hierarchy; 014-C through 014-E completed the three Concept-family familiarity audits.
+Phase 014 owns familiarity/reuse/genericity analysis only. 014-B established the evidence hierarchy; 014-C through 014-E completed the three Concept-family familiarity audits; 014-F reconciled cross-catalog terminology and expectation transfer.
 
-No family audit may overwrite canonical semantics merely because a precedent is familiar or widespread.
+No familiarity or terminology finding may overwrite canonical semantics merely because a precedent or word is familiar or widespread.
 
-## Completed family-audit governance
+## Completed terminology governance
 
 All eighteen Concept names/boundaries remain current.
+
+Terminology classes are:
+
+```text
+T1 canonical semantic term
+T2 qualified explanatory label
+T3 analogy-only term
+T4 high-risk generic term
+```
 
 Preserve especially:
 
@@ -61,12 +77,14 @@ Competition Finalized != Outcome Declaration
 Outcome Declaration != Export != Publication != delivery
 ```
 
-014-C routed and repaired one genuine Phase-011 composition defect. 014-D and 014-E found no additional upstream defect requiring reopen.
+Generic wording may not create or bypass semantic authority. `Role`, `Task`, `Submission`, `Revision`, `Result`, `Status`, `Share`, `Resolve`, `Override` and similar familiar terms must remain subordinate to natural owners.
+
+014-C routed and repaired one genuine Phase-011 composition defect. 014-D through 014-F found no additional upstream defect requiring reopen.
 
 ## Design / implementation boundary
 
-Architecture and implementation remain quarantined through the remaining Concept Design runway. Conceptual reuse must never be inferred from shared libraries, storage models, workflow engines, authorization frameworks, revision systems, report generators or publishing infrastructure.
+Architecture and implementation remain quarantined through the remaining Concept Design runway. Conceptual reuse/genericity must never be inferred from shared libraries, schemas, storage models, workflow engines, authorization frameworks, revision systems, report generators or publishing infrastructure.
 
 ## Current handoff
 
-Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
+Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
