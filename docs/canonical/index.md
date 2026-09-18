@@ -12,10 +12,8 @@ This subtree is the preferred source for current MUDAC conceptual product meanin
 * [Policies](policies/)
 * [Invariants](invariants/)
 * [Experience](experience/)
-* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence topology through 013-J.
-* [External Representation, Disclosure & Release Mapping](experience/external-representation-release.md) — accepted 013-I mapping.
-* [Accessibility, Responsive & Degraded-Operation Mapping](experience/accessibility-resilience.md) — accepted 013-J mapping.
-* [Status, Feedback & Recovery Mapping](experience/status-feedback-recovery.md) — accepted 013-J mapping.
+* [Mapping Authority Baseline](experience/mapping-authority-baseline.md) — current Phase-013 authority/evidence topology through 013-K.
+* [Whole-Experience Action, Explanation & Authority Traceability](experience/action-authority-traceability.md) — accepted 013-K cross-owner integrity contract.
 
 # Governance
 
@@ -45,7 +43,8 @@ Jackson Concept Design: REOPENED / IN PROGRESS
 013-H: COMPLETE — PASS
 013-I: COMPLETE — PASS
 013-J: COMPLETE — PASS
-013-K: NEXT
+013-K: COMPLETE — PASS
+013-L: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -55,34 +54,34 @@ implementation authorization: NOT YET
 
 # Current mapping authority
 
-Current mapping knowledge follows:
-
 ```text
 Purpose / Concepts / Synchronizations / Dependence / PF-01
   ↓
 Policies / Invariants
   ↓
-Phase 013 Mapping Entry Authority
+Phase 013 Entry Authority
   ↓
 Mapping Authority Baseline
   ↓
 accepted Experience owners
+  ↓
+whole-experience traceability/integrity contract
 ```
 
-013-J adds:
+013-K establishes:
 
 ```text
-accessible / responsive / degraded / paper paths = same semantics
-device/session/QR possession != Access
-local working state != confirmed persistence != authority
-unknown result != success != failure
-retry/recovery reconciles current authority and converges
-stale local state cannot overwrite newer authority
-status is multidimensional / subject-qualified
-technical recovery capability != domain authority/disclosure
+context/capacity/audience precedes authority interpretation
+explanation order != screen order
+Judge + Organizer capabilities never union
+Event Completed != universal hidden Access revocation
+profile differences != competing source truth
+screen/route/checklist/status/recovery state != domain authority
+current != historical
+result unknown != success != failure
 ```
 
-The old `paper-export-publication.md` and `reconciliation-finalization.md` files remain historical evidence only.
+The current Experience owner set is complete entering 013-L. `paper-export-publication.md` and `reconciliation-finalization.md` remain historical evidence only.
 
 # Retrieval rule during Phase 013
 
@@ -90,7 +89,8 @@ The old `paper-export-publication.md` and `reconciliation-finalization.md` files
 2. load [Mapping Authority Baseline](experience/mapping-authority-baseline.md);
 3. load relevant current Project / Concepts / Synchronizations / Dependence / Policies / Invariants;
 4. load accepted Experience owners relevant to the task;
-5. use historical Experience material only as evidence;
-6. do not preload architecture/implementation except for explicit contamination/history analysis.
+5. use [Whole-Experience Action, Explanation & Authority Traceability](experience/action-authority-traceability.md) for cross-owner integrity;
+6. use historical Experience material only as evidence;
+7. do not preload architecture/implementation except for explicit contamination/history analysis.
 
-Next: **013-K — Whole-Experience Explanation Order, Cross-Role/Profile Consistency & Mapping-Integrity Audit**.
+Next: **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
