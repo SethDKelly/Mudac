@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 familiarity/terminology/genericity audits through 014-G.
+Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 familiarity/terminology/genericity/reuse audits through 014-H.
 
 ## Current eighteen-Concept catalog
 
@@ -33,13 +33,13 @@ Current canonical Concept catalog after Phase 010 convergence, Phase 012 depende
 
 Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Phase-014 familiarity / genericity result
+## Phase-014 result through 014-H
 
-014-C through 014-E completed all Concept-family audits. 014-F completed the cross-catalog terminology audit. 014-G completed broader genericity and duplication-pressure analysis.
+014-C through 014-E completed all Concept-family familiarity audits. 014-F completed the cross-catalog terminology audit. 014-G completed broader genericity and duplication-pressure analysis. 014-H completed retained-novelty and reusable-knowledge disposition.
 
 All eighteen Concept identities remain current. No super-Concept or merger is adopted.
 
-The genericity rule is:
+The genericity rule remains:
 
 ```text
 Generic at the boundary; specific in purpose.
@@ -47,33 +47,67 @@ shared parameter != shared purpose
 shared history shape != shared lifecycle
 ```
 
-The one adopted broader-genericity refinement is [Team](team.md): its intrinsic meaning is now a scoped competing group acting as one unit, while PF-01 binds that group to the student teams used by MUDAC.
+The one adopted broader-genericity refinement is [Team](team.md): its intrinsic meaning is a scoped competing group acting as one unit, while PF-01 binds that group to student teams.
 
-Rejected super-concepts include:
+## Reusable concept-knowledge status
+
+[Reusable Concept Knowledge & Design Patterns](../project/reusable-design-knowledge.md) records reuse/catalog **candidate** status without duplicating these Concept specifications.
+
+Broad cross-domain candidates are:
 
 ```text
-Group                over Team / Division / Panel
-Scoped Relationship  over Participation / assignment / membership / Alias
-Occurrence           over Competition / Evaluation Occurrence
-Task / Work Item     over responsibility / Remaining Work
-Evaluation Record    over Rubric / Scorecard / Aggregate / Rank
-Historical Record    over owner-specific currentness/correction semantics
-Result               over Aggregate / Rank / Award / Outcome Declaration
-Representation       as a merger of Export / Publication
+Identity
+Participation
+Alias
+Access
+Versioning
+Provenance
+Outcome Declaration
+Export
+Publication
 ```
 
-Preserve especially:
+Competition/evaluation-domain candidates are:
+
+```text
+Competition
+Division
+Team
+Panel
+Evaluation Occurrence
+Evaluation Obligation
+Rubric
+Scorecard
+Award
+```
+
+Candidate status does not create another Concept identity, new dependence, new synchronization or external/shared catalog authority.
+
+```text
+this directory = current MUDAC Concept truth
+reusable registry = candidate / lesson index
+external shared catalog = not established
+```
+
+## Retained novelty
+
+The most important intentionally strict seams include:
 
 ```text
 Identity != Participation != Access
 Panel != Evaluation Occurrence != Evaluation Obligation
+Evaluation Occurrence != Evaluation Obligation
+historical obligation satisfaction != current evidence eligibility
 Evaluation Obligation != Scorecard
 Rubric definition != exact authoritative Evaluation Basis
 Versioning != Provenance
 Rank / selection basis != Award recognition
 Competition Finalized != Outcome Declaration
+Outcome Declaration Affected != Superseded
 Outcome Declaration != Export != Publication != delivery
 ```
+
+These distinctions may generate reusable knowledge, but they are not invitations to create super-concepts.
 
 ## Vocabulary / expectation-transfer authority
 
@@ -103,7 +137,8 @@ The sole adopted variant remains:
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
 014-G COMPLETE — PASS
-014-H NEXT
+014-H COMPLETE — PASS
+014-I NEXT
 ```
 
-Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
+Proceed to **014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check**.
