@@ -1,26 +1,18 @@
 ---
 type: Canonical Mapping Authority Baseline
 title: Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline
-description: "Current Phase-013 authority/evidence classification and Experience-owner topology, advanced through 013-J accessibility/degraded-operation/status/recovery semantic-parity mapping."
+description: "Current Phase-013 authority/evidence classification and Experience-owner topology through 013-K whole-experience mapping-integrity audit."
 status: stable
 tags: [canonical, experience, mapping, authority, evidence, terminology, ownership, phase-013]
 sources:
   - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-H-award-competition-finalization-outcome-declaration-officiality-successor-authority-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-I-export-publication-audience-disclosure-external-recipient-representation-release-mapping.md
-  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-J-accessibility-degraded-operation-status-feedback-recovery-semantic-parity-mapping.md
+  - resource: ../../013-concept-mapping-interaction-semantics-user-visible-representation/013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md
   - resource: phase-013-entry-handoff.md
 ---
 
 # Purpose
 
-Provide the durable Phase-013 baseline for deciding what mapping knowledge is current authority, what remains historical/admitted evidence, and where later user-visible semantic knowledge belongs.
+Provide the durable Phase-013 baseline for deciding what mapping knowledge is current authority, what is historical evidence, and where user-visible semantics belong.
 
 Architecture and implementation remain outside mapping authority.
 
@@ -41,150 +33,201 @@ Phase 013 Entry Authority
   ↓
 THIS baseline
   ↓
-Experience owners accepted by completed Phase-013 workstreams
+accepted Experience owners
 ```
 
-# Current accepted Experience owners through 013-J
+Experience mapping explains and exposes current semantics; it does not replace upstream ownership.
 
-- [Experience Context and Participation Modes](context-role-modes.md) — 013-C;
-- [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) — 013-C;
-- [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) — 013-D;
-- [Judge Active Evaluation Mapping](judge-evaluation.md) — 013-E;
-- [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) — 013-F;
-- [Organizer Live Operations & Remaining Work Mapping](live-operations.md) — 013-G;
-- [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) — 013-G;
-- [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) — 013-H;
-- [External Representation, Disclosure & Release Mapping](external-representation-release.md) — 013-I;
-- [Accessibility, Responsive & Degraded-Operation Mapping](accessibility-resilience.md) — 013-J;
-- [Status, Feedback & Recovery Mapping](status-feedback-recovery.md) — 013-J.
+# Current accepted Experience owners through 013-K
 
-Completed Phase-013 records 013-A through 013-J are current design decisions for their workstreams.
+| Owner | Natural subject | Accepted |
+| --- | --- | --- |
+| [Experience Context and Participation Modes](context-role-modes.md) | Competition/capacity context, multi-capacity isolation, disclosure context | 013-C / reconciled 013-K |
+| [Judge Entry, Participation & Readiness Mapping](judge-onboarding.md) | Judge entry, Participation, Panel context, Ready-to-Judge | 013-C / reconciled 013-K |
+| [Organizer Competition Preparation & Readiness Mapping](organizer-preparation.md) | preparation, source setup, Competition Readiness | 013-D |
+| [Judge Active Evaluation Mapping](judge-evaluation.md) | occurrence, obligation, Draft, initial Finalization | 013-E |
+| [Authority Lineage, Capture & Correction Mapping](authority-lineage-correction.md) | paper/assisted capture, amendment, correction, invalidation, replacement, successor responsibility | 013-F |
+| [Organizer Live Operations & Remaining Work Mapping](live-operations.md) | live coordination, actual work state, remaining responsibility, operational exceptions | 013-G |
+| [Reconciliation & Derived Outcome-State Mapping](reconciliation-derived-state.md) | eligible evidence, Coverage, Aggregate, Rank, readiness, reconciliation | 013-G |
+| [Award, Finalization & Outcome Officiality Mapping](outcome-officiality.md) | Award recognition, closeout, Outcome Declaration, successor officiality | 013-H |
+| [External Representation, Disclosure & Release Mapping](external-representation-release.md) | Export, audience disclosure, currency, Publication and external-recipient semantics | 013-I |
+| [Accessibility, Responsive & Degraded-Operation Mapping](accessibility-resilience.md) | accessible/responsive/degraded/paper semantic parity | 013-J |
+| [Status, Feedback & Recovery Mapping](status-feedback-recovery.md) | multidimensional status, uncertainty, confirmation and recovery | 013-J |
+| [Whole-Experience Action, Explanation & Authority Traceability](action-authority-traceability.md) | cross-owner explanation order, action traceability, role/profile consistency and mapping-integrity guardrails | 013-K |
 
-# Remaining admitted / historical Experience material
+These owners are the complete current Experience mapping corpus entering 013-L.
 
-- `action-authority-traceability.md` — admitted cross-cutting evidence; final acceptance/rewrite audit in 013-K;
-- `reconciliation-finalization.md` — historical only; all current semantics migrated by 013-G/H;
-- `paper-export-publication.md` — historical only; all current semantics migrated by 013-F/I.
+# Historical Experience evidence only
 
-No other pre-convergence Experience contract is current merely because it resides under `canonical/experience/`.
+The following remain in the repository for provenance and must not compete with current owners:
 
-# Natural owner topology
+- `reconciliation-finalization.md` — historical mixed adapter; current semantics migrated by 013-G/H;
+- `paper-export-publication.md` — historical mixed adapter; current semantics migrated by 013-F/I.
 
-```text
-context-role-modes.md              → current after 013-C
-judge-onboarding.md                → current after 013-C
-organizer-preparation.md           → current after 013-D
-judge-evaluation.md                → current after 013-E
-authority-lineage-correction.md    → current after 013-F
-live-operations.md                 → current after 013-G
-reconciliation-derived-state.md    → current after 013-G
-outcome-officiality.md             → current after 013-H
-external-representation-release.md → current after 013-I
-accessibility-resilience.md        → current after 013-J
-status-feedback-recovery.md        → current after 013-J
-action-authority-traceability.md   → final cross-owner audit 013-K
-```
+Historical file location or `stable` metadata does not override this classification.
 
 # Terminology contract
 
-`Judging Encounter` / `Encounter` remains deprecated; route older wording by actual meaning.
+Current Experience authority uses:
 
-`Official Outcome Revision` remains deprecated; official currentness/history belongs to Outcome Declaration.
+```text
+Evaluation Occurrence     not Judging Encounter
+Evaluation Obligation     not generic assignment/task authority
+Outcome Declaration       not Official Outcome Revision
+```
 
-Readiness, Remaining Work, Coverage, Aggregate, Rank, reconciliation projections and operational attention states remain derived/non-editable.
+Owner-qualified state vocabularies remain distinct:
 
-# Core preserved distinctions
+```text
+Outcome Declaration: Current | Affected | Superseded
+Export currency:      Current | Affected | Stale | Superseded | Retired
+Publication:          Published | Withdrawn | Superseded
+```
+
+`Complete`, `Finalized`, `Satisfied`, `Ready`, `Current`, `Published` and `Resolved` are subject-qualified meanings, not generic workflow status.
+
+# Core context and authority distinctions
+
+Preserve globally:
 
 ```text
 Identity != Participation != Access
+role/capacity mode != authority
+multi-capacity capabilities never union
 Panel membership != occurrence participation != responsibility != evidence
 Occurrence Complete != obligation Satisfied != Scorecard Finalized
 one Evaluation Obligation → at most one logical Scorecard
 Scorecard Draft != authoritative judgment
-capture Actor != Judge semantic author
-Judge amendment != capture correction
-superseded != invalidated != replaced != affected != stale
+capture Actor != Judge semantic author / RepresentedAuthority
+Judge amendment != source-faithful capture correction
 historical obligation satisfaction != current evidence eligibility
-Remaining Work = Outstanding-obligation projection
+terminal obligations never reopen
+```
+
+# Event-completion reconciliation
+
+013-K repairs an earlier Judge-entry overstatement.
+
+```text
+Event Completed
+  → ordinary live-entry/readiness context ends
+  != all obligations terminal
+  != all Scorecards Finalized
+  != universal hidden Access revocation
+```
+
+If an Outstanding obligation remains and current policy/Access permits continuation, the Judge may continue the same logical evaluation. Later amendment/correction/history actions still use their own narrow authority.
+
+# Derived-state distinctions
+
+```text
+Remaining Work = projection over Outstanding obligations
 Coverage factual state != exception disposition
-Aggregate existence != Coverage/rank readiness
-Rank = derived/non-editable
-calculated != recognized != Competition Finalized != official != public != delivered
-Outcome Declaration != Export != Publication != delivery
+Aggregate existence != Coverage satisfaction / rank eligibility
+Rank = derived / non-editable
+Rank != Award authority
+Ranking Readiness / Finalization Readiness = derived / non-editable
+acknowledgement != source resolution
 ```
 
-# 013-I external representation / release contract
+Reconciliation and Live Operations remain work contexts, not lifecycle/ticket authorities.
+
+# Officiality and externalization distinctions
 
 ```text
-source authority != Export representation != Publication release != delivery
-actor Access != audience disclosure
-Export SourceBasis = exact / historically stable
-Export generation != Publication
-Export currency = Current | Affected | Stale | Superseded | Retired
-Export currency != Publication distribution state
-new/corrected source → new Export, never rewrite historical Export
-successor Outcome Declaration != successor Export != successor Publication
-withdrawal/supersession != historical release or external-copy erasure
-recipient possession != current release authority / interactive Access
-Publication Published != delivery/viewing success
+calculated
+  != ranking ready
+  != recognized
+  != Competition Finalized
+  != official
+  != public
+  != delivered
+
+ordinary closeout
+  = Competition.finalize + OutcomeDeclaration.declare
+
+Outcome Declaration
+  != Export
+  != Publication
+  != delivery
+
+Export currency
+  != Publication distribution state
+
+successor Outcome Declaration
+  != successor Export
+  != successor Publication
 ```
 
-# 013-J semantic-parity / recovery contract
+Official-but-non-public and Export-without-Publication remain legitimate PF-01 states/profiles.
 
-013-J establishes:
+# Cross-role / profile contract
+
+Judge, Organizer, support and external-recipient views interpret the same underlying source authority through different legitimate context/disclosure rules.
 
 ```text
-accessible / responsive / degraded / paper paths
-  = same domain semantics and authority boundaries
+Judge Participation capability
+  + Organizer Participation capability
+  != unioned capability
 
-accessible path
-  != alternate authority model
-
-responsive layout
-  != permission to hide material blocker/consequence
-
-assistive actor
-  != semantic author by assistance alone
-
-device / route / session / QR possession
-  != current Access
-
-interruption / device change / retry
-  → recover same logical work
-  != duplicate semantic effect
-
-local/device working state
-  != confirmed persisted state
-  != authoritative domain state
-
-paper fallback
-  != second evaluation model
-
-result unknown
-  != confirmed success
-  != confirmed failure
-
-retry/recovery
-  → reconcile current authority first
-  → converge on one legitimate result
-
-stale local state
-  != permission to overwrite newer authority
-
-status
-  = multidimensional / subject-qualified
-  != one universal badge
-
-working persistence feedback
-  != semantic commitment
-
-technical recovery capability
-  != broader Access / disclosure / semantic authority
+actor can inspect fact
+  != fact may appear in Export
+  != fact may be released to Audience
 ```
 
-Unknown authority transitions remain explicit until resolved. High-consequence success requires authoritative confirmation.
+Judge-safe, Organizer-sensitive, Ceremony-safe, Public and internal history/audit profiles may omit or faithfully transform information. They may not invent/promote source truth or erase history.
+
+# Accessibility / recovery contract
+
+```text
+ordinary-path semantics
+  = accessible-path semantics
+  = responsive-path semantics
+  = degraded/recovery-path semantics
+  = paper/assisted-path semantics
+```
+
+where the same operation is available.
+
+Preserve:
+
+```text
+assistive actor != semantic author by assistance alone
+device / route / session / QR possession != current Access
+local working state != confirmed persistence != authoritative state
+paper fallback != second evaluation model
+result unknown != success != failure
+stale local state cannot overwrite newer authority
+technical recovery capability != broader Access/disclosure/authority
+```
+
+Safe unavailability is preferable to a degraded semantic shortcut.
+
+# Whole-experience explanation grammar
+
+Where materially relevant, explain:
+
+```text
+1. current Competition / capacity / audience context
+2. subject or resource
+3. current authoritative or working state
+4. material qualification / blocker / uncertainty
+5. legitimate purpose-specific action
+6. consequence
+7. confirmed result and retained history
+```
+
+This is an explanation order only.
+
+```text
+dependence order != navigation order
+synchronization chain != mandatory wizard
+explanation order != mandatory screen order
+```
 
 # Application-action rule
+
+Phase 013 maps the Phase-011 action surface:
 
 ```text
 D — direct application action
@@ -194,58 +237,52 @@ S — system-triggered conceptual reaction
 X — intentionally unavailable generic action
 ```
 
-Do not expose `P` or `X` as generic controls. Alternate interaction/recovery paths do not create new application actions or weaker substitutes for unavailable authority.
+`P` and `X` are never generic UI controls.
 
-# High-consequence explanation rule
+Screens, routes, work modes, checklists, confirmations, status badges and recovery states create no additional action class or semantic authority.
+
+# High-consequence explanation and feedback
 
 Before/after consequential action, preserve enough meaning to understand:
 
-- source/basis and authority being changed;
-- actor versus represented authority where materially distinct;
-- confirmed versus uncertain outcome;
-- what local/Draft work remains;
-- what history remains;
-- what downstream meanings did not change;
-- legitimate retry/recovery path if needed.
+- target subject/source/basis;
+- current actor/capacity and represented authority where distinct;
+- current blockers/qualifications;
+- authority/history consequence;
+- what remains unchanged;
+- downstream transitions that remain separate.
 
-# Explanation-order rule
+Preserve:
 
 ```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
+working persistence != semantic commitment
+request dispatched != authority established
+result unknown != confirmed success != confirmed failure
 ```
-
-Accessible/responsive/degraded presentation may change presentation order for usability but cannot waive semantic prerequisites or consequences.
 
 # PF-01 scope
 
-The sole current product/application variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
+The sole current product/application variant remains:
 
-Accessibility, responsive presentation, degraded connectivity, paper operation, official-but-non-public operation and other supported profiles are not product variants.
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-# Remaining Phase-013 ownership
+Judge/Organizer profiles, Award absence/presence, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessible/degraded operation, and Current/Affected/Superseded history are profiles/states—not product variants.
 
-## 013-K
-- whole-experience explanation-order audit;
-- cross-role/profile consistency audit;
-- acceptance/rewrite of `action-authority-traceability.md`;
-- terminology/action/authority consistency audit;
-- duplicate/supersession cleanup.
+# Phase-013 risk status after 013-K
 
-## 013-L
-- canonical mapping reconciliation;
-- Phase-013 exit review;
-- Phase-014 handoff.
+MAP-R01 through MAP-R16 have no unresolved semantic blocker in the current Experience corpus.
+
+013-L must verify canonical reconciliation and exit criteria; this risk status does not authorize architecture/implementation re-entry.
 
 # Reopen routing
 
 ```text
-purpose conflict → project-purpose authority
+purpose conflict → Project Purpose authority
 undefined Concept behavior/state/action → natural Concept owner / Phase 010 if boundary-level
-missing/invalid application action or synchronization → Phase 011
-incorrect dependence/scope/PF-01 assumption → Phase 012
-stale wording/reference with clear current meaning → repair natural owner
-mapping terminology/representation/ownership defect → Phase 013
+missing/invalid application composition → Phase 011
+incorrect dependence/PF-01 scope → Phase 012
+mapping terminology/representation/ownership defect → Phase 013 natural Experience owner
+stale historical wording with clear current meaning → repair current owner, do not reopen upstream
 ```
 
 # Current state
@@ -261,7 +298,8 @@ mapping terminology/representation/ownership defect → Phase 013
 013-H  COMPLETE — PASS
 013-I  COMPLETE — PASS
 013-J  COMPLETE — PASS
-013-K  NEXT
+013-K  COMPLETE — PASS
+013-L  NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
