@@ -1,85 +1,169 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **NOT STARTED — START GATE NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
-Its purpose is to determine whether every materially important retained Concept still fulfills the purpose and behavioral promise that justify it when composed with the complete MUDAC concept system.
+Its governing question is:
 
-Phase 014 is **COMPLETE — PASS**. Current Phase-014 exit authority is:
+> When the mature MUDAC Concepts are composed, does each materially important retained Concept still fulfill the purpose and behavioral promise that justify it?
 
-- [014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff](../014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md).
+Phase 014 is **COMPLETE — PASS**. Current entry authority is [014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff](../014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md).
 
-## Entry authority
+## Start-gate authority
 
-Begin from current canonical knowledge:
+[015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning](015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md) is **COMPLETE — READY**.
 
-- [Project](../canonical/project/);
-- [Concepts](../canonical/concepts/);
-- [Synchronizations](../canonical/synchronizations/);
-- [Dependence / PF-01](../canonical/dependence/);
-- [Experience](../canonical/experience/);
-- [Mechanisms](../canonical/mechanisms/);
-- [Policies](../canonical/policies/);
-- [Invariants](../canonical/invariants/);
-- [Governance](../canonical/governance/).
+015-A establishes:
 
-Phase-014 comparison records remain provenance/evidence. Current natural canonical owners define MUDAC meaning.
+- one current post-Phase-014 baseline;
+- purpose-preservation as the integrity test;
+- directional and multi-Concept interference analysis;
+- ten interference lenses;
+- conceptual counterexample probes;
+- PF-01/profile coverage without inventing product variants;
+- natural-owner correction/reopen routing;
+- strict Phase-015 versus Phase-016 boundary;
+- an eighteen-Concept coverage proof;
+- the dependency-safe A–K sequence below.
 
-## Methodological purpose
+The gate does not itself certify integrity.
 
-Phase 015 should test:
-
-```text
-Concept purpose in isolation
-  + composition / synchronization
-  + dependence / PF-01 scope
-  + user-visible mapping
-  + lifecycle / history / correction
-  + Phase-014 familiarity/genericity refinements
-  → purpose still honestly fulfilled?
-```
-
-The audit should be directional and multi-Concept where necessary.
+## Current integrity rule
 
 ```text
-concept A affects concept B
-  != merely "A and B conflict"
-
-local synchronization correctness
+local correctness
   != whole-system integrity
+
+pairwise compatibility
+  != cluster integrity
+
+purpose tension
+  != integrity violation
+
+confirmed structural violation
+  != Phase-016 carry-forward
+
+Phase-015 finding
+  != replacement semantic owner
 ```
 
-Phase 015 may discover and route defects to their natural owners, but it must not create a duplicate whole-system semantic model.
+Current semantic truth remains in natural canonical Project, Concept, Synchronization, Dependence, Policy/Invariant, Mechanism and Experience owners.
 
-## Phase-014 handoff targets
+## Current product scope
 
-The Phase-014 exit review identifies these as high-value **audit targets, not known defects**:
+The sole adopted product/application variant remains:
 
-- Identity / Participation / Access;
-- Panel / Evaluation Occurrence / Evaluation Obligation / Scorecard;
-- Rubric / Versioning / Provenance / Scorecard;
-- Coverage / Aggregate / Rank / Award / Outcome Declaration;
-- Export / Publication / external possession;
-- Team's broader intrinsic genericity under full composition;
-- familiar explanatory terminology under combined experiences;
-- reusable design patterns as possible hidden coupling surfaces.
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-## Start gate
+Phase 015 may compare materially different PF-01 profiles/configurations/lifecycle contexts, but those are not new product variants.
 
-The first authorized work is provisionally:
+## Approved subphase sequence
 
-> **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**
+| Group | Topic | Status |
+| --- | --- | --- |
+| 015-A | Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning | **Complete — READY** |
+| 015-B | Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register | **Next** |
+| 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | Planned |
+| 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | Planned |
+| 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | Planned |
+| 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | Planned |
+| 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | Planned |
+| 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | Planned |
+| 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | Planned |
+| 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | Planned |
+| 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | Planned exit review |
 
-015-A should confirm the Phase-015 methodology, derive MUDAC-specific interference clusters, define evidence/counterexample discipline and correction routing, and divide the phase into dependency-safe substantive subphases.
+## Primary interaction clusters
 
-No substantive Phase-015 integrity finding is established by this README.
+```text
+A — Competition / Division / Team / Panel /
+    Identity / Participation / Alias / Access
+
+B — Panel / Evaluation Occurrence /
+    Evaluation Obligation / Rubric / Scorecard /
+    Participation / Access
+
+C — Evaluation Occurrence / Evaluation Obligation /
+    Rubric / Scorecard / Versioning / Provenance / Access
+
+D — Competition / Evaluation Obligation / Scorecard /
+    Coverage / Aggregate / Rank / Award /
+    Outcome Declaration
+
+E — Outcome Declaration / Export / Publication /
+    disclosure profiles / external possession
+```
+
+015-H and 015-I then audit cross-cluster action chains and combined user-visible meaning.
+
+## Phase-015 risk posture
+
+Key start-gate risks include:
+
+- local-validity substitution;
+- pairwise blind spots;
+- purpose drift;
+- authority leakage;
+- stale lifecycle consequences;
+- automation manufacturing authority;
+- mapping attribution collapse;
+- profile capability union;
+- PF-01 profile-as-variant drift;
+- Phase-014 genericity/familiarity interference;
+- historical/current flattening;
+- derived-authority promotion;
+- hidden consequential effects;
+- correction without re-audit;
+- Phase-016 deferral abuse;
+- shadow integrity-model duplication;
+- implementation contamination.
+
+See 015-A for INT-R01 through INT-R18.
+
+## Correction routing
+
+```text
+purpose / Concept behavior / Concept boundary
+  → natural canonical Project/Concept owner
+  → Phase 010 as appropriate
+
+composition / application action / automation
+  → Synchronizations
+  → Phase 011
+
+dependence / PF-01 scope
+  → Dependence
+  → Phase 012
+
+mapping / terminology / profile representation
+  → Experience / vocabulary
+  → Phase 013 as appropriate
+
+familiarity / genericity / reusable-knowledge framing
+  → Phase 014 natural owner
+
+stale documentation with clear semantics
+  → repair current owner/index
+```
+
+Any semantic correction must be propagated and the affected Phase-015 analysis repeated before a finding closes.
+
+## Phase-016 boundary
+
+Phase 016 owns scenario/misfit/exception/failure/adversarial validation.
+
+Only concerns that remain structurally coherent but require such a scenario may be handed forward.
+
+A confirmed structural integrity violation must be corrected in Phase 015.
 
 ## Design / implementation boundary
 
 ```text
 Phase 014 COMPLETE — PASS
-Phase 015 NOT STARTED — START GATE NEXT
+Phase 015 IN PROGRESS
+015-A COMPLETE — READY
+015-B NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -88,8 +172,8 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
-Phase 015 remains Concept Design. Runtime race conditions, distributed transactions, service/API coupling, framework architecture, implementation authorization middleware and executable testing are outside its authority unless a user-facing conceptual semantic issue can be stated independently of implementation mechanics.
+Phase 015 remains Concept Design. Runtime race conditions, distributed transactions, service/API coupling, framework architecture, authorization middleware and executable testing remain outside current authority unless a representation-independent conceptual promise violation can first be stated.
 
 ## Next
 
-Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
