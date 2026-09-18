@@ -12,31 +12,20 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
 * [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — composition/application-action authority.
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — dependence and PF-01 scope.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — Phase-013 mapping authority through 013-K.
-* [`docs/canonical/experience/action-authority-traceability.md`](docs/canonical/experience/action-authority-traceability.md) — whole-experience action/explanation integrity.
-* [`docs/013-concept-mapping-interaction-semantics-user-visible-representation/`](docs/013-concept-mapping-interaction-semantics-user-visible-representation/) — active Phase 013.
+* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
+* [`docs/canonical/experience/action-authority-traceability.md`](docs/canonical/experience/action-authority-traceability.md) — whole-experience mapping-integrity guardrails.
+* [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — next methodology phase; start gate not yet executed.
 
 ## Current status
 
 ```text
-Jackson Concept Design: REOPENED / IN PROGRESS
+Jackson Concept Design: IN PROGRESS
 009: COMPLETE — PASS
 010: COMPLETE — PASS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
-013: IN PROGRESS
-013-A: COMPLETE — READY
-013-B: COMPLETE — PASS
-013-C: COMPLETE — PASS
-013-D: COMPLETE — PASS
-013-E: COMPLETE — PASS
-013-F: COMPLETE — PASS
-013-G: COMPLETE — PASS
-013-H: COMPLETE — PASS
-013-I: COMPLETE — PASS
-013-J: COMPLETE — PASS
-013-K: COMPLETE — PASS
-013-L: NEXT
+013: COMPLETE — PASS
+014: NOT STARTED — START GATE NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -50,45 +39,28 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Judge/Organizer views, audience profiles, optional Awards, official-but-non-public operation, Export without Publication, paper/electronic/mixed capture, accessible/degraded interaction and temporal currentness are profiles/states rather than separate products.
+Judge/Organizer contexts, audience profiles, accessibility/degraded operation, paper/electronic/mixed capture, optional Awards, official-but-non-public operation and temporal authority states are profiles/capabilities rather than separate products.
 
-## Phase-013 whole-experience posture
+## Phase-013 exit posture
 
-013-K established a coherent explanation grammar across all accepted Experience owners:
+Phase 013 is complete with a reconciled, non-competing Experience owner set and no unresolved MAP-R01–MAP-R16 semantic blocker.
 
-```text
-context / capacity / audience
-  → subject/resource
-  → current authoritative or working state
-  → qualification / blocker / uncertainty
-  → legitimate purpose-specific action
-  → consequence
-  → confirmed result + retained history
-```
-
-Key whole-corpus rules include:
-
-```text
-Identity != Participation != Access
-Judge + Organizer capability != unioned capability
-Panel membership != occurrence participation != responsibility != evidence
-Event Completed != universal hidden Access revocation
-profile differences != competing source truth
-derived projection != editable source
-result unknown != success != failure
-source authority != officiality != Export != Publication != delivery
-```
-
-The former mixed `paper-export-publication.md` and `reconciliation-finalization.md` contracts are historical evidence only.
-
-Global rules remain:
+Global rules include:
 
 ```text
 dependence order != navigation order
 synchronization chain != mandatory wizard
 explanation order != mandatory screen order
+
+Identity != Participation != Access
+Panel membership != occurrence participation != responsibility != evidence
+Event Completed != universal hidden Access revocation
+source authority != derived state != officiality != Export != Publication != delivery
+result unknown != success != failure
 ```
+
+The former `paper-export-publication.md` and `reconciliation-finalization.md` contracts are historical evidence only.
 
 ## Current direction
 
-Proceed to **013-L — Canonical Mapping Reconciliation, Phase 013 Consolidation & Phase 014 Handoff**.
+Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**. The start gate will define the phase criteria and logical subphase sequence before substantive review begins.
