@@ -12,7 +12,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 6. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 7. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
 8. Read the [Phase-014 exit review](docs/014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) for the post-refinement baseline and Phase-015 audit targets.
-9. Start Phase-015 work at [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](docs/015-concept-integrity-cross-concept-coherence-interference/README.md) and read [015-A](docs/015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md) before substantive integrity analysis.
+9. Start Phase-015 work at [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](docs/015-concept-integrity-cross-concept-coherence-interference/README.md) read [015-A](docs/015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md) for methodology scope and [015-B](docs/015-concept-integrity-cross-concept-coherence-interference/015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md) for the current purpose/interference baseline before cluster analysis.
 10. Treat detailed Phase-014 comparison records and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
 11. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -27,7 +27,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 014: COMPLETE — PASS
 015: IN PROGRESS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -39,7 +40,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 014-I: COMPLETE — PASS
 014-J: COMPLETE — PASS
 015-A: COMPLETE — READY
-015-B: NEXT
+015-B: COMPLETE — PASS
+015-C: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -144,4 +146,4 @@ These patterns describe transferable design lessons. They do not authorize gener
 
 Proceed to:
 
-> **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**
+> **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**
