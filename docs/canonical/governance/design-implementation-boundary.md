@@ -1,7 +1,7 @@
 ---
 type: Documentation Authority
 title: Design / Implementation Boundary
-description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity complete through the propagation/reopen/obvious-integrity gate, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
+description: "Defines MUDAC's reopened Concept Design posture with Phase 014 familiarity/reuse/genericity closed through the Phase-014 consolidation/exit review, while downstream architecture/implementation authority remains suspended through Phase 017 closure."
 status: stable
 tags: [governance, methodology, design, implementation, boundary, jackson, familiarity, genericity, reuse, reentry]
 sources:
@@ -12,6 +12,8 @@ sources:
   - resource: ../../014-familiarity-reuse-genericity/014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md
   - resource: ../../014-familiarity-reuse-genericity/014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md
+  - resource: ../../014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/README.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -22,7 +24,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–013 are complete. Phase 014 is **IN PROGRESS** through 014-I.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **NOT STARTED — START GATE NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -47,7 +49,9 @@ implementation authorization: NOT YET
 014-G: COMPLETE — PASS
 014-H: COMPLETE — PASS
 014-I: COMPLETE — PASS
-014-J: NEXT
+014-J: COMPLETE — PASS
+014: COMPLETE — PASS
+015-A: NEXT — START GATE
 production readiness: NOT ESTABLISHED
 ```
 
@@ -136,7 +140,7 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 - familiarity/reuse/genericity issue with otherwise valid semantics → Phase 014;
 - stale wording/reference with clear meaning → repair natural current owner.
 
-014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified all adopted Phase-014 refinements against their natural owners, repaired two historical-provenance ambiguities, and found no remaining known Phase-014 semantic blocker.
+014-C found and repaired one Phase-011 defect. 014-D through 014-H found no additional upstream contradiction requiring reopen. 014-I verified propagation and repaired two historical-provenance ambiguities. 014-J closes Phase 014 **PASS** with no remaining known Phase-014 semantic blocker.
 
 # Suspended downstream authority
 
@@ -144,4 +148,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
+Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
