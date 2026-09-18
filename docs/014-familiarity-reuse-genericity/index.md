@@ -1,6 +1,6 @@
 # Phase 014 — Familiarity, Reuse & Genericity
 
-Phase 014 is **IN PROGRESS**.
+Phase 014 is **COMPLETE — PASS**.
 
 ## Records
 
@@ -13,7 +13,7 @@ Phase 014 is **IN PROGRESS**.
 - [014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit](014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md) — **Complete — PASS**.
 - [014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit](014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md) — **Complete — PASS**.
 - [014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check](014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md) — **Complete — PASS**.
-- **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff** — Next.
+- [014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff](014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) — **Complete — PASS**.
 - 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
 
 ## Current authority
@@ -109,8 +109,18 @@ No external/universal concept catalog is created by Phase 014. Future catalog pr
 014-G COMPLETE — PASS
 014-H COMPLETE — PASS
 014-I COMPLETE — PASS
-014-J NEXT
+014-J COMPLETE — PASS
+Phase 014 COMPLETE — PASS
+Phase 015 NOT STARTED — 015-A START GATE NEXT
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff**.
+Proceed to **015-A — Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning**.
+
+## Phase-014 exit decision
+
+[014-J](014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) closes Phase 014 **COMPLETE — PASS**.
+
+The phase leaves one coherent current post-refinement design: all eighteen Concepts remain current; Team carries the sole adopted broader-genericity refinement; the Event Completed/Access composition seam is repaired; vocabulary and reusable-design registries are non-overriding; no known Phase-014 semantic defect is deferred.
+
+The only authorized handoff is to [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](../015-concept-integrity-cross-concept-coherence-interference/README.md), beginning with 015-A.
