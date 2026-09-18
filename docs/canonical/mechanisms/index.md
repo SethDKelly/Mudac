@@ -24,23 +24,45 @@ Current MUDAC subjects modeled as derived/supporting mechanisms or processes rat
 - Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
 - Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
 
-## Phase-014 familiarity status
+## Phase-014 terminology result
 
-The completed family audits do not promote any derived/work-context term to Concept status.
+014-F does not promote any derived/work-context term to Concept status.
 
-Family-3 reinforces:
+Use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md) to avoid false familiarity:
 
 ```text
-Rank-derived candidate != Award recognition
-calculated result != Outcome Declaration
-Official Outcome Revision remains deprecated
-Export currency != Publication state
-Publication state != delivery observation
+Competition lifecycle Ready
+  != Competition Readiness
+  != Ranking Readiness
+  != Finalization Readiness
+
+Remaining Work
+  = projection over Outstanding Evaluation Obligations
+  != writable Task list
+
+Coverage Incomplete
+  != zero
+  != Satisfied because an exception was accepted
+
+Aggregate
+  != final score / official result
+
+Rank
+  != editable/public Leaderboard by implication
+  != Award recognition
+  != official outcome
+
+Reconciliation
+  != ticket/case lifecycle
+  != generic Resolve authority
+
+Live Operations
+  != Competition lifecycle state
 ```
 
-A familiar `leaderboard`, `winner`, `final result`, `revision`, `report`, or `publication status` metaphor must not convert derived state into source authority.
+`Official Outcome Revision` remains historical/counterexample vocabulary only.
 
-014-F will perform the cross-catalog terminology audit, including false familiarity around task/checklist/leaderboard/ticket/result/revision/report/release language.
+Shared status words or similar derivation shapes are not evidence that these mechanisms should become one generic workflow/readiness/result super-concept.
 
 ```text
 014-A COMPLETE — READY
@@ -48,5 +70,6 @@ A familiar `leaderboard`, `winner`, `final result`, `revision`, `report`, or `pu
 014-C COMPLETE — PASS
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
-014-F NEXT
+014-F COMPLETE — PASS
+014-G NEXT
 ```
