@@ -9,7 +9,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
 4. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 5. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-6. For current methodology work, read [Phase 014](docs/014-familiarity-reuse-genericity/), especially [014-A](docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md) and [014-B](docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md).
+6. For current methodology work, read [Phase 014](docs/014-familiarity-reuse-genericity/), especially [014-A](docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md), [014-B](docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md), and the latest completed family audit.
 7. Treat historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
 8. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
@@ -24,7 +24,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 014: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
-014-C: NEXT
+014-C: COMPLETE — PASS
+014-D: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -62,20 +63,51 @@ The PT-01..PT-13 precedent taxonomy organizes comparison candidates; it creates 
 
 Do not infer semantic fit from name similarity, popularity, UI resemblance or implementation reuse.
 
-## Familiarity test
+## Accepted Family-1 dispositions from 014-C
 
-A proposed precedent must be tested for mostly correct expectation transfer across relevant purpose, operational principle, state/actions, lifecycle/finality, authority/authorship, history/correction, scope, composition/dependence and mapped experience.
+```text
+Competition    → semantic fit / bounded competition occurrence
+Division       → semantic fit / scoped competitive cohort
+Team           → semantic fit / competing unit
+Panel          → semantic fit with constraints / intended evaluator grouping
+Identity       → semantic fit / stable human identity continuity
+Participation  → semantic fit with constraints / scoped involvement/capacity
+Alias          → semantic fit with constraints / scoped alternate identity
+Access         → semantic fit with constraints / contextual authorization
+```
 
-Candidate dispositions may later include semantic fit/reuse, useful analogy only, false familiarity risk, retained novelty, broader genericity candidate, or upstream defect/reopen candidate.
+No Family-1 Concept was renamed, merged or replaced.
 
-014-B assigns none of these to a specific Concept.
+Preserve:
+
+- Identity != Participation != Access;
+- Panel membership != occurrence participation != responsibility != evidence;
+- Access permission != semantic authorship;
+- Judge/Organizer capabilities never union merely because one Identity holds both Participations.
+
+Do not replace this model with generic `User / Role / Permission / Group` semantics for familiarity or implementation convenience.
+
+## Corrected event-completion seam
+
+014-C repaired the current Phase-011 synchronization rule:
+
+```text
+Event Completed
+  → broad/new ordinary live-event Judge capability closes
+  != universal hidden Access revocation
+
+existing Outstanding obligation
+  + current policy permits continuation
+  + fresh Access permits the specific operation
+  → same logical evaluation may continue
+```
+
+This does not reactivate Participation, reopen Competition, create another obligation or restore general event-day capability.
 
 ## Retained Phase-013 invariants
 
 Preserve at least:
 
-- Identity != Participation != Access;
-- Panel membership != occurrence participation != responsibility != evidence;
 - Scorecard Draft != authority;
 - historical obligation satisfaction != current evidence eligibility;
 - Rank != Award authority;
@@ -88,4 +120,4 @@ Preserve at least:
 
 Proceed to:
 
-> **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**
+> **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**
