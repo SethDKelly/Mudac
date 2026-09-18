@@ -8,12 +8,7 @@ The current product definition is representation-independent: volunteer Judges a
 
 * [`AGENTS.md`](AGENTS.md) — repository-agent bootstrap and design-only boundary.
 * [`docs/index.md`](docs/index.md) — preferred OKF progressive-disclosure entry point.
-* [`docs/canonical/project/`](docs/canonical/project/) — mandate and purpose baseline.
-* [`docs/canonical/concepts/`](docs/canonical/concepts/) — current eighteen-Concept catalog.
-* [`docs/canonical/synchronizations/`](docs/canonical/synchronizations/) — composition/application-action authority.
-* [`docs/canonical/dependence/`](docs/canonical/dependence/) — dependence and PF-01 scope.
-* [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
-* [`docs/canonical/experience/action-authority-traceability.md`](docs/canonical/experience/action-authority-traceability.md) — whole-experience mapping-integrity guardrails.
+* [`docs/canonical/`](docs/canonical/) — current conceptual product knowledge.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — active Phase 014.
 
 ## Current status
@@ -27,7 +22,8 @@ Jackson Concept Design: IN PROGRESS
 013: COMPLETE — PASS
 014: IN PROGRESS
 014-A: COMPLETE — READY
-014-B: NEXT
+014-B: COMPLETE — PASS
+014-C: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -41,23 +37,18 @@ MUDAC adopts one current product/application variant:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Judge/Organizer contexts, audience profiles, accessibility/degraded operation, paper/electronic/mixed capture, optional Awards, official-but-non-public operation and temporal authority states are profiles/capabilities rather than separate products.
-
 ## Phase-014 posture
 
-014-A establishes the familiarity/reuse/genericity audit plan. A familiar concept is valuable only when prior understanding transfers mostly correct expectations about purpose and behavior.
+014-B establishes an evidence hierarchy and precedent taxonomy for familiarity/reuse analysis. All 18 current Concepts now have explicit comparison candidates, but no Concept has yet been declared a semantic reuse fit, renamed, merged, generalized or replaced.
 
 ```text
-familiarity != same-looking name or interface
-reuse != Concept merging by resemblance
-genericity != abstraction for abstraction's sake
-implementation reuse != conceptual reuse
+familiar name != familiar semantics
+popularity != semantic fit
+implementation resemblance != conceptual reuse
 ```
 
-The phase will first establish concrete precedents, then audit all 18 Concepts in three semantic families, then reconcile false familiarity, broader genericity, retained novelty/reusable knowledge, propagation and exit integrity.
-
-No Concept has been renamed, replaced or generalized by 014-A.
+Historical `Judging Encounter` and `Official Outcome Revision` remain negative/counterexample precedents only.
 
 ## Current direction
 
-Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
+Proceed to **014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit**.
