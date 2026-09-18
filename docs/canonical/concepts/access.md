@@ -8,6 +8,7 @@ sources:
   - resource: ../../002-concept-specification/002-B-identity-participation-access-specifications.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
+  - resource: ../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
 ---
 
@@ -43,12 +44,12 @@ Conceptual operations are `check`, `grant`, `temporarilyGrant`, `revoke`, and `e
 
 # Operational Principle
 
-The application supplies the active principal/context facts and applicable access rule for a protected action or disclosure. Access evaluates that context rather than inferring authority from identity alone. Ordinary capability can change as time, lifecycle, role/capacity, relationship, or purpose changes. Exceptional grants may be established narrowly and later revoked/expired without deleting protected resources. Permission enables an action; it never changes who is the semantic author or which competition authority owns a decision.
+The application supplies the active principal/context facts and applicable access rule for a protected action or disclosure. Access evaluates that context rather than inferring authority from identity alone. Ordinary capability can change as time, lifecycle, role/capacity, relationship, purpose, or resource-specific facts change. Exceptional grants may be established narrowly and later revoked/expired without deleting protected resources. Permission enables an action; it never changes who is the semantic author or which competition authority owns a decision.
 
 <a id="acc-001"></a>
 ## ACC-001 — Access is contextual
 
-Principal identity alone is insufficient. A decision may depend on scope, target resource, lifecycle/state facts, relationship, purpose, time, and current capacity facts supplied by the application.
+Principal identity alone is insufficient. A decision may depend on scope, target resource, lifecycle/state facts, relationship, purpose, time, current capacity facts, and the specific responsibility/resource relationship supplied by the application.
 
 <a id="acc-002"></a>
 ## ACC-002 — Access does not transfer semantic authority
@@ -57,7 +58,11 @@ Navigation, URL possession, QR codes, authentication proof, device possession, t
 
 # MUDAC composition binding
 
-MUDAC commonly supplies Identity/Participation-derived principal/capacity facts, Competition lifecycle facts, ownership relationships, and protected-resource context. For example, a Judge may receive access to the Judge's own evaluation work while peer Scorecards, protected Team identity, and standings remain denied; after event completion ordinary access can expire while retained records remain authoritative.
+MUDAC commonly supplies Identity/Participation-derived principal/capacity facts, Competition lifecycle facts, ownership/responsibility relationships, and protected-resource context.
+
+For example, a Judge may receive access to the Judge's own evaluation work while peer Scorecards, protected Team identity, and standings remain denied.
+
+After Competition Event Completed, broad ordinary live-event Judge capability may close because the Competition/Participation context changed. That lifecycle change is **not** a universal Access revocation: an already-established Outstanding Evaluation Obligation may remain narrowly actionable when current policy permits continuation and a fresh `Access.check` authorizes the same Judge's specific obligation/Scorecard work. This does not reactivate Participation, create new responsibility, or restore general event-day capability.
 
 Those supplied facts remain owned by their source Concepts. Access owns only the contextual capability/disclosure decision and explicit exceptional-grant state.
 
@@ -65,4 +70,4 @@ Those supplied facts remain owned by their source Concepts. Access owns only the
 
 Access does not identify the human, establish Participation capacity, author Scorecards, confer Organizer/Judge authority, or own the protected resource's lifecycle.
 
-See [Judge Independence](../invariants/judge-independence.md#inv-001), [Organizer Is Not Judge Author](../invariants/organizer-not-judge-author.md#inv-004), and [Anonymity & Disclosure](../policies/anonymity-disclosure.md).
+See [Competition Lifecycle, Participation & Contextual Access Composition](../synchronizations/competition-participation-access.md), [Judge Independence](../invariants/judge-independence.md#inv-001), [Organizer Is Not Judge Author](../invariants/organizer-not-judge-author.md#inv-004), and [Anonymity & Disclosure](../policies/anonymity-disclosure.md).
