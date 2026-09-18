@@ -14,7 +14,7 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/dependence/`](docs/canonical/dependence/) — dependence and PF-01 scope.
 * [`docs/canonical/experience/mapping-authority-baseline.md`](docs/canonical/experience/mapping-authority-baseline.md) — final reconciled Phase-013 mapping authority.
 * [`docs/canonical/experience/action-authority-traceability.md`](docs/canonical/experience/action-authority-traceability.md) — whole-experience mapping-integrity guardrails.
-* [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — next methodology phase; start gate not yet executed.
+* [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — active Phase 014.
 
 ## Current status
 
@@ -25,7 +25,9 @@ Jackson Concept Design: IN PROGRESS
 011: COMPLETE — PASS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
-014: NOT STARTED — START GATE NEXT
+014: IN PROGRESS
+014-A: COMPLETE — READY
+014-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -41,26 +43,21 @@ MUDAC adopts one current product/application variant:
 
 Judge/Organizer contexts, audience profiles, accessibility/degraded operation, paper/electronic/mixed capture, optional Awards, official-but-non-public operation and temporal authority states are profiles/capabilities rather than separate products.
 
-## Phase-013 exit posture
+## Phase-014 posture
 
-Phase 013 is complete with a reconciled, non-competing Experience owner set and no unresolved MAP-R01–MAP-R16 semantic blocker.
-
-Global rules include:
+014-A establishes the familiarity/reuse/genericity audit plan. A familiar concept is valuable only when prior understanding transfers mostly correct expectations about purpose and behavior.
 
 ```text
-dependence order != navigation order
-synchronization chain != mandatory wizard
-explanation order != mandatory screen order
-
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Event Completed != universal hidden Access revocation
-source authority != derived state != officiality != Export != Publication != delivery
-result unknown != success != failure
+familiarity != same-looking name or interface
+reuse != Concept merging by resemblance
+genericity != abstraction for abstraction's sake
+implementation reuse != conceptual reuse
 ```
 
-The former `paper-export-publication.md` and `reconciliation-finalization.md` contracts are historical evidence only.
+The phase will first establish concrete precedents, then audit all 18 Concepts in three semantic families, then reconcile false familiarity, broader genericity, retained novelty/reusable knowledge, propagation and exit integrity.
+
+No Concept has been renamed, replaced or generalized by 014-A.
 
 ## Current direction
 
-Proceed to the **Phase 014 start gate — Familiarity, Reuse & Genericity**. The start gate will define the phase criteria and logical subphase sequence before substantive review begins.
+Proceed to **014-B — Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register**.
