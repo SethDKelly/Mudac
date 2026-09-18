@@ -11,7 +11,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/`](docs/canonical/) — current conceptual product knowledge.
 * [`docs/canonical/project/domain-vocabulary-expectation-transfer.md`](docs/canonical/project/domain-vocabulary-expectation-transfer.md) — current cross-catalog terminology/expectation-transfer authority.
 * [`docs/canonical/project/reusable-design-knowledge.md`](docs/canonical/project/reusable-design-knowledge.md) — reusable concept/pattern candidate registry; links to natural owners and does not duplicate Concept truth.
-* [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — active Phase 014.
+* [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — completed Phase 014 refinement record.
+* [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — Phase 015 start-gate handoff.
 
 ## Current status
 
@@ -60,7 +61,7 @@ shared history shape != shared lifecycle
 
 One narrow canonical refinement removes incidental `student` specificity from the intrinsic Team Concept; PF-01 still binds Team to student teams.
 
-014-H preserves reusable design knowledge without creating another catalog specification. 014-I confirms the adopted refinements are propagated to their natural owners. 014-J closes Phase 014 **PASS** with no known Phase-014 semantic defect deferred.
+014-H preserves reusable design knowledge without creating another catalog specification. 014-I confirms the adopted refinements are propagated to their natural owners. 014-J closes Phase 014 **COMPLETE — PASS** with no known Phase-014 semantic defect deferred.
 
 Broad reusable Concept-knowledge candidates include Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export and Publication. Competition/evaluation-family candidates include Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard and Award.
 
