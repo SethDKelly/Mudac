@@ -18,9 +18,7 @@ PF-01 supports all eighteen current Concepts in its capability envelope without 
 
 ## Phase-014 familiarity boundary
 
-014-B establishes comparison candidates.
-
-014-C retains all Family-1 Concept identities/boundaries and requires **no Phase-012 dependence/PF-01 reopen**.
+014-C and 014-D retain their current Concept boundaries/names and require no dependence/PF-01 reopen.
 
 ```text
 familiar precedent != inclusion dependence
@@ -28,9 +26,9 @@ reuse analogy != co-inclusion requirement
 broader genericity hypothesis != product-family change
 ```
 
-The targeted 014-C event-completion Access repair changes composition semantics only; it does not add/remove a Concept, dependence edge, co-inclusion condition or PF-01 capability.
+For Family 2, familiar all-in-one `Session / Assignment / Form / Submission` models do not change the current dependence model merely because they package multiple meanings together elsewhere.
 
-If a later familiarity/generalization finding actually invalidates a dependence or scope decision, Phase 012 must be explicitly reopened rather than rewritten inside Phase 014.
+Preserve the conceptual distinction between occurrence, responsibility, basis and judgment; any later generalization that actually invalidates a dependence/scope decision must explicitly reopen Phase 012.
 
 ## Current handoff
 
@@ -40,7 +38,8 @@ Phase 013 COMPLETE — PASS
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
-014-D NEXT
+014-D COMPLETE — PASS
+014-E NEXT
 ```
 
-Proceed to 014-D using current PF-01/dependence knowledge as E1 authority and the 014-B register as comparison evidence.
+Proceed to 014-E using current PF-01/dependence knowledge as E1 authority.
