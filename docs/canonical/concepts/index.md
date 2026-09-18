@@ -1,8 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure and Phase 013 mapping closure.
-
-Each Concept owner exposes representation-independent Purpose, State, Actions/Queries, Operational Principle, intrinsic authority/history semantics where relevant, and explicit boundaries.
+Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 family familiarity audits through 014-E.
 
 ## Current eighteen-Concept catalog
 
@@ -35,6 +33,37 @@ Each Concept owner exposes representation-independent Purpose, State, Actions/Qu
 
 Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
+## Phase-014 familiarity status
+
+The three Concept-family audits are complete. No current Concept was renamed, merged or replaced.
+
+Family-3 result:
+
+```text
+Versioning          → semantic fit with strong constraints
+Provenance          → strong semantic fit
+Award               → strong semantic fit
+Outcome Declaration → semantic fit with strong constraints
+Export              → semantic fit with strong constraints
+Publication         → semantic fit with constraints
+```
+
+Preserve:
+
+```text
+Versioning != Provenance
+Rank / selection basis != Award recognition
+Competition Finalized != Outcome Declaration
+Outcome Declaration Affected != Superseded
+Outcome Declaration != Export
+Export currency != Publication state
+Publication Published != delivery / recipient possession
+```
+
+A common need for history or predecessor/successor relations does not make these Concepts one generic revision model.
+
+Likewise a common result-oriented experience does not make Award, Outcome Declaration, Export and Publication one `Result` Concept.
+
 ## Current composition / scope / mapping
 
 Phase 011 is **COMPLETE — PASS** and Synchronizations own application composition.
@@ -47,43 +76,6 @@ The sole adopted variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-## Phase-014 familiarity boundary
-
-Phase 014 is **IN PROGRESS**.
-
-```text
-014-A COMPLETE — READY
-014-B COMPLETE — PASS
-014-C COMPLETE — PASS
-014-D COMPLETE — PASS
-014-E NEXT
-```
-
-014-C retains the Family-1 Concept boundaries/names and 014-D retains the Family-2 boundaries/names.
-
-Family-2 familiarity is deliberately constrained:
-
-```text
-Evaluation Occurrence ≈ bounded evaluation event
-Evaluation Obligation ≈ scoped evaluation duty/responsibility
-Rubric                ≈ scoring/evaluation rubric
-Scorecard             ≈ one evaluator's judgment record
-```
-
-Preserve:
-
-```text
-occurrence participation != responsibility
-responsibility != judgment evidence
-Rubric definition != exact authoritative Evaluation Basis
-Scorecard Draft != authoritative judgment
-historical obligation satisfaction != current evidence eligibility
-```
-
-`Session`, `Attempt`, `Encounter`, `Assignment`, `Task`, `Form`, `Submission` and `Ballot` do not replace these concepts merely because they are more colloquial. The deprecated Encounter remains historical/counterexample evidence only.
-
-No Concept owner should be changed from precedent resemblance alone. Any later familiarity/generalization change must propagate through the natural owner and explicit reopen discipline.
-
 ## Next
 
-Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
+Proceed to **014-F — Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit**.
