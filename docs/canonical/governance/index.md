@@ -27,7 +27,8 @@ Jackson Concept Design: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
-014-D: NEXT
+014-D: COMPLETE — PASS
+014-E: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -39,37 +40,9 @@ implementation authorization: NOT YET
 
 Canonical Concepts own the eighteen-Concept catalog; Synchronizations own composition/application actions; Dependence owns PF-01 inclusion/scope; completed Phase 013 owns mapping semantics.
 
-Phase 014 owns familiarity/reuse/genericity analysis only. [014-B](../../014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md) establishes the evidence hierarchy and precedent register. [014-C](../../014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md) completes the first concept-family dispositions.
+Phase 014 owns familiarity/reuse/genericity analysis only. 014-C and 014-D now provide accepted familiarity dispositions for Families 1 and 2 without changing their Concept boundaries.
 
-## Family-1 familiarity result
-
-014-C retains Competition, Division, Team, Panel, Identity, Participation, Alias and Access as current Concept names/boundaries.
-
-Preserve:
-
-```text
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Access permission != semantic authorship
-```
-
-Familiarity does not authorize collapse into generic `User / Role / Permission / Group` semantics.
-
-## Upstream repair governance
-
-014-C exposed one genuine pre-existing composition contradiction and repaired the natural Phase-011 canonical synchronization owner rather than hiding the issue inside a familiarity record.
-
-Current rule:
-
-```text
-Event Completed
-  → broad/new ordinary live-event Judge capability closes
-  != universal hidden Access revocation
-```
-
-An existing Outstanding obligation may remain narrowly actionable only when current policy and fresh Access permit that specific work. The historical 011-C record remains provenance and a later-correction note documents the change.
-
-## Familiarity evidence governance
+## Familiarity governance after 014-D
 
 ```text
 current canonical MUDAC knowledge = semantic authority
@@ -78,7 +51,18 @@ historical MUDAC alternatives = lineage / counterexample evidence
 architecture / implementation = quarantined evidence only
 ```
 
-No precedent source can overwrite current MUDAC semantics merely because it is familiar or widespread.
+Family-2 familiarity may not justify collapsing:
+
+```text
+Evaluation Occurrence
+Evaluation Obligation
+Rubric / exact Evaluation Basis
+Scorecard Draft / authoritative judgment
+```
+
+into one conventional workflow entity. Any actual semantic defect must still reopen its natural Phase-010/011/012/013 owner rather than being patched through familiarity terminology.
+
+014-D found no such upstream defect.
 
 ## Design / implementation boundary
 
@@ -86,4 +70,4 @@ Architecture and implementation remain quarantined through the remaining Concept
 
 ## Current handoff
 
-Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
+Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
