@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 familiarity/terminology audits through 014-F.
+Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 familiarity/terminology/genericity audits through 014-G.
 
 ## Current eighteen-Concept catalog
 
@@ -33,11 +33,34 @@ Current canonical Concept catalog after Phase 010 convergence, Phase 012 depende
 
 Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
 
-## Phase-014 familiarity result
+## Phase-014 familiarity / genericity result
 
-014-C through 014-E completed all Concept-family audits. 014-F completed the cross-catalog terminology audit.
+014-C through 014-E completed all Concept-family audits. 014-F completed the cross-catalog terminology audit. 014-G completed broader genericity and duplication-pressure analysis.
 
-No current Concept was renamed, merged or replaced.
+All eighteen Concept identities remain current. No super-Concept or merger is adopted.
+
+The genericity rule is:
+
+```text
+Generic at the boundary; specific in purpose.
+shared parameter != shared purpose
+shared history shape != shared lifecycle
+```
+
+The one adopted broader-genericity refinement is [Team](team.md): its intrinsic meaning is now a scoped competing group acting as one unit, while PF-01 binds that group to the student teams used by MUDAC.
+
+Rejected super-concepts include:
+
+```text
+Group                over Team / Division / Panel
+Scoped Relationship  over Participation / assignment / membership / Alias
+Occurrence           over Competition / Evaluation Occurrence
+Task / Work Item     over responsibility / Remaining Work
+Evaluation Record    over Rubric / Scorecard / Aggregate / Rank
+Historical Record    over owner-specific currentness/correction semantics
+Result               over Aggregate / Rank / Award / Outcome Declaration
+Representation       as a merger of Export / Publication
+```
 
 Preserve especially:
 
@@ -52,27 +75,11 @@ Competition Finalized != Outcome Declaration
 Outcome Declaration != Export != Publication != delivery
 ```
 
-A common need for history, currentness, predecessor/successor relations or result-oriented presentation does not establish a shared super-Concept.
-
 ## Vocabulary / expectation-transfer authority
 
 Use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md) when familiar labels could blur Concept boundaries.
 
-Examples:
-
-```text
-role                 → Participation Capacity explanation only
-permission           → Access result explanation only
-judging event        → Evaluation Occurrence explanation
-assigned evaluation  → Evaluation Obligation explanation
-Judge Scorecard      → Scorecard explanation
-revision             → no universal current Concept
-official outcome     → Outcome Declaration authority
-report / snapshot    → Export only when Export contract is satisfied
-release              → Publication explanation
-```
-
-Generic `User`, `Role`, `Permission`, `Session`, `Task`, `Form`, `Submission`, `Revision`, `Result`, `Workflow` or `Status` must not become replacement Concepts merely for familiarity.
+Generic `User`, `Role`, `Permission`, `Session`, `Task`, `Form`, `Submission`, `Revision`, `Result`, `Workflow` or `Status` must not become replacement Concepts merely for familiarity or apparent reuse.
 
 ## Current composition / scope / mapping
 
@@ -95,7 +102,8 @@ The sole adopted variant remains:
 014-D COMPLETE — PASS
 014-E COMPLETE — PASS
 014-F COMPLETE — PASS
-014-G NEXT
+014-G COMPLETE — PASS
+014-H NEXT
 ```
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
