@@ -28,7 +28,8 @@ Jackson Concept Design: IN PROGRESS
 014-D: COMPLETE — PASS
 014-E: COMPLETE — PASS
 014-F: COMPLETE — PASS
-014-G: NEXT
+014-G: COMPLETE — PASS
+014-H: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -44,34 +45,22 @@ MUDAC adopts one current product/application variant:
 
 ## Phase-014 posture
 
-All three Concept-family familiarity audits retain the eighteen current Concept names/boundaries.
+All three Concept-family familiarity audits retain the eighteen current Concept names/boundaries. 014-F governs safe familiar vocabulary around those owners.
 
-014-F now governs the language around those Concepts:
-
-```text
-T1 canonical semantic term
-T2 qualified explanatory label
-T3 analogy-only term
-T4 high-risk generic term
-```
-
-The major false-familiarity risk is generic glue vocabulary rather than the canonical catalog itself.
-
-Preserve:
+014-G confirms:
 
 ```text
-Identity != Participation != Access
-Evaluation Occurrence != Evaluation Obligation != Scorecard
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration != Export != Publication != delivery
+Generic at the boundary; specific in purpose.
+shared parameter != shared purpose
+shared history shape != shared lifecycle
 ```
 
-Avoid generic terminology such as `role`, `task`, `submit`, `final result`, `winner`, `revision`, `resolve`, `share` or universal `status` where it would hide the natural semantic owner.
+One narrow canonical refinement removes incidental `student` specificity from the intrinsic Team Concept; PF-01 still binds Team to student teams.
 
-Prefer owner-specific actions and states such as `Finalize Evaluation`, `Complete Live Event`, `Confirm Successor Outcome Declaration`, `Generate Export`, `Publish Representation` and `Withdraw Publication`.
+No `Group`, `Task`, `Result`, `Historical Record`, generic `Occurrence`, or merged Export/Publication super-Concept is introduced.
+
+Potential reusable knowledge such as exact-basis binding, explicit successor history, represented-authority provenance, and source→representation→release separation moves to 014-H for deliberate disposition rather than becoming another MUDAC catalog.
 
 ## Current direction
 
-Proceed to **014-G — Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit**.
+Proceed to **014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit**.
