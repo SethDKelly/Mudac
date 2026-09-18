@@ -27,7 +27,8 @@ Jackson Concept Design: IN PROGRESS
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
-014-D: NEXT
+014-D: COMPLETE — PASS
+014-E: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -37,7 +38,7 @@ implementation authorization: NOT YET
 
 # Phase-014 comparison authority
 
-Current MUDAC canonical knowledge remains the semantic target. Phase-014 precedents are evidence for comparison only.
+Current MUDAC canonical knowledge remains the semantic target. Phase-014 precedents are comparison evidence only.
 
 ```text
 E1 current MUDAC authority                     semantic target
@@ -53,20 +54,7 @@ The PT-01..PT-13 taxonomy organizes precedent families and creates no new canoni
 
 # Accepted Family-1 familiarity result
 
-014-C retains the current Concept boundaries/names for:
-
-```text
-Competition
-Division
-Team
-Panel
-Identity
-Participation
-Alias
-Access
-```
-
-The family is intentionally familiar **without collapsing authority seams**.
+014-C retains the current Concept boundaries/names for Competition, Division, Team, Panel, Identity, Participation, Alias and Access.
 
 Preserve:
 
@@ -76,29 +64,42 @@ Panel membership != occurrence participation != responsibility != evidence
 Access permission != semantic authorship
 ```
 
-The strongest defined cross-application precedent for Access is contextual authorization/ABAC-like decision semantics; this is conceptual comparison evidence, not an implementation prescription.
+# Accepted Family-2 familiarity result
 
-# Event-completion correction
-
-014-C repaired [Competition Lifecycle, Participation & Contextual Access Composition](synchronizations/competition-participation-access.md):
+014-D retains the current Concept boundaries/names for Evaluation Occurrence, Evaluation Obligation, Rubric and Scorecard.
 
 ```text
-Event Completed
-  → broad/new ordinary live-event Judge capability closes
-  != universal hidden Access revocation
+Evaluation Occurrence ≈ bounded assessment/evaluation event
+Evaluation Obligation ≈ scoped evaluation duty/responsibility
+Rubric                ≈ scoring/evaluation rubric
+Scorecard             ≈ one evaluator's judgment record
 ```
 
-An existing Outstanding obligation may continue on the same logical evaluation only when current policy and a fresh Access decision permit that specific work. This does not reactivate Participation or create new live-event responsibility.
+Preserve:
+
+```text
+occurrence participation != responsibility
+responsibility != judgment evidence
+Rubric definition != exact authoritative Evaluation Basis
+Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
+```
+
+`Session`, `Attempt`, `Encounter`, `Task`, `Assignment`, `Form`, `Submission` and `Ballot` are not substitutes unless the exact MUDAC semantics remain intact. 014-D found no upstream contradiction requiring repair.
+
+# Event-completion correction retained
+
+014-C repaired [Competition Lifecycle, Participation & Contextual Access Composition](synchronizations/competition-participation-access.md): broad/new live-event capability closes at Event Completed, while the same pre-existing Outstanding obligation may remain narrowly actionable when policy and fresh Access permit it. This does not reactivate Participation or create new responsibility.
 
 # Retrieval rule
 
 1. start at the natural canonical owner for current meaning;
 2. use completed Phase-013 mapping for user-visible semantics;
-3. for Phase-014 work, load 014-A/014-B plus the latest completed family audit;
+3. for Phase-014 work, load 014-A/014-B plus the completed family audits relevant to the subject;
 4. add only precedent evidence needed for the current concept family;
 5. use historical adapters only as explicit comparison/counterexample evidence;
 6. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
+Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
