@@ -14,7 +14,6 @@ Phase 014 is **COMPLETE — PASS**.
 - [014-H — Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit](014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md) — **Complete — PASS**.
 - [014-I — Refinement Propagation, Reopen/Repair Decisions & Obvious Integrity Check](014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md) — **Complete — PASS**.
 - [014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff](014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) — **Complete — PASS**.
-- 014-J — Phase 014 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 015 Handoff.
 
 ## Current authority
 
