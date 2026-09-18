@@ -1,6 +1,6 @@
 # MUDAC Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure and Phase-014 familiarity/terminology/genericity/reuse audits through 014-H.
+Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure, Phase 014 familiarity/terminology/genericity/reuse exit, and the Phase-015 integrity baseline.
 
 ## Current eighteen-Concept catalog
 
@@ -142,11 +142,12 @@ The sole adopted variant remains:
 014-J COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
-015-B NEXT
+015-B COMPLETE — PASS
+015-C NEXT
 ```
 
-Proceed to **015-B — Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register**.
+Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
 
 ## Phase 015 handoff
 
-Phase 014 is **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**. Current family ownership remains unchanged until an explicit Phase-015 finding routes a correction to its natural owner.
+Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**. The 015-B directional register is phase evidence only; current family ownership remains unchanged until an explicit Phase-015 `INT-F*` finding routes a correction to its natural owner.
