@@ -1,6 +1,6 @@
 # Phase 014 — Familiarity, Reuse & Genericity
 
-Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D next.**
+Status: **IN PROGRESS — 014-A READY; 014-B PASS; 014-C PASS; 014-D PASS; 014-E next.**
 
 Phase 014 follows completed Phase 013 Concept Mapping. It audits whether the mature MUDAC concept system uses familiar conceptual ideas where they genuinely transfer correct expectations, avoids false familiarity, removes incidental product-specificity where safe, justifies retained novelty, and preserves reusable design knowledge without weakening established authority boundaries.
 
@@ -19,6 +19,7 @@ Phase 014 begins from completed design authority through Phase 013:
 014-A start gate                            COMPLETE — READY
 014-B precedent/evidence baseline           COMPLETE — PASS
 014-C Family-1 familiarity/reuse audit      COMPLETE — PASS
+014-D Family-2 familiarity/reuse audit      COMPLETE — PASS
 ```
 
 Start from current canonical knowledge under `docs/canonical/`, especially Project Purpose, the 18 current Concepts, synchronization/application-action authority, dependence/PF-01 scope, Policies/Invariants, and the complete Phase-013 Experience mapping corpus.
@@ -47,22 +48,7 @@ profile reuse != capability union
 
 ## 014-C Family-1 result
 
-[014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit](014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md) establishes:
-
-```text
-Competition    → semantic fit / familiar competition occurrence
-Division       → semantic fit / scoped cohort-category
-Team           → semantic fit / competing unit
-Panel          → semantic fit with constraints / intended evaluator grouping
-Identity       → semantic fit / stable human identity continuity
-Participation  → semantic fit with constraints / scoped capacity relationship
-Alias          → semantic fit with constraints / scoped alternate identity
-Access         → semantic fit with constraints / contextual authorization
-```
-
-No Family-1 Concept was renamed, merged, replaced or generalized.
-
-Preserve especially:
+[014-C — Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit](014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md) retains all eight Family-1 names/boundaries and preserves especially:
 
 ```text
 Identity != Participation != Access
@@ -70,20 +56,32 @@ Panel membership != occurrence participation != responsibility != evidence
 Access permission != semantic authorship
 ```
 
-014-C also repaired one pre-existing Phase-011 composition contradiction:
+It also repaired the event-completion Access seam so broad live-event capability closure does not imply universal denial of narrowly permitted work on an existing Outstanding obligation.
+
+## 014-D Family-2 result
+
+[014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit](014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md) retains all four Family-2 names/boundaries:
 
 ```text
-Event Completed
-  → broad/new ordinary live-event Judge capability closes
-  != universal hidden Access revocation
-
-existing Outstanding obligation
-  + current policy permits continuation
-  + fresh Access permits specific work
-  → same logical evaluation may continue
+Evaluation Occurrence → semantic fit with constraints / bounded evaluation event
+Evaluation Obligation → semantic fit with constraints / scoped evaluation duty
+Rubric                → strong semantic fit / scoring-evaluation instrument
+Scorecard             → semantic fit with constraints / one evaluator judgment record
 ```
 
-This narrow continuation does not reactivate Participation or authorize new ordinary live-event responsibility.
+Preserve:
+
+```text
+occurrence participation != responsibility
+responsibility != judgment evidence
+Rubric definition != exact authoritative Evaluation Basis
+Scorecard Draft != authoritative judgment
+historical obligation satisfaction != current evidence eligibility
+```
+
+`Session`, `Attempt`, `Encounter`, `Task`, `Assignment`, `Form`, `Submission` and `Ballot` remain contextual analogies only when they preserve these distinctions.
+
+014-D found no upstream contradiction requiring repair.
 
 ## Approved subgroup sequence
 
@@ -92,8 +90,8 @@ This narrow continuation does not reactivate Participation or authorize new ordi
 | 014-A | Familiarity, Reuse & Genericity Scope, Criteria, Evidence & Subphase Planning | **Complete — READY** |
 | 014-B | Familiarity Evidence Baseline, Precedent Taxonomy & Comparison Register | **Complete — PASS** |
 | 014-C | Competition, Competitor, Grouping, Identity, Participation, Alias & Access Familiarity/Reuse Audit | **Complete — PASS** |
-| 014-D | Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit | **Next** |
-| 014-E | Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit | Planned |
+| 014-D | Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit | **Complete — PASS** |
+| 014-E | Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit | **Next** |
 | 014-F | Cross-Catalog False Familiarity, Terminology & Expectation-Transfer Audit | Planned |
 | 014-G | Broader Genericity, Parameterization, Duplication & Specialization-Pressure Audit | Planned |
 | 014-H | Retained Novelty, Reusable Concept-Knowledge & Catalog-Candidate Audit | Planned |
@@ -108,7 +106,8 @@ Phase 014 IN PROGRESS
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
-014-D NEXT
+014-D COMPLETE — PASS
+014-E NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -118,4 +117,4 @@ implementation authorization: NOT YET
 
 ## Next
 
-Proceed to **014-D — Evaluation Occurrence, Obligation, Rubric & Scorecard Familiarity/Reuse Audit**.
+Proceed to **014-E — Versioning, Provenance, Award, Outcome Declaration, Export & Publication Familiarity/Reuse Audit**.
