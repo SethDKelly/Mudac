@@ -311,7 +311,8 @@ stale historical wording with clear current meaning → repair current owner, do
 PHASE 013 COMPLETE — PASS
 PHASE 014 COMPLETE — PASS
 PHASE 015 IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS
-015-D NEXT
+015-D COMPLETE — PASS
+015-E NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
