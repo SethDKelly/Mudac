@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -60,6 +60,23 @@ Cluster A dispositions:
 
 Later 015-D/015-H/015-I rechecks are layered verification, not unresolved Cluster-A defects.
 
+## 015-D integrity result
+
+[015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity](015-D-evaluation-occurrence-obligation-rubric-scorecard-judge-authorship-integrity.md) is **COMPLETE — PASS**.
+
+Cluster B confirms:
+
+- occurrence truth remains distinct from responsibility;
+- responsibility remains distinct from judgment authority and current evidence eligibility;
+- one obligation maps to at most one logical Scorecard;
+- exact authoritative Rubric basis remains fixed for the evaluation;
+- explicit Finalization is required for authority;
+- substitution does not transfer authorship;
+- paper/assisted capture may separate Actor from represented Judge authority without changing semantic authorship;
+- current Access gates capability without creating or erasing responsibility.
+
+No corrective `INT-F*` finding or semantic reopen was required.
+
 ## Current integrity rule
 
 ```text
@@ -96,8 +113,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-A | Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning | **Complete — READY** |
 | 015-B | Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register | **Complete — PASS** |
 | 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | **Complete — PASS** |
-| 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | **Next** |
-| 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | Planned |
+| 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | **Complete — PASS** |
+| 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | **Next** |
 | 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | Planned |
 | 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | Planned |
 | 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | Planned |
@@ -196,7 +213,8 @@ Phase 015 IN PROGRESS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
-015-D NEXT
+015-D COMPLETE — PASS
+015-E NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -209,4 +227,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
+Proceed to **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity**.
