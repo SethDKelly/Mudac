@@ -17,6 +17,7 @@ sources:
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-C-competition-context-competitor-structure-identity-participation-alias-access-panel-integrity.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-D-evaluation-occurrence-obligation-rubric-scorecard-judge-authorship-integrity.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -27,7 +28,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY**, 015-B **COMPLETE — PASS**, and 015-C **COMPLETE — PASS**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-D **COMPLETE — PASS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -57,7 +58,8 @@ implementation authorization: NOT YET
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
-015-D: NEXT
+015-D: COMPLETE — PASS
+015-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -182,10 +184,14 @@ Phase 015 does not authorize runtime race-condition analysis, transaction/lockin
 
 015-C opens no corrective `INT-F*` finding and authorizes no semantic or implementation change. Its two explicit limitations—narrow post-event continuation under fresh Access and controlled rather than absolute Alias anonymity—remain current-purpose-compatible and will be rechecked only in their dependent later clusters.
 
+## 015-D current integrity result
+
+015-D opens no corrective `INT-F*` finding and authorizes no semantic or implementation change. It confirms that occurrence truth, evaluator responsibility, exact Rubric basis, one logical Scorecard, explicit Finalization, Judge authorship and contextual capability remain independently meaningful under current composition. Temporal/correction rechecks move to 015-E.
+
 # Suspended downstream authority
 
 Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
+Proceed to **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity**.
