@@ -62,10 +62,11 @@ The [Reusable Concept Knowledge & Design Patterns](../project/reusable-design-kn
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
-015-C NEXT
+015-C COMPLETE — PASS
+015-D NEXT
 ```
 
-Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
+Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
 
 ## Phase 015 handoff
 
