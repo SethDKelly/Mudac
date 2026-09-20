@@ -55,10 +55,11 @@ Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
-015-D NEXT
+015-D COMPLETE — PASS
+015-E NEXT
 ```
 
-Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
+Proceed to **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity**.
 
 ## Phase 015 handoff
 
