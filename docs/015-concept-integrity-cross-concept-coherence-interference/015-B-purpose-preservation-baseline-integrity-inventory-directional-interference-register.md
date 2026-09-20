@@ -255,6 +255,28 @@ Status legend:
 | DIR-047 | accessible/degraded/paper mapping → semantic owners | adaptation may reduce information/control in a way that changes authorship, authority or uncertainty meaning | S01/S06/S08/S09 | OPEN-I |
 | DIR-048 | uncertainty/recovery mapping → authoritative state | retry/resume/recovery may visually promote unknown persistence or stale local state into confirmed authority | S03/S08 | OPEN-I |
 
+## 015-C disposition overlay
+
+015-C has now dispositioned Cluster-A probes.
+
+The original `OPEN-C` values above record the owner phase assigned when this register was created. Current Cluster-A disposition is:
+
+| DIR | 015-C disposition | Later recheck |
+| --- | --- | --- |
+| DIR-001 | NO INTEGRITY VIOLATION | none required |
+| DIR-002 | PURPOSE PRESERVED WITH EXPLICIT LIMITATION | 015-D |
+| DIR-003 | NO INTEGRITY VIOLATION | none required |
+| DIR-004 | NO INTEGRITY VIOLATION | none required |
+| DIR-005 | NO INTEGRITY VIOLATION IN CLUSTER A | 015-D |
+| DIR-006 | NO INTEGRITY VIOLATION | 015-D |
+| DIR-007 | PURPOSE PRESERVED WITH EXPLICIT LIMITATION | 015-I |
+| DIR-008 | NO INTEGRITY VIOLATION | 015-H, 015-I |
+| DIR-009 | NO INTEGRITY VIOLATION | 015-I |
+
+No corrective `INT-F*` finding was opened by 015-C.
+
+The later rechecks above are layered whole-system verification, not unresolved Cluster-A defects.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
