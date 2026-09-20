@@ -18,7 +18,7 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
 * Phase 014 — Familiarity, Reuse & Genericity: **Complete — PASS**
-* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **In progress — 015-A ready; 015-B pass; 015-C next**
+* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **In progress — 015-A ready; 015-B pass; 015-C pass, 015-D next**
 
 ```text
 014-A: COMPLETE — READY
@@ -33,7 +33,8 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 014-J: COMPLETE — PASS
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
-015-C: NEXT
+015-C: COMPLETE — PASS
+015-D: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -76,7 +77,8 @@ No external/universal catalog is created by Phase 014, and no Phase-010/011/012/
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
 014 familiarity / reuse / genericity           COMPLETE — PASS
-015 integrity / interference                   IN PROGRESS — 015-C NEXT
+015 integrity / interference                   IN PROGRESS — 015-C COMPLETE — PASS
+015-D NEXT
 016 scenario / misfit / failure / adversarial
 017 methodology closure
 ```
