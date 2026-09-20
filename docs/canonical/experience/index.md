@@ -20,7 +20,8 @@ Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority duri
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
-015-C NEXT
+015-C COMPLETE — PASS
+015-D NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -71,7 +72,7 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
+Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
 
 ## Phase 015 handoff
 
