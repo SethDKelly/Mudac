@@ -34,7 +34,8 @@ Current downstream conceptual authority is routed through:
 015 IN PROGRESS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
-015-C NEXT
+015-C COMPLETE — PASS
+015-D NEXT
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
@@ -48,7 +49,8 @@ Current downstream conceptual authority is routed through:
 Phase 014 COMPLETE — PASS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
-015-C NEXT
+015-C COMPLETE — PASS
+015-D NEXT
 architecture / implementation SUSPENDED
 ```
 
@@ -95,7 +97,7 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
+Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
 
 ## Phase 015 handoff
 
