@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -44,6 +44,22 @@ It establishes:
 
 A `DIR-*` probe is planning evidence, not a finding or violation.
 
+## 015-C integrity result
+
+[015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity](015-C-competition-context-competitor-structure-identity-participation-alias-access-panel-integrity.md) is **COMPLETE — PASS**.
+
+Cluster A dispositions:
+
+- DIR-001–009 dispositioned;
+- no corrective `INT-F*` finding opened;
+- no semantic reopen or canonical repair required;
+- completed Participation may remain attributable context for narrowly authorized pre-existing work without reactivation;
+- Alias remains controlled bias-aware alternate identity rather than absolute anonymity;
+- Panel/intended grouping remains distinct from occurrence participation and responsibility;
+- Team's Phase-014 genericity survives current composition.
+
+Later 015-D/015-H/015-I rechecks are layered verification, not unresolved Cluster-A defects.
+
 ## Current integrity rule
 
 ```text
@@ -79,8 +95,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | --- | --- | --- |
 | 015-A | Integrity Audit Scope, Interference Surfaces, Whole-System Coverage & Subphase Planning | **Complete — READY** |
 | 015-B | Purpose-Preservation Baseline, Integrity Inventory & Directional Interference Register | **Complete — PASS** |
-| 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | **Next** |
-| 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | Planned |
+| 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | **Complete — PASS** |
+| 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | **Next** |
 | 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | Planned |
 | 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | Planned |
 | 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | Planned |
@@ -179,7 +195,8 @@ Phase 014 COMPLETE — PASS
 Phase 015 IN PROGRESS
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
-015-C NEXT
+015-C COMPLETE — PASS
+015-D NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -192,4 +209,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
+Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
