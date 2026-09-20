@@ -277,6 +277,26 @@ No corrective `INT-F*` finding was opened by 015-C.
 
 The later rechecks above are layered whole-system verification, not unresolved Cluster-A defects.
 
+## 015-D disposition overlay
+
+015-D has now dispositioned the evaluation-family probes and the DIR-005 recheck.
+
+| DIR | 015-D disposition | Later recheck |
+| --- | --- | --- |
+| DIR-005 | NO INTEGRITY VIOLATION — CLUSTER-B RECHECK CLOSED | none |
+| DIR-010 | PURPOSE PRESERVED WITH EXPLICIT LIMITATION | none |
+| DIR-011 | NO INTEGRITY VIOLATION | none |
+| DIR-012 | NO INTEGRITY VIOLATION | 015-E for eligibility/history dimension |
+| DIR-013 | NO INTEGRITY VIOLATION | none |
+| DIR-014 | NO INTEGRITY VIOLATION IN CLUSTER B | 015-E |
+| DIR-015 | NO INTEGRITY VIOLATION IN ORDINARY EVALUATION | 015-E |
+| DIR-016 | PURPOSE PRESERVED WITH EXPLICIT LIMITATION | 015-E, 015-I |
+| DIR-017 | PURPOSE PRESERVED WITH EXPLICIT CAPABILITY SEPARATION | 015-E |
+
+No corrective `INT-F*` finding was opened by 015-D.
+
+Later rechecks are temporal/mapping verification, not unresolved Cluster-B defects.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
