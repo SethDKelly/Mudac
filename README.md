@@ -27,7 +27,8 @@ Jackson Concept Design: IN PROGRESS
 015: IN PROGRESS
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
-015-C: NEXT
+015-C: COMPLETE — PASS
+015-D: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -40,7 +41,8 @@ Jackson Concept Design: IN PROGRESS
 014-J: COMPLETE — PASS
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
-015-C: NEXT
+015-C: COMPLETE — PASS
+015-D: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -80,4 +82,4 @@ conceptual reuse != implementation reuse
 
 ## Current direction
 
-Proceed to **015-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity**.
+Proceed to **015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity**.
