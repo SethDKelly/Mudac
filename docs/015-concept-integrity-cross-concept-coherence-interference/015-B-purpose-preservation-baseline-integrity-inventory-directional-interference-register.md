@@ -376,6 +376,31 @@ No corrective `INT-F*` finding was opened by 015-H.
 
 The remaining 015-I work is mapping/profile integrity, not unresolved structural chaining/automation repair.
 
+## 015-I disposition overlay
+
+015-I has now closed all remaining mapping/profile/refinement probes.
+
+| DIR | 015-I disposition | Later recheck |
+| --- | --- | --- |
+| DIR-007 | PURPOSE PRESERVED — MAPPING RECHECK CLOSED | none |
+| DIR-008 | NO INTEGRITY VIOLATION — MAPPING RECHECK CLOSED | none |
+| DIR-009 | NO INTEGRITY VIOLATION — PHASE-014 GENERICITY RECHECK CLOSED | none |
+| DIR-016 | PURPOSE PRESERVED — MAPPING RECHECK CLOSED | none |
+| DIR-025 | PURPOSE PRESERVED WITH RETENTION/VISIBILITY LIMITATION | none |
+| DIR-034 | NO INTEGRITY VIOLATION — MAPPING RECHECK CLOSED | none |
+| DIR-036 | NO INTEGRITY VIOLATION — MAPPING RECHECK CLOSED | none |
+| DIR-039 | PURPOSE PRESERVED WITH EXTERNAL-PERSISTENCE EXPLANATION LIMITATION | none |
+| DIR-040 | PURPOSE PRESERVED WITH PROFILE-DISCLOSURE LIMITATION | none |
+| DIR-042 | PURPOSE PRESERVED WITH CONSEQUENCE-EXPLANATION LIMITATION | none |
+| DIR-045 | NO INTEGRITY VIOLATION | none |
+| DIR-046 | PURPOSE PRESERVED WITH QUALIFIED-VOCABULARY LIMITATION | none |
+| DIR-047 | PURPOSE PRESERVED WITH SAFE-CAPABILITY-REDUCTION LIMITATION | none |
+| DIR-048 | PURPOSE PRESERVED WITH FIRST-CLASS-UNCERTAINTY LIMITATION | none |
+
+No corrective `INT-F*` finding was opened by 015-I.
+
+All planned 015-C through 015-I directional integrity probes are now dispositioned. 015-J owns residual-register closure, repair/re-audit verification and Phase-016 target preparation.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
