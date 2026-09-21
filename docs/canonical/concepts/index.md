@@ -162,10 +162,12 @@ Phase 014 COMPLETE — PASS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
 016-J COMPLETE — PASS
-016-K NEXT
+016-K COMPLETE — PASS
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 NOT STARTED — START GATE NEXT
 ```
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 ## Phase 015 handoff
 
@@ -176,7 +178,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 
 ## Phase-016 Concept impact through 016-F
@@ -202,3 +204,8 @@ Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Rev
 ## Phase-016 residual-closure impact through 016-J
 
 016-J confirms zero open Concept defects, zero Concept reopens and no change to the eighteen-Concept catalog. The single Phase-016 misfit was composition/policy/mapping-level and has been repaired/revalidated. Phase 017 must reconcile scenario-critical boundary wording into natural current owners where discoverability requires it, without inventing new Concepts merely to summarize validation findings.
+
+
+## Phase-016 exit / Phase-017 handoff
+
+016-K closes Phase 016 **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten validation gates pass; no Concept reopen occurred; the eighteen-Concept catalog remains current. Phase 017 owns final canonical discoverability/methodology closure only and must not invent new Concepts merely to summarize validation evidence.
