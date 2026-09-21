@@ -57,7 +57,6 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
 ```
 
 # Current Phase-014 result
