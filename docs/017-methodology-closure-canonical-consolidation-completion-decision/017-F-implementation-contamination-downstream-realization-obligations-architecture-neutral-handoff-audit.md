@@ -791,4 +791,4 @@ MUDAC therefore has an architecture-neutral downstream handoff with clear concep
 
 Proceed to:
 
-> **017-G — Final Documentation Authority, OKF Progressive-Disclosure, Navigation, Reference & Closure-Evidence Reconciliation**
+> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
