@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B IN PROGRESS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -89,7 +89,7 @@ implementation authorization: NOT YET
 016: COMPLETE — PASS WITH CLOSURE HANDOFF
 017: IN PROGRESS
 017-A: COMPLETE — READY
-017-B: NEXT
+017-B: IN PROGRESS
 production readiness: NOT ESTABLISHED
 ```
 
@@ -190,7 +190,7 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 
 Phase 015 audits **purpose preservation under composition**.
 
-Phase 016 now performs mature conceptual scenario/misfit validation. Through 016-E, no scenario required a semantic reopen or repair. 016-F discovered one result-family composition misfit, repaired the natural Phase-011 policy/synchronization and Phase-013 mapping owners, and revalidated the scenario successfully. No material Phase-016 misfit remains open. Boundary clarifications remain Phase-016 evidence pending 016-J reconciliation. Architecture and implementation authority remain suspended.
+Phase 016 completed mature conceptual scenario/misfit validation. Through 016-E, no scenario required a semantic reopen or repair. 016-F discovered one result-family composition misfit, repaired the natural Phase-011 policy/synchronization and Phase-013 mapping owners, and revalidated the scenario successfully. No material Phase-016 misfit remains open. 016-J consolidated all 47 Phase-016 boundary clarifications; Phase 017 now audits their current-owner discoverability and closure treatment. Architecture and implementation authority remain suspended.
 
 ```text
 integrity finding
@@ -253,7 +253,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 ```text
 Phase 015 structural integrity register: CLOSED
 Phase 016: COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017: NOT STARTED — START GATE NEXT
+Phase 017: IN PROGRESS — 017-A COMPLETE — READY; 017-B IN PROGRESS
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
