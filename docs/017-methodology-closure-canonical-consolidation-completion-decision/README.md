@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **IN PROGRESS — 017-E COMPLETE — PASS. 017-F NEXT.**
+Status: **IN PROGRESS — 017-F COMPLETE — PASS. 017-G NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -46,7 +46,8 @@ Phase 017 IN PROGRESS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -63,7 +64,7 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**
+> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
 
 
 ## 017-A start-gate result
@@ -89,8 +90,8 @@ Proceed to:
 | 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | **Complete — PASS** |
 | 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | **Complete — PASS** |
 | 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | **Complete — PASS** |
-| 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | **Next** |
-| 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | Planned |
+| 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | **Complete — PASS** |
+| 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | **Next** |
 | 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | Planned |
 
 
@@ -122,3 +123,10 @@ All 47 Phase-016 boundary clarifications are now discoverable from current autho
 [017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit](017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md) is **COMPLETE — PASS**.
 
 The reopened Phase-009 completion runway now covers Base/Jackson concerns 000–010 for the current design. Later repair families—including the 014-C Event Completed/Access correction, 014-G Team genericity refinement and 016-F Exceptional Closeout repair—have been propagated and revalidated without requiring an earlier substantive phase reopen. Final Base-011 closure work remains in 017-F through 017-H.
+
+
+## 017-F implementation-contamination / downstream-handoff result
+
+[017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit](017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md) is **COMPLETE — PASS**.
+
+017-F finds no current Concept Design rule contaminated by concrete architecture or implementation choices. The preserved pre-Phase-009 downstream corpus remains useful but cannot be automatically reactivated: all 15 individual architecture/implementation documents now carry explicit suspension notices, stale semantic bindings are classified for future revalidation, the retained executable substrate remains non-domain, and a dedicated architecture-neutral post-Concept-Design re-entry contract now governs any later downstream start gate.
