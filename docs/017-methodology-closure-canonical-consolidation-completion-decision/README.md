@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **NOT STARTED — START GATE NEXT.**
+Status: **IN PROGRESS — 017-A COMPLETE — READY. 017-B NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -40,7 +40,9 @@ The start gate owns dependency-safe subphase planning.
 
 ```text
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017 NOT STARTED — START GATE NEXT
+Phase 017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -57,4 +59,32 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**
+> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
+
+
+## 017-A start-gate result
+
+[017-A — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning](017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) is **COMPLETE — READY**.
+
+017-A confirms:
+
+- Phase 016 entered closure with zero open semantic misfit;
+- the eighteen-Concept catalog and PF-01 remain the current baseline;
+- current canonical semantic authority is sufficiently coherent to audit;
+- three current navigation indexes contain stale phase-status wording and therefore require closure reconciliation;
+- implementation readiness remains **NOT READY**;
+- architecture and implementation remain suspended;
+- Phase 017 will run as eight dependency-safe subphases, 017-A through 017-H.
+
+## Approved subphase sequence
+
+| Subphase | Closure work | Status |
+| --- | --- | --- |
+| 017-A | Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning | **Complete — READY** |
+| 017-B | Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation | **Next** |
+| 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | Planned |
+| 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | Planned |
+| 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | Planned |
+| 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | Planned |
+| 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | Planned |
+| 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | Planned |
