@@ -422,6 +422,10 @@ A simpler label may not:
 7. When a user-facing label differs from the Concept name, maintain traceability to the natural semantic owner.
 8. If clearer wording would require changing semantics rather than explanation, route the issue to the natural owner instead of solving it here.
 
+# Historical non-term closure
+
+The word **Minding** appears in a historical Phase-016 subphase title as a planning/documentation artifact. It is not a MUDAC Concept, mechanism, policy, invariant, action, state, or approved explanatory term. Do not infer semantic meaning from it or introduce it into current product vocabulary.
+
 # Related authority
 
 - Concept definitions → [`../concepts/`](../concepts/)
