@@ -12,11 +12,12 @@ The controlling current owners are:
 
 - [Design / Implementation Boundary](../governance/design-implementation-boundary.md)
 - [Downstream Architecture & Implementation Authority Quarantine](../governance/downstream-authority-quarantine.md)
+- [Post-Concept-Design Architecture & Engineering Re-entry](../governance/post-concept-design-reentry.md)
 
 Current posture:
 
 ```text
-Jackson Concept Design: REOPENED / NOT COMPLETE
+Jackson Concept Design: IN PROGRESS — PHASE 017
 implementation readiness: NOT READY
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -45,3 +46,10 @@ Existing executable substrate may receive only narrow safety/build maintenance t
 A future successful Phase 017 closure authorizes only handoff into a separate architecture/engineering process. It does not automatically restore this subtree as accepted current implementation authority, resume 008-F, authorize a first slice, or ratify 008-D/E physical choices.
 
 A later downstream re-entry must explicitly decide which prior choices remain justified against the closed conceptual design.
+
+
+## Phase-017 audit result
+
+017-F audited all six documents in this subtree. Each now carries an explicit suspension notice at document level.
+
+The retained runtime/bootstrap remains non-domain. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices are preserved only as candidate/factual downstream knowledge. They must be revalidated after successful Concept Design closure; 008-F..L remains inactive and no historical first-slice gate has current authority.
