@@ -19,6 +19,7 @@ sources:
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-C-competition-context-competitor-structure-identity-participation-alias-access-panel-integrity.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-D-evaluation-occurrence-obligation-rubric-scorecard-judge-authorship-integrity.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-E-versioning-provenance-temporal-correction-successor-work-historical-truth-integrity.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-F-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-integrity.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -29,7 +30,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-E **COMPLETE — PASS**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-F **COMPLETE — PASS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -61,7 +62,8 @@ implementation authorization: NOT YET
 015-C: COMPLETE — PASS
 015-D: COMPLETE — PASS
 015-E: COMPLETE — PASS
-015-F: NEXT
+015-F: COMPLETE — PASS
+015-G: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -194,10 +196,14 @@ Phase 015 does not authorize runtime race-condition analysis, transaction/lockin
 
 015-E opens no corrective `INT-F*` finding and authorizes no semantic or implementation change. It confirms that Versioning currentness remains owner-local, Provenance remains explanatory, terminal obligations never reopen, invalidation/replacement/supersession stay distinct, successor responsibility is deliberate, and retained history may outlive current Access without implying unrestricted visibility.
 
+## 015-F current integrity result
+
+015-F opens no corrective `INT-F*` finding and authorizes no semantic or implementation change. It confirms that factual Coverage, derived Aggregate/Rank/Readiness, Award recognition, Competition Finalization and Outcome Declaration officiality remain independently owned; exceptions do not rewrite Coverage, recalculation does not move recognition, and corrected calculations never silently become official.
+
 # Suspended downstream authority
 
 Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
+Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
