@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **IN PROGRESS — 017-B COMPLETE — PASS. 017-C NEXT.**
+Status: **IN PROGRESS — 017-C COMPLETE — PASS. 017-D NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -43,7 +43,8 @@ Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
-017-C NEXT
+017-C COMPLETE — PASS
+017-D NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -60,7 +61,7 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**
+> **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**
 
 
 ## 017-A start-gate result
@@ -83,8 +84,8 @@ Proceed to:
 | --- | --- | --- |
 | 017-A | Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning | **Complete — READY** |
 | 017-B | Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation | **Complete — PASS** |
-| 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | **Next** |
-| 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | Planned |
+| 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | **Complete — PASS** |
+| 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | **Next** |
 | 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | Planned |
 | 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | Planned |
 | 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | Planned |
@@ -98,3 +99,10 @@ Proceed to:
 017-B corrected stale current-authority lifecycle/handoff wording, removed obsolete Phase-015→016 handoffs from current family indexes, reconciled Dependence and synchronization owners to present-tense ownership, confirmed deprecated adapters remain historical only, and verified the 016-F exceptional-closeout repair is represented in current natural owners.
 
 No substantive semantic reopen was required.
+
+
+## 017-C traceability / orphan result
+
+[017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit](017-C-methodology-chain-traceability-purpose-fulfillment-orphan-unexplained-element-audit.md) is **COMPLETE — PASS AFTER ONE DOCUMENTATION-AUTHORITY RECLASSIFICATION**.
+
+017-C establishes bidirectional closure traceability across P-01–P-09, all eighteen Concepts, current mechanisms/policies/invariants, synchronization families, PF-01, twelve Experience owners, Phase-015 integrity evidence, Phase-016 scenario evidence, and known downstream realization obligations. No semantic orphan remains open. The historical Phase-013 entry handoff was reclassified from ambiguous stable authority to historical start-gate evidence.
