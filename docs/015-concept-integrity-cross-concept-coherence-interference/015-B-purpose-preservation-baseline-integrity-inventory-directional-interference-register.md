@@ -297,6 +297,29 @@ No corrective `INT-F*` finding was opened by 015-D.
 
 Later rechecks are temporal/mapping verification, not unresolved Cluster-B defects.
 
+## 015-E disposition overlay
+
+015-E has now dispositioned the temporal/correction probes, including the temporal rechecks carried from 015-D.
+
+| DIR | 015-E disposition | Later recheck |
+| --- | --- | --- |
+| DIR-014 | NO INTEGRITY VIOLATION — TEMPORAL RECHECK CLOSED | none |
+| DIR-015 | NO INTEGRITY VIOLATION — TEMPORAL RECHECK CLOSED | none |
+| DIR-016 | PURPOSE PRESERVED — TEMPORAL RECHECK CLOSED | 015-I mapping only |
+| DIR-017 | NO INTEGRITY VIOLATION — TEMPORAL RECHECK CLOSED | none |
+| DIR-018 | NO INTEGRITY VIOLATION | none |
+| DIR-019 | NO INTEGRITY VIOLATION | none |
+| DIR-020 | NO INTEGRITY VIOLATION | none |
+| DIR-021 | PURPOSE PRESERVED WITH OWNER-LOCAL ELIGIBILITY LIMITATION | none |
+| DIR-022 | NO INTEGRITY VIOLATION | 015-H automation recheck |
+| DIR-023 | NO INTEGRITY VIOLATION | none |
+| DIR-024 | PURPOSE PRESERVED WITH EXPLANATORY-ONLY LIMITATION | none |
+| DIR-025 | PURPOSE PRESERVED WITH RETENTION/VISIBILITY LIMITATION | 015-I mapping recheck |
+
+No corrective `INT-F*` finding was opened by 015-E.
+
+The later 015-H/015-I rechecks are whole-system automation/mapping verification, not unresolved Cluster-C defects.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
