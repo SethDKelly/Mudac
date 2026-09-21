@@ -79,10 +79,11 @@ Phase 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
 017-C COMPLETE — PASS
-017-D NEXT
+017-D COMPLETE — PASS
+017-E NEXT
 ```
 
-Current closure work: **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
+Current closure work: **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**.
 
 
 
