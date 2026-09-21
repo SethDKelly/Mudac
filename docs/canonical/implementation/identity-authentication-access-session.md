@@ -25,6 +25,17 @@ sources:
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-11T00:40:00Z }
 ---
 
+# Authority notice — suspended downstream candidate
+
+This document is preserved **pre-Phase-009 downstream candidate knowledge**. It is not current Concept Design authority and it is not automatically reactivated by a successful Phase-017 closure.
+
+The frontmatter value `status: stable` means this preserved document snapshot is stable for historical/candidate reference; it does **not** mean the implementation choice is currently accepted.
+
+Any post-closure downstream process must revalidate this document against the closed current owners for Concepts, synchronizations/application actions, PF-01 scope, Experience mapping, invariants, policies, limitations and realization obligations. Where this document uses superseded names, old module boundaries, old phase gates, or concrete technology choices, current Concept Design wins.
+
+Concrete choices below—including package topology, PostgreSQL schemas, outbox/projection conventions, Cognito/OIDC realization, runtime/toolchain choices, tests/CI/CD, or the historical Phase-008 execution sequence—remain hypotheses or frozen non-domain facts until a separate downstream process explicitly adopts, revises or rejects them. References to `008-L` or a historical "first executable slice" do not constitute current execution authority.
+
+
 # Purpose
 
 Define the durable implementation choices that realize the accepted Identity, Participation, Access, authentication/session, invitation, recovery, secrets, and technical-authority architecture before any of those behaviors are implemented.
