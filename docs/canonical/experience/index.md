@@ -37,7 +37,8 @@ Phase 014 COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
-016-I NEXT
+016-I COMPLETE — PASS
+016-J NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -88,9 +89,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **IN PROGRESS — 016-H COMPLETE — PASS; 016-I NEXT**.
+Phase 016 is **IN PROGRESS — 016-I COMPLETE — PASS; 016-J NEXT**.
 
-Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
+Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
 
 ## Phase 015 handoff
 
@@ -101,7 +102,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
+Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
 
 
 ## Phase-016 officiality mapping correction
@@ -117,3 +118,8 @@ Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Securi
 ## Phase-016 authority-conflict mapping result through 016-H
 
 016-H confirms that user-visible action availability or actor legitimacy at initiation does not guarantee semantic success. Current owner state and current action preconditions remain authoritative; stale intent cannot overwrite newer authority, and unknown concurrent results remain unknown pending reconciliation.
+
+
+## Phase-016 degraded/recovery mapping result through 016-I
+
+016-I confirms the current accessibility, degraded-operation, status, feedback and recovery mappings without repair. Shared-device, stale-session and offline contexts may reduce capability and disclosure when prerequisites are uncertain, but may not introduce weaker authority paths. Bulk-operation summaries must preserve per-owner success/failure/unknown state.
