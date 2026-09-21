@@ -293,25 +293,8 @@ mapping terminology/representation/ownership defect → current natural Experien
 stale historical wording with clear current meaning → repair current owner, do not reopen upstream
 ```
 
-# Current methodology state
+# Methodology status routing
 
-```text
-PHASE 013 COMPLETE — PASS
-PHASE 014 COMPLETE — PASS
-PHASE 015 COMPLETE — PASS WITH CARRY-FORWARD
-PHASE 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-PHASE 017 IN PROGRESS
-017-A COMPLETE — READY
-017-B COMPLETE — PASS
-017-C COMPLETE — PASS
-017-D COMPLETE — PASS
-017-E COMPLETE — PASS
-017-F COMPLETE — PASS
-017-G NEXT
-architecture authority: SUSPENDED
-implementation planning: SUSPENDED
-implementation readiness: NOT READY
-implementation authorization: NOT YET
-```
+Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
-The historical Phase-013 entry/start-gate record is retained only as provenance. Current mapping semantics are owned by this baseline and the twelve accepted Experience owners.
+The historical Phase-013 entry/start-gate record is retained only as deprecated provenance. Current mapping semantics are owned by this baseline and the twelve accepted Experience owners.
