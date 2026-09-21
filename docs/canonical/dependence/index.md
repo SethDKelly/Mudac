@@ -81,10 +81,11 @@ Phase 017 IN PROGRESS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 ```
 
-Current closure work: **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
+Current closure work: **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
 
 
 
