@@ -1,8 +1,8 @@
 ---
-type: Canonical Mapping Handoff
-title: Phase 013 Mapping Entry Authority
-description: "Current Phase-013 mapping-entry and start-gate authority after 013-A: incoming conceptual precedence, PF-01 mapping scope, explanation-order constraints, Experience-evidence status, mapping risks, reopen rules, and approved project-specific workstream sequence."
-status: stable
+type: Historical Mapping Handoff
+title: Phase 013 Mapping Entry Authority — Historical Start-Gate Evidence
+description: "Historical Phase-013 start-gate evidence preserved for provenance after Phase-013 closure; current mapping authority is owned by mapping-authority-baseline.md and the accepted Experience owners."
+status: historical
 tags: [canonical, experience, mapping, phase-013, handoff, authority, terminology]
 sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
@@ -17,15 +17,21 @@ sources:
   - resource: ../dependence/product-family-scope.md
 ---
 
-# Purpose
+# Historical authority status
 
-Provide the current **Phase-013 mapping-entry authority** and start-gate baseline for MUDAC.
+This file is **historical Phase-013 start-gate evidence only** and is not current Experience mapping authority.
+
+Current mapping authority is owned by [Phase 013 Mapping Authority, Evidence & Canonical Ownership Baseline](mapping-authority-baseline.md) plus its accepted Experience owners.
+
+# Historical purpose
+
+Preserve the Phase-013 entry authority and start-gate baseline that governed mapping work before Phase 013 completed.
 
 013-A has completed with:
 
 > **READY TO BEGIN PHASE 013 SUBPHASES**
 
-The immediate next work is:
+The historical next work at the time was:
 
 > **013-B — Experience Corpus Reconciliation, Terminology, Mapping Authority & Canonical Ownership Baseline**
 
@@ -348,3 +354,8 @@ implementation planning: SUSPENDED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
+
+
+# Current retrieval rule
+
+Do not use this file to establish current mapping semantics, current methodology status, or current next work. Use `mapping-authority-baseline.md`, the accepted Experience owners, and the active Phase-017 closure records.
