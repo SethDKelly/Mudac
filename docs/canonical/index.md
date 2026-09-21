@@ -43,7 +43,8 @@ Jackson Concept Design: IN PROGRESS
 017: IN PROGRESS
 017-A: COMPLETE — READY
 017-B: COMPLETE — PASS
-017-C: NEXT
+017-C: COMPLETE — PASS
+017-D: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -114,7 +115,7 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
+Proceed to **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
 
 
 # Phase-017 start-gate authority
@@ -125,3 +126,8 @@ Proceed to **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orp
 # Phase-017 current-truth reconciliation
 
 [017-B](../017-methodology-closure-canonical-consolidation-completion-decision/017-B-canonical-current-truth-supersession-contradiction-knowledge-graph-reconciliation.md) is **COMPLETE — PASS**. Current canonical ownership, supersession, and lifecycle status have been reconciled with zero open semantic contradiction or owner conflict. Phase 017 now proceeds to purpose/methodology traceability and orphan detection.
+
+
+# Phase-017 traceability / orphan closure
+
+[017-C](../017-methodology-closure-canonical-consolidation-completion-decision/017-C-methodology-chain-traceability-purpose-fulfillment-orphan-unexplained-element-audit.md) is **COMPLETE — PASS**. P-01–P-09, all eighteen Concepts, supporting owners, Experience mappings, validation evidence and known downstream obligations are bidirectionally traceable. No semantic orphan remains open.
