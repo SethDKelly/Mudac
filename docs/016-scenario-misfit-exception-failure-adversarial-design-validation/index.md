@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Phase 016 is **NOT STARTED — 016-A START GATE NEXT**.
+Phase 016 is **IN PROGRESS — 016-D COMPLETE — PASS. 016-E NEXT.**
 
 ## Entry authority
 
@@ -9,39 +9,36 @@ Phase 016 is **NOT STARTED — 016-A START GATE NEXT**.
 - [015-J — Phase-016 Target Preparation](../015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md)
 - [Canonical current knowledge](../canonical/index.md)
 
-## Incoming posture
+## Records
 
-```text
-Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
-structural integrity register CLOSED
-48 / 48 DIR probes dispositioned
-0 corrective INT-F findings
-14 SVT scenario seeds prepared for 016-A refinement
-```
+- [016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning](016-A-validation-scope-misfit-hypotheses-risk-coverage-subphase-planning.md) — **Complete — PASS / START GATE SATISFIED**.
+- [016-B — Archetypal Scenario, Progressive-Disclosure & Purpose-Preservation Baseline Validation](016-B-archetypal-scenario-progressive-disclosure-purpose-preservation-baseline-validation.md) — **Complete — PASS**.
+- [016-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Bias-Control Scenario Validation](016-C-competition-context-competitor-structure-identity-participation-alias-access-bias-control-scenario-validation.md) — **Complete — PASS**.
+- [016-D — Evaluation Occurrence, Responsibility, Obligation, Recusal, Missingness, Rubric, Scorecard & Judge-Authorship Scenario Validation](016-D-evaluation-occurrence-responsibility-obligation-recusal-missingness-rubric-scorecard-judge-authorship-scenario-validation.md) — **Complete — PASS**.
 
 ## Current boundary
 
-The `SVT-*` seeds are provisional validation inputs only.
-
-016-A owns:
-
-- methodology review;
-- validation scope;
-- misfit hypotheses;
-- risk/context coverage;
-- dynamic Phase-016 subphase planning;
-- completion evidence;
-- Phase-016 exit-review planning.
-
-No substantive Phase-016 scenario work has begun.
-
-## Implementation boundary
-
 ```text
+Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
+Phase 016 IN PROGRESS
+016-A COMPLETE — PASS
+016-B COMPLETE — PASS
+016-C COMPLETE — PASS
+016-D COMPLETE — PASS
+016-E NEXT
+
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
 implementation execution NOT STARTED
 implementation authorization NOT YET
 ```
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+No semantic misfit, reopen or repair has been required through 016-D.
+
+Boundary clarifications remain phase evidence for 016-J reconciliation; they are not silent canonical semantic changes.
+
+## Next
+
+Proceed to:
+
+> **016-E — Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation**
