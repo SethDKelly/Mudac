@@ -78,7 +78,8 @@ Phase 014 COMPLETE — PASS
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
-015-E NEXT
+015-E COMPLETE — PASS
+015-F NEXT
 ```
 
 Phase 015 is **IN PROGRESS**. Current synchronization semantics remain composition authority. 015-B records candidate interference directions only; synchronization semantics may change only through an explicit material integrity finding routed to the natural owner.
