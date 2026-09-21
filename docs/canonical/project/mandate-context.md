@@ -134,18 +134,20 @@ The existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu bootstrap remains
 - Controlled external release remains in the capability boundary; a rich public portal does not.
 - Formal scheduling may remain external/lightweight unless later scope/dependence work proves it necessary.
 
-# Current unresolved / downstream questions
+# Current closure-bounded items
 
 Concept modularity, synchronization, dependence/PF-01 scope, mapping, familiarity/genericity, whole-system integrity and mature scenario validation are complete through Phase 016.
 
-Current unresolved or intentionally downstream questions are limited to:
+The remaining non-closed-design subjects are explicitly classified:
 
-- Phase 017 methodology closure over canonical coherence, traceability, open-item disposition and readiness;
-- detailed evaluation, ranking, tie, Award and disclosure policy choices where intentionally configurable by a Competition rather than fixed by Concept identity;
-- exact retention/regulatory requirements not currently evidenced and therefore not claimed as settled design authority;
-- downstream representation/architecture/engineering realization only after successful Concept Design closure and an explicit post-closure re-entry process.
+- **Methodology closure** — Phase 017 is current process work, not an unresolved product-semantic question.
+- **Competition-configurable policy values** — detailed evaluation thresholds, ranking/tie choices, Award rules and disclosure selections are intentional Competition policy/configuration variation within the current policy model; they are not missing Concept Design defaults unless a future product requirement demands fixed defaults.
+- **Retention/regulatory detail** — exact retention periods, jurisdiction-specific legal obligations and compliance procedures are not established by current evidence. This is a bounded evidence limitation, not permission to discard history/privacy semantics. Before production in a concrete jurisdiction, downstream product/legal/architecture work must reconcile those obligations against current Provenance, historical-truth, confidentiality and release requirements.
+- **Downstream realization** — representation, architecture, security, persistence, authentication, concurrency, offline behavior and delivery mechanisms remain downstream implementation/architecture work after successful Concept Design closure and explicit re-entry.
 
-These are not evidence that earlier completed methodology work remains open.
+Current scope also deliberately excludes a rich public portal and treats formal scheduling as external/lightweight unless future scope evidence reopens dependence.
+
+None of these items is an open semantic blocker for the current PF-01 Concept Design.
 
 # Current handoff
 
