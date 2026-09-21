@@ -40,7 +40,9 @@ Jackson Concept Design: IN PROGRESS
 016-I: COMPLETE — PASS
 016-J: COMPLETE — PASS
 016-K: COMPLETE — PASS
-017: NOT STARTED — START GATE NEXT
+017: IN PROGRESS
+017-A: COMPLETE — READY
+017-B: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -111,4 +113,9 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+
+
+# Phase-017 start-gate authority
+
+[017-A](../017-methodology-closure-canonical-consolidation-completion-decision/017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) authorizes methodology-closure work only. It does not change implementation readiness or authorize architecture/implementation. The immediate closure task is current canonical truth and knowledge-graph reconciliation in 017-B.
