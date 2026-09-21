@@ -12,7 +12,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/domain-vocabulary-expectation-transfer.md`](docs/canonical/project/domain-vocabulary-expectation-transfer.md) — current cross-catalog terminology/expectation-transfer authority.
 * [`docs/canonical/project/reusable-design-knowledge.md`](docs/canonical/project/reusable-design-knowledge.md) — reusable concept/pattern candidate registry; links to natural owners and does not duplicate Concept truth.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — completed Phase 014 refinement record.
-* [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — active Phase 015 integrity audit.
+* [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — completed Phase 015 whole-system integrity audit.
+* [`docs/016-scenario-misfit-exception-failure-adversarial-design-validation/`](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/) — next Phase 016 scenario-validation entry point.
 
 ## Current status
 
@@ -24,7 +25,7 @@ Jackson Concept Design: IN PROGRESS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: IN PROGRESS
+015: COMPLETE — PASS WITH CARRY-FORWARD
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
@@ -35,28 +36,9 @@ Jackson Concept Design: IN PROGRESS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -94,6 +76,10 @@ pattern candidate != new MUDAC Concept
 conceptual reuse != implementation reuse
 ```
 
+## Phase-015 integrity exit
+
+Phase 015 closes **PASS WITH CARRY-FORWARD**. All 48 directional probes are dispositioned with zero corrective integrity findings; fourteen scenario-dependent validation seeds are handed to Phase 016.
+
 ## Current direction
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
