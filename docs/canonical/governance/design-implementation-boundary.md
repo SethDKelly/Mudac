@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-E COMPLETE — PASS; 016-F NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAIR; 016-G NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -80,7 +80,8 @@ implementation authorization: NOT YET
 016-C: COMPLETE — PASS
 016-D: COMPLETE — PASS
 016-E: COMPLETE — PASS
-016-F: NEXT
+016-F: COMPLETE — PASS AFTER REPAIR
+016-G: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -181,7 +182,7 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 
 Phase 015 audits **purpose preservation under composition**.
 
-Phase 016 now performs mature conceptual scenario/misfit validation. Through 016-E, no scenario has required a semantic reopen or repair. Boundary clarifications remain Phase-016 evidence pending 016-J reconciliation. Architecture and implementation authority remain suspended.
+Phase 016 now performs mature conceptual scenario/misfit validation. Through 016-E, no scenario required a semantic reopen or repair. 016-F discovered one result-family composition misfit, repaired the natural Phase-011 policy/synchronization and Phase-013 mapping owners, and revalidated the scenario successfully. No material Phase-016 misfit remains open. Boundary clarifications remain Phase-016 evidence pending 016-J reconciliation. Architecture and implementation authority remain suspended.
 
 ```text
 integrity finding
@@ -243,7 +244,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: IN PROGRESS — 016-E COMPLETE — PASS; 016-F NEXT
+Phase 016: IN PROGRESS — 016-F COMPLETE — PASS AFTER REPAIR; 016-G NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -260,4 +261,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
+Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
