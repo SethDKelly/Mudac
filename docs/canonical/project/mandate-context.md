@@ -149,25 +149,8 @@ Current scope also deliberately excludes a rich public portal and treats formal 
 
 None of these items is an open semantic blocker for the current PF-01 Concept Design.
 
-# Current handoff
+# Methodology status routing
 
-The current eighteen-Concept baseline has survived Phases 011–016 without a Concept reopen.
+Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
-Proceed to:
-
-> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
-
-
-# Phase-017 open-item closure
-
-017-D classifies every remaining open-looking subject without semantic reopen. Competition-specific policy values remain intentional configuration; exact retention/regulatory detail is an accepted evidence-bounded uncertainty with a production revisit trigger; formal scheduling, a rich public portal and shared external catalog remain current non-goals/future scope; architecture/security/persistence/offline/concurrency realization remains downstream.
-
-
-# Phase-017 methodology completeness result
-
-017-E confirms the Phase-009 completion runway has satisfied Base/Jackson concerns 000–010 for the current design. No earlier substantive phase requires reopening after later repair propagation. Final closure still depends on the 017-F implementation-contamination/handoff audit, 017-G documentation closure and 017-H readiness decision.
-
-
-# Phase-017 downstream handoff result
-
-017-F confirms that current Concept Design is independent of pre-Phase-009 architecture/implementation choices. The old downstream corpus remains quarantined candidate knowledge and any future architecture/engineering process must enter through the architecture-neutral post-Concept-Design re-entry contract rather than resuming Phase 006/008 plans.
+This Project owner should not accumulate phase-by-phase handoff history.
