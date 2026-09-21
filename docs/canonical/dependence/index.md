@@ -63,10 +63,15 @@ Phase 014 COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
 015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
+016-A COMPLETE — PASS
+016-B COMPLETE — PASS
+016-C COMPLETE — PASS
+016-D COMPLETE — PASS
+016-E COMPLETE — PASS
+016-F NEXT
 ```
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
 
 ## Phase 015 handoff
 
@@ -77,4 +82,4 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
