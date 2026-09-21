@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Phase 017 is **NOT STARTED — START GATE NEXT**.
+Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 
 ## Entry authority
 
@@ -9,11 +9,17 @@ Phase 017 is **NOT STARTED — START GATE NEXT**.
 - [016-J — Phase-017 Closure-Target Preparation](../016-scenario-misfit-exception-failure-adversarial-design-validation/016-J-residual-misfit-register-reopen-repair-revalidation-phase-017-closure-target-preparation.md)
 - [Canonical current knowledge](../canonical/index.md)
 
+## Records
+
+- [017-A — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning](017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) — **Complete — READY**.
+
 ## Current boundary
 
 ```text
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-017 NOT STARTED — START GATE NEXT
+017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -23,4 +29,4 @@ implementation authorization NOT YET
 
 ## Next
 
-> **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**
+> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
