@@ -4,92 +4,26 @@ The repository is the durable design authority; conversation history is working 
 
 ## Preferred navigation
 
-Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
+Start at [index.md](index.md), the OKF v0.2 bundle root.
 
-Current foundational truth includes Project Context/Purpose/Vocabulary, the eighteen current Concepts, current Synchronizations, Dependence/PF-01 scope, the final Phase-013 Mapping Authority Baseline, completed Phase-014 refinement authority, completed Phase-015 integrity authority, and completed Phase-016 scenario-validation evidence.
+From there:
 
-For cross-catalog naming and familiar-language questions, use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](canonical/project/domain-vocabulary-expectation-transfer.md). For cross-context reuse/candidate lessons, use [Reusable Concept Knowledge & Design Patterns](canonical/project/reusable-design-knowledge.md) without treating it as a substitute Concept specification.
+- use [Canonical Knowledge](canonical/) for current meaning;
+- use [Phase 017](017-methodology-closure-canonical-consolidation-completion-decision/) for active closure evidence;
+- use numbered phase directories only for historical rationale/evidence;
+- use [References](references/) for adopted external authorities;
+- treat [Architecture](canonical/architecture/) and [Implementation](canonical/implementation/) as suspended downstream candidate knowledge until explicit re-entry.
 
-## Status
-
-* Phase 009 — Jackson Methodology Realignment: **Complete — PASS**
-* Phase 010 — Foundational Concept Design Completion: **Complete — PASS**
-* Phase 011 — Concept Composition / Synchronization Revalidation: **Complete — PASS**
-* Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
-* Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
-* Phase 014 — Familiarity, Reuse & Genericity: **Complete — PASS**
-* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **Complete — PASS WITH CARRY-FORWARD**
-* Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation: **Complete — PASS WITH CLOSURE HANDOFF**
-* Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision: **In progress — 017-A complete — READY; 017-B next**
+## Current status
 
 ```text
-014: COMPLETE — PASS
-015: COMPLETE — PASS WITH CARRY-FORWARD
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: COMPLETE — PASS WITH CLOSURE HANDOFF
-017: IN PROGRESS
-017-A: COMPLETE — READY
-017-B: NEXT
-architecture authority: SUSPENDED
-implementation planning: SUSPENDED
-new domain implementation: NOT STARTED
-implementation readiness: NOT READY
-implementation authorization: NOT YET
+Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017  IN PROGRESS — 017-G
+
+architecture authority        SUSPENDED
+implementation readiness      NOT READY
+implementation execution      NOT STARTED
+implementation authorization  NOT YET
 ```
 
-## Phase-014 posture
-
-014-B established familiarity evidence and precedent taxonomy. 014-C through 014-E completed the three Concept-family audits and retained all eighteen current Concept names/boundaries. 014-F completed the cross-catalog terminology audit.
-
-014-G completed broader genericity/duplication pressure with:
-
-```text
-Generic at the boundary; specific in purpose.
-```
-
-and one narrow Team refinement removing intrinsic `student` specificity while preserving PF-01 student-team binding.
-
-014-H completes the retained-novelty/reusable-knowledge audit. 014-I completes propagation/reopen/obvious-integrity verification. 014-J closes Phase 014 **COMPLETE — PASS**. The durable registry distinguishes broad (`CK-1`) and domain-family (`CK-2`) reusable Concept knowledge from cross-cutting pattern knowledge (`PK`) while preserving current Concept specifications as the sole semantic owners.
-
-Retained novelty includes:
-
-```text
-Evaluation Occurrence != Evaluation Obligation
-historical obligation satisfaction != current evidence eligibility
-Outcome Declaration Affected != Superseded
-Aggregate / Rank != Award != Outcome Declaration
-source authority != Export != Publication != delivery
-Identity != Participation != Access
-```
-
-No external/universal catalog is created by Phase 014, and no Phase-010/011/012/013 reopen is required by 014-H.
-
-## Completion runway
-
-```text
-010 foundational completion                    COMPLETE — PASS
-011 composition / synchronization              COMPLETE — PASS
-012 dependence / product-family / scope        COMPLETE — PASS
-013 mapping / representation                   COMPLETE — PASS
-014 familiarity / reuse / genericity           COMPLETE — PASS
-015 integrity / interference                   COMPLETE — PASS WITH CARRY-FORWARD
-016 scenario / misfit / failure / adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
-017 methodology closure                       IN PROGRESS — 017-A COMPLETE; 017-B NEXT
-```
-
-
-## Phase-016 exit / Phase-017 closure posture
-
-[016-K](016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md) closes Phase 016 **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is the final Concept Design closure audit; architecture and implementation remain suspended until its final closure decision.
-
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current category/index pages are routing surfaces, not alternate rule stores. Follow them to natural canonical owners for product meaning.
