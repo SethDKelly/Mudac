@@ -95,7 +95,9 @@ Phase 014 COMPLETE — PASS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
 016-J COMPLETE — PASS
-016-K NEXT
+016-K COMPLETE — PASS
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 NOT STARTED — START GATE NEXT
 ```
 
 Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Current synchronization semantics remain composition authority. No Phase-015 material integrity finding required a synchronization correction; Phase-016 scenarios may reopen an owner only if a genuine misfit is discovered.
@@ -109,7 +111,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 
 ## Phase-016 result-family correction
@@ -135,3 +137,8 @@ Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Rev
 ## Phase-016 residual-closure result through 016-J
 
 016-J confirms one Phase-016 synchronization/policy reopen occurred in 016-F, was repaired in the natural current owners, and passed later-family propagation replay. No synchronization defect remains open. Phase 017 must ensure current synchronization owners—not historical phase records—carry all adopted semantics needed for closure.
+
+
+## Phase-016 exit / Phase-017 handoff
+
+016-K closes Phase 016 **COMPLETE — PASS WITH CLOSURE HANDOFF**. The sole Phase-016 synchronization/policy defect was repaired in 016-F and revalidated through 016-G–I. No synchronization defect remains open. Phase 017 must verify adopted semantics are present in current natural owners and may authorize downstream architecture only through an explicit later re-entry decision.
