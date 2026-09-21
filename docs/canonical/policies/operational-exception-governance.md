@@ -98,3 +98,29 @@ A contradiction between current canonical policies must return through canonical
 This policy does not own warnings, reconciliation items, policy-specific exception data, source correction, Access, or Provenance. It governs the cross-cutting semantics those owners must preserve when an exception-like operational path exists.
 
 See [Coverage](../mechanisms/coverage.md), [Panel Composition Policy](panel-composition.md), [Correction & Authority](correction-authority.md), [Access](../concepts/access.md#acc-002), [Experience Action, State & Authority Traceability](../experience/action-authority-traceability.md), and [Provenance](../concepts/provenance.md).
+
+<a id="opg-006"></a>
+## OPG-006 — Exceptional closeout may declare absence of an ordinary result, never fabricate one
+
+Where Awards & Finalization Policy explicitly permits it, a governed exception may authorize closeout with an attributable **Exceptional Closeout Disposition** stating that no ordinary ranked result can legitimately be declared for a specified result scope.
+
+This permission is valid only after the relevant factual evidence, eligibility, correction, and reconciliation state is sufficiently resolved to know that the exceptional disposition itself is justified.
+
+It may authorize the consequence:
+
+```text
+Competition Finalization
++
+explicit exceptional Outcome Declaration
+```
+
+while preserving, for example:
+
+```text
+Coverage = Incomplete
+Ranking Readiness = false
+ordinary Rank = unavailable
+rank-derived Award = unavailable
+```
+
+It may not label an unknown or merely pending result as an official no-result outcome merely to finish closeout. The exception authorizes an explicit exceptional consequence; it does not falsify the source state that made the exception necessary.
