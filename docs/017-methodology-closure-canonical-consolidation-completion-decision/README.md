@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **IN PROGRESS — 017-C COMPLETE — PASS. 017-D NEXT.**
+Status: **IN PROGRESS — 017-D COMPLETE — PASS. 017-E NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -44,7 +44,8 @@ Phase 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
 017-C COMPLETE — PASS
-017-D NEXT
+017-D COMPLETE — PASS
+017-E NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -61,7 +62,7 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**
+> **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**
 
 
 ## 017-A start-gate result
@@ -85,8 +86,8 @@ Proceed to:
 | 017-A | Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning | **Complete — READY** |
 | 017-B | Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation | **Complete — PASS** |
 | 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | **Complete — PASS** |
-| 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | **Next** |
-| 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | Planned |
+| 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | **Complete — PASS** |
+| 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | **Next** |
 | 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | Planned |
 | 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | Planned |
 | 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | Planned |
@@ -106,3 +107,10 @@ No substantive semantic reopen was required.
 [017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit](017-C-methodology-chain-traceability-purpose-fulfillment-orphan-unexplained-element-audit.md) is **COMPLETE — PASS AFTER ONE DOCUMENTATION-AUTHORITY RECLASSIFICATION**.
 
 017-C establishes bidirectional closure traceability across P-01–P-09, all eighteen Concepts, current mechanisms/policies/invariants, synchronization families, PF-01, twelve Experience owners, Phase-015 integrity evidence, Phase-016 scenario evidence, and known downstream realization obligations. No semantic orphan remains open. The historical Phase-013 entry handoff was reclassified from ambiguous stable authority to historical start-gate evidence.
+
+
+## 017-D boundary/open-item closure result
+
+[017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure](017-D-boundary-clarification-open-item-limitation-uncertainty-terminology-closure.md) is **COMPLETE — PASS**.
+
+All 47 Phase-016 boundary clarifications are now discoverable from current authority. Forty-one were already explicit/sufficiently discoverable; six received compatible wording improvements. No semantic reopen was required. Remaining open-looking subjects are now explicitly classified as intentional Competition configurability, bounded evidence uncertainty, future scope/non-goals, downstream realization, or Phase-017 process work.
