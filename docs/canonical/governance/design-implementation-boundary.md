@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-E COMPLETE — PASS; 017-F NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-F COMPLETE — PASS; 017-G NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -93,7 +93,8 @@ implementation authorization: NOT YET
 017-C: COMPLETE — PASS
 017-D: COMPLETE — PASS
 017-E: COMPLETE — PASS
-017-F: NEXT
+017-F: COMPLETE — PASS
+017-G: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -274,7 +275,7 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
+Proceed to **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
 
 
 ## Phase-016 externalization result through 016-G
@@ -325,3 +326,8 @@ Phase 016 closes **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten Phase-016 v
 ## 017-E lifecycle-methodology result
 
 017-E is **COMPLETE — PASS**. The current design satisfies the substantive Base/Jackson methodology obligations through mature scenario validation, and later refinements/repairs have been propagated without reopening earlier substantive phases. This does not yet change implementation readiness: 017-F contamination/handoff, 017-G documentation closure and 017-H final readiness decision remain required.
+
+
+## 017-F implementation-contamination / downstream-handoff result
+
+017-F is **COMPLETE — PASS**. Current Concept Design is free of concrete architecture/implementation contamination. All fifteen preserved downstream candidate documents now carry direct suspension notices; stale candidate semantics and technologies remain quarantined; the retained executable substrate remains non-domain after one obsolete authority message was corrected; and [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md) now defines the architecture-neutral handoff. Readiness remains NOT READY pending 017-G and 017-H.
