@@ -158,10 +158,11 @@ Phase 014 COMPLETE — PASS
 016-D COMPLETE — PASS
 016-E COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
-016-G NEXT
+016-G COMPLETE — PASS
+016-H NEXT
 ```
 
-Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
+Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
 
 ## Phase 015 handoff
 
@@ -172,9 +173,14 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
+Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
 
 
 ## Phase-016 Concept impact through 016-F
 
 016-F required no Concept reopen. Outcome Declaration remains sufficiently generic to own explicit official authority for both ordinary and policy-authorized exceptional no-result OutcomeBasis. No Result or No-Result Concept is added.
+
+
+## Phase-016 Concept impact through 016-G
+
+016-G required no Concept reopen. Export and Publication remain sufficient owners for stable external representation and deliberate release; external possession remains a downstream fact rather than a new Concept.
