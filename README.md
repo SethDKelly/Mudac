@@ -13,7 +13,8 @@ The current product definition is representation-independent: volunteer Judges a
 * [`docs/canonical/project/reusable-design-knowledge.md`](docs/canonical/project/reusable-design-knowledge.md) — reusable concept/pattern candidate registry; links to natural owners and does not duplicate Concept truth.
 * [`docs/014-familiarity-reuse-genericity/`](docs/014-familiarity-reuse-genericity/) — completed Phase 014 refinement record.
 * [`docs/015-concept-integrity-cross-concept-coherence-interference/`](docs/015-concept-integrity-cross-concept-coherence-interference/) — completed Phase 015 whole-system integrity audit.
-* [`docs/016-scenario-misfit-exception-failure-adversarial-design-validation/`](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/) — next Phase 016 scenario-validation entry point.
+* [`docs/016-scenario-misfit-exception-failure-adversarial-design-validation/`](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/) — completed Phase 016 mature scenario/misfit validation.
+* [`docs/017-methodology-closure-canonical-consolidation-completion-decision/`](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — active Phase 017 methodology-closure entry point.
 
 ## Current status
 
@@ -37,8 +38,10 @@ Jackson Concept Design: IN PROGRESS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: NOT STARTED
-016-A: NEXT — START GATE
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
+017: IN PROGRESS
+017-A: COMPLETE — READY
+017-B: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -76,10 +79,10 @@ pattern candidate != new MUDAC Concept
 conceptual reuse != implementation reuse
 ```
 
-## Phase-015 integrity exit
+## Phase-016 validation exit
 
-Phase 015 closes **PASS WITH CARRY-FORWARD**. All 48 directional probes are dispositioned with zero corrective integrity findings; fourteen scenario-dependent validation seeds are handed to Phase 016.
+Phase 016 closes **PASS WITH CLOSURE HANDOFF**. All fourteen inherited scenario-validation seeds and all twelve mature-design hypotheses are dispositioned. One material result-family misfit was repaired and revalidated; no semantic misfit remains open.
 
 ## Current direction
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
