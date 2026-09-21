@@ -173,7 +173,8 @@ Identity != Participation != Access
 017-A: COMPLETE — READY
 017-B: COMPLETE — PASS
 017-C: COMPLETE — PASS
-017-D: NEXT
+017-D: COMPLETE — PASS
+017-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -193,9 +194,9 @@ Phase 015 closes **PASS WITH CARRY-FORWARD**: all 48 directional integrity probe
 
 The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Phase 016 is complete with all mature scenario-validation seeds dispositioned and no open semantic misfit. Phase 017 has reconciled canonical current truth and completed methodology-chain traceability/orphan analysis; it is now closing boundary clarifications, open items, limitations, uncertainties and terminology. Architecture and implementation remain quarantined.
+Phase 016 is complete with all mature scenario-validation seeds dispositioned and no open semantic misfit. Phase 017 has reconciled current truth, traceability/orphans, and boundary/open-item/terminology residue; it is now auditing lifecycle-wide methodology completeness, validation evidence and repair propagation. Architecture and implementation remain quarantined.
 
-* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-C complete — PASS; 017-D next**.
+* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-D complete — PASS; 017-E next**.
 
 # Completion runway
 
@@ -207,5 +208,5 @@ Phase 016 is complete with all mature scenario-validation seeds dispositioned an
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
 016 scenario/misfit/adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
-017 methodology closure              IN PROGRESS — 017-C COMPLETE; 017-D NEXT
+017 methodology closure              IN PROGRESS — 017-D COMPLETE; 017-E NEXT
 ```
