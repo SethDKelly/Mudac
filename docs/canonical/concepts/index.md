@@ -161,10 +161,11 @@ Phase 014 COMPLETE — PASS
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
-016-J NEXT
+016-J COMPLETE — PASS
+016-K NEXT
 ```
 
-Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
+Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
 
 ## Phase 015 handoff
 
@@ -175,7 +176,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
+Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
 
 
 ## Phase-016 Concept impact through 016-F
@@ -196,3 +197,8 @@ Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Ph
 ## Phase-016 Concept impact through 016-I
 
 016-I required no Concept reopen. Offline, device, session, security, recovery and scale concerns remain contextual/realization pressures over the existing eighteen-Concept model; no Offline, Device, Session, Security Incident, Bulk Operation or Recovery Concept is added.
+
+
+## Phase-016 residual-closure impact through 016-J
+
+016-J confirms zero open Concept defects, zero Concept reopens and no change to the eighteen-Concept catalog. The single Phase-016 misfit was composition/policy/mapping-level and has been repaired/revalidated. Phase 017 must reconcile scenario-critical boundary wording into natural current owners where discoverability requires it, without inventing new Concepts merely to summarize validation findings.
