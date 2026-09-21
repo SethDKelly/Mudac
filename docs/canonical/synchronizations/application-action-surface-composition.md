@@ -120,7 +120,7 @@ Identity
 
 Every arrow means supplied facts or application composition, not ownership transfer.
 
-Optional stages remain optional unless Phase 012 later establishes an inclusion dependence for a particular product family.
+Optional stages remain optional unless the current Dependence/Product-Family owner establishes an inclusion dependence for the active product family.
 
 # Correction chain
 
@@ -281,16 +281,14 @@ Do not introduce a generic:
 
 Such implementation constructs may later exist as realization mechanisms, but none owns an independent current MUDAC user purpose or semantic authority under Concept Design.
 
-# Phase boundaries
+# Current ownership boundaries
 
-Phase 012 owns inclusion/dependence and coherent product-family subsets.
+[Dependence](../dependence/) owns inclusion dependence and coherent product-family subsets.
 
-Phase 013 owns user-visible mapping, controls, routes, commands, modes, disclosure presentation and interaction sequencing.
+[Experience](../experience/) owns user-visible mapping, controls, routes, commands, modes, disclosure presentation and interaction sequencing.
 
-Downstream architecture/implementation owns runtime realization only after the reopened design completion runway authorizes re-entry.
+This synchronization contract owns whole-application semantic action/chaining/automation composition. Downstream architecture/implementation may later realize these rules only after Concept Design closure and an explicit post-closure re-entry decision.
 
 # Current status
 
-Phase 011-I closes whole-application action/chaining/automation semantics with **PASS**.
-
-Phase 011 itself remains open until 011-J performs canonical reconciliation, exit review and Phase 012 handoff.
+Whole-application action/chaining/automation semantics are current and validated through Phases 011–016. Phase 017 is auditing closure coherence; no open composition defect is known in this owner.
