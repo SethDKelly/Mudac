@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-I COMPLETE — PASS; 016-J NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -84,7 +84,8 @@ implementation authorization: NOT YET
 016-G: COMPLETE — PASS
 016-H: COMPLETE — PASS
 016-I: COMPLETE — PASS
-016-J: NEXT
+016-J: COMPLETE — PASS
+016-K: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -247,7 +248,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: IN PROGRESS — 016-I COMPLETE — PASS; 016-J NEXT
+Phase 016: IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -264,7 +265,7 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
+Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
 
 
 ## Phase-016 externalization result through 016-G
@@ -280,3 +281,8 @@ Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Ph
 ## Phase-016 degraded/adversarial result through 016-I
 
 016-I validates degraded, offline, shared-device, recovery, scale, security and adversarial whole-design scenarios without additional semantic repair. SVT-13 is dispositioned FIT at the Concept Design layer. All fourteen inherited Phase-015 SVT seeds now have conceptual dispositions. The cumulative Phase-016 material-misfit register remains one discovered in 016-F, one repaired, zero open. Remaining retry/idempotency, concurrency, session/device security, offline synchronization, cache/transport and abuse-control concerns are downstream realization requirements only; architecture and implementation authority remain suspended.
+
+
+## Phase-016 residual closure through 016-J
+
+016-J closes the residual semantic register with 14/14 SVT seeds and 12/12 mature-design hypotheses dispositioned, one material misfit discovered/repaired/revalidated, 47 boundary clarifications consolidated, and zero open semantic defects. Eight bounded Phase-017 closure targets are prepared. Known retry/idempotency, concurrency, offline synchronization, session/device security, cache/transport, bulk partial-result and abuse-control concerns remain downstream realization obligations only. Architecture and implementation authority remain suspended pending successful Phase-017 closure.
