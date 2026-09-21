@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Phase 016 is **IN PROGRESS — 016-H COMPLETE — PASS. 016-I NEXT.**
+Phase 016 is **IN PROGRESS — 016-I COMPLETE — PASS. 016-J NEXT.**
 
 ## Entry authority
 
@@ -19,6 +19,7 @@ Phase 016 is **IN PROGRESS — 016-H COMPLETE — PASS. 016-I NEXT.**
 - [016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation](016-F-coverage-aggregate-rank-award-finalization-unknown-exceptional-result-outcome-declaration-scenario-validation.md) — **Complete — PASS AFTER ONE CANONICAL REPAIR**.
 - [016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation](016-G-export-publication-disclosure-currency-withdrawal-external-possession-scenario-validation.md) — **Complete — PASS**.
 - [016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation](016-H-cross-family-application-actions-chaining-automation-conflicting-authority-scenario-validation.md) — **Complete — PASS**.
+- [016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation](016-I-degraded-offline-shared-device-recovery-scale-security-adversarial-whole-design-validation.md) — **Complete — PASS**.
 
 ## Current boundary
 
@@ -33,7 +34,8 @@ Phase 016 IN PROGRESS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
-016-I NEXT
+016-I COMPLETE — PASS
+016-J NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -41,7 +43,7 @@ implementation execution NOT STARTED
 implementation authorization NOT YET
 ```
 
-016-F discovered one material composition misfit, repaired it in the natural current owners, and revalidated it successfully. No material Phase-016 misfit remains open. 016-G and 016-H required no additional semantic repair.
+016-F discovered one material composition misfit, repaired it in the natural current owners, and revalidated it successfully. No material Phase-016 misfit remains open. 016-G through 016-I required no additional semantic repair. All fourteen inherited SVT seeds now have conceptual dispositions.
 
 Boundary clarifications remain phase evidence for 016-J reconciliation; they are not silent canonical semantic changes.
 
@@ -49,4 +51,4 @@ Boundary clarifications remain phase evidence for 016-J reconciliation; they are
 
 Proceed to:
 
-> **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**
+> **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**
