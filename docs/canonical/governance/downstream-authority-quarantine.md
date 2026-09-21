@@ -20,21 +20,20 @@ This contract preserves prior work rather than deleting it. It changes what that
 
 # Governing rule
 
-While Concept Design is reopened and incomplete:
+Concept Design is now closed, but the pre-Phase-009 downstream corpus remains quarantined until explicit post-closure re-entry decisions.
 
 ```text
-current conceptual product meaning
+closed current Concept Design
         ↓
-remaining Jackson methodology work
+post-closure preparation / architecture re-entry
 
-architecture / implementation material
-        = historical evidence or future candidate only
-        ≠ conceptual constraint
-        ≠ completion evidence
+historical architecture / implementation material
+        = evidence or candidate only
+        ≠ automatically accepted architecture
         ≠ implementation authorization
 ```
 
-If downstream material conflicts with current or newly refined conceptual meaning, downstream material yields by default.
+If downstream material conflicts with closed current conceptual meaning, downstream material yields by default.
 
 # Material under quarantine
 
@@ -126,9 +125,9 @@ Future re-entry is governed by [Post-Concept-Design Architecture & Engineering R
 
 # Post-closure treatment
 
-A successful future Phase 017 closure does not automatically reactivate quarantined downstream material.
+Phase 017 has closed successfully and does not automatically reactivate quarantined downstream material.
 
-Instead, a separate downstream architecture/engineering re-entry must:
+A separate downstream architecture/engineering re-entry must:
 
 - compare the closed conceptual design against prior architecture;
 - retain choices still justified;
