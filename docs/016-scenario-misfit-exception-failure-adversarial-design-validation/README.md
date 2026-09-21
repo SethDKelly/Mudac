@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Status: **NOT STARTED — 016-A START GATE NEXT.**
+Status: **IN PROGRESS — 016-D COMPLETE — PASS. 016-E NEXT.**
 
 Phase 016 corresponds to Base/Jackson Phase 010. It subjects the mature post-integrity MUDAC conceptual design to representative success, exception, mistake, temporal, correction, recovery, authority, privacy/disclosure, adverse-incentive and contextual-misfit scenarios.
 
@@ -18,49 +18,75 @@ Read first:
 - [015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation](../015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md);
 - current canonical knowledge under [../canonical/](../canonical/index.md).
 
-Phase-015 structural status at handoff:
+## Current Phase-016 result
 
-```text
-DIR-* probes dispositioned                 48 / 48
-corrective INT-F* findings                 0
-known structural integrity contradictions  0
-semantic reopens/repairs                    0
-Phase-016 scenario target seeds            14
-```
+[016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning](016-A-validation-scope-misfit-hypotheses-risk-coverage-subphase-planning.md) is **COMPLETE — PASS / START GATE SATISFIED**.
 
-The 14 `SVT-*` seeds in 015-J are **inputs to 016-A**, not a fixed Phase-016 plan.
+016-A establishes:
 
-## Methodology authority
+- the distinction between Phase-015 structural integrity and Phase-016 scenario fit;
+- explicit misfit criteria and validation dispositions;
+- twelve working mature-design misfit hypotheses;
+- complete risk-coverage expectations;
+- preservation of all fourteen inherited `SVT-*` seeds;
+- validation gates V1–V10;
+- the dependency-safe 016-B–016-K sequence;
+- continued architecture/implementation quarantine.
 
-Phase 016 should use the Base/Jackson Phase-010 authority:
+[016-B — Archetypal Scenario, Progressive-Disclosure & Purpose-Preservation Baseline Validation](016-B-archetypal-scenario-progressive-disclosure-purpose-preservation-baseline-validation.md) is **COMPLETE — PASS**.
 
-- Phase 010 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation;
-- Scenario, Misfit & Adversarial Validation Contract;
-- the mandatory Phase lifecycle/start-gate/documentation-governance contracts.
+016-B establishes:
 
-## Start gate
+- a positive ordinary-use control case;
+- progressive disclosure as a semantic exposure principle rather than a UI sequence;
+- dependence order ≠ navigation order;
+- synchronization composition ≠ mandatory wizard;
+- ordinary Judge authorship and Organizer authority separation;
+- ordinary outcome/external-representation fit;
+- `SVT-12` dispositioned **FIT — MAPPING DISCIPLINE**;
+- three boundary clarifications and no semantic reopen.
 
-The only authorized next step is:
+[016-C — Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Bias-Control Scenario Validation](016-C-competition-context-competitor-structure-identity-participation-alias-access-bias-control-scenario-validation.md) is **COMPLETE — PASS**.
 
-> **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**
+016-C confirms:
 
-016-A should review the current canonical design plus 015-J's target seeds and derive the actual MUDAC-specific validation plan dynamically.
+- actor identity, capacity, participation, competitor, alias/representation, access and disclosure remain distinct;
+- authority/disclosure are contextual rather than globally unioned across a person's capacities;
+- bias control applies to the effective Judge-facing representation, not only explicit identity fields;
+- human prior knowledge remains distinct from platform disclosure authority;
+- `SVT-01` and `SVT-02` are dispositioned **FIT — BOUNDARY CLARIFICATION**;
+- no semantic reopen is required.
 
-It must include representative success as well as risk-weighted adversarial/misfit pressure.
+[016-D — Evaluation Occurrence, Responsibility, Obligation, Recusal, Missingness, Rubric, Scorecard & Judge-Authorship Scenario Validation](016-D-evaluation-occurrence-responsibility-obligation-recusal-missingness-rubric-scorecard-judge-authorship-scenario-validation.md) is **COMPLETE — PASS**.
 
-## Current product scope
+016-D confirms:
 
-The sole adopted product/application variant remains:
+- responsibility ≠ evaluation;
+- completion is object-specific;
+- missingness is not a judgment;
+- recusal may resolve/change responsibility without creating evaluation;
+- reassignment does not transfer authorship;
+- Organizer intervention does not become Judge authorship;
+- insufficient coverage remains explicit rather than fabricated;
+- `SVT-03`, `SVT-04` and `SVT-07` are dispositioned at the current validation layer;
+- `SVT-10` is partially validated and remains open for later result/action pressure;
+- no semantic reopen is required.
 
-> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
-
-Profiles such as Award absent/present, official/non-public, Export without Publication, paper/electronic/mixed capture, accessibility/degraded operation, Current/Affected/Superseded declaration state, and Judge/Organizer/support/public/history views remain profiles/contexts rather than new variants.
-
-## Design / implementation boundary
+## Current validation posture
 
 ```text
 Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
-Phase 016 NOT STARTED — 016-A START GATE NEXT
+Phase 016 IN PROGRESS
+
+016-A COMPLETE — PASS / START GATE SATISFIED
+016-B COMPLETE — PASS
+016-C COMPLETE — PASS
+016-D COMPLETE — PASS
+016-E NEXT
+
+semantic misfits opened through 016-D       0
+semantic reopens required through 016-D     0
+semantic repairs through 016-D              0
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -69,10 +95,38 @@ implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
 
+## Approved subphase sequence
+
+| Subphase | Topic | Status |
+| --- | --- | --- |
+| 016-A | Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning | **Complete — PASS** |
+| 016-B | Archetypal Scenario, Progressive-Disclosure & Purpose-Preservation Baseline Validation | **Complete — PASS** |
+| 016-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Bias-Control Scenario Validation | **Complete — PASS** |
+| 016-D | Evaluation Occurrence, Responsibility, Obligation, Recusal, Missingness, Rubric, Scorecard & Judge-Authorship Scenario Validation | **Complete — PASS** |
+| 016-E | Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation | **Next** |
+| 016-F | Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation | Planned |
+| 016-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation | Planned |
+| 016-H | Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation | Planned |
+| 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | Planned |
+| 016-J | Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation | Planned |
+| 016-K | Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff | Planned |
+
+## Current product scope
+
+The sole adopted product/application variant remains:
+
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
+
+Profiles remain contexts/configurations rather than new product variants.
+
+## Design / implementation boundary
+
 Phase 016 is conceptual scenario/misfit validation, not executable testing.
 
 It must not become test-harness design, fuzzing/chaos testing, penetration testing, transaction/retry engineering, runtime fault injection, infrastructure resilience design, monitoring/runbooks or application implementation.
 
 ## Next
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to:
+
+> **016-E — Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation**
