@@ -155,7 +155,7 @@ The current eighteen-Concept baseline has survived Phases 011–016 without a Co
 
 Proceed to:
 
-> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
+> **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**
 
 
 # Phase-017 open-item closure
