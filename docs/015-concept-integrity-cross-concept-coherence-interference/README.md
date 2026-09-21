@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B–015-J COMPLETE — PASS; 015-K NEXT.**
+Status: **COMPLETE — PASS WITH CARRY-FORWARD. Phase 016 start gate next.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -176,6 +176,25 @@ Residual closure establishes:
 
 The `SVT-*` seeds are handoff evidence, not a Phase-016 subphase plan.
 
+## Phase-015 exit decision
+
+[015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff](015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) closes Phase 015 **COMPLETE — PASS WITH CARRY-FORWARD**.
+
+Exit posture:
+
+- all 48 `DIR-*` probes dispositioned;
+- zero corrective `INT-F*` findings;
+- zero structural contradictions deferred;
+- zero semantic reopens/repairs;
+- twelve explicit purpose-compatible limitations/boundaries;
+- fourteen `SVT-*` scenario-validation seeds handed to 016-A for refinement;
+- one coherent current canonical design retained;
+- architecture/implementation remain suspended.
+
+The carry-forward is scenario validation only. It is not unfinished Phase-015 repair work.
+
+The only authorized next step is [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](../016-scenario-misfit-exception-failure-adversarial-design-validation/README.md), beginning with 016-A.
+
 ## Current integrity rule
 
 ```text
@@ -219,7 +238,7 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | **Complete — PASS** |
 | 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | **Complete — PASS** |
 | 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | **Complete — PASS** |
-| 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | **Next — exit review** |
+| 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | **Complete — PASS WITH CARRY-FORWARD** |
 
 ## Primary interaction clusters
 
@@ -308,7 +327,7 @@ A confirmed structural integrity violation must be corrected in Phase 015.
 
 ```text
 Phase 014 COMPLETE — PASS
-Phase 015 IN PROGRESS
+Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
@@ -319,7 +338,8 @@ Phase 015 IN PROGRESS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+Phase 016 NOT STARTED — 016-A START GATE NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -332,4 +352,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
