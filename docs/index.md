@@ -23,7 +23,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
-* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — active methodology phase; 015-A ready, 015-B pass, 015-C pass, 015-D pass, 015-E pass, 015-F pass, 015-G pass, 015-H pass, 015-I pass, 015-J pass, 015-K next.
+* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — **complete — PASS WITH CARRY-FORWARD**.
+* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **not started; 016-A start gate next**.
 
 # Current phase
 
@@ -31,15 +32,9 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 014 — Familiarity, Reuse & Genericity](014-familiarity-reuse-genericity/) is **COMPLETE — PASS**.
 
-[Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K NEXT**.
+[Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **COMPLETE — PASS WITH CARRY-FORWARD**.
+
+[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **NOT STARTED — 016-A START GATE NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -151,7 +146,7 @@ Identity != Participation != Access
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: IN PROGRESS
+015: COMPLETE — PASS WITH CARRY-FORWARD
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
@@ -162,28 +157,9 @@ Identity != Participation != Access
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -195,11 +171,15 @@ implementation authorization: NOT YET
 
 015-B establishes all eighteen Concepts as explicit integrity subjects, maps P-01–P-09 / INV-001–INV-010 / T-01–T-10 coverage, and records 48 directional `DIR-*` probes. These probes are phase evidence only; later subphases create `INT-F*` findings when material interference is actually established.
 
+# Phase-015 exit result
+
+Phase 015 closes **PASS WITH CARRY-FORWARD**: all 48 directional integrity probes are dispositioned, no corrective integrity finding or semantic reopen remains, and fourteen scenario-dependent `SVT-*` seeds are handed to Phase 016. See [015-K](015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md).
+
 # Product/methodology boundary
 
 The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and interference, but conventional UI/software structures may not bypass current Concept, synchronization, dependence, mapping or authority distinctions.
+Phase 015 is complete. Phase 016 may validate representative and adversarial scenarios, but it may not reinterpret current Concept, synchronization, dependence, mapping or authority distinctions merely to make a scenario convenient.
 
 # Completion runway
 
@@ -209,15 +189,7 @@ Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and in
 012 dependence/product-family    COMPLETE — PASS
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity COMPLETE — PASS
-015 integrity/interference       IN PROGRESS — 015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K NEXT
-016 scenario/misfit/failure/adversarial
+015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
+016 scenario/misfit/adversarial  NOT STARTED — 016-A START GATE NEXT
 017 methodology closure
 ```
