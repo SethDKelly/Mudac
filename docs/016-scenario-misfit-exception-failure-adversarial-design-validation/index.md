@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Phase 016 is **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAIR. 016-G NEXT.**
+Phase 016 is **IN PROGRESS — 016-G COMPLETE — PASS. 016-H NEXT.**
 
 ## Entry authority
 
@@ -17,6 +17,7 @@ Phase 016 is **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAI
 - [016-D — Evaluation Occurrence, Responsibility, Obligation, Recusal, Missingness, Rubric, Scorecard & Judge-Authorship Scenario Validation](016-D-evaluation-occurrence-responsibility-obligation-recusal-missingness-rubric-scorecard-judge-authorship-scenario-validation.md) — **Complete — PASS**.
 - [016-E — Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation](016-E-versioning-provenance-paper-electronic-authority-temporal-correction-minding-post-finalization-scenario-validation.md) — **Complete — PASS**.
 - [016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation](016-F-coverage-aggregate-rank-award-finalization-unknown-exceptional-result-outcome-declaration-scenario-validation.md) — **Complete — PASS AFTER ONE CANONICAL REPAIR**.
+- [016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation](016-G-export-publication-disclosure-currency-withdrawal-external-possession-scenario-validation.md) — **Complete — PASS**.
 
 ## Current boundary
 
@@ -29,7 +30,8 @@ Phase 016 IN PROGRESS
 016-D COMPLETE — PASS
 016-E COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
-016-G NEXT
+016-G COMPLETE — PASS
+016-H NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -37,7 +39,7 @@ implementation execution NOT STARTED
 implementation authorization NOT YET
 ```
 
-016-F discovered one material composition misfit, repaired it in the natural current owners, and revalidated it successfully. No material Phase-016 misfit remains open.
+016-F discovered one material composition misfit, repaired it in the natural current owners, and revalidated it successfully. No material Phase-016 misfit remains open. 016-G required no additional semantic repair.
 
 Boundary clarifications remain phase evidence for 016-J reconciliation; they are not silent canonical semantic changes.
 
@@ -45,4 +47,4 @@ Boundary clarifications remain phase evidence for 016-J reconciliation; they are
 
 Proceed to:
 
-> **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**
+> **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**
