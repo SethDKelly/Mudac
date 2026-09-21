@@ -140,7 +140,7 @@ Concept modularity, synchronization, dependence/PF-01 scope, mapping, familiarit
 
 The remaining non-closed-design subjects are explicitly classified:
 
-- **Methodology closure** — Phase 017 is current process work, not an unresolved product-semantic question.
+- **Methodology closure** — Phase 017 is complete and Concept Design is closed; methodology closure is no longer an open project question.
 - **Competition-configurable policy values** — detailed evaluation thresholds, ranking/tie choices, Award rules and disclosure selections are intentional Competition policy/configuration variation within the current policy model; they are not missing Concept Design defaults unless a future product requirement demands fixed defaults.
 - **Retention/regulatory detail** — exact retention periods, jurisdiction-specific legal obligations and compliance procedures are not established by current evidence. This is a bounded evidence limitation, not permission to discard history/privacy semantics. Before production in a concrete jurisdiction, downstream product/legal/architecture work must reconcile those obligations against current Provenance, historical-truth, confidentiality and release requirements.
 - **Downstream realization** — representation, architecture, security, persistence, authentication, concurrency, offline behavior and delivery mechanisms remain downstream implementation/architecture work after successful Concept Design closure and explicit re-entry.
@@ -151,6 +151,6 @@ None of these items is an open semantic blocker for the current PF-01 Concept De
 
 # Methodology status routing
 
-Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+Final Concept Design closure evidence is routed through [docs/index.md](../../index.md) and [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Post-closure preparation/re-entry follows current governance.
 
 This Project owner should not accumulate phase-by-phase handoff history.
