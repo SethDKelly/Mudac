@@ -255,7 +255,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 ```text
 Phase 015 structural integrity register: CLOSED
 Phase 016: COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017: IN PROGRESS — 017-B COMPLETE — PASS; 017-C NEXT
+Phase 017: IN PROGRESS — 017-C COMPLETE — PASS; 017-D NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
