@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **NOT STARTED — START GATE NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -85,7 +85,9 @@ implementation authorization: NOT YET
 016-H: COMPLETE — PASS
 016-I: COMPLETE — PASS
 016-J: COMPLETE — PASS
-016-K: NEXT
+016-K: COMPLETE — PASS
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
+017: NOT STARTED — START GATE NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -248,7 +250,8 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT
+Phase 016: COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017: NOT STARTED — START GATE NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -265,7 +268,7 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 
 ## Phase-016 externalization result through 016-G
@@ -286,3 +289,8 @@ Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Rev
 ## Phase-016 residual closure through 016-J
 
 016-J closes the residual semantic register with 14/14 SVT seeds and 12/12 mature-design hypotheses dispositioned, one material misfit discovered/repaired/revalidated, 47 boundary clarifications consolidated, and zero open semantic defects. Eight bounded Phase-017 closure targets are prepared. Known retry/idempotency, concurrency, offline synchronization, session/device security, cache/transport, bulk partial-result and abuse-control concerns remain downstream realization obligations only. Architecture and implementation authority remain suspended pending successful Phase-017 closure.
+
+
+## 016-K Phase-016 exit result
+
+Phase 016 closes **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten Phase-016 validation gates pass. The phase discovered one material semantic misfit in 016-F, repaired it in the natural current owners, and revalidated it through later result, externalization, action/automation and degraded-operation scenarios. No material semantic defect remains open. Phase 017 is authorized only to perform methodology closure and the explicit design/architecture re-entry decision; architecture and implementation authority remain suspended unless Phase 017 closes successfully and explicitly authorizes a separate downstream start gate.
