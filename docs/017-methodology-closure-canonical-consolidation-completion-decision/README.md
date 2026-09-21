@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **IN PROGRESS — 017-F COMPLETE — PASS. 017-G NEXT.**
+Status: **IN PROGRESS — 017-G COMPLETE — PASS. 017-H NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -47,7 +47,8 @@ Phase 017 IN PROGRESS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
 017-F COMPLETE — PASS
-017-G NEXT
+017-G COMPLETE — PASS
+017-H NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -64,7 +65,7 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
+> **017-H — Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff**
 
 
 ## 017-A start-gate result
@@ -91,8 +92,8 @@ Proceed to:
 | 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | **Complete — PASS** |
 | 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | **Complete — PASS** |
 | 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | **Complete — PASS** |
-| 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | **Next** |
-| 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | Planned |
+| 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | **Complete — PASS** |
+| 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | **Next** |
 
 
 ## 017-B reconciliation result
@@ -130,3 +131,10 @@ The reopened Phase-009 completion runway now covers Base/Jackson concerns 000–
 [017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit](017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md) is **COMPLETE — PASS**.
 
 017-F finds no current Concept Design rule contaminated by concrete architecture or implementation choices. The preserved pre-Phase-009 downstream corpus remains useful but cannot be automatically reactivated: all 15 individual architecture/implementation documents now carry explicit suspension notices, stale semantic bindings are classified for future revalidation, the retained executable substrate remains non-domain, and a dedicated architecture-neutral post-Concept-Design re-entry contract now governs any later downstream start gate.
+
+
+## 017-G documentation-authority / OKF result
+
+[017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation](017-G-documentation-authority-okf-progressive-disclosure-closure-evidence-integrity-reconciliation.md) is **COMPLETE — PASS**.
+
+The progressive-disclosure route, canonical-owner precedence, history/current separation, suspended-downstream separation, stable-rule registry boundary and Phase-017 closure-evidence chain are coherent. One malformed 017-E frontmatter boundary and one WCAG reference/adoption wording ambiguity were repaired without semantic change. The documentation graph is ready for the final 017-H closure/readiness decision.
