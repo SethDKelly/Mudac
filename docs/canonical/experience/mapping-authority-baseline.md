@@ -276,11 +276,11 @@ MAP-R01 through MAP-R16 have no unresolved semantic blocker in the current Exper
 
 Future defects reopen the natural semantic owner under change governance; Phase-013 closure does not make mapping immutable.
 
-# Post-Phase-014 / Phase-015 handoff
+# Post-Phase-015 / Phase-016 handoff
 
 Phase 014 — Familiarity, Reuse & Genericity is **COMPLETE — PASS**. Its vocabulary, genericity and reusable-knowledge refinements are now part of the current design baseline.
 
-Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference uses this Mapping Authority Baseline to test whether combined Experience mappings preserve each Concept's purpose under composition. Phase 015 may change mapping semantics only through an explicit integrity finding routed to the natural Experience owner.
+Phase 015 completed whole-system mapping/profile integrity without requiring a mapping repair. Phase 016 uses this Mapping Authority Baseline as current Experience authority while testing representative/adversarial scenarios; any discovered mapping misfit must reopen the natural Experience owner.
 
 # Reopen routing
 
@@ -310,7 +310,7 @@ stale historical wording with clear current meaning → repair current owner, do
 013-L  COMPLETE — PASS
 PHASE 013 COMPLETE — PASS
 PHASE 014 COMPLETE — PASS
-PHASE 015 IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS
+PHASE 015 COMPLETE — PASS WITH CARRY-FORWARD — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
@@ -318,7 +318,8 @@ PHASE 015 IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+016-A NEXT — START GATE
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
