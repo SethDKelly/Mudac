@@ -19,19 +19,21 @@ Preferred progressive-disclosure entry point for MUDAC knowledge.
 - [Invariants](canonical/invariants/) — cross-cutting normative constraints.
 - [Governance](canonical/governance/) — methodology, documentation authority, retrieval, change, validation, and downstream boundaries.
 
-## Active methodology
+## Lifecycle status
 
-[Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) is **IN PROGRESS — 017-G COMPLETE; 017-H NEXT**.
+[Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED**.
 
 ```text
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
-017-A..G                      COMPLETE
-017-H                         NEXT
+Phase 017                     COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
+Jackson Concept Design        CLOSED
 
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
+historical architecture       SUSPENDED / QUARANTINED
+accepted new architecture      NOT ESTABLISHED
+post-closure re-entry          AUTHORIZED
+implementation readiness      READY
 implementation execution      NOT STARTED
-implementation authorization  NOT YET
+execution authorization       NOT GRANTED
 ```
 
 The current product/application variant remains:
@@ -76,3 +78,12 @@ docs/index.md
 ```
 
 Indexes and READMEs route; they do not replace canonical owners.
+
+
+## Authorized next work
+
+The next lifecycle action is:
+
+> **Phase 018 Start Gate — Pre-Implementation Audit, OKF/Repository Hardening, Agentic Development Preparation & Architecture/Engineering Re-entry Planning**
+
+Phase 018 is post-Concept-Design preparation. Feature implementation remains unauthorized.
