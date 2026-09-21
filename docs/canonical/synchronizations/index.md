@@ -93,7 +93,8 @@ Phase 014 COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
-016-I NEXT
+016-I COMPLETE — PASS
+016-J NEXT
 ```
 
 Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Current synchronization semantics remain composition authority. No Phase-015 material integrity finding required a synchronization correction; Phase-016 scenarios may reopen an owner only if a genuine misfit is discovered.
@@ -107,7 +108,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
+Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
 
 
 ## Phase-016 result-family correction
@@ -123,3 +124,8 @@ Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Securi
 ## Phase-016 action/chaining validation through 016-H
 
 016-H validates the existing application action surface across coordinated actions, bounded automation, retries, stale intent and multi-actor conflict. SVT-14 is FIT at the Concept Design layer; no synchronization repair is required. Exact concurrent realization remains downstream.
+
+
+## Phase-016 degraded/adversarial validation through 016-I
+
+016-I confirms the existing action/chaining/currentness model under offline, shared-device, stale-session, retry, scale and adversarial pressure. Degraded operation may reduce capability but cannot weaken authority; unknown results remain unknown; retries must converge on existing logical authority. No synchronization repair is required.
