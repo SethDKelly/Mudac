@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-C COMPLETE — PASS; 017-D NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-D COMPLETE — PASS; 017-E NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -91,7 +91,8 @@ implementation authorization: NOT YET
 017-A: COMPLETE — READY
 017-B: COMPLETE — PASS
 017-C: COMPLETE — PASS
-017-D: NEXT
+017-D: COMPLETE — PASS
+017-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -272,7 +273,7 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
+Proceed to **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**.
 
 
 ## Phase-016 externalization result through 016-G
@@ -313,3 +314,8 @@ Phase 016 closes **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten Phase-016 v
 ## 017-C traceability / orphan result
 
 017-C is **COMPLETE — PASS**. All current semantic/supporting owner families and known downstream realization obligations are traceable to product purpose or a necessary authority/history/support role. No substantive design reopen is required. Implementation readiness remains NOT READY; architecture and implementation remain suspended.
+
+
+## 017-D boundary / open-item closure result
+
+017-D is **COMPLETE — PASS**. All Phase-016 clarification residue is current-owner discoverable; intentional configurability, accepted retention/regulatory uncertainty, future-scope/non-goal items and downstream realization are explicitly separated from semantic blockers. Architecture and implementation remain suspended.
