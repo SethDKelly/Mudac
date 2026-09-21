@@ -36,7 +36,8 @@ Phase 014 COMPLETE — PASS
 016-E COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
-016-H NEXT
+016-H COMPLETE — PASS
+016-I NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -87,9 +88,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT**.
+Phase 016 is **IN PROGRESS — 016-H COMPLETE — PASS; 016-I NEXT**.
 
-Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
 
 ## Phase 015 handoff
 
@@ -100,7 +101,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
 
 
 ## Phase-016 officiality mapping correction
@@ -111,3 +112,8 @@ Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & 
 ## Phase-016 external-representation validation through 016-G
 
 016-G confirms the current External Representation, Disclosure & Release mapping without repair. User-visible semantics must continue to distinguish source authority, Export currency, Publication state, and external possession; withdrawal/supersession must never imply recall of external copies.
+
+
+## Phase-016 authority-conflict mapping result through 016-H
+
+016-H confirms that user-visible action availability or actor legitimacy at initiation does not guarantee semantic success. Current owner state and current action preconditions remain authoritative; stale intent cannot overwrite newer authority, and unknown concurrent results remain unknown pending reconciliation.
