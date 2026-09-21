@@ -604,7 +604,7 @@ Repository/canonical entry points were kept aligned throughout the phase.
 
 No known stale `015-J NEXT` handoff remains after 015-J.
 
-015-K completion will replace current `015-K NEXT / Phase 015 IN PROGRESS` status with the Phase-016 handoff.
+015-K completion replaces the prior pre-exit status markers with the Phase-016 handoff.
 
 No duplicate cross-concept current specification introduced by Phase 015 requires consolidation.
 
