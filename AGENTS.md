@@ -33,7 +33,7 @@ The current product family remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-## Current methodology posture
+## Current lifecycle posture
 
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
