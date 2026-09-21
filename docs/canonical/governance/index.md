@@ -26,6 +26,6 @@ Current repository/design-governance authority.
 
 Indexes, READMEs, registries, and agent adapters route; they do not become product-rule owners.
 
-Architecture and implementation remain suspended until the final Concept Design closure decision and a separate downstream re-entry.
+Jackson-aligned Concept Design is closed. Historical architecture/implementation candidates remain suspended until explicit post-closure re-entry decisions; no new architecture or implementation execution authority is established by closure.
 
-For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Post-closure work is governed by the Design / Implementation Boundary and Post-Concept-Design Re-entry contract.
