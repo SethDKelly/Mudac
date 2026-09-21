@@ -26,45 +26,20 @@ Jackson Concept Design: IN PROGRESS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: IN PROGRESS
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: NEXT
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: NEXT
+015: COMPLETE — PASS WITH CARRY-FORWARD
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
+
+# Phase-015 integrity authority
+
+[015-K](../015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) closes whole-system integrity **PASS WITH CARRY-FORWARD**. All 48 directional probes are dispositioned with no corrective integrity finding; 015-J's fourteen scenario seeds are provisional Phase-016 validation inputs rather than current semantic authority.
 
 # Phase-014 comparison / reuse authority
 
@@ -115,10 +90,10 @@ Export currency != Publication state
 3. use [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons, never as a substitute specification;
 4. use completed Phase-013 mapping for user-visible semantics;
 5. use the Phase-014 exit review as the authoritative refinement handoff; detailed 014-A–I records remain evidence/provenance;
-6. for Phase 015, read the Phase-015 README, 015-A start gate, and 015-B purpose/interference baseline before substantive cluster analysis;
+6. for Phase 016, begin from the Phase-015 exit review and 015-J scenario-target preparation, then use the Phase-016 README before 016-A planning;
 7. use historical adapters only as explicit comparison/counterexample evidence;
 8. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
