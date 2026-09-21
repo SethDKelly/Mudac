@@ -9,7 +9,7 @@ Start at [index.md](index.md), the OKF v0.2 bundle root.
 From there:
 
 - use [Canonical Knowledge](canonical/) for current meaning;
-- use [Phase 017](017-methodology-closure-canonical-consolidation-completion-decision/) for active closure evidence;
+- use [Phase 017](017-methodology-closure-canonical-consolidation-completion-decision/) for final Concept Design closure evidence and handoff;
 - use numbered phase directories only for historical rationale/evidence;
 - use [References](references/) for adopted external authorities;
 - treat [Architecture](canonical/architecture/) and [Implementation](canonical/implementation/) as suspended downstream candidate knowledge until explicit re-entry.
