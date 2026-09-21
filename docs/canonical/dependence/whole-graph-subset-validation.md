@@ -172,7 +172,7 @@ The coherent contractions above remain counterexamples and future design options
 
 No Phase-012 counterexample or final reconciliation finding requires a graph change.
 
-The one material carry-forward is mapping revalidation: earlier Experience material still contains superseded terms and must be reconciled in Phase 013. That finding does not alter whole-graph validity.
+The former Phase-012 mapping carry-forward was completed in Phase 013 and later revalidated through Phases 014–016. It no longer represents an open carry-forward and does not alter whole-graph validity.
 
 # Methodology handoff
 
