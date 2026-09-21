@@ -134,4 +134,4 @@ Phase 010 canonical convergence establishes the current purpose and Concept-boun
 
 # Current handoff
 
-Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B–015-J are **COMPLETE — PASS**. Use this document as current purpose authority for **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Use this document as current purpose authority for **Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation**, beginning with 016-A.
