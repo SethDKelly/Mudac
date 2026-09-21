@@ -130,8 +130,10 @@ No purpose requires restoring Evaluation Sufficiency, Reconciliation, Recovery/C
 
 # Interpretation rule
 
-Phase 010 canonical convergence establishes the current purpose and Concept-boundary baseline. Later completed phases now supply synchronization, PF-01 scope, mapping and familiarity/genericity authority. Phase 015 consumes this purpose model as I1 evidence for whole-system integrity; it does not rewrite P-01–P-09 merely to reconcile composed behavior.
+Phase 010 canonical convergence establishes the current purpose and Concept-boundary baseline. Phases 011–016 subsequently validated composition, PF-01 scope, mapping, familiarity/genericity, whole-system integrity and mature scenario fit without changing P-01–P-09. Phase 017 now audits lifecycle-wide traceability and closure against this purpose model.
 
 # Current handoff
 
-Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Use this document as current purpose authority for **Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation**, beginning with 016-A.
+Use this document as current purpose authority during Phase 017 methodology closure.
+
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
