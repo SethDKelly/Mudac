@@ -4,7 +4,7 @@ This directory contains current MUDAC user-visible interaction/mapping authority
 
 Phase 013 is **COMPLETE — PASS**. Its owner set remains current authority during Phase 014.
 
-## Current Phase-014 handoff
+## Current methodology state
 
 ```text
 014-A COMPLETE — READY
@@ -43,7 +43,7 @@ Phase 014 COMPLETE — PASS
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B NEXT
+017-B IN PROGRESS
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -96,18 +96,8 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current closure work: **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
-## Phase 015 handoff
-
-Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional register remains phase evidence only; current family ownership is unchanged because no corrective `INT-F*` finding or semantic reopen occurred. Phase 016 may validate scenarios but must continue to treat these canonical owners as current semantic authority.
-
-
-## Phase 015 exit / Phase 016 handoff
-
-Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
-
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-016 officiality mapping correction
