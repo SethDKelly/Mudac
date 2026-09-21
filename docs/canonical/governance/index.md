@@ -8,6 +8,7 @@ Current repository/design-governance knowledge for MUDAC.
 * [Documentation Authority & Canonical Ownership](documentation-authority.md)
 * [Design / Implementation Boundary](design-implementation-boundary.md)
 * [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md)
+* [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md)
 
 ## Retrieval and change governance
 
@@ -32,7 +33,8 @@ Jackson Concept Design: IN PROGRESS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
@@ -77,10 +79,15 @@ shared parameter != base class
 
 ## Current handoff
 
-Current closure work: **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
+Current closure work: **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
 
 
 
 ## Phase-017 closure governance
 
 017-A is **COMPLETE — READY**. Phase 017 is the final Concept Design closure audit. Current governance continues to prohibit architecture/implementation authority until a successful final Phase-017 closure decision explicitly changes readiness and hands off to a separate post-concept process.
+
+
+## 017-F downstream-boundary result
+
+017-F is **COMPLETE — PASS**. Current Concept Design contains no concrete architecture/implementation requirement. All preserved downstream candidate documents now carry direct suspension notices, the executable bootstrap remains non-domain, and post-concept-design-reentry.md governs any later architecture/engineering start gate. Architecture authority remains suspended until final Phase-017 closure and a separate downstream re-entry decision.
