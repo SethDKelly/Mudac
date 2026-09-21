@@ -97,7 +97,9 @@ Phase 014 COMPLETE — PASS
 016-J COMPLETE — PASS
 016-K COMPLETE — PASS
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017 NOT STARTED — START GATE NEXT
+Phase 017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
 ```
 
 Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Current synchronization semantics remain composition authority. No Phase-015 material integrity finding required a synchronization correction; Phase-016 scenarios may reopen an owner only if a genuine misfit is discovered.
@@ -111,7 +113,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-016 result-family correction
