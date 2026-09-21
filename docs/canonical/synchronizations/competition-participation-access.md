@@ -27,7 +27,7 @@ generated: { by: openai/gpt-5.6-sol, at: 2026-09-14T01:13:00-05:00 }
 
 Define current MUDAC application composition among [Competition](../concepts/competition.md), [Identity](../concepts/identity.md), [Participation](../concepts/participation.md), [Access](../concepts/access.md), and derived [Readiness](../mechanisms/readiness.md) without collapsing their independent ownership.
 
-This document supersedes the current-authority meaning of legacy synchronization contracts 01–04, the readiness half of legacy 05, and the semantic Access-context half of legacy 16. The remaining legacy synchronization body stays pre-011 evidence until its owning Phase 011 subgroup establishes replacement semantics.
+This document supersedes the current-authority meaning of legacy synchronization contracts 01–04, the readiness half of legacy 05, and the semantic Access-context half of legacy 16. Other legacy synchronization meanings have since been superseded by their corresponding current synchronization owners; legacy bodies remain historical evidence only.
 
 014-C later corrected one over-strong Phase-011 composition statement: Event Completed closes broad ordinary live-event Judge capability, but it is **not** a universal prohibition on completing the same already-established Outstanding Evaluation Obligation when current policy and a fresh Access decision permit narrow continuation.
 
@@ -121,7 +121,7 @@ Current competitor-structure readiness includes, where applicable to the configu
 - an active Judge-facing Alias under blinded-judging policy;
 - intrinsic Alias uniqueness/reservation constraints.
 
-Additional preparation/evaluation-basis sources may be refined by later Phase 011 subgroups without changing the non-authoritative role of Readiness.
+Additional preparation/evaluation-basis semantics are owned by the current evaluation-basis and action-surface synchronization contracts without changing the non-authoritative role of Readiness.
 
 # Ready-state invalidation
 
@@ -283,14 +283,14 @@ Competition.resumeEvent
 
 These are conceptual relationships, not event/queue/transaction/session/workflow implementation designs.
 
-# Deferred composition
+# Current adjacent ownership
 
-This owner intentionally defers:
+This owner intentionally leaves the following semantics to their current natural owners:
 
 - Panel membership, actual occurrence participants and Evaluation Obligation establishment → 011-D;
 - Rubric basis/Scorecard/Versioning/Provenance/paper authority → 011-E;
 - correction/invalidation/replacement/successor work → 011-F;
 - Coverage/Aggregate/Rank/Award/Competition Finalization/Outcome Declaration → 011-G;
-- Export/Publication → 011-H;
-- whole-application action-surface/chaining/synergy closure → 011-I;
-- user-visible role/context-switch representation → Phase 013.
+- Export/Publication → [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md);
+- whole-application action surface/chaining/automation → [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md);
+- user-visible role/context-switch representation → [Experience](../experience/).
