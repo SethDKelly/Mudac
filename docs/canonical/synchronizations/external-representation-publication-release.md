@@ -336,10 +336,11 @@ old publication + corrected/current successor Export
 
 These are semantic compositions, not storage, rendering, CDN, queue, retry, or delivery designs.
 
-# Deferred composition
+# Current adjacent ownership
 
-- final application action surface/chaining/automation/over-under/authority/synergy closure → 011-I;
-- Phase 011 canonical reconciliation and Phase 012 handoff → 011-J;
-- product-family inclusion/dependence → Phase 012;
-- user-visible download/share/print/publish interactions → Phase 013;
-- representation and delivery architecture/implementation → downstream post-design work.
+- whole-application action surface/chaining/automation → [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md);
+- product-family inclusion/dependence → [Dependence](../dependence/);
+- user-visible download/share/print/publish interactions → [Experience](../experience/);
+- representation and delivery realization → downstream architecture/engineering only after successful Concept Design closure and explicit re-entry authorization.
+
+These owner boundaries are current; the earlier Phase-011/012/013 work is complete.
