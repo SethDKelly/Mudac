@@ -28,7 +28,7 @@ Jackson Concept Design: IN PROGRESS
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B NEXT
+017-B IN PROGRESS
 
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
@@ -73,14 +73,8 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current closure work: **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
-
-## Phase 015 exit / Phase 016 handoff
-
-Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
-
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-017 closure governance
