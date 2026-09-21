@@ -145,10 +145,11 @@ Phase 014 COMPLETE — PASS
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
-015-E NEXT
+015-E COMPLETE — PASS
+015-F NEXT
 ```
 
-Proceed to **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity**.
+Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
 
 ## Phase 015 handoff
 
