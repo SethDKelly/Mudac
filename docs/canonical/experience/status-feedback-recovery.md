@@ -185,6 +185,26 @@ Publication Published
   != transport/delivery/viewing success
 ```
 
+# Bulk and summary status
+
+A bulk interaction or operational summary may compress many owner-specific actions for usability, but it does not become a new semantic status owner.
+
+If subjects produce mixed outcomes, the summary must preserve the ability to distinguish, as applicable:
+
+- confirmed success;
+- confirmed rejection/failure;
+- result unknown;
+- not attempted/pending;
+- owner-specific blockers or retained work.
+
+A label such as "completed" for a bulk request must not imply that every underlying semantic action established its postcondition.
+
+~~~text
+bulk operation summary
+  != per-owner authority
+  != permission to flatten partial success / failure / unknown
+~~~
+
 # Privacy during recovery
 
 Recovery views remain subject to current Access and disclosure rules.
