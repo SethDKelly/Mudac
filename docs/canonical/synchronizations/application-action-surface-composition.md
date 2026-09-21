@@ -151,6 +151,8 @@ Current permitted conceptual reactions include:
 
 A reaction must be derivable from established authority and explicit composition rules.
 
+Deterministic detection of a condition does not imply a deterministic remedy. If several legitimate responses remain policy/actor choices, automation may surface the condition or execute only a remedy already authorized by explicit current policy; it may not choose a new semantic remedy merely because diagnosis is deterministic.
+
 # Automation may not manufacture authority
 
 No automatic upstream change may, by itself:
@@ -242,7 +244,9 @@ No material whole-application composition seam is currently orphaned.
 
 # Semantic convergence without runtime prescription
 
-Repeated semantic intent must not create duplicate authority.
+Several actors may each be legitimate to request an action while the natural owner still permits only one current semantic result. Authorization at intent time does not guarantee that every concurrently valid intent can succeed after another action changes current state.
+
+Repeated or concurrent semantic intent must not create duplicate authority.
 
 Examples include one logical Scorecard per obligation, one evaluation weight across successor Scorecard Versions, one ordinary initial Outcome Declaration per closeout scope, and predecessor/successor Publication identity rather than retargeting.
 
