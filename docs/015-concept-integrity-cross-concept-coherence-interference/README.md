@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E COMPLETE — PASS; 015-F COMPLETE — PASS; 015-G NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E COMPLETE — PASS; 015-F COMPLETE — PASS; 015-G COMPLETE — PASS; 015-H NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -110,6 +110,23 @@ Cluster D confirms:
 
 No corrective `INT-F*` finding or semantic reopen was required.
 
+## 015-G integrity result
+
+[015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity](015-G-export-publication-disclosure-currency-withdrawal-external-possession-integrity.md) is **COMPLETE — PASS**.
+
+Cluster E confirms:
+
+- source authority, Export representation/currency, Publication release and external possession remain independently meaningful;
+- source correction never rewrites historical Export SourceBasis;
+- Export cannot promote source authority;
+- Export currency cannot operate Publication;
+- Publication cannot validate source/currentness;
+- actor Access cannot become audience-disclosure authority;
+- withdrawal/supersession cannot imply external-copy disappearance;
+- successor source authority does not automatically regenerate or republish.
+
+No corrective `INT-F*` finding or semantic reopen was required.
+
 ## Current integrity rule
 
 ```text
@@ -149,8 +166,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | **Complete — PASS** |
 | 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | **Complete — PASS** |
 | 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | **Complete — PASS** |
-| 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | **Next** |
-| 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | Planned |
+| 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | **Complete — PASS** |
+| 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | **Next** |
 | 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | Planned |
 | 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | Planned |
 | 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | Planned exit review |
@@ -249,7 +266,8 @@ Phase 015 IN PROGRESS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
-015-G NEXT
+015-G COMPLETE — PASS
+015-H NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -262,4 +280,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
+Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
