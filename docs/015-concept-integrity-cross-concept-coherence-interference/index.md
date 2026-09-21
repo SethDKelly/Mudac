@@ -12,8 +12,8 @@ Phase 015 is **IN PROGRESS**.
 - [015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity](015-F-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-integrity.md) — **Complete — PASS**.
 - [015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity](015-G-export-publication-disclosure-currency-withdrawal-external-possession-integrity.md) — **Complete — PASS**.
 - [015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference](015-H-cross-family-application-actions-chaining-automation-lifecycle-authority-interference.md) — **Complete — PASS**.
-- **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity** — Next.
-- 015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation.
+- [015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity](015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md) — **Complete — PASS**.
+- **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation** — Next.
 - 015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff.
 
 ## Current authority
@@ -47,9 +47,10 @@ The Base/Jackson Phase-009 definition, start gate and integrity/interference con
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
-015-I NEXT
+015-I COMPLETE — PASS
+015-J NEXT
 
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
+Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
