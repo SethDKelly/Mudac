@@ -18,21 +18,23 @@ Keep the authority boundary among Concept Design, historical downstream work, fu
 
 # Current state
 
-Until the final successful Phase-017 closure decision:
+Phase 017 has successfully closed Jackson-aligned Concept Design.
 
 ~~~text
-Jackson Concept Design         IN PROGRESS
-architecture authority         SUSPENDED
-implementation planning        SUSPENDED
-implementation readiness       NOT READY
-implementation execution       NOT STARTED
-implementation authorization   NOT YET
-production readiness           NOT ESTABLISHED
-006-D executable substrate     FROZEN HISTORICAL NON-DOMAIN FACT
-008 implementation queue       HALTED / NOT ACTIVE
+Jackson Concept Design              CLOSED
+implementation readiness            READY
+implementation execution            NOT STARTED
+implementation execution auth       NOT GRANTED
+production readiness                NOT ESTABLISHED
+
+historical architecture candidates  SUSPENDED / QUARANTINED
+accepted new architecture           NOT ESTABLISHED
+post-closure re-entry               AUTHORIZED
+006-D executable substrate          FROZEN HISTORICAL NON-DOMAIN FACT
+008 implementation queue            HALTED / NOT ACTIVE
 ~~~
 
-Current subphase status is routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+Current closure evidence is routed through [docs/index.md](../../index.md) and [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
 # Authority direction
 
@@ -120,10 +122,10 @@ All downstream candidates must pass the separate [Post-Concept-Design Architectu
 
 # Readiness versus execution
 
-A final successful Phase-017 decision may establish:
+The successful Phase-017 decision establishes:
 
 ~~~text
-Concept Design          CLOSED
+Concept Design           CLOSED
 implementation readiness READY
 ~~~
 
@@ -137,7 +139,7 @@ readiness
   != production readiness
 ~~~
 
-Implementation execution requires a later explicit downstream authorization.
+Implementation execution requires a later explicit downstream authorization. The next authorized activity is post-closure preparation/re-entry planning, not feature implementation.
 
 # Downstream realization obligations
 
