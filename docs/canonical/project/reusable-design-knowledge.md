@@ -34,6 +34,7 @@ this registry
 
 shared external catalog
   = NOT established here
+  = intentional current non-goal, not unfinished MUDAC Concept Design
 ```
 
 # Candidate classes
