@@ -90,7 +90,7 @@ Source correction never silently rewrites the historical SourceBasis of an alrea
 
 MUDAC may export competition setup, judging material, calculated/provisional information, or an [Outcome Declaration](outcome-declaration.md). Application synchronization/policy decides when a source change warrants Affected/Stale/Superseded transitions and which disclosure profile is legitimate.
 
-Current Phase 011 composition is [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md).
+Current MUDAC composition is [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md).
 
 # Boundaries
 
