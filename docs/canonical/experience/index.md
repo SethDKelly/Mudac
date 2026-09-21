@@ -24,7 +24,8 @@ Phase 014 COMPLETE — PASS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
-015-G NEXT
+015-G COMPLETE — PASS
+015-H NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -75,7 +76,7 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
+Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
 
 ## Phase 015 handoff
 
