@@ -1,71 +1,26 @@
-# Derived and Supporting Mechanisms
+# Mechanisms
 
-Current MUDAC subjects modeled as derived/supporting mechanisms or processes rather than independent Concepts.
+Current derived/supporting subjects and work contexts that are intentionally **not** independent MUDAC Concepts.
 
-* [Team Attributes](team-attributes.md)
-* [Criterion & Notes](criterion-notes.md)
-* [Panel Membership & Composition](panel-membership-composition.md)
-* [Readiness](readiness.md)
-* [Coverage](coverage.md)
-* [Aggregate](aggregate.md)
-* [Rank](rank.md)
-* [Reconciliation](reconciliation.md)
+- [Team Attributes](team-attributes.md)
+- [Criterion & Notes](criterion-notes.md)
+- [Panel Membership & Composition](panel-membership-composition.md)
+- [Readiness](readiness.md)
+- [Coverage](coverage.md)
+- [Aggregate](aggregate.md)
+- [Rank](rank.md)
+- [Reconciliation](reconciliation.md)
 
-## Deprecated classification adapter
-
-[Official Outcome Revision](official-outcome-revision.md) is retained only as a deprecated historical adapter. Current official authority is owned by [Outcome Declaration](../concepts/outcome-declaration.md).
-
-## Current classification rules
-
-- Coverage remains factual `Satisfied | Incomplete`; exception disposition is separate.
-- Aggregate is derived numerical state and does not establish Coverage/rank eligibility.
-- Rank is derived/non-editable.
-- Readiness is derived and never writable authority.
-- Reconciliation remains Organizer work/process context rather than ticket/workflow authority.
-- Export owns stable representation/currentness; Publication owns release state; delivery remains downstream realization.
-
-## Phase-014 reusable-knowledge status
-
-014-H does not promote any derived/work-context term to Concept or catalog-Concept status.
-
-Reusable pattern knowledge may describe relationships involving these mechanisms, for example:
+## Classification boundaries
 
 ```text
-historical accomplishment vs current eligibility
-derivation → recognition → declaration
+Coverage = factual sufficiency, not exception disposition
+Aggregate = derived numerical state, not Coverage
+Rank = derived/non-editable ordering, not Award
+Readiness = derived proceedability, not writable authority
+Reconciliation = Organizer work context, not Ticket/Workflow authority
 ```
 
-but preserve:
+[Official Outcome Revision](official-outcome-revision.md) is a deprecated historical adapter; current official authority is [Outcome Declaration](../concepts/outcome-declaration.md).
 
-```text
-Remaining Work != Task / Work Item authority
-Readiness != generic writable Gate/Status
-Reconciliation != Ticket / Case authority
-Aggregate / Rank != Result authority
-Rank != Award recognition
-calculated != official
-```
-
-The [Reusable Concept Knowledge & Design Patterns](../project/reusable-design-knowledge.md) registry therefore records the transferable layering/correction lesson, not a new mechanism hierarchy.
-
-```text
-014 COMPLETE — PASS
-015 COMPLETE — PASS WITH CARRY-FORWARD
-016 COMPLETE — PASS WITH CLOSURE HANDOFF
-017 IN PROGRESS
-017-A COMPLETE — READY
-017-B COMPLETE — PASS
-017-C COMPLETE — PASS
-017-D COMPLETE — PASS
-017-E COMPLETE — PASS
-017-F COMPLETE — PASS
-017-G NEXT
-```
-
-Current closure work: **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
-
-
-
-## Phase-017 start-gate handoff
-
-017-A is **COMPLETE — READY**. Derived/supporting mechanisms remain non-Concept owners. 017-B will verify that late Phase-016 repair and status changes are represented consistently without promoting Coverage, Aggregate, Rank, Readiness or Reconciliation into new semantic owners.
+For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
