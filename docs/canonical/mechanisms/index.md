@@ -68,10 +68,11 @@ Phase 014 COMPLETE — PASS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
-015-I NEXT
+015-I COMPLETE — PASS
+015-J NEXT
 ```
 
-Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
+Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
 
 ## Phase 015 handoff
 
