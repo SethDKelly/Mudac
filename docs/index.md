@@ -171,7 +171,8 @@ Identity != Participation != Access
 016: COMPLETE — PASS WITH CLOSURE HANDOFF
 017: IN PROGRESS
 017-A: COMPLETE — READY
-017-B: IN PROGRESS
+017-B: COMPLETE — PASS
+017-C: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -193,7 +194,7 @@ The sole current product variant remains **PF-01 — MUDAC Live Competition Judg
 
 Phase 016 is complete with all mature scenario-validation seeds dispositioned and no open semantic misfit. Phase 017 is now reconciling canonical current truth and methodology closure; architecture and implementation remain quarantined.
 
-* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-A complete — READY; 017-B in progress**.
+* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-B complete — PASS; 017-C next**.
 
 # Completion runway
 
@@ -205,5 +206,5 @@ Phase 016 is complete with all mature scenario-validation seeds dispositioned an
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
 016 scenario/misfit/adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
-017 methodology closure              IN PROGRESS — 017-A COMPLETE; 017-B IN PROGRESS
+017 methodology closure              IN PROGRESS — 017-B COMPLETE; 017-C NEXT
 ```
