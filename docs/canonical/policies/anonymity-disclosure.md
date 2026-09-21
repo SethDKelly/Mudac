@@ -34,4 +34,6 @@ A denied disclosure attempt creates no authority merely because a user possesses
 
 If protected information is actually exposed, later Access revocation can prevent further disclosure but cannot retroactively make the exposure not have happened. The occurrence must remain attributable enough for integrity/correction review. Material impact on blinded or independent evaluation is determined explicitly; it may require invalidating an affected Evaluation Occurrence and/or dependent evaluation evidence and establishing legitimate replacement/rejudge work, but exposure does not automatically invalidate unrelated evaluation and must not be erased through silent rewrite.
 
+A Judge may already know or infer a Team's real-world identity from information outside MUDAC. That human knowledge does not redefine what MUDAC is authorized to disclose in Judge context and does not turn controlled disclosure into a guarantee of real-world ignorance. Where prior knowledge creates a conflict or bias concern, the response belongs to the applicable participation/recusal/evaluation policy rather than broader platform disclosure.
+
 See [Access](../concepts/access.md#acc-001), [Correction & Authority](correction-authority.md), and [Export](../concepts/export.md#export-001).
