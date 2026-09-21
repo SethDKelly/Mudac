@@ -170,7 +170,9 @@ Identity != Participation != Access
 016-J: COMPLETE — PASS
 016-K: COMPLETE — PASS
 016: COMPLETE — PASS WITH CLOSURE HANDOFF
-017: NOT STARTED — START GATE NEXT
+017: IN PROGRESS
+017-A: COMPLETE — READY
+017-B: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -192,7 +194,7 @@ The sole current product variant remains **PF-01 — MUDAC Live Competition Judg
 
 Phase 015 is complete. Phase 016 may validate representative and adversarial scenarios, but it may not reinterpret current Concept, synchronization, dependence, mapping or authority distinctions merely to make a scenario convenient.
 
-* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **not started; start gate next**.
+* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-A complete — READY; 017-B next**.
 
 # Completion runway
 
@@ -204,5 +206,5 @@ Phase 015 is complete. Phase 016 may validate representative and adversarial sce
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
 016 scenario/misfit/adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
-017 methodology closure              NOT STARTED — START GATE NEXT
+017 methodology closure              IN PROGRESS — 017-A COMPLETE; 017-B NEXT
 ```
