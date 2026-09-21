@@ -21,12 +21,12 @@ Preferred progressive-disclosure entry point for MUDAC knowledge.
 
 ## Active methodology
 
-[Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) is **IN PROGRESS — 017-G**.
+[Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) is **IN PROGRESS — 017-G COMPLETE; 017-H NEXT**.
 
 ```text
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
-017-A..F                      COMPLETE
-017-G                         IN PROGRESS
+017-A..G                      COMPLETE
+017-H                         NEXT
 
 architecture authority        SUSPENDED
 implementation readiness      NOT READY
