@@ -57,10 +57,11 @@ Phase 014 COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
-015-F NEXT
+015-F COMPLETE — PASS
+015-G NEXT
 ```
 
-Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
+Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
 
 ## Phase 015 handoff
 
