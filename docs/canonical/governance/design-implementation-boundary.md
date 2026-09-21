@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **NOT STARTED — START GATE NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -87,7 +87,9 @@ implementation authorization: NOT YET
 016-J: COMPLETE — PASS
 016-K: COMPLETE — PASS
 016: COMPLETE — PASS WITH CLOSURE HANDOFF
-017: NOT STARTED — START GATE NEXT
+017: IN PROGRESS
+017-A: COMPLETE — READY
+017-B: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -268,7 +270,7 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-016 externalization result through 016-G
@@ -294,3 +296,8 @@ Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical B
 ## 016-K Phase-016 exit result
 
 Phase 016 closes **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten Phase-016 validation gates pass. The phase discovered one material semantic misfit in 016-F, repaired it in the natural current owners, and revalidated it through later result, externalization, action/automation and degraded-operation scenarios. No material semantic defect remains open. Phase 017 is authorized only to perform methodology closure and the explicit design/architecture re-entry decision; architecture and implementation authority remain suspended unless Phase 017 closes successfully and explicitly authorizes a separate downstream start gate.
+
+
+## 017-A methodology-closure start-gate result
+
+017-A is **COMPLETE — READY**. Phase 017 may perform closure audits and canonical reconciliation. Implementation readiness remains **NOT READY**, execution remains **NOT STARTED**, implementation authorization remains **NOT YET**, and architecture authority remains suspended. Only the final successful 017-H closure decision may change readiness, and even then it cannot authorize implementation execution.
