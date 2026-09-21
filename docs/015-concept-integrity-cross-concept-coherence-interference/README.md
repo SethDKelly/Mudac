@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B–015-I COMPLETE — PASS; 015-J NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B–015-J COMPLETE — PASS; 015-K NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -160,6 +160,22 @@ The mapping/profile pass confirms:
 
 No corrective `INT-F*` finding, Phase-013/014 reopen, or PF-01 scope repair was required.
 
+## 015-J residual closure result
+
+[015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation](015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md) is **COMPLETE — PASS**.
+
+Residual closure establishes:
+
+- all 48 `DIR-*` probes are dispositioned;
+- no corrective `INT-F*` finding was opened;
+- no Phase-010–014 semantic reopen or repair is required;
+- no repair-driven Phase-015 re-audit was necessary;
+- the structural integrity register is closed pending 015-K exit review;
+- fourteen risk-weighted `SVT-*` scenario seeds are prepared for 016-A refinement;
+- no known structural contradiction is being deferred to Phase 016.
+
+The `SVT-*` seeds are handoff evidence, not a Phase-016 subphase plan.
+
 ## Current integrity rule
 
 ```text
@@ -202,8 +218,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | **Complete — PASS** |
 | 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | **Complete — PASS** |
 | 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | **Complete — PASS** |
-| 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | **Next** |
-| 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | Planned exit review |
+| 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | **Complete — PASS** |
+| 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | **Next — exit review** |
 
 ## Primary interaction clusters
 
@@ -302,7 +318,8 @@ Phase 015 IN PROGRESS
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
-015-J NEXT
+015-J COMPLETE — PASS
+015-K NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -315,4 +332,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
+Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
