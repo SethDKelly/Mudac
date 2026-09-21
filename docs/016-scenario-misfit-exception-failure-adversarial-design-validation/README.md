@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Status: **IN PROGRESS — 016-H COMPLETE — PASS. 016-I NEXT.**
+Status: **IN PROGRESS — 016-I COMPLETE — PASS. 016-J NEXT.**
 
 Phase 016 corresponds to Base/Jackson Phase 010. It subjects the mature post-integrity MUDAC conceptual design to representative success, exception, mistake, temporal, correction, recovery, authority, privacy/disclosure, adverse-incentive and contextual-misfit scenarios.
 
@@ -86,7 +86,8 @@ Phase 016 IN PROGRESS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
-016-I NEXT
+016-I COMPLETE — PASS
+016-J NEXT
 
 material misfits discovered through 016-F   1
 material misfits repaired through 016-F     1
@@ -111,8 +112,8 @@ implementation authorization: NOT YET
 | 016-F | Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation | **Complete — PASS AFTER REPAIR** |
 | 016-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation | **Complete — PASS** |
 | 016-H | Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation | **Complete — PASS** |
-| 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | **Next** |
-| 016-J | Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation | Planned |
+| 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | **Complete — PASS** |
+| 016-J | Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation | **Next** |
 | 016-K | Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff | Planned |
 
 ## Current product scope
@@ -133,7 +134,7 @@ It must not become test-harness design, fuzzing/chaos testing, penetration testi
 
 Proceed to:
 
-> **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**
+> **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**
 
 
 ## 016-E validation result
@@ -172,3 +173,10 @@ Proceed to:
 [016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation](016-H-cross-family-application-actions-chaining-automation-conflicting-authority-scenario-validation.md) is **COMPLETE — PASS**.
 
 016-H validates coordinated actions, automation boundaries, repeated intent, stale-state protection, multi-capacity separation, and SVT-14 conflicting legitimate authority. No semantic repair is required; actor legitimacy never becomes authority union, stale intent cannot overwrite newer authority, and owner-specific currentness/cardinality/correction/successor rules remain decisive. Concurrency/retry realization is retained for 016-I and downstream architecture.
+
+
+## 016-I validation result
+
+[016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation](016-I-degraded-offline-shared-device-recovery-scale-security-adversarial-whole-design-validation.md) is **COMPLETE — PASS**.
+
+016-I validates the full design under offline, shared-device, stale-session, recovery, scale, security and adversarial pressure. SVT-13 is dispositioned **FIT — BOUNDARY CLARIFICATION / DOWNSTREAM REALIZATION REPLAY**. No semantic repair is required. Remaining retry/concurrency/security/device/offline concerns are explicitly downstream realization requirements, not unresolved Concept Design authority gaps. All fourteen inherited `SVT-*` seeds now have Phase-016 conceptual dispositions; 016-J will consolidate the residual register and determine whether any reopen/revalidation work remains before 016-K.
