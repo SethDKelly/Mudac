@@ -106,3 +106,24 @@ An Affected declaration remains the latest declared official authority until an 
 If the materially corrected declared basis changes while the visible winner/rank/Award values happen to remain the same, the Affected predecessor still requires explicit successor confirmation. The corrected basis itself must become declared authority rather than being silently substituted beneath the predecessor.
 
 The predecessor then becomes Superseded historical authority and remains reconstructible.
+
+
+## Exceptional no-ordinary-result closeout
+
+A Competition may reach a legitimate closeout condition in which current authoritative evidence and governing policy cannot support an ordinary ranked result for some required scope, and no further legitimate correction, replacement, successor evaluation, tie resolution, or other ordinary reconciliation path is required or available.
+
+In that case the applicable policy may authorize an **Exceptional Closeout Disposition**. This is attributable closeout-policy/composition data, not a new Concept, lifecycle, Rank, Award, or generic override.
+
+The disposition must identify, as applicable:
+
+- the exact Competition/result scope affected;
+- the preserved Coverage/evidence/eligibility facts that prevent an ordinary result;
+- why an ordinary ranked result cannot legitimately be declared;
+- the authorized policy basis and exceptional authorizer;
+- which ordinary result/recognition consequences are unavailable;
+- whether any unaffected result scopes or Awards remain valid;
+- the explicit exceptional OutcomeBasis intended for declaration.
+
+An Exceptional Closeout Disposition may permit Competition Finalization and an explicit Outcome Declaration stating that no ordinary ranked result exists for the affected scope. It never changes Coverage from `Incomplete` to `Satisfied`, fabricates Aggregate or Rank, invents a winner or recipient, converts unresolved uncertainty into a known ordinary result, confers an Award without Award authority, or waives unrelated policy/disclosure constraints.
+
+A known, authorized exceptional outcome is distinct from an **unknown** outcome. Unknown authoritative state must remain unresolved until evidence/policy establishes either an ordinary result or a legitimate exceptional disposition.
