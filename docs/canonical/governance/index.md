@@ -32,7 +32,8 @@ Jackson Concept Design: IN PROGRESS
 015-E: COMPLETE — PASS
 015-F: COMPLETE — PASS
 015-G: COMPLETE — PASS
-015-H: NEXT
+015-H: COMPLETE — PASS
+015-I: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -51,7 +52,8 @@ Phase 014 COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
-015-H NEXT
+015-H COMPLETE — PASS
+015-I NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -95,4 +97,4 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
+Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
