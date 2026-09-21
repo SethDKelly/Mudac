@@ -18,7 +18,7 @@ From there:
 
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017  IN PROGRESS — 017-G
+Phase 017  IN PROGRESS — 017-G COMPLETE; 017-H NEXT
 
 architecture authority        SUSPENDED
 implementation readiness      NOT READY
