@@ -12,9 +12,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 6. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 7. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
 8. Read the [Phase-014 exit review](docs/014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) for the post-refinement baseline and Phase-015 audit targets.
-9. Start Phase-015 work at [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](docs/015-concept-integrity-cross-concept-coherence-interference/README.md) read [015-A](docs/015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md) for methodology scope, [015-B](docs/015-concept-integrity-cross-concept-coherence-interference/015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md) for the current directional register, and completed cluster records such as [015-C](docs/015-concept-integrity-cross-concept-coherence-interference/015-C-competition-context-competitor-structure-identity-participation-alias-access-panel-integrity.md) before dependent audits.
-10. Treat detailed Phase-014 comparison records and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
-11. Do not preload architecture/implementation except for explicit contamination/history analysis.
+9. Read the completed [Phase-015 exit review](docs/015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) and [015-J target preparation](docs/015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md) for the structural-integrity baseline and scenario-validation seeds.
+10. Start Phase-016 work only from [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/README.md), beginning with 016-A; do not pre-plan or execute substantive scenarios before that start gate.
+11. Treat detailed Phase-014 comparison records, Phase-015 audit records, and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
+12. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
 ## Current methodology posture
 
@@ -25,7 +26,7 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: IN PROGRESS
+015: COMPLETE — PASS WITH CARRY-FORWARD
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
@@ -36,28 +37,9 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -162,4 +144,6 @@ These patterns describe transferable design lessons. They do not authorize gener
 
 Proceed to:
 
-> **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**
+> **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**
+
+The fourteen `SVT-*` seeds from 015-J are inputs to 016-A, not a fixed Phase-016 plan.
