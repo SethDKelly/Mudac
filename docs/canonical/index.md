@@ -42,7 +42,8 @@ Jackson Concept Design: IN PROGRESS
 016-K: COMPLETE — PASS
 017: IN PROGRESS
 017-A: COMPLETE — READY
-017-B: NEXT
+017-B: COMPLETE — PASS
+017-C: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -113,9 +114,14 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Proceed to **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
 
 
 # Phase-017 start-gate authority
 
 [017-A](../017-methodology-closure-canonical-consolidation-completion-decision/017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) authorizes methodology-closure work only. It does not change implementation readiness or authorize architecture/implementation. The immediate closure task is current canonical truth and knowledge-graph reconciliation in 017-B.
+
+
+# Phase-017 current-truth reconciliation
+
+[017-B](../017-methodology-closure-canonical-consolidation-completion-decision/017-B-canonical-current-truth-supersession-contradiction-knowledge-graph-reconciliation.md) is **COMPLETE — PASS**. Current canonical ownership, supersession, and lifecycle status have been reconciled with zero open semantic contradiction or owner conflict. Phase 017 now proceeds to purpose/methodology traceability and orphan detection.
