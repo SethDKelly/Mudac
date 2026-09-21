@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E COMPLETE — PASS; 015-F COMPLETE — PASS; 015-G COMPLETE — PASS; 015-H COMPLETE — PASS; 015-I NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B–015-I COMPLETE — PASS; 015-J NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -143,6 +143,23 @@ Whole-application composition confirms:
 
 No corrective `INT-F*` finding or semantic reopen was required.
 
+## 015-I integrity result
+
+[015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity](015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md) is **COMPLETE — PASS**.
+
+The mapping/profile pass confirms:
+
+- Judge/Organizer/support/public/history profiles preserve one underlying authority model;
+- context switching does not union Participation/Access capability;
+- accessible/responsive/degraded/paper paths preserve semantic parity and may only reduce capability safely;
+- actor Access remains distinct from audience disclosure;
+- familiar Phase-014 language remains owner-qualified and cannot promote generic workflow/status semantics;
+- PF-01 student-team wording remains product specialization rather than canonical Team re-specialization;
+- uncertainty remains distinct from success/failure;
+- withdrawn/superseded release does not imply external-copy disappearance.
+
+No corrective `INT-F*` finding, Phase-013/014 reopen, or PF-01 scope repair was required.
+
 ## Current integrity rule
 
 ```text
@@ -184,8 +201,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | **Complete — PASS** |
 | 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | **Complete — PASS** |
 | 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | **Complete — PASS** |
-| 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | **Next** |
-| 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | Planned |
+| 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | **Complete — PASS** |
+| 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | **Next** |
 | 015-K | Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff | Planned exit review |
 
 ## Primary interaction clusters
@@ -284,7 +301,8 @@ Phase 015 IN PROGRESS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
-015-I NEXT
+015-I COMPLETE — PASS
+015-J NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -297,4 +315,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
+Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
