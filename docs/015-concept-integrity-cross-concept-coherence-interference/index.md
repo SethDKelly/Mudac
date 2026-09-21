@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Phase 015 is **IN PROGRESS**.
+Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**.
 
 ## Records
 
@@ -14,7 +14,7 @@ Phase 015 is **IN PROGRESS**.
 - [015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference](015-H-cross-family-application-actions-chaining-automation-lifecycle-authority-interference.md) — **Complete — PASS**.
 - [015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity](015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md) — **Complete — PASS**.
 - [015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation](015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md) — **Complete — PASS**.
-- **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff** — Next.
+- [015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff](015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) — **Complete — PASS WITH CARRY-FORWARD**.
 
 ## Current authority
 
@@ -49,9 +49,19 @@ The Base/Jackson Phase-009 definition, start gate and integrity/interference con
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+Phase 016 NOT STARTED — 016-A START GATE NEXT
 
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+
+
+## Phase-015 exit decision
+
+[015-K](015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) closes Phase 015 **COMPLETE — PASS WITH CARRY-FORWARD**.
+
+The structural integrity register is closed. Fourteen scenario-dependent `SVT-*` seeds are handed to [Phase 016](../016-scenario-misfit-exception-failure-adversarial-design-validation/README.md) for 016-A refinement; no known structural contradiction is deferred.
+
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
