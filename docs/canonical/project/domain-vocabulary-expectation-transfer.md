@@ -436,3 +436,8 @@ The word **Minding** appears in a historical Phase-016 subphase title as a plann
 - Phase-014 evidence and decisions → [`../../014-familiarity-reuse-genericity/`](../../014-familiarity-reuse-genericity/)
 
 This vocabulary owner governs expectation transfer only. It never overrides the natural semantic owner.
+
+
+# Phase-017 terminology closure
+
+017-D confirms there is no unresolved current terminology blocker. The eighteen Concept names remain canonical; historical adapters remain historical; high-risk generic vocabulary remains qualified; and the historical "Minding" artifact is explicitly non-semantic.
