@@ -12,6 +12,7 @@ The controlling rules are:
 
 - [Design / Implementation Boundary](../governance/design-implementation-boundary.md)
 - [Downstream Architecture & Implementation Authority Quarantine](../governance/downstream-authority-quarantine.md)
+- [Post-Concept-Design Architecture & Engineering Re-entry](../governance/post-concept-design-reentry.md)
 
 ## Preserved candidate architecture
 
@@ -37,3 +38,10 @@ Architecture material may be consulted only to:
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
 A successful Phase 017 closure will **not automatically reactivate** these documents. A separate downstream re-entry must compare them against the closed conceptual design and decide what remains justified.
+
+
+## Phase-017 audit result
+
+017-F audited all nine documents in this subtree. Each now carries an explicit suspension notice at document level.
+
+The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. A future architecture process must classify, compare and explicitly adopt/revise/reject these candidates under the post-Concept-Design re-entry contract.
