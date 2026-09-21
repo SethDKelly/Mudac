@@ -31,7 +31,7 @@ Current downstream conceptual authority is routed through:
 012 COMPLETE — PASS
 013 COMPLETE — PASS
 014 COMPLETE — PASS
-015 IN PROGRESS
+015 COMPLETE — PASS WITH CARRY-FORWARD
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
@@ -42,7 +42,8 @@ Current downstream conceptual authority is routed through:
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+016-A NEXT — START GATE
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
@@ -64,7 +65,8 @@ Phase 014 COMPLETE — PASS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+016-A NEXT — START GATE
 architecture / implementation SUSPENDED
 ```
 
@@ -111,8 +113,15 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
 
 ## Phase 015 handoff
 
-Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B **COMPLETE — PASS**. The 015-B directional register is phase evidence only; current family ownership remains unchanged until an explicit Phase-015 `INT-F*` finding routes a correction to its natural owner.
+Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional register remains phase evidence only; current family ownership is unchanged because no corrective `INT-F*` finding or semantic reopen occurred. Phase 016 may validate scenarios but must continue to treat these canonical owners as current semantic authority.
+
+
+## Phase 015 exit / Phase 016 handoff
+
+Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
+
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
