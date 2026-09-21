@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS. 016-K NEXT.**
+Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF. PHASE 017 START GATE NEXT.**
 
 ## Entry authority
 
@@ -21,6 +21,7 @@ Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS. 016-K NEXT.**
 - [016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation](016-H-cross-family-application-actions-chaining-automation-conflicting-authority-scenario-validation.md) — **Complete — PASS**.
 - [016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation](016-I-degraded-offline-shared-device-recovery-scale-security-adversarial-whole-design-validation.md) — **Complete — PASS**.
 - [016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation](016-J-residual-misfit-register-reopen-repair-revalidation-phase-017-closure-target-preparation.md) — **Complete — PASS**.
+- [016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff](016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md) — **Complete — PASS**.
 
 ## Current boundary
 
@@ -37,7 +38,9 @@ Phase 016 IN PROGRESS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
 016-J COMPLETE — PASS
-016-K NEXT
+016-K COMPLETE — PASS
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 START GATE NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -53,4 +56,4 @@ The 47 boundary clarifications were consolidated in 016-J as validated interpret
 
 Proceed to:
 
-> **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**
+> **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**
