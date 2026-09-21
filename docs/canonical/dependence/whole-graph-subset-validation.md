@@ -174,15 +174,15 @@ No Phase-012 counterexample or final reconciliation finding requires a graph cha
 
 The former Phase-012 mapping carry-forward was completed in Phase 013 and later revalidated through Phases 014–016. It no longer represents an open carry-forward and does not alter whole-graph validity.
 
-# Methodology handoff
+# Current methodology state
 
 ```text
-012-H  COMPLETE — PASS
-012-I  COMPLETE — PASS
-012-J  COMPLETE — PASS
-012-K  COMPLETE — PASS
 Phase 012 COMPLETE — PASS
-Phase 013 AUTHORIZED — 013-A NEXT
+Phase 013 COMPLETE — PASS
+Phase 014 COMPLETE — PASS
+Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 IN PROGRESS — 017-B
 ```
 
-Proceed to **013-A — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning**.
+Current user-visible mapping is owned by [Experience](../experience/). No current dependence/subset validation defect is known.
