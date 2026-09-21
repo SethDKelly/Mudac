@@ -54,7 +54,7 @@ Rubric does not intrinsically require Team, Judge, Competition, Evaluation Occur
 
 # MUDAC composition binding
 
-MUDAC normally establishes immutable authoritative Rubric states through [Versioning](versioning.md) and [Provenance](provenance.md), then supplies one exact basis to Evaluation Occurrence / Scorecard coordination. Those interactions belong to Phase 011 synchronization rather than Rubric's intrinsic behavior.
+MUDAC normally establishes immutable authoritative Rubric states through [Versioning](versioning.md) and [Provenance](provenance.md), then supplies one exact basis to Evaluation Occurrence / Scorecard coordination. Those interactions are owned by [Evaluation Basis, Scorecard Authority & Capture Composition](../synchronizations/evaluation-basis-scorecard-authority.md) rather than Rubric's intrinsic behavior.
 
 # Boundaries
 
