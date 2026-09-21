@@ -71,10 +71,11 @@ Phase 014 COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
-016-I NEXT
+016-I COMPLETE — PASS
+016-J NEXT
 ```
 
-Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
+Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
 
 ## Phase 015 handoff
 
@@ -85,7 +86,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
+Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
 
 
 ## Phase-016 dependence impact through 016-F
@@ -101,3 +102,8 @@ The 016-F exceptional-closeout repair changes no PF-01 Concept inclusion or depe
 ## Phase-016 dependence impact through 016-H
 
 016-H changes no PF-01 inclusion or dependence edge. Cross-family action composition and conflicting actor intent do not create a new dependency owner or product variant.
+
+
+## Phase-016 dependence impact through 016-I
+
+016-I changes no PF-01 inclusion or dependence edge. Offline/degraded/security/scale behavior remains an operating condition on the existing product family rather than a new product variant or Concept-dependence requirement.
