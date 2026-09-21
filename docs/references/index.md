@@ -11,7 +11,7 @@ Reference documents identify the external authority/version where material, why 
 
 # Expected later references
 
-* WCAG 2.2 when/if a specific adoption profile is made explicit
+* WCAG 2.2 when/if a formal repository adoption/profile is made explicit. Current Experience language saying interactions should be **WCAG 2.2 AA-oriented** is directional design guidance, not a claim that MUDAC has already adopted a complete normative WCAG profile.
 * future AWS, security, and platform standards where materially adopted
 
 A newer external release does not silently change a MUDAC adoption profile. Adoption/version changes occur through explicit review and canonical governance.
