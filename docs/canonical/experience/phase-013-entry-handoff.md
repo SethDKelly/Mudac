@@ -2,7 +2,7 @@
 type: Historical Mapping Handoff
 title: Phase 013 Mapping Entry Authority — Historical Start-Gate Evidence
 description: "Historical Phase-013 start-gate evidence preserved for provenance after Phase-013 closure; current mapping authority is owned by mapping-authority-baseline.md and the accepted Experience owners."
-status: historical
+status: deprecated
 tags: [canonical, experience, mapping, phase-013, handoff, authority, terminology]
 sources:
   - resource: ../../012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md
