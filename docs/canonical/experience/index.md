@@ -26,7 +26,8 @@ Phase 014 COMPLETE — PASS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
-015-I NEXT
+015-I COMPLETE — PASS
+015-J NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -77,7 +78,7 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
+Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
 
 ## Phase 015 handoff
 
