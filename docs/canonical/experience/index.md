@@ -39,7 +39,9 @@ Phase 014 COMPLETE — PASS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
 016-J COMPLETE — PASS
-016-K NEXT
+016-K COMPLETE — PASS
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 NOT STARTED — START GATE NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -90,9 +92,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT**.
+Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **NOT STARTED — START GATE NEXT**.
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 ## Phase 015 handoff
 
@@ -103,7 +105,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
 
 
 ## Phase-016 officiality mapping correction
@@ -129,3 +131,8 @@ Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Rev
 ## Phase-016 residual-closure mapping result through 016-J
 
 016-J consolidates 47 Phase-016 boundary clarifications for Phase-017 discoverability reconciliation. These are not 47 semantic defects. Phase 017 must verify that scenario-critical distinctions are represented clearly in current Experience/current-owner documentation and that historical/planning wording such as the 016-E title artifact “Minding” is not promoted into current terminology.
+
+
+## Phase-016 exit / Phase-017 handoff
+
+016-K closes Phase 016 **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 must reconcile the 47 validated boundary clarifications against current Experience/current-owner documentation for discoverability, without promoting historical/planning wording into semantics or changing interaction meaning merely for cleanup.
