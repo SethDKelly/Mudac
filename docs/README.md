@@ -18,12 +18,16 @@ From there:
 
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017  IN PROGRESS — 017-G COMPLETE; 017-H NEXT
+Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED
 
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
+historical architecture       SUSPENDED / QUARANTINED
+accepted new architecture      NOT ESTABLISHED
+implementation readiness      READY
 implementation execution      NOT STARTED
-implementation authorization  NOT YET
+execution authorization       NOT GRANTED
 ```
 
 Current category/index pages are routing surfaces, not alternate rule stores. Follow them to natural canonical owners for product meaning.
+
+
+Post-closure work begins with a fresh Phase 018 start gate. Do not resume historical implementation queues automatically.
