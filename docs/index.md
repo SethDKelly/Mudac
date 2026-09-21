@@ -24,7 +24,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
 * [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — **complete — PASS WITH CARRY-FORWARD**.
-* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **in progress; 016-J complete — PASS; 016-K next**.
+* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **complete — PASS with closure handoff; Phase 017 start gate next**.
 
 # Current phase
 
@@ -34,7 +34,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **COMPLETE — PASS WITH CARRY-FORWARD**.
 
-[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT**.
+[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **COMPLETE — PASS WITH CLOSURE HANDOFF; PHASE 017 START GATE NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -168,7 +168,9 @@ Identity != Participation != Access
 016-H: COMPLETE — PASS
 016-I: COMPLETE — PASS
 016-J: COMPLETE — PASS
-016-K: NEXT
+016-K: COMPLETE — PASS
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
+017: NOT STARTED — START GATE NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -190,6 +192,8 @@ The sole current product variant remains **PF-01 — MUDAC Live Competition Judg
 
 Phase 015 is complete. Phase 016 may validate representative and adversarial scenarios, but it may not reinterpret current Concept, synchronization, dependence, mapping or authority distinctions merely to make a scenario convenient.
 
+* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **not started; start gate next**.
+
 # Completion runway
 
 ```text
@@ -199,6 +203,6 @@ Phase 015 is complete. Phase 016 may validate representative and adversarial sce
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
-016 scenario/misfit/adversarial  IN PROGRESS — 016-J COMPLETE; 016-K NEXT
-017 methodology closure
+016 scenario/misfit/adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
+017 methodology closure              NOT STARTED — START GATE NEXT
 ```
