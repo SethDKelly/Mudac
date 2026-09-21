@@ -24,7 +24,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
 * [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — **complete — PASS WITH CARRY-FORWARD**.
-* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **not started; 016-A start gate next**.
+* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **in progress; 016-D complete — PASS; 016-E next**.
 
 # Current phase
 
@@ -34,7 +34,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **COMPLETE — PASS WITH CARRY-FORWARD**.
 
-[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **NOT STARTED — 016-A START GATE NEXT**.
+[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **IN PROGRESS — 016-D COMPLETE — PASS; 016-E NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -157,8 +157,12 @@ Identity != Participation != Access
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: NOT STARTED
-016-A: NEXT — START GATE
+016: IN PROGRESS
+016-A: COMPLETE — PASS
+016-B: COMPLETE — PASS
+016-C: COMPLETE — PASS
+016-D: COMPLETE — PASS
+016-E: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -189,6 +193,6 @@ Phase 015 is complete. Phase 016 may validate representative and adversarial sce
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
-016 scenario/misfit/adversarial  NOT STARTED — 016-A START GATE NEXT
+016 scenario/misfit/adversarial  IN PROGRESS — 016-D COMPLETE; 016-E NEXT
 017 methodology closure
 ```
