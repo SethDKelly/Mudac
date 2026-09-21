@@ -268,6 +268,6 @@ Repeated semantic intent reconciles against current Scorecard, Versioning and ob
 
 - current temporal correction/invalidation/replacement/successor semantics → [Temporal Truth, Correction & Historical Authority](temporal-truth-correction.md);
 - Coverage/Aggregate/Rank/Award/Outcome Declaration → 011-G;
-- external representation/release → 011-H;
-- whole-application action/chaining/automation audit → 011-I;
-- physical/UI representation of capture/finalization/correction intent → Phase 013.
+- external representation/release → [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md);
+- whole-application action/chaining/automation → [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md);
+- physical/UI representation of capture/finalization/correction intent → [Experience](../experience/).
