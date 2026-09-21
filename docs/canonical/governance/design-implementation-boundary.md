@@ -74,7 +74,7 @@ implementation authorization: NOT YET
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: IN PROGRESS
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
 016-A: COMPLETE — PASS
 016-B: COMPLETE — PASS
 016-C: COMPLETE — PASS
@@ -254,7 +254,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 ```text
 Phase 015 structural integrity register: CLOSED
 Phase 016: COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017: IN PROGRESS — 017-A COMPLETE — READY; 017-B IN PROGRESS
+Phase 017: IN PROGRESS — 017-B COMPLETE — PASS; 017-C NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
