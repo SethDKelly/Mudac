@@ -243,7 +243,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: NOT STARTED — 016-A START GATE NEXT
+Phase 016: IN PROGRESS — 016-E COMPLETE — PASS; 016-F NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -260,4 +260,4 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
