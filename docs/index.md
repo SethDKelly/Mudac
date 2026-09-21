@@ -175,7 +175,8 @@ Identity != Participation != Access
 017-C: COMPLETE — PASS
 017-D: COMPLETE — PASS
 017-E: COMPLETE — PASS
-017-F: NEXT
+017-F: COMPLETE — PASS
+017-G: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -195,9 +196,9 @@ Phase 015 closes **PASS WITH CARRY-FORWARD**: all 48 directional integrity probe
 
 The sole current product variant remains **PF-01 — MUDAC Live Competition Judging & Official Outcome**.
 
-Phase 016 is complete with all mature scenario-validation seeds dispositioned and no open semantic misfit. Phase 017 has completed current-truth, traceability/orphan, boundary/open-item, and lifecycle-methodology/repair-propagation closure. It is now auditing implementation contamination and preparing an architecture-neutral downstream handoff; architecture and implementation remain quarantined.
+Phase 016 is complete with all mature scenario-validation seeds dispositioned and no open semantic misfit. Phase 017 has completed current-truth, traceability/orphan, boundary/open-item, lifecycle-methodology/repair-propagation, and implementation-contamination/downstream-handoff closure. It is now performing final documentation-authority and OKF progressive-disclosure reconciliation; architecture and implementation remain quarantined.
 
-* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-E complete — PASS; 017-F next**.
+* [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](017-methodology-closure-canonical-consolidation-completion-decision/) — **in progress; 017-F complete — PASS; 017-G next**.
 
 # Completion runway
 
@@ -209,5 +210,5 @@ Phase 016 is complete with all mature scenario-validation seeds dispositioned an
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
 016 scenario/misfit/adversarial  COMPLETE — PASS WITH CLOSURE HANDOFF
-017 methodology closure              IN PROGRESS — 017-E COMPLETE; 017-F NEXT
+017 methodology closure              IN PROGRESS — 017-F COMPLETE; 017-G NEXT
 ```
