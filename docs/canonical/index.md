@@ -46,7 +46,8 @@ Jackson Concept Design: IN PROGRESS
 017-C: COMPLETE — PASS
 017-D: COMPLETE — PASS
 017-E: COMPLETE — PASS
-017-F: NEXT
+017-F: COMPLETE — PASS
+017-G: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -117,7 +118,7 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
+Proceed to **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
 
 
 # Phase-017 start-gate authority
@@ -143,3 +144,8 @@ Proceed to **017-F — Implementation-Contamination, Downstream Realization Obli
 # Phase-017 lifecycle-methodology closure
 
 [017-E](../017-methodology-closure-canonical-consolidation-completion-decision/017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md) is **COMPLETE — PASS**. Base/Jackson concerns 000–010 are complete for the current design; later repair families have no open propagation gap and require no earlier substantive phase reopen. Final closure-process audits remain 017-F through 017-H.
+
+
+# Phase-017 implementation-contamination / downstream-handoff closure
+
+[017-F](../017-methodology-closure-canonical-consolidation-completion-decision/017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md) is **COMPLETE — PASS**. Current Concept Design is architecture/implementation independent; preserved downstream material is explicitly suspended and must be revalidated before adoption; the frozen executable substrate remains non-domain; and [Post-Concept-Design Architecture & Engineering Re-entry](governance/post-concept-design-reentry.md) now owns the architecture-neutral handoff boundary.
