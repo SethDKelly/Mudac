@@ -401,6 +401,27 @@ No corrective `INT-F*` finding was opened by 015-I.
 
 All planned 015-C through 015-I directional integrity probes are now dispositioned. 015-J owns residual-register closure, repair/re-audit verification and Phase-016 target preparation.
 
+## 015-J residual closure
+
+015-J closes the Phase-015 residual structural integrity register.
+
+```text
+DIR-001 through DIR-048              DISPOSITIONED
+open directional integrity decisions 0
+corrective INT-F findings            0
+semantic reopens required            0
+semantic repairs required            0
+repair-driven re-audits              0
+```
+
+The original OPEN-* owner-phase values remain historical planning evidence. The 015-C through 015-I overlays record the substantive dispositions.
+
+No known structural contradiction is being deferred to Phase 016.
+
+015-J prepared fourteen `SVT-*` scenario target seeds for 016-A to refine. Those targets test context/misfit/adversarial conditions; they are not unresolved `DIR-*` findings and do not create a Phase-016 subphase plan.
+
+The structural register is therefore **CLOSED pending 015-K Phase-015 exit review**.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
