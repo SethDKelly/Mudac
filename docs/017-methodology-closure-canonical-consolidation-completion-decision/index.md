@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
+Phase 017 is **IN PROGRESS — 017-B COMPLETE — PASS; 017-C NEXT**.
 
 ## Entry authority
 
@@ -12,6 +12,7 @@ Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 ## Records
 
 - [017-A — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning](017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) — **Complete — READY**.
+- [017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation](017-B-canonical-current-truth-supersession-contradiction-knowledge-graph-reconciliation.md) — **Complete — PASS**.
 
 ## Current boundary
 
@@ -19,7 +20,8 @@ Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B NEXT
+017-B COMPLETE — PASS
+017-C NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -29,4 +31,4 @@ implementation authorization NOT YET
 
 ## Next
 
-> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
+> **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**
