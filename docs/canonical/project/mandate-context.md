@@ -156,3 +156,8 @@ The current eighteen-Concept baseline has survived Phases 011–016 without a Co
 Proceed to:
 
 > **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
+
+
+# Phase-017 open-item closure
+
+017-D classifies every remaining open-looking subject without semantic reopen. Competition-specific policy values remain intentional configuration; exact retention/regulatory detail is an accepted evidence-bounded uncertainty with a production revisit trigger; formal scheduling, a rich public portal and shared external catalog remain current non-goals/future scope; architecture/security/persistence/offline/concurrency realization remains downstream.
