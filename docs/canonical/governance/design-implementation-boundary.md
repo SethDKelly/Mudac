@@ -24,6 +24,8 @@ sources:
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-H-cross-family-application-actions-chaining-automation-lifecycle-authority-interference.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md
+  - resource: ../../016-scenario-misfit-exception-failure-adversarial-design-validation/README.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -34,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-J **COMPLETE — PASS**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **NOT STARTED — 016-A START GATE NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -71,7 +73,9 @@ implementation authorization: NOT YET
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 production readiness: NOT ESTABLISHED
 ```
 
@@ -224,10 +228,29 @@ Phase 015 does not authorize runtime race-condition analysis, transaction/lockin
 
 015-J closes the residual structural integrity register with all 48 directional probes dispositioned, zero corrective `INT-F*` findings, zero semantic reopens/repairs and no known structural contradiction deferred to Phase 016. Fourteen scenario target seeds are prepared for 016-A refinement; they do not authorize implementation or pre-plan Phase-016 subphases.
 
+## 015-K Phase-015 exit result
+
+Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**.
+
+The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Phase 016. No structural contradiction, corrective `INT-F*` finding, semantic repair, PF-01 defect, or mapping defect remains open.
+
+```text
+Phase 015 structural integrity register: CLOSED
+Phase 016: NOT STARTED — 016-A START GATE NEXT
+
+architecture authority: SUSPENDED
+implementation planning: SUSPENDED
+implementation readiness: NOT READY
+implementation execution: NOT STARTED
+implementation authorization: NOT YET
+```
+
+Successful Phase-015 exit authorizes only further Concept Design validation in Phase 016. It does not authorize architecture, implementation, executable testing or revival of the historical Phase-006/008 implementation work.
+
 # Suspended downstream authority
 
 Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
