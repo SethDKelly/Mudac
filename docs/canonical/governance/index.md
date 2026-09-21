@@ -30,7 +30,8 @@ Jackson Concept Design: IN PROGRESS
 015-C: COMPLETE — PASS
 015-D: COMPLETE — PASS
 015-E: COMPLETE — PASS
-015-F: NEXT
+015-F: COMPLETE — PASS
+015-G: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -47,7 +48,8 @@ Phase 014 COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
-015-F NEXT
+015-F COMPLETE — PASS
+015-G NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -91,4 +93,4 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
+Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
