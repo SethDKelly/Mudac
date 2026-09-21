@@ -63,3 +63,22 @@ readiness true
 When readiness is false, remediation targets the natural source or an explicitly permitted governed exception. No generic `Set Ready` or checklist-completion action exists.
 
 See [Evaluation Outcome, Award, Finalization & Declaration Composition](../synchronizations/evaluation-outcome-finalization-declaration.md), [Organizer Preparation](../experience/organizer-preparation.md), and [Reconciliation & Derived Outcome-State Mapping](../experience/reconciliation-derived-state.md).
+
+
+## Exceptional Finalization Readiness
+
+Ordinary closeout normally requires the applicable ranked result scopes to be Ranking Ready.
+
+A policy-authorized **Exceptional Closeout Disposition** may instead make Finalization Readiness true for a specifically identified scope where no ordinary ranked result can legitimately exist and the disposition supplies a reconstructible exceptional OutcomeBasis.
+
+The following composition is therefore valid:
+
+```text
+Ranking Readiness = false / ordinary Rank unavailable
+Exceptional Closeout Disposition = authorized
+Finalization Readiness = true for exceptional closeout
+```
+
+This does not make Ranking Readiness true, create Rank, or imply an ordinary winner. A still-unknown or merely unresolved result cannot be treated as exceptional-closeout ready.
+
+Readiness remains derived and does not itself Finalize Competition or establish Outcome Declaration authority.
