@@ -119,7 +119,7 @@ Proceed to **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orp
 
 # Phase-017 start-gate authority
 
-[017-A](../017-methodology-closure-canonical-consolidation-completion-decision/017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) authorizes methodology-closure work only. It does not change implementation readiness or authorize architecture/implementation. The immediate closure task is current canonical truth and knowledge-graph reconciliation in 017-B.
+[017-A](../017-methodology-closure-canonical-consolidation-completion-decision/017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md) authorizes methodology-closure work only. It does not change implementation readiness or authorize architecture/implementation. 017-B completed current canonical truth and knowledge-graph reconciliation. The current closure task is methodology-chain traceability, purpose fulfillment and orphan/unexplained-element audit in 017-C.
 
 
 # Phase-017 current-truth reconciliation
