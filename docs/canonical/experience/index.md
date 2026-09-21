@@ -34,7 +34,8 @@ Phase 014 COMPLETE — PASS
 016-C COMPLETE — PASS
 016-D COMPLETE — PASS
 016-E COMPLETE — PASS
-016-F NEXT
+016-F COMPLETE — PASS AFTER REPAIR
+016-G NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -85,9 +86,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **IN PROGRESS — 016-E COMPLETE — PASS; 016-F NEXT**.
+Phase 016 is **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAIR; 016-G NEXT**.
 
-Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
+Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
 
 ## Phase 015 handoff
 
@@ -98,4 +99,9 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**.
+Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
+
+
+## Phase-016 officiality mapping correction
+
+016-F adds a current mapping distinction among ordinary ranked outcome, policy-authorized exceptional no-result outcome, and unknown/unresolved result. This is a repair to existing Outcome Officiality mapping, not a new Experience owner.
