@@ -218,7 +218,7 @@ Representative challenges resolved without scope change include:
 - exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
 - paper capture without universal Export dependence.
 
-Phase 013 mapping and Phase 014 familiarity/genericity refinement are now complete. PF-01 remains the sole adopted variant entering Phase 015 whole-system integrity analysis.
+Phase 013 mapping, Phase 014 familiarity/genericity refinement, and Phase 015 whole-system integrity analysis are complete. PF-01 remains the sole adopted variant entering Phase 016 scenario/misfit validation.
 
 # Future variant revalidation routes
 
@@ -254,7 +254,7 @@ Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping o
 Phase 012 COMPLETE — PASS
 Phase 013 COMPLETE — PASS
 Phase 014 COMPLETE — PASS
-Phase 015 IN PROGRESS
+Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
 015-A COMPLETE — READY
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
@@ -265,7 +265,8 @@ Phase 015 IN PROGRESS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+016-A NEXT — START GATE
 ```
 
-Phase 015 must preserve PF-01 as the sole adopted product variant unless an explicit integrity finding demonstrates a genuine dependence/scope defect and reopens Phase 012.
+Phase 016 must preserve PF-01 as the sole adopted product variant unless scenario validation discovers a genuine scope/variant misfit that warrants reopening the natural dependence owner.
