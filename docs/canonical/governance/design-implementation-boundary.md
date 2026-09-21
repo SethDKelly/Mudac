@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-H COMPLETE — PASS; 016-I NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -82,7 +82,8 @@ implementation authorization: NOT YET
 016-E: COMPLETE — PASS
 016-F: COMPLETE — PASS AFTER REPAIR
 016-G: COMPLETE — PASS
-016-H: NEXT
+016-H: COMPLETE — PASS
+016-I: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -245,7 +246,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT
+Phase 016: IN PROGRESS — 016-H COMPLETE — PASS; 016-I NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -262,9 +263,14 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
 
 
 ## Phase-016 externalization result through 016-G
 
 016-G validates Export/Publication/disclosure/currentness/withdrawal/external-possession semantics without additional repair. SVT-09 is dispositioned FIT. The Phase-016 cumulative material-misfit register remains one discovered in 016-F, one repaired, zero open. Architecture and implementation authority remain suspended.
+
+
+## Phase-016 cross-family action result through 016-H
+
+016-H validates coordinated actions, bounded automation, repeated intent, stale-state protection, multi-capacity authority separation and conflicting legitimate authority without semantic repair. SVT-14 is dispositioned FIT with boundary clarification and downstream concurrency replay. Cumulative Phase-016 material misfits remain one discovered in 016-F, one repaired, zero open. Architecture and implementation authority remain suspended.
