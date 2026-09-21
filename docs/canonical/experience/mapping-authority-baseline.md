@@ -306,7 +306,8 @@ PHASE 017 IN PROGRESS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
