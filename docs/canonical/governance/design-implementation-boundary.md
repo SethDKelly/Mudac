@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAIR; 016-G NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -81,7 +81,8 @@ implementation authorization: NOT YET
 016-D: COMPLETE — PASS
 016-E: COMPLETE — PASS
 016-F: COMPLETE — PASS AFTER REPAIR
-016-G: NEXT
+016-G: COMPLETE — PASS
+016-H: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -244,7 +245,7 @@ The carry-forward is limited to fourteen scenario-dependent `SVT-*` seeds for Ph
 
 ```text
 Phase 015 structural integrity register: CLOSED
-Phase 016: IN PROGRESS — 016-F COMPLETE — PASS AFTER REPAIR; 016-G NEXT
+Phase 016: IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -261,4 +262,9 @@ Until successful Phase 017 closure, historical architecture/implementation concl
 
 # Current handoff
 
-Proceed to **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**.
+Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+
+
+## Phase-016 externalization result through 016-G
+
+016-G validates Export/Publication/disclosure/currentness/withdrawal/external-possession semantics without additional repair. SVT-09 is dispositioned FIT. The Phase-016 cumulative material-misfit register remains one discovered in 016-F, one repaired, zero open. Architecture and implementation authority remain suspended.
