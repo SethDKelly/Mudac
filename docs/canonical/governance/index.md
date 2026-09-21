@@ -18,48 +18,18 @@ Current repository/design-governance knowledge for MUDAC.
 
 ```text
 Jackson Concept Design: IN PROGRESS
-009: COMPLETE — PASS
-010: COMPLETE — PASS
-011: COMPLETE — PASS
-012: COMPLETE — PASS
-013: COMPLETE — PASS
-014: COMPLETE — PASS
-015: COMPLETE — PASS WITH CARRY-FORWARD
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016-A: NEXT — START GATE
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I COMPLETE — PASS
-014-J COMPLETE — PASS
-Phase 014 COMPLETE — PASS
-015-A COMPLETE — READY
-015-B COMPLETE — PASS
-015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
+009 COMPLETE — PASS
+010 COMPLETE — PASS
+011 COMPLETE — PASS
+012 COMPLETE — PASS
+013 COMPLETE — PASS
+014 COMPLETE — PASS
+015 COMPLETE — PASS WITH CARRY-FORWARD
+016 COMPLETE — PASS WITH CLOSURE HANDOFF
+017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
+
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -103,11 +73,16 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase 015 exit / Phase 016 handoff
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+
+
+## Phase-017 closure governance
+
+017-A is **COMPLETE — READY**. Phase 017 is the final Concept Design closure audit. Current governance continues to prohibit architecture/implementation authority until a successful final Phase-017 closure decision explicitly changes readiness and hands off to a separate post-concept process.
