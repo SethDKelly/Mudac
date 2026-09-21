@@ -134,4 +134,4 @@ Phase 010 canonical convergence establishes the current purpose and Concept-boun
 
 # Current handoff
 
-Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B–015-D are **COMPLETE — PASS**. Use this document as current purpose authority for **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity** and later Phase-015 audits.
+Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B–015-E are **COMPLETE — PASS**. Use this document as current purpose authority for **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity** and later Phase-015 audits.
