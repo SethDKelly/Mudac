@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Status: **IN PROGRESS — 016-G COMPLETE — PASS. 016-H NEXT.**
+Status: **IN PROGRESS — 016-H COMPLETE — PASS. 016-I NEXT.**
 
 Phase 016 corresponds to Base/Jackson Phase 010. It subjects the mature post-integrity MUDAC conceptual design to representative success, exception, mistake, temporal, correction, recovery, authority, privacy/disclosure, adverse-incentive and contextual-misfit scenarios.
 
@@ -85,7 +85,8 @@ Phase 016 IN PROGRESS
 016-E COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
-016-H NEXT
+016-H COMPLETE — PASS
+016-I NEXT
 
 material misfits discovered through 016-F   1
 material misfits repaired through 016-F     1
@@ -109,8 +110,8 @@ implementation authorization: NOT YET
 | 016-E | Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation | **Complete — PASS** |
 | 016-F | Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation | **Complete — PASS AFTER REPAIR** |
 | 016-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation | **Complete — PASS** |
-| 016-H | Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation | **Next** |
-| 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | Planned |
+| 016-H | Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation | **Complete — PASS** |
+| 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | **Next** |
 | 016-J | Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation | Planned |
 | 016-K | Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff | Planned |
 
@@ -132,7 +133,7 @@ It must not become test-harness design, fuzzing/chaos testing, penetration testi
 
 Proceed to:
 
-> **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**
+> **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**
 
 
 ## 016-E validation result
@@ -164,3 +165,10 @@ Proceed to:
 [016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation](016-G-export-publication-disclosure-currency-withdrawal-external-possession-scenario-validation.md) is **COMPLETE — PASS**.
 
 016-G validates source authority → Export representation/currency → Publication release → external-possession semantics across ordinary, affected, stale, historical, exceptional no-result and successor-release scenarios. SVT-09 is dispositioned **FIT**. No new semantic repair is required; cumulative Phase-016 material misfits remain 1 discovered / 1 repaired / 0 open.
+
+
+## 016-H validation result
+
+[016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation](016-H-cross-family-application-actions-chaining-automation-conflicting-authority-scenario-validation.md) is **COMPLETE — PASS**.
+
+016-H validates coordinated actions, automation boundaries, repeated intent, stale-state protection, multi-capacity separation, and SVT-14 conflicting legitimate authority. No semantic repair is required; actor legitimacy never becomes authority union, stale intent cannot overwrite newer authority, and owner-specific currentness/cardinality/correction/successor rules remain decisive. Concurrency/retry realization is retained for 016-I and downstream architecture.
