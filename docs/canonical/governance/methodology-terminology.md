@@ -5,6 +5,7 @@ description: Defines the authority relationship among Daniel Jackson Concept Des
 status: stable
 tags: [governance, methodology, jackson, base, okf, terminology]
 sources:
+  - resource: ../../references/daniel-jackson-concept-design.md
   - resource: ../../004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md
