@@ -1,6 +1,6 @@
 # Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation
 
-Status: **IN PROGRESS — 016-E COMPLETE — PASS. 016-F NEXT.**
+Status: **IN PROGRESS — 016-F COMPLETE — PASS AFTER ONE CANONICAL REPAIR. 016-G NEXT.**
 
 Phase 016 corresponds to Base/Jackson Phase 010. It subjects the mature post-integrity MUDAC conceptual design to representative success, exception, mistake, temporal, correction, recovery, authority, privacy/disclosure, adverse-incentive and contextual-misfit scenarios.
 
@@ -83,11 +83,12 @@ Phase 016 IN PROGRESS
 016-C COMPLETE — PASS
 016-D COMPLETE — PASS
 016-E COMPLETE — PASS
-016-F NEXT
+016-F COMPLETE — PASS AFTER REPAIR
+016-G NEXT
 
-semantic misfits opened through 016-D       0
-semantic reopens required through 016-D     0
-semantic repairs through 016-D              0
+material misfits discovered through 016-F   1
+material misfits repaired through 016-F     1
+material misfits remaining                  0
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -105,8 +106,8 @@ implementation authorization: NOT YET
 | 016-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Bias-Control Scenario Validation | **Complete — PASS** |
 | 016-D | Evaluation Occurrence, Responsibility, Obligation, Recusal, Missingness, Rubric, Scorecard & Judge-Authorship Scenario Validation | **Complete — PASS** |
 | 016-E | Versioning, Provenance, Paper/Electronic Authority, Temporal Correction, Minding & Post-Finalization Scenario Validation | **Complete — PASS** |
-| 016-F | Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation | **Next** |
-| 016-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation | Planned |
+| 016-F | Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation | **Complete — PASS AFTER REPAIR** |
+| 016-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation | **Next** |
 | 016-H | Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation | Planned |
 | 016-I | Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation | Planned |
 | 016-J | Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation | Planned |
@@ -130,7 +131,7 @@ It must not become test-harness design, fuzzing/chaos testing, penetration testi
 
 Proceed to:
 
-> **016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation**
+> **016-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Scenario Validation**
 
 
 ## 016-E validation result
@@ -148,3 +149,10 @@ Proceed to:
 - materially affected Outcome Declaration basis requires explicit successor confirmation even when the visible winner is unchanged;
 - SVT-05, SVT-06 and SVT-08 are dispositioned at the temporal/officiality layer;
 - no semantic reopen or repair is required.
+
+
+## 016-F validation result
+
+[016-F — Coverage, Aggregate, Rank, Award, Finalization, Unknown/Exceptional Result & Outcome Declaration Scenario Validation](016-F-coverage-aggregate-rank-award-finalization-unknown-exceptional-result-outcome-declaration-scenario-validation.md) is **COMPLETE — PASS AFTER ONE CANONICAL REPAIR**.
+
+016-F discovered one material composition misfit: the ordinary closeout path did not explicitly define official closeout when no ordinary ranked result can legitimately exist. The repaired design adds a scoped, attributable **Exceptional Closeout Disposition** at the policy/composition layer without creating a new Result Concept. It preserves `Coverage = Incomplete`, permits `Ranking Readiness = false`, forbids fabricated Rank/Award, and allows an explicit exceptional Outcome Declaration. SVT-11 is validated after repair; SVT-10 fits conceptually with degraded/idempotency replay retained for 016-I and downstream architecture.
