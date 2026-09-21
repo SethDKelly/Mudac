@@ -313,6 +313,7 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [DOC-004 — Historical Phase Records Are Append-Stable Provenance](documentation-authority.md#doc-004)
 * [DOC-005 — Routing/Summary/Agent Artifacts Do Not Become Rule Owners](documentation-authority.md#doc-005)
 * [DOC-006 — Knowledge Topology Does Not Dictate Source-Code Topology](documentation-authority.md#doc-006)
+* [DOC-007 — Methodology Status Is Routed, Not Replicated Through Category Indexes](documentation-authority.md#doc-007)
 
 # Agent context
 
