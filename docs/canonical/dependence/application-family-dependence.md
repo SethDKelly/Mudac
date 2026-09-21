@@ -330,12 +330,17 @@ synchronization chain != mandatory wizard
 
 See [Phase 013 Mapping Entry Authority](../experience/phase-013-entry-handoff.md).
 
-# Methodology handoff
+# Current methodology state
 
 ```text
 Phase 012  COMPLETE — PASS
-Phase 013  AUTHORIZED
-013-A      NEXT — Mapping Scope, Representation Semantics, Experience Risk & Subphase Planning
+Phase 013  COMPLETE — PASS
+Phase 014  COMPLETE — PASS
+Phase 015  COMPLETE — PASS WITH CARRY-FORWARD
+Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017  IN PROGRESS — 017-B
 ```
+
+This dependence model remains current authority. User-visible mapping is owned by [Experience](../experience/); methodology closure is owned by Phase 017.
 
 No Phase-010 reopening, Phase-011 reopening or Phase-012 repair is required by the current dependence model.
