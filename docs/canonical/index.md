@@ -28,14 +28,29 @@ Jackson Concept Design: IN PROGRESS
 014: COMPLETE — PASS
 015: COMPLETE — PASS WITH CARRY-FORWARD
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: NOT STARTED
-016-A: NEXT — START GATE
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
+016-A: COMPLETE — PASS
+016-B: COMPLETE — PASS
+016-C: COMPLETE — PASS
+016-D: COMPLETE — PASS
+016-E: COMPLETE — PASS
+016-F: COMPLETE — PASS AFTER REPAIR
+016-G: COMPLETE — PASS
+016-H: COMPLETE — PASS
+016-I: COMPLETE — PASS
+016-J: COMPLETE — PASS
+016-K: COMPLETE — PASS
+017: NOT STARTED — START GATE NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
+
+# Phase-016 scenario-validation authority
+
+[016-K](../016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md) closes mature scenario/misfit/adversarial validation **PASS WITH CLOSURE HANDOFF**. All ten validation gates pass; 14/14 inherited SVT seeds and 12/12 mature-design hypotheses are dispositioned; one material result-family defect was repaired/revalidated; no semantic defect remains open. Phase 017 may begin methodology closure only.
 
 # Phase-015 integrity authority
 
@@ -90,10 +105,10 @@ Export currency != Publication state
 3. use [Reusable Concept Knowledge & Design Patterns](project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons, never as a substitute specification;
 4. use completed Phase-013 mapping for user-visible semantics;
 5. use the Phase-014 exit review as the authoritative refinement handoff; detailed 014-A–I records remain evidence/provenance;
-6. for Phase 016, begin from the Phase-015 exit review and 015-J scenario-target preparation, then use the Phase-016 README before 016-A planning;
+6. for Phase 017, begin from the Phase-016 exit review and 016-J closure-target preparation, then use the Phase-017 README before start-gate planning;
 7. use historical adapters only as explicit comparison/counterexample evidence;
 8. do not preload architecture/implementation except for contamination/history analysis.
 
 # Next
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
