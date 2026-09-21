@@ -340,6 +340,24 @@ No corrective `INT-F*` finding was opened by 015-F.
 
 The later 015-H/015-I rechecks are whole-system automation/mapping verification, not unresolved Cluster-D defects.
 
+## 015-G disposition overlay
+
+015-G has now dispositioned the externalization/release probes.
+
+| DIR | 015-G disposition | Later recheck |
+| --- | --- | --- |
+| DIR-035 | PURPOSE PRESERVED WITH SOURCE-RELATIVE CURRENCY LIMITATION | none |
+| DIR-036 | NO INTEGRITY VIOLATION | 015-I mapping recheck |
+| DIR-037 | NO INTEGRITY VIOLATION | none |
+| DIR-038 | NO INTEGRITY VIOLATION | none |
+| DIR-039 | PURPOSE PRESERVED WITH EXTERNAL-PERSISTENCE LIMITATION | 015-I mapping recheck |
+| DIR-040 | PURPOSE PRESERVED WITH AUDIENCE-DISCLOSURE LIMITATION | 015-I mapping recheck |
+| DIR-041 | NO INTEGRITY VIOLATION | 015-H chain/automation recheck |
+
+No corrective `INT-F*` finding was opened by 015-G.
+
+The later 015-H/015-I rechecks are whole-system automation/mapping verification, not unresolved Cluster-E defects.
+
 # 8. Directional coverage by Concept
 
 Every Concept appears as a **subject whose promise can be threatened**, not merely as a source of interference.
