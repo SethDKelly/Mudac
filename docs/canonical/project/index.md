@@ -35,7 +35,7 @@ Current downstream conceptual authority is routed through:
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B NEXT
+017-B IN PROGRESS
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -86,18 +86,8 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current closure work: **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
-## Phase 015 handoff
-
-Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional register remains phase evidence only; current family ownership is unchanged because no corrective `INT-F*` finding or semantic reopen occurred. Phase 016 may validate scenarios but must continue to treat these canonical owners as current semantic authority.
-
-
-## Phase 015 exit / Phase 016 handoff
-
-Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
-
-Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-017 start-gate handoff
