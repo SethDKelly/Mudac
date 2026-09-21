@@ -6,7 +6,7 @@ This file is a **bootstrap adapter**, not product/design authority.
 
 1. Start at [docs/index.md](docs/index.md).
 2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
-3. For active methodology work, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/).
+3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For post-closure work, begin from the Phase 017 handoff and the post-Concept-Design re-entry contract.
 4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
 5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
 
@@ -37,19 +37,19 @@ The current product family remains:
 
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017  IN PROGRESS
-017-A..G   COMPLETE — PASS/READY as recorded by Phase 017
-017-H      NEXT
+Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
+Concept Design CLOSED
 
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
+historical architecture       SUSPENDED / QUARANTINED
+accepted new architecture      NOT ESTABLISHED
+implementation readiness      READY
 implementation execution      NOT STARTED
-implementation authorization  NOT YET
+execution authorization       NOT GRANTED
 ```
 
 The active work is:
 
-> **017-H — Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff**
+> **Phase 018 Start Gate — Pre-Implementation Audit, OKF/Repository Hardening, Agentic Development Preparation & Architecture/Engineering Re-entry Planning**
 
 ## Retrieval discipline
 
