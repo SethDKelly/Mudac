@@ -35,7 +35,8 @@ Current downstream conceptual authority is routed through:
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B IN PROGRESS
+017-B COMPLETE — PASS
+017-C NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -86,7 +87,7 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Current closure work: **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current closure work: **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
 
 
 
