@@ -67,10 +67,11 @@ Phase 014 COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
-015-H NEXT
+015-H COMPLETE — PASS
+015-I NEXT
 ```
 
-Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
+Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
 
 ## Phase 015 handoff
 
