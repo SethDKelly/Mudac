@@ -155,7 +155,7 @@ The current eighteen-Concept baseline has survived Phases 011–016 without a Co
 
 Proceed to:
 
-> **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**
+> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
 
 
 # Phase-017 open-item closure
@@ -166,3 +166,8 @@ Proceed to:
 # Phase-017 methodology completeness result
 
 017-E confirms the Phase-009 completion runway has satisfied Base/Jackson concerns 000–010 for the current design. No earlier substantive phase requires reopening after later repair propagation. Final closure still depends on the 017-F implementation-contamination/handoff audit, 017-G documentation closure and 017-H readiness decision.
+
+
+# Phase-017 downstream handoff result
+
+017-F confirms that current Concept Design is independent of pre-Phase-009 architecture/implementation choices. The old downstream corpus remains quarantined candidate knowledge and any future architecture/engineering process must enter through the architecture-neutral post-Concept-Design re-entry contract rather than resuming Phase 006/008 plans.
