@@ -324,3 +324,69 @@ These are semantic compositions, not runtime orchestration designs.
 - whole-application action surface/chaining/cycle/automation/synergy closure → 011-I;
 - inclusion/dependence/product-family questions → Phase 012;
 - user-visible interaction/presentation → Phase 013.
+
+
+# Exceptional no-ordinary-result closeout
+
+Phase 016-F validates a closeout case not explicit in the earlier ordinary-path wording: the Competition is ready to leave ordinary operation, but authoritative evidence/policy cannot legitimately produce an ordinary ranked result for a required scope.
+
+MUDAC handles this without a new Result Concept and without fabricating Rank.
+
+The applicable policy may establish an attributable **Exceptional Closeout Disposition** when:
+
+- the affected Competition/result scope is explicit;
+- current Coverage/evidence/eligibility facts are reconstructible;
+- an ordinary ranked result cannot legitimately be produced;
+- any remaining correction, replacement, successor-evaluation, tie, or reconciliation paths are resolved to the extent required by policy;
+- the exceptional authorizer and reason are attributable;
+- the resulting exceptional OutcomeBasis explicitly states the absence/unavailability of the ordinary result and any unaffected result/recognition scope.
+
+The existing coordinated application action **Finalize Competition & Declare Outcome** may then consume either:
+
+1. an ordinary reconciled Closeout Basis with the required Ranking Ready outcome state; or
+2. a policy-authorized exceptional Closeout Basis containing the Exceptional Closeout Disposition and an explicit exceptional OutcomeBasis.
+
+For the exceptional path:
+
+```text
+Coverage may remain Incomplete
+Ranking Readiness may remain false
+ordinary Rank may be unavailable
+rank-derived Award may be unavailable
+
+but
+
+Exceptional Closeout Disposition = authorized
+Finalization Readiness = true for exceptional closeout
+→ Competition.finalize
++ OutcomeDeclaration.declare(exceptional OutcomeBasis)
+```
+
+Semantic success remains:
+
+```text
+Competition = Finalized
+AND
+current explicit Outcome Declaration exists
+```
+
+The declaration is an official statement of the exceptional outcome condition; it is not an invented winner, fabricated Rank, or hidden conversion of uncertainty into an ordinary result.
+
+## Unknown versus exceptional official outcome
+
+Preserve:
+
+```text
+unknown / unresolved result
+  != policy-resolved exceptional no-result outcome
+  != ordinary ranked result
+```
+
+Repeated or ambiguous action intent, stale calculation, unresolved evidence, or unknown closeout authority cannot be converted into an Exceptional Closeout Disposition merely to obtain closure.
+
+## Additional composition invariants
+
+16. An ordinary ranked result is not required when policy explicitly authorizes a reconstructible exceptional no-result OutcomeBasis.
+17. Exceptional closeout never mutates factual Coverage, fabricates Rank, or confers rank-derived Award authority.
+18. Unknown/unresolved authority cannot be presented as an official exceptional outcome.
+19. Outcome Declaration remains the owner of official exceptional-outcome authority/history; no new Result/No-Result Concept is introduced.
