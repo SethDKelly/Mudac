@@ -11,11 +11,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 5. Use [Reusable Concept Knowledge & Design Patterns](docs/canonical/project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons; never treat it as a substitute Concept specification or architecture mandate.
 6. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
 7. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-8. Read the [Phase-014 exit review](docs/014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md) for the post-refinement baseline and Phase-015 audit targets.
-9. Read the completed [Phase-015 exit review](docs/015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) and [015-J target preparation](docs/015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md) for the structural-integrity baseline and scenario-validation seeds.
-10. Start Phase-016 work only from [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/README.md), beginning with 016-A; do not pre-plan or execute substantive scenarios before that start gate.
-11. Treat detailed Phase-014 comparison records, Phase-015 audit records, and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
-12. Do not preload architecture/implementation except for explicit contamination/history analysis.
+8. Read the completed [Phase-016 exit review](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md) and [016-J closure-target preparation](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-J-residual-misfit-register-reopen-repair-revalidation-phase-017-closure-target-preparation.md).
+9. Use the active [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](docs/017-methodology-closure-canonical-consolidation-completion-decision/README.md) for closure work. 017-A is complete; 017-B is next.
+10. Treat detailed Phase-014/015/016 records and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
+11. Do not preload architecture/implementation except for explicit contamination/history analysis.
 
 ## Current methodology posture
 
@@ -38,8 +37,10 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: NOT STARTED
-016-A: NEXT — START GATE
+016: COMPLETE — PASS WITH CLOSURE HANDOFF
+017: IN PROGRESS
+017-A: COMPLETE — READY
+017-B: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -144,6 +145,6 @@ These patterns describe transferable design lessons. They do not authorize gener
 
 Proceed to:
 
-> **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**
+> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
 
-The fourteen `SVT-*` seeds from 015-J are inputs to 016-A, not a fixed Phase-016 plan.
+Phase 017 is closure work only. Architecture and implementation remain quarantined unless the final closure decision explicitly changes readiness and hands off to a separate downstream process.
