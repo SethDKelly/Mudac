@@ -44,7 +44,8 @@ Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
-017-C NEXT
+017-C COMPLETE — PASS
+017-D NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -96,9 +97,10 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 ## Current next work
 
 Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B COMPLETE — PASS
-017-C NEXT**.
+017-C COMPLETE — PASS
+017-D NEXT**.
 
-Current closure work: **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
+Current closure work: **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
 
 
 
