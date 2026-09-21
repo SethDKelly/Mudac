@@ -15,7 +15,7 @@ sources:
 
 Provide the durable final Phase-013 baseline for deciding what mapping knowledge is current authority, what is historical evidence, and where user-visible semantics belong.
 
-Phase 013 is **COMPLETE — PASS**. Architecture and implementation remain outside mapping authority and remain suspended pending later methodology closure.
+Phase 013 is **COMPLETE — PASS**. Architecture and implementation remain outside mapping authority; Concept Design has since closed in Phase 017, while historical downstream candidates remain quarantined pending explicit re-entry.
 
 # Authority order
 
@@ -280,7 +280,7 @@ Future defects reopen the natural semantic owner under change governance; Phase-
 
 Phase 014 familiarity/reuse/genericity, Phase 015 whole-system integrity, and Phase 016 scenario/misfit validation are complete. Phase 016 required one outcome-officiality mapping repair for exceptional no-ordinary-result closeout; that repair is now present in the natural current owner and passed later revalidation.
 
-Phase 017 uses this baseline as durable Experience ownership/evidence authority while auditing final traceability and closure. Any newly discovered mapping defect still routes to the natural Experience owner.
+Phase 017 completed final traceability and closure using this baseline as durable Experience ownership/evidence authority. Any newly discovered mapping defect still routes to the natural Experience owner under change governance.
 
 # Reopen routing
 
@@ -295,6 +295,6 @@ stale historical wording with clear current meaning → repair current owner, do
 
 # Methodology status routing
 
-Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+Final Concept Design closure evidence is routed through [docs/index.md](../../index.md) and [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
 The historical Phase-013 entry/start-gate record is retained only as deprecated provenance. Current mapping semantics are owned by this baseline and the twelve accepted Experience owners.
