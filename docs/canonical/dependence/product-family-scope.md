@@ -262,7 +262,8 @@ Phase 015 IN PROGRESS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
 015-G COMPLETE — PASS
-015-H NEXT
+015-H COMPLETE — PASS
+015-I NEXT
 ```
 
 Phase 015 must preserve PF-01 as the sole adopted product variant unless an explicit integrity finding demonstrates a genuine dependence/scope defect and reopens Phase 012.
