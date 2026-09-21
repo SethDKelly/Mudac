@@ -1,8 +1,6 @@
-# MUDAC Concepts
+# Concepts
 
-Current canonical Concept catalog after Phase 010 convergence, Phase 012 dependence/scope closure, Phase 013 mapping closure, Phase 014 familiarity/terminology/genericity/reuse exit, and the Phase-015 integrity baseline.
-
-## Current eighteen-Concept catalog
+Current MUDAC Concept catalog.
 
 1. [Competition](competition.md)
 2. [Division](division.md)
@@ -23,186 +21,17 @@ Current canonical Concept catalog after Phase 010 convergence, Phase 012 depende
 17. [Export](export.md)
 18. [Publication](publication.md)
 
-## Superseded boundaries
+## Historical adapters
 
-[Judging Encounter](judging-encounter.md) remains a deprecated historical adapter. Its former responsibilities are owned by **Evaluation Occurrence + Evaluation Obligation**.
+- [Judging Encounter](judging-encounter.md) — deprecated historical adapter; current responsibilities are split across Evaluation Occurrence and Evaluation Obligation.
+- Official Outcome Revision — deprecated historical adapter under [Mechanisms](../mechanisms/official-outcome-revision.md); current official authority is Outcome Declaration.
 
-`Official Outcome Revision` is superseded; explicit official authority/currentness/history is owned by **Outcome Declaration**.
+## Explicit non-Concepts
 
-## Explicit non-Concept classifications
+Coverage, Aggregate, Rank, Readiness, and Reconciliation remain [derived/supporting mechanisms](../mechanisms/), not Concepts.
 
-Coverage/Evaluation Sufficiency remains derived factual sufficiency; Aggregate, Rank and Readiness remain derived mechanisms; Reconciliation remains process/work context; Recovery/Continuity remains a cross-cutting purpose obligation.
+Generic words such as User, Role, Permission, Session, Task, Form, Submission, Result, Workflow, and Status do not become replacement Concepts through familiarity. Use [Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md).
 
-## Phase-014 result through 014-H
+The sole current product family remains [PF-01](../dependence/product-family-scope.md).
 
-014-C through 014-E completed all Concept-family familiarity audits. 014-F completed the cross-catalog terminology audit. 014-G completed broader genericity and duplication-pressure analysis. 014-H completed retained-novelty and reusable-knowledge disposition.
-
-All eighteen Concept identities remain current. No super-Concept or merger is adopted.
-
-The genericity rule remains:
-
-```text
-Generic at the boundary; specific in purpose.
-shared parameter != shared purpose
-shared history shape != shared lifecycle
-```
-
-The one adopted broader-genericity refinement is [Team](team.md): its intrinsic meaning is a scoped competing group acting as one unit, while PF-01 binds that group to student teams.
-
-## Reusable concept-knowledge status
-
-[Reusable Concept Knowledge & Design Patterns](../project/reusable-design-knowledge.md) records reuse/catalog **candidate** status without duplicating these Concept specifications.
-
-Broad cross-domain candidates are:
-
-```text
-Identity
-Participation
-Alias
-Access
-Versioning
-Provenance
-Outcome Declaration
-Export
-Publication
-```
-
-Competition/evaluation-domain candidates are:
-
-```text
-Competition
-Division
-Team
-Panel
-Evaluation Occurrence
-Evaluation Obligation
-Rubric
-Scorecard
-Award
-```
-
-Candidate status does not create another Concept identity, new dependence, new synchronization or external/shared catalog authority.
-
-```text
-this directory = current MUDAC Concept truth
-reusable registry = candidate / lesson index
-external shared catalog = not established
-```
-
-## Retained novelty
-
-The most important intentionally strict seams include:
-
-```text
-Identity != Participation != Access
-Panel != Evaluation Occurrence != Evaluation Obligation
-Evaluation Occurrence != Evaluation Obligation
-historical obligation satisfaction != current evidence eligibility
-Evaluation Obligation != Scorecard
-Rubric definition != exact authoritative Evaluation Basis
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration Affected != Superseded
-Outcome Declaration != Export != Publication != delivery
-```
-
-These distinctions may generate reusable knowledge, but they are not invitations to create super-concepts.
-
-## Vocabulary / expectation-transfer authority
-
-Use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](../project/domain-vocabulary-expectation-transfer.md) when familiar labels could blur Concept boundaries.
-
-Generic `User`, `Role`, `Permission`, `Session`, `Task`, `Form`, `Submission`, `Revision`, `Result`, `Workflow` or `Status` must not become replacement Concepts merely for familiarity or apparent reuse.
-
-## Current composition / scope / mapping
-
-Phase 011 is **COMPLETE — PASS** and Synchronizations own application composition.
-
-Phase 012 is **COMPLETE — PASS** and Dependence owns inclusion dependence and PF-01 scope.
-
-Phase 013 is **COMPLETE — PASS** and Experience owns current user-visible mapping.
-
-The sole adopted variant remains:
-
-> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
-
-## Current methodology state
-
-```text
-014-A COMPLETE — READY
-014-B COMPLETE — PASS
-014-C COMPLETE — PASS
-014-D COMPLETE — PASS
-014-E COMPLETE — PASS
-014-F COMPLETE — PASS
-014-G COMPLETE — PASS
-014-H COMPLETE — PASS
-014-I COMPLETE — PASS
-014-J COMPLETE — PASS
-Phase 014 COMPLETE — PASS
-015-A COMPLETE — READY
-015-B COMPLETE — PASS
-015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A COMPLETE — PASS
-016-B COMPLETE — PASS
-016-C COMPLETE — PASS
-016-D COMPLETE — PASS
-016-E COMPLETE — PASS
-016-F COMPLETE — PASS AFTER REPAIR
-016-G COMPLETE — PASS
-016-H COMPLETE — PASS
-016-I COMPLETE — PASS
-016-J COMPLETE — PASS
-016-K COMPLETE — PASS
-Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017 IN PROGRESS
-017-A COMPLETE — READY
-017-B COMPLETE — PASS
-017-C COMPLETE — PASS
-017-D COMPLETE — PASS
-017-E COMPLETE — PASS
-017-F COMPLETE — PASS
-017-G NEXT
-```
-
-Current closure work: **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**.
-
-
-
-## Phase-016 Concept impact through 016-F
-
-016-F required no Concept reopen. Outcome Declaration remains sufficiently generic to own explicit official authority for both ordinary and policy-authorized exceptional no-result OutcomeBasis. No Result or No-Result Concept is added.
-
-
-## Phase-016 Concept impact through 016-G
-
-016-G required no Concept reopen. Export and Publication remain sufficient owners for stable external representation and deliberate release; external possession remains a downstream fact rather than a new Concept.
-
-
-## Phase-016 Concept impact through 016-H
-
-016-H required no Concept reopen. Conflicting legitimate authority is resolved through existing owner-specific state, action preconditions, cardinality/currentness/correction/successor semantics and uncertainty handling; no Workflow, Arbitration or Conflict Manager Concept is added.
-
-
-## Phase-016 Concept impact through 016-I
-
-016-I required no Concept reopen. Offline, device, session, security, recovery and scale concerns remain contextual/realization pressures over the existing eighteen-Concept model; no Offline, Device, Session, Security Incident, Bulk Operation or Recovery Concept is added.
-
-
-## Phase-016 residual-closure impact through 016-J
-
-016-J confirms zero open Concept defects, zero Concept reopens and no change to the eighteen-Concept catalog. The single Phase-016 misfit was composition/policy/mapping-level and has been repaired/revalidated. Phase 017 must reconcile scenario-critical boundary wording into natural current owners where discoverability requires it, without inventing new Concepts merely to summarize validation findings.
-
-
-## Phase-016 exit / Phase-017 handoff
-
-016-K closes Phase 016 **COMPLETE — PASS WITH CLOSURE HANDOFF**. All ten validation gates pass; no Concept reopen occurred; the eighteen-Concept catalog remains current. Phase 017 owns final canonical discoverability/methodology closure only and must not invent new Concepts merely to summarize validation evidence.
+For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
