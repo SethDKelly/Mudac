@@ -33,7 +33,8 @@ Jackson Concept Design: IN PROGRESS
 015-F: COMPLETE — PASS
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
-015-I: NEXT
+015-I: COMPLETE — PASS
+015-J: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -52,7 +53,8 @@ Jackson Concept Design: IN PROGRESS
 015-F: COMPLETE — PASS
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
-015-I: NEXT
+015-I: COMPLETE — PASS
+015-J: NEXT
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -92,4 +94,4 @@ conceptual reuse != implementation reuse
 
 ## Current direction
 
-Proceed to **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**.
+Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
