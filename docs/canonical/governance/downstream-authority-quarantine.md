@@ -108,6 +108,22 @@ Do **not** preload canonical architecture or implementation knowledge unless the
 
 This preserves Jackson's representation/implementation independence and limits agentic back-drive.
 
+# Phase-017 downstream-corpus audit
+
+017-F audited all nine preserved architecture owners and all six preserved implementation owners.
+
+Findings:
+
+- current Concept Design contains no concrete architecture or implementation requirement;
+- the downstream corpus remains materially stale in places, including superseded semantic names and old Phase-008 execution gates;
+- each individual architecture/implementation document now carries an explicit suspension notice;
+- concrete PostgreSQL/RDS/AWS/Cognito/React/toolchain/module/package choices remain candidate hypotheses only;
+- the 006-D executable substrate remains a frozen non-domain fact;
+- a stale browser-shell message implying execution after a Phase-009 slice was corrected;
+- no old roadmap or candidate authority is automatically reactivated by Concept Design closure.
+
+Future re-entry is governed by [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md).
+
 # Post-closure treatment
 
 A successful future Phase 017 closure does not automatically reactivate quarantined downstream material.
