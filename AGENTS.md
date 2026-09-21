@@ -33,7 +33,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 015-E: COMPLETE — PASS
 015-F: COMPLETE — PASS
 015-G: COMPLETE — PASS
-015-H: NEXT
+015-H: COMPLETE — PASS
+015-I: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -51,7 +52,8 @@ This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/)
 015-E: COMPLETE — PASS
 015-F: COMPLETE — PASS
 015-G: COMPLETE — PASS
-015-H: NEXT
+015-H: COMPLETE — PASS
+015-I: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -156,4 +158,4 @@ These patterns describe transferable design lessons. They do not authorize gener
 
 Proceed to:
 
-> **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**
+> **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity**
