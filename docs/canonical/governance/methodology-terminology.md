@@ -35,14 +35,17 @@ Base phase numbering is **not** represented as Daniel Jackson's official prescri
 
 # Current methodology posture
 
-The previous MUDAC 007-I methodology exit has been reopened. Phase 009 established the current gap map and Phase 010–017 completion runway.
+The previous MUDAC 007-I methodology exit was reopened by Phase 009 and the Phase 010–017 completion runway has now finished.
 
-Until successful Phase 017 closure:
+Phase 017 closes with **PASS WITH BOUNDED CARRY-FORWARD**.
 
-- Jackson Concept Design is not complete;
-- implementation readiness remains not ready;
-- architecture and implementation material are downstream candidates, not Concept Design constraints;
-- current work follows the design-only boundary.
+Current state:
+
+- Jackson-aligned Concept Design is **CLOSED**;
+- implementation readiness is **READY** for post-closure preparation/re-entry;
+- implementation execution remains **NOT STARTED** and **NOT AUTHORIZED**;
+- historical architecture and implementation material remain downstream candidates under quarantine until explicit re-entry decisions;
+- the next lifecycle step is a post-Concept-Design Phase 018 start gate, not feature implementation.
 
 # OKF version authority
 
