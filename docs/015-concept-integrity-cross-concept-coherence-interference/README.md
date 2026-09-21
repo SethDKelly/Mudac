@@ -1,6 +1,6 @@
 # Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference
 
-Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E COMPLETE — PASS; 015-F NEXT.**
+Status: **IN PROGRESS — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS; 015-D COMPLETE — PASS; 015-E COMPLETE — PASS; 015-F COMPLETE — PASS; 015-G NEXT.**
 
 Phase 015 corresponds to the Base/Jackson whole-system integrity phase that follows familiarity, reuse and genericity refinement.
 
@@ -93,6 +93,23 @@ Cluster C confirms:
 
 No corrective `INT-F*` finding or semantic reopen was required.
 
+## 015-F integrity result
+
+[015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity](015-F-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-integrity.md) is **COMPLETE — PASS**.
+
+Cluster D confirms:
+
+- Coverage factual truth stays separate from governed exception consequence;
+- missing evidence remains missing rather than zero;
+- Aggregate/Rank remain derived and non-authoritative;
+- Ranking/Finalization Readiness can make actions available but cannot perform recognition/finalization/declaration;
+- Award remains explicit recognition and does not move automatically with Rank;
+- Competition Finalization remains lifecycle closure;
+- Outcome Declaration remains explicit official authority with Current/Affected/Superseded history;
+- corrected calculations never silently become official.
+
+No corrective `INT-F*` finding or semantic reopen was required.
+
 ## Current integrity rule
 
 ```text
@@ -131,8 +148,8 @@ Phase 015 may compare materially different PF-01 profiles/configurations/lifecyc
 | 015-C | Competition Context, Competitor Structure, Identity, Participation, Alias, Access & Panel Integrity | **Complete — PASS** |
 | 015-D | Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity | **Complete — PASS** |
 | 015-E | Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity | **Complete — PASS** |
-| 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | **Next** |
-| 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | Planned |
+| 015-F | Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity | **Complete — PASS** |
+| 015-G | Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity | **Next** |
 | 015-H | Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference | Planned |
 | 015-I | Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity | Planned |
 | 015-J | Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation | Planned |
@@ -231,7 +248,8 @@ Phase 015 IN PROGRESS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
-015-F NEXT
+015-F COMPLETE — PASS
+015-G NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -244,4 +262,4 @@ Phase 015 remains Concept Design. Runtime race conditions, distributed transacti
 
 ## Next
 
-Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
+Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
