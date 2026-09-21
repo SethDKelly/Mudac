@@ -16,15 +16,15 @@ Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
 ## Current status
 
 ```text
-Jackson Concept Design        IN PROGRESS — PHASE 017
+Jackson Concept Design        CLOSED — PHASE 017 PASS WITH BOUNDED CARRY-FORWARD
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
-017-A..G                      COMPLETE
-017-H                         NEXT
+017-A..H                      COMPLETE
 
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
+historical architecture       SUSPENDED / QUARANTINED
+accepted new architecture      NOT ESTABLISHED
+implementation readiness      READY
 implementation execution      NOT STARTED
-implementation authorization  NOT YET
+execution authorization       NOT GRANTED
 ```
 
 The sole adopted product/application variant remains:
@@ -32,3 +32,6 @@ The sole adopted product/application variant remains:
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
+
+
+The next authorized work is the Phase 018 post-closure start gate for pre-implementation audit, agentic-development preparation, and architecture/engineering re-entry planning. Phase 017 does not authorize feature implementation.
