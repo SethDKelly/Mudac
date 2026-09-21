@@ -159,10 +159,11 @@ Phase 014 COMPLETE — PASS
 016-E COMPLETE — PASS
 016-F COMPLETE — PASS AFTER REPAIR
 016-G COMPLETE — PASS
-016-H NEXT
+016-H COMPLETE — PASS
+016-I NEXT
 ```
 
-Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
 
 ## Phase 015 handoff
 
@@ -173,7 +174,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & Conflicting-Authority Scenario Validation**.
+Proceed to **016-I — Degraded, Offline, Shared-Device, Recovery, Scale, Security & Adversarial Whole-Design Validation**.
 
 
 ## Phase-016 Concept impact through 016-F
@@ -184,3 +185,8 @@ Proceed to **016-H — Cross-Family Application Actions, Chaining, Automation & 
 ## Phase-016 Concept impact through 016-G
 
 016-G required no Concept reopen. Export and Publication remain sufficient owners for stable external representation and deliberate release; external possession remains a downstream fact rather than a new Concept.
+
+
+## Phase-016 Concept impact through 016-H
+
+016-H required no Concept reopen. Conflicting legitimate authority is resolved through existing owner-specific state, action preconditions, cardinality/currentness/correction/successor semantics and uncertainty handling; no Workflow, Arbitration or Conflict Manager Concept is added.
