@@ -38,7 +38,8 @@ Current downstream conceptual authority is routed through:
 017-B COMPLETE — PASS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
-017-E NEXT
+017-E COMPLETE — PASS
+017-F NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -89,7 +90,7 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Current closure work: **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**.
+Current closure work: **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
 
 
 
