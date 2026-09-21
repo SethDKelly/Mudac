@@ -276,11 +276,11 @@ MAP-R01 through MAP-R16 have no unresolved semantic blocker in the current Exper
 
 Future defects reopen the natural semantic owner under change governance; Phase-013 closure does not make mapping immutable.
 
-# Post-Phase-015 / Phase-016 handoff
+# Current methodology / closure status
 
-Phase 014 — Familiarity, Reuse & Genericity is **COMPLETE — PASS**. Its vocabulary, genericity and reusable-knowledge refinements are now part of the current design baseline.
+Phase 014 familiarity/reuse/genericity, Phase 015 whole-system integrity, and Phase 016 scenario/misfit validation are complete. Phase 016 required one outcome-officiality mapping repair for exceptional no-ordinary-result closeout; that repair is now present in the natural current owner and passed later revalidation.
 
-Phase 015 completed whole-system mapping/profile integrity without requiring a mapping repair. Phase 016 uses this Mapping Authority Baseline as current Experience authority while testing representative/adversarial scenarios; any discovered mapping misfit must reopen the natural Experience owner.
+Phase 017 uses this baseline as durable Experience ownership/evidence authority while auditing final traceability and closure. Any newly discovered mapping defect still routes to the natural Experience owner.
 
 # Reopen routing
 
@@ -293,35 +293,21 @@ mapping terminology/representation/ownership defect → current natural Experien
 stale historical wording with clear current meaning → repair current owner, do not reopen upstream
 ```
 
-# Final Phase-013 state
+# Current methodology state
 
 ```text
-013-A  COMPLETE — READY
-013-B  COMPLETE — PASS
-013-C  COMPLETE — PASS
-013-D  COMPLETE — PASS
-013-E  COMPLETE — PASS
-013-F  COMPLETE — PASS
-013-G  COMPLETE — PASS
-013-H  COMPLETE — PASS
-013-I  COMPLETE — PASS
-013-J  COMPLETE — PASS
-013-K  COMPLETE — PASS
-013-L  COMPLETE — PASS
 PHASE 013 COMPLETE — PASS
 PHASE 014 COMPLETE — PASS
-PHASE 015 COMPLETE — PASS WITH CARRY-FORWARD — 015-A COMPLETE — READY; 015-B COMPLETE — PASS; 015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
+PHASE 015 COMPLETE — PASS WITH CARRY-FORWARD
+PHASE 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+PHASE 017 IN PROGRESS
+017-A COMPLETE — READY
+017-B COMPLETE — PASS
+017-C IN PROGRESS
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 implementation readiness: NOT READY
 implementation authorization: NOT YET
 ```
+
+The historical Phase-013 entry/start-gate record is retained only as provenance. Current mapping semantics are owned by this baseline and the twelve accepted Experience owners.
