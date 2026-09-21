@@ -134,4 +134,4 @@ Phase 010 canonical convergence establishes the current purpose and Concept-boun
 
 # Current handoff
 
-Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B–015-G are **COMPLETE — PASS**. Use this document as current purpose authority for **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference** and later Phase-015 audits.
+Phase 015 is **IN PROGRESS** with 015-A is **COMPLETE — READY** and 015-B–015-H are **COMPLETE — PASS**. Use this document as current purpose authority for **015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity** and later Phase-015 audits.
