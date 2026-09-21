@@ -248,17 +248,8 @@ Revisit P-02/P-08 and anonymity/disclosure policy before composition.
 
 Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping of ranking context.
 
-# Current methodology state
+# Methodology status routing
 
-```text
-Phase 012 COMPLETE — PASS
-Phase 013 COMPLETE — PASS
-Phase 014 COMPLETE — PASS
-Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
-Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017 IN PROGRESS
-017-A COMPLETE — READY
-017-B CURRENT
-```
+Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
-Phase 016 discovered no PF-01 scope/variant misfit. PF-01 therefore remains the sole adopted product variant during Phase 017 unless closure evidence discovers a genuine scope defect requiring a dependence reopen.
+PF-01 remains the sole adopted variant unless future evidence triggers explicit dependence change governance.
