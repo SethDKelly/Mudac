@@ -32,42 +32,15 @@ Current downstream conceptual authority is routed through:
 013 COMPLETE — PASS
 014 COMPLETE — PASS
 015 COMPLETE — PASS WITH CARRY-FORWARD
-015-A COMPLETE — READY
-015-B COMPLETE — PASS
-015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
-014-A COMPLETE — READY
-014-B COMPLETE — PASS
-014-C COMPLETE — PASS
-014-D COMPLETE — PASS
-014-E COMPLETE — PASS
-014-F COMPLETE — PASS
-014-G COMPLETE — PASS
-014-H COMPLETE — PASS
-014-I COMPLETE — PASS
-014-J COMPLETE — PASS
-Phase 014 COMPLETE — PASS
-015-A COMPLETE — READY
-015-B COMPLETE — PASS
-015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
-architecture / implementation SUSPENDED
+016 COMPLETE — PASS WITH CLOSURE HANDOFF
+017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
+architecture authority: SUSPENDED
+implementation planning: SUSPENDED
+new domain implementation: NOT STARTED
+implementation readiness: NOT READY
+implementation authorization: NOT YET
 ```
 
 ## Vocabulary authority
@@ -113,7 +86,7 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 ## Phase 015 handoff
 
@@ -124,4 +97,9 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+
+
+## Phase-017 start-gate handoff
+
+017-A is **COMPLETE — READY**. Phase 017 now audits canonical current truth, methodology traceability, orphan/unexplained elements, boundary clarifications, implementation contamination and closure evidence. This Project index is current navigation authority and must not point readers back to the superseded Phase-016 start gate.
