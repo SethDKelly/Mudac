@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Phase 017 is **IN PROGRESS — 017-E COMPLETE — PASS; 017-F NEXT**.
+Phase 017 is **IN PROGRESS — 017-F COMPLETE — PASS; 017-G NEXT**.
 
 ## Entry authority
 
@@ -16,6 +16,7 @@ Phase 017 is **IN PROGRESS — 017-E COMPLETE — PASS; 017-F NEXT**.
 - [017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit](017-C-methodology-chain-traceability-purpose-fulfillment-orphan-unexplained-element-audit.md) — **Complete — PASS**.
 - [017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure](017-D-boundary-clarification-open-item-limitation-uncertainty-terminology-closure.md) — **Complete — PASS**.
 - [017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit](017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md) — **Complete — PASS**.
+- [017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit](017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md) — **Complete — PASS**.
 
 ## Current boundary
 
@@ -27,7 +28,8 @@ Phase 017 is **IN PROGRESS — 017-E COMPLETE — PASS; 017-F NEXT**.
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 
 architecture / implementation SUSPENDED
 implementation readiness NOT READY
@@ -37,4 +39,4 @@ implementation authorization NOT YET
 
 ## Next
 
-> **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**
+> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
