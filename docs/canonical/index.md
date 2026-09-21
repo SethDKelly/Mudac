@@ -36,7 +36,8 @@ Jackson Concept Design: IN PROGRESS
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -56,7 +57,8 @@ Jackson Concept Design: IN PROGRESS
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -119,4 +121,4 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
+Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
