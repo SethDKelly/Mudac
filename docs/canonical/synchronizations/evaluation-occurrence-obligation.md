@@ -268,7 +268,7 @@ These are conceptual relationships, not runtime orchestration designs.
 # Remaining downstream composition
 
 - Coverage/Aggregate/Rank/Award/Finalization/Outcome Declaration → 011-G;
-- Export/Publication → 011-H;
-- application-wide chaining/automation/over-under/synergy closure → 011-I;
-- product-family inclusion dependence → Phase 012;
-- user-visible mapping → Phase 013.
+- Export/Publication → [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md);
+- application-wide chaining/automation/over-under/synergy → [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md);
+- product-family inclusion dependence → [Dependence](../dependence/);
+- user-visible mapping → [Experience](../experience/).
