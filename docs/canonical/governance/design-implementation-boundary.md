@@ -23,6 +23,7 @@ sources:
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-G-export-publication-disclosure-currency-withdrawal-external-possession-integrity.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-H-cross-family-application-actions-chaining-automation-lifecycle-authority-interference.md
   - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md
+  - resource: ../../015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md
   - resource: ../project/reusable-design-knowledge.md
   - resource: downstream-authority-quarantine.md
 ---
@@ -33,7 +34,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-I **COMPLETE — PASS**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **IN PROGRESS** with 015-A **COMPLETE — READY** and 015-B–015-J **COMPLETE — PASS**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -69,7 +70,8 @@ implementation authorization: NOT YET
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -218,10 +220,14 @@ Phase 015 does not authorize runtime race-condition analysis, transaction/lockin
 
 015-I opens no corrective `INT-F*` finding and authorizes no semantic or implementation change. It confirms that mapping, role/audience profiles, accessibility/degraded/paper/recovery paths, PF-01 specialization and Phase-014 familiarity/genericity preserve the already-validated authority model without capability union, authority promotion, historical flattening or profile-specific reinterpretation.
 
+## 015-J current integrity result
+
+015-J closes the residual structural integrity register with all 48 directional probes dispositioned, zero corrective `INT-F*` findings, zero semantic reopens/repairs and no known structural contradiction deferred to Phase 016. Fourteen scenario target seeds are prepared for 016-A refinement; they do not authorize implementation or pre-plan Phase-016 subphases.
+
 # Suspended downstream authority
 
 Until successful Phase 017 closure, historical architecture/implementation conclusions remain downstream evidence only. A successful Phase 017 may authorize a **separate** downstream architecture/engineering re-entry; it does not automatically reactivate old plans or start implementation.
 
 # Current handoff
 
-Proceed to **015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation**.
+Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
