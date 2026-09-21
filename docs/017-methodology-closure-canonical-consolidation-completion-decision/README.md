@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Status: **IN PROGRESS — 017-A COMPLETE — READY. 017-B NEXT.**
+Status: **IN PROGRESS — 017-B COMPLETE — PASS. 017-C NEXT.**
 
 Phase 017 is the final Jackson Concept Design closure phase for the reopened MUDAC design runway.
 
@@ -42,7 +42,8 @@ The start gate owns dependency-safe subphase planning.
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B NEXT
+017-B COMPLETE — PASS
+017-C NEXT
 
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
@@ -59,7 +60,7 @@ It does not automatically revive historical Phase-006/008 implementation plans o
 
 Proceed to:
 
-> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
+> **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**
 
 
 ## 017-A start-gate result
@@ -81,10 +82,19 @@ Proceed to:
 | Subphase | Closure work | Status |
 | --- | --- | --- |
 | 017-A | Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning | **Complete — READY** |
-| 017-B | Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation | **Next** |
-| 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | Planned |
+| 017-B | Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation | **Complete — PASS** |
+| 017-C | Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit | **Next** |
 | 017-D | Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure | Planned |
 | 017-E | Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit | Planned |
 | 017-F | Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit | Planned |
 | 017-G | Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation | Planned |
 | 017-H | Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff | Planned |
+
+
+## 017-B reconciliation result
+
+[017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation](017-B-canonical-current-truth-supersession-contradiction-knowledge-graph-reconciliation.md) is **COMPLETE — PASS**.
+
+017-B corrected stale current-authority lifecycle/handoff wording, removed obsolete Phase-015→016 handoffs from current family indexes, reconciled Dependence and synchronization owners to present-tense ownership, confirmed deprecated adapters remain historical only, and verified the 016-F exceptional-closeout repair is represented in current natural owners.
+
+No substantive semantic reopen was required.
