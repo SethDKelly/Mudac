@@ -170,7 +170,7 @@ Residual closure establishes:
 - no corrective `INT-F*` finding was opened;
 - no Phase-010–014 semantic reopen or repair is required;
 - no repair-driven Phase-015 re-audit was necessary;
-- the structural integrity register is closed pending 015-K exit review;
+- the structural integrity register is closed;
 - fourteen risk-weighted `SVT-*` scenario seeds are prepared for 016-A refinement;
 - no known structural contradiction is being deferred to Phase 016.
 
