@@ -169,7 +169,7 @@ These remain capture/channel profiles over the same semantic product variant.
 
 ## No-Division rank-derived recognition
 
-**Deferred / not adopted.** Current Rank is Division-scoped; future adoption requires Rank/Ranking Readiness/Award generalization.
+**Future-scope candidate / not adopted.** Current Rank is Division-scoped; future adoption requires Rank/Ranking Readiness/Award generalization. This is not unfinished PF-01 work.
 
 # Product-versus-state rule
 
