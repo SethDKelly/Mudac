@@ -103,7 +103,8 @@ Phase 017 IN PROGRESS
 017-C COMPLETE — PASS
 017-D COMPLETE — PASS
 017-E COMPLETE — PASS
-017-F NEXT
+017-F COMPLETE — PASS
+017-G NEXT
 ```
 
 Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Current synchronization semantics remain composition authority. No Phase-015 material integrity finding required a synchronization correction; Phase-016 scenarios may reopen an owner only if a genuine misfit is discovered.
