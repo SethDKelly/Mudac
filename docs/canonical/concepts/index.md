@@ -166,10 +166,11 @@ Phase 014 COMPLETE — PASS
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017 IN PROGRESS
 017-A COMPLETE — READY
-017-B IN PROGRESS
+017-B COMPLETE — PASS
+017-C NEXT
 ```
 
-Current closure work: **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
+Current closure work: **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
 
 
 
