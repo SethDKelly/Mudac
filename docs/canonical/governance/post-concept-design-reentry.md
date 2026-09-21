@@ -41,20 +41,23 @@ It does not select:
 
 # Activation condition
 
-This contract becomes the governing downstream re-entry boundary only after the final Phase-017 closure decision successfully closes Concept Design.
+Phase 017 has successfully closed Concept Design with **PASS WITH BOUNDED CARRY-FORWARD**.
 
-Until then:
+This contract is therefore now the governing downstream re-entry boundary.
+
+Current state:
 
 ~~~text
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
-implementation execution      NOT STARTED
-implementation authorization  NOT YET
+Concept Design                     CLOSED
+implementation readiness           READY
+historical architecture candidates SUSPENDED / QUARANTINED
+accepted new architecture          NOT ESTABLISHED
+post-closure re-entry              AUTHORIZED
+implementation execution           NOT STARTED
+implementation execution auth      NOT GRANTED
 ~~~
 
-A successful Phase-017 closure may make the design ready for downstream preparation/re-entry.
-
-It does not itself authorize implementation execution.
+Readiness authorizes post-closure preparation/re-entry only. It does not authorize implementation execution.
 
 # Governing direction
 
@@ -393,15 +396,10 @@ If downstream engineering exposes a real product-semantic contradiction:
 
 Engineering difficulty alone is not evidence that Concept Design is wrong.
 
-# Current Phase-017 posture
+# Current post-closure posture
 
-017-F may establish this handoff contract and audit quarantined material.
+017-H has activated this handoff contract.
 
-Until 017-H successfully closes Concept Design:
+The next authorized lifecycle step is a Phase 018 post-closure start gate for repository/pre-implementation audit, agentic-development preparation, and architecture/engineering re-entry planning.
 
-~~~text
-architecture authority        SUSPENDED
-implementation readiness      NOT READY
-implementation execution      NOT STARTED
-implementation authorization  NOT YET
-~~~
+No historical architecture is accepted merely by activation of this contract, and no implementation execution authority is granted.
