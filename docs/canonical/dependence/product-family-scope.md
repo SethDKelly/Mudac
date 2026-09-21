@@ -218,7 +218,7 @@ Representative challenges resolved without scope change include:
 - exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
 - paper capture without universal Export dependence.
 
-Phase 013 mapping, Phase 014 familiarity/genericity refinement, Phase 015 whole-system integrity analysis, and Phase 016 scenario/misfit validation are complete. PF-01 remains the sole adopted variant entering Phase 017 methodology closure.
+Phase 013 mapping, Phase 014 familiarity/genericity refinement, Phase 015 whole-system integrity analysis, Phase 016 scenario/misfit validation, and Phase 017 methodology closure are complete. PF-01 remains the sole adopted current variant after Concept Design closure.
 
 # Future variant revalidation routes
 
@@ -250,6 +250,6 @@ Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping o
 
 # Methodology status routing
 
-Current methodology status and closure evidence are routed through [docs/index.md](../../index.md) and the active [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+Final Concept Design closure evidence is routed through [docs/index.md](../../index.md) and [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
 
 PF-01 remains the sole adopted variant unless future evidence triggers explicit dependence change governance.
