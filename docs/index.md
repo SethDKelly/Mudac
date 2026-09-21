@@ -24,7 +24,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
 * [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — **complete — PASS WITH CARRY-FORWARD**.
-* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **in progress; 016-G complete — PASS; 016-H next**.
+* [Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) — **in progress; 016-H complete — PASS; 016-I next**.
 
 # Current phase
 
@@ -34,7 +34,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 
 [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) is **COMPLETE — PASS WITH CARRY-FORWARD**.
 
-[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **IN PROGRESS — 016-G COMPLETE — PASS; 016-H NEXT**.
+[Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/) is **IN PROGRESS — 016-H COMPLETE — PASS; 016-I NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -165,7 +165,8 @@ Identity != Participation != Access
 016-E: COMPLETE — PASS
 016-F: COMPLETE — PASS AFTER REPAIR
 016-G: COMPLETE — PASS
-016-H: NEXT
+016-H: COMPLETE — PASS
+016-I: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -196,6 +197,6 @@ Phase 015 is complete. Phase 016 may validate representative and adversarial sce
 013 mapping/representation       COMPLETE — PASS
 014 familiarity/reuse/genericity COMPLETE — PASS
 015 integrity/interference       COMPLETE — PASS WITH CARRY-FORWARD
-016 scenario/misfit/adversarial  IN PROGRESS — 016-G COMPLETE; 016-H NEXT
+016 scenario/misfit/adversarial  IN PROGRESS — 016-H COMPLETE; 016-I NEXT
 017 methodology closure
 ```
