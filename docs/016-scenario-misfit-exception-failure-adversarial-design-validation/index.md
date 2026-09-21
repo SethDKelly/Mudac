@@ -47,7 +47,7 @@ implementation authorization NOT YET
 
 016-F discovered one material composition misfit, repaired it in the natural current owners, and revalidated it successfully. No material Phase-016 misfit remains open. 016-G through 016-I required no additional semantic repair. 016-J closes the residual register with 14/14 SVTs and 12/12 hypotheses dispositioned, 47 boundary clarifications consolidated, and eight Phase-017 closure targets prepared.
 
-Boundary clarifications remain phase evidence for 016-J reconciliation; they are not silent canonical semantic changes.
+The 47 boundary clarifications were consolidated in 016-J as validated interpretation/discoverability evidence; they are not silent canonical semantic changes. Phase 017 owns final current-authority discoverability reconciliation.
 
 ## Next
 
