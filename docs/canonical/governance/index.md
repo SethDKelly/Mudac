@@ -24,7 +24,7 @@ Jackson Concept Design: IN PROGRESS
 012: COMPLETE — PASS
 013: COMPLETE — PASS
 014: COMPLETE — PASS
-015: IN PROGRESS
+015: COMPLETE — PASS WITH CARRY-FORWARD
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
@@ -35,7 +35,8 @@ Jackson Concept Design: IN PROGRESS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016-A: NEXT — START GATE
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -57,7 +58,8 @@ Phase 014 COMPLETE — PASS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
 015-J COMPLETE — PASS
-015-K NEXT
+015-K COMPLETE — PASS WITH CARRY-FORWARD
+016-A NEXT — START GATE
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -101,4 +103,11 @@ shared parameter != base class
 
 ## Current handoff
 
-Proceed to **015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff**.
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
+
+
+## Phase 015 exit / Phase 016 handoff
+
+Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
+
+Proceed to **016-A — Validation Scope, Misfit Hypotheses, Risk Coverage & Subphase Planning**.
