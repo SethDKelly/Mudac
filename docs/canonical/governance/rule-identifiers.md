@@ -116,6 +116,19 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [OPG-004 — Acknowledgement, Suppression, and Presentation State Are Not Resolution](../policies/operational-exception-governance.md#opg-004)
 * [OPG-005 — Technical Emergency Capability Does Not Create Policy Authority](../policies/operational-exception-governance.md#opg-005)
 
+# Suspended downstream rule-ID partition
+
+The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
+
+Registry presence means only that an ID remains stable and resolvable. It does **not** mean:
+
+- the architecture/implementation rule is current accepted authority;
+- the referenced technology/topology has been adopted after Concept Design closure;
+- a successful Phase-017 closure automatically reactivates the rule;
+- downstream rules may constrain current Concept Design.
+
+Any later architecture/engineering re-entry must explicitly adopt, revise, replace, or retire these candidates under [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md).
+
 # Architecture foundation
 
 * [ARCH-001 — Upstream Canonical Semantics Constrain Architecture](../architecture/architectural-foundation.md#arch-001)
@@ -287,6 +300,10 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [IMPL-014 — Merge Does Not Imply Production Deployment Authority](../implementation/implementation-foundation.md#impl-014)
 * [IMPL-015 — Material Implementation Decisions Are Recorded Without Becoming Upstream Redesign](../implementation/implementation-foundation.md#impl-015)
 * [IMPL-016 — Phase 006 Subgroup Completion Requires Implementation and Evidence Closure](../implementation/implementation-foundation.md#impl-016)
+
+# Active governance rule IDs resume here
+
+The downstream candidate partition ends above. The governance IDs below remain current repository/documentation authority.
 
 # Documentation authority
 
