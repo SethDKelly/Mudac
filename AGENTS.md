@@ -38,8 +38,8 @@ The current product family remains:
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017  IN PROGRESS
-017-A..F   COMPLETE — PASS/READY as recorded by Phase 017
-017-G      IN PROGRESS
+017-A..G   COMPLETE — PASS/READY as recorded by Phase 017
+017-H      NEXT
 
 architecture authority        SUSPENDED
 implementation readiness      NOT READY
@@ -49,7 +49,7 @@ implementation authorization  NOT YET
 
 The active work is:
 
-> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
+> **017-H — Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff**
 
 ## Retrieval discipline
 
