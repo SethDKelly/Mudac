@@ -7,11 +7,11 @@ Reference documents identify the external authority/version where material, why 
 # Current references
 
 * [Open Knowledge Format v0.2](open-knowledge-format.md) - pinned OKF specification reference and MUDAC adoption boundary for bundle structure, provenance, trust, lifecycle, freshness, and actor conventions.
+* [Daniel Jackson Concept Design](daniel-jackson-concept-design.md) - pinned methodology reference and MUDAC adoption boundary for Concept Design versus repository-specific lifecycle operationalization.
 
 # Expected later references
 
-* Daniel Jackson Concept Design
-* WCAG 2.2
+* WCAG 2.2 when/if a specific adoption profile is made explicit
 * future AWS, security, and platform standards where materially adopted
 
 A newer external release does not silently change a MUDAC adoption profile. Adoption/version changes occur through explicit review and canonical governance.
