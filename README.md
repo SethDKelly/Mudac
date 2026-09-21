@@ -18,8 +18,8 @@ Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
 ```text
 Jackson Concept Design        IN PROGRESS — PHASE 017
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
-017-A..F                      COMPLETE
-017-G                         IN PROGRESS
+017-A..G                      COMPLETE
+017-H                         NEXT
 
 architecture authority        SUSPENDED
 implementation readiness      NOT READY
