@@ -57,6 +57,20 @@ The canonical knowledge tree organizes retrieval and authority. It does not requ
 
 Implementation structure is a downstream architecture decision constrained by canonical meaning, not derived mechanically from folder layout.
 
+<a id="doc-007"></a>
+## DOC-007 — Methodology status is routed, not replicated through category indexes
+
+The preferred current methodology-status surfaces are:
+
+1. `docs/index.md` for compact bundle-level posture; and
+2. the active numbered phase `index.md` / `README.md` for subphase detail.
+
+Canonical category indexes should remain stable routers to current semantic owners and should not copy full phase timelines, historical handoffs, or repeated closure narratives.
+
+Root `README.md` and `AGENTS.md` may carry a compact current-status summary for entry convenience, but remain subordinate routing adapters under DOC-005.
+
+This rule reduces status drift without removing historical phase evidence.
+
 # Human instruction
 
 An explicit human request may intentionally change MUDAC design. That request authorizes the change workflow; it does not make a downstream file authoritative without updating the canonical owner and lineage.
