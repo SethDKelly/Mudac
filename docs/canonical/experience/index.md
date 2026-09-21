@@ -41,7 +41,9 @@ Phase 014 COMPLETE — PASS
 016-J COMPLETE — PASS
 016-K COMPLETE — PASS
 Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-Phase 017 NOT STARTED — START GATE NEXT
+Phase 017 IN PROGRESS
+017-A COMPLETE — READY
+017-B NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -92,9 +94,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **NOT STARTED — START GATE NEXT**.
+Phase 016 is **COMPLETE — PASS WITH CLOSURE HANDOFF**. Phase 017 is **IN PROGRESS — 017-A COMPLETE — READY; 017-B NEXT**.
 
-Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 ## Phase 015 handoff
 
@@ -105,7 +107,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **Phase 017 Start Gate — Methodology Closure Authority, Canonical Baseline, Closure Evidence & Subphase Planning**.
+Proceed to **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**.
 
 
 ## Phase-016 officiality mapping correction
