@@ -265,3 +265,30 @@ Outcome Declaration != Export != Publication != delivery
 successor declaration != automatic successor representation/release
 Affected official basis != automatic Publication withdrawal
 ```
+
+
+# Exceptional official outcome mapping
+
+A policy-authorized **Exceptional Closeout Disposition** may support official closeout when no ordinary ranked result can legitimately exist for an identified scope.
+
+The user-visible semantics must distinguish three materially different conditions:
+
+```text
+ordinary ranked result
+  != official exceptional no-result outcome
+  != unknown / unresolved result
+```
+
+An exceptional closeout representation should make clear enough that:
+
+- the Competition is being Finalized;
+- the preserved evidence/Coverage condition does not support an ordinary ranked result for the identified scope;
+- the exceptional disposition is authorized and attributable;
+- no winner, Rank, or rank-derived Award is being fabricated;
+- the exceptional OutcomeBasis will become explicit official authority;
+- unaffected result scopes or Awards, if any, remain separately identified;
+- officiality still does not imply Publication.
+
+A pending, uncertain, stale, or ambiguously confirmed result must never be shown as an official exceptional outcome. The application must first establish the policy-authorized exceptional disposition or resolve the ordinary outcome.
+
+The existing **Finalize Competition & Declare Outcome** action therefore has two semantically valid closeout modes: ordinary resolved closeout and explicitly authorized exceptional no-result closeout. The experience may present these differently, but both preserve the same Competition/Outcome Declaration owner boundary.
