@@ -53,9 +53,9 @@ Possession of a URL, QR code, file, or transport reference is not itself Publica
 
 # MUDAC composition binding
 
-MUDAC normally supplies an [Export](export.md) as the Representation. Whether all MUDAC product variants containing Publication must also contain Export is an inclusion-dependence question for Phase 012, not intrinsic Publication semantics.
+Within the current MUDAC application family, [Publication](publication.md) directly depends on [Export](export.md) as its stable representation owner. [Export](export.md) may exist without Publication; Publication without Export is not a coherent MUDAC subset. This is extrinsic MUDAC dependence, not intrinsic Publication semantics.
 
-Current Phase 011 composition is [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md).
+Current MUDAC composition is [External Representation, Currency & Publication Release Composition](../synchronizations/external-representation-publication-release.md), and current inclusion dependence is owned by [Application-Family Concept Dependence](../dependence/application-family-dependence.md).
 
 # Boundaries
 
