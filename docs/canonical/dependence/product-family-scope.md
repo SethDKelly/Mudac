@@ -218,7 +218,7 @@ Representative challenges resolved without scope change include:
 - exceptional/no-result Outcome Declaration without fixed Team/evaluation-source direct dependencies;
 - paper capture without universal Export dependence.
 
-Phase 013 mapping, Phase 014 familiarity/genericity refinement, and Phase 015 whole-system integrity analysis are complete. PF-01 remains the sole adopted variant entering Phase 016 scenario/misfit validation.
+Phase 013 mapping, Phase 014 familiarity/genericity refinement, Phase 015 whole-system integrity analysis, and Phase 016 scenario/misfit validation are complete. PF-01 remains the sole adopted variant entering Phase 017 methodology closure.
 
 # Future variant revalidation routes
 
@@ -248,25 +248,17 @@ Revisit P-02/P-08 and anonymity/disclosure policy before composition.
 
 Revalidate Rank scope, Ranking Readiness, Award composition, and later mapping of ranking context.
 
-# Current methodology handoff
+# Current methodology state
 
 ```text
 Phase 012 COMPLETE — PASS
 Phase 013 COMPLETE — PASS
 Phase 014 COMPLETE — PASS
 Phase 015 COMPLETE — PASS WITH CARRY-FORWARD
-015-A COMPLETE — READY
-015-B COMPLETE — PASS
-015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K COMPLETE — PASS WITH CARRY-FORWARD
-016-A NEXT — START GATE
+Phase 016 COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017 IN PROGRESS
+017-A COMPLETE — READY
+017-B CURRENT
 ```
 
-Phase 016 must preserve PF-01 as the sole adopted product variant unless scenario validation discovers a genuine scope/variant misfit that warrants reopening the natural dependence owner.
+Phase 016 discovered no PF-01 scope/variant misfit. PF-01 therefore remains the sole adopted product variant during Phase 017 unless closure evidence discovers a genuine scope defect requiring a dependence reopen.
