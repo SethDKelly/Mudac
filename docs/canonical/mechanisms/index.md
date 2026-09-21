@@ -55,10 +55,11 @@ The [Reusable Concept Knowledge & Design Patterns](../project/reusable-design-kn
 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
-017-C NEXT
+017-C COMPLETE — PASS
+017-D NEXT
 ```
 
-Current closure work: **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
+Current closure work: **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
 
 
 
