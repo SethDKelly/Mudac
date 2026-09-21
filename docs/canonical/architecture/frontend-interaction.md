@@ -19,6 +19,17 @@ sources:
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T05:18:00Z }
 ---
 
+# Authority notice — suspended downstream candidate
+
+This document is preserved **pre-Phase-009 downstream candidate knowledge**. It is not current Concept Design authority and it is not automatically reactivated by a successful Phase-017 closure.
+
+The frontmatter value `status: stable` means this preserved document snapshot is stable for historical/candidate reference; it does **not** mean the architecture/implementation choice is currently accepted.
+
+Any post-closure downstream process must revalidate this document against the closed current owners for Concepts, synchronizations/application actions, PF-01 scope, Experience mapping, invariants, policies, limitations and realization obligations. Where this document uses superseded names, old module boundaries, old phase gates, or concrete technology choices, current Concept Design wins.
+
+Concrete choices below—including module/service topology, persistence family, API/concurrency model, frontend/runtime structure, AWS services, or other physical realization—remain hypotheses until a separate architecture re-entry explicitly adopts, revises or rejects them.
+
+
 # Purpose
 
 Define how the browser realizes MUDAC navigation, state, recovery, component, accessibility, and responsive interaction semantics without becoming a second source of authority.
