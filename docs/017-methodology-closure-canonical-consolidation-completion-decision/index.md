@@ -1,6 +1,6 @@
 # Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision
 
-Phase 017 is **IN PROGRESS — 017-G COMPLETE — PASS; 017-H NEXT**.
+Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED**.
 
 ## Entry authority
 
@@ -18,12 +18,13 @@ Phase 017 is **IN PROGRESS — 017-G COMPLETE — PASS; 017-H NEXT**.
 - [017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit](017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md) — **Complete — PASS**.
 - [017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit](017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md) — **Complete — PASS**.
 - [017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation](017-G-documentation-authority-okf-progressive-disclosure-closure-evidence-integrity-reconciliation.md) — **Complete — PASS**.
+- [017-H — Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff](017-H-concept-design-closure-decision-readiness-transition-post-closure-handoff.md) — **Complete — PASS WITH BOUNDED CARRY-FORWARD**.
 
 ## Current boundary
 
 ```text
 016 COMPLETE — PASS WITH CLOSURE HANDOFF
-017 IN PROGRESS
+017 COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
 017-C COMPLETE — PASS
@@ -31,14 +32,18 @@ Phase 017 is **IN PROGRESS — 017-G COMPLETE — PASS; 017-H NEXT**.
 017-E COMPLETE — PASS
 017-F COMPLETE — PASS
 017-G COMPLETE — PASS
-017-H NEXT
+017-H COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
 
-architecture / implementation SUSPENDED
-implementation readiness NOT READY
+historical architecture candidates SUSPENDED / QUARANTINED
+accepted new architecture NOT ESTABLISHED
+post-closure preparation/re-entry AUTHORIZED
+implementation readiness READY
 implementation execution NOT STARTED
-implementation authorization NOT YET
+implementation execution authorization NOT GRANTED
 ```
 
-## Next
+## Post-closure handoff
 
-> **017-H — Concept-Design Closure Decision, Readiness Transition & Post-Closure Handoff**
+> **Phase 018 Start Gate — Pre-Implementation Audit, OKF/Repository Hardening, Agentic Development Preparation & Architecture/Engineering Re-entry Planning**
+
+No feature implementation is authorized by Phase 017.
