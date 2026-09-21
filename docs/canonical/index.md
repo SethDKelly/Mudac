@@ -45,7 +45,8 @@ Jackson Concept Design: IN PROGRESS
 017-B: COMPLETE — PASS
 017-C: COMPLETE — PASS
 017-D: COMPLETE — PASS
-017-E: NEXT
+017-E: COMPLETE — PASS
+017-F: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -116,7 +117,7 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit**.
+Proceed to **017-F — Implementation-Contamination, Downstream Realization Obligations & Architecture-Neutral Handoff Audit**.
 
 
 # Phase-017 start-gate authority
@@ -137,3 +138,8 @@ Proceed to **017-E — Lifecycle-Wide Methodology Completeness, Validation Evide
 # Phase-017 boundary / open-item closure
 
 [017-D](../017-methodology-closure-canonical-consolidation-completion-decision/017-D-boundary-clarification-open-item-limitation-uncertainty-terminology-closure.md) is **COMPLETE — PASS**. All 47 Phase-016 clarifications are current-owner discoverable; six compatible wording refinements were completed; no semantic blocker, unclassified open item, limitation, uncertainty or terminology residue remains.
+
+
+# Phase-017 lifecycle-methodology closure
+
+[017-E](../017-methodology-closure-canonical-consolidation-completion-decision/017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md) is **COMPLETE — PASS**. Base/Jackson concerns 000–010 are complete for the current design; later repair families have no open propagation gap and require no earlier substantive phase reopen. Final closure-process audits remain 017-F through 017-H.
