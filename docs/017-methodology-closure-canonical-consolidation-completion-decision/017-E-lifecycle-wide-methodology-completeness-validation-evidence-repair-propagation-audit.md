@@ -1,4 +1,3 @@
-
 ---
 type: Lifecycle Methodology Completeness Audit
 title: 017-E — Lifecycle-Wide Methodology Completeness, Validation Evidence & Repair-Propagation Audit
