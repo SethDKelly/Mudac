@@ -6,7 +6,7 @@ The repository is the durable design authority; conversation history is working 
 
 Start at [index.md](index.md), the OKF v0.2 bundle root. Current conceptual product meaning lives under [Canonical Knowledge](canonical/). Root [`AGENTS.md`](../AGENTS.md) is the bootstrap adapter.
 
-Current foundational truth includes Project Context/Purpose/Vocabulary, the eighteen current Concepts, current Synchronizations, Dependence/PF-01 scope, the final Phase-013 Mapping Authority Baseline, completed Phase 014 refinement authority, and active Phase-015 integrity authority.
+Current foundational truth includes Project Context/Purpose/Vocabulary, the eighteen current Concepts, current Synchronizations, Dependence/PF-01 scope, the final Phase-013 Mapping Authority Baseline, completed Phase-014 refinement authority, and completed Phase-015 whole-system integrity authority.
 
 For cross-catalog naming and familiar-language questions, use [MUDAC Domain Vocabulary & Expectation-Transfer Rules](canonical/project/domain-vocabulary-expectation-transfer.md). For cross-context reuse/candidate lessons, use [Reusable Concept Knowledge & Design Patterns](canonical/project/reusable-design-knowledge.md) without treating it as a substitute Concept specification.
 
@@ -18,19 +18,12 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 * Phase 012 — Concept Dependence / Product-Family / Subset Scope: **Complete — PASS**
 * Phase 013 — Concept Mapping / Interaction Semantics / User-Visible Representation: **Complete — PASS**
 * Phase 014 — Familiarity, Reuse & Genericity: **Complete — PASS**
-* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **In progress — 015-A ready; 015-B pass; 015-C pass, 015-D pass, 015-E pass, 015-F pass, 015-G pass, 015-H pass, 015-I pass, 015-J pass, 015-K next**
+* Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference: **Complete — PASS WITH CARRY-FORWARD**
+* Phase 016 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation: **Not started — 016-A start gate next**
 
 ```text
-014-A: COMPLETE — READY
-014-B: COMPLETE — PASS
-014-C: COMPLETE — PASS
-014-D: COMPLETE — PASS
-014-E: COMPLETE — PASS
-014-F: COMPLETE — PASS
-014-G: COMPLETE — PASS
-014-H: COMPLETE — PASS
-014-I: COMPLETE — PASS
-014-J: COMPLETE — PASS
+014: COMPLETE — PASS
+015: COMPLETE — PASS WITH CARRY-FORWARD
 015-A: COMPLETE — READY
 015-B: COMPLETE — PASS
 015-C: COMPLETE — PASS
@@ -41,7 +34,9 @@ For cross-catalog naming and familiar-language questions, use [MUDAC Domain Voca
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
-015-K: NEXT
+015-K: COMPLETE — PASS WITH CARRY-FORWARD
+016: NOT STARTED
+016-A: NEXT — START GATE
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -84,15 +79,12 @@ No external/universal catalog is created by Phase 014, and no Phase-010/011/012/
 012 dependence / product-family / scope        COMPLETE — PASS
 013 mapping / representation                   COMPLETE — PASS
 014 familiarity / reuse / genericity           COMPLETE — PASS
-015 integrity / interference                   IN PROGRESS — 015-C COMPLETE — PASS
-015-D COMPLETE — PASS
-015-E COMPLETE — PASS
-015-F COMPLETE — PASS
-015-G COMPLETE — PASS
-015-H COMPLETE — PASS
-015-I COMPLETE — PASS
-015-J COMPLETE — PASS
-015-K NEXT
-016 scenario / misfit / failure / adversarial
+015 integrity / interference                   COMPLETE — PASS WITH CARRY-FORWARD
+016 scenario / misfit / failure / adversarial  NOT STARTED — 016-A START GATE NEXT
 017 methodology closure
 ```
+
+
+## Phase-015 exit posture
+
+[015-K](015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md) closes Phase 015 **COMPLETE — PASS WITH CARRY-FORWARD**. The carry-forward consists only of fourteen scenario-dependent validation seeds for [Phase 016](016-scenario-misfit-exception-failure-adversarial-design-validation/README.md); no structural contradiction or semantic repair remains open.
