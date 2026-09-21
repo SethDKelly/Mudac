@@ -1,7 +1,7 @@
 ---
 type: Canonical Project Context
 title: MUDAC Project Mandate & Current Context
-description: "Current representation-independent project/intake baseline for MUDAC: mandate, actors, scope, constraints, assumptions, converged Concept context, and remaining design questions."
+description: "Current representation-independent project/intake baseline for MUDAC: mandate, actors, scope, constraints, assumptions, converged Concept context, and bounded closure/downstream questions."
 status: stable
 tags: [canonical, project, context, mandate, actors, scope, constraints]
 sources:
@@ -134,20 +134,18 @@ The existing Node/TypeScript/Fastify/React/PostgreSQL/OpenTofu bootstrap remains
 - Controlled external release remains in the capability boundary; a rich public portal does not.
 - Formal scheduling may remain external/lightweight unless later scope/dependence work proves it necessary.
 
-# Open questions after 010-H
+# Current unresolved / downstream questions
 
-Concept modularity is now canonically converged. Remaining design questions include:
+Concept modularity, synchronization, dependence/PF-01 scope, mapping, familiarity/genericity, whole-system integrity and mature scenario validation are complete through Phase 016.
 
-- complete synchronization trigger/precondition/postcondition/authority semantics across the eighteen Concepts — Phase 011;
-- inclusion-dependence, minimal coherent subsets, contraction/extension, and product-family variants — Phase 012;
-- interaction/mapping/representation revalidation — Phase 013;
-- broader familiarity/reuse/catalog refinement — Phase 014;
-- integrity/interference — Phase 015;
-- late scenario/misfit/failure/adversarial validation — Phase 016;
-- methodology closure — Phase 017;
-- detailed evaluation, ranking, tie, Award and disclosure policies where still intentionally configurable;
-- exact retention/regulatory requirements not currently evidenced;
-- downstream architecture and implementation realization only after successful design closure/re-entry.
+Current unresolved or intentionally downstream questions are limited to:
+
+- Phase 017 methodology closure over canonical coherence, traceability, open-item disposition and readiness;
+- detailed evaluation, ranking, tie, Award and disclosure policy choices where intentionally configurable by a Competition rather than fixed by Concept identity;
+- exact retention/regulatory requirements not currently evidenced and therefore not claimed as settled design authority;
+- downstream representation/architecture/engineering realization only after successful Concept Design closure and an explicit post-closure re-entry process.
+
+These are not evidence that earlier completed methodology work remains open.
 
 # Current handoff
 
