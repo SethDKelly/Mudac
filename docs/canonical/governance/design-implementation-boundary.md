@@ -36,7 +36,7 @@ Keep the boundary between reopened Jackson Concept Design, historical downstream
 
 # Current state
 
-Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **NOT STARTED — 016-A START GATE NEXT**.
+Phases 009–014 are **COMPLETE — PASS**. Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. Phase 016 is **IN PROGRESS — 016-D COMPLETE — PASS; 016-E NEXT**.
 
 ```text
 Jackson Concept Design methodology: IN PROGRESS
@@ -74,8 +74,12 @@ implementation authorization: NOT YET
 015-I: COMPLETE — PASS
 015-J: COMPLETE — PASS
 015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: NOT STARTED
-016-A: NEXT — START GATE
+016: IN PROGRESS
+016-A: COMPLETE — PASS
+016-B: COMPLETE — PASS
+016-C: COMPLETE — PASS
+016-D: COMPLETE — PASS
+016-E: NEXT
 production readiness: NOT ESTABLISHED
 ```
 
@@ -175,6 +179,8 @@ The 014-C Event Completed/Access defect is repaired in the current Phase-011 syn
 015-B establishes a phase-evidence register of all eighteen Concept purpose promises and 48 directional `DIR-*` interference probes. Those probes do not alter current semantics and are not themselves violations. Material `INT-F*` findings begin only when later cluster audits establish an actual purpose-preservation concern.
 
 Phase 015 audits **purpose preservation under composition**.
+
+Phase 016 now performs mature conceptual scenario/misfit validation. Through 016-D, no scenario has required a semantic reopen or repair. Boundary clarifications remain Phase-016 evidence pending 016-J reconciliation. Architecture and implementation authority remain suspended.
 
 ```text
 integrity finding
