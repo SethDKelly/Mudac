@@ -36,7 +36,8 @@ Current downstream conceptual authority is routed through:
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
-015-E NEXT
+015-E COMPLETE — PASS
+015-F NEXT
 014-A COMPLETE — READY
 014-B COMPLETE — PASS
 014-C COMPLETE — PASS
@@ -52,7 +53,8 @@ Phase 014 COMPLETE — PASS
 015-B COMPLETE — PASS
 015-C COMPLETE — PASS
 015-D COMPLETE — PASS
-015-E NEXT
+015-E COMPLETE — PASS
+015-F NEXT
 architecture / implementation SUSPENDED
 ```
 
@@ -99,7 +101,7 @@ external shared catalog = not established here
 
 ## Current handoff
 
-Proceed to **015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity**.
+Proceed to **015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity**.
 
 ## Phase 015 handoff
 
