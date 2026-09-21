@@ -33,7 +33,8 @@ Jackson Concept Design: IN PROGRESS
 015-D: COMPLETE — PASS
 015-E: COMPLETE — PASS
 015-F: COMPLETE — PASS
-015-G: NEXT
+015-G: COMPLETE — PASS
+015-H: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -50,7 +51,8 @@ Jackson Concept Design: IN PROGRESS
 015-D: COMPLETE — PASS
 015-E: COMPLETE — PASS
 015-F: COMPLETE — PASS
-015-G: NEXT
+015-G: COMPLETE — PASS
+015-H: NEXT
 architecture authority: SUSPENDED
 implementation-planning authority: SUSPENDED
 new domain implementation: NOT STARTED
@@ -113,4 +115,4 @@ Export currency != Publication state
 
 # Next
 
-Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
+Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
