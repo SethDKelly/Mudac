@@ -29,7 +29,8 @@ Jackson Concept Design: IN PROGRESS
 017 IN PROGRESS
 017-A COMPLETE — READY
 017-B COMPLETE — PASS
-017-C NEXT
+017-C COMPLETE — PASS
+017-D NEXT
 
 architecture: SUSPENDED PENDING DESIGN CLOSURE
 implementation planning: SUSPENDED
@@ -74,7 +75,7 @@ shared parameter != base class
 
 ## Current handoff
 
-Current closure work: **017-C — Methodology-Chain Traceability, Purpose Fulfillment & Orphan/Unexplained-Element Audit**.
+Current closure work: **017-D — Boundary Clarification, Open Item, Limitation, Uncertainty & Terminology Closure**.
 
 
 
