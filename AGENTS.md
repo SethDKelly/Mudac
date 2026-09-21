@@ -1,150 +1,63 @@
 # MUDAC Repository Agent Rules
 
-This file is a bootstrap adapter. Current authority lives under [`docs/`](docs/), especially canonical conceptual/governance owners and the active methodology phase.
+This file is a **bootstrap adapter**, not product/design authority.
 
 ## Required start
 
-1. Start at [`docs/index.md`](docs/index.md).
-2. Read [`Design / Implementation Boundary`](docs/canonical/governance/design-implementation-boundary.md).
-3. Read current [Project](docs/canonical/project/), [Concepts](docs/canonical/concepts/), [Synchronizations](docs/canonical/synchronizations/) and [Dependence](docs/canonical/dependence/).
-4. Read [MUDAC Domain Vocabulary & Expectation-Transfer Rules](docs/canonical/project/domain-vocabulary-expectation-transfer.md) before introducing familiar cross-domain labels or generic actions/statuses.
-5. Use [Reusable Concept Knowledge & Design Patterns](docs/canonical/project/reusable-design-knowledge.md) only for cross-context reuse/candidate lessons; never treat it as a substitute Concept specification or architecture mandate.
-6. Use [MUDAC Product-Family Scope](docs/canonical/dependence/product-family-scope.md) for PF-01.
-7. Read the final [Phase 013 Mapping Authority Baseline](docs/canonical/experience/mapping-authority-baseline.md) and relevant current Experience owners.
-8. Read the completed [Phase-016 exit review](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md) and [016-J closure-target preparation](docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-J-residual-misfit-register-reopen-repair-revalidation-phase-017-closure-target-preparation.md).
-9. Use the active [Phase 017 — Methodology Closure, Canonical Consolidation & Completion Decision](docs/017-methodology-closure-canonical-consolidation-completion-decision/README.md) for closure work. 017-A is complete; 017-B is next.
-10. Treat detailed Phase-014/015/016 records and historical adapters as evidence only unless a current canonical owner explicitly says otherwise.
-11. Do not preload architecture/implementation except for explicit contamination/history analysis.
+1. Start at [docs/index.md](docs/index.md).
+2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
+3. For active methodology work, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/).
+4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
+5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
+
+Do **not** recursively preload all canonical categories or numbered phases. Follow [Agent Context & Progressive Retrieval](docs/canonical/governance/agent-context.md).
+
+## Current authority model
+
+```text
+current product meaning
+  → canonical Project / Concepts / Synchronizations / Dependence /
+    Experience / Mechanisms / Policies / Invariants
+
+documentation / change / retrieval authority
+  → canonical Governance
+
+historical numbered phases
+  → evidence / provenance
+
+architecture + implementation corpus
+  → suspended downstream candidates until explicit post-closure re-entry
+```
+
+The current product family remains:
+
+> **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
 ## Current methodology posture
 
 ```text
-009: COMPLETE — PASS
-010: COMPLETE — PASS
-011: COMPLETE — PASS
-012: COMPLETE — PASS
-013: COMPLETE — PASS
-014: COMPLETE — PASS
-015: COMPLETE — PASS WITH CARRY-FORWARD
-015-A: COMPLETE — READY
-015-B: COMPLETE — PASS
-015-C: COMPLETE — PASS
-015-D: COMPLETE — PASS
-015-E: COMPLETE — PASS
-015-F: COMPLETE — PASS
-015-G: COMPLETE — PASS
-015-H: COMPLETE — PASS
-015-I: COMPLETE — PASS
-015-J: COMPLETE — PASS
-015-K: COMPLETE — PASS WITH CARRY-FORWARD
-016: COMPLETE — PASS WITH CLOSURE HANDOFF
-017: IN PROGRESS
-017-A: COMPLETE — READY
-017-B: NEXT
-architecture authority: SUSPENDED
-implementation-planning authority: SUSPENDED
-new domain implementation: NOT STARTED
-implementation readiness: NOT READY
-implementation authorization: NOT YET
+Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
+Phase 017  IN PROGRESS
+017-A..F   COMPLETE — PASS/READY as recorded by Phase 017
+017-G      IN PROGRESS
+
+architecture authority        SUSPENDED
+implementation readiness      NOT READY
+implementation execution      NOT STARTED
+implementation authorization  NOT YET
 ```
 
-## Current Concept authority
+The active work is:
 
-The canonical catalog contains eighteen Concepts:
+> **017-G — Documentation Authority, OKF Progressive Disclosure & Closure-Evidence Integrity Reconciliation**
 
-Competition, Division, Team, Panel, Evaluation Occurrence, Evaluation Obligation, Rubric, Scorecard, Award, Identity, Participation, Alias, Access, Versioning, Provenance, Outcome Declaration, Export, and Publication.
+## Retrieval discipline
 
-`Judging Encounter` and `Official Outcome Revision` remain deprecated historical adapters.
+- Current semantic question → open the natural canonical owner.
+- Cross-owner terminology question → use [Domain Vocabulary & Expectation-Transfer Rules](docs/canonical/project/domain-vocabulary-expectation-transfer.md).
+- Product-family question → use [Product-Family Scope](docs/canonical/dependence/product-family-scope.md).
+- User-visible meaning → use [Experience](docs/canonical/experience/).
+- Historical rationale → follow the current owner's `sources` or the relevant numbered-phase index.
+- Architecture/implementation comparison → consult the quarantine and re-entry governance first.
 
-Coverage, Aggregate, Rank and Readiness remain derived mechanisms. Reconciliation and Live Operations remain work/process contexts rather than Concepts.
-
-## Phase-014 familiarity / genericity / reuse rules
-
-Only current MUDAC canonical semantics define MUDAC meaning. Familiar precedents and reusable-knowledge candidate status are supporting evidence.
-
-Do not infer semantic fit or safe generalization from name similarity, popularity, UI resemblance, implementation reuse, shared parameter names, shared status labels or predecessor/successor shape.
-
-```text
-Generic at the boundary; specific in purpose.
-shared parameter != shared purpose
-shared history shape != shared lifecycle
-implementation reuse != Concept identity
-catalog candidate != second Concept specification
-pattern candidate != new MUDAC Concept
-```
-
-014-G adopts one narrow genericity refinement: Team intrinsically represents a competing group/unit; PF-01 binds that Concept to student teams.
-
-014-H identifies broad concept-knowledge candidates:
-
-```text
-Identity
-Participation
-Alias
-Access
-Versioning
-Provenance
-Outcome Declaration
-Export
-Publication
-```
-
-and competition/evaluation-domain candidates:
-
-```text
-Competition
-Division
-Team
-Panel
-Evaluation Occurrence
-Evaluation Obligation
-Rubric
-Scorecard
-Award
-```
-
-This is a reuse registry only. Do not create a shared/universal catalog entry without additional cross-context evidence.
-
-## Accepted cross-catalog constraints
-
-Preserve at least:
-
-```text
-Identity != Participation != Access
-Panel membership != occurrence participation != responsibility != evidence
-Evaluation Occurrence != Evaluation Obligation != Scorecard
-Rubric definition != exact authoritative Evaluation Basis
-Scorecard Draft != authoritative judgment
-historical obligation satisfaction != current evidence eligibility
-Versioning != Provenance
-Rank / selection basis != Award recognition
-Competition Finalized != Outcome Declaration
-Outcome Declaration Affected != Superseded
-Outcome Declaration != Export != Publication != delivery
-Export currency != Publication state
-```
-
-## Reusable-pattern boundary
-
-Reusable pattern knowledge may include:
-
-```text
-scoped opaque-reference parameterization
-exact-basis binding
-explicit successor without silent historical rewrite
-actor vs represented authority vs source
-historical accomplishment vs current eligibility
-derivation → recognition → declaration
-source → representation → release → delivery
-context capability without authorship transfer
-```
-
-These patterns describe transferable design lessons. They do not authorize generic base classes, shared tables, workflow engines, universal status machines, correction services or other implementation abstractions.
-
-## Current next task
-
-Proceed to:
-
-> **017-B — Canonical Current-Truth, Supersession, Contradiction & Knowledge-Graph Reconciliation**
-
-Phase 017 is closure work only. Architecture and implementation remain quarantined unless the final closure decision explicitly changes readiness and hands off to a separate downstream process.
+Do not treat an index, README, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
