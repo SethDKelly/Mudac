@@ -25,7 +25,7 @@ Define current MUDAC composition from eligible authoritative evaluation evidence
 
 This contract is the current Phase 011-G owner for legacy synchronizations 11, 13 and 14, the derived-refresh portion of legacy 09, and the derived/Award/declaration consequences of legacy 12.
 
-Export/Publication consequences remain 011-H.
+Export/Publication consequences are owned by [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md).
 
 # Authority boundary
 
@@ -318,12 +318,14 @@ source correction
 
 These are semantic compositions, not runtime orchestration designs.
 
-# Deferred composition
+# Current adjacent ownership
 
-- Export/Publication/currentness/release → 011-H;
-- whole-application action surface/chaining/cycle/automation/synergy closure → 011-I;
-- inclusion/dependence/product-family questions → Phase 012;
-- user-visible interaction/presentation → Phase 013.
+- Export/Publication/currentness/release → [External Representation, Currency & Publication Release Composition](external-representation-publication-release.md);
+- whole-application action surface/chaining/automation → [Application Action Surface, Chaining & Automation Composition](application-action-surface-composition.md);
+- inclusion/dependence/product-family questions → [Dependence](../dependence/);
+- user-visible interaction/presentation → [Experience](../experience/).
+
+These are current owner boundaries, not deferred methodology work.
 
 
 # Exceptional no-ordinary-result closeout
