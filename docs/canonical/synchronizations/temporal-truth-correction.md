@@ -315,11 +315,11 @@ Rules:
 
 This is conceptual dependency propagation, not an event-bus/queue/transaction design.
 
-# Downstream handoff
+# Current downstream ownership
 
-Phase 011-F establishes **why** downstream currentness must change or be reconsidered. The owner-specific actions remain dependency-safe work:
+This owner establishes **why** downstream currentness must change or be reconsidered. Current owner-specific consequences are handled by:
 
-- Coverage/Aggregate/Rank, Award and Outcome Declaration → 011-G;
+- Coverage/Aggregate/Rank, Award and Outcome Declaration → [Evaluation Outcome, Award, Finalization & Declaration Composition](evaluation-outcome-finalization-declaration.md);
 - Export currency and Publication release/replacement → 011-H.
 
 In particular:
