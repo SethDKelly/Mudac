@@ -23,7 +23,7 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 * [Policies](canonical/policies/) — governing conceptual semantics.
 * [Invariants](canonical/invariants/) — cross-cutting constraints.
 * [Governance](canonical/governance/) — methodology and design/implementation boundary.
-* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — active methodology phase; 015-A ready, 015-B pass, 015-C pass, 015-D pass, 015-E pass, 015-F pass, 015-G pass, 015-H pass, 015-I pass, 015-J next.
+* [Phase 015 — Concept Integrity, Cross-Concept Coherence & Interference](015-concept-integrity-cross-concept-coherence-interference/) — active methodology phase; 015-A ready, 015-B pass, 015-C pass, 015-D pass, 015-E pass, 015-F pass, 015-G pass, 015-H pass, 015-I pass, 015-J pass, 015-K next.
 
 # Current phase
 
@@ -38,7 +38,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
-015-J NEXT**.
+015-J COMPLETE — PASS
+015-K NEXT**.
 
 ```text
 014-A  COMPLETE — READY
@@ -60,7 +61,8 @@ Current conceptual meaning lives under canonical knowledge. Numbered phase direc
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 ```
 
 # Current Phase-014 result
@@ -159,7 +161,8 @@ Identity != Participation != Access
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 014-A: COMPLETE — READY
 014-B: COMPLETE — PASS
 014-C: COMPLETE — PASS
@@ -179,7 +182,8 @@ Identity != Participation != Access
 015-G: COMPLETE — PASS
 015-H: COMPLETE — PASS
 015-I: COMPLETE — PASS
-015-J: NEXT
+015-J: COMPLETE — PASS
+015-K: NEXT
 architecture authority: SUSPENDED
 implementation planning: SUSPENDED
 new domain implementation: NOT STARTED
@@ -212,7 +216,8 @@ Phase 014 is complete. Phase 015 may audit whole-system Concept integrity and in
 015-G COMPLETE — PASS
 015-H COMPLETE — PASS
 015-I COMPLETE — PASS
-015-J NEXT
+015-J COMPLETE — PASS
+015-K NEXT
 016 scenario/misfit/failure/adversarial
 017 methodology closure
 ```
