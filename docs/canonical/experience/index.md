@@ -38,7 +38,8 @@ Phase 014 COMPLETE — PASS
 016-G COMPLETE — PASS
 016-H COMPLETE — PASS
 016-I COMPLETE — PASS
-016-J NEXT
+016-J COMPLETE — PASS
+016-K NEXT
 ```
 
 Phase 014 familiarity/reuse/genericity analysis must compare reuse claims against the actual mapped user-visible semantics established here rather than names, data shape or implementation reuse.
@@ -89,9 +90,9 @@ Team's 014-G intrinsic genericity refinement does not change PF-01 Judge/Organiz
 
 ## Current next work
 
-Phase 016 is **IN PROGRESS — 016-I COMPLETE — PASS; 016-J NEXT**.
+Phase 016 is **IN PROGRESS — 016-J COMPLETE — PASS; 016-K NEXT**.
 
-Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
+Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
 
 ## Phase 015 handoff
 
@@ -102,7 +103,7 @@ Phase 015 is **COMPLETE — PASS WITH CARRY-FORWARD**. The closed directional re
 
 Phase 015 closes **COMPLETE — PASS WITH CARRY-FORWARD**. No corrective integrity finding changed this canonical family. Fourteen scenario-dependent validation seeds are handed to Phase 016; they do not override current canonical semantics.
 
-Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Phase-017 Closure-Target Preparation**.
+Proceed to **016-K — Phase 016 Consolidation, Validation-Completeness Exit Review & Phase 017 Handoff**.
 
 
 ## Phase-016 officiality mapping correction
@@ -123,3 +124,8 @@ Proceed to **016-J — Residual Misfit Register, Reopen/Repair/Revalidation & Ph
 ## Phase-016 degraded/recovery mapping result through 016-I
 
 016-I confirms the current accessibility, degraded-operation, status, feedback and recovery mappings without repair. Shared-device, stale-session and offline contexts may reduce capability and disclosure when prerequisites are uncertain, but may not introduce weaker authority paths. Bulk-operation summaries must preserve per-owner success/failure/unknown state.
+
+
+## Phase-016 residual-closure mapping result through 016-J
+
+016-J consolidates 47 Phase-016 boundary clarifications for Phase-017 discoverability reconciliation. These are not 47 semantic defects. Phase 017 must verify that scenario-critical distinctions are represented clearly in current Experience/current-owner documentation and that historical/planning wording such as the 016-E title artifact “Minding” is not promoted into current terminology.
