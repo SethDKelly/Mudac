@@ -10,8 +10,8 @@ Phase 015 is **IN PROGRESS**.
 - [015-D — Evaluation Occurrence, Obligation, Rubric, Scorecard & Judge-Authorship Integrity](015-D-evaluation-occurrence-obligation-rubric-scorecard-judge-authorship-integrity.md) — **Complete — PASS**.
 - [015-E — Versioning, Provenance, Temporal Correction, Successor Work & Historical-Truth Integrity](015-E-versioning-provenance-temporal-correction-successor-work-historical-truth-integrity.md) — **Complete — PASS**.
 - [015-F — Coverage, Aggregate, Rank, Award, Competition Finalization & Outcome Declaration Integrity](015-F-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-integrity.md) — **Complete — PASS**.
-- **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity** — Next.
-- 015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference.
+- [015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity](015-G-export-publication-disclosure-currency-withdrawal-external-possession-integrity.md) — **Complete — PASS**.
+- **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference** — Next.
 - 015-I — Mapping, Profile, Accessibility/Degraded, PF-01 & Phase-014 Refinement Integrity.
 - 015-J — Residual Interference Register, Reopen/Repair/Re-audit & Phase-016 Target Preparation.
 - 015-K — Phase 015 Consolidation, Documentation-Integrity Audit, Exit Review & Phase 016 Handoff.
@@ -45,9 +45,10 @@ The Base/Jackson Phase-009 definition, start gate and integrity/interference con
 015-D COMPLETE — PASS
 015-E COMPLETE — PASS
 015-F COMPLETE — PASS
-015-G NEXT
+015-G COMPLETE — PASS
+015-H NEXT
 
 architecture / implementation SUSPENDED
 ```
 
-Proceed to **015-G — Export, Publication, Disclosure, Currency, Withdrawal & External-Possession Integrity**.
+Proceed to **015-H — Cross-Family Application Actions, Chaining, Automation, Lifecycle & Authority Interference**.
