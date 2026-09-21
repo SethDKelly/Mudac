@@ -22,9 +22,11 @@ Current Concept catalog: eighteen Concepts. Deprecated historical adapters do no
 
 ## Current methodology
 
-Phase 017 is the active methodology-closure phase. Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) for closure evidence and current subphase status.
+Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD** and Jackson-aligned Concept Design is **CLOSED**.
 
-Architecture and implementation remain suspended until the final closure decision and a separate downstream re-entry.
+Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) and final 017-H record for closure evidence.
+
+Implementation readiness is **READY** for post-closure preparation/re-entry. Historical architecture/implementation candidates remain quarantined; no accepted new architecture exists and implementation execution is not authorized.
 
 ## Downstream boundary
 
