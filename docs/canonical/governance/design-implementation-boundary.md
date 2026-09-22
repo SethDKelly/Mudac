@@ -18,7 +18,7 @@ Keep the authority boundary among Concept Design, historical downstream work, fu
 
 # Current state
 
-Phase 017 has successfully closed Jackson-aligned Concept Design.
+Phase 017 successfully closed Jackson-aligned Concept Design. Phase 018 subsequently qualified the repository and is now complete; Phase 019 architecture/engineering re-entry is authorized to begin at 019-A.
 
 ~~~text
 Jackson Concept Design              CLOSED
@@ -29,8 +29,10 @@ production readiness                NOT ESTABLISHED
 
 historical architecture candidates  SUSPENDED / QUARANTINED
 accepted new architecture           NOT ESTABLISHED
-post-closure re-entry               AUTHORIZED
+Phase 018                          COMPLETE — PASS
+Phase 019                          AUTHORIZED — 019-A NEXT ELIGIBLE
 architecture evaluation framework   DEFINED / PRE-SELECTION
+accepted architecture               NOT ESTABLISHED
 implementation-program framework    DEFINED / PRE-ARCHITECTURE
 active implementation packages      0
 package derivation                   NOT ALLOWED
@@ -143,7 +145,7 @@ readiness
   != production readiness
 ~~~
 
-Implementation execution requires a later explicit downstream authorization. Phase 018 may define architecture and implementation-program frameworks, but active implementation packages remain zero and package derivation remains blocked until accepted architecture exists.
+Implementation execution requires a later explicit downstream authorization. Phase 019 may evaluate and accept architecture through the ARE contract, but active implementation packages remain zero and package derivation remains blocked until accepted architecture exists and the later implementation start gate is explicitly invoked.
 
 # Downstream realization obligations
 
