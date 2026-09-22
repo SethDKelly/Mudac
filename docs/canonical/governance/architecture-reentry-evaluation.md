@@ -202,4 +202,4 @@ The following are not architecture selections merely because historical implemen
 - final CI job composition;
 - implementation package sequence.
 
-Architecture may constrain these later choices, but implementation planning derives them after architecture acceptance.
+Architecture may constrain these later choices, but implementation planning derives them after architecture acceptance under the [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md). Phase 018 defines that later program framework without creating active implementation packages.
