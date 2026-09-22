@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T06:02:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T06:35:00Z }
 ---
 
 # Canonical contract
@@ -117,6 +117,20 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [OPG-005 — Technical Emergency Capability Does Not Create Policy Authority](../policies/operational-exception-governance.md#opg-005)
 * [OPG-006 — Exceptional Closeout May Declare Absence of an Ordinary Result, Never Fabricate One](../policies/operational-exception-governance.md#opg-006)
 
+# Accepted architecture drivers
+
+* [DRV-001 — Current Semantic Authority Is the First Architecture Constraint](../architecture/architecture-drivers.md#drv-001)
+* [DRV-002 — Quality Priority Is Semantic/Trust Integrity, Then Event Continuity, Then Sustaining Quality](../architecture/architecture-drivers.md#drv-002)
+* [DRV-003 — Safe Unavailability or Uncertainty Is Preferred to Fabricated Authority](../architecture/architecture-drivers.md#drv-003)
+* [DRV-004 — Paper Continuity Is a Valid Resilience Path, Not a Second Authority Model](../architecture/architecture-drivers.md#drv-004)
+* [DRV-005 — The Baseline Workload Is Bounded, Bursty and Live-Event Shaped](../architecture/architecture-drivers.md#drv-005)
+* [DRV-006 — Exact Capacity, Latency and Recovery Targets Remain Evidence-Bounded Until Quantified](../architecture/architecture-drivers.md#drv-006)
+* [DRV-007 — Trust Boundaries Require Explicit Re-establishment of Relevant Authority](../architecture/architecture-drivers.md#drv-007)
+* [DRV-008 — Security and Disclosure Are Semantic-Boundary Obligations](../architecture/architecture-drivers.md#drv-008)
+* [DRV-009 — Accessibility, Device Continuity and Degraded Operation Preserve Semantic Parity](../architecture/architecture-drivers.md#drv-009)
+* [DRV-010 — Operability and Cost Must Be Proportional to Demonstrated Event Needs](../architecture/architecture-drivers.md#drv-010)
+* [DRV-011 — Reversibility and Provider/Service Lock-in Are Explicit Decision Dimensions](../architecture/architecture-drivers.md#drv-011)
+* [DRV-012 — The Current Delivery Environment Constrains Context, Not Service Topology](../architecture/architecture-drivers.md#drv-012)
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
