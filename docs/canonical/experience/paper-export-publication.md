@@ -2,7 +2,7 @@
 type: Experience Evidence Adapter
 title: Legacy Paper / Export / Publication Experience Evidence
 description: Pre-convergence mixed Experience evidence retained only for historical provenance after 013-F and 013-I migrated all current semantics to natural Experience owners.
-status: historical
+status: deprecated
 tags: [experience, historical, paper, export, publication, phase-013]
 sources:
   - resource: ../../003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md
