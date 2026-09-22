@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T07:55:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T08:14:00-05:00 }
 ---
 
 # Canonical contract
@@ -145,6 +145,24 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [BND-010 — External Representation Is Strictly Downstream of Source Authority](../architecture/application-ownership-boundaries.md#bnd-010)
 * [BND-011 — Module Extraction Is Allowed Only Through Preserved Contracts and Demonstrated Drivers](../architecture/application-ownership-boundaries.md#bnd-011)
 * [BND-012 — Source/Package Layout and Provider/Runtime Deployment Remain Later Decisions](../architecture/application-ownership-boundaries.md#bnd-012)
+# Accepted persistence, history and recovery architecture
+
+* [PST-001 — The Authoritative Persistence Family Is PostgreSQL-Compatible Relational Storage](../architecture/persistence-history-recovery.md#pst-001)
+* [PST-002 — One Logical Authority Database Is the Initial Storage Topology](../architecture/persistence-history-recovery.md#pst-002)
+* [PST-003 — Storage Ownership Follows BND Application Ownership](../architecture/persistence-history-recovery.md#pst-003)
+* [PST-004 — Durable Resource Identity Is Independent of Mutable Business Labels and Physical Storage](../architecture/persistence-history-recovery.md#pst-004)
+* [PST-005 — Working/Current State and Committed Authoritative History Are Structurally Distinct](../architecture/persistence-history-recovery.md#pst-005)
+* [PST-006 — Committed Versions Are Immutable and May Legitimately Have No Current Eligible Successor](../architecture/persistence-history-recovery.md#pst-006)
+* [PST-007 — Meaningful Provenance Is Append-Stable and Distinct From Technical Telemetry](../architecture/persistence-history-recovery.md#pst-007)
+* [PST-008 — Ordinary Destructive Operations Cannot Erase Referenced Authoritative History](../architecture/persistence-history-recovery.md#pst-008)
+* [PST-009 — Derived Calculations and Read Projections Are Non-Authoritative and Reconstructible](../architecture/persistence-history-recovery.md#pst-009)
+* [PST-010 — Projection Loss Is Recovered by Rebuild, Not by Promoting Projection Backups to Authority](../architecture/persistence-history-recovery.md#pst-010)
+* [PST-011 — Asynchronous Propagation, When Used, Is Durably Coupled to the Authoritative Commit](../architecture/persistence-history-recovery.md#pst-011)
+* [PST-012 — System-Wide Event Sourcing Is Not the Baseline Persistence Architecture](../architecture/persistence-history-recovery.md#pst-012)
+* [PST-013 — Core Semantic Fields Remain Explicit; Semi-Structured Storage Is Bounded](../architecture/persistence-history-recovery.md#pst-013)
+* [PST-014 — Schema Migration Is Owner-Scoped, Forward-Compatible and History-Preserving](../architecture/persistence-history-recovery.md#pst-014)
+* [PST-015 — Data Recovery Restores Authoritative Consistency Before Service Availability Is Claimed](../architecture/persistence-history-recovery.md#pst-015)
+* [PST-016 — Recovery Never Fabricates Authority After Uncertain or Partial Failure](../architecture/persistence-history-recovery.md#pst-016)
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
