@@ -1,0 +1,745 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-019 DECISION CONTROL EVIDENCE — DOES NOT ITSELF SELECT OR ACCEPT ARCHITECTURE",
+  "governing_contract": "docs/canonical/governance/architecture-decision-authority.md",
+  "phase018_closure": {
+    "commit": "526b8533395e7cbdabf567c56115f024b78a10f5",
+    "decision_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-M-pre-implementation-residual-risk-register-repository-scorecard-regrade-implementation-entry-decision.md",
+    "repository_readiness_score": 96,
+    "snapshots": [
+      {
+        "path": "docs/routing/architecture_reentry_plan.json",
+        "blob_sha": "aae2c9610bae86b58a7051d1edaf1b3bff320f20"
+      },
+      {
+        "path": "docs/routing/implementation_program_framework.json",
+        "blob_sha": "2f916b0df2154e59401d09b49b862a2143ee6db1"
+      },
+      {
+        "path": "docs/routing/downstream_candidate_qualification.json",
+        "blob_sha": "06f0cb4579543fc3b56254e040e36494116c7781"
+      },
+      {
+        "path": "docs/canonical/governance/downstream-realization-obligations.md",
+        "blob_sha": "ea8e9927dd4efcfc139c75782a1c8b190e857374"
+      },
+      {
+        "path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+        "blob_sha": "87bc3e720464ff5c595e6566e2d3740e1149be18"
+      },
+      {
+        "path": "docs/canonical/governance/implementation-program-delivery.md",
+        "blob_sha": "723957aabc958d1b21f422784de9de0bdf9fbe79"
+      },
+      {
+        "path": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-M-pre-implementation-residual-risk-register-repository-scorecard-regrade-implementation-entry-decision.md",
+        "blob_sha": "8239aec65fa87b04a4db2371e52f193ca92e32e7"
+      }
+    ]
+  },
+  "phase019_state": {
+    "status": "ACTIVE",
+    "completed_subphases": [
+      "019-A"
+    ],
+    "next_eligible_subphase": "019-B",
+    "currently_authorized_subphase": null,
+    "automatic_advance": false,
+    "accepted_architecture_established": false,
+    "implementation_package_count": 0,
+    "package_derivation_allowed": false,
+    "implementation_execution_authorized": false
+  },
+  "subphase_plan": [
+    {
+      "id": "019-A",
+      "title": "Architecture Re-entry Start Gate, Authority, Current Baseline & Decision-Evidence Model",
+      "questions": [
+        "ADQ-001"
+      ],
+      "status": "COMPLETE"
+    },
+    {
+      "id": "019-B",
+      "title": "Architecture Drivers, Quality Attributes, Workload, Trust Boundary & Constraint Qualification",
+      "questions": [
+        "ADQ-001"
+      ],
+      "status": "NEXT_ELIGIBLE"
+    },
+    {
+      "id": "019-C",
+      "title": "Application Ownership, Boundary, Coordination & Dependency Architecture",
+      "questions": [
+        "ADQ-002"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-D",
+      "title": "Persistence, History, Provenance, Projection, Migration & Recovery Architecture",
+      "questions": [
+        "ADQ-003"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-E",
+      "title": "Identity, Authentication, Participation, Access, Session & Technical-Authority Architecture",
+      "questions": [
+        "ADQ-004"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-F",
+      "title": "Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture",
+      "questions": [
+        "ADQ-005"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-G",
+      "title": "Offline Draft, Multi-device, Degraded, Paper & Reconciliation Architecture",
+      "questions": [
+        "ADQ-006"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-H",
+      "title": "Artifact, Export, Publication, External Representation & Delivery Architecture",
+      "questions": [
+        "ADQ-007"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-I",
+      "title": "Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture",
+      "questions": [
+        "ADQ-008"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-J",
+      "title": "Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture",
+      "questions": [
+        "ADQ-009"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-K",
+      "title": "Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation",
+      "questions": [
+        "ADQ-010"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "019-L",
+      "title": "Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff",
+      "questions": [
+        "ADQ-010"
+      ],
+      "status": "PLANNED"
+    }
+  ],
+  "decision_state_model": {
+    "allowed": [
+      "PLANNED",
+      "EVALUATING",
+      "PROPOSED",
+      "ACCEPTED",
+      "BLOCKED",
+      "REOPENED",
+      "SUPERSEDED"
+    ],
+    "acceptance_requires_owning_subphase_completion": true,
+    "whole_architecture_acceptance_subphase": "019-L"
+  },
+  "decision_record_schema": {
+    "required_fields": [
+      "question_id",
+      "title",
+      "owning_subphase",
+      "state",
+      "accepted",
+      "selected_option",
+      "decision_document",
+      "alternatives_evaluated",
+      "constraint_refs",
+      "candidate_inputs",
+      "evidence_refs",
+      "evidence_classes",
+      "scenario_seeds",
+      "risk_refs",
+      "rationale",
+      "rejected_alternatives",
+      "reversibility_migration",
+      "residual_uncertainty",
+      "revisit_triggers",
+      "accepted_in_subphase",
+      "supersedes_decision"
+    ]
+  },
+  "decisions": [
+    {
+      "question_id": "ADQ-001",
+      "title": "Architecture Drivers, Quality Attributes, Workload Assumptions & Trust Boundaries",
+      "owning_subphase": "019-B",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-001",
+        "ENG-011",
+        "ENG-012",
+        "ENG-013",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/architectural-foundation.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "unknown/degraded result",
+        "adversarial request volume",
+        "conflicting legitimate authority"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-002",
+      "title": "Application Ownership, Decomposition & Dependency Topology",
+      "owning_subphase": "019-C",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-001",
+        "ENG-004",
+        "ENG-009",
+        "ENG-011",
+        "ENG-017",
+        "INV-004",
+        "INV-005",
+        "INV-006"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/application-boundaries.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "conflicting legitimate authority",
+        "partial bulk result",
+        "post-finalization correction"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-003",
+      "title": "Authoritative Persistence, History, Provenance & Projection Architecture",
+      "owning_subphase": "019-D",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-009",
+        "ENG-010",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-003",
+        "INV-005",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/data-persistence.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "post-finalization correction",
+        "affected Outcome Declaration with same visible winner",
+        "stale Export after source correction"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-004",
+      "title": "Identity, Authentication, Participation, Access & Session Architecture",
+      "owning_subphase": "019-E",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-004",
+        "ENG-011",
+        "ENG-012",
+        "ENG-015",
+        "ENG-017",
+        "ACC-001",
+        "ACC-002",
+        "DISC-002",
+        "INV-004",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/identity-access-session.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "shared-device context handoff",
+        "stale Participation/Access/session state",
+        "adversarial request volume"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-005",
+      "title": "Application Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture",
+      "owning_subphase": "019-F",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-005",
+        "ENG-007",
+        "ENG-009",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "INV-002",
+        "INV-003",
+        "INV-005",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/commands-api-concurrency.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "lost-response retry after consequential authoritative action",
+        "concurrent/repeated legitimate intent",
+        "partial bulk result",
+        "unknown/degraded result"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-006",
+      "title": "Offline Draft, Multi-device, Degraded & Paper Recovery Architecture",
+      "owning_subphase": "019-G",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-005",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017",
+        "INV-002",
+        "INV-008",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/synchronization-recovery.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "duplicate/offline Draft convergence",
+        "shared-device context handoff",
+        "paper/electronic capture disagreement",
+        "unknown/degraded result"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-007",
+      "title": "Artifact, Export, Publication & External Delivery Architecture",
+      "owning_subphase": "019-H",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-006",
+        "ENG-010",
+        "ENG-011",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "EXPORT-001",
+        "EXPORT-002",
+        "EXPORT-003",
+        "PUB-001",
+        "INV-005",
+        "INV-007"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/external-representation.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "stale Export after source correction",
+        "withdrawn Publication while external copies remain",
+        "post-finalization correction"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-008",
+      "title": "Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture",
+      "owning_subphase": "019-I",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-004",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017",
+        "ACC-001",
+        "DISC-002",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/frontend-interaction.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "shared-device context handoff",
+        "duplicate/offline Draft convergence",
+        "unknown/degraded result"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-009",
+      "title": "Runtime Platform, Deployment, Availability, Observability & Disaster-Recovery Architecture",
+      "owning_subphase": "019-J",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-011",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/aws-runtime-operations.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "adversarial request volume",
+        "unknown/degraded result",
+        "lost-response retry after consequential authoritative action"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    },
+    {
+      "question_id": "ADQ-010",
+      "title": "Whole-Architecture Integration, Security, Failure, Performance, Cost & Reversibility Reconciliation",
+      "owning_subphase": "019-K",
+      "state": "PLANNED",
+      "accepted": false,
+      "selected_option": null,
+      "decision_document": null,
+      "alternatives_evaluated": [],
+      "constraint_refs": [
+        "ENG-001",
+        "ENG-004",
+        "ENG-005",
+        "ENG-006",
+        "ENG-007",
+        "ENG-008",
+        "ENG-009",
+        "ENG-010",
+        "ENG-011",
+        "ENG-012",
+        "ENG-013",
+        "ENG-014",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-001",
+        "INV-002",
+        "INV-003",
+        "INV-004",
+        "INV-005",
+        "INV-006",
+        "INV-007",
+        "INV-008",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/architectural-foundation.md"
+      ],
+      "evidence_refs": [],
+      "evidence_classes": [],
+      "scenario_seeds": [
+        "lost-response retry after consequential authoritative action",
+        "duplicate/offline Draft convergence",
+        "shared-device context handoff",
+        "stale Participation/Access/session state",
+        "paper/electronic capture disagreement",
+        "post-finalization correction",
+        "affected Outcome Declaration with same visible winner",
+        "exceptional no-result closeout",
+        "stale Export after source correction",
+        "withdrawn Publication while external copies remain",
+        "concurrent/repeated legitimate intent",
+        "partial bulk result",
+        "unknown/degraded result",
+        "adversarial request volume",
+        "conflicting legitimate authority"
+      ],
+      "risk_refs": [],
+      "rationale": null,
+      "rejected_alternatives": [],
+      "reversibility_migration": null,
+      "residual_uncertainty": [],
+      "revisit_triggers": [],
+      "accepted_in_subphase": null,
+      "supersedes_decision": null
+    }
+  ],
+  "q4_repair_model": {
+    "allowed_states": [
+      "REQUIRED",
+      "IN_PROGRESS",
+      "COMPLETE",
+      "SUPERSEDED"
+    ],
+    "completion_required_before_comparison": true,
+    "repair_does_not_adopt_candidate": true,
+    "records": [
+      {
+        "repair_id": "Q4R-001",
+        "candidate_path": "docs/canonical/architecture/application-boundaries.md",
+        "stale_bindings": [
+          "Judging Encounter",
+          "Official Outcome Revision"
+        ],
+        "repair_status": "REQUIRED",
+        "repair_document": null,
+        "current_semantic_owner_refs": [],
+        "retained_hypothesis": [],
+        "excluded_obsolete_content": [],
+        "revised_comparison_statement": null,
+        "preservation_evidence_refs": [],
+        "comparison_eligible": false
+      },
+      {
+        "repair_id": "Q4R-002",
+        "candidate_path": "docs/canonical/architecture/commands-api-concurrency.md",
+        "stale_bindings": [
+          "Official Outcome Revision"
+        ],
+        "repair_status": "REQUIRED",
+        "repair_document": null,
+        "current_semantic_owner_refs": [],
+        "retained_hypothesis": [],
+        "excluded_obsolete_content": [],
+        "revised_comparison_statement": null,
+        "preservation_evidence_refs": [],
+        "comparison_eligible": false
+      },
+      {
+        "repair_id": "Q4R-003",
+        "candidate_path": "docs/canonical/architecture/synchronization-recovery.md",
+        "stale_bindings": [
+          "historical Encounter-era grouping assumptions"
+        ],
+        "repair_status": "REQUIRED",
+        "repair_document": null,
+        "current_semantic_owner_refs": [],
+        "retained_hypothesis": [],
+        "excluded_obsolete_content": [],
+        "revised_comparison_statement": null,
+        "preservation_evidence_refs": [],
+        "comparison_eligible": false
+      },
+      {
+        "repair_id": "Q4R-004",
+        "candidate_path": "docs/canonical/architecture/frontend-interaction.md",
+        "stale_bindings": [
+          "pre-Phase-013 interaction/mapping assumptions"
+        ],
+        "repair_status": "REQUIRED",
+        "repair_document": null,
+        "current_semantic_owner_refs": [],
+        "retained_hypothesis": [],
+        "excluded_obsolete_content": [],
+        "revised_comparison_statement": null,
+        "preservation_evidence_refs": [],
+        "comparison_eligible": false
+      }
+    ]
+  },
+  "probe_model": {
+    "probes_authorized_by_019a": false,
+    "required_fields": [
+      "probe_id",
+      "question_id",
+      "authorizing_subphase",
+      "question",
+      "scope",
+      "permitted_surfaces",
+      "evidence_target",
+      "prohibited_uses",
+      "retention_disposal",
+      "status",
+      "evidence_refs"
+    ],
+    "allowed_states": [
+      "AUTHORIZED",
+      "IN_PROGRESS",
+      "COMPLETE",
+      "CANCELLED"
+    ],
+    "authorizations": []
+  },
+  "evidence_classes": [
+    "DOCUMENTATION_REASONING",
+    "EXTERNAL_VENDOR_FACT",
+    "BOUNDED_TECHNICAL_PROBE",
+    "EXECUTABLE_INTEGRATION_EVIDENCE",
+    "PRODUCTION_EVIDENCE"
+  ],
+  "whole_architecture_acceptance": {
+    "state": "NOT_ELIGIBLE",
+    "accepted": false,
+    "acceptance_subphase": "019-L",
+    "acceptance_document": null,
+    "prerequisites": [
+      "ADQ-001 through ADQ-009 accepted",
+      "ADQ-010 whole-architecture validation passed",
+      "all blocking Q4 repairs complete",
+      "cross-decision contradictions resolved",
+      "Phase-016 scenario coverage reconciled",
+      "residual architecture risks dispositioned",
+      "historical candidate disposition explicit",
+      "current architecture owners created and routed"
+    ]
+  },
+  "counts": {
+    "decisions_total": 10,
+    "decisions_accepted": 0,
+    "q4_repairs_total": 4,
+    "q4_repairs_complete": 0,
+    "probes_authorized": 0,
+    "implementation_packages": 0
+  }
+}
