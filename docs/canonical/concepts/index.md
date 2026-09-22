@@ -34,4 +34,4 @@ Generic words such as User, Role, Permission, Session, Task, Form, Submission, R
 
 The sole current product family remains [PF-01](../dependence/product-family-scope.md).
 
-For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure repository qualification, use [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/).
