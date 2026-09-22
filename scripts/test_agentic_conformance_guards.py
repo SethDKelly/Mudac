@@ -98,6 +98,17 @@ def main() -> int:
             errors,
         )
 
+        candidate_repo = clone_repo(source, tmp, "candidate")
+        qualification_path = candidate_repo / "docs/routing/downstream_candidate_qualification.json"
+        qualification = json.loads(qualification_path.read_text(encoding="utf-8"))
+        qualification["summary"]["adopted"] = 1
+        qualification_path.write_text(json.dumps(qualification, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "candidate adoption leakage",
+            run_script(source, candidate_repo, "scripts/validate_candidate_qualification.py", "--repo", str(candidate_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -110,7 +121,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 6 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 7 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
