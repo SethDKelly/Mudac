@@ -21,7 +21,7 @@ From there:
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED
 
-Phase 018  IN PROGRESS — 018-A/B/C/D/E/F/G COMPLETE / 018-H NEXT
+Phase 018  IN PROGRESS — 018-A/B/C/D/E/F/G/H COMPLETE / 018-I NEXT
 
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
@@ -33,4 +33,4 @@ execution authorization       NOT GRANTED
 Current category/index pages are routing surfaces, not alternate rule stores. Follow them to natural canonical owners for product meaning.
 
 
-Phase 018 is active. 018-A through 018-G are complete; 018-H is next. Do not resume historical implementation queues automatically.
+Phase 018 is active. 018-A through 018-H are complete; 018-I is next. Do not resume historical implementation queues automatically.

@@ -21,8 +21,8 @@ Phase 018 is **IN PROGRESS**.
 - [018-E — Agentic Development Authority, Human-Directed Scope, Change Classes & Safety Boundaries](018-E-agentic-development-authority-human-directed-scope-change-classes-safety-boundaries.md) — **COMPLETE — PASS**.
 - [018-F — Agent Context, Progressive Retrieval, Context-Budget & Anti-Bloat Architecture](018-F-agent-context-progressive-retrieval-context-budget-anti-bloat-architecture.md) — **COMPLETE — PASS**.
 - [018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability](018-G-agent-skills-tool-adapters-workflow-contracts-cross-agent-portability.md) — **COMPLETE — PASS WITH RUNTIME COMPATIBILITY CARRY-FORWARD**.
-- 018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement — **NEXT**.
-- 018-I — Downstream Realization Obligation, Carry-Forward & Engineering-Risk Reconciliation — PLANNED.
+- [018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement](018-H-agentic-conformance-knowledge-validation-status-drift-reference-integrity-ci-enforcement.md) — **COMPLETE — PASS WITH BOUNDED PROVIDER-RUNTIME VERIFICATION CARRY-FORWARD**.
+- 018-I — Downstream Realization Obligation, Carry-Forward & Engineering-Risk Reconciliation — **NEXT**.
 - 018-J — Historical Architecture & Implementation Candidate Qualification Under Q1–Q6 — PLANNED.
 - 018-K — Architecture Decision Questions, Constraints, Evaluation Evidence & Re-entry Decomposition — PLANNED.
 - 018-L — Implementation Program Structure, Verification Strategy & Delivery-Gate Design — PLANNED.
@@ -42,7 +42,8 @@ Jackson Concept Design CLOSED
 018-E COMPLETE — PASS
 018-F COMPLETE — PASS
 018-G COMPLETE — PASS WITH RUNTIME COMPATIBILITY CARRY-FORWARD
-018-H NEXT
+018-H COMPLETE — PASS WITH BOUNDED PROVIDER-RUNTIME VERIFICATION CARRY-FORWARD
+018-I NEXT
 
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture NOT ESTABLISHED
