@@ -7,7 +7,7 @@ tags: ["mudac", "generated", "routing", "project", "closure-evidence"]
 status: "stable"
 sources:
   - resource: "../../docs/017-methodology-closure-canonical-consolidation-completion-decision/index.md"
-generated: { by: "process:mudac-okf-projection", at: "2026-09-22T02:28:00Z" }
+generated: { by: "process:mudac-okf-projection", at: "2026-09-22T02:50:00Z" }
 ---
 # Use
 

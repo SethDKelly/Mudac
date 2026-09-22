@@ -7,7 +7,7 @@ tags: ["mudac", "generated", "routing", "project", "active-program"]
 status: "stable"
 sources:
   - resource: "../../docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/index.md"
-generated: { by: "process:mudac-okf-projection", at: "2026-09-22T02:28:00Z" }
+generated: { by: "process:mudac-okf-projection", at: "2026-09-22T02:50:00Z" }
 ---
 # Use
 

@@ -9,7 +9,7 @@ sources:
   - id: okf-spec-v0.2
     resource: https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/ad30107c31c06aec8a7d5636e0d1058118604e6f/SPEC.md
     title: Open Knowledge Format Specification v0.2
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:26:36Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T02:50:00Z }
 ---
 
 # Authority

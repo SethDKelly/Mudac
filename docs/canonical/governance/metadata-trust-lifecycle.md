@@ -9,7 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-D-historical-phase-migration-provenance-source-lineage-retrofit.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../references/open-knowledge-format.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:30:09Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T02:50:00Z }
 ---
 
 # Purpose

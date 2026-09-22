@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-12T03:12:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T02:50:00Z }
 ---
 
 # Canonical contract
@@ -115,6 +115,7 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [OPG-003 — Generic Override Cannot Bypass Semantic Invariants](../policies/operational-exception-governance.md#opg-003)
 * [OPG-004 — Acknowledgement, Suppression, and Presentation State Are Not Resolution](../policies/operational-exception-governance.md#opg-004)
 * [OPG-005 — Technical Emergency Capability Does Not Create Policy Authority](../policies/operational-exception-governance.md#opg-005)
+* [OPG-006 — Exceptional Closeout May Declare Absence of an Ordinary Result, Never Fabricate One](../policies/operational-exception-governance.md#opg-006)
 
 # Suspended downstream rule-ID partition
 
@@ -342,6 +343,7 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [META-007 — OKF Trust Signals Do Not Replace MUDAC Authority or Access](metadata-trust-lifecycle.md#meta-007)
 * [META-008 — Legacy Records Are Not Speculatively Backfilled](metadata-trust-lifecycle.md#meta-008)
 * [META-009 — Metadata Updates Preserve Semantic and Historical Distinctions](metadata-trust-lifecycle.md#meta-009)
+* [META-010 — Authored Documentation and Strict OKF Compatibility Are Separate Layers](metadata-trust-lifecycle.md#meta-010)
 
 # Validation and CI enforcement
 
