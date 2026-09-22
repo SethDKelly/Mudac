@@ -25,6 +25,7 @@ Current repository/design-governance authority.
 - [Design / Implementation Boundary](design-implementation-boundary.md)
 - [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md)
 - [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md)
+- [Downstream Realization Obligations & Engineering-Risk Handoff](downstream-realization-obligations.md)
 
 ## Current interpretation
 
