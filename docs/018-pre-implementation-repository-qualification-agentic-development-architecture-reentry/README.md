@@ -1,6 +1,6 @@
 # Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry
 
-**Status:** IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J COMPLETE / 018-K NEXT
+**Status:** IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 018-L NEXT
 
 ## Purpose
 
@@ -142,11 +142,13 @@ Evaluate retained 006/008 architecture, implementation, scaffold and tooling art
 
 ### 018-K — Architecture Decision Questions, Constraints, Evaluation Evidence & Re-entry Decomposition
 
-**Status: NEXT.**
-
 Define the actual architecture questions that must be decided, candidate-comparison evidence, decision boundaries and a dependency-safe architecture/engineering re-entry program.
 
+**Status: COMPLETE — PASS — PRE-SELECTION ARCHITECTURE RE-ENTRY PROGRAM DEFINED.**
+
 ### 018-L — Implementation Program Structure, Verification Strategy & Delivery-Gate Design
+
+**Status: NEXT.**
 
 Define how future implementation packages will be scoped, traced, tested, reviewed and gated without authorizing domain implementation.
 
