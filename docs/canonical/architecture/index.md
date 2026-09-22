@@ -44,4 +44,4 @@ Phase 017 closure did **not** automatically reactivate these documents. Phase 01
 
 017-F audited all nine documents in this subtree. Each now carries an explicit suspension notice at document level.
 
-The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. Phase 018-J/K or a successor architecture process must classify, compare and explicitly adopt/revise/reject these candidates under the post-Concept-Design re-entry contract.
+The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K or a successor architecture process must compare and explicitly adopt/revise/reject candidate choices under the post-Concept-Design re-entry contract.
