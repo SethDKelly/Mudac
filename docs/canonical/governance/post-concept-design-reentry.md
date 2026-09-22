@@ -404,8 +404,10 @@ Engineering difficulty alone is not evidence that Concept Design is wrong.
 
 # Current post-closure posture
 
-017-H has activated this handoff contract.
+017-H activated this handoff contract.
 
-The next authorized lifecycle step is a Phase 018 post-closure start gate for repository/pre-implementation audit, agentic-development preparation, and architecture/engineering re-entry planning.
+Phase 018 is the active post-closure qualification program. It has qualified the historical candidate corpus and defined a pre-selection architecture evaluation framework plus a proposed Phase-019 Architecture & Engineering Re-entry program.
 
-No historical architecture is accepted merely by activation of this contract, and no implementation execution authority is granted.
+That proposed Phase 019 is not authorized by 018-K alone. Phase-018 exit authority remains with 018-M.
+
+No historical architecture is accepted merely by qualification or planning, and no implementation execution authority is granted.
