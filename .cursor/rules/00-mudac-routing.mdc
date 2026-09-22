@@ -1,0 +1,13 @@
+---
+description: Route MUDAC agent work to shared AGENTS.md, canonical .agents/skills, current owners and human-directed A1–A4 boundaries.
+alwaysApply: false
+---
+# MUDAC agent routing
+
+Use root `AGENTS.md` as shared bootstrap authority and `.agents/skills/<name>/SKILL.md` as the single reusable workflow source.
+
+Use `docs/index.md` for unknown-location discovery and `python scripts/resolve_stable_id.py <ID>` for known stable IDs.
+
+Do not treat generated `knowledge/`, numbered history, or quarantined Architecture/Implementation candidates as current semantic authority.
+
+Do not auto-start adjacent work after completing the human-selected task. A3/A4 boundaries remain governed by `docs/canonical/governance/agentic-authority-scope.md`.

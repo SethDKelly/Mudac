@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 252,
+    "total": 264,
     "by_role": {
-      "current-authority": 110,
+      "current-authority": 122,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -37,7 +37,8 @@
       "REP": 15,
       "SC": 3,
       "SYNC": 14,
-      "VAL": 8
+      "VAL": 8,
+      "WFL": 12
     }
   },
   "references": {
@@ -1552,6 +1553,78 @@
       "anchor": "val-008",
       "role": "current-authority",
       "locator": "docs/canonical/governance/validation-enforcement.md#val-008"
+    },
+    "WFL-001": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-001"
+    },
+    "WFL-002": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-002"
+    },
+    "WFL-003": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-003"
+    },
+    "WFL-004": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-004"
+    },
+    "WFL-005": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-005"
+    },
+    "WFL-006": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-006"
+    },
+    "WFL-007": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-007"
+    },
+    "WFL-008": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-008"
+    },
+    "WFL-009": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-009"
+    },
+    "WFL-010": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-010"
+    },
+    "WFL-011": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-011"
+    },
+    "WFL-012": {
+      "owner_path": "docs/canonical/governance/agent-workflow-portability.md",
+      "anchor": "wfl-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-workflow-portability.md#wfl-012"
     }
   }
 }

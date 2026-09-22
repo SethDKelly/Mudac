@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:32:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:45:00Z }
 ---
 
 # Canonical contract
@@ -342,6 +342,21 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-003 — Contradictions Are Surfaced, Not Silently Normalized](change-governance.md#chg-003)
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
+
+# Portable agent workflows and tool adapters
+
+* [WFL-001 — Canonical Reusable Workflows Live Once Under .agents/skills](agent-workflow-portability.md#wfl-001)
+* [WFL-002 — Skills Own Procedure, Not Product Semantics](agent-workflow-portability.md#wfl-002)
+* [WFL-003 — Every Canonical Skill Declares Its Human-Directed Boundary and Stop Conditions](agent-workflow-portability.md#wfl-003)
+* [WFL-004 — Provider Adapters Are Thin Routing Bridges](agent-workflow-portability.md#wfl-004)
+* [WFL-005 — Provider-Native Discovery Differences Do Not Change MUDAC Authority](agent-workflow-portability.md#wfl-005)
+* [WFL-006 — Workflow Action Class Is Fixed by the Canonical Workflow Contract](agent-workflow-portability.md#wfl-006)
+* [WFL-007 — Execute-Selected-Task Cannot Manufacture Implementation Authority](agent-workflow-portability.md#wfl-007)
+* [WFL-008 — Run-Conformance Reports Failures Faithfully and Does Not Self-Fix by Default](agent-workflow-portability.md#wfl-008)
+* [WFL-009 — Review-Change Remains A1 Unless the Human Explicitly Requests Fixes](agent-workflow-portability.md#wfl-009)
+* [WFL-010 — Exit Review Stops After the Selected Boundary](agent-workflow-portability.md#wfl-010)
+* [WFL-011 — Tool Compatibility Claims Are Evidence-Calibrated](agent-workflow-portability.md#wfl-011)
+* [WFL-012 — Adapter Failure Degrades Provider Convenience, Not Semantic Authority](agent-workflow-portability.md#wfl-012)
 
 # Agentic development authority and scope
 

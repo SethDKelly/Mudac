@@ -9,6 +9,9 @@ on:
       - "scripts/**"
       - "docs/**"
       - "knowledge/**"
+      - ".agents/**"
+      - ".cursor/**"
+      - ".claude/**"
       - ".github/workflows/knowledge-validation.yml"
   pull_request:
     paths:
@@ -18,6 +21,9 @@ on:
       - "scripts/**"
       - "docs/**"
       - "knowledge/**"
+      - ".agents/**"
+      - ".cursor/**"
+      - ".claude/**"
       - ".github/workflows/knowledge-validation.yml"
   workflow_dispatch:
 
@@ -61,6 +67,9 @@ jobs:
 
       - name: Measure context budgets
         run: python scripts/measure_context_budget.py
+
+      - name: Validate portable skills and tool adapters
+        run: python scripts/validate_agent_workflows.py
 
       - name: Smoke-test stable-ID resolution roles
         shell: bash

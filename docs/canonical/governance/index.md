@@ -15,6 +15,7 @@ Current repository/design-governance authority.
 ## Retrieval and change governance
 
 - [Agentic Development Authority, Human-Directed Scope & Action Boundaries](agentic-authority-scope.md)
+- [Portable Agent Workflows & Tool Adapter Contract](agent-workflow-portability.md)
 - [Agent Context & Progressive Retrieval](agent-context.md)
 - [Canonical Change & Conflict Governance](change-governance.md)
 

@@ -64,6 +64,12 @@ Follow [Agentic Development Authority, Human-Directed Scope & Action Boundaries]
 
 A passing check does not authorize merge, deploy, the next phase/subphase, or a new implementation package.
 
+## Portable workflows
+
+Canonical reusable procedures live in `.agents/skills/<name>/SKILL.md` under [Portable Agent Workflows & Tool Adapter Contract](docs/canonical/governance/agent-workflow-portability.md).
+
+Use the matching workflow when helpful, but the skill never increases the action authority granted by the human-selected task. Provider adapters are thin bridges only; do not copy MUDAC semantic rules into Cursor/Claude/Codex-specific files.
+
 ## Context budget discipline
 
 Use minimum-sufficient context under [Agent Context & Progressive Retrieval](docs/canonical/governance/agent-context.md).

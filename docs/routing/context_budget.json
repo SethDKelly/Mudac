@@ -11,7 +11,14 @@
     "knowledge_root_index": 4096,
     "knowledge_nested_index_each": 6144,
     "knowledge_concept_each": 4096,
-    "future_canonical_skill_each": 8192
+    "future_canonical_skill_each": 8192,
+    "claude_md": 2048,
+    "claude_command_each": 1024,
+    "cursor_rule_each": 4096,
+    "cursor_rules_aggregate": 8192,
+    "cursor_persistent_baseline": 12288,
+    "claude_persistent_baseline": 12288,
+    "codex_persistent_baseline": 8192
   },
   "representative_task_profiles": [
     {

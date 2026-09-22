@@ -71,6 +71,39 @@ def main() -> int:
                 limit = limits["knowledge_concept_each"]
             add_measurement(measurements, rel, path, limit)
 
+    claude = repo / ".claude" / "CLAUDE.md"
+    add_measurement(measurements, ".claude/CLAUDE.md", claude, limits["claude_md"])
+
+    cursor_rules = sorted((repo / ".cursor" / "rules").glob("*.mdc"))
+    cursor_total = sum(max(size(path), 0) for path in cursor_rules)
+    measurements.append(("cursor rules aggregate", cursor_total, limits["cursor_rules_aggregate"]))
+    for path in cursor_rules:
+        add_measurement(
+            measurements,
+            path.relative_to(repo).as_posix(),
+            path,
+            limits["cursor_rule_each"],
+        )
+
+    claude_commands = repo / ".claude" / "commands"
+    if claude_commands.is_dir():
+        for path in sorted(claude_commands.glob("*.md")):
+            add_measurement(
+                measurements,
+                path.relative_to(repo).as_posix(),
+                path,
+                limits["claude_command_each"],
+            )
+
+    agents_bytes = max(size(repo / "AGENTS.md"), 0)
+    measurements.extend(
+        [
+            ("cursor persistent baseline", agents_bytes, limits["cursor_persistent_baseline"]),
+            ("claude persistent baseline", agents_bytes + max(size(claude), 0), limits["claude_persistent_baseline"]),
+            ("codex persistent baseline", agents_bytes, limits["codex_persistent_baseline"]),
+        ]
+    )
+
     skills = repo / ".agents" / "skills"
     if skills.is_dir():
         for path in sorted(skills.glob("*/SKILL.md")):

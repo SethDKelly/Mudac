@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "authority": "COMPATIBILITY/ROUTING ONLY — CANONICAL MUDAC GOVERNANCE AND .agents/skills RETAIN AUTHORITY",
+  "canonical": {
+    "shared_instructions": "AGENTS.md",
+    "agentic_authority": "docs/canonical/governance/agentic-authority-scope.md",
+    "context_policy": "docs/canonical/governance/agent-context.md",
+    "workflow_contract": "docs/canonical/governance/agent-workflow-portability.md",
+    "workflow_root": ".agents/skills",
+    "knowledge_entry": "docs/index.md",
+    "okf_compatibility_entry": "knowledge/index.md"
+  },
+  "skills": {
+    "resolve-context": {
+      "action_class": "A1"
+    },
+    "resolve-contract": {
+      "action_class": "A1"
+    },
+    "execute-selected-task": {
+      "action_class": "A2"
+    },
+    "review-change": {
+      "action_class": "A1"
+    },
+    "run-conformance": {
+      "action_class": "A1"
+    },
+    "update-traceability": {
+      "action_class": "A2"
+    },
+    "exit-review": {
+      "action_class": "A1/A2-record-only"
+    }
+  },
+  "tools": {
+    "codex": {
+      "instruction_mechanism": "root AGENTS.md",
+      "workflow_mechanism": "project .agents/skills",
+      "repository_configuration_status": "documented-provider-mechanism",
+      "runtime_status": "not-smoke-verified-by-repository",
+      "duplicate_semantic_adapter": "none"
+    },
+    "cursor": {
+      "instruction_mechanism": "root AGENTS.md plus optional relevance-selected .cursor/rules/00-mudac-routing.mdc",
+      "workflow_mechanism": "project .agents/skills",
+      "repository_configuration_status": "documented-provider-mechanism",
+      "runtime_status": "not-smoke-verified-by-repository",
+      "duplicate_semantic_adapter": "none"
+    },
+    "claude_code": {
+      "instruction_mechanism": ".claude/CLAUDE.md thin bridge to ../AGENTS.md",
+      "workflow_mechanism": ".claude/commands thin bridges to project .agents/skills",
+      "repository_configuration_status": "static-adapter-configured",
+      "runtime_status": "not-smoke-verified-by-repository",
+      "duplicate_semantic_adapter": "none"
+    }
+  },
+  "evidence_notes": [
+    "Repository validators prove file structure, references, budgets and subordination only.",
+    "Provider runtime discovery/obedience is a separate compatibility claim and remains unverified until an actual provider smoke test is performed.",
+    "Tool availability never changes MUDAC semantic authority."
+  ]
+}
