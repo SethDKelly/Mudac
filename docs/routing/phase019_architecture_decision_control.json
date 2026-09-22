@@ -47,9 +47,10 @@
       "019-E",
       "019-F",
       "019-G",
-      "019-H"
+      "019-H",
+      "019-I"
     ],
-    "next_eligible_subphase": "019-I",
+    "next_eligible_subphase": "019-J",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -128,7 +129,7 @@
       "questions": [
         "ADQ-008"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-J",
@@ -136,7 +137,7 @@
       "questions": [
         "ADQ-009"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-K",
@@ -808,11 +809,17 @@
       "question_id": "ADQ-008",
       "title": "Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture",
       "owning_subphase": "019-I",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Framework-neutral client-rich browser architecture subordinate to server authority, with explicit remote-cache/command/local-Draft/context/ephemeral state partitioning, context-safe navigation, phone-primary Judge workflows, responsive Organizer density, accessibility semantic parity, explicit degraded/conflict/unknown recovery, and replaceable client mechanisms (CLT-001..CLT-020)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-I-browser-client-state-navigation-accessibility-degraded-interaction-architecture.md",
+      "alternatives_evaluated": [
+        "Repaired historical FE architecture including React/Router/Query/IndexedDB selections",
+        "Minimal server-rendered/progressively enhanced browser with very limited client state",
+        "General local-first browser architecture with offline authority and broad merge",
+        "Thin browser around a framework-specific server-driven interaction platform",
+        "Framework-neutral client-rich browser with explicit server authority and state partitioning"
+      ],
       "constraint_refs": [
         "ENG-004",
         "ENG-007",
@@ -829,20 +836,69 @@
       "candidate_inputs": [
         "docs/canonical/architecture/frontend-interaction.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/019-architecture-engineering-reentry/019-I-Q4R-004-frontend-interaction-semantic-repair.md",
+        "docs/canonical/architecture/browser-client-interaction.md",
+        "docs/canonical/architecture/frontend-interaction.md",
+        "docs/canonical/experience/mapping-authority-baseline.md",
+        "docs/canonical/experience/context-role-modes.md",
+        "docs/canonical/experience/judge-evaluation.md",
+        "docs/canonical/experience/live-operations.md",
+        "docs/canonical/experience/accessibility-resilience.md",
+        "docs/canonical/experience/status-feedback-recovery.md",
+        "docs/canonical/policies/anonymity-disclosure.md",
+        "docs/canonical/invariants/accessibility-semantic-parity.md",
+        "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/architecture/offline-continuity-reconciliation.md",
+        "docs/canonical/architecture/artifact-export-publication-delivery.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "shared-device context handoff",
         "duplicate/offline Draft convergence",
         "unknown/degraded result"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Current Phase-013 Experience and accepted IAM/CMD/RCV authority justify rich browser interaction for interruption-resistant judging, local Draft continuity, conflict/unknown recovery, phone-primary Judge work, dense Organizer live operations and accessibility parity, but do not justify browser semantic authority or premature package/framework selection.",
+      "rejected_alternatives": [
+        "Historical FE stack unchanged — interaction principles remain useful, but React/Router/Query/IndexedDB require fresh technology revalidation and exact router/query packages are explicitly deferred.",
+        "Minimal server-rendered/progressive enhancement — simpler client state but weaker fit for bounded Draft continuity, live-event interruption recovery, rich conflict handling and dense live operations.",
+        "General local-first browser authority — conflicts with RCV current Access, no-offline-authority and safe reconciliation semantics.",
+        "Framework-specific server-driven baseline — still requires client Draft/recovery state and introduces unnecessary framework coupling without current evidence."
+      ],
+      "reversibility_migration": "Commits to a client-rich browser interaction class, explicit client state partitions, server-authoritative semantics, context/private-state isolation, bounded RCV local Draft continuity, explicit uncertainty/recovery, phone-primary Judge completion and accessibility semantic parity. React, TypeScript, router/query/storage/state/component/build/push/test tooling remain implementation selections.",
+      "residual_uncertainty": [
+        "whether existing React/TypeScript substrate should be retained",
+        "exact router and remote-cache library",
+        "exact local Draft storage/encryption adapter",
+        "route/data loading strategy",
+        "component/accessibility primitive system",
+        "form state/validation tooling",
+        "cross-tab coordination",
+        "browser/device support matrix",
+        "bundle/performance budgets",
+        "push transport if any",
+        "offline detection mechanics",
+        "telemetry/client-error collection",
+        "accessibility automated/manual test tooling"
+      ],
+      "revisit_triggers": [
+        "client-rich state complexity exceeds its live-event/offline value",
+        "a server-rendered/progressively enhanced approach materially simplifies implementation without degrading RCV or Experience obligations",
+        "browser storage/security constraints cannot preserve shared-device privacy",
+        "target-device/browser support cannot meet semantic accessibility/degraded requirements",
+        "measured client performance makes current partitioning disproportionate",
+        "whole-architecture validation exposes unresolved state-leakage, accessibility, degraded-mode or recovery risk"
+      ],
+      "accepted_in_subphase": "019-I",
       "supersedes_decision": null
     },
     {
@@ -1125,14 +1181,66 @@
         "stale_bindings": [
           "pre-Phase-013 interaction/mapping assumptions"
         ],
-        "repair_status": "REQUIRED",
-        "repair_document": null,
-        "current_semantic_owner_refs": [],
-        "retained_hypothesis": [],
-        "excluded_obsolete_content": [],
-        "revised_comparison_statement": null,
-        "preservation_evidence_refs": [],
-        "comparison_eligible": false
+        "repair_status": "COMPLETE",
+        "repair_document": "docs/019-architecture-engineering-reentry/019-I-Q4R-004-frontend-interaction-semantic-repair.md",
+        "current_semantic_owner_refs": [
+          "docs/canonical/experience/mapping-authority-baseline.md",
+          "docs/canonical/experience/context-role-modes.md",
+          "docs/canonical/experience/judge-onboarding.md",
+          "docs/canonical/experience/judge-evaluation.md",
+          "docs/canonical/experience/live-operations.md",
+          "docs/canonical/experience/accessibility-resilience.md",
+          "docs/canonical/experience/status-feedback-recovery.md",
+          "docs/canonical/policies/anonymity-disclosure.md",
+          "docs/canonical/invariants/accessibility-semantic-parity.md",
+          "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+          "docs/canonical/architecture/identity-access-authority.md",
+          "docs/canonical/architecture/interface-command-concurrency.md",
+          "docs/canonical/architecture/offline-continuity-reconciliation.md"
+        ],
+        "retained_hypothesis": [
+          "navigation/browser state is non-authoritative",
+          "client state partitions by semantic responsibility",
+          "remote cache is non-authoritative and freshness-capable",
+          "local Draft continuity is bounded and context-bound",
+          "high-consequence command outcomes are explicit and never optimistically final",
+          "Participation/capacity context affects disclosure/navigation but does not create Access",
+          "context transitions isolate private client state",
+          "Judge workflows are complete on narrow/phone viewports",
+          "Organizer dense views transform responsively without semantic loss",
+          "component composition separates accessible primitives semantic patterns features and workspaces",
+          "status dimensions remain distinct",
+          "core interaction targets WCAG 2.2 AA-oriented semantic parity",
+          "client validation assists while server validation remains authoritative",
+          "conflict/recovery preserves evidence and uncertainty",
+          "real-time push is optional acceleration",
+          "client errors are contained without inventing source-state loss"
+        ],
+        "excluded_obsolete_content": [
+          "React as inherited accepted framework",
+          "TypeScript as inherited accepted implementation language",
+          "React Router or routing mode as inherited architecture",
+          "TanStack Query as inherited cache implementation",
+          "IndexedDB as inherited selected Draft storage",
+          "mandatory application shell/route hierarchy",
+          "Panel/Encounter terminology as current evaluation identity",
+          "role labels as authority",
+          "route/cache/control visibility as Access evidence",
+          "historical AUTH/API/SYNC IDs as current authority",
+          "pre-Phase-013 explanation/dependence order as mandatory navigation flow",
+          "service worker/push/component/state/CSS/build tooling as inherited selections"
+        ],
+        "revised_comparison_statement": "Use a client-rich browser architecture whose navigation and client state remain subordinate to current server authority; partition remote cache, command outcome, local Draft continuity, Participation/context hints and ephemeral view state; isolate disclosure/private state on context changes; preserve explicit pending/conflict/unknown/recovery states; support phone-primary Judge work, dense responsive Organizer work and WCAG 2.2 AA-oriented semantic parity; allow degraded capability reduction rather than weaker authority; and keep framework/router/query/storage/push/component mechanisms replaceable.",
+        "preservation_evidence_refs": [
+          "docs/019-architecture-engineering-reentry/019-I-Q4R-004-frontend-interaction-semantic-repair.md",
+          "docs/canonical/experience/mapping-authority-baseline.md",
+          "docs/canonical/experience/accessibility-resilience.md",
+          "docs/canonical/experience/status-feedback-recovery.md",
+          "docs/canonical/architecture/identity-access-authority.md",
+          "docs/canonical/architecture/interface-command-concurrency.md",
+          "docs/canonical/architecture/offline-continuity-reconciliation.md"
+        ],
+        "comparison_eligible": true
       }
     ]
   },
@@ -1184,9 +1292,9 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 7,
+    "decisions_accepted": 8,
     "q4_repairs_total": 4,
-    "q4_repairs_complete": 3,
+    "q4_repairs_complete": 4,
     "probes_authorized": 0,
     "implementation_packages": 0
   }
