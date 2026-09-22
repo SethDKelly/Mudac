@@ -146,15 +146,21 @@ def main() -> int:
         phase019_repo = clone_repo(source, tmp, "phase019")
         phase019_path = phase019_repo / "docs/routing/phase019_architecture_decision_control.json"
         phase019 = json.loads(phase019_path.read_text(encoding="utf-8"))
-        phase019["decisions"][1]["state"] = "ACCEPTED"
-        phase019["decisions"][1]["accepted"] = True
-        phase019["decisions"][1]["selected_option"] = "historical modular monolith"
-        phase019["decisions"][1]["decision_document"] = "unauthorized.md"
-        phase019["decisions"][1]["rationale"] = "premature"
-        phase019["decisions"][1]["evidence_refs"] = ["premature"]
-        phase019["decisions"][1]["alternatives_evaluated"] = ["a", "b"]
-        phase019["decisions"][1]["accepted_in_subphase"] = "019-C"
-        phase019["counts"]["decisions_accepted"] = 1
+        completed = set(phase019["phase019_state"]["completed_subphases"])
+        premature = next(
+            item
+            for item in phase019["decisions"]
+            if item["owning_subphase"] not in completed
+        )
+        premature["state"] = "ACCEPTED"
+        premature["accepted"] = True
+        premature["selected_option"] = "premature selection"
+        premature["decision_document"] = "unauthorized.md"
+        premature["rationale"] = "premature"
+        premature["evidence_refs"] = ["premature"]
+        premature["alternatives_evaluated"] = ["a", "b"]
+        premature["accepted_in_subphase"] = premature["owning_subphase"]
+        phase019["counts"]["decisions_accepted"] += 1
         phase019_path.write_text(json.dumps(phase019, indent=2) + "\n", encoding="utf-8")
         expect_failure(
             "Phase 019 premature decision acceptance",
