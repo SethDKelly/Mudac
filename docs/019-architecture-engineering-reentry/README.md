@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D/E COMPLETE / 019-F NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F COMPLETE / 019-G NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -54,9 +54,9 @@ Accepted the five-boundary ownership-preserving modular-monolith topology in BND
 
 ### 019-D — Persistence / History / Provenance / Projections
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — ADQ-003 ACCEPTED.**
 
-Resolve ADQ-003.
+Accepted PST-001..016: one logical PostgreSQL-compatible authority store, explicit append-stable semantic history, non-authoritative projections, authority-preserving migration and recovery.
 
 ### 019-E — Identity / Authentication / Participation / Access / Session
 
@@ -66,13 +66,13 @@ Accepted IAM-001..018: managed external authentication behind an adapter, stable
 
 ### 019-F — Interfaces / Transactions / Concurrency / Retry / Idempotency
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — Q4R-002 COMPLETE / ADQ-005 ACCEPTED.**
 
-Resolve ADQ-005 after required Q4 repair.
+Accepted CMD-001..022: versioned HTTPS/JSON command-query contracts, commit-confirmed authority, natural-owner transactions, optimistic concurrency, durable logical-operation idempotency and truthful reconciliation.
 
 ### 019-G — Offline / Multi-device / Degraded / Paper / Reconciliation
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-006 after required Q4 repair.
 
@@ -109,12 +109,12 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E
-next eligible subphase               019-F
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F
+next eligible subphase               019-G
 automatic advance                    false
 
-ADQ decisions accepted               4 / 10
-Q4 repairs complete                  1 / 4
+ADQ decisions accepted               5 / 10
+Q4 repairs complete                  2 / 4
 technical probes authorized          0
 
 accepted whole architecture          false
