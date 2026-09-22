@@ -151,6 +151,8 @@ class Validator:
             self.root / "scripts" / "validate_resolution_smoke.py",
             self.root / "scripts" / "scan_agentic_secrets.py",
             self.root / "scripts" / "test_agentic_conformance_guards.py",
+            self.root / "scripts" / "validate_candidate_qualification.py",
+            self.docs / "routing" / "downstream_candidate_qualification.json",
             self.docs / "canonical" / "governance" / "agentic-conformance.md",
             self.docs / "routing" / "agent_tool_compatibility.json",
             self.docs / "canonical" / "governance" / "agent-workflow-portability.md",
