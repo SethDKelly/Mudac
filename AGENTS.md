@@ -6,7 +6,7 @@ This file is a **bootstrap adapter**, not product/design authority.
 
 1. Start at [docs/index.md](docs/index.md).
 2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
-3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For post-closure work, begin from the Phase 017 handoff and the post-Concept-Design re-entry contract.
+3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure qualification, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) and the post-Concept-Design re-entry contract.
 4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
 5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
 
@@ -40,6 +40,8 @@ Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
 Concept Design CLOSED
 
+Phase 018  IN PROGRESS — 018-A COMPLETE / 018-B NEXT
+
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
 implementation readiness      READY
@@ -49,7 +51,7 @@ execution authorization       NOT GRANTED
 
 The active work is:
 
-> **Phase 018 Start Gate — Pre-Implementation Audit, OKF/Repository Hardening, Agentic Development Preparation & Architecture/Engineering Re-entry Planning**
+> **Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry — IN PROGRESS; 018-B NEXT**
 
 ## Retrieval discipline
 
@@ -61,3 +63,5 @@ The active work is:
 - Architecture/implementation comparison → consult the quarantine and re-entry governance first.
 
 Do not treat an index, README, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
+
+Phase 018 repository-governance work does not authorize feature implementation, architecture selection by historical inertia, or automatic continuation into adjacent subphases.
