@@ -1,12 +1,16 @@
 # Architecture
 
-This subtree preserves the architecture MUDAC selected before the latest Jackson methodology completion reassessment.
+This subtree now contains both **current accepted Phase-019 architecture authority** and **preserved downstream candidate architecture**.
 
-## Current authority state
+## Current accepted architecture authority
 
-**SUSPENDED AS A CONCEPT-DESIGN CONSTRAINT.**
+- [Current Architecture Drivers, Quality Priorities, Workload & Trust Boundaries](architecture-drivers.md) — **ADQ-001 ACCEPTED in 019-B; DRV-001..012 current authority.**
 
-Jackson-aligned Concept Design closed successfully in Phase 017. These documents remain **candidate downstream architecture knowledge**, not current authority over product meaning, until an explicit downstream architecture/engineering decision adopts, revises, replaces, or retires them.
+Accepted architecture remains partial. Whole-architecture acceptance is still false until successful 019-L closure.
+
+## Preserved candidate authority state
+
+All other historical architecture documents listed below remain **downstream candidates**. Jackson-aligned Concept Design closed successfully in Phase 017; historical architecture does not become current merely because Phase 019 is active.
 
 The controlling rules are:
 
@@ -38,7 +42,7 @@ Architecture material may be consulted only to:
 
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
-Phase 017 closure did **not** automatically reactivate these documents. Phase 018 now qualifies the repository and prepares architecture/engineering re-entry; candidate architecture must still be compared against the closed conceptual design and explicitly dispositioned before it gains current downstream authority.
+Phase 017 closure did **not** automatically reactivate these documents. Phase 018 qualified them as evidence. Phase 019 may accept bounded current architecture decisions explicitly. 019-B has accepted only the new DRV-* driver owner; all historical candidate documents below remain suspended unless a later decision explicitly adopts/revises/replaces them.
 
 
 ## Phase-017 audit result
@@ -48,7 +52,7 @@ Phase 017 closure did **not** automatically reactivate these documents. Phase 01
 The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K defined the pre-selection question/dependency/evidence plan in `docs/routing/architecture_reentry_plan.json`; every selected option remains null and accepted architecture remains not established. 018-M has now authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A. Phase 019 must compare and explicitly adopt, revise, replace or reject choices under the post-Concept-Design re-entry contract.
 
 
-Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 AUTHORIZED; 019-A COMPLETE / 019-B NEXT ELIGIBLE.** Accepted architecture is still not established.
+Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 ACTIVE; 019-A/B COMPLETE / 019-C NEXT ELIGIBLE.** ADQ-001 is accepted; accepted whole architecture is still not established.
 
 
 Current Phase-019 progression:
@@ -56,8 +60,10 @@ Current Phase-019 progression:
 ~~~text
 PHASE 019 ACTIVE
 019-A COMPLETE
-019-B NEXT ELIGIBLE
-accepted architecture false
+019-B COMPLETE
+019-C NEXT ELIGIBLE
+ADQ-001 ACCEPTED
+accepted whole architecture false
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
