@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "authority": "PRE-ARCHITECTURE IMPLEMENTATION PROGRAM FRAMEWORK ONLY — DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
+  "governing_contract": "docs/canonical/governance/implementation-program-delivery.md",
+  "architecture_plan": "docs/routing/architecture_reentry_plan.json",
+  "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
+  "candidate_qualification": "docs/routing/downstream_candidate_qualification.json",
+  "phase_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-L-implementation-program-structure-verification-strategy-delivery-gate-design.md",
+  "state": {
+    "framework_state": "PRE_ARCHITECTURE",
+    "accepted_architecture_required": true,
+    "accepted_architecture_established": false,
+    "package_derivation_allowed": false,
+    "implementation_execution_authorized": false,
+    "active_package_count": 0,
+    "active_packages": []
+  },
+  "package_lifecycle": [
+    "PROPOSED",
+    "PLANNED",
+    "READY_FOR_AUTHORIZATION",
+    "AUTHORIZED",
+    "IN_PROGRESS",
+    "EVIDENCE_REVIEW",
+    "COMPLETE",
+    "BLOCKED",
+    "SUPERSEDED",
+    "CANCELLED"
+  ],
+  "execution_states": [
+    "AUTHORIZED",
+    "IN_PROGRESS",
+    "EVIDENCE_REVIEW"
+  ],
+  "terminal_states": [
+    "COMPLETE",
+    "SUPERSEDED",
+    "CANCELLED"
+  ],
+  "package_schema": {
+    "required_fields": [
+      "id",
+      "title",
+      "purpose",
+      "status",
+      "scope_in",
+      "scope_out",
+      "semantic_refs",
+      "architecture_refs",
+      "eng_refs",
+      "dependencies",
+      "owned_surfaces",
+      "data_migration_impact",
+      "security_privacy_impact",
+      "accessibility_degraded_impact",
+      "failure_recovery_impact",
+      "required_evidence_classes",
+      "scenario_seeds",
+      "compatibility_rollback",
+      "residual_risks"
+    ],
+    "identity_rule": "Package IDs are durable and independent of source layout; retired IDs are never reused.",
+    "boundary_rule": "Package boundaries derive from accepted architecture plus current semantic authority, not one-to-one Concept mapping or historical file topology."
+  },
+  "evidence_classes": [
+    {
+      "id": "E1",
+      "name": "documentation/static",
+      "examples": [
+        "documentation conformance",
+        "type/lint/format",
+        "static analysis",
+        "generated contract checks"
+      ]
+    },
+    {
+      "id": "E2",
+      "name": "unit/component",
+      "examples": [
+        "pure logic",
+        "component behavior",
+        "deterministic isolated behavior"
+      ]
+    },
+    {
+      "id": "E3",
+      "name": "integration/runtime",
+      "examples": [
+        "real selected database semantics",
+        "material provider/runtime contract",
+        "transaction/concurrency boundary"
+      ]
+    },
+    {
+      "id": "E4",
+      "name": "scenario/end-to-end",
+      "examples": [
+        "cross-boundary consequential workflow",
+        "browser/API integrated journey"
+      ]
+    },
+    {
+      "id": "E5",
+      "name": "security/accessibility/recovery",
+      "examples": [
+        "authority/disclosure behavior",
+        "abuse controls",
+        "accessibility",
+        "concurrency/recovery"
+      ]
+    },
+    {
+      "id": "E6",
+      "name": "operational/deployment",
+      "examples": [
+        "migration",
+        "rollout",
+        "restore",
+        "load",
+        "observability",
+        "disaster recovery"
+      ]
+    },
+    {
+      "id": "E7",
+      "name": "production",
+      "examples": [
+        "authorized production behavior",
+        "production operational evidence"
+      ]
+    }
+  ],
+  "scenario_seeds": [
+    "lost-response retry after consequential authoritative action",
+    "duplicate/offline Draft convergence",
+    "shared-device context handoff",
+    "stale Participation/Access/session state",
+    "paper/electronic capture disagreement",
+    "post-finalization correction",
+    "affected Outcome Declaration with same visible winner",
+    "exceptional no-result closeout",
+    "stale Export after source correction",
+    "withdrawn Publication while external copies remain",
+    "concurrent/repeated legitimate intent",
+    "partial bulk result",
+    "unknown/degraded result",
+    "adversarial request volume",
+    "conflicting legitimate authority resolved at the natural owner"
+  ],
+  "gates": [
+    {
+      "id": "G0",
+      "name": "Architecture Accepted",
+      "permits": "PACKAGE_DERIVATION",
+      "requires": [
+        "accepted architecture current authority exists",
+        "historical candidate supersession/disposition is explicit"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G1",
+      "name": "Package Planned",
+      "permits": "READINESS_REVIEW",
+      "requires": [
+        "package schema complete",
+        "dependencies explicit",
+        "semantic/architecture traceability complete",
+        "evidence contract explicit",
+        "risk/migration/security impacts identified"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G2",
+      "name": "Package Authorized",
+      "permits": "DOMAIN_IMPLEMENTATION_EXECUTION",
+      "requires": [
+        "G1 complete",
+        "required predecessors complete or independence proven",
+        "explicit human/program authorization",
+        "no unresolved semantic/architecture blocker"
+      ],
+      "execution_authority": true
+    },
+    {
+      "id": "G3",
+      "name": "Implementation Evidence",
+      "permits": "EVIDENCE_REVIEW",
+      "requires": [
+        "planned implementation complete enough for review",
+        "applicable E1-E5 evidence passes",
+        "failures and retries remain visible"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G4",
+      "name": "Compatibility / Integration",
+      "permits": "COMPLETION_REVIEW",
+      "requires": [
+        "shared-state and integration compatibility closed",
+        "migration/recovery evidence where applicable",
+        "affected scenario seeds reconciled"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G5",
+      "name": "Package Complete",
+      "permits": "NEXT_PACKAGE_ELIGIBILITY",
+      "requires": [
+        "G3/G4 applicable evidence closure",
+        "traceability/docs current",
+        "residual risks assigned",
+        "no hidden blockers"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G6",
+      "name": "Release Candidate",
+      "permits": "RELEASE_EVALUATION",
+      "requires": [
+        "release authority",
+        "applicable E6 evidence",
+        "deployment/migration/rollback evidence"
+      ],
+      "execution_authority": false
+    },
+    {
+      "id": "G7",
+      "name": "Production Readiness",
+      "permits": "SEPARATE_PRODUCTION_AUTHORIZATION",
+      "requires": [
+        "applicable E6/E7 evidence",
+        "security/accessibility/recovery readiness",
+        "external legal/operational requirements satisfied"
+      ],
+      "execution_authority": false
+    }
+  ],
+  "planning_rules": {
+    "derive_packages_only_after_architecture": true,
+    "dependency_graph_required": true,
+    "dependency_graph_must_be_acyclic": true,
+    "auto_advance_packages": false,
+    "package_completion_does_not_authorize_next": true,
+    "merge_does_not_authorize_deploy": true,
+    "complete_does_not_equal_production_ready": true,
+    "synthetic_fixtures_default": true,
+    "secrets_in_source_forbidden": true,
+    "migration_compatibility_required_when_state_changes": true
+  },
+  "future_start_gate": {
+    "proposed_lifecycle": "Phase 020 — Implementation Planning & Controlled Delivery",
+    "decomposition_state": "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE",
+    "required_actions": [
+      "confirm accepted architecture baseline",
+      "derive implementation packages from accepted architecture and current semantic authority",
+      "create package dependency graph",
+      "map ENG/IPG/scenario/evidence obligations",
+      "qualify reusable historical Q3/Q5 implementation substrate",
+      "establish supply-chain secrets fixture privacy migration baselines",
+      "identify planning-ready packages",
+      "explicitly decide whether any package receives G2 execution authorization"
+    ]
+  }
+}
