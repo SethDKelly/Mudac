@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -14,7 +15,10 @@ def fail(message: str) -> int:
     return 1
 
 def main() -> int:
-    repo = Path(__file__).resolve().parents[1]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
+    args = parser.parse_args()
+    repo = Path(args.repo).resolve()
     try:
         policy = json.loads((repo / POLICY).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
