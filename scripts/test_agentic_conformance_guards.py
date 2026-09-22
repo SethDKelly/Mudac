@@ -123,6 +123,20 @@ def main() -> int:
             errors,
         )
 
+        implementation_repo = clone_repo(source, tmp, "implementation")
+        framework_path = implementation_repo / "docs/routing/implementation_program_framework.json"
+        framework = json.loads(framework_path.read_text(encoding="utf-8"))
+        framework["state"]["package_derivation_allowed"] = True
+        framework["state"]["implementation_execution_authorized"] = True
+        framework["state"]["active_package_count"] = 1
+        framework["state"]["active_packages"] = ["IMP-001"]
+        framework_path.write_text(json.dumps(framework, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "implementation execution leakage",
+            run_script(source, implementation_repo, "scripts/validate_implementation_program_framework.py", "--repo", str(implementation_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -135,7 +149,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 8 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 9 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
