@@ -42,7 +42,7 @@ Concept Design CLOSED
 
 PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE
+PHASE 019 ACTIVE — 019-A/B COMPLETE / 019-C NEXT ELIGIBLE
 
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
@@ -53,7 +53,7 @@ execution authorization       NOT GRANTED
 
 The active work is:
 
-> **PHASE 019 ACTIVE — Architecture & Engineering Re-entry — 019-A COMPLETE / 019-B NEXT ELIGIBLE**
+> **PHASE 019 ACTIVE — Architecture & Engineering Re-entry — 019-A/B COMPLETE / 019-C NEXT ELIGIBLE**
 
 ## Human-directed action boundary
 
@@ -105,9 +105,10 @@ Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A COMPLETE
-019-B NEXT ELIGIBLE
-accepted architecture false
+019-A/B COMPLETE
+019-C NEXT ELIGIBLE
+ADQ-001 ACCEPTED
+accepted whole architecture false
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
