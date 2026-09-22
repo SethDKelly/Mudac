@@ -49,7 +49,7 @@ Architecture material may be consulted only to:
 
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
-Phase 017 closure did **not** automatically reactivate these documents. Phase 018 qualified them as evidence. Phase 019 may accept bounded current architecture decisions explicitly. 019-B accepted DRV-* drivers, 019-C accepted BND-* application boundaries after Q4R-001 repair, 019-D accepted PST-* persistence/history/recovery architecture, 019-E accepted IAM-* identity/access/session architecture, and 019-F accepted CMD-* interface/transaction/concurrency architecture after Q4R-002 repair, and 019-G accepted RCV-* offline/degraded continuity and reconciliation architecture after Q4R-003 repair, and 019-H accepted ART-* artifact/export/publication/delivery architecture, and 019-I accepted CLT-* browser/client interaction architecture after Q4R-004 repair. Historical candidate documents below remain suspended unless a later decision explicitly adopts, revises, replaces or retires them.
+Phase 017 did not reactivate these candidates. Phase 018 qualified them as evidence; Phase 019 accepts only explicit bounded decisions. Current accepted families are DRV, BND, PST, IAM, CMD, RCV, ART and CLT. Historical candidates remain suspended unless explicitly adopted, revised, replaced or retired.
 
 
 ## Phase-017 audit result
