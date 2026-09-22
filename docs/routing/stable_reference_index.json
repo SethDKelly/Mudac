@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 362,
+    "total": 378,
     "by_role": {
-      "current-authority": 220,
+      "current-authority": 236,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -39,6 +39,7 @@
       "OPG": 6,
       "OUT": 2,
       "OWN": 12,
+      "PST": 16,
       "PUB": 1,
       "RANK": 2,
       "REP": 15,
@@ -1890,6 +1891,102 @@
       "anchor": "own-012",
       "role": "current-authority",
       "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-012"
+    },
+    "PST-001": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-001"
+    },
+    "PST-002": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-002"
+    },
+    "PST-003": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-003"
+    },
+    "PST-004": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-004"
+    },
+    "PST-005": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-005"
+    },
+    "PST-006": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-006"
+    },
+    "PST-007": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-007"
+    },
+    "PST-008": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-008"
+    },
+    "PST-009": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-009"
+    },
+    "PST-010": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-010"
+    },
+    "PST-011": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-011"
+    },
+    "PST-012": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-012"
+    },
+    "PST-013": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-013"
+    },
+    "PST-014": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-014"
+    },
+    "PST-015": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-015"
+    },
+    "PST-016": {
+      "owner_path": "docs/canonical/architecture/persistence-history-recovery.md",
+      "anchor": "pst-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/persistence-history-recovery.md#pst-016"
     },
     "PUB-001": {
       "owner_path": "docs/canonical/concepts/publication.md",
