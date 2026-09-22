@@ -43,9 +43,10 @@
       "019-A",
       "019-B",
       "019-C",
-      "019-D"
+      "019-D",
+      "019-E"
     ],
-    "next_eligible_subphase": "019-E",
+    "next_eligible_subphase": "019-F",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -92,7 +93,7 @@
       "questions": [
         "ADQ-004"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-F",
@@ -100,7 +101,7 @@
       "questions": [
         "ADQ-005"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-G",
@@ -441,11 +442,17 @@
       "question_id": "ADQ-004",
       "title": "Identity, Authentication, Participation, Access & Session Architecture",
       "owning_subphase": "019-E",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Managed standards-compatible external authentication behind an application adapter, stable MUDAC Identity/Participation/Access, and opaque first-party server session (IAM-001..IAM-018)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-E-identity-authentication-participation-access-session-technical-authority-architecture.md",
+      "alternatives_evaluated": [
+        "Historical Identity/Access/Session architecture unchanged",
+        "Provider-native roles/groups/claims as MUDAC authorization",
+        "Self-hosted MUDAC credentials and authentication protocols",
+        "Managed external IdP with browser/provider bearer-session authority",
+        "Managed standards-compatible external IdP plus MUDAC-owned Identity/Participation/Access and first-party opaque server session"
+      ],
       "constraint_refs": [
         "ENG-004",
         "ENG-011",
@@ -461,20 +468,63 @@
       "candidate_inputs": [
         "docs/canonical/architecture/identity-access-session.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/identity-access-session.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/concepts/identity.md",
+        "docs/canonical/concepts/participation.md",
+        "docs/canonical/concepts/access.md",
+        "docs/canonical/synchronizations/competition-participation-access.md",
+        "docs/canonical/experience/context-role-modes.md",
+        "docs/canonical/experience/judge-onboarding.md",
+        "docs/canonical/experience/accessibility-resilience.md",
+        "docs/canonical/invariants/organizer-not-judge-author.md",
+        "docs/canonical/invariants/truthful-authority-under-uncertainty.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "shared-device context handoff",
         "stale Participation/Access/session state",
         "adversarial request volume"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "MUDAC requires stable human identity continuity without transferring Competition authority to authentication infrastructure. A managed standards-compatible external IdP behind an adapter plus MUDAC-owned Identity, Competition-scoped Participation, contextual Access and opaque first-party server sessions preserves authority separation, supports shared-device/revocation behavior and minimizes provider lock-in.",
+      "rejected_alternatives": [
+        "Historical candidate unchanged — provider-independent semantics are strong, but historical provider/runtime assumptions require fresh selection.",
+        "Provider-native roles/groups/claims — collapses authentication/provider administration into contextual Competition authority.",
+        "Self-hosted credentials — materially higher credential-security/operational burden without current product need.",
+        "Browser/provider bearer-session authority — increases stale-claim/browser-token exposure and weakens application revocation/currentness."
+      ],
+      "reversibility_migration": "Provider lock-in is intentionally bounded: MUDAC Identity IDs, Participation/Access and application session semantics remain application-owned. Provider replacement requires account-link/reverification and session migration but not rewriting Competition authority or authorship history.",
+      "residual_uncertainty": [
+        "concrete external identity provider",
+        "exact provider protocol/configuration",
+        "exact MFA/assurance policy",
+        "exact cookie/session lifetimes",
+        "exact session backing store",
+        "exact rate/abuse-control implementation",
+        "enterprise federation/SSO outside current PF-01",
+        "exact break-glass operational procedure",
+        "final secret-management system"
+      ],
+      "revisit_triggers": [
+        "concrete provider cannot preserve stable MUDAC Identity/application-owned Access",
+        "shared-device operation cannot be made safe with selected session model",
+        "required federation/SSO changes application/provider authority boundary",
+        "session availability/revocation needs cannot be met proportionately",
+        "legal/security requirements change authentication assurance or retention expectations",
+        "whole-architecture validation exposes privilege, stale-access or operator-authority leakage"
+      ],
+      "accepted_in_subphase": "019-E",
       "supersedes_decision": null
     },
     {
@@ -899,7 +949,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 3,
+    "decisions_accepted": 4,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 1,
     "probes_authorized": 0,
