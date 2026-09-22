@@ -50,7 +50,7 @@ Current state:
 ~~~text
 Concept Design                     CLOSED
 Phase 018                         COMPLETE — PASS
-Phase 019                         AUTHORIZED — 019-A NEXT ELIGIBLE
+Phase 019                         ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE
 implementation readiness           READY
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture          NOT ESTABLISHED
@@ -411,6 +411,6 @@ Engineering difficulty alone is not evidence that Concept Design is wrong.
 
 017-H activated this handoff contract.
 
-Phase 018 is complete. 018-M authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A using the pre-selection architecture framework defined in 018-K.
+Phase 018 is complete. 018-M authorized **Phase 019 — Architecture & Engineering Re-entry**. 019-A has established the Phase-019 decision/evidence authority; 019-B is next eligible.
 
-Phase 019 authorization permits governed architecture evaluation and acceptance work only. It does not preselect any option, activate a historical candidate, create implementation packages, or grant implementation execution authority.
+Phase 019 decision execution is governed by [Phase-019 Architecture Decision Authority & Evidence Contract](architecture-decision-authority.md). Phase 019 authorization permits governed architecture evaluation and acceptance work only. It does not preselect any option, activate a historical candidate, create implementation packages, or grant implementation execution authority.
