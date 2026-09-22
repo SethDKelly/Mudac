@@ -3,9 +3,9 @@
   "authority": "DERIVED PATH-ROLE INVENTORY — AUTHORED OWNER FILES RETAIN SEMANTIC AUTHORITY",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 112,
+    "total": 113,
     "by_role": {
-      "current-authority": 89,
+      "current-authority": 90,
       "downstream-candidate": 15,
       "external-reference": 2,
       "historical-adapter": 6
@@ -19,6 +19,10 @@
     {
       "path": "docs/canonical/architecture/architectural-foundation.md",
       "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/architecture-drivers.md",
+      "role": "current-authority"
     },
     {
       "path": "docs/canonical/architecture/aws-runtime-operations.md",
