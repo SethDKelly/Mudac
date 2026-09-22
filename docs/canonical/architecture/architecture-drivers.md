@@ -1,7 +1,7 @@
 ---
 type: Accepted Architecture Foundation
 title: Current Architecture Drivers, Quality Priorities, Workload & Trust Boundaries
-description: Accepted ADQ-001 architecture foundation for MUDAC: current semantic constraints, quality-attribute ordering, bounded live-event workload assumptions, trust boundaries, safe degraded/availability posture, operability/cost/reversibility expectations, downstream delivery context, evidence thresholds and revisit triggers.
+description: "Accepted ADQ-001 architecture foundation for MUDAC: current semantic constraints, quality-attribute ordering, bounded live-event workload assumptions, trust boundaries, safe degraded/availability posture, operability/cost/reversibility expectations, downstream delivery context, evidence thresholds and revisit triggers."
 status: stable
 tags: [architecture, current, drivers, quality-attributes, workload, trust, resilience, accessibility, operability]
 sources:
