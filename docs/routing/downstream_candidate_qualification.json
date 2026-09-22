@@ -1,0 +1,501 @@
+{
+  "schema_version": "1.0",
+  "authority": "QUALIFICATION EVIDENCE ONLY — DOES NOT ACCEPT OR ACTIVATE ARCHITECTURE/IMPLEMENTATION",
+  "governing_contract": "docs/canonical/governance/post-concept-design-reentry.md",
+  "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
+  "phase_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-J-historical-architecture-implementation-candidate-qualification-q1-q6.md",
+  "summary": {
+    "total": 15,
+    "architecture": 9,
+    "implementation": 6,
+    "authority_state": "suspended-candidate",
+    "adopted": 0,
+    "q1_docs": 6,
+    "q2_docs": 7,
+    "q3_docs": 10,
+    "q4_docs": 6,
+    "q5_docs": 1,
+    "q6_docs": 0
+  },
+  "dispositions": {
+    "QUALIFIED_COMPARISON_INPUT": "Useful current comparison input after obligation-based revalidation; not adopted.",
+    "QUALIFIED_AFTER_REVISION": "May enter comparison only after stale semantic bindings are revised/removed and remaining hypotheses are revalidated.",
+    "QUALIFIED_VENDOR_HYPOTHESIS": "Concrete vendor/runtime hypothesis preserved for later comparison with alternatives; no privileged status.",
+    "QUALIFIED_IMPLEMENTATION_HYPOTHESIS": "Concrete implementation/tooling hypothesis preserved for later planning only after architecture alignment.",
+    "QUALIFIED_VERIFICATION_INPUT": "Verification principles/scenarios are reusable; framework/tool bindings remain hypotheses.",
+    "FACT_ONLY": "Preserved executable/non-domain repository fact; may be retained or replaced but cannot constrain architecture."
+  },
+  "records": [
+    {
+      "path": "docs/canonical/architecture/architectural-foundation.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q1",
+        "Q2"
+      ],
+      "disposition": "QUALIFIED_COMPARISON_INPUT",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [],
+      "eng": [
+        "ENG-001",
+        "ENG-004",
+        "ENG-005",
+        "ENG-006",
+        "ENG-007",
+        "ENG-009",
+        "ENG-010",
+        "ENG-011",
+        "ENG-012",
+        "ENG-013",
+        "ENG-015",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "High-value authority, freshness, retry, disclosure and trust-boundary forces remain useful, while topology/vendor examples require fresh architecture justification."
+    },
+    {
+      "path": "docs/canonical/architecture/application-boundaries.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q2",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_AFTER_REVISION",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "Judging Encounter",
+        "Official Outcome Revision"
+      ],
+      "eng": [
+        "ENG-001",
+        "ENG-009",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Module-boundary ideas may remain viable, but the old module map and semantic bindings cannot be compared unchanged against current Concept ownership."
+    },
+    {
+      "path": "docs/canonical/architecture/data-persistence.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q2",
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_COMPARISON_INPUT",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [],
+      "eng": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-010",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "History/projection/persistence structure is a serious candidate, but PostgreSQL/RDS, one-database and outbox choices remain unaccepted technology/architecture hypotheses."
+    },
+    {
+      "path": "docs/canonical/architecture/identity-access-session.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_COMPARISON_INPUT",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [],
+      "eng": [
+        "ENG-004",
+        "ENG-011",
+        "ENG-012",
+        "ENG-015",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "Identity/Participation/Access separation and session non-authority align strongly with current obligations; session shape, Cognito and provider topology require revalidation."
+    },
+    {
+      "path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q1",
+        "Q2",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_AFTER_REVISION",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "Official Outcome Revision"
+      ],
+      "eng": [
+        "ENG-007",
+        "ENG-009",
+        "ENG-015",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Current-state, retry, uncertainty and non-authoritative query principles are useful, but old outcome semantics and fixed API/transaction defaults require revision/revalidation."
+    },
+    {
+      "path": "docs/canonical/architecture/synchronization-recovery.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_AFTER_REVISION",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "historical Encounter-era grouping assumptions"
+      ],
+      "eng": [
+        "ENG-005",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-05",
+        "ERI-09"
+      ],
+      "rationale": "Convergence and uncertainty principles are strong, but IndexedDB/local synchronization mechanics and earlier grouping assumptions require explicit current-semantic reconciliation."
+    },
+    {
+      "path": "docs/canonical/architecture/external-representation.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_COMPARISON_INPUT",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [],
+      "eng": [
+        "ENG-005",
+        "ENG-006",
+        "ENG-010",
+        "ENG-011",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "Source/artifact/publication separation and provenance remain useful architecture forces; object storage, metadata storage and delivery mechanisms remain candidates."
+    },
+    {
+      "path": "docs/canonical/architecture/frontend-interaction.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_AFTER_REVISION",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "pre-Phase-013 interaction/mapping assumptions"
+      ],
+      "eng": [
+        "ENG-004",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Many interaction principles may still fit, but Phase-013 Experience is current authority and React/Router/Query/IndexedDB choices plus older mapping assumptions require fresh evaluation."
+    },
+    {
+      "path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "layer": "architecture",
+      "q_classes": [
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_VENDOR_HYPOTHESIS",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": true,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [],
+      "eng": [
+        "ENG-011",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "This is a coherent AWS-specific realization hypothesis, but no current product obligation requires AWS/RDS/Cognito/ECS/S3/SQS or its recovery topology."
+    },
+    {
+      "path": "docs/canonical/implementation/implementation-foundation.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q3",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_IMPLEMENTATION_HYPOTHESIS",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "Official Outcome Revision",
+        "008-L execution gate",
+        "Phase 009 slice language"
+      ],
+      "eng": [
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "ENG-018"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-06",
+        "ERI-07",
+        "ERI-10"
+      ],
+      "rationale": "Delivery/toolchain discipline is useful evidence, but concrete TypeScript/Fastify/Kysely/PostgreSQL/OpenTofu selections and old execution gates belong after architecture decisions."
+    },
+    {
+      "path": "docs/canonical/implementation/verification-strategy.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q1",
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_VERIFICATION_INPUT",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "008-L execution gate",
+        "Phase 009 slice language"
+      ],
+      "eng": [
+        "ENG-014",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "ENG-018"
+      ],
+      "risks": [
+        "ERI-05",
+        "ERI-06",
+        "ERI-07",
+        "ERI-08",
+        "ERI-10"
+      ],
+      "rationale": "Evidence layering, determinism, security/accessibility and scenario intent remain valuable; framework/service-specific test choices must be re-derived after architecture."
+    },
+    {
+      "path": "docs/canonical/implementation/source-topology.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_IMPLEMENTATION_HYPOTHESIS",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "008-L execution gate",
+        "Phase 009 slice language"
+      ],
+      "eng": [
+        "ENG-001",
+        "ENG-016",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09",
+        "ERI-10"
+      ],
+      "rationale": "Package/source graph is a physical realization hypothesis only; current Concept ownership does not imply this workspace/package decomposition."
+    },
+    {
+      "path": "docs/canonical/implementation/runtime-delivery-bootstrap.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q3",
+        "Q5"
+      ],
+      "disposition": "FACT_ONLY",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": true,
+      "stale_bindings": [
+        "006-E historical handoff",
+        "008-L historical handoff"
+      ],
+      "eng": [
+        "ENG-016",
+        "ENG-017",
+        "ENG-018"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-06",
+        "ERI-07",
+        "ERI-10"
+      ],
+      "rationale": "Node/pnpm/TypeScript/React/Fastify/PostgreSQL/OpenTofu scaffolding is a real non-domain repository fact; reuse may save work but does not choose future architecture."
+    },
+    {
+      "path": "docs/canonical/implementation/persistence-history-projection.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q3",
+        "Q4"
+      ],
+      "disposition": "QUALIFIED_AFTER_REVISION",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": true,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "Official Outcome Revision",
+        "008-L execution gate"
+      ],
+      "eng": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-010",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-06",
+        "ERI-09",
+        "ERI-10"
+      ],
+      "rationale": "Physical history/projection patterns may inform later planning, but the PostgreSQL schema model and obsolete Outcome Revision substrate cannot be activated unchanged."
+    },
+    {
+      "path": "docs/canonical/implementation/identity-authentication-access-session.md",
+      "layer": "implementation",
+      "q_classes": [
+        "Q3"
+      ],
+      "disposition": "QUALIFIED_IMPLEMENTATION_HYPOTHESIS",
+      "authority_state": "suspended-candidate",
+      "eligible_for_018k_comparison": false,
+      "requires_semantic_revision": false,
+      "requires_technology_revalidation": true,
+      "preserve_as_executable_fact": false,
+      "stale_bindings": [
+        "008-L execution gate",
+        "Phase 009 slice language"
+      ],
+      "eng": [
+        "ENG-004",
+        "ENG-011",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "ENG-018"
+      ],
+      "risks": [
+        "ERI-02",
+        "ERI-06",
+        "ERI-07",
+        "ERI-09",
+        "ERI-10"
+      ],
+      "rationale": "Identity/session implementation details remain a concrete provider/database hypothesis; current semantic separation must be preserved but Cognito/session/database mechanics remain undecided."
+    }
+  ]
+}
