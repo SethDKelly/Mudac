@@ -50,7 +50,7 @@ PHASE 018 COMPLETE — PASS
 018-M COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
 PHASE 019 AUTHORIZED
-019-A COMPLETE / 019-B NEXT ELIGIBLE
+019-A/B COMPLETE / 019-C NEXT ELIGIBLE
 
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture NOT ESTABLISHED
@@ -66,9 +66,10 @@ Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A COMPLETE
-019-B NEXT ELIGIBLE
-accepted architecture false
+019-A/B COMPLETE
+019-C NEXT ELIGIBLE
+ADQ-001 ACCEPTED
+accepted whole architecture false
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
