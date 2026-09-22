@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T08:14:00-05:00 }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T09:30:00-05:00 }
 ---
 
 # Canonical contract
@@ -163,6 +163,26 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [PST-014 — Schema Migration Is Owner-Scoped, Forward-Compatible and History-Preserving](../architecture/persistence-history-recovery.md#pst-014)
 * [PST-015 — Data Recovery Restores Authoritative Consistency Before Service Availability Is Claimed](../architecture/persistence-history-recovery.md#pst-015)
 * [PST-016 — Recovery Never Fabricates Authority After Uncertain or Partial Failure](../architecture/persistence-history-recovery.md#pst-016)
+# Accepted identity, authentication, access and session architecture
+
+* [IAM-001 — Authentication Proves Principal Control; MUDAC Owns Application Identity and Authority](../architecture/identity-access-authority.md#iam-001)
+* [IAM-002 — External Authentication Subjects Link Explicitly to Durable MUDAC Identity](../architecture/identity-access-authority.md#iam-002)
+* [IAM-003 — Participation Is Competition-Scoped and Never Becomes a Permanent Account Role](../architecture/identity-access-authority.md#iam-003)
+* [IAM-004 — Capabilities Never Union Across Participation Contexts](../architecture/identity-access-authority.md#iam-004)
+* [IAM-005 — Access Is Evaluated From Current Application Authority at Protected Boundaries](../architecture/identity-access-authority.md#iam-005)
+* [IAM-006 — Browser Continuity Uses an Opaque First-Party Server-Controlled Session](../architecture/identity-access-authority.md#iam-006)
+* [IAM-007 — Session State Is Continuity and Assurance Evidence, Not Capability Authority](../architecture/identity-access-authority.md#iam-007)
+* [IAM-008 — Sessions Are Bounded, Revocable and Replaceable Without Changing Semantic Identity](../architecture/identity-access-authority.md#iam-008)
+* [IAM-009 — Shared-Device and Context Handoff Terminates Prior Private Context Before Reuse](../architecture/identity-access-authority.md#iam-009)
+* [IAM-010 — Invitation, QR, Event and Deep-Link Credentials Route or Claim Bounded Context; They Do Not Authenticate Authority](../architecture/identity-access-authority.md#iam-010)
+* [IAM-011 — Reverification and Step-Up Strengthen Principal Assurance but Never Create Application Capability](../architecture/identity-access-authority.md#iam-011)
+* [IAM-012 — Exceptional Application Access Is Narrow, Attributable, Expiring and Revocable](../architecture/identity-access-authority.md#iam-012)
+* [IAM-013 — Identity Recovery/Linking Cannot Silently Rewrite Historical Attribution](../architecture/identity-access-authority.md#iam-013)
+* [IAM-014 — Technical/Operator Authority Is a Separate Principal/Context From Competition Participation](../architecture/identity-access-authority.md#iam-014)
+* [IAM-015 — Break-Glass Access Is Exceptional Technical Authority, Not Semantic Impersonation](../architecture/identity-access-authority.md#iam-015)
+* [IAM-016 — Authentication-Provider Integration Remains Replaceable Behind an Application Adapter](../architecture/identity-access-authority.md#iam-016)
+* [IAM-017 — Authentication/Provider Unavailability Reduces Capability Safely; It Does Not Broaden Authority](../architecture/identity-access-authority.md#iam-017)
+* [IAM-018 — Access Denial and Security Response Preserve Truthful, Non-Leaking Explanation](../architecture/identity-access-authority.md#iam-018)
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
