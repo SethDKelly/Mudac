@@ -25,7 +25,7 @@ Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
 
 PHASE 018 COMPLETE             PASS — REPOSITORY QUALIFIED FOR ARCHITECTURE/ENGINEERING RE-ENTRY
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE                   019-A COMPLETE / 019-B NEXT ELIGIBLE
+PHASE 019 ACTIVE                   019-A/B COMPLETE / 019-C NEXT ELIGIBLE
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
 implementation readiness      READY
@@ -47,9 +47,10 @@ Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A COMPLETE
-019-B NEXT ELIGIBLE
-accepted architecture false
+019-A/B COMPLETE
+019-C NEXT ELIGIBLE
+ADQ-001 ACCEPTED
+accepted whole architecture false
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
