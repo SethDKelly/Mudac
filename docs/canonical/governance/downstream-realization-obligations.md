@@ -12,7 +12,7 @@ sources:
   - resource: ../../017-methodology-closure-canonical-consolidation-completion-decision/017-H-concept-design-closure-decision-readiness-transition-post-closure-handoff.md
   - resource: ../../016-scenario-misfit-exception-failure-adversarial-design-validation/
   - resource: agentic-conformance.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:02:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:48:00Z }
 ---
 
 # Purpose
@@ -265,7 +265,7 @@ The pre-Phase-009 downstream corpus remains Q1–Q6 candidate material.
 
 Historical chronology, prior PASS states, existing code or bootstrap convenience cannot close a current engineering obligation by themselves.
 
-018-J must classify each retained candidate before 018-K may use it as architecture evidence.
+018-J has classified every retained candidate. The current qualification evidence is `docs/routing/downstream_candidate_qualification.json`; 018-K may use only the qualified architecture-candidate subset as comparison evidence, and that evidence still does not constitute architecture adoption.
 
 Classification: **re-entry governance obligation**.
 
@@ -384,7 +384,7 @@ Otherwise the concern remains downstream.
   current obligations + risks
         ↓
 018-J
-  qualify historical candidates against those obligations
+  qualified historical candidates against those obligations
         ↓
 018-K
   define/decide architecture questions with evidence
