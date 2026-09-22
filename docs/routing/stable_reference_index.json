@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 338,
+    "total": 350,
     "by_role": {
-      "current-authority": 196,
+      "current-authority": 208,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -25,6 +25,7 @@
       "DATA": 14,
       "DISC": 2,
       "DOC": 7,
+      "DRV": 12,
       "ENG": 18,
       "EVAL": 3,
       "EXPORT": 3,
@@ -1000,6 +1001,78 @@
       "anchor": "doc-007",
       "role": "current-authority",
       "locator": "docs/canonical/governance/documentation-authority.md#doc-007"
+    },
+    "DRV-001": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-001"
+    },
+    "DRV-002": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-002"
+    },
+    "DRV-003": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-003"
+    },
+    "DRV-004": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-004"
+    },
+    "DRV-005": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-005"
+    },
+    "DRV-006": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-006"
+    },
+    "DRV-007": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-007"
+    },
+    "DRV-008": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-008"
+    },
+    "DRV-009": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-009"
+    },
+    "DRV-010": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-010"
+    },
+    "DRV-011": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-011"
+    },
+    "DRV-012": {
+      "owner_path": "docs/canonical/architecture/architecture-drivers.md",
+      "anchor": "drv-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/architecture-drivers.md#drv-012"
     },
     "ENG-001": {
       "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
