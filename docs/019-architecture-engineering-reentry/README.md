@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G COMPLETE / 019-H NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H COMPLETE / 019-I NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -78,13 +78,13 @@ Accepted RCV-001..018: server-authoritative Draft currentness, bounded non-autho
 
 ### 019-H — Artifact / Export / Publication / External Delivery
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — ADQ-007 ACCEPTED.**
 
-Resolve ADQ-007.
+Accepted ART-001..020: exact-source Exports, immutable integrity-addressed artifacts behind authoritative metadata, explicit Publication, successor-based replacement, truthful withdrawal and non-authoritative delivery.
 
 ### 019-I — Browser / Client / Accessibility / Degraded Interaction
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-008 after required Q4 repair.
 
@@ -109,11 +109,11 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G
-next eligible subphase               019-H
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G, 019-H
+next eligible subphase               019-I
 automatic advance                    false
 
-ADQ decisions accepted               6 / 10
+ADQ decisions accepted               7 / 10
 Q4 repairs complete                  3 / 4
 technical probes authorized          0
 

@@ -1,6 +1,6 @@
 # Phase 019 — Architecture & Engineering Re-entry
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G COMPLETE / 019-H NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H COMPLETE / 019-I NEXT ELIGIBLE
 
 Phase 019 is the fresh architecture decision and acceptance program authorized by 018-M.
 
@@ -36,8 +36,8 @@ implementation execution       false
 - [019-E — Identity, Authentication, Participation, Access, Session & Technical-Authority Architecture](019-E-identity-authentication-participation-access-session-technical-authority-architecture.md) — **COMPLETE — PASS — ADQ-004 ACCEPTED**
 - [019-F — Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture](019-F-interface-command-query-transaction-concurrency-retry-idempotency-architecture.md) — **COMPLETE — PASS — Q4R-002 COMPLETE / ADQ-005 ACCEPTED**
 - [019-G — Offline Draft, Multi-device, Degraded, Paper & Reconciliation Architecture](019-G-offline-draft-multi-device-degraded-paper-reconciliation-architecture.md) — **COMPLETE — PASS — Q4R-003 COMPLETE / ADQ-006 ACCEPTED**
-- 019-H — Artifact, Export, Publication, External Representation & Delivery Architecture — **NEXT ELIGIBLE**
-- 019-I — Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture — PLANNED
+- [019-H — Artifact, Export, Publication, External Representation & Delivery Architecture](019-H-artifact-export-publication-external-representation-delivery-architecture.md) — **COMPLETE — PASS — ADQ-007 ACCEPTED**
+- 019-I — Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture — **NEXT ELIGIBLE**
 - 019-J — Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture — PLANNED
 - 019-K — Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation — PLANNED
 - 019-L — Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff — PLANNED
@@ -58,10 +58,10 @@ Use:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G COMPLETE
-019-H NEXT ELIGIBLE
+019-A/B/C/D/E/F/G/H COMPLETE
+019-I NEXT ELIGIBLE
 
-ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 ACCEPTED
+ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003          COMPLETE
 accepted whole architecture          NOT ESTABLISHED
 active implementation packages       0

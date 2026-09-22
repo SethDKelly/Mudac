@@ -259,16 +259,17 @@ Generated or machine-readable state cannot create authority that the correspondi
 
 # Current Phase-019 posture
 
-After 019-G:
+After 019-H:
 
 ~~~text
 Phase 019                         ACTIVE
 019-A / 019-B / 019-C / 019-D /
-019-E / 019-F / 019-G             COMPLETE
-019-H                             NEXT ELIGIBLE
+019-E / 019-F / 019-G / 019-H     COMPLETE
+019-I                             NEXT ELIGIBLE
 ADQ-001 / ADQ-002 / ADQ-003 /
-ADQ-004 / ADQ-005 / ADQ-006       ACCEPTED
-ADQ decisions accepted            6 / 10
+ADQ-004 / ADQ-005 / ADQ-006 /
+ADQ-007                           ACCEPTED
+ADQ decisions accepted            7 / 10
 Q4 architecture repairs complete  3 / 4
 technical probes authorized       0
 accepted whole architecture       false
@@ -283,6 +284,7 @@ Current accepted architecture owners are:
 - docs/canonical/architecture/persistence-history-recovery.md (PST-001..016);
 - docs/canonical/architecture/identity-access-authority.md (IAM-001..018);
 - docs/canonical/architecture/interface-command-concurrency.md (CMD-001..022);
-- docs/canonical/architecture/offline-continuity-reconciliation.md (RCV-001..018).
+- docs/canonical/architecture/offline-continuity-reconciliation.md (RCV-001..018);
+- docs/canonical/architecture/artifact-export-publication-delivery.md (ART-001..020).
 
-Q4R-001 through Q4R-003 are complete. 019-H may now evaluate ADQ-007 against the accepted driver, ownership, persistence, identity/access/session, command/concurrency and offline-continuity foundations.
+Q4R-001 through Q4R-003 remain complete. 019-I is next eligible, but Q4R-004 must complete before ADQ-008 compares the historical front-end interaction candidate against current accepted architecture.
