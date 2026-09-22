@@ -12,7 +12,7 @@ sources:
   - resource: ../../017-methodology-closure-canonical-consolidation-completion-decision/017-H-concept-design-closure-decision-readiness-transition-post-closure-handoff.md
   - resource: ../../016-scenario-misfit-exception-failure-adversarial-design-validation/
   - resource: agentic-conformance.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:48:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T05:10:00Z }
 ---
 
 # Purpose
@@ -377,20 +377,26 @@ Examples of reopen triggers include:
 
 Otherwise the concern remains downstream.
 
-# Relationship to 018-J/K/L
+# Relationship to Phase-018 preparation and later architecture work
 
 ~~~text
 018-I
   current obligations + risks
         ↓
 018-J
-  qualified historical candidates against those obligations
+  qualified historical candidates
         ↓
 018-K
-  define/decide architecture questions with evidence
+  pre-selection architecture questions / evidence / Phase-019 plan
         ↓
 018-L
-  derive implementation program and verification gates
+  implementation-program framework / verification / delivery gates
+        ↓
+018-M
+  residual-risk / scorecard / next-lifecycle authorization decision
+        ↓
+proposed Phase 019, only if authorized
+  actual architecture decisions and acceptance
 ~~~
 
-018-I does not rank technologies, choose an architecture or authorize implementation.
+Phase 018 does not rank technologies, choose an architecture or authorize domain implementation.
