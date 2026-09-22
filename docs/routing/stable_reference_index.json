@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 378,
+    "total": 396,
     "by_role": {
-      "current-authority": 236,
+      "current-authority": 254,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -31,6 +31,7 @@
       "EVAL": 3,
       "EXPORT": 3,
       "FE": 18,
+      "IAM": 18,
       "IMPL": 16,
       "INV": 10,
       "IPG": 16,
@@ -1399,6 +1400,114 @@
       "anchor": "fe-018",
       "role": "downstream-candidate",
       "locator": "docs/canonical/architecture/frontend-interaction.md#fe-018"
+    },
+    "IAM-001": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-001"
+    },
+    "IAM-002": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-002"
+    },
+    "IAM-003": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-003"
+    },
+    "IAM-004": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-004"
+    },
+    "IAM-005": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-005"
+    },
+    "IAM-006": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-006"
+    },
+    "IAM-007": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-007"
+    },
+    "IAM-008": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-008"
+    },
+    "IAM-009": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-009"
+    },
+    "IAM-010": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-010"
+    },
+    "IAM-011": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-011"
+    },
+    "IAM-012": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-012"
+    },
+    "IAM-013": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-013"
+    },
+    "IAM-014": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-014"
+    },
+    "IAM-015": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-015"
+    },
+    "IAM-016": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-016"
+    },
+    "IAM-017": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-017",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-017"
+    },
+    "IAM-018": {
+      "owner_path": "docs/canonical/architecture/identity-access-authority.md",
+      "anchor": "iam-018",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/identity-access-authority.md#iam-018"
     },
     "IMPL-001": {
       "owner_path": "docs/canonical/implementation/implementation-foundation.md",
