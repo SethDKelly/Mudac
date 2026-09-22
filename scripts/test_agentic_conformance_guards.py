@@ -48,7 +48,13 @@ def main() -> int:
         agents = status_repo / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
         import re
-        text = re.sub(r"018-[A-M] NEXT", "018-Z NEXT", text)
+        if re.search(r"018-[A-M] NEXT", text):
+            text = re.sub(r"018-[A-M] NEXT", "018-Z NEXT", text)
+        else:
+            text = text.replace(
+                "018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE",
+                "018-A/B/C COMPLETE",
+            )
         agents.write_text(text, encoding="utf-8")
         expect_failure(
             "status mirror drift",
