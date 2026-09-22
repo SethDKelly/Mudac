@@ -40,6 +40,12 @@ The current product/application variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
+## Active post-closure qualification
+
+- [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **IN PROGRESS; 018-A COMPLETE; 018-B NEXT**.
+
+Phase 018 qualifies repository/documentation/agentic/architecture-reentry readiness without beginning domain implementation.
+
 ## Downstream candidate knowledge
 
 - [Architecture](canonical/architecture/) — preserved candidate architecture; suspended.
@@ -65,6 +71,7 @@ For the reopened completion runway, use the phase indexes:
 - [015 — Integrity / Interference](015-concept-integrity-cross-concept-coherence-interference/)
 - [016 — Scenario / Misfit Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/)
 - [017 — Methodology Closure](017-methodology-closure-canonical-consolidation-completion-decision/)
+- [018 — Pre-Implementation Repository Qualification](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/)
 
 ## Retrieval rule
 
@@ -82,8 +89,8 @@ Indexes and READMEs route; they do not replace canonical owners.
 
 ## Authorized next work
 
-The next lifecycle action is:
+Current lifecycle action:
 
-> **Phase 018 Start Gate — Pre-Implementation Audit, OKF/Repository Hardening, Agentic Development Preparation & Architecture/Engineering Re-entry Planning**
+> **Phase 018 — IN PROGRESS — 018-A COMPLETE / 018-B NEXT**
 
-Phase 018 is post-Concept-Design preparation. Feature implementation remains unauthorized.
+Next: **018-B — Whole-Corpus Documentation Inventory, Duplication, Concision & Current/History Topology Audit**. Phase 018 remains post-Concept-Design preparation; feature implementation is unauthorized.
