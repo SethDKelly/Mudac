@@ -9,6 +9,7 @@ The current product definition is representation-independent: volunteer Judges a
 - [docs/index.md](docs/index.md) — preferred OKF v0.2 progressive-disclosure entry point.
 - [Canonical Knowledge](docs/canonical/) — current product/design and governance authority.
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
+- [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — active pre-implementation repository qualification and agentic-development preparation.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -20,6 +21,7 @@ Jackson Concept Design        CLOSED — PHASE 017 PASS WITH BOUNDED CARRY-FORWA
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
 017-A..H                      COMPLETE
 
+Phase 018                     IN PROGRESS — 018-A COMPLETE / 018-B NEXT
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
 implementation readiness      READY
@@ -34,4 +36,4 @@ The sole adopted product/application variant remains:
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
 
 
-The next authorized work is the Phase 018 post-closure start gate for pre-implementation audit, agentic-development preparation, and architecture/engineering re-entry planning. Phase 017 does not authorize feature implementation.
+Phase 018 is now active. **018-A is complete** and authorizes the qualification program; **018-B — Whole-Corpus Documentation Inventory, Duplication, Concision & Current/History Topology Audit** is next. No feature implementation is authorized.
