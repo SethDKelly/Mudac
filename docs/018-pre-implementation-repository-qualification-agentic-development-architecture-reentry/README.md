@@ -1,6 +1,6 @@
 # Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry
 
-**Status:** IN PROGRESS — 018-A COMPLETE / QUALIFICATION PROGRAM AUTHORIZED
+**Status:** IN PROGRESS — 018-A/B COMPLETE / 018-C NEXT
 
 ## Purpose
 
@@ -90,7 +90,13 @@ Freeze the Phase-017 handoff as Phase-018 input; establish scope, evidence rules
 
 Classify the documentation corpus by role; detect duplicate current rule bodies, redundant prose, oversized owners, stale routing, history/current ambiguity, merge candidates and retirement candidates while preserving useful provenance.
 
+**Status: COMPLETE — PASS WITH EXPLICIT TOPOLOGY CARRY-FORWARD.**
+
 ### 018-C — OKF v0.2 Conformance, Progressive Disclosure, Metadata & Knowledge-Bundle Qualification
+
+**Status: NEXT.**
+
+
 
 Audit the repository's OKF profile beyond basic structural validity; qualify progressive disclosure, metadata practice, generated-vs-authored surfaces and whether a generated compatibility projection is justified.
 
