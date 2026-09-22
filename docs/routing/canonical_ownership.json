@@ -50,6 +50,7 @@
     "docs/canonical/architecture/application-ownership-boundaries.md",
     "docs/canonical/architecture/architecture-drivers.md",
     "docs/canonical/architecture/artifact-export-publication-delivery.md",
+    "docs/canonical/architecture/browser-client-interaction.md",
     "docs/canonical/architecture/identity-access-authority.md",
     "docs/canonical/architecture/interface-command-concurrency.md",
     "docs/canonical/architecture/offline-continuity-reconciliation.md",

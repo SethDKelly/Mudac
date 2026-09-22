@@ -252,6 +252,29 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [ART-019 — Retention and Deletion Preserve Referenced Historical Meaning and Remain Evidence-Bounded](../architecture/artifact-export-publication-delivery.md#art-019)
 * [ART-020 — Externalization Mechanisms Remain Replaceable Behind Application Contracts](../architecture/artifact-export-publication-delivery.md#art-020)
 
+# Accepted browser/client interaction architecture
+
+* [CLT-001 — The Browser Coordinates Interaction; It Never Becomes Semantic Authority](../architecture/browser-client-interaction.md#clt-001)
+* [CLT-002 — The Baseline Is Client-Rich Interaction Over Server-Authoritative Application Contracts](../architecture/browser-client-interaction.md#clt-002)
+* [CLT-003 — Navigation Represents Context but Does Not Define Authority or Concept Order](../architecture/browser-client-interaction.md#clt-003)
+* [CLT-004 — Client State Is Partitioned by Semantic Responsibility](../architecture/browser-client-interaction.md#clt-004)
+* [CLT-005 — Remote Client Cache Is Non-Authoritative, Freshness-Capable and Context-Partitioned](../architecture/browser-client-interaction.md#clt-005)
+* [CLT-006 — Context Transitions Isolate Disclosure and Private State](../architecture/browser-client-interaction.md#clt-006)
+* [CLT-007 — Local Draft Continuity Is an RCV Recovery Adapter, Not a Browser Domain Replica](../architecture/browser-client-interaction.md#clt-007)
+* [CLT-008 — High-Consequence Command State Is Explicit and Never Optimistically Authoritative](../architecture/browser-client-interaction.md#clt-008)
+* [CLT-009 — Reconciliation and Uncertainty Are First-Class Interaction States](../architecture/browser-client-interaction.md#clt-009)
+* [CLT-010 — Judge Workflows Remain Complete on Narrow/Phone Viewports](../architecture/browser-client-interaction.md#clt-010)
+* [CLT-011 — Organizer Work Supports Dense Responsive Composition Without Semantic Flattening](../architecture/browser-client-interaction.md#clt-011)
+* [CLT-012 — Core Browser Interaction Targets WCAG 2.2 AA-Oriented Semantic Parity](../architecture/browser-client-interaction.md#clt-012)
+* [CLT-013 — Semantic Structure and Equivalent Input Paths Precede Custom Interaction Convenience](../architecture/browser-client-interaction.md#clt-013)
+* [CLT-014 — Responsive Transformation Preserves Consequence Hierarchy and Disclosure](../architecture/browser-client-interaction.md#clt-014)
+* [CLT-015 — Client Composition Separates Accessible Primitives, Semantic Patterns, Domain Features and Workspaces](../architecture/browser-client-interaction.md#clt-015)
+* [CLT-016 — Client Validation Assists; Authoritative Validation Remains Server-Owned](../architecture/browser-client-interaction.md#clt-016)
+* [CLT-017 — Degraded Operation Reduces Capability Rather Than Weakening Semantics](../architecture/browser-client-interaction.md#clt-017)
+* [CLT-018 — Real-Time Push Is an Accelerator, Not a Correctness Dependency](../architecture/browser-client-interaction.md#clt-018)
+* [CLT-019 — Client Error Boundaries Contain Presentation Failure Without Inventing Source-State Loss](../architecture/browser-client-interaction.md#clt-019)
+* [CLT-020 — Browser Technology Remains Replaceable Behind the Client Architecture Contract](../architecture/browser-client-interaction.md#clt-020)
+
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).

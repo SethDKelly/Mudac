@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 456,
+    "total": 476,
     "by_role": {
-      "current-authority": 314,
+      "current-authority": 334,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -21,6 +21,7 @@
       "AWS": 18,
       "BND": 12,
       "CHG": 5,
+      "CLT": 20,
       "CMD": 22,
       "CNF": 12,
       "COMP": 2,
@@ -881,6 +882,126 @@
       "anchor": "chg-005",
       "role": "current-authority",
       "locator": "docs/canonical/governance/change-governance.md#chg-005"
+    },
+    "CLT-001": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-001"
+    },
+    "CLT-002": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-002"
+    },
+    "CLT-003": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-003"
+    },
+    "CLT-004": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-004"
+    },
+    "CLT-005": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-005"
+    },
+    "CLT-006": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-006"
+    },
+    "CLT-007": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-007"
+    },
+    "CLT-008": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-008"
+    },
+    "CLT-009": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-009"
+    },
+    "CLT-010": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-010"
+    },
+    "CLT-011": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-011"
+    },
+    "CLT-012": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-012"
+    },
+    "CLT-013": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-013"
+    },
+    "CLT-014": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-014"
+    },
+    "CLT-015": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-015"
+    },
+    "CLT-016": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-016"
+    },
+    "CLT-017": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-017",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-017"
+    },
+    "CLT-018": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-018",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-018"
+    },
+    "CLT-019": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-019",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-019"
+    },
+    "CLT-020": {
+      "owner_path": "docs/canonical/architecture/browser-client-interaction.md",
+      "anchor": "clt-020",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/browser-client-interaction.md#clt-020"
     },
     "CMD-001": {
       "owner_path": "docs/canonical/architecture/interface-command-concurrency.md",
