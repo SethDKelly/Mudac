@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 306,
+    "total": 322,
     "by_role": {
-      "current-authority": 164,
+      "current-authority": 180,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -30,6 +30,7 @@
       "FE": 18,
       "IMPL": 16,
       "INV": 10,
+      "IPG": 16,
       "META": 10,
       "MOD": 10,
       "OPG": 6,
@@ -1310,6 +1311,102 @@
       "anchor": "inv-010",
       "role": "current-authority",
       "locator": "docs/canonical/invariants/truthful-authority-under-uncertainty.md#inv-010"
+    },
+    "IPG-001": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-001"
+    },
+    "IPG-002": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-002"
+    },
+    "IPG-003": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-003"
+    },
+    "IPG-004": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-004"
+    },
+    "IPG-005": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-005"
+    },
+    "IPG-006": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-006"
+    },
+    "IPG-007": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-007"
+    },
+    "IPG-008": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-008"
+    },
+    "IPG-009": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-009"
+    },
+    "IPG-010": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-010"
+    },
+    "IPG-011": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-011"
+    },
+    "IPG-012": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-012"
+    },
+    "IPG-013": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-013"
+    },
+    "IPG-014": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-014"
+    },
+    "IPG-015": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-015"
+    },
+    "IPG-016": {
+      "owner_path": "docs/canonical/governance/implementation-program-delivery.md",
+      "anchor": "ipg-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/implementation-program-delivery.md#ipg-016"
     },
     "META-001": {
       "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
