@@ -24,8 +24,8 @@ Phase 018 is **IN PROGRESS**.
 - [018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement](018-H-agentic-conformance-knowledge-validation-status-drift-reference-integrity-ci-enforcement.md) — **COMPLETE — PASS WITH BOUNDED PROVIDER-RUNTIME VERIFICATION CARRY-FORWARD**.
 - [018-I — Downstream Realization Obligation, Carry-Forward & Engineering-Risk Reconciliation](018-I-downstream-realization-obligation-carry-forward-engineering-risk-reconciliation.md) — **COMPLETE — PASS WITH CONTROLLED DOWNSTREAM CARRY-FORWARD**.
 - [018-J — Historical Architecture & Implementation Candidate Qualification Under Q1–Q6](018-J-historical-architecture-implementation-candidate-qualification-q1-q6.md) — **COMPLETE — PASS**.
-- 018-K — Architecture Decision Questions, Constraints, Evaluation Evidence & Re-entry Decomposition — **NEXT**.
-- 018-L — Implementation Program Structure, Verification Strategy & Delivery-Gate Design — PLANNED.
+- [018-K — Architecture Decision Questions, Constraints, Evaluation Evidence & Re-entry Decomposition](018-K-architecture-decision-questions-constraints-evaluation-evidence-reentry-decomposition.md) — **COMPLETE — PASS — PRE-SELECTION ARCHITECTURE RE-ENTRY PROGRAM DEFINED**.
+- 018-L — Implementation Program Structure, Verification Strategy & Delivery-Gate Design — **NEXT**.
 - 018-M — Pre-Implementation Residual Risk Register, Repository Scorecard Regrade & Implementation Entry Decision — PLANNED.
 
 ## Current boundary
@@ -45,7 +45,8 @@ Jackson Concept Design CLOSED
 018-H COMPLETE — PASS WITH BOUNDED PROVIDER-RUNTIME VERIFICATION CARRY-FORWARD
 018-I COMPLETE — PASS WITH CONTROLLED DOWNSTREAM CARRY-FORWARD
 018-J COMPLETE — PASS
-018-K NEXT
+018-K COMPLETE — PASS — PRE-SELECTION ARCHITECTURE RE-ENTRY PROGRAM DEFINED
+018-L NEXT
 
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture NOT ESTABLISHED
