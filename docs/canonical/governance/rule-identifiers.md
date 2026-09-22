@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:58:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T05:22:00Z }
 ---
 
 # Canonical contract
@@ -343,6 +343,24 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
 
+# Implementation program, verification and delivery gates
+
+* [IPG-001 — Phase-018 Implementation Framework Does Not Create Active Packages or Execution Authority](implementation-program-delivery.md#ipg-001)
+* [IPG-002 — Implementation Packages Derive From Accepted Architecture and Current Semantic Authority](implementation-program-delivery.md#ipg-002)
+* [IPG-003 — Package Identity Is Durable and Independent of Source Layout](implementation-program-delivery.md#ipg-003)
+* [IPG-004 — Every Package Has an Explicit Scope and Evidence Contract](implementation-program-delivery.md#ipg-004)
+* [IPG-005 — Package Lifecycle Separates Planning, Authorization, Execution and Completion](implementation-program-delivery.md#ipg-005)
+* [IPG-006 — Package Execution Is Human-Directed and Cannot Auto-Advance](implementation-program-delivery.md#ipg-006)
+* [IPG-007 — Package Dependencies Must Be Explicit and Acyclic](implementation-program-delivery.md#ipg-007)
+* [IPG-008 — Verification Evidence Uses Explicit Evidence Classes](implementation-program-delivery.md#ipg-008)
+* [IPG-009 — Use the Smallest Trustworthy Evidence Layer That Crosses the Material Boundary](implementation-program-delivery.md#ipg-009)
+* [IPG-010 — Phase-016 Scenario Seeds Must Survive Into Package and Program Verification](implementation-program-delivery.md#ipg-010)
+* [IPG-011 — Data, Schema and Migration Changes Require Compatibility and Recovery Evidence](implementation-program-delivery.md#ipg-011)
+* [IPG-012 — Supply Chain, Secrets, Fixtures and Sensitive Data Are Package Gates](implementation-program-delivery.md#ipg-012)
+* [IPG-013 — Review, Merge, Release and Deployment Are Distinct Authorities](implementation-program-delivery.md#ipg-013)
+* [IPG-014 — Package Completion Requires Evidence Closure, Not Merely Code Completion](implementation-program-delivery.md#ipg-014)
+* [IPG-015 — Semantic and Architecture Mismatches Escalate Instead of Being Hidden in Implementation](implementation-program-delivery.md#ipg-015)
+* [IPG-016 — Implementation Program Exit Requires Whole-System Evidence and Explicit Next Authority](implementation-program-delivery.md#ipg-016)
 # Architecture re-entry evaluation and decision governance
 
 * [ARE-001 — Phase-018 Architecture Re-entry Planning Does Not Select Architecture](architecture-reentry-evaluation.md#are-001)
