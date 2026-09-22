@@ -183,6 +183,52 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [IAM-016 — Authentication-Provider Integration Remains Replaceable Behind an Application Adapter](../architecture/identity-access-authority.md#iam-016)
 * [IAM-017 — Authentication/Provider Unavailability Reduces Capability Safely; It Does Not Broaden Authority](../architecture/identity-access-authority.md#iam-017)
 * [IAM-018 — Access Denial and Security Response Preserve Truthful, Non-Leaking Explanation](../architecture/identity-access-authority.md#iam-018)
+# Accepted interface, command, transaction and concurrency architecture
+
+* [CMD-001 — Commands and queries are distinct application contracts](../architecture/interface-command-concurrency.md#cmd-001)
+* [CMD-002 — The baseline browser application interface is versioned HTTPS/JSON request-response](../architecture/interface-command-concurrency.md#cmd-002)
+* [CMD-003 — Transport adapters translate intent; they do not own authorization or domain state](../architecture/interface-command-concurrency.md#cmd-003)
+* [CMD-004 — Confirmed command success requires authoritative commit](../architecture/interface-command-concurrency.md#cmd-004)
+* [CMD-005 — Ordinary state-changing commands use the natural owner's transaction boundary](../architecture/interface-command-concurrency.md#cmd-005)
+* [CMD-006 — Semantically indivisible composed actions may use a narrow cross-module atomic transaction](../architecture/interface-command-concurrency.md#cmd-006)
+* [CMD-007 — Cross-owner work is not made atomic merely for convenience](../architecture/interface-command-concurrency.md#cmd-007)
+* [CMD-008 — Optimistic concurrency is the default stale-intent defense](../architecture/interface-command-concurrency.md#cmd-008)
+* [CMD-009 — Constraints, targeted locking and stronger isolation supplement optimistic concurrency](../architecture/interface-command-concurrency.md#cmd-009)
+* [CMD-010 — Logical operation identity is distinct from request correlation and domain identity](../architecture/interface-command-concurrency.md#cmd-010)
+* [CMD-011 — Consequential externally retryable commands use durable idempotency](../architecture/interface-command-concurrency.md#cmd-011)
+* [CMD-012 — Idempotency supplements domain uniqueness; it does not replace it](../architecture/interface-command-concurrency.md#cmd-012)
+* [CMD-013 — Concurrent/repeated legitimate intent may resolve to one success and one current-state result](../architecture/interface-command-concurrency.md#cmd-013)
+* [CMD-014 — Lost responses reconcile against committed authority before blind repetition](../architecture/interface-command-concurrency.md#cmd-014)
+* [CMD-015 — Public result contracts distinguish semantic outcome classes](../architecture/interface-command-concurrency.md#cmd-015)
+* [CMD-016 — Successful command responses return authoritative result identity/currentness, not projection promises](../architecture/interface-command-concurrency.md#cmd-016)
+* [CMD-017 — Queries may read owner state or projections, with material freshness/basis explicit](../architecture/interface-command-concurrency.md#cmd-017)
+* [CMD-018 — Bulk convenience does not create one giant semantic transaction](../architecture/interface-command-concurrency.md#cmd-018)
+* [CMD-019 — Asynchronous completion is reserved for semantically separable long-running work](../architecture/interface-command-concurrency.md#cmd-019)
+* [CMD-020 — Cookie-session mutations require deliberate request-forgery and replay protection](../architecture/interface-command-concurrency.md#cmd-020)
+* [CMD-021 — Interface DTOs are application contracts, not serialized persistence/domain internals](../architecture/interface-command-concurrency.md#cmd-021)
+* [CMD-022 — Client reconciliation is a first-class interface capability](../architecture/interface-command-concurrency.md#cmd-022)
+
+# Accepted offline, degraded continuity and reconciliation architecture
+
+* [RCV-001 — The server remains authoritative for logical Draft identity and currentness](../architecture/offline-continuity-reconciliation.md#rcv-001)
+* [RCV-002 — Local continuity records are semantic recovery envelopes, not offline domain replicas](../architecture/offline-continuity-reconciliation.md#rcv-002)
+* [RCV-003 — Local persistence is explicitly non-authoritative and privacy-bounded](../architecture/offline-continuity-reconciliation.md#rcv-003)
+* [RCV-004 — Reconnect begins with current identity, authority and basis resolution](../architecture/offline-continuity-reconciliation.md#rcv-004)
+* [RCV-005 — Ordinary Draft synchronization is revision-aware and uses current CMD authority](../architecture/offline-continuity-reconciliation.md#rcv-005)
+* [RCV-006 — Stale conflicts preserve both authoritative state and pending authored work](../architecture/offline-continuity-reconciliation.md#rcv-006)
+* [RCV-007 — Automatic merge requires demonstrable semantic independence](../architecture/offline-continuity-reconciliation.md#rcv-007)
+* [RCV-008 — Multiple devices converge on one logical Scorecard](../architecture/offline-continuity-reconciliation.md#rcv-008)
+* [RCV-009 — Disconnected clients cannot establish high-consequence authority](../architecture/offline-continuity-reconciliation.md#rcv-009)
+* [RCV-010 — Consequential intent is not blindly auto-executed after disconnection](../architecture/offline-continuity-reconciliation.md#rcv-010)
+* [RCV-011 — Shared-device handoff terminates recoverability through the prior active context](../architecture/offline-continuity-reconciliation.md#rcv-011)
+* [RCV-012 — Cached reads are stale-capable evidence, never current authority](../architecture/offline-continuity-reconciliation.md#rcv-012)
+* [RCV-013 — Expired or revoked Access blocks automatic synchronization](../architecture/offline-continuity-reconciliation.md#rcv-013)
+* [RCV-014 — Paper fallback is an alternate capture channel, not offline digital authority](../architecture/offline-continuity-reconciliation.md#rcv-014)
+* [RCV-015 — Paper and electronic traces reconcile to one logical evaluation with provenance](../architecture/offline-continuity-reconciliation.md#rcv-015)
+* [RCV-016 — Continuity status preserves durability, synchronization, authority, conflict and uncertainty separately](../architecture/offline-continuity-reconciliation.md#rcv-016)
+* [RCV-017 — Degraded operation reduces capability rather than weakening semantics](../architecture/offline-continuity-reconciliation.md#rcv-017)
+* [RCV-018 — Continuity mechanisms remain replaceable behind the architecture contract](../architecture/offline-continuity-reconciliation.md#rcv-018)
+
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
