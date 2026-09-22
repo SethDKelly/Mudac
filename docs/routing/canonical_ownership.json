@@ -45,5 +45,8 @@
     "deprecated_or_historical_adapters_require_explicit_flag": true,
     "numbered_phase_occurrences_require_history_flag": true,
     "fail_closed_on_missing_or_ambiguous_owner": true
-  }
+  },
+  "current_owner_paths": [
+    "docs/canonical/architecture/architecture-drivers.md"
+  ]
 }
