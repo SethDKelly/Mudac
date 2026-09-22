@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -38,7 +39,10 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
 
 
 def main() -> int:
-    repo = Path(__file__).resolve().parents[1]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
+    args = parser.parse_args()
+    repo = Path(args.repo).resolve()
     errors: list[str] = []
 
     try:
