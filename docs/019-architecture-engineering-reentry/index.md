@@ -1,6 +1,6 @@
 # Phase 019 — Architecture & Engineering Re-entry
 
-**Status:** ACTIVE — 019-A/B COMPLETE / 019-C NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE
 
 Phase 019 is the fresh architecture decision and acceptance program authorized by 018-M.
 
@@ -31,8 +31,8 @@ implementation execution       false
 
 - [019-A — Architecture Re-entry Start Gate, Authority, Current Baseline & Decision-Evidence Model](019-A-architecture-reentry-start-gate-authority-current-baseline-decision-evidence-model.md) — **COMPLETE — PASS**
 - [019-B — Architecture Drivers, Quality Attributes, Workload, Trust Boundary & Constraint Qualification](019-B-architecture-drivers-quality-attributes-workload-trust-boundary-constraint-qualification.md) — **COMPLETE — PASS — ADQ-001 ACCEPTED**
-- 019-C — Application Ownership, Boundary, Coordination & Dependency Architecture — **NEXT ELIGIBLE**
-- 019-D — Persistence, History, Provenance, Projection, Migration & Recovery Architecture — PLANNED
+- [019-C — Application Ownership, Boundary, Coordination & Dependency Architecture](019-C-application-ownership-boundary-coordination-dependency-architecture.md) — **COMPLETE — PASS — Q4R-001 COMPLETE / ADQ-002 ACCEPTED**
+- 019-D — Persistence, History, Provenance, Projection, Migration & Recovery Architecture — **NEXT ELIGIBLE**
 - 019-E — Identity, Authentication, Participation, Access, Session & Technical-Authority Architecture — PLANNED
 - 019-F — Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture — PLANNED
 - 019-G — Offline Draft, Multi-device, Degraded, Paper & Reconciliation Architecture — PLANNED
@@ -62,7 +62,8 @@ PHASE 019 ACTIVE
 019-B COMPLETE
 019-C NEXT ELIGIBLE
 
-ADQ-001                              ACCEPTED
+ADQ-001 / ADQ-002                    ACCEPTED
+Q4R-001                              COMPLETE
 accepted whole architecture          NOT ESTABLISHED
 active implementation packages       0
 implementation execution             NOT AUTHORIZED
