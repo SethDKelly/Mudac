@@ -44,9 +44,10 @@
       "019-B",
       "019-C",
       "019-D",
-      "019-E"
+      "019-E",
+      "019-F"
     ],
-    "next_eligible_subphase": "019-F",
+    "next_eligible_subphase": "019-G",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -101,7 +102,7 @@
       "questions": [
         "ADQ-005"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-G",
@@ -109,7 +110,7 @@
       "questions": [
         "ADQ-006"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-H",
@@ -531,11 +532,17 @@
       "question_id": "ADQ-005",
       "title": "Application Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture",
       "owning_subphase": "019-F",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Versioned HTTPS/JSON explicit command-query boundary with synchronous commit-confirmed authority, optimistic concurrency, durable logical-operation idempotency, narrow atomic coordination and truthful reconciliation (CMD-001..CMD-022)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-F-interface-command-query-transaction-concurrency-retry-idempotency-architecture.md",
+      "alternatives_evaluated": [
+        "Repaired historical Commands/API/Concurrency architecture unchanged",
+        "Broad resource-oriented CRUD interface",
+        "Queue/job-first asynchronous command architecture",
+        "Globally strong-locking/serializable transaction posture",
+        "Explicit synchronous command/query contracts with optimistic concurrency and durable idempotency"
+      ],
       "constraint_refs": [
         "ENG-005",
         "ENG-007",
@@ -551,21 +558,63 @@
       "candidate_inputs": [
         "docs/canonical/architecture/commands-api-concurrency.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/019-architecture-engineering-reentry/019-F-Q4R-002-commands-api-concurrency-semantic-repair.md",
+        "docs/canonical/architecture/commands-api-concurrency.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/synchronizations/application-action-surface-composition.md",
+        "docs/canonical/synchronizations/evaluation-basis-scorecard-authority.md",
+        "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+        "docs/canonical/experience/status-feedback-recovery.md",
+        "docs/canonical/invariants/one-logical-scorecard.md",
+        "docs/canonical/invariants/truthful-authority-under-uncertainty.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "lost-response retry after consequential authoritative action",
         "concurrent/repeated legitimate intent",
         "partial bulk result",
         "unknown/degraded result"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "The accepted modular monolith and one logical authority database allow ordinary owner-local transactions plus a few semantically indivisible cross-module atomic transitions. Explicit command/query contracts preserve high-consequence intent, optimistic current-state checks prevent stale overwrite, durable operation identity converges retries, and domain uniqueness remains the final backstop. Queue-first processing and global strong locking add complexity not justified by the bounded live-event workload.",
+      "rejected_alternatives": [
+        "Historical candidate unchanged — strong ideas but stale outcome binding and inherited isolation/runtime choices require revalidation.",
+        "Broad CRUD/resource mutation — obscures consequential semantic actions and weakens retry/currentness modeling.",
+        "Queue/job-first commands — makes ordinary event-day authority unnecessarily indirect and risks conflating accepted work with semantic success.",
+        "Global strongest locking/isolation — excessive contention/complexity and still does not solve lost-response or idempotency semantics."
+      ],
+      "reversibility_migration": "Intentional commitment to HTTPS/JSON baseline command-query contracts, optimistic concurrency and durable operation identity. Internal framework, ORM, route layout, revision encoding, DB isolation and queue technology remain unselected. Future service extraction requires redesign of narrow cross-module atomic seams but can preserve the public command semantics.",
+      "residual_uncertainty": [
+        "exact route/API versioning convention",
+        "exact revision token encoding",
+        "exact idempotency-key scope/retention/privacy policy",
+        "exact PostgreSQL locking/isolation choices per command",
+        "exact CSRF mechanism",
+        "exact generated-client/OpenAPI approach",
+        "exact asynchronous operation storage/queue where needed",
+        "exact pagination strategy per query family",
+        "exact rate/abuse-control implementation"
+      ],
+      "revisit_triggers": [
+        "browser/API workload needs a different baseline transport family",
+        "cross-module atomic seams become incompatible with justified service extraction",
+        "contention makes optimistic concurrency materially inadequate",
+        "long-running authoritative work requires broader asynchronous semantics",
+        "durable idempotency retention creates unacceptable cost/privacy constraints",
+        "whole-architecture validation finds unsafe retry, ambiguity, partial-result or transaction behavior"
+      ],
+      "accepted_in_subphase": "019-F",
       "supersedes_decision": null
     },
     {
@@ -860,14 +909,48 @@
         "stale_bindings": [
           "Official Outcome Revision"
         ],
-        "repair_status": "REQUIRED",
-        "repair_document": null,
-        "current_semantic_owner_refs": [],
-        "retained_hypothesis": [],
-        "excluded_obsolete_content": [],
-        "revised_comparison_statement": null,
-        "preservation_evidence_refs": [],
-        "comparison_eligible": false
+        "repair_status": "COMPLETE",
+        "repair_document": "docs/019-architecture-engineering-reentry/019-F-Q4R-002-commands-api-concurrency-semantic-repair.md",
+        "current_semantic_owner_refs": [
+          "docs/canonical/concepts/outcome-declaration.md",
+          "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+          "docs/canonical/synchronizations/temporal-truth-correction.md",
+          "docs/canonical/synchronizations/application-action-surface-composition.md",
+          "docs/canonical/architecture/application-ownership-boundaries.md",
+          "docs/canonical/architecture/persistence-history-recovery.md",
+          "docs/canonical/architecture/identity-access-authority.md"
+        ],
+        "retained_hypothesis": [
+          "commands and queries are distinct application contracts",
+          "consequential transitions use explicit semantic intent",
+          "transport adapters do not own domain authority",
+          "confirmed authoritative success follows commit",
+          "ordinary commands use natural-owner transactions",
+          "narrow semantically atomic cross-module coordination is allowed",
+          "optimistic concurrency/current-state preconditions are the default stale-write defense",
+          "stronger locking/isolation is targeted",
+          "retryable consequential commands use durable idempotency",
+          "lost responses reconcile to committed authority",
+          "read projections remain non-authoritative",
+          "public result contracts distinguish semantic failure/uncertainty classes",
+          "transport DTOs remain separate from persistence/internal models"
+        ],
+        "excluded_obsolete_content": [
+          "Official Outcome Revision as a current history/query owner",
+          "ARCH/MOD/DATA/AUTH candidate IDs as current authority",
+          "historical fixed READ COMMITTED default as inherited architecture",
+          "historical ECS/Fargate and SQS downstream selections",
+          "historical provider/runtime choices as already accepted"
+        ],
+        "revised_comparison_statement": "Use explicit synchronous request/response command-query contracts for ordinary authoritative application work; commit authoritative commands transactionally at their natural owner or a narrowly justified atomic coordinator boundary; protect stale intent with current-state/revision preconditions and targeted locking; converge retries through durable logical-operation/idempotency records plus domain uniqueness; reconcile lost responses against committed authority; permit non-authoritative projection reads with explicit freshness; and reserve asynchronous command completion for semantically separable long-running work rather than wrapping every domain action in a job model.",
+        "preservation_evidence_refs": [
+          "docs/019-architecture-engineering-reentry/019-F-Q4R-002-commands-api-concurrency-semantic-repair.md",
+          "docs/canonical/concepts/outcome-declaration.md",
+          "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+          "docs/canonical/synchronizations/temporal-truth-correction.md",
+          "docs/canonical/synchronizations/application-action-surface-composition.md"
+        ],
+        "comparison_eligible": true
       },
       {
         "repair_id": "Q4R-003",
@@ -949,9 +1032,9 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 4,
+    "decisions_accepted": 5,
     "q4_repairs_total": 4,
-    "q4_repairs_complete": 1,
+    "q4_repairs_complete": 2,
     "probes_authorized": 0,
     "implementation_packages": 0
   }
