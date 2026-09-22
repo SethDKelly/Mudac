@@ -91,7 +91,7 @@ Current lifecycle action:
 
 > **PHASE 018 COMPLETE — PASS — 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE**
 >
-> **PHASE 019 AUTHORIZED — 019-A NEXT ELIGIBLE.**
+> **PHASE 019 ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE.**
 
 Domain implementation remains unauthorized; accepted architecture is not yet established. Phase 018 remains post-Concept-Design preparation; feature implementation is unauthorized.
 
