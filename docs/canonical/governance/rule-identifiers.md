@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T05:22:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T06:02:00Z }
 ---
 
 # Canonical contract
@@ -343,6 +343,24 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
 
+# Phase-019 architecture decision authority and evidence
+
+* [ADA-001 — Phase-019 Authority Derives Only From the 018-M Exit Decision](architecture-decision-authority.md#ada-001)
+* [ADA-002 — The Exact Phase-018 Closure Baseline Is the Phase-019 Entry Snapshot](architecture-decision-authority.md#ada-002)
+* [ADA-003 — ADQ-001 Through ADQ-010 Are the Governed Decision Graph](architecture-decision-authority.md#ada-003)
+* [ADA-004 — Each Architecture Question Has a Durable Decision Record](architecture-decision-authority.md#ada-004)
+* [ADA-005 — Decision State Is Explicit and Cannot Skip Acceptance Preconditions](architecture-decision-authority.md#ada-005)
+* [ADA-006 — Individual Accepted Decisions Do Not Establish Accepted Whole Architecture](architecture-decision-authority.md#ada-006)
+* [ADA-007 — Decision Evidence Must Distinguish Facts, Analysis, Probes and Runtime Proof](architecture-decision-authority.md#ada-007)
+* [ADA-008 — Q4 Repair Produces a Current Comparison Translation, Not a Rewrite of History](architecture-decision-authority.md#ada-008)
+* [ADA-009 — Credible Alternatives Are Recorded Before Selection](architecture-decision-authority.md#ada-009)
+* [ADA-010 — Technical Probes Require Explicit Bounded Authorization](architecture-decision-authority.md#ada-010)
+* [ADA-011 — Residual Uncertainty Is Recorded With a Revisit Trigger](architecture-decision-authority.md#ada-011)
+* [ADA-012 — Whole-Architecture Acceptance Requires Complete Decision and Validation Closure](architecture-decision-authority.md#ada-012)
+* [ADA-013 — Accepted Decisions Are Superseded Explicitly, Never Silently Rewritten](architecture-decision-authority.md#ada-013)
+* [ADA-014 — Phase Progression Is Human-Directed and Dependency-Safe](architecture-decision-authority.md#ada-014)
+* [ADA-015 — Implementation Remains Frozen Until Whole Architecture Acceptance](architecture-decision-authority.md#ada-015)
+* [ADA-016 — Machine Decision Control Is Routing and Evidence State, Not Independent Semantic Authority](architecture-decision-authority.md#ada-016)
 # Implementation program, verification and delivery gates
 
 * [IPG-001 — Phase-018 Implementation Framework Does Not Create Active Packages or Execution Authority](implementation-program-delivery.md#ipg-001)
