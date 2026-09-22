@@ -6,7 +6,7 @@
   "generated_root": "knowledge",
   "generator": "scripts/generate_okf_projection.py",
   "okf_version": "0.2",
-  "generated_at": "2026-09-22T02:50:00Z",
+  "generated_at": "2026-09-22T06:18:00Z",
   "domains": [
     {
       "name": "project-context",
@@ -96,9 +96,9 @@
     },
     {
       "name": "active-qualification",
-      "title": "Active pre-implementation qualification",
-      "description": "Route to the active Phase 018 repository-qualification program.",
-      "resource": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/index.md",
+      "title": "Active architecture and engineering re-entry",
+      "description": "Route to the active Phase 019 architecture decision and acceptance program.",
+      "resource": "docs/019-architecture-engineering-reentry/index.md",
       "role": "active-program"
     },
     {
