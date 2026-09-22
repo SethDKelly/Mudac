@@ -68,6 +68,15 @@ Agents must not routinely load:
 
 Broad corpus review is appropriate only when the task itself is broad—for example repository-wide drift audit, phase consolidation, or authority migration.
 
+<a id="ctx-006"></a>
+## CTX-006 — Resolve a known stable ID directly before broad discovery
+
+When a task already supplies an exact stable rule ID, use the deterministic stable-ID resolver rather than loading the full rule registry, scanning all canonical files, or ranking search results.
+
+Default resolution is current-authority only. Candidate, deprecated-adapter and numbered-phase evidence require explicit non-current/provenance modes under [Deterministic Ownership, Stable Reference Resolution & Drift Control](deterministic-ownership-resolution.md).
+
+The resolver returns a locator; load only the smallest surrounding owner context needed to apply the rule.
+
 # Task profiles
 
 ## Current product/design question

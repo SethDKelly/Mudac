@@ -8,6 +8,7 @@ Current repository/design-governance authority.
 - [Documentation Authority & Canonical Ownership](documentation-authority.md)
 - [Source Lineage and Historical Design Records](source-lineage.md)
 - [Stable Rule Identifiers & Cross-Reference Contract](rule-identifiers.md)
+- [Deterministic Ownership, Stable Reference Resolution & Drift Control](deterministic-ownership-resolution.md)
 - [OKF Metadata, Trust, Lifecycle & Freshness](metadata-trust-lifecycle.md)
 - [Knowledge Validation & CI Enforcement](validation-enforcement.md)
 

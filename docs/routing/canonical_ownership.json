@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "authority": "CLASSIFICATION AND ROUTING POLICY — CANONICAL OWNER FILES RETAIN SEMANTIC AUTHORITY",
+  "authored_discovery_root": "docs/index.md",
+  "canonical_root": "docs/canonical",
+  "current_owner_roots": [
+    "docs/canonical/project",
+    "docs/canonical/concepts",
+    "docs/canonical/synchronizations",
+    "docs/canonical/dependence",
+    "docs/canonical/experience",
+    "docs/canonical/mechanisms",
+    "docs/canonical/policies",
+    "docs/canonical/invariants",
+    "docs/canonical/governance"
+  ],
+  "downstream_candidate_roots": [
+    "docs/canonical/architecture",
+    "docs/canonical/implementation"
+  ],
+  "external_reference_root": "docs/references",
+  "generated_projection_root": "knowledge",
+  "historical_phase_directory_pattern": "docs/[0-9][0-9][0-9]-*",
+  "router_names": [
+    "index.md",
+    "README.md"
+  ],
+  "historical_adapter_paths": [
+    "docs/canonical/concepts/judging-encounter.md",
+    "docs/canonical/mechanisms/official-outcome-revision.md",
+    "docs/canonical/synchronizations/concept-synchronizations.md",
+    "docs/canonical/experience/paper-export-publication.md",
+    "docs/canonical/experience/reconciliation-finalization.md",
+    "docs/canonical/experience/phase-013-entry-handoff.md"
+  ],
+  "stable_reference_registry": "docs/canonical/governance/rule-identifiers.md",
+  "stable_reference_index": "docs/routing/stable_reference_index.json",
+  "generated_index_script": "scripts/generate_stable_reference_index.py",
+  "resolver_script": "scripts/resolve_stable_id.py",
+  "resolution": {
+    "default_roles": [
+      "current-authority"
+    ],
+    "candidates_require_explicit_flag": true,
+    "deprecated_or_historical_adapters_require_explicit_flag": true,
+    "numbered_phase_occurrences_require_history_flag": true,
+    "fail_closed_on_missing_or_ambiguous_owner": true
+  }
+}

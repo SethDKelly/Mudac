@@ -47,3 +47,6 @@ jobs:
 
       - name: Check generated OKF projection
         run: python scripts/generate_okf_projection.py --check
+
+      - name: Check generated stable-reference index
+        run: python scripts/generate_stable_reference_index.py --check

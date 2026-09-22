@@ -138,6 +138,11 @@ class Validator:
             self.root / "requirements-docs.txt",
             self.root / "scripts" / "validate_knowledge.py",
             self.root / "scripts" / "generate_okf_projection.py",
+            self.root / "scripts" / "generate_stable_reference_index.py",
+            self.root / "scripts" / "resolve_stable_id.py",
+            self.docs / "routing" / "canonical_ownership.json",
+            self.docs / "routing" / "stable_reference_index.json",
+            self.docs / "canonical" / "governance" / "deterministic-ownership-resolution.md",
             self.docs / "routing" / "okf_projection.json",
             self.knowledge / "index.md",
             self.docs / "index.md",
@@ -513,6 +518,7 @@ class Validator:
             "contents: read",
             "python scripts/validate_knowledge.py",
             "python scripts/generate_okf_projection.py --check",
+            "python scripts/generate_stable_reference_index.py --check",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:

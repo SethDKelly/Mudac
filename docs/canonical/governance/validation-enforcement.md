@@ -9,7 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:35:40Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:08:00Z }
 ---
 
 # Purpose
@@ -60,7 +60,7 @@ Every stable rule anchor under `docs/canonical/` must:
 4. appear exactly once in the stable rule registry;
 5. resolve from the registry back to the actual owner/anchor.
 
-The registry remains an index rather than a rule store under [DOC-005](documentation-authority.md#doc-005).
+The registry remains an index rather than a rule store under [DOC-005](documentation-authority.md#doc-005). The generated stable-reference index is checked against that registry and the ownership-role policy; neither generated index nor resolver becomes rule authority.
 
 <a id="val-004"></a>
 ## VAL-004 — Current authority links and local source edges must resolve
@@ -77,7 +77,7 @@ Phase 001–003 historical bodies are not globally rewritten merely to satisfy m
 The validator requires the repository entrypoints and category/phase indexes that make [CTX-001](agent-context.md#ctx-001) executable, including:
 
 - root `AGENTS.md` and `README.md`;
-- `docs/index.md` with `okf_version: "0.2"`;
+- authored `docs/index.md` plus generated `knowledge/index.md` declaring `okf_version: "0.2"`;
 - `docs/README.md`;
 - canonical category indexes;
 - `docs/references/index.md`;
@@ -104,6 +104,8 @@ The workflow:
 - checks out the repository;
 - installs only the validator's documented dependency set;
 - executes `python scripts/validate_knowledge.py`;
+- checks the generated OKF projection;
+- checks the generated stable-reference index against the authored ownership policy and stable-rule registry;
 - uses repository `contents: read` permission;
 - fails the workflow when validator errors exist;
 - never edits knowledge, creates verification metadata, or repairs files automatically.

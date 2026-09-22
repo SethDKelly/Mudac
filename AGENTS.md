@@ -55,7 +55,8 @@ The active work is:
 
 ## Retrieval discipline
 
-- Current semantic question → open the natural canonical owner.
+- Known stable rule ID → run `python scripts/resolve_stable_id.py <ID>` and load the returned current owner; do not scan the full registry first.
+- Current semantic question without a known ID → open the natural canonical owner.
 - Cross-owner terminology question → use [Domain Vocabulary & Expectation-Transfer Rules](docs/canonical/project/domain-vocabulary-expectation-transfer.md).
 - Product-family question → use [Product-Family Scope](docs/canonical/dependence/product-family-scope.md).
 - User-visible meaning → use [Experience](docs/canonical/experience/).

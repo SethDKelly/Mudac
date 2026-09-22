@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T02:50:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:08:00Z }
 ---
 
 # Canonical contract
@@ -323,6 +323,7 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CTX-003 — Historical Context Is On-Demand Through Lineage](agent-context.md#ctx-003)
 * [CTX-004 — Stop Context Expansion When Authority Is Sufficient](agent-context.md#ctx-004)
 * [CTX-005 — Recursive Corpus Loading Is Not the Default](agent-context.md#ctx-005)
+* [CTX-006 — Resolve a Known Stable ID Directly Before Broad Discovery](agent-context.md#ctx-006)
 
 # Canonical change governance
 
@@ -331,6 +332,21 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-003 — Contradictions Are Surfaced, Not Silently Normalized](change-governance.md#chg-003)
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
+
+# Deterministic ownership and stable resolution
+
+* [OWN-001 — Semantic Authority Remains in Authored Owner Documents](deterministic-ownership-resolution.md#own-001)
+* [OWN-002 — Ownership Role Is Classified Before Path Content Is Trusted](deterministic-ownership-resolution.md#own-002)
+* [OWN-003 — Exact Stable-ID Resolution Defaults to Current Authority Only](deterministic-ownership-resolution.md#own-003)
+* [OWN-004 — Suspended Downstream IDs Require Explicit Candidate Resolution](deterministic-ownership-resolution.md#own-004)
+* [OWN-005 — Deprecated and Historical Adapters Never Satisfy Current Resolution](deterministic-ownership-resolution.md#own-005)
+* [OWN-006 — Numbered-Phase Occurrences Are Provenance Only and Opt-In](deterministic-ownership-resolution.md#own-006)
+* [OWN-007 — Generated Ownership Indexes Are Deterministic and Rebuildable](deterministic-ownership-resolution.md#own-007)
+* [OWN-008 — Resolution Fails Closed on Drift](deterministic-ownership-resolution.md#own-008)
+* [OWN-009 — Stable Identity Is the Rule ID, Not Its Current File Path](deterministic-ownership-resolution.md#own-009)
+* [OWN-010 — Unknown-Subject Discovery and Known-ID Resolution Are Different Operations](deterministic-ownership-resolution.md#own-010)
+* [OWN-011 — Artifact Lifecycle Status and Semantic Owner Role Remain Distinct](deterministic-ownership-resolution.md#own-011)
+* [OWN-012 — Routing/Status Mirrors Cannot Become Independent Authority](deterministic-ownership-resolution.md#own-012)
 
 # OKF metadata, trust, lifecycle and freshness
 

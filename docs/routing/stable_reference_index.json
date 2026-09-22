@@ -1,0 +1,1400 @@
+{
+  "schema_version": "1.0",
+  "authority": "DERIVED ROUTING ONLY — CANONICAL OWNER FILES RETAIN SEMANTIC AUTHORITY",
+  "source_registry": "docs/canonical/governance/rule-identifiers.md",
+  "ownership_policy": "docs/routing/canonical_ownership.json",
+  "summary": {
+    "total": 226,
+    "by_role": {
+      "current-authority": 84,
+      "downstream-candidate": 142
+    },
+    "by_family": {
+      "ACC": 2,
+      "API": 15,
+      "ARCH": 8,
+      "AUTH": 14,
+      "AWS": 18,
+      "CHG": 5,
+      "COMP": 2,
+      "CTX": 6,
+      "DATA": 14,
+      "DISC": 2,
+      "DOC": 7,
+      "EVAL": 3,
+      "EXPORT": 3,
+      "FE": 18,
+      "IMPL": 16,
+      "INV": 10,
+      "META": 10,
+      "MOD": 10,
+      "OPG": 6,
+      "OUT": 2,
+      "OWN": 12,
+      "PUB": 1,
+      "RANK": 2,
+      "REP": 15,
+      "SC": 3,
+      "SYNC": 14,
+      "VAL": 8
+    }
+  },
+  "references": {
+    "ACC-001": {
+      "owner_path": "docs/canonical/concepts/access.md",
+      "anchor": "acc-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/access.md#acc-001"
+    },
+    "ACC-002": {
+      "owner_path": "docs/canonical/concepts/access.md",
+      "anchor": "acc-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/access.md#acc-002"
+    },
+    "API-001": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-001"
+    },
+    "API-002": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-002"
+    },
+    "API-003": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-003"
+    },
+    "API-004": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-004"
+    },
+    "API-005": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-005"
+    },
+    "API-006": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-006"
+    },
+    "API-007": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-007"
+    },
+    "API-008": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-008"
+    },
+    "API-009": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-009"
+    },
+    "API-010": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-010"
+    },
+    "API-011": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-011"
+    },
+    "API-012": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-012"
+    },
+    "API-013": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-013"
+    },
+    "API-014": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-014"
+    },
+    "API-015": {
+      "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "anchor": "api-015",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/commands-api-concurrency.md#api-015"
+    },
+    "ARCH-001": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-001"
+    },
+    "ARCH-002": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-002"
+    },
+    "ARCH-003": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-003"
+    },
+    "ARCH-004": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-004"
+    },
+    "ARCH-005": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-005"
+    },
+    "ARCH-006": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-006"
+    },
+    "ARCH-007": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-007"
+    },
+    "ARCH-008": {
+      "owner_path": "docs/canonical/architecture/architectural-foundation.md",
+      "anchor": "arch-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/architectural-foundation.md#arch-008"
+    },
+    "AUTH-001": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-001"
+    },
+    "AUTH-002": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-002"
+    },
+    "AUTH-003": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-003"
+    },
+    "AUTH-004": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-004"
+    },
+    "AUTH-005": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-005"
+    },
+    "AUTH-006": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-006"
+    },
+    "AUTH-007": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-007"
+    },
+    "AUTH-008": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-008"
+    },
+    "AUTH-009": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-009"
+    },
+    "AUTH-010": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-010"
+    },
+    "AUTH-011": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-011"
+    },
+    "AUTH-012": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-012"
+    },
+    "AUTH-013": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-013"
+    },
+    "AUTH-014": {
+      "owner_path": "docs/canonical/architecture/identity-access-session.md",
+      "anchor": "auth-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/identity-access-session.md#auth-014"
+    },
+    "AWS-001": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-001"
+    },
+    "AWS-002": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-002"
+    },
+    "AWS-003": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-003"
+    },
+    "AWS-004": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-004"
+    },
+    "AWS-005": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-005"
+    },
+    "AWS-006": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-006"
+    },
+    "AWS-007": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-007"
+    },
+    "AWS-008": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-008"
+    },
+    "AWS-009": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-009"
+    },
+    "AWS-010": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-010"
+    },
+    "AWS-011": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-011"
+    },
+    "AWS-012": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-012"
+    },
+    "AWS-013": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-013"
+    },
+    "AWS-014": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-014"
+    },
+    "AWS-015": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-015",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-015"
+    },
+    "AWS-016": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-016",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-016"
+    },
+    "AWS-017": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-017",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-017"
+    },
+    "AWS-018": {
+      "owner_path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "anchor": "aws-018",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-018"
+    },
+    "CHG-001": {
+      "owner_path": "docs/canonical/governance/change-governance.md",
+      "anchor": "chg-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/change-governance.md#chg-001"
+    },
+    "CHG-002": {
+      "owner_path": "docs/canonical/governance/change-governance.md",
+      "anchor": "chg-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/change-governance.md#chg-002"
+    },
+    "CHG-003": {
+      "owner_path": "docs/canonical/governance/change-governance.md",
+      "anchor": "chg-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/change-governance.md#chg-003"
+    },
+    "CHG-004": {
+      "owner_path": "docs/canonical/governance/change-governance.md",
+      "anchor": "chg-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/change-governance.md#chg-004"
+    },
+    "CHG-005": {
+      "owner_path": "docs/canonical/governance/change-governance.md",
+      "anchor": "chg-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/change-governance.md#chg-005"
+    },
+    "COMP-001": {
+      "owner_path": "docs/canonical/concepts/competition.md",
+      "anchor": "comp-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/competition.md#comp-001"
+    },
+    "COMP-002": {
+      "owner_path": "docs/canonical/concepts/competition.md",
+      "anchor": "comp-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/competition.md#comp-002"
+    },
+    "CTX-001": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-001"
+    },
+    "CTX-002": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-002"
+    },
+    "CTX-003": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-003"
+    },
+    "CTX-004": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-004"
+    },
+    "CTX-005": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-005"
+    },
+    "CTX-006": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-006"
+    },
+    "DATA-001": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-001"
+    },
+    "DATA-002": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-002"
+    },
+    "DATA-003": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-003"
+    },
+    "DATA-004": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-004"
+    },
+    "DATA-005": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-005"
+    },
+    "DATA-006": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-006"
+    },
+    "DATA-007": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-007"
+    },
+    "DATA-008": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-008"
+    },
+    "DATA-009": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-009"
+    },
+    "DATA-010": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-010"
+    },
+    "DATA-011": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-011"
+    },
+    "DATA-012": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-012"
+    },
+    "DATA-013": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-013"
+    },
+    "DATA-014": {
+      "owner_path": "docs/canonical/architecture/data-persistence.md",
+      "anchor": "data-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/data-persistence.md#data-014"
+    },
+    "DISC-001": {
+      "owner_path": "docs/canonical/policies/anonymity-disclosure.md",
+      "anchor": "disc-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/anonymity-disclosure.md#disc-001"
+    },
+    "DISC-002": {
+      "owner_path": "docs/canonical/policies/anonymity-disclosure.md",
+      "anchor": "disc-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/anonymity-disclosure.md#disc-002"
+    },
+    "DOC-001": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-001"
+    },
+    "DOC-002": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-002"
+    },
+    "DOC-003": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-003"
+    },
+    "DOC-004": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-004"
+    },
+    "DOC-005": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-005"
+    },
+    "DOC-006": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-006"
+    },
+    "DOC-007": {
+      "owner_path": "docs/canonical/governance/documentation-authority.md",
+      "anchor": "doc-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/documentation-authority.md#doc-007"
+    },
+    "EVAL-001": {
+      "owner_path": "docs/canonical/policies/evaluation-policy.md",
+      "anchor": "eval-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/evaluation-policy.md#eval-001"
+    },
+    "EVAL-002": {
+      "owner_path": "docs/canonical/policies/evaluation-policy.md",
+      "anchor": "eval-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/evaluation-policy.md#eval-002"
+    },
+    "EVAL-003": {
+      "owner_path": "docs/canonical/policies/evaluation-policy.md",
+      "anchor": "eval-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/evaluation-policy.md#eval-003"
+    },
+    "EXPORT-001": {
+      "owner_path": "docs/canonical/concepts/export.md",
+      "anchor": "export-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/export.md#export-001"
+    },
+    "EXPORT-002": {
+      "owner_path": "docs/canonical/concepts/export.md",
+      "anchor": "export-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/export.md#export-002"
+    },
+    "EXPORT-003": {
+      "owner_path": "docs/canonical/concepts/export.md",
+      "anchor": "export-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/export.md#export-003"
+    },
+    "FE-001": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-001"
+    },
+    "FE-002": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-002"
+    },
+    "FE-003": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-003"
+    },
+    "FE-004": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-004"
+    },
+    "FE-005": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-005"
+    },
+    "FE-006": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-006"
+    },
+    "FE-007": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-007"
+    },
+    "FE-008": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-008"
+    },
+    "FE-009": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-009"
+    },
+    "FE-010": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-010"
+    },
+    "FE-011": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-011"
+    },
+    "FE-012": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-012"
+    },
+    "FE-013": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-013"
+    },
+    "FE-014": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-014"
+    },
+    "FE-015": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-015",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-015"
+    },
+    "FE-016": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-016",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-016"
+    },
+    "FE-017": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-017",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-017"
+    },
+    "FE-018": {
+      "owner_path": "docs/canonical/architecture/frontend-interaction.md",
+      "anchor": "fe-018",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/frontend-interaction.md#fe-018"
+    },
+    "IMPL-001": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-001"
+    },
+    "IMPL-002": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-002"
+    },
+    "IMPL-003": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-003"
+    },
+    "IMPL-004": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-004"
+    },
+    "IMPL-005": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-005"
+    },
+    "IMPL-006": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-006"
+    },
+    "IMPL-007": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-007"
+    },
+    "IMPL-008": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-008"
+    },
+    "IMPL-009": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-009"
+    },
+    "IMPL-010": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-010"
+    },
+    "IMPL-011": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-011"
+    },
+    "IMPL-012": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-012"
+    },
+    "IMPL-013": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-013"
+    },
+    "IMPL-014": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-014"
+    },
+    "IMPL-015": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-015",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-015"
+    },
+    "IMPL-016": {
+      "owner_path": "docs/canonical/implementation/implementation-foundation.md",
+      "anchor": "impl-016",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/implementation/implementation-foundation.md#impl-016"
+    },
+    "INV-001": {
+      "owner_path": "docs/canonical/invariants/judge-independence.md",
+      "anchor": "inv-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/judge-independence.md#inv-001"
+    },
+    "INV-002": {
+      "owner_path": "docs/canonical/invariants/one-logical-scorecard.md",
+      "anchor": "inv-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/one-logical-scorecard.md#inv-002"
+    },
+    "INV-003": {
+      "owner_path": "docs/canonical/invariants/missing-never-zero.md",
+      "anchor": "inv-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/missing-never-zero.md#inv-003"
+    },
+    "INV-004": {
+      "owner_path": "docs/canonical/invariants/organizer-not-judge-author.md",
+      "anchor": "inv-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/organizer-not-judge-author.md#inv-004"
+    },
+    "INV-005": {
+      "owner_path": "docs/canonical/invariants/current-vs-historical-truth.md",
+      "anchor": "inv-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/current-vs-historical-truth.md#inv-005"
+    },
+    "INV-006": {
+      "owner_path": "docs/canonical/invariants/calculated-not-official.md",
+      "anchor": "inv-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/calculated-not-official.md#inv-006"
+    },
+    "INV-007": {
+      "owner_path": "docs/canonical/invariants/official-not-automatically-public.md",
+      "anchor": "inv-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/official-not-automatically-public.md#inv-007"
+    },
+    "INV-008": {
+      "owner_path": "docs/canonical/invariants/capture-channel-parity.md",
+      "anchor": "inv-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/capture-channel-parity.md#inv-008"
+    },
+    "INV-009": {
+      "owner_path": "docs/canonical/invariants/accessibility-semantic-parity.md",
+      "anchor": "inv-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/accessibility-semantic-parity.md#inv-009"
+    },
+    "INV-010": {
+      "owner_path": "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+      "anchor": "inv-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/invariants/truthful-authority-under-uncertainty.md#inv-010"
+    },
+    "META-001": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-001"
+    },
+    "META-002": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-002"
+    },
+    "META-003": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-003"
+    },
+    "META-004": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-004"
+    },
+    "META-005": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-005"
+    },
+    "META-006": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-006"
+    },
+    "META-007": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-007"
+    },
+    "META-008": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-008"
+    },
+    "META-009": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-009"
+    },
+    "META-010": {
+      "owner_path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "anchor": "meta-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/metadata-trust-lifecycle.md#meta-010"
+    },
+    "MOD-001": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-001"
+    },
+    "MOD-002": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-002"
+    },
+    "MOD-003": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-003"
+    },
+    "MOD-004": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-004"
+    },
+    "MOD-005": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-005"
+    },
+    "MOD-006": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-006"
+    },
+    "MOD-007": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-007"
+    },
+    "MOD-008": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-008"
+    },
+    "MOD-009": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-009"
+    },
+    "MOD-010": {
+      "owner_path": "docs/canonical/architecture/application-boundaries.md",
+      "anchor": "mod-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/application-boundaries.md#mod-010"
+    },
+    "OPG-001": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-001"
+    },
+    "OPG-002": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-002"
+    },
+    "OPG-003": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-003"
+    },
+    "OPG-004": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-004"
+    },
+    "OPG-005": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-005"
+    },
+    "OPG-006": {
+      "owner_path": "docs/canonical/policies/operational-exception-governance.md",
+      "anchor": "opg-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/policies/operational-exception-governance.md#opg-006"
+    },
+    "OUT-001": {
+      "owner_path": "docs/canonical/concepts/outcome-declaration.md",
+      "anchor": "out-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/outcome-declaration.md#out-001"
+    },
+    "OUT-002": {
+      "owner_path": "docs/canonical/concepts/outcome-declaration.md",
+      "anchor": "out-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/outcome-declaration.md#out-002"
+    },
+    "OWN-001": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-001"
+    },
+    "OWN-002": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-002"
+    },
+    "OWN-003": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-003"
+    },
+    "OWN-004": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-004"
+    },
+    "OWN-005": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-005"
+    },
+    "OWN-006": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-006"
+    },
+    "OWN-007": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-007"
+    },
+    "OWN-008": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-008"
+    },
+    "OWN-009": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-009"
+    },
+    "OWN-010": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-010"
+    },
+    "OWN-011": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-011"
+    },
+    "OWN-012": {
+      "owner_path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "anchor": "own-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/deterministic-ownership-resolution.md#own-012"
+    },
+    "PUB-001": {
+      "owner_path": "docs/canonical/concepts/publication.md",
+      "anchor": "pub-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/publication.md#pub-001"
+    },
+    "RANK-001": {
+      "owner_path": "docs/canonical/mechanisms/rank.md",
+      "anchor": "rank-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/mechanisms/rank.md#rank-001"
+    },
+    "RANK-002": {
+      "owner_path": "docs/canonical/mechanisms/rank.md",
+      "anchor": "rank-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/mechanisms/rank.md#rank-002"
+    },
+    "REP-001": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-001"
+    },
+    "REP-002": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-002"
+    },
+    "REP-003": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-003"
+    },
+    "REP-004": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-004"
+    },
+    "REP-005": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-005"
+    },
+    "REP-006": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-006"
+    },
+    "REP-007": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-007"
+    },
+    "REP-008": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-008"
+    },
+    "REP-009": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-009"
+    },
+    "REP-010": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-010"
+    },
+    "REP-011": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-011"
+    },
+    "REP-012": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-012"
+    },
+    "REP-013": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-013"
+    },
+    "REP-014": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-014"
+    },
+    "REP-015": {
+      "owner_path": "docs/canonical/architecture/external-representation.md",
+      "anchor": "rep-015",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/external-representation.md#rep-015"
+    },
+    "SC-001": {
+      "owner_path": "docs/canonical/concepts/scorecard.md",
+      "anchor": "sc-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/scorecard.md#sc-001"
+    },
+    "SC-002": {
+      "owner_path": "docs/canonical/concepts/scorecard.md",
+      "anchor": "sc-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/scorecard.md#sc-002"
+    },
+    "SC-003": {
+      "owner_path": "docs/canonical/concepts/scorecard.md",
+      "anchor": "sc-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/concepts/scorecard.md#sc-003"
+    },
+    "SYNC-001": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-001",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-001"
+    },
+    "SYNC-002": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-002",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-002"
+    },
+    "SYNC-003": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-003",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-003"
+    },
+    "SYNC-004": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-004",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-004"
+    },
+    "SYNC-005": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-005",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-005"
+    },
+    "SYNC-006": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-006",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-006"
+    },
+    "SYNC-007": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-007",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-007"
+    },
+    "SYNC-008": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-008",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-008"
+    },
+    "SYNC-009": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-009",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-009"
+    },
+    "SYNC-010": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-010",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-010"
+    },
+    "SYNC-011": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-011",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-011"
+    },
+    "SYNC-012": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-012",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-012"
+    },
+    "SYNC-013": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-013",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-013"
+    },
+    "SYNC-014": {
+      "owner_path": "docs/canonical/architecture/synchronization-recovery.md",
+      "anchor": "sync-014",
+      "role": "downstream-candidate",
+      "locator": "docs/canonical/architecture/synchronization-recovery.md#sync-014"
+    },
+    "VAL-001": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-001"
+    },
+    "VAL-002": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-002"
+    },
+    "VAL-003": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-003"
+    },
+    "VAL-004": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-004"
+    },
+    "VAL-005": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-005"
+    },
+    "VAL-006": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-006"
+    },
+    "VAL-007": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-007"
+    },
+    "VAL-008": {
+      "owner_path": "docs/canonical/governance/validation-enforcement.md",
+      "anchor": "val-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/validation-enforcement.md#val-008"
+    }
+  }
+}
