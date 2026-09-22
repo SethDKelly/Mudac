@@ -29,4 +29,4 @@ Outcome Declaration != Export != Publication != possession
 
 Automation may execute already-authorized bounded consequences; it may not manufacture semantic authority.
 
-For current methodology status and repair/validation evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For Concept Design closure and repair/validation evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure repository qualification, use [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/).
