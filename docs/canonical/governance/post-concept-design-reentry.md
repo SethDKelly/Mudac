@@ -49,10 +49,13 @@ Current state:
 
 ~~~text
 Concept Design                     CLOSED
+Phase 018                         COMPLETE — PASS
+Phase 019                         AUTHORIZED — 019-A NEXT ELIGIBLE
 implementation readiness           READY
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture          NOT ESTABLISHED
-post-closure re-entry              AUTHORIZED
+architecture framework             PRE-SELECTION
+active implementation packages     0
 implementation execution           NOT STARTED
 implementation execution auth      NOT GRANTED
 ~~~
@@ -408,8 +411,6 @@ Engineering difficulty alone is not evidence that Concept Design is wrong.
 
 017-H activated this handoff contract.
 
-Phase 018 is the active post-closure qualification program. It has qualified the historical candidate corpus and defined a pre-selection architecture evaluation framework plus a proposed Phase-019 Architecture & Engineering Re-entry program.
+Phase 018 is complete. 018-M authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A using the pre-selection architecture framework defined in 018-K.
 
-That proposed Phase 019 is not authorized by 018-K alone. Phase-018 exit authority remains with 018-M.
-
-No historical architecture is accepted merely by qualification or planning, and no implementation execution authority is granted.
+Phase 019 authorization permits governed architecture evaluation and acceptance work only. It does not preselect any option, activate a historical candidate, create implementation packages, or grant implementation execution authority.
