@@ -18,6 +18,7 @@ CHECKS = (
     ("status mirror drift", "scripts/validate_status_mirrors.py", ("--repo", "{repo}")),
     ("stable-resolution behavior", "scripts/validate_resolution_smoke.py", ("--repo", "{repo}")),
     ("downstream candidate qualification", "scripts/validate_candidate_qualification.py", ("--repo", "{repo}")),
+    ("architecture re-entry plan", "scripts/validate_architecture_reentry_plan.py", ("--repo", "{repo}")),
     ("agentic/authority secret scan", "scripts/scan_agentic_secrets.py", ("--repo", "{repo}")),
 )
 
