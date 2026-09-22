@@ -14,8 +14,9 @@ Phase 018 is **IN PROGRESS**.
 ## Records
 
 - [018-A — Start Gate, Closure Baseline, Audit Authority, Qualification Model & Scorecard](018-A-start-gate-closure-baseline-audit-authority-qualification-model-scorecard.md) — **COMPLETE — QUALIFICATION PROGRAM AUTHORIZED**.
-- 018-B — Whole-Corpus Documentation Inventory, Duplication, Concision & Current/History Topology Audit — **NEXT**.
-- 018-C — OKF v0.2 Conformance, Progressive Disclosure, Metadata & Knowledge-Bundle Qualification — PLANNED.
+- [018-B — Whole-Corpus Documentation Inventory, Duplication, Concision & Current/History Topology Audit](018-B-whole-corpus-documentation-inventory-duplication-concision-current-history-topology-audit.md) — **COMPLETE — PASS WITH EXPLICIT TOPOLOGY CARRY-FORWARD**.
+  - [018-B entry inventory](018-B-documentation-inventory.json) — machine-readable whole-corpus role/size snapshot.
+- 018-C — OKF v0.2 Conformance, Progressive Disclosure, Metadata & Knowledge-Bundle Qualification — **NEXT**.
 - 018-D — Canonical Ownership, Stable References, Deterministic Resolution & Drift-Control Design — PLANNED.
 - 018-E — Agentic Development Authority, Human-Directed Scope, Change Classes & Safety Boundaries — PLANNED.
 - 018-F — Agent Context, Progressive Retrieval, Context-Budget & Anti-Bloat Architecture — PLANNED.
@@ -35,7 +36,8 @@ Jackson Concept Design CLOSED
 
 018 IN PROGRESS
 018-A COMPLETE — QUALIFICATION PROGRAM AUTHORIZED
-018-B NEXT
+018-B COMPLETE — PASS WITH EXPLICIT TOPOLOGY CARRY-FORWARD
+018-C NEXT
 
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture NOT ESTABLISHED
