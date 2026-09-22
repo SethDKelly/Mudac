@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I COMPLETE / 019-J NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I/J COMPLETE / 019-K NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -88,7 +88,6 @@ Accepted ART-001..020: exact-source Exports, immutable integrity-addressed artif
 
 Accepted CLT-001..020: client-rich but server-authoritative browser interaction, explicit client-state partitioning, context-safe navigation/private-state isolation, bounded local Draft continuity, explicit uncertainty/recovery, phone-primary Judge workflows, responsive Organizer density and accessibility semantic parity.
 
-Resolve ADQ-008 after required Q4 repair.
 
 ### 019-J — Runtime / Platform / Security / Availability / Observability / DR
 
@@ -98,7 +97,7 @@ Resolve ADQ-009.
 
 ### 019-K — Whole-Architecture Reconciliation
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-010 through cross-decision scenario, threat, failure, recovery, performance, cost and reversibility validation.
 
@@ -111,11 +110,11 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G, 019-H, 019-I
-next eligible subphase               019-J
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G, 019-H, 019-I, 019-J
+next eligible subphase               019-K
 automatic advance                    false
 
-ADQ decisions accepted               8 / 10
+ADQ decisions accepted               9 / 10
 Q4 repairs complete                  4 / 4
 technical probes authorized          0
 

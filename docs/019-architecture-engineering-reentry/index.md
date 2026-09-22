@@ -1,6 +1,6 @@
 # Phase 019 — Architecture & Engineering Re-entry
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I COMPLETE / 019-J NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I/J COMPLETE / 019-K NEXT ELIGIBLE
 
 Phase 019 is the fresh architecture decision and acceptance program authorized by 018-M.
 
@@ -38,8 +38,8 @@ implementation execution       false
 - [019-G — Offline Draft, Multi-device, Degraded, Paper & Reconciliation Architecture](019-G-offline-draft-multi-device-degraded-paper-reconciliation-architecture.md) — **COMPLETE — PASS — Q4R-003 COMPLETE / ADQ-006 ACCEPTED**
 - [019-H — Artifact, Export, Publication, External Representation & Delivery Architecture](019-H-artifact-export-publication-external-representation-delivery-architecture.md) — **COMPLETE — PASS — ADQ-007 ACCEPTED**
 - [019-I — Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture](019-I-browser-client-state-navigation-accessibility-degraded-interaction-architecture.md) — **COMPLETE — PASS — Q4R-004 COMPLETE / ADQ-008 ACCEPTED**
-- 019-J — Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture — **NEXT ELIGIBLE**
-- 019-K — Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation — PLANNED
+- [019-J — Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture](019-J-runtime-platform-security-deployment-availability-observability-disaster-recovery-architecture.md) — **COMPLETE — PASS — ADQ-009 ACCEPTED**
+- 019-K — Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation — **NEXT ELIGIBLE**
 - 019-L — Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff — PLANNED
 
 ## Current authority
@@ -58,10 +58,10 @@ Use:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I COMPLETE
-019-J NEXT ELIGIBLE
+019-A/B/C/D/E/F/G/H/I/J COMPLETE
+019-K NEXT ELIGIBLE
 
-ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 ACCEPTED
+ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture          NOT ESTABLISHED
 active implementation packages       0

@@ -259,18 +259,18 @@ Generated or machine-readable state cannot create authority that the correspondi
 
 # Current Phase-019 posture
 
-After 019-I:
+After 019-J:
 
 ~~~text
 Phase 019                         ACTIVE
 019-A / 019-B / 019-C / 019-D /
 019-E / 019-F / 019-G / 019-H /
-019-I                             COMPLETE
-019-J                             NEXT ELIGIBLE
+019-I / 019-J                     COMPLETE
+019-K                             NEXT ELIGIBLE
 ADQ-001 / ADQ-002 / ADQ-003 /
 ADQ-004 / ADQ-005 / ADQ-006 /
-ADQ-007 / ADQ-008                 ACCEPTED
-ADQ decisions accepted            8 / 10
+ADQ-007 / ADQ-008 / ADQ-009       ACCEPTED
+ADQ decisions accepted            9 / 10
 Q4 architecture repairs complete  4 / 4
 technical probes authorized       0
 accepted whole architecture       false
@@ -287,6 +287,7 @@ Current accepted architecture owners are:
 - docs/canonical/architecture/interface-command-concurrency.md (CMD-001..022);
 - docs/canonical/architecture/offline-continuity-reconciliation.md (RCV-001..018);
 - docs/canonical/architecture/artifact-export-publication-delivery.md (ART-001..020);
-- docs/canonical/architecture/browser-client-interaction.md (CLT-001..020).
+- docs/canonical/architecture/browser-client-interaction.md (CLT-001..020);
+- docs/canonical/architecture/runtime-platform-operations.md (RUN-001..026).
 
-Q4R-001 through Q4R-004 are complete. 019-J may now evaluate ADQ-009 against the accepted driver, ownership, persistence, identity/access, command/concurrency, continuity, externalization and browser/client foundations.
+Q4R-001 through Q4R-004 remain complete. 019-K may now perform whole-architecture integration, threat, failure, recovery, performance, cost and scenario validation before ADQ-010 can be resolved.
