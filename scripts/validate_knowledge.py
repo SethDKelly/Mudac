@@ -135,6 +135,7 @@ class Validator:
     def validate_routing_contract(self) -> None:
         required = [
             self.root / "AGENTS.md",
+            self.root / "CLAUDE.md",
             self.root / "README.md",
             self.root / "requirements-docs.txt",
             self.root / "scripts" / "validate_knowledge.py",

@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "AGENTS.md"
+      - "CLAUDE.md"
       - "README.md"
       - "requirements-docs.txt"
       - "scripts/**"
@@ -16,6 +17,7 @@ on:
   pull_request:
     paths:
       - "AGENTS.md"
+      - "CLAUDE.md"
       - "README.md"
       - "requirements-docs.txt"
       - "scripts/**"
