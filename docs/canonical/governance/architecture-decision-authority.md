@@ -259,17 +259,17 @@ Generated or machine-readable state cannot create authority that the correspondi
 
 # Current Phase-019 posture
 
-After 019-F:
+After 019-G:
 
 ~~~text
 Phase 019                         ACTIVE
 019-A / 019-B / 019-C / 019-D /
-019-E / 019-F                     COMPLETE
-019-G                             NEXT ELIGIBLE
+019-E / 019-F / 019-G             COMPLETE
+019-H                             NEXT ELIGIBLE
 ADQ-001 / ADQ-002 / ADQ-003 /
-ADQ-004 / ADQ-005                 ACCEPTED
-ADQ decisions accepted            5 / 10
-Q4 architecture repairs complete  2 / 4
+ADQ-004 / ADQ-005 / ADQ-006       ACCEPTED
+ADQ decisions accepted            6 / 10
+Q4 architecture repairs complete  3 / 4
 technical probes authorized       0
 accepted whole architecture       false
 active implementation packages    0
@@ -282,6 +282,7 @@ Current accepted architecture owners are:
 - docs/canonical/architecture/application-ownership-boundaries.md (BND-001..012);
 - docs/canonical/architecture/persistence-history-recovery.md (PST-001..016);
 - docs/canonical/architecture/identity-access-authority.md (IAM-001..018);
-- docs/canonical/architecture/interface-command-concurrency.md (CMD-001..022).
+- docs/canonical/architecture/interface-command-concurrency.md (CMD-001..022);
+- docs/canonical/architecture/offline-continuity-reconciliation.md (RCV-001..018).
 
-Q4R-001 and Q4R-002 are complete. 019-G may now begin its required Q4R-003 repair before evaluating ADQ-006 against the accepted driver, ownership, persistence, identity/access/session and command/concurrency foundations.
+Q4R-001 through Q4R-003 are complete. 019-H may now evaluate ADQ-007 against the accepted driver, ownership, persistence, identity/access/session, command/concurrency and offline-continuity foundations.

@@ -45,9 +45,10 @@
       "019-C",
       "019-D",
       "019-E",
-      "019-F"
+      "019-F",
+      "019-G"
     ],
-    "next_eligible_subphase": "019-G",
+    "next_eligible_subphase": "019-H",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -110,7 +111,7 @@
       "questions": [
         "ADQ-006"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-H",
@@ -118,7 +119,7 @@
       "questions": [
         "ADQ-007"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-I",
@@ -621,11 +622,17 @@
       "question_id": "ADQ-006",
       "title": "Offline Draft, Multi-device, Degraded & Paper Recovery Architecture",
       "owning_subphase": "019-G",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Server-authoritative Draft currentness with bounded non-authoritative local continuity, revision-aware reconnect, explicit conflict preservation, one-logical-Scorecard multi-device convergence, no disconnected authority, privacy-safe shared-device recovery, and paper/electronic reconciliation (RCV-001..RCV-018)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-G-offline-draft-multi-device-degraded-paper-reconciliation-architecture.md",
+      "alternatives_evaluated": [
+        "Repaired historical Synchronization/Offline Recovery candidate unchanged",
+        "Online-only digital operation with paper fallback",
+        "General local-first / CRDT-style offline application authority",
+        "Durable offline command outbox with automatic replay of all intent",
+        "Bounded non-authoritative local Draft continuity with server-authoritative reconciliation and paper fallback"
+      ],
       "constraint_refs": [
         "ENG-005",
         "ENG-007",
@@ -642,21 +649,68 @@
       "candidate_inputs": [
         "docs/canonical/architecture/synchronization-recovery.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/offline-continuity-reconciliation.md",
+        "docs/019-architecture-engineering-reentry/019-G-Q4R-003-synchronization-recovery-semantic-repair.md",
+        "docs/canonical/architecture/synchronization-recovery.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/policies/continuity-paper.md",
+        "docs/canonical/experience/accessibility-resilience.md",
+        "docs/canonical/experience/status-feedback-recovery.md",
+        "docs/canonical/experience/authority-lineage-correction.md",
+        "docs/canonical/invariants/one-logical-scorecard.md",
+        "docs/canonical/invariants/capture-channel-parity.md",
+        "docs/canonical/invariants/accessibility-semantic-parity.md",
+        "docs/canonical/invariants/truthful-authority-under-uncertainty.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "duplicate/offline Draft convergence",
         "shared-device context handoff",
         "paper/electronic capture disagreement",
         "unknown/degraded result"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-07",
+        "ERI-09"
+      ],
+      "rationale": "Current semantics require continuity without independent device/paper authority. Bounded local Draft persistence reduces transient work loss while server-owned currentness, current IAM revalidation, CMD revision/idempotency/reconciliation, explicit conflict preservation and one-logical-Scorecard uniqueness prevent offline or multi-device traces from multiplying authority. Paper remains an alternate capture/source channel with the same basis, authorship and weight.",
+      "rejected_alternatives": [
+        "Historical candidate unchanged — useful continuity semantics but stale Encounter binding and inherited client/runtime mechanisms require current re-establishment.",
+        "Online-only digital operation — smallest client state but unnecessarily loses recoverable Judge work during transient connectivity failures.",
+        "General local-first/CRDT authority — current Access, basis, Finalization and evaluation meaning are not generally safe to merge offline.",
+        "Blind durable command outbox — consequential intent can become stale/unauthorized and would create a second command-authority model beside CMD reconciliation."
+      ],
+      "reversibility_migration": "Commits to server-authoritative Draft currentness, bounded local non-authoritative continuity, revision-aware reconciliation, no general offline authority and one-logical-evaluation convergence. Browser storage, encryption, autosave, service worker/background sync, queue/runtime and exact retention remain unselected for later ADQ-008/ADQ-009/implementation decisions.",
+      "residual_uncertainty": [
+        "exact browser durable-storage mechanism",
+        "exact local encryption/locking strategy",
+        "exact local retention/cleanup window",
+        "autosave cadence and write batching",
+        "cross-tab coordination",
+        "whether background retry materially improves experience",
+        "safe automatic-merge field classes, if any",
+        "local storage quota/eviction behavior",
+        "exact offline/online detection behavior",
+        "conflict-resolution interaction design",
+        "event-specific paper identifier/printing mechanics"
+      ],
+      "revisit_triggers": [
+        "event operation requires general disconnected authority rather than bounded Draft continuity",
+        "browser/platform constraints cannot preserve continuity/privacy safely",
+        "measured multi-device conflict frequency makes explicit reconciliation operationally unacceptable",
+        "local continuity retention creates unacceptable privacy/compliance risk",
+        "paper fallback cannot preserve required basis/provenance at event scale",
+        "service extraction invalidates current command/current-state reconciliation assumptions",
+        "whole-architecture validation exposes unresolved duplication, stale-authority or degraded-operation risk"
+      ],
+      "accepted_in_subphase": "019-G",
       "supersedes_decision": null
     },
     {
@@ -958,14 +1012,63 @@
         "stale_bindings": [
           "historical Encounter-era grouping assumptions"
         ],
-        "repair_status": "REQUIRED",
-        "repair_document": null,
-        "current_semantic_owner_refs": [],
-        "retained_hypothesis": [],
-        "excluded_obsolete_content": [],
-        "revised_comparison_statement": null,
-        "preservation_evidence_refs": [],
-        "comparison_eligible": false
+        "repair_status": "COMPLETE",
+        "repair_document": "docs/019-architecture-engineering-reentry/019-G-Q4R-003-synchronization-recovery-semantic-repair.md",
+        "current_semantic_owner_refs": [
+          "docs/canonical/concepts/evaluation-occurrence.md",
+          "docs/canonical/concepts/evaluation-obligation.md",
+          "docs/canonical/concepts/scorecard.md",
+          "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+          "docs/canonical/synchronizations/evaluation-basis-scorecard-authority.md",
+          "docs/canonical/policies/continuity-paper.md",
+          "docs/canonical/invariants/one-logical-scorecard.md",
+          "docs/canonical/invariants/capture-channel-parity.md",
+          "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+          "docs/canonical/architecture/persistence-history-recovery.md",
+          "docs/canonical/architecture/identity-access-authority.md",
+          "docs/canonical/architecture/interface-command-concurrency.md"
+        ],
+        "retained_hypothesis": [
+          "local persistence is non-authoritative continuity state",
+          "local work binds to stable semantic identity and a confirmed server base",
+          "server Draft revision/currentness remains authoritative",
+          "synchronization is revision/current-state aware",
+          "stale conflicts preserve server state and pending authored work",
+          "automatic merge is safe-only",
+          "multiple devices converge on one logical Scorecard",
+          "authoritative transitions require reachable server authority",
+          "uncertain consequential outcomes reconcile before repetition",
+          "reconnect re-establishes Identity Participation Access and current state",
+          "cached reads remain stale-capable and disclosure bounded",
+          "expired/revoked Access blocks ordinary automatic synchronization",
+          "paper/electronic traces converge on one logical evaluation",
+          "continuity status distinguishes local durability server confirmation conflict uncertainty and authority",
+          "degraded operation reduces capability rather than weakening semantics"
+        ],
+        "excluded_obsolete_content": [
+          "Encounter as a current semantic owner/aggregate",
+          "historical ARCH/AUTH/API/FE/AWS/SYNC candidate IDs as current authority",
+          "historical module boundaries as already accepted",
+          "IndexedDB as an inherited selected mechanism",
+          "service worker/background sync as inherited selected mechanisms",
+          "SQS or queue selection as inherited synchronization architecture",
+          "AWS/runtime recovery choices as ADQ-006 authority",
+          "provider/session bearer credentials in local Draft payload",
+          "general offline authoritative operation",
+          "automatic last-write-wins or unsafe generic merge"
+        ],
+        "revised_comparison_statement": "Preserve bounded non-authoritative local Draft continuity against a server-authoritative logical Scorecard and exact Evaluation Basis; bind each local trace to current Evaluation Occurrence/Obligation and Participation context plus a last-confirmed authoritative Draft revision; reconcile reconnects using current Identity/Participation/Access and optimistic current-state checks; preserve both sides of stale conflicts rather than silently overwrite; converge multiple devices and paper/electronic traces on one logical evaluation; prohibit disconnected authority-establishing transitions; and expose local, synchronized, stale, conflicting and unknown states truthfully.",
+        "preservation_evidence_refs": [
+          "docs/019-architecture-engineering-reentry/019-G-Q4R-003-synchronization-recovery-semantic-repair.md",
+          "docs/canonical/concepts/evaluation-occurrence.md",
+          "docs/canonical/concepts/evaluation-obligation.md",
+          "docs/canonical/concepts/scorecard.md",
+          "docs/canonical/synchronizations/evaluation-basis-scorecard-authority.md",
+          "docs/canonical/policies/continuity-paper.md",
+          "docs/canonical/invariants/one-logical-scorecard.md",
+          "docs/canonical/invariants/capture-channel-parity.md"
+        ],
+        "comparison_eligible": true
       },
       {
         "repair_id": "Q4R-004",
@@ -1032,9 +1135,9 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 5,
+    "decisions_accepted": 6,
     "q4_repairs_total": 4,
-    "q4_repairs_complete": 2,
+    "q4_repairs_complete": 3,
     "probes_authorized": 0,
     "implementation_packages": 0
   }

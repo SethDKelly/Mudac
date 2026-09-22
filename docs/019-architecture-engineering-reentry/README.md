@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F COMPLETE / 019-G NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E/F/G COMPLETE / 019-H NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -72,13 +72,13 @@ Accepted CMD-001..022: versioned HTTPS/JSON command-query contracts, commit-conf
 
 ### 019-G — Offline / Multi-device / Degraded / Paper / Reconciliation
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — Q4R-003 COMPLETE / ADQ-006 ACCEPTED.**
 
-Resolve ADQ-006 after required Q4 repair.
+Accepted RCV-001..018: server-authoritative Draft currentness, bounded non-authoritative local continuity, revision-aware reconnect, explicit conflict preservation, one-logical-Scorecard convergence, no disconnected authority, safe shared-device recovery and paper/electronic reconciliation.
 
 ### 019-H — Artifact / Export / Publication / External Delivery
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-007.
 
@@ -109,12 +109,12 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F
-next eligible subphase               019-G
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G
+next eligible subphase               019-H
 automatic advance                    false
 
-ADQ decisions accepted               5 / 10
-Q4 repairs complete                  2 / 4
+ADQ decisions accepted               6 / 10
+Q4 repairs complete                  3 / 4
 technical probes authorized          0
 
 accepted whole architecture          false
