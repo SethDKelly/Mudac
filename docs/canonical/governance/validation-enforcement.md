@@ -105,7 +105,9 @@ The workflow:
 - installs only the validator's documented dependency set;
 - executes `python scripts/validate_knowledge.py`;
 - checks the generated OKF projection;
+- checks the generated owner-path inventory against the authored ownership policy;
 - checks the generated stable-reference index against the authored ownership policy and stable-rule registry;
+- smoke-tests that a current ID resolves normally while a quarantined architecture ID fails current resolution and succeeds only with explicit candidate inclusion;
 - uses repository `contents: read` permission;
 - fails the workflow when validator errors exist;
 - never edits knowledge, creates verification metadata, or repairs files automatically.

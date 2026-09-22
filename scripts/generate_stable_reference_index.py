@@ -115,7 +115,7 @@ def render(repo: Path) -> dict:
 
 
 def serialized(payload: dict) -> str:
-    return json.dumps(payload, indent=2) + "\n"
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
 
 
 def main() -> int:

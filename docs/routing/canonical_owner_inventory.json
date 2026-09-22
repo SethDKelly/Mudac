@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "authority": "DERIVED PATH-ROLE INVENTORY — AUTHORED OWNER FILES RETAIN SEMANTIC AUTHORITY",
+  "ownership_policy": "docs/routing/canonical_ownership.json",
+  "summary": {
+    "total": 105,
+    "by_role": {
+      "current-authority": 82,
+      "downstream-candidate": 15,
+      "external-reference": 2,
+      "historical-adapter": 6
+    }
+  },
+  "records": [
+    {
+      "path": "docs/canonical/architecture/application-boundaries.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/architectural-foundation.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/data-persistence.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/external-representation.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/frontend-interaction.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/identity-access-session.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/architecture/synchronization-recovery.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/concepts/access.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/alias.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/award.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/competition.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/division.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/evaluation-obligation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/evaluation-occurrence.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/export.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/identity.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/judging-encounter.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/concepts/outcome-declaration.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/panel.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/participation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/provenance.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/publication.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/rubric.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/scorecard.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/team.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/concepts/versioning.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/dependence/application-family-dependence.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/dependence/product-family-scope.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/dependence/whole-graph-subset-validation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/accessibility-resilience.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/action-authority-traceability.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/authority-lineage-correction.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/context-role-modes.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/external-representation-release.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/judge-evaluation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/judge-onboarding.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/live-operations.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/mapping-authority-baseline.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/organizer-preparation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/outcome-officiality.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/paper-export-publication.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/phase-013-entry-handoff.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/reconciliation-derived-state.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/experience/reconciliation-finalization.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/status-feedback-recovery.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/agent-context.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/change-governance.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/design-implementation-boundary.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/deterministic-ownership-resolution.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/documentation-authority.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/downstream-authority-quarantine.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/methodology-terminology.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/post-concept-design-reentry.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/rule-identifiers.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/source-lineage.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/validation-enforcement.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/implementation/identity-authentication-access-session.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/implementation/implementation-foundation.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/implementation/persistence-history-projection.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/implementation/runtime-delivery-bootstrap.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/implementation/source-topology.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/implementation/verification-strategy.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "path": "docs/canonical/invariants/accessibility-semantic-parity.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/calculated-not-official.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/capture-channel-parity.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/current-vs-historical-truth.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/judge-independence.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/missing-never-zero.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/official-not-automatically-public.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/one-logical-scorecard.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/organizer-not-judge-author.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/aggregate.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/coverage.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/criterion-notes.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/official-outcome-revision.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/mechanisms/panel-membership-composition.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/rank.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/readiness.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/reconciliation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/mechanisms/team-attributes.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/anonymity-disclosure.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/awards-finalization.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/continuity-paper.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/correction-authority.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/evaluation-policy.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/operational-exception-governance.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/policies/panel-composition.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/project/domain-vocabulary-expectation-transfer.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/project/mandate-context.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/project/purpose-needs-success-tensions.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/project/reusable-design-knowledge.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/application-action-surface-composition.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/competition-participation-access.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/concept-synchronizations.md",
+      "role": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-basis-scorecard-authority.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/external-representation-publication-release.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/synchronizations/temporal-truth-correction.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/references/daniel-jackson-concept-design.md",
+      "role": "external-reference"
+    },
+    {
+      "path": "docs/references/open-knowledge-format.md",
+      "role": "external-reference"
+    }
+  ]
+}

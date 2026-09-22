@@ -8,6 +8,8 @@ on:
       - "requirements-docs.txt"
       - "scripts/**"
       - "docs/**"
+      - "knowledge/**"
+      - "knowledge/**"
       - ".github/workflows/knowledge-validation.yml"
   pull_request:
     paths:
@@ -48,5 +50,18 @@ jobs:
       - name: Check generated OKF projection
         run: python scripts/generate_okf_projection.py --check
 
+      - name: Check generated owner inventory
+        run: python scripts/generate_owner_inventory.py --check
+
       - name: Check generated stable-reference index
         run: python scripts/generate_stable_reference_index.py --check
+
+      - name: Smoke-test stable-ID resolution roles
+        shell: bash
+        run: |
+          python scripts/resolve_stable_id.py INV-001
+          if python scripts/resolve_stable_id.py ARCH-001; then
+            echo "ARCH-001 unexpectedly resolved as current authority"
+            exit 1
+          fi
+          python scripts/resolve_stable_id.py ARCH-001 --include-candidates

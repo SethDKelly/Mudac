@@ -18,7 +18,7 @@ generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:08:00Z }
 
 Make MUDAC current authority deterministically resolvable by tools while preserving the distinction between semantic ownership, routing metadata, suspended downstream candidates, deprecated adapters and numbered-phase provenance.
 
-The machine-readable policy is [canonical_ownership.json](../../routing/canonical_ownership.json). The generated exact-ID routing index is [stable_reference_index.json](../../routing/stable_reference_index.json).
+The machine-readable policy is [canonical_ownership.json](../../routing/canonical_ownership.json). Its generated path-role inventory is [canonical_owner_inventory.json](../../routing/canonical_owner_inventory.json). The generated exact-ID routing index is [stable_reference_index.json](../../routing/stable_reference_index.json).
 
 <a id="own-001"></a>
 ## OWN-001 — Semantic authority remains in authored owner documents
@@ -91,13 +91,13 @@ Search frequency, phase recency and first textual occurrence cannot override the
 <a id="own-007"></a>
 ## OWN-007 — Generated ownership indexes are deterministic and rebuildable
 
-The stable-reference index is derived from:
+The owner inventory is derived from the repository paths plus the authored classification policy. The stable-reference index is derived from:
 
 1. the authored ownership classification policy;
 2. the authored stable-rule registry;
 3. the actual target owner/anchor structure checked by repository validation.
 
-The index may be deleted and regenerated without changing MUDAC semantics.
+Both generated artifacts may be deleted and regenerated without changing MUDAC semantics.
 
 Hand-editing the generated index is prohibited.
 

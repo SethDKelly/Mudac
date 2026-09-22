@@ -81,6 +81,7 @@ class Validator:
             self.collect_stable_anchors(path, body)
 
         self.validate_rule_registry(parsed)
+        self.validate_ownership_policy(parsed)
 
         for path, (frontmatter, body, _) in parsed.items():
             if self.enforce_links_for(path):
@@ -139,9 +140,11 @@ class Validator:
             self.root / "scripts" / "validate_knowledge.py",
             self.root / "scripts" / "generate_okf_projection.py",
             self.root / "scripts" / "generate_stable_reference_index.py",
+            self.root / "scripts" / "generate_owner_inventory.py",
             self.root / "scripts" / "resolve_stable_id.py",
             self.docs / "routing" / "canonical_ownership.json",
             self.docs / "routing" / "stable_reference_index.json",
+            self.docs / "routing" / "canonical_owner_inventory.json",
             self.docs / "canonical" / "governance" / "deterministic-ownership-resolution.md",
             self.docs / "routing" / "okf_projection.json",
             self.knowledge / "index.md",
@@ -506,6 +509,37 @@ class Validator:
             return (base / target_text.lstrip("/")).resolve()
         return (source_file.parent / target_text).resolve()
 
+    def validate_ownership_policy(self, parsed: dict[Path, tuple[dict | None, str, str]]) -> None:
+        policy_path = self.docs / "routing" / "canonical_ownership.json"
+        if not policy_path.is_file():
+            return
+        try:
+            import json
+            policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            self.error(policy_path, f"Ownership policy is not valid JSON: {exc}")
+            return
+
+        adapters = {str(item) for item in policy.get("historical_adapter_paths", [])}
+        candidate_roots = [self.root / str(item) for item in policy.get("downstream_candidate_roots", [])]
+        for raw in sorted(adapters):
+            path = self.root / raw
+            if not path.is_file():
+                self.error(policy_path, f"Historical-adapter path does not exist: {raw}")
+
+        for path, (fm, _, _) in parsed.items():
+            if fm is None or not path.is_relative_to(self.docs / "canonical"):
+                continue
+            if path.name in {"index.md", "README.md"}:
+                continue
+            rel = path.relative_to(self.root).as_posix()
+            in_candidate = any(path.is_relative_to(root) for root in candidate_roots)
+            if fm.get("status") == "deprecated" and not in_candidate and rel not in adapters:
+                self.error(
+                    path,
+                    "Deprecated canonical artifact must be explicitly classified in canonical_ownership.json historical_adapter_paths.",
+                )
+
     def validate_workflow_contract(self) -> None:
         workflow = self.root / ".github" / "workflows" / "knowledge-validation.yml"
         if not workflow.exists():
@@ -519,6 +553,7 @@ class Validator:
             "python scripts/validate_knowledge.py",
             "python scripts/generate_okf_projection.py --check",
             "python scripts/generate_stable_reference_index.py --check",
+            "python scripts/generate_owner_inventory.py --check",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:
