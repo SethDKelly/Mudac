@@ -27,17 +27,18 @@ ENG_RE = re.compile(r"^ENG-\d{3}$")
 ERI_RE = re.compile(r"^ERI-\d{2}$")
 
 
-def candidate_paths(repo: Path) -> set[str]:
-    result: set[str] = set()
-    for root_rel in CANDIDATE_ROOTS:
-        root = repo / root_rel
-        if not root.is_dir():
-            continue
-        for path in root.glob("*.md"):
-            if path.name == "index.md":
-                continue
-            result.add(path.relative_to(repo).as_posix())
-    return result
+def under(path: str, root: str) -> bool:
+    return path == root or path.startswith(root.rstrip("/") + "/")
+
+
+def candidate_paths(owners: dict) -> set[str]:
+    return {
+        str(item.get("path"))
+        for item in owners.get("records", [])
+        if isinstance(item, dict)
+        and item.get("role") == "downstream-candidate"
+        and any(under(str(item.get("path")), root) for root in CANDIDATE_ROOTS)
+    }
 
 
 def main() -> int:
@@ -60,7 +61,7 @@ def main() -> int:
         print("ERROR qualification register records must be a list")
         return 1
 
-    expected = candidate_paths(repo)
+    expected = candidate_paths(owners)
     actual = {item.get("path") for item in records if isinstance(item, dict)}
     if actual != expected:
         errors.append(
