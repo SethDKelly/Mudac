@@ -30,6 +30,10 @@ production readiness                NOT ESTABLISHED
 historical architecture candidates  SUSPENDED / QUARANTINED
 accepted new architecture           NOT ESTABLISHED
 post-closure re-entry               AUTHORIZED
+architecture evaluation framework   DEFINED / PRE-SELECTION
+implementation-program framework    DEFINED / PRE-ARCHITECTURE
+active implementation packages      0
+package derivation                   NOT ALLOWED
 006-D executable substrate          FROZEN HISTORICAL NON-DOMAIN FACT
 008 implementation queue            HALTED / NOT ACTIVE
 ~~~
@@ -118,7 +122,7 @@ A successful Concept Design closure does **not** automatically:
 - authorize a first domain slice;
 - authorize implementation execution.
 
-All downstream candidates must pass the separate [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md) process.
+All downstream candidates must pass the separate [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md) process. Architecture evaluation is governed by [Architecture Re-entry Evaluation & Decision Contract](architecture-reentry-evaluation.md), and future implementation planning/delivery by [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md).
 
 # Readiness versus execution
 
@@ -139,7 +143,7 @@ readiness
   != production readiness
 ~~~
 
-Implementation execution requires a later explicit downstream authorization. The next authorized activity is post-closure preparation/re-entry planning, not feature implementation.
+Implementation execution requires a later explicit downstream authorization. Phase 018 may define architecture and implementation-program frameworks, but active implementation packages remain zero and package derivation remains blocked until accepted architecture exists.
 
 # Downstream realization obligations
 
