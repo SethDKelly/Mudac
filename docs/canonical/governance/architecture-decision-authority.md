@@ -259,14 +259,16 @@ Generated or machine-readable state cannot create authority that the correspondi
 
 # Current Phase-019 posture
 
-After 019-D:
+After 019-E:
 
 ~~~text
 Phase 019                         ACTIVE
-019-A / 019-B / 019-C / 019-D     COMPLETE
-019-E                             NEXT ELIGIBLE
-ADQ-001 / ADQ-002 / ADQ-003       ACCEPTED
-ADQ decisions accepted            3 / 10
+019-A / 019-B / 019-C / 019-D /
+019-E                             COMPLETE
+019-F                             NEXT ELIGIBLE
+ADQ-001 / ADQ-002 / ADQ-003 /
+ADQ-004                           ACCEPTED
+ADQ decisions accepted            4 / 10
 Q4 architecture repairs complete  1 / 4
 technical probes authorized       0
 accepted whole architecture       false
@@ -278,6 +280,7 @@ Current accepted architecture owners are:
 
 - docs/canonical/architecture/architecture-drivers.md (DRV-001..012);
 - docs/canonical/architecture/application-ownership-boundaries.md (BND-001..012);
-- docs/canonical/architecture/persistence-history-recovery.md (PST-001..016).
+- docs/canonical/architecture/persistence-history-recovery.md (PST-001..016);
+- docs/canonical/architecture/identity-access-authority.md (IAM-001..018).
 
-Q4R-001 remains complete. 019-E may now evaluate ADQ-004 against the accepted driver, ownership and persistence foundations.
+Q4R-001 remains complete. 019-F may now evaluate ADQ-005 against the accepted driver, ownership, persistence and identity/access/session foundations.
