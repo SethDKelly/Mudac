@@ -48,7 +48,7 @@ def main() -> int:
         agents = status_repo / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
         import re
-        text = re.sub(r"018-[A-M] NEXT", "018-Z NEXT", text, count=1)
+        text = re.sub(r"018-[A-M] NEXT", "018-Z NEXT", text)
         agents.write_text(text, encoding="utf-8")
         expect_failure(
             "status mirror drift",
