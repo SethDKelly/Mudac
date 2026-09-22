@@ -40,9 +40,10 @@
   "phase019_state": {
     "status": "ACTIVE",
     "completed_subphases": [
-      "019-A"
+      "019-A",
+      "019-B"
     ],
-    "next_eligible_subphase": "019-B",
+    "next_eligible_subphase": "019-C",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -65,7 +66,7 @@
       "questions": [
         "ADQ-001"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-C",
@@ -73,7 +74,7 @@
       "questions": [
         "ADQ-002"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-D",
@@ -191,11 +192,16 @@
       "question_id": "ADQ-001",
       "title": "Architecture Drivers, Quality Attributes, Workload Assumptions & Trust Boundaries",
       "owning_subphase": "019-B",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Current-semantics-derived trust-first bounded-live-event driver baseline (DRV-001..DRV-012)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-B-architecture-drivers-quality-attributes-workload-trust-boundary-constraint-qualification.md",
+      "alternatives_evaluated": [
+        "Adopt historical Architectural Foundation unchanged",
+        "Unranked peer quality attributes",
+        "Scale-first / distributed-first posture",
+        "Current-semantics-derived trust-first bounded-live-event baseline"
+      ],
       "constraint_refs": [
         "ENG-001",
         "ENG-011",
@@ -210,20 +216,57 @@
       "candidate_inputs": [
         "docs/canonical/architecture/architectural-foundation.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/project/mandate-context.md",
+        "docs/canonical/project/purpose-needs-success-tensions.md",
+        "docs/canonical/experience/accessibility-resilience.md",
+        "docs/canonical/experience/status-feedback-recovery.md",
+        "docs/canonical/experience/live-operations.md",
+        "docs/canonical/governance/downstream-realization-obligations.md",
+        "docs/canonical/architecture/architectural-foundation.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "unknown/degraded result",
         "adversarial request volume",
         "conflicting legitimate authority"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-07",
+        "ERI-08",
+        "ERI-09"
+      ],
+      "rationale": "Current semantic and experience authority requires trust/authority correctness to constrain lower-priority continuity and sustaining qualities; current evidence supports bounded bursty live-event workload, safe degraded/paper continuity, explicit trust boundaries, proportional complexity and evidence-bounded quantitative targets. Historical foundation material was revalidated as evidence but not adopted.",
+      "rejected_alternatives": [
+        "Historical foundation unchanged — chronology cannot create authority.",
+        "Unranked qualities — insufficient tradeoff rule when continuity conflicts with authority/security.",
+        "Scale-first/distributed-first — no demonstrated workload driver for speculative distribution."
+      ],
+      "reversibility_migration": "Low-cost foundational decision before downstream mechanisms are selected. Reopening after later ADQ acceptance requires revalidation of dependent decisions. No data or runtime migration is created by ADQ-001 itself.",
+      "residual_uncertainty": [
+        "exact event concurrency and request-volume distribution",
+        "exact latency/SLO targets",
+        "exact RTO/RPO",
+        "venue connectivity distribution",
+        "operating-cost ceiling",
+        "jurisdiction-specific retention/compliance",
+        "provider-specific limits, pricing and operational behavior"
+      ],
+      "revisit_triggers": [
+        "measured event scale materially exceeds bounded-live-event assumptions",
+        "binding SLO/RTO/RPO or contract is introduced",
+        "law or contract changes trust/retention/disclosure constraints",
+        "later ADQ cannot satisfy accepted drivers simultaneously",
+        "AWS ecosystem delivery constraint changes",
+        "provider/runtime evidence materially changes cost/recovery assumptions",
+        "new product family introduces materially different workload or trust conditions"
+      ],
+      "accepted_in_subphase": "019-B",
       "supersedes_decision": null
     },
     {
@@ -736,7 +779,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 0,
+    "decisions_accepted": 1,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 0,
     "probes_authorized": 0,
