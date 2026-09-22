@@ -186,8 +186,15 @@ def main() -> int:
     if not isinstance(program, dict):
         errors.append("reentry_program must be an object")
     else:
-        if program.get("authorization_state") != "PLANNED_NOT_AUTHORIZED_BY_018_K_ALONE":
-            errors.append("reentry program must remain planned/not authorized by 018-K alone")
+        if program.get("authorization_state") != "AUTHORIZED_BY_018_M":
+            errors.append("reentry program must be authorized by the Phase-018-M exit decision")
+        if program.get("next_subphase") != "019-A":
+            errors.append("authorized reentry program must identify 019-A as next subphase")
+        evidence = program.get("authorization_evidence")
+        if not isinstance(evidence, str) or not evidence.endswith(
+            "018-M-pre-implementation-residual-risk-register-repository-scorecard-regrade-implementation-entry-decision.md"
+        ):
+            errors.append("reentry program must cite the 018-M authorization evidence")
         subphases = program.get("subphases")
         if not isinstance(subphases, list):
             errors.append("reentry_program.subphases must be a list")
@@ -222,7 +229,8 @@ def main() -> int:
     print(
         "Architecture re-entry plan: "
         f"{len(errors)} error(s), {len(questions)} question(s), "
-        f"{selected_count} selected, accepted_architecture={state.get('accepted_architecture_established')}"
+        f"{selected_count} selected, accepted_architecture={state.get('accepted_architecture_established')}, "
+        f"authorization={program.get('authorization_state') if isinstance(program, dict) else None}"
     )
     return 1 if errors else 0
 
