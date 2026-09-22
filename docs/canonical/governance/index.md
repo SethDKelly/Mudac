@@ -28,4 +28,4 @@ Indexes, READMEs, registries, and agent adapters route; they do not become produ
 
 Jackson-aligned Concept Design is closed. Historical architecture/implementation candidates remain suspended until explicit post-closure re-entry decisions; no new architecture or implementation execution authority is established by closure.
 
-For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Post-closure work is governed by the Design / Implementation Boundary and Post-Concept-Design Re-entry contract.
+For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is the active post-closure repository qualification program; downstream work remains governed by the Design / Implementation Boundary and Post-Concept-Design Re-entry contract.
