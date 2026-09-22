@@ -20,6 +20,7 @@ CHECKS = (
     ("downstream candidate qualification", "scripts/validate_candidate_qualification.py", ("--repo", "{repo}")),
     ("architecture re-entry plan", "scripts/validate_architecture_reentry_plan.py", ("--repo", "{repo}")),
     ("implementation program framework", "scripts/validate_implementation_program_framework.py", ("--repo", "{repo}")),
+    ("Phase 019 architecture decision control", "scripts/validate_phase019_architecture_control.py", ("--repo", "{repo}")),
     ("agentic/authority secret scan", "scripts/scan_agentic_secrets.py", ("--repo", "{repo}")),
 )
 
