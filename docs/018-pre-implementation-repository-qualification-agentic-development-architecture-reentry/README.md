@@ -308,7 +308,7 @@ PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
 repository-preparation score 96 / 100
 PHASE 019 AUTHORIZED
-019-A COMPLETE / 019-B NEXT ELIGIBLE
+019-A/B/C/D COMPLETE / 019-E NEXT ELIGIBLE
 accepted architecture NOT ESTABLISHED
 active implementation packages 0
 implementation execution authorization NOT GRANTED
@@ -317,16 +317,16 @@ implementation execution authorization NOT GRANTED
 
 ## Phase 019 current handoff
 
-Phase 019 is ACTIVE. 019-A is COMPLETE and 019-B is NEXT ELIGIBLE. Accepted architecture remains false and domain implementation execution remains unauthorized.
+Phase 019 is ACTIVE. 019-A/B/C/D are COMPLETE and 019-E is NEXT ELIGIBLE. ADQ-001 through ADQ-003 are accepted as bounded decisions; accepted whole architecture remains false and domain implementation execution remains unauthorized.
 
 
 Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A/B/C COMPLETE
-019-D NEXT ELIGIBLE
-ADQ-001 / ADQ-002 ACCEPTED
+019-A/B/C/D COMPLETE
+019-E NEXT ELIGIBLE
+ADQ-001 / ADQ-002 / ADQ-003 ACCEPTED
 Q4R-001 COMPLETE
 accepted whole architecture false
 active implementation packages 0
