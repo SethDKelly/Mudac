@@ -2,7 +2,7 @@
 type: Experience Evidence Adapter
 title: Legacy Reconciliation / Finalization Experience Evidence
 description: Pre-convergence mixed Experience evidence retained only for historical provenance after 013-G and 013-H migrated all current semantics to natural owners.
-status: historical
+status: deprecated
 tags: [experience, historical, reconciliation, finalization, outcome, phase-013]
 sources:
   - resource: ../../003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md
