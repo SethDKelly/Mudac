@@ -45,4 +45,7 @@ Phase 017 closure did **not** automatically reactivate these documents. Phase 01
 
 017-F audited all nine documents in this subtree. Each now carries an explicit suspension notice at document level.
 
-The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K defines the pre-selection question/dependency/evidence plan in `docs/routing/architecture_reentry_plan.json`; every selected option remains null and accepted architecture remains not established. A later architecture process must compare and explicitly adopt, revise, replace or reject choices under the post-Concept-Design re-entry contract.
+The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K defined the pre-selection question/dependency/evidence plan in `docs/routing/architecture_reentry_plan.json`; every selected option remains null and accepted architecture remains not established. 018-M has now authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A. Phase 019 must compare and explicitly adopt, revise, replace or reject choices under the post-Concept-Design re-entry contract.
+
+
+Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 AUTHORIZED; 019-A NEXT ELIGIBLE.** Accepted architecture is still not established.
