@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic structural validation for the MUDAC knowledge bundle.
+"""Deterministic structural validation for MUDAC authored knowledge and OKF routing contracts.
 
 This validator intentionally checks only properties that can be established
 without semantic judgment or network access. A passing run is NOT an OKF
