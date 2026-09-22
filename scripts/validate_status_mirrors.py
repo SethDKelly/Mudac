@@ -79,7 +79,8 @@ def main() -> int:
     p18_completed_token = "018-" + "/".join(P18_ALL) + " COMPLETE"
     require_token(repo, PHASE018_MIRRORS, p18_completed_token, errors)
     require_token(repo, PHASE018_MIRRORS, P18_CLOSED_TOKEN, errors)
-    require_token(repo, PHASE018_MIRRORS, P19_AUTH_TOKEN, errors)
+    if P19_AUTH_TOKEN not in text18:
+        errors.append(f"Phase-018 handoff index missing authorization token {P19_AUTH_TOKEN!r}")
 
     phase19 = repo / PHASE019_INDEX
     if phase19.is_file():
