@@ -27,11 +27,11 @@ A PASS does not establish product runtime behavior, provider-agent obedience, de
 <a id="cnf-002"></a>
 ## CNF-002 — Phase Program Indexes Own Phase Progression; Status Mirrors Are Derived
 
-The active Phase-018 index owns its subphase progression.
+The Phase-018 index owns the Phase-018 progression and closure handoff.
 
 Root README, docs README/index, AGENTS.md, canonical index, Phase-017 handoff and suspended Implementation index are mirrors.
 
-The status validator derives the completed/next compact state from the Phase-018 index and requires live mirrors to agree. No separate machine status file becomes lifecycle authority.
+While Phase 018 is active, the status validator derives its contiguous completed prefix and one NEXT subphase. After closure, it requires A–M COMPLETE plus the Phase-019 authorization handoff. No separate machine status file becomes lifecycle authority.
 
 <a id="cnf-003"></a>
 ## CNF-003 — Generated Artifacts Must Be Exactly Reproducible From Authored Sources
