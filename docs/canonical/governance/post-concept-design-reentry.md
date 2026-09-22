@@ -104,6 +104,8 @@ Current downstream-candidate qualification evidence is maintained in `docs/routi
 
 The current pre-selection architecture decision framework is [Architecture Re-entry Evaluation & Decision Contract](architecture-reentry-evaluation.md), with machine-readable question/dependency planning in `docs/routing/architecture_reentry_plan.json`. Those surfaces define how architecture will be evaluated; they do not establish accepted architecture.
 
+The current technology-neutral implementation-program framework is [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md), with machine-readable package/gate schema in `docs/routing/implementation_program_framework.json`. That framework defines how implementation will later be planned and evidenced; while architecture remains unaccepted it creates no packages and grants no execution authority.
+
 # Quarantined downstream-material classification
 
 Pre-Phase-009 architecture/implementation material is not one homogeneous thing.
