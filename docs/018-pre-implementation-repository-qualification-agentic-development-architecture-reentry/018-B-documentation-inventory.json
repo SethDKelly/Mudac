@@ -1,0 +1,1893 @@
+{
+  "schema_version": "018-B.1",
+  "generated_from": "main",
+  "purpose": "Deterministic Phase-018-B whole-corpus documentation role inventory. Classification is topology/audit evidence, not semantic authority.",
+  "classification_rules": {
+    "router-index": "docs bundle/canonical routing surfaces",
+    "external-reference": "adopted/profiled external authority material under docs/references",
+    "historical-phase-evidence": "numbered Phase 001-016 design evidence",
+    "closure-evidence": "Phase 017 methodology closure evidence",
+    "active-qualification-evidence": "Phase 018 active pre-implementation qualification evidence",
+    "downstream-candidate-knowledge": "quarantined architecture/implementation candidate subtree",
+    "historical-adapter": "superseded/deprecated adapter retained inside a canonical family for link/provenance continuity",
+    "canonical-owner": "current canonical semantic/governance owner not otherwise classified"
+  },
+  "summary": {
+    "historical-phase-evidence": {
+      "files": 175,
+      "bytes": 3503437
+    },
+    "closure-evidence": {
+      "files": 10,
+      "bytes": 174401
+    },
+    "active-qualification-evidence": {
+      "files": 3,
+      "bytes": 34851
+    },
+    "router-index": {
+      "files": 12,
+      "bytes": 22126
+    },
+    "downstream-candidate-knowledge": {
+      "files": 17,
+      "bytes": 227377
+    },
+    "canonical-owner": {
+      "files": 81,
+      "bytes": 564308
+    },
+    "historical-adapter": {
+      "files": 6,
+      "bytes": 26882
+    },
+    "external-reference": {
+      "files": 3,
+      "bytes": 6431
+    }
+  },
+  "entries": [
+    {
+      "path": "docs/001-concept-design/001-A-purpose-boundary-success.md",
+      "bytes": 6748,
+      "blob_sha": "d33fc2afbc78bef5a3c81b81434206ad0cf8c248",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-B-actors-roles-authorities-participation.md",
+      "bytes": 7743,
+      "blob_sha": "ae898f02a04df11d7ddd8c90cde3e9fd2ab8170c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-C-lifecycle-critical-scenarios.md",
+      "bytes": 8938,
+      "blob_sha": "55ffe0de02e7075748a55bf7992787175d46c496",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-D-judging-anonymity-evaluation-semantics.md",
+      "bytes": 9938,
+      "blob_sha": "c4ea94b52d76dbcbaae8300d6a8b2e83793f36c4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-E-candidate-concept-discovery.md",
+      "bytes": 8104,
+      "blob_sha": "906408162fb6ade54a0de46ba82655f5924b5765",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-F-concept-boundaries-synchronizations.md",
+      "bytes": 11111,
+      "blob_sha": "f0835a2827f43e08a0599d1c31690545b09d772d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-G-experience-accessibility-resilience.md",
+      "bytes": 16172,
+      "blob_sha": "488a02494d978f5801d1d560982cb567da344a45",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/001-H-phase-consolidation-initial-concept-catalog.md",
+      "bytes": 39944,
+      "blob_sha": "bb1e29874e870a6a3530a310fba9612e3d708371",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/001-concept-design/index.md",
+      "bytes": 3285,
+      "blob_sha": "2b64dc6ffc3b11017e020a73a2dbb3178ff2ddf4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-A-competition-division-team-alias-specifications.md",
+      "bytes": 29052,
+      "blob_sha": "a013e0fa30f14bf99f322cdf3e960cb1a9cbaf4a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-A1-team-extensible-attributes-team-name-refinement.md",
+      "bytes": 9021,
+      "blob_sha": "fca4f568c849cfe3cb380ffe742062778a31465c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-B-identity-participation-access-specifications.md",
+      "bytes": 38415,
+      "blob_sha": "ad889d38a80a7d3e760b7d7d918954589f59e893",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-C-panel-membership-judging-encounter-specifications.md",
+      "bytes": 29567,
+      "blob_sha": "e6a63069c732be388dedc37333b18914bc8a1ce3",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-D-rubric-criterion-scorecard-notes-specifications.md",
+      "bytes": 32655,
+      "blob_sha": "1b6e2efacb183d954a55ee35fc8ddf53dc67737f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-E-versioning-provenance-correction-authority-preservation.md",
+      "bytes": 33790,
+      "blob_sha": "ed32d55d4ae97e2d59c16309264445883ea40437",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-F-aggregation-coverage-ranking-evaluation-policy.md",
+      "bytes": 28662,
+      "blob_sha": "5ce2b02cdc7196d42de8c94437c8b27e69560dd7",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-G-awards-reconciliation-finalization-official-outcomes.md",
+      "bytes": 31687,
+      "blob_sha": "d658ef3af2c24c253991c22cea3c858ebccf593d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-H-export-print-operational-continuity-external-representations.md",
+      "bytes": 35291,
+      "blob_sha": "f201ec74182bdc81ade37058a9aff3fb03127c8c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/002-I-phase-consolidation-specification-exit-review.md",
+      "bytes": 28929,
+      "blob_sha": "46992daec558e180682d441f73499c43b06a657e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/README.md",
+      "bytes": 6682,
+      "blob_sha": "ae01177b03cc68f7ffa2746a8269c5d59dc9eed9",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/002-concept-specification/index.md",
+      "bytes": 4905,
+      "blob_sha": "486068e823943fffb3a596d908010379d43b2a14",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-A-experience-architecture-role-modes-navigation-model.md",
+      "bytes": 20103,
+      "blob_sha": "9d11dace4514805f5322d17bf250816913ec27c6",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-B-judge-entry-identity-participation-panel-onboarding.md",
+      "bytes": 22192,
+      "blob_sha": "75af4c7d625ad2dd60a62ef404c43db321fe6329",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-C-judge-encounter-rubric-scorecard-amendment-experience.md",
+      "bytes": 37762,
+      "blob_sha": "97cf64492502b8e22a40eafbfb244cf114f7ee57",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-D-organizer-competition-setup-configuration-readiness-experience.md",
+      "bytes": 38689,
+      "blob_sha": "795eabdbb7dd3ad74ef2d3f1c0e205846cccfaf5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-E-organizer-judge-panel-encounter-live-operations-experience.md",
+      "bytes": 36691,
+      "blob_sha": "9dc460c7005f2607a69400ed8e58d1b8c5ada62e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-F-reconciliation-coverage-ranking-awards-finalization-experience.md",
+      "bytes": 42151,
+      "blob_sha": "b57ae6373fed7c19e6adbe1e50c4f8c9b98054b7",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-G-paper-capture-export-print-publication-experience.md",
+      "bytes": 38479,
+      "blob_sha": "47f74f4754aa051a07d7fcecd08c41432f88e7dc",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-H-accessibility-mobile-responsive-degraded-mode-interaction-architecture.md",
+      "bytes": 37336,
+      "blob_sha": "4941522217dc4e340feaa7036d48f395d814fadb",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-I-cross-cutting-status-feedback-privacy-disclosure-recovery-patterns.md",
+      "bytes": 37289,
+      "blob_sha": "9594b6223c6dd4336aab829bc78b3b544c5d3893",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/003-J-phase-consolidation-ux-architecture-exit-review.md",
+      "bytes": 30141,
+      "blob_sha": "c6f94d7a15ea806d20157980a4b518c3cbefd05f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/README.md",
+      "bytes": 12583,
+      "blob_sha": "b92c0716d93f4fd8cf09cf904023cf9a8d1c9eb2",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/003-conceptual-ux-architecture/index.md",
+      "bytes": 3928,
+      "blob_sha": "e7bf236207e44fc80899dec025946c4ba0f66899",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-A-okf-adoption-authority-methodology-compatibility-terminology-contract.md",
+      "bytes": 23458,
+      "blob_sha": "6c3fd9b9c7958fa5ec654c51aa8d5732b9246677",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-B-knowledge-bundle-topology-canonical-authority-layers-progressive-disclosure.md",
+      "bytes": 29681,
+      "blob_sha": "50f4f0b61d39a9040484f63dde888b2da58bcb14",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-C-canonical-concept-policy-invariant-experience-knowledge-extraction.md",
+      "bytes": 4963,
+      "blob_sha": "9ee45d1bbfe0f6045d7f7cd901b413c81609455d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-D-historical-phase-migration-provenance-source-lineage-retrofit.md",
+      "bytes": 14187,
+      "blob_sha": "5fa5bac160f635d5d14e3686c333851650950e4f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md",
+      "bytes": 10703,
+      "blob_sha": "5822bdd55948c5947e29e708b72ee0f4375c26c5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md",
+      "bytes": 13263,
+      "blob_sha": "af82612310c69216248588750356788851a9c1e5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md",
+      "bytes": 15379,
+      "blob_sha": "98bd8bdb228be3734df7feaec5eeed4a72d1658b",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md",
+      "bytes": 8691,
+      "blob_sha": "175d4e040d446476744172a1778e388e6ccfafa1",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-I-repository-wide-knowledge-graph-drift-audit-migration-closure.md",
+      "bytes": 11871,
+      "blob_sha": "968e1125a51f59eca6f9cc6699f17e30dd3931dc",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/004-J-phase-004-consolidation-knowledge-architecture-exit-review.md",
+      "bytes": 14902,
+      "blob_sha": "e97b416055a56e5e7c9986f25f327328ea022ec0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/README.md",
+      "bytes": 4935,
+      "blob_sha": "48adad6aca9d701744626df5a539bc4b2536b2a0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/004-knowledge-architecture/index.md",
+      "bytes": 4977,
+      "blob_sha": "410b538c2a3dcdfaf97d8ca2457279048f7181f6",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-A-architectural-drivers-quality-attributes-trust-boundaries-decision-principles.md",
+      "bytes": 27873,
+      "blob_sha": "2fd26cadfadc5c44ae1e3970a4bd958ebcd8c527",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-B-application-boundaries-modules-domain-services-dependency-architecture.md",
+      "bytes": 21482,
+      "blob_sha": "e4f5b2de13712a899b48b2b801e376d0fb8c532c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-C-data-model-persistence-versioning-provenance-derived-projection-architecture.md",
+      "bytes": 21951,
+      "blob_sha": "2bb8383af99c9cac31800f199aa7c3e48379b73c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-D-identity-authentication-participation-access-session-architecture.md",
+      "bytes": 17166,
+      "blob_sha": "0c3aedbeabd94b6f99465e4162b2505d409ec1ca",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-E-commands-queries-api-contracts-transactions-idempotency-concurrency-architecture.md",
+      "bytes": 15791,
+      "blob_sha": "beb30853c7f504b436e110b356871b8a4a69f8b0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-F-draft-persistence-synchronization-offline-degraded-operation-conflict-recovery.md",
+      "bytes": 11018,
+      "blob_sha": "2dcbae9ed400562a24709ca3252ef2e6b7d10c35",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-G-paper-capture-export-artifact-publication-external-representation-architecture.md",
+      "bytes": 18540,
+      "blob_sha": "d7f3ea64e9cbac351814b15145f5681ba5c84ed1",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-H-front-end-state-navigation-component-system-responsive-interaction-architecture.md",
+      "bytes": 13811,
+      "blob_sha": "b6171f3ef43b3310d77735a912e3bef6b4dbb807",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-I-aws-runtime-deployment-security-observability-backup-cost-architecture.md",
+      "bytes": 25822,
+      "blob_sha": "ec49e3eedcb7a16aa9d22dd59dd8a773d73eded5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/005-J-phase-005-consolidation-threat-failure-review-implementation-readiness-exit.md",
+      "bytes": 18557,
+      "blob_sha": "4a4edc7f1ae4f5f6caf172b45e37dba12b7d8876",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/README.md",
+      "bytes": 4507,
+      "blob_sha": "f407ca28430e0185b186d26f0d7a1cdb2c61a2e0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/005-system-application-data-synchronization-architecture/index.md",
+      "bytes": 7115,
+      "blob_sha": "9339d58eb9acbe700924ca0517a83022cae34ec7",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/006-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md",
+      "bytes": 13801,
+      "blob_sha": "b97c5a61a10fce57aeb60d104b9755cbdf53ba47",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/006-B-verification-strategy-test-harness-evidence-fixtures-quality-gates.md",
+      "bytes": 18541,
+      "blob_sha": "70f60061dfebcf273d96bd5f00df4366a97fedee",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/006-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md",
+      "bytes": 18448,
+      "blob_sha": "4dbf53d099732a4ebab53149f5919727de5c1263",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/006-D-environment-iac-ci-cd-local-development-runtime-bootstrap.md",
+      "bytes": 14141,
+      "blob_sha": "c6aaa96b70ce71e8e882beaba60b8d306615890d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/README.md",
+      "bytes": 7753,
+      "blob_sha": "ae61059124a36c7148151e4379d86775ff2217b4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/006-implementation-planning/index.md",
+      "bytes": 4570,
+      "blob_sha": "0fada0aa533aa03cfd847dfdc280ce52ff04a63a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-A-design-reentry-implementation-freeze-jackson-completion-criteria.md",
+      "bytes": 8807,
+      "blob_sha": "854f8787ed55a01fc2886f978e2d32c10ea8fc56",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-B-concept-completeness-independence-genericity-audit.md",
+      "bytes": 12924,
+      "blob_sha": "28a644a0d33fab58e051bb53cd59d3b26384bb30",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-C-cross-concept-synchronization-completeness-authority-seam-audit.md",
+      "bytes": 17248,
+      "blob_sha": "ac7650f1cac9166bbd75476fd3a05f0c95111876",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-D-temporal-state-correction-invalidation-supersession-historical-truth-closure.md",
+      "bytes": 14108,
+      "blob_sha": "06769b484b824d0bed540bb97f0afb30ead09456",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-E-end-to-end-scenario-exception-failure-adversarial-authority-validation.md",
+      "bytes": 31609,
+      "blob_sha": "446c2de16e08b4afa7bc76a3b57127f5335a6a0b",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-F-judge-organizer-experience-concept-action-synchronization-authority-traceability-audit.md",
+      "bytes": 27897,
+      "blob_sha": "84529dad1c8d1fc81ff312c73a4c7afb65532e2f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-G-policy-representation-outcome-disclosure-operational-governance-closure-audit.md",
+      "bytes": 30698,
+      "blob_sha": "3aaa511b0189e74edc5a836b27d2d3312a4cf7b0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-H-cross-layer-design-completeness-residual-semantic-risk-jackson-methodology-exit-readiness-audit.md",
+      "bytes": 29370,
+      "blob_sha": "18ea114c8ea6d4bbb92fe516fe03d9fc8e4f5cd2",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/007-I-formal-jackson-concept-design-methodology-exit-accepted-residual-uncertainty-implementation-resume-boundary-decision.md",
+      "bytes": 16364,
+      "blob_sha": "9517bc27fa10a0809c6dc47b89fb2f13d9a17b99",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/README.md",
+      "bytes": 5850,
+      "blob_sha": "4844c24ac9a24f453bc6cbc080dd377c8e0d8ac8",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/007-design-refinement/index.md",
+      "bytes": 5369,
+      "blob_sha": "facbaf6bd76c362e4eeceb383fab2d78b3445eee",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/008-A-implementation-reentry-authority-canonical-baseline-change-control-planning-guardrails.md",
+      "bytes": 22591,
+      "blob_sha": "e6e7527a180f262d8a99dc93d24168e6cd5ebbe1",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/008-B-protected-006-D-baseline-qualification-drift-audit-toolchain-environment-reconciliation.md",
+      "bytes": 20726,
+      "blob_sha": "e40d3959b353f1a09f3bcd2d704e720a6d640b9c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/008-C-residual-risk-ingestion-historical-006-mapping-decision-register-supersession-matrix.md",
+      "bytes": 26283,
+      "blob_sha": "e9a6d60506e7b72176b1553e38c46f160a14e664",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/008-D-persistence-temporal-truth-versioning-provenance-governed-exceptions-outbox-projection-migration-implementation-plan.md",
+      "bytes": 25282,
+      "blob_sha": "60ef208f320951b67fd84306fe0a0229295eea26",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/008-E-identity-authentication-participation-access-session-invitation-secrets-technical-authority-implementation-plan.md",
+      "bytes": 26606,
+      "blob_sha": "21aecfd94df56968b21dad462f59447aaedbe277",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/README.md",
+      "bytes": 2691,
+      "blob_sha": "9db53166fa5a7e5e179d2728abd8254fb89bd306",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/008-implementation-reentry/index.md",
+      "bytes": 2122,
+      "blob_sha": "d1b15051687f4add3403ca910d9d9c4020c9d845",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/009-jackson-methodology-realignment/009-A-methodology-authority-reset-prior-exit-reopen-design-only-guardrails.md",
+      "bytes": 6887,
+      "blob_sha": "80dc0429e18ee06ae28466bb34f833b20deccff1",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/009-jackson-methodology-realignment/009-B-jackson-base-lifecycle-crosswalk-evidence-reuse-gap-map.md",
+      "bytes": 11019,
+      "blob_sha": "7815f8e832a950263ab54161b898abe1de0c8928",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/009-jackson-methodology-realignment/009-C-downstream-authority-quarantine-completion-runway-phase-exit.md",
+      "bytes": 10829,
+      "blob_sha": "6194423d106ea61dbf3999bd519ebce6c8ca0977",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/009-jackson-methodology-realignment/README.md",
+      "bytes": 4367,
+      "blob_sha": "38f91f82e437d9c70afe627b434b204e5f8283af",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/009-jackson-methodology-realignment/index.md",
+      "bytes": 1610,
+      "blob_sha": "a4cb25b576753f6be8cd6014bf630eff86071cd6",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-A-phase-intent-evidence-reuse-gap-closure-subphase-planning.md",
+      "bytes": 16794,
+      "blob_sha": "3ca505b38e743efa80eb6cae96d6f75b2c3581c4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-B-current-project-mandate-actors-outcomes-scope-constraints-evidence-reconciliation.md",
+      "bytes": 20387,
+      "blob_sha": "655afb32817ca6feb61315f34d3b46f31a7caa0e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-C-purpose-need-success-tension-purpose-to-concept-traceability-revalidation.md",
+      "bytes": 33052,
+      "blob_sha": "59e45c887af51845bdd0cb0919d64110e5bbcf45",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-D-candidate-concept-rediscovery-divergent-alternatives-rejected-deferred-candidate-reassessment.md",
+      "bytes": 41185,
+      "blob_sha": "8d5b01550117c6bf00a58256a3745a3730ee21b4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-E-retained-concept-purpose-operational-principle-state-action-behavioral-specification-current-truth-audit.md",
+      "bytes": 42894,
+      "blob_sha": "b284d01ccf5459b38082447e52f9ba3904e2b16c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-F-specificity-purpose-singularity-concept-boundary-alternative-audit.md",
+      "bytes": 33466,
+      "blob_sha": "5a29b0857b5495f3586f6e88b98713c77d43a8da",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-G-completeness-independence-genericity-for-boundary-audit.md",
+      "bytes": 41005,
+      "blob_sha": "c4de093de95eca985b013d1222d939b3be8ea265",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md",
+      "bytes": 14204,
+      "blob_sha": "682c146b7d6211b7a266ab1fadc47a8f42f1e507",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/010-I-phase-010-consolidation-methodology-coverage-decision-phase-011-handoff.md",
+      "bytes": 26734,
+      "blob_sha": "86321ee3b1adef53f603ad99f31da52f5113ca4c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/README.md",
+      "bytes": 4263,
+      "blob_sha": "54db116e465c478d1263dc2085a21e5567d3af0d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/010-project-purpose-candidate-specification-modularity/index.md",
+      "bytes": 3950,
+      "blob_sha": "bcbc8487c9cc7b0abb9d5e494be9e0c77213415e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-A-composition-scope-evidence-reuse-synchronization-risk-subphase-planning.md",
+      "bytes": 32266,
+      "blob_sha": "4d90c4b5e9af1a523f60dc6c1d7694b80ec75648",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-B-legacy-synchronization-inventory-composition-obligation-map-application-action-baseline.md",
+      "bytes": 29502,
+      "blob_sha": "2f3bf419d01e9099965d338b66a53dedc16e55a4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-C-competition-lifecycle-identity-participation-access-operating-context-composition.md",
+      "bytes": 30751,
+      "blob_sha": "33f7257e99f94d4bf32254dc1982a2dfb19f3bd9",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-C-later-correction-note-event-completion-access.md",
+      "bytes": 3096,
+      "blob_sha": "ae31bf22555ce46738df930bf299aeeafd2618a0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-D-team-division-alias-panel-evaluation-occurrence-evaluation-obligation-establishment.md",
+      "bytes": 31695,
+      "blob_sha": "c590985e5e9a05e0647ce7e7ef1455aa3e88c0ab",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-E-evaluation-basis-scorecard-authority-versioning-provenance-paper-capture-composition.md",
+      "bytes": 34415,
+      "blob_sha": "f9823a45bd1bc94793132caf824c9f8a055a3d59",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-F-temporal-correction-invalidation-replacement-successor-work-affected-state-propagation.md",
+      "bytes": 30595,
+      "blob_sha": "2a1dc231fde69a32c60b0da9206106c378ae798c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-G-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-composition.md",
+      "bytes": 26191,
+      "blob_sha": "92e7304504047967f4a1ff383ca4e07d1723cfd3",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-H-export-publication-representation-currency-release-composition.md",
+      "bytes": 30059,
+      "blob_sha": "362ed0c0b87e1e5941cfa9d61f357d757a85e542",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-I-application-action-surface-chaining-automation-over-under-synchronization-authority-synergy-closure.md",
+      "bytes": 36020,
+      "blob_sha": "ebcd4fb35d4d4e5151c36b27b0c7f8ec2e5399f5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/011-J-canonical-synchronization-reconciliation-phase-011-consolidation-phase-012-handoff.md",
+      "bytes": 20527,
+      "blob_sha": "6780a3e968d3839c33739f9e795fbf3a60ccdc5a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/README.md",
+      "bytes": 3378,
+      "blob_sha": "fc7ca35100c4388fb4a449fb0f007d28ebe619f5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/011-concept-composition-synchronization/index.md",
+      "bytes": 4229,
+      "blob_sha": "1ba79583a385ca1e747f92349b89baf83c8b05f9",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-A-dependence-scope-subset-semantics-product-family-questions-subphase-planning.md",
+      "bytes": 30658,
+      "blob_sha": "a343c1d2765d08ccaca4493cb6c3db50100f831d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-B-application-family-boundary-concept-inclusion-roles-candidate-dependence-inventory.md",
+      "bytes": 36398,
+      "blob_sha": "04e833aa74ce854c897c1c28085cd6b1c33688c0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-C-competition-actor-competitor-context-bias-control-dependence.md",
+      "bytes": 25036,
+      "blob_sha": "7d2a85fe0e219a64a88b268e22da260b630278e2",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-D-evaluation-structure-responsibility-basis-judgment-dependence.md",
+      "bytes": 22190,
+      "blob_sha": "4aa7e6da9937a57a4743d7a5beea499cb0dd0130",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-E-authority-lineage-provenance-correctability-dependence.md",
+      "bytes": 18877,
+      "blob_sha": "18c7b99f88c2a7f2d0c0ade9e62bb22167e8c8a2",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-F-outcome-recognition-official-authority-dependence.md",
+      "bytes": 20900,
+      "blob_sha": "00584531706982bb8c6fa6c2a494c994a3881094",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-G-external-representation-release-dependence.md",
+      "bytes": 16668,
+      "blob_sha": "086b3686a5cc702633b7905861db0f72423f6fea",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-H-whole-graph-transitivity-co-inclusion-optionality-minimal-unfamiliar-subsets.md",
+      "bytes": 25696,
+      "blob_sha": "cc42b50fe7427d75d94709bff24f2d5e95521d1a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-I-product-family-variants-scope-selection-variant-specific-composition-revalidation.md",
+      "bytes": 25151,
+      "blob_sha": "163b97b5b6f4d9a12f13e564dcf6613ce71cb721",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-J-counterexample-upstream-reopen-explanation-order-phase-013-mapping-handoff-audit.md",
+      "bytes": 26875,
+      "blob_sha": "14e925d9db42c23c8c874dff792ce190d4861bf3",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/012-K-canonical-dependence-reconciliation-phase-012-consolidation-phase-013-handoff.md",
+      "bytes": 21586,
+      "blob_sha": "adc9a75c5e8a5ac9c1cc7fab48635b922513b624",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/README.md",
+      "bytes": 6072,
+      "blob_sha": "201de4187f9a6b31622765f353eb76a4823557e9",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/012-concept-dependence-product-family-subset-scope/index.md",
+      "bytes": 4115,
+      "blob_sha": "d5d0a8fa70fb8fbfdf52cc985d6bb38a91cd165c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-A-mapping-scope-representation-semantics-experience-risk-subphase-planning.md",
+      "bytes": 38178,
+      "blob_sha": "a8992d681509a3434f5ea693ac97fbe95d9a3586",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-B-experience-corpus-reconciliation-terminology-mapping-authority-canonical-ownership-baseline.md",
+      "bytes": 18850,
+      "blob_sha": "ae4e448f56fb44c6cb231ba59e5fe6a0a191f23d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-C-context-identity-participation-access-bias-control-judge-entry-mapping.md",
+      "bytes": 20763,
+      "blob_sha": "7f1733f7815858b19b1b7413931b5942ea7a49de",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-D-competition-preparation-competitor-panel-rubric-setup-readiness-organizer-configuration-mapping.md",
+      "bytes": 27904,
+      "blob_sha": "f93f3186045359c4c26e72c3fb10e8571c27365e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-E-evaluation-occurrence-obligation-judgment-action-availability-feedback-mapping.md",
+      "bytes": 22499,
+      "blob_sha": "40c28ef907b7e911d2e13baac6234125c650d697",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-F-authority-lineage-paper-capture-amendment-correction-historical-state-mapping.md",
+      "bytes": 21922,
+      "blob_sha": "67687a8742cdf48de34bb4dfae1bc4d82a09de56",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-G-live-operations-remaining-work-exception-reconciliation-derived-outcome-state-mapping.md",
+      "bytes": 22772,
+      "blob_sha": "8d38844a36d8580b2032d2f0f3ef87ab1363795d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-H-award-competition-finalization-outcome-declaration-officiality-successor-authority-mapping.md",
+      "bytes": 19654,
+      "blob_sha": "d60e4706aa56373906f4393dbb4fbd09c68f3544",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-I-export-publication-audience-disclosure-external-recipient-representation-release-mapping.md",
+      "bytes": 19167,
+      "blob_sha": "493001d3bd519e315857300e7855ebecb6d55769",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-J-accessibility-degraded-operation-status-feedback-recovery-semantic-parity-mapping.md",
+      "bytes": 20852,
+      "blob_sha": "849e79ef9fc34d62a64117ae9b867d9151dcd35e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-K-whole-experience-explanation-order-cross-role-profile-consistency-mapping-integrity-audit.md",
+      "bytes": 19514,
+      "blob_sha": "6920f8cad40c8695584d09e4ef08fd2d2a5b67b4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/013-L-canonical-mapping-reconciliation-phase-013-consolidation-phase-014-handoff.md",
+      "bytes": 13055,
+      "blob_sha": "181f594de8ed50ac87225afa5b1edb0a9faa437f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/README.md",
+      "bytes": 4347,
+      "blob_sha": "b5692c055b103515d04df6928aeb711434b18ad4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/013-concept-mapping-interaction-semantics-user-visible-representation/index.md",
+      "bytes": 2469,
+      "blob_sha": "d33328fc7cd1cdf25bdc1d300a5b77dd7c829569",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-A-familiarity-reuse-genericity-scope-criteria-evidence-subphase-planning.md",
+      "bytes": 21319,
+      "blob_sha": "f48a0fa36eef543c8954fe107486e263f23e4ce7",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-B-familiarity-evidence-baseline-precedent-taxonomy-comparison-register.md",
+      "bytes": 24858,
+      "blob_sha": "670a32037e978e6fb240d8a7c18f955feca42422",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-C-competition-competitor-grouping-identity-participation-alias-access-familiarity-reuse-audit.md",
+      "bytes": 23520,
+      "blob_sha": "19ab1220ee5ed5d46d4eeb187b284f6874e148c4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-D-evaluation-occurrence-obligation-rubric-scorecard-familiarity-reuse-audit.md",
+      "bytes": 20993,
+      "blob_sha": "f959a7e3584ff6c83ed313f5501647a999c10053",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-E-versioning-provenance-award-outcome-declaration-export-publication-familiarity-reuse-audit.md",
+      "bytes": 28702,
+      "blob_sha": "9c05d7c5364385b421d2a387db134391b90ab717",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-F-cross-catalog-false-familiarity-terminology-expectation-transfer-audit.md",
+      "bytes": 21065,
+      "blob_sha": "4c15fc1ea774ab6d00a83788e1c888e4a8b4c3dd",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-G-broader-genericity-parameterization-duplication-specialization-pressure-audit.md",
+      "bytes": 17812,
+      "blob_sha": "5b4644ce6deaa42d1a27022d7046726317fefe71",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-H-retained-novelty-reusable-concept-knowledge-catalog-candidate-audit.md",
+      "bytes": 21676,
+      "blob_sha": "bbcd4bd0e56016cbfdf1baffae138927d3ec6313",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-I-refinement-propagation-reopen-repair-decisions-obvious-integrity-check.md",
+      "bytes": 14069,
+      "blob_sha": "28ac36f03f763af25c8035a033e082b812b0a660",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/014-J-phase-014-consolidation-documentation-integrity-audit-exit-review-phase-015-handoff.md",
+      "bytes": 20590,
+      "blob_sha": "fbaa5f9e94ce9619f1b4f7275fa25efd0e29f68e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/README.md",
+      "bytes": 7576,
+      "blob_sha": "47f31efab84952c99b329fb7f1dd1a0de4741f3c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/014-familiarity-reuse-genericity/index.md",
+      "bytes": 5699,
+      "blob_sha": "1ca596dc4338595100ec0d3c127f748b618f6e9a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-A-integrity-audit-scope-interference-surfaces-whole-system-coverage-subphase-planning.md",
+      "bytes": 32768,
+      "blob_sha": "5e80a91986bf38cfdbd4f1199187dc2370ff22c5",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-B-purpose-preservation-baseline-integrity-inventory-directional-interference-register.md",
+      "bytes": 35500,
+      "blob_sha": "615bc48a83541ad5eea5d185b0c0353de0fe5acc",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-C-competition-context-competitor-structure-identity-participation-alias-access-panel-integrity.md",
+      "bytes": 17633,
+      "blob_sha": "3e58e9fad0d06878834e55888907519c53a723c0",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-D-evaluation-occurrence-obligation-rubric-scorecard-judge-authorship-integrity.md",
+      "bytes": 19244,
+      "blob_sha": "212d88d6e610e1a085be3c0218fca5faae75eb94",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-E-versioning-provenance-temporal-correction-successor-work-historical-truth-integrity.md",
+      "bytes": 21136,
+      "blob_sha": "fa0136d7fe04834685b4d28d248ba4927a53c220",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-F-coverage-aggregate-rank-award-competition-finalization-outcome-declaration-integrity.md",
+      "bytes": 22832,
+      "blob_sha": "4345239bc5c5e3891a4c3e7d76eef3f052d992db",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-G-export-publication-disclosure-currency-withdrawal-external-possession-integrity.md",
+      "bytes": 19150,
+      "blob_sha": "3fc993ba0098bcc2f436c787d3bf91cf773c36f6",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-H-cross-family-application-actions-chaining-automation-lifecycle-authority-interference.md",
+      "bytes": 25709,
+      "blob_sha": "1acd3c179bf955c1d9c76d5662bfdda966af447e",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-I-mapping-profile-accessibility-degraded-pf01-phase014-refinement-integrity.md",
+      "bytes": 21018,
+      "blob_sha": "a068b9c9b5382ded502b59718211a736046dfa0f",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-J-residual-interference-register-reopen-repair-reaudit-phase016-target-preparation.md",
+      "bytes": 27367,
+      "blob_sha": "26060cf4233616d93c10e55dfb5bb84245bf80a4",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/015-K-phase-015-consolidation-documentation-integrity-audit-exit-review-phase-016-handoff.md",
+      "bytes": 25114,
+      "blob_sha": "e1da3c8669247277f7d652405b208fa702d9679d",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/README.md",
+      "bytes": 15782,
+      "blob_sha": "af21c021dbe60c4a1a2c8e1a17addbe43691d51a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/015-concept-integrity-cross-concept-coherence-interference/index.md",
+      "bytes": 4544,
+      "blob_sha": "d4fbaa4289c8b5fd107380db7391f9239e5470d3",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-A-validation-scope-misfit-hypotheses-risk-coverage-subphase-planning.md",
+      "bytes": 12669,
+      "blob_sha": "e06f7b5018768a90d64d9dec1d89df344954c019",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-B-archetypal-scenario-progressive-disclosure-purpose-preservation-baseline-validation.md",
+      "bytes": 10634,
+      "blob_sha": "48477f40ffa348414654d7ef581dc8846c2cff25",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-C-competition-context-competitor-structure-identity-participation-alias-access-bias-control-scenario-validation.md",
+      "bytes": 11653,
+      "blob_sha": "2e7fd99a8305a0a4421728a62dd28e0c1412e089",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-D-evaluation-occurrence-responsibility-obligation-recusal-missingness-rubric-scorecard-judge-authorship-scenario-validation.md",
+      "bytes": 13831,
+      "blob_sha": "8267f41ab9623cf091cd41d558fea7c34ab069a2",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-E-versioning-provenance-paper-electronic-authority-temporal-correction-minding-post-finalization-scenario-validation.md",
+      "bytes": 34501,
+      "blob_sha": "678cf44f56f898eac0b1affa9bfaacbfd108a380",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-F-coverage-aggregate-rank-award-finalization-unknown-exceptional-result-outcome-declaration-scenario-validation.md",
+      "bytes": 23380,
+      "blob_sha": "adc85d8b31e55b98bbc87215998e9289e7cfed29",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-G-export-publication-disclosure-currency-withdrawal-external-possession-scenario-validation.md",
+      "bytes": 26188,
+      "blob_sha": "b75346212ff27d15820501323e3ec02f2c530956",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-H-cross-family-application-actions-chaining-automation-conflicting-authority-scenario-validation.md",
+      "bytes": 31559,
+      "blob_sha": "df9d71c6d96639a2b1e423c221b5d29c5cf7483c",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-I-degraded-offline-shared-device-recovery-scale-security-adversarial-whole-design-validation.md",
+      "bytes": 40748,
+      "blob_sha": "764be4ecce771b7bb8ed6346cb7769f6f8078014",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-J-residual-misfit-register-reopen-repair-revalidation-phase-017-closure-target-preparation.md",
+      "bytes": 24711,
+      "blob_sha": "6838f80ba16efef97cd09f4ea254059875516fc8",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md",
+      "bytes": 19973,
+      "blob_sha": "f2642a8e76f73b7248c1c26d42535de1e5c7b739",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/README.md",
+      "bytes": 13120,
+      "blob_sha": "d1b996f7e099ae741ee48d6d973adf085199c99a",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/index.md",
+      "bytes": 4831,
+      "blob_sha": "97f4534edf1fe6a613d4114cb04514dc038c7ffa",
+      "classification": "historical-phase-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-A-methodology-closure-authority-canonical-baseline-closure-evidence-subphase-planning.md",
+      "bytes": 23135,
+      "blob_sha": "f7f4659499850190421b10887bc88c02fe0a16da",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-B-canonical-current-truth-supersession-contradiction-knowledge-graph-reconciliation.md",
+      "bytes": 11794,
+      "blob_sha": "88143e1cb0af78e0db7391aa1d14a5f12efa5f33",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-C-methodology-chain-traceability-purpose-fulfillment-orphan-unexplained-element-audit.md",
+      "bytes": 23856,
+      "blob_sha": "205793febdd0f81e4cba79f28948f086d35c565c",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-D-boundary-clarification-open-item-limitation-uncertainty-terminology-closure.md",
+      "bytes": 21896,
+      "blob_sha": "2143d5ac51ded75f8c4ed9227b36a4cc16740339",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-E-lifecycle-wide-methodology-completeness-validation-evidence-repair-propagation-audit.md",
+      "bytes": 26632,
+      "blob_sha": "c4b22e65f0a9f2020417cf9c2033f1b65706b6f9",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-F-implementation-contamination-downstream-realization-obligations-architecture-neutral-handoff-audit.md",
+      "bytes": 24343,
+      "blob_sha": "9070933c23bf46b77aa13a3e796bc2e707f499f2",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-G-documentation-authority-okf-progressive-disclosure-closure-evidence-integrity-reconciliation.md",
+      "bytes": 13334,
+      "blob_sha": "3f017da3872212c371f478ab923a4434ff30532b",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/017-H-concept-design-closure-decision-readiness-transition-post-closure-handoff.md",
+      "bytes": 15931,
+      "blob_sha": "8e82b8b12494600dca3bd8e3560fd1ec165a7074",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/README.md",
+      "bytes": 9856,
+      "blob_sha": "686bf77c073884a2d561a1bd5c4b7426e165fb3d",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/017-methodology-closure-canonical-consolidation-completion-decision/index.md",
+      "bytes": 3624,
+      "blob_sha": "3c894a7f8a6e486ae6b045842a2cd6baf94f0ae8",
+      "classification": "closure-evidence"
+    },
+    {
+      "path": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-A-start-gate-closure-baseline-audit-authority-qualification-model-scorecard.md",
+      "bytes": 19914,
+      "blob_sha": "8636134c08d01c2e49b709f8e8d77025a6a4697c",
+      "classification": "active-qualification-evidence"
+    },
+    {
+      "path": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/README.md",
+      "bytes": 12028,
+      "blob_sha": "b29368ef59a1343c216a2cad05e6b525bd7dbfd5",
+      "classification": "active-qualification-evidence"
+    },
+    {
+      "path": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/index.md",
+      "bytes": 2909,
+      "blob_sha": "35dd7e026964b4312eb8ff02b0a16dae8d6cc3c6",
+      "classification": "active-qualification-evidence"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1617,
+      "blob_sha": "9f04022f0711ace3a3cb255d2d265f3159ad7c14",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/architecture/application-boundaries.md",
+      "bytes": 9616,
+      "blob_sha": "e10fe080472809a1acca35efda9773b72ba5d270",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/architectural-foundation.md",
+      "bytes": 9494,
+      "blob_sha": "c905ccfc9cfd69b02d5df23fa064c3c7be05cf2a",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "bytes": 14426,
+      "blob_sha": "c0e9d3956001055d7437d9283a70e3f57c964b2d",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "bytes": 12537,
+      "blob_sha": "08fb3cf9e52123214251b1e028e2d8cc29760290",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/data-persistence.md",
+      "bytes": 11706,
+      "blob_sha": "8ae5f60c3741f8228841ed5275ddca4869ccd63a",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/external-representation.md",
+      "bytes": 13303,
+      "blob_sha": "ae8d5e76583093982f3518e68a387f9b9f461c43",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/frontend-interaction.md",
+      "bytes": 13551,
+      "blob_sha": "0cef9f0aae37cd83528b925f0690eae28a4633d0",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/identity-access-session.md",
+      "bytes": 11365,
+      "blob_sha": "01ef526181ea61c61d76ec7efd3caf86491ad81c",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/index.md",
+      "bytes": 2908,
+      "blob_sha": "9fe37cef8033e79f2dc879b83b1e05a5d881a2a1",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/architecture/synchronization-recovery.md",
+      "bytes": 11762,
+      "blob_sha": "f990acf2ae142a5faf718a07232526496aa54b54",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/concepts/access.md",
+      "bytes": 4922,
+      "blob_sha": "224646e7a62458a14374d22ed6c464b8e96abe55",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/alias.md",
+      "bytes": 2273,
+      "blob_sha": "7a96c857d792dbba15323b5f46fee376736fc943",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/award.md",
+      "bytes": 3653,
+      "blob_sha": "ae98e8996436aba83f7fa6eb6d35f01cdcda00fc",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/competition.md",
+      "bytes": 3989,
+      "blob_sha": "99e7a11c44f72da9a92209e7cdc7e497966c0b9f",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/division.md",
+      "bytes": 2186,
+      "blob_sha": "21500996e1d8e81f1d0b744c8170a6c1fb1d8b01",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/evaluation-obligation.md",
+      "bytes": 5909,
+      "blob_sha": "2ffb3feea6a6ca4a5d3b0cd390dd14f90be04523",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/evaluation-occurrence.md",
+      "bytes": 5318,
+      "blob_sha": "a1ac47dee2a1492c504c24eea955be59061b5c5b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/export.md",
+      "bytes": 6474,
+      "blob_sha": "c36c0d08f0c124d41a43374311e0f07514b75448",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/identity.md",
+      "bytes": 2151,
+      "blob_sha": "fb44fafa064131af33f9269decbc1bd2d67777a7",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/index.md",
+      "bytes": 1642,
+      "blob_sha": "c25e0b17e1619c5a948d50ae7e586112a8f0b871",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/concepts/judging-encounter.md",
+      "bytes": 1701,
+      "blob_sha": "d8977dcd18ef57e3ca09c855917df4d4e927477a",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/concepts/outcome-declaration.md",
+      "bytes": 5848,
+      "blob_sha": "0a26a418de8b0129fd37430b8c802042fe5d0478",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/panel.md",
+      "bytes": 2590,
+      "blob_sha": "f2a1c5e6710fdf4f6f4c2e1d9b86a878b5f1b97b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/participation.md",
+      "bytes": 2483,
+      "blob_sha": "91f2d7422c1fac17779b4363330abee927e78906",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/provenance.md",
+      "bytes": 3481,
+      "blob_sha": "8e5f39b67656407d31c1d3efe2bbc4ac22ee7800",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/publication.md",
+      "bytes": 4648,
+      "blob_sha": "01ed51eaebffd9f26e3ed4d460cd0d01696180a8",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/rubric.md",
+      "bytes": 3735,
+      "blob_sha": "011d96cc54aed0c9bd263b677018bc611982cfc3",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/scorecard.md",
+      "bytes": 5997,
+      "blob_sha": "63c0b2c67735884af139f4f5c002b25ff9353adb",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/team.md",
+      "bytes": 3117,
+      "blob_sha": "e10f298e1a99e672cce18c679bd85f05475ea1b3",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/concepts/versioning.md",
+      "bytes": 4018,
+      "blob_sha": "4fd1dcb705b508efe8854b678b6dbfa8bbde0f99",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/dependence/application-family-dependence.md",
+      "bytes": 11720,
+      "blob_sha": "00d64ba2b8424e82facbe412c0f63b6658febc53",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/dependence/index.md",
+      "bytes": 845,
+      "blob_sha": "ee6619a4fd09a660c380da4b7c53c11582912c13",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/dependence/product-family-scope.md",
+      "bytes": 9786,
+      "blob_sha": "1b9745fe478b09ae01829f2f32e3a4e84df2c9d9",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/dependence/whole-graph-subset-validation.md",
+      "bytes": 7259,
+      "blob_sha": "9397e1cfdff9488c6b736f879fbcd602c559530c",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/accessibility-resilience.md",
+      "bytes": 7582,
+      "blob_sha": "7f43b89464b24c2dbb02bae8dd3bdaac01ce3b8b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/action-authority-traceability.md",
+      "bytes": 15600,
+      "blob_sha": "4277c169d3664cf64ce179592d667ad20d26db8f",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/authority-lineage-correction.md",
+      "bytes": 13495,
+      "blob_sha": "bec89225e184e2a0c382ea833883795f675fae8f",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/context-role-modes.md",
+      "bytes": 8644,
+      "blob_sha": "76e7672b1a7f81a35e79dafa84ba9029cc75e70e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/external-representation-release.md",
+      "bytes": 10624,
+      "blob_sha": "85641351105052ec67a0f65c7bd22463a618283d",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/index.md",
+      "bytes": 1835,
+      "blob_sha": "a39e0dc8e3290f7e099b15d2a69ae45a07e8de94",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/experience/judge-evaluation.md",
+      "bytes": 11456,
+      "blob_sha": "17a74859b6e80f13d9f68ed8e9f3352865bbe912",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/judge-onboarding.md",
+      "bytes": 10920,
+      "blob_sha": "ad7b7d1717b92d7393c6157bb2eb57f6b646720b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/live-operations.md",
+      "bytes": 8069,
+      "blob_sha": "c05b9c528c1cd0e5da1be2be48689712f014bcdb",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/mapping-authority-baseline.md",
+      "bytes": 12136,
+      "blob_sha": "3159f54ede15e303a080e1126fd0115c1e1c6b8d",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/organizer-preparation.md",
+      "bytes": 14788,
+      "blob_sha": "75f7b676be32bce26a1dd06b16f9309849731470",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/outcome-officiality.md",
+      "bytes": 10646,
+      "blob_sha": "c51e352ce31a5c99c0fce1361eba8a13c77e055f",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/paper-export-publication.md",
+      "bytes": 3659,
+      "blob_sha": "7f0a6d8e4645239b883e216dafa7730ac0b09ae1",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/phase-013-entry-handoff.md",
+      "bytes": 12763,
+      "blob_sha": "cbed7915865b3fccbbcb7de37f8360f945eb9cb1",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/reconciliation-derived-state.md",
+      "bytes": 9408,
+      "blob_sha": "38856ff89ccfd01a4e129d666c0d130911f7b143",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/experience/reconciliation-finalization.md",
+      "bytes": 3227,
+      "blob_sha": "048e4afa93cbafa5af60462e52d9e79b1f9d3ced",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/experience/status-feedback-recovery.md",
+      "bytes": 8415,
+      "blob_sha": "4b9196d0f55b3ff697a9ad1c0de1104b3a2c92cd",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/agent-context.md",
+      "bytes": 4428,
+      "blob_sha": "7d7637e9b8057675728828afa3a533fcb76bc0ac",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/change-governance.md",
+      "bytes": 5114,
+      "blob_sha": "225033b7a5e6b49c8d72d192f366f4dd7398465c",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/design-implementation-boundary.md",
+      "bytes": 6918,
+      "blob_sha": "a181b78eedc588b719116c21fde3ce0b3fd700d0",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/documentation-authority.md",
+      "bytes": 4881,
+      "blob_sha": "9535a98c030723323ef074dbeae654d628dfad5a",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/downstream-authority-quarantine.md",
+      "bytes": 6582,
+      "blob_sha": "7b3562314604130fa3a0690022ecce56d663230b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/index.md",
+      "bytes": 1625,
+      "blob_sha": "a66a3996b0e849862ab7529da5d86faf16ccd9c4",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/governance/metadata-trust-lifecycle.md",
+      "bytes": 12056,
+      "blob_sha": "a0412a11186a8dbbc4c7cdd57efe2b4f35db69ed",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/methodology-terminology.md",
+      "bytes": 5402,
+      "blob_sha": "c91245d32e05ab6c3123572d182fc387f2946061",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/post-concept-design-reentry.md",
+      "bytes": 15116,
+      "blob_sha": "cc800f098d1d71bb2adccde731b8e1f10d2aaf8a",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/rule-identifiers.md",
+      "bytes": 32558,
+      "blob_sha": "814064df67c1f8c3f7800210a2df13f71419522a",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/source-lineage.md",
+      "bytes": 2539,
+      "blob_sha": "674b450d903f9f130196b44df430f3f46bf65d35",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/governance/validation-enforcement.md",
+      "bytes": 7829,
+      "blob_sha": "e46de3bb578d56fbcacf8a4eae520a5adbbf9675",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/implementation/identity-authentication-access-session.md",
+      "bytes": 25527,
+      "blob_sha": "eaa5da820904da214ac66371b6590166ae45f23d",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/implementation-foundation.md",
+      "bytes": 17548,
+      "blob_sha": "fd491c3785fd9f8d709d6c00f617f0cc3c150c35",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/index.md",
+      "bytes": 3770,
+      "blob_sha": "5d237c39e1f45b202ec511e66104195282dc3ae0",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/persistence-history-projection.md",
+      "bytes": 26784,
+      "blob_sha": "defcb0946934f83a0e807fb2badde248f3741c59",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/runtime-delivery-bootstrap.md",
+      "bytes": 14970,
+      "blob_sha": "ba97f340d1d77a705de8a65f5af0bb4a5ff4f772",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/source-topology.md",
+      "bytes": 14494,
+      "blob_sha": "0d95269357592f8ab5c5bdc85dfab30d0d040f43",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/implementation/verification-strategy.md",
+      "bytes": 13616,
+      "blob_sha": "50f7b0b5f4a03d9f457425d9e8826b96d77651e9",
+      "classification": "downstream-candidate-knowledge"
+    },
+    {
+      "path": "docs/canonical/index.md",
+      "bytes": 2565,
+      "blob_sha": "3fee5f4a6bc4a5cd52f6e384cbff2e36bf5e7200",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/invariants/accessibility-semantic-parity.md",
+      "bytes": 1041,
+      "blob_sha": "7455497481506a5786ec1659e881127ff2ee90f2",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/calculated-not-official.md",
+      "bytes": 1433,
+      "blob_sha": "c47ad916445ee1285638f9a146222b91aaaba07c",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/capture-channel-parity.md",
+      "bytes": 2107,
+      "blob_sha": "46b4c8464f7553b3f7e7ac98f88d88e1098bd7e3",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/current-vs-historical-truth.md",
+      "bytes": 2636,
+      "blob_sha": "d11bf4aefe0d9e52b6b2ed2c48371c1e478221dd",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/index.md",
+      "bytes": 2094,
+      "blob_sha": "87264a4806f7dfe6354309954a66b89d7ebd1ed8",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/invariants/judge-independence.md",
+      "bytes": 995,
+      "blob_sha": "def38efef787dbcd8ea468f3a40886afe013776e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/missing-never-zero.md",
+      "bytes": 988,
+      "blob_sha": "98bb5f51316430d555f984bdeac99468740dfe4e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/official-not-automatically-public.md",
+      "bytes": 1988,
+      "blob_sha": "914482b926f378513950f4c84d65ac33394e2382",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/one-logical-scorecard.md",
+      "bytes": 1955,
+      "blob_sha": "2984a77868f1df780552f70d5b6794932e48e9f5",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/organizer-not-judge-author.md",
+      "bytes": 1180,
+      "blob_sha": "61996a44606a66c138bc4de9e1b615083e6c2c7b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/invariants/truthful-authority-under-uncertainty.md",
+      "bytes": 1088,
+      "blob_sha": "64dd0eb711605c3301184358426a82af3e0057f8",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/aggregate.md",
+      "bytes": 1101,
+      "blob_sha": "2e087e1c6f5b79fa560a8efd3f69e763e2a19f64",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/coverage.md",
+      "bytes": 2960,
+      "blob_sha": "dfd7de17744c5ca69adba8848018af06c84ab1bb",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/criterion-notes.md",
+      "bytes": 933,
+      "blob_sha": "5ffb656cf7eee8256006a9787fb92d7e2630c861",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/index.md",
+      "bytes": 1076,
+      "blob_sha": "89fb7ce42b96e1a874a2fe057cbc877335f1248e",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/mechanisms/official-outcome-revision.md",
+      "bytes": 1184,
+      "blob_sha": "3e455ae204674229138462808b5cf1fd3e3d2249",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/mechanisms/panel-membership-composition.md",
+      "bytes": 2225,
+      "blob_sha": "6498119370e8fc0123d2f0ae685900bd7ba0136e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/rank.md",
+      "bytes": 1365,
+      "blob_sha": "3bc5392d33d58e0302feb41be2781611036a2b62",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/readiness.md",
+      "bytes": 4934,
+      "blob_sha": "f8573dc0deadf46cc4576ef25d5f272790aa6a81",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/reconciliation.md",
+      "bytes": 2827,
+      "blob_sha": "9c7484a51209a2c00633f83bdbff5df09bd4b877",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/mechanisms/team-attributes.md",
+      "bytes": 945,
+      "blob_sha": "0a6323e10eb3cb0505d9fa36b518d37df9aa9c06",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/anonymity-disclosure.md",
+      "bytes": 3165,
+      "blob_sha": "a4c86bec1dba6091a8d72d39eb16ea13790c0a06",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/awards-finalization.md",
+      "bytes": 7369,
+      "blob_sha": "22339035486f49ad41ae67485fdcfaf36b68277b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/continuity-paper.md",
+      "bytes": 4419,
+      "blob_sha": "a8e59c2f5bdb4569ababfa27cf7981ffe2c4382e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/correction-authority.md",
+      "bytes": 6540,
+      "blob_sha": "b20702352be5aa070440419a624862ea6f035254",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/evaluation-policy.md",
+      "bytes": 2011,
+      "blob_sha": "c4b206d5ed4c88292c3d1aced1add6f9134a3e5c",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/index.md",
+      "bytes": 1452,
+      "blob_sha": "0f534963334c399208071517d06fa0c8dc8fa53d",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/policies/operational-exception-governance.md",
+      "bytes": 7609,
+      "blob_sha": "f9fad0937a49bc19ea857a3f5af2122ad7b8b3b1",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/policies/panel-composition.md",
+      "bytes": 2307,
+      "blob_sha": "5d8fa06c32f7530c456a464b167e2ffc5984be4c",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/project/domain-vocabulary-expectation-transfer.md",
+      "bytes": 15269,
+      "blob_sha": "ca4036842eda49783c9c063992a281933df8b43a",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/project/index.md",
+      "bytes": 1082,
+      "blob_sha": "9e37cc42dfd161e513f5a2e1b2fdf461dee1c98e",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/project/mandate-context.md",
+      "bytes": 10114,
+      "blob_sha": "2e4bc74e1bd47dfbbc5a3e98493cdf0542766967",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/project/purpose-needs-success-tensions.md",
+      "bytes": 10181,
+      "blob_sha": "a896d5d856bc9f14e71c0f1b6267c7346f65dc1e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/project/reusable-design-knowledge.md",
+      "bytes": 11260,
+      "blob_sha": "be1629af32938e803430ebb3ce4b765df5f92ea5",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/application-action-surface-composition.md",
+      "bytes": 14356,
+      "blob_sha": "c6d0182fd2ace77ef3a47b5e20aa321de8dbca2b",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/competition-participation-access.md",
+      "bytes": 16944,
+      "blob_sha": "9e2c3cec328ee1d5ab1e550d91ab0c95fb301b07",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/concept-synchronizations.md",
+      "bytes": 4348,
+      "blob_sha": "181589903eaddc10d17cbe080373af6c595e5212",
+      "classification": "historical-adapter"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-basis-scorecard-authority.md",
+      "bytes": 14234,
+      "blob_sha": "5d76cf7501ba5697194f7d886dc103dc52722dbf",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+      "bytes": 13378,
+      "blob_sha": "8ec5fab4a465935b72bf91a8a594523a004417d6",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+      "bytes": 16028,
+      "blob_sha": "36250e7e27f2ed47b6a451afa11a6ae38321bfbc",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/external-representation-publication-release.md",
+      "bytes": 12377,
+      "blob_sha": "4ea8a0358e0c97c7ec170fcdacc06014ac64953e",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/canonical/synchronizations/index.md",
+      "bytes": 1496,
+      "blob_sha": "f7d616e7d069695de08bde794d3a52e33b8ddcd9",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/canonical/synchronizations/temporal-truth-correction.md",
+      "bytes": 17283,
+      "blob_sha": "680d79c4f2718f94f7d6c8569db6799969b97131",
+      "classification": "canonical-owner"
+    },
+    {
+      "path": "docs/index.md",
+      "bytes": 4797,
+      "blob_sha": "52a975055126a5aa5629cb057e09dd9e9c018f46",
+      "classification": "router-index"
+    },
+    {
+      "path": "docs/references/daniel-jackson-concept-design.md",
+      "bytes": 2235,
+      "blob_sha": "dbf181fdddf36901b4cec395d8b4d99ec59deac1",
+      "classification": "external-reference"
+    },
+    {
+      "path": "docs/references/index.md",
+      "bytes": 1438,
+      "blob_sha": "e75166aaa2b8e10ca6baa09b57cda79c02672b10",
+      "classification": "external-reference"
+    },
+    {
+      "path": "docs/references/open-knowledge-format.md",
+      "bytes": 2758,
+      "blob_sha": "5755e3e162070cb107fede0b050c5735940f2273",
+      "classification": "external-reference"
+    }
+  ]
+}
