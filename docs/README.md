@@ -10,6 +10,7 @@ From there:
 
 - use [Canonical Knowledge](canonical/) for current meaning;
 - use [Phase 017](017-methodology-closure-canonical-consolidation-completion-decision/) for final Concept Design closure evidence and handoff;
+- use [Phase 018](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) for active pre-implementation repository qualification;
 - use numbered phase directories only for historical rationale/evidence;
 - use [References](references/) for adopted external authorities;
 - treat [Architecture](canonical/architecture/) and [Implementation](canonical/implementation/) as suspended downstream candidate knowledge until explicit re-entry.
@@ -19,6 +20,8 @@ From there:
 ```text
 Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED
+
+Phase 018  IN PROGRESS — 018-A COMPLETE / 018-B NEXT
 
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
@@ -30,4 +33,4 @@ execution authorization       NOT GRANTED
 Current category/index pages are routing surfaces, not alternate rule stores. Follow them to natural canonical owners for product meaning.
 
 
-Post-closure work begins with a fresh Phase 018 start gate. Do not resume historical implementation queues automatically.
+Phase 018 is active. 018-A completed the qualification start gate; 018-B is next. Do not resume historical implementation queues automatically.
