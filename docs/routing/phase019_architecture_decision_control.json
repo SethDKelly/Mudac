@@ -41,9 +41,10 @@
     "status": "ACTIVE",
     "completed_subphases": [
       "019-A",
-      "019-B"
+      "019-B",
+      "019-C"
     ],
-    "next_eligible_subphase": "019-C",
+    "next_eligible_subphase": "019-D",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -74,7 +75,7 @@
       "questions": [
         "ADQ-002"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-D",
@@ -82,7 +83,7 @@
       "questions": [
         "ADQ-003"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-E",
@@ -273,11 +274,16 @@
       "question_id": "ADQ-002",
       "title": "Application Ownership, Decomposition & Dependency Topology",
       "owning_subphase": "019-C",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Five-boundary ownership-preserving modular monolith (BND-001..BND-012)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-C-application-ownership-boundary-coordination-dependency-architecture.md",
+      "alternatives_evaluated": [
+        "Historical six-module modular monolith after Q4 repair",
+        "Simpler broad monolith/package topology",
+        "Selectively distributed services",
+        "Five-boundary ownership-preserving modular monolith"
+      ],
       "constraint_refs": [
         "ENG-001",
         "ENG-004",
@@ -291,20 +297,57 @@
       "candidate_inputs": [
         "docs/canonical/architecture/application-boundaries.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/019-architecture-engineering-reentry/019-C-Q4R-001-application-boundaries-semantic-repair.md",
+        "docs/canonical/architecture/application-boundaries.md",
+        "docs/canonical/dependence/application-family-dependence.md",
+        "docs/canonical/synchronizations/application-action-surface-composition.md",
+        "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+        "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+        "docs/canonical/synchronizations/temporal-truth-correction.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "conflicting legitimate authority",
         "partial bulk result",
         "post-finalization correction"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Current semantic cohesion and Phase-019 drivers favor one authoritative modular application boundary with five cohesive modules. Combining historical Judging Operations and Evaluation reduces avoidable cross-module transaction/coordination pressure while preserving Concept boundaries. Selective distribution lacks a demonstrated scale/isolation/ownership driver, while a broad monolith insufficiently protects mature authority seams.",
+      "rejected_alternatives": [
+        "Historical six-module map — repaired principles are useful, but the Judging Operations/Evaluation seam is now unnecessarily high-coupling.",
+        "Broad monolith/package topology — lower structural cost but insufficient protection against cross-owner mutation and derived-authority leakage.",
+        "Selective services — no demonstrated driver justifies network consistency, retry and operational complexity yet."
+      ],
+      "reversibility_migration": "Moderately reversible while still in one application boundary. No network protocol, database-per-module or package layout is selected. Future service extraction remains possible through preserved public contracts, but moving semantic ownership requires explicit architecture governance.",
+      "residual_uncertainty": [
+        "exact internal package/workspace layout",
+        "exact transaction boundaries for coordinated cross-module actions",
+        "exact command/query transport",
+        "whether any module later requires an independent runtime process",
+        "read-projection implementation",
+        "persistence ownership/storage layout",
+        "authentication/session mechanism",
+        "deployment/provider topology"
+      ],
+      "revisit_triggers": [
+        "module requires materially independent scale/isolation/availability/runtime",
+        "ordinary workflows are dominated by expensive cross-module coordination",
+        "selected persistence/transaction mechanism cannot preserve boundary model",
+        "security requires stronger runtime isolation",
+        "team/deployment ownership becomes independently governed",
+        "whole-architecture validation finds unacceptable coupling or failure propagation"
+      ],
+      "accepted_in_subphase": "019-C",
       "supersedes_decision": null
     },
     {
@@ -675,14 +718,45 @@
           "Judging Encounter",
           "Official Outcome Revision"
         ],
-        "repair_status": "REQUIRED",
-        "repair_document": null,
-        "current_semantic_owner_refs": [],
-        "retained_hypothesis": [],
-        "excluded_obsolete_content": [],
-        "revised_comparison_statement": null,
-        "preservation_evidence_refs": [],
-        "comparison_eligible": false
+        "repair_status": "COMPLETE",
+        "repair_document": "docs/019-architecture-engineering-reentry/019-C-Q4R-001-application-boundaries-semantic-repair.md",
+        "current_semantic_owner_refs": [
+          "docs/canonical/concepts/evaluation-occurrence.md",
+          "docs/canonical/concepts/evaluation-obligation.md",
+          "docs/canonical/concepts/outcome-declaration.md",
+          "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+          "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+          "docs/canonical/synchronizations/temporal-truth-correction.md"
+        ],
+        "retained_hypothesis": [
+          "explicit authoritative ownership boundaries",
+          "coordination above natural owners without semantic ownership",
+          "non-authoritative cross-module projections",
+          "no direct cross-owner storage mutation",
+          "acyclic/downstream dependency posture",
+          "shared lineage primitives without a god-module",
+          "infrastructure depending inward on application contracts",
+          "distribution only with demonstrated drivers"
+        ],
+        "excluded_obsolete_content": [
+          "Judging Encounter as current owner",
+          "Encounter obligations as one combined concept",
+          "Official Outcome Revision as current owner",
+          "historical six-module map as already accepted",
+          "historical one-server-deployment claim as current authority",
+          "ARCH/MOD candidate rules as current authority"
+        ],
+        "revised_comparison_statement": "Use an ownership-preserving modular application boundary in which cohesive current semantic owners are grouped into explicit modules, cross-owner workflows are coordinated above those modules without acquiring semantic authority, read projections remain non-authoritative, direct cross-owner persistence access is prohibited, and physical distribution is deferred until a demonstrated driver exists.",
+        "preservation_evidence_refs": [
+          "docs/019-architecture-engineering-reentry/019-C-Q4R-001-application-boundaries-semantic-repair.md",
+          "docs/canonical/concepts/evaluation-occurrence.md",
+          "docs/canonical/concepts/evaluation-obligation.md",
+          "docs/canonical/concepts/outcome-declaration.md",
+          "docs/canonical/synchronizations/evaluation-occurrence-obligation.md",
+          "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md",
+          "docs/canonical/synchronizations/temporal-truth-correction.md"
+        ],
+        "comparison_eligible": true
       },
       {
         "repair_id": "Q4R-002",
@@ -779,9 +853,9 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 1,
+    "decisions_accepted": 2,
     "q4_repairs_total": 4,
-    "q4_repairs_complete": 0,
+    "q4_repairs_complete": 1,
     "probes_authorized": 0,
     "implementation_packages": 0
   }
