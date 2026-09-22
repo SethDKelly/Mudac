@@ -46,9 +46,10 @@
       "019-D",
       "019-E",
       "019-F",
-      "019-G"
+      "019-G",
+      "019-H"
     ],
-    "next_eligible_subphase": "019-H",
+    "next_eligible_subphase": "019-I",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -119,7 +120,7 @@
       "questions": [
         "ADQ-007"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-I",
@@ -127,7 +128,7 @@
       "questions": [
         "ADQ-008"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-J",
@@ -717,11 +718,17 @@
       "question_id": "ADQ-007",
       "title": "Artifact, Export, Publication & External Delivery Architecture",
       "owning_subphase": "019-H",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Exact-source Export records with immutable integrity-addressed Artifact bytes behind authoritative relational metadata, complete-surface disclosure validation, explicit Publication, successor replacement, truthful withdrawal and non-authoritative delivery (ART-001..ART-020)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-H-artifact-export-publication-external-representation-delivery-architecture.md",
+      "alternatives_evaluated": [
+        "Historical External Representation/Artifact/Publication architecture unchanged",
+        "Transient on-demand generation only",
+        "Mutable latest-artifact / stable-URL publication",
+        "Large durable binary payloads inside relational authority storage",
+        "Immutable durable artifacts behind authoritative relational metadata with explicit Publication"
+      ],
       "constraint_refs": [
         "ENG-006",
         "ENG-010",
@@ -739,20 +746,62 @@
       "candidate_inputs": [
         "docs/canonical/architecture/external-representation.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/artifact-export-publication-delivery.md",
+        "docs/canonical/architecture/external-representation.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/concepts/export.md",
+        "docs/canonical/concepts/publication.md",
+        "docs/canonical/synchronizations/external-representation-publication-release.md",
+        "docs/canonical/experience/external-representation-release.md",
+        "docs/canonical/invariants/current-vs-historical-truth.md",
+        "docs/canonical/invariants/official-not-automatically-public.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "stale Export after source correction",
         "withdrawn Publication while external copies remain",
         "post-finalization correction"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-04",
+        "ERI-09"
+      ],
+      "rationale": "Current Export/Publication semantics require exact historical source basis, separate representation currency and distribution authority, reconstructible provenance, explicit successor release and truthful withdrawal limits. Relational semantic metadata plus immutable object/blob bytes preserves these obligations without burdening transactional authority storage with large payloads or selecting ADQ-009 runtime/provider mechanisms.",
+      "rejected_alternatives": [
+        "Historical candidate unchanged — useful semantics but stale Encounter-era wording and inherited AWS/S3/CloudFront/SQS selections.",
+        "Transient generation only — cannot reliably reconstruct the exact durable representation previously printed/released after source/renderer/template evolution.",
+        "Mutable latest artifact — silently rewrites historical byte identity and retargets prior release.",
+        "Large binary payloads in authority DB — couples transactional backup/recovery to large immutable files without semantic benefit."
+      ],
+      "reversibility_migration": "Commits to durable Export identity, immutable retained Artifact bytes with integrity identity, relational semantic metadata, an object/blob boundary for large bytes, explicit Publication, successor replacement and delivery non-authority. Object-store vendor, CDN, renderer, queue, print/email providers, signed-link mechanism and exact retention remain unselected.",
+      "residual_uncertainty": [
+        "exact object/blob storage service and durability tier",
+        "encryption/provider controls and object namespace",
+        "renderer/template stack and supported formats",
+        "print and accessibility validation tooling",
+        "binary scanning requirements",
+        "signed-link lifetime/revocation",
+        "CDN/cache invalidation",
+        "restricted/public delivery topology",
+        "async worker/queue mechanism",
+        "artifact size/throughput limits",
+        "lifecycle/archive and legal retention/erasure",
+        "delivery-provider retry/observability"
+      ],
+      "revisit_triggers": [
+        "representation formats cannot preserve source/disclosure fidelity",
+        "provider/runtime constraints make immutable identity or controlled withdrawal infeasible",
+        "retained-artifact storage cost becomes disproportionate",
+        "binding retention/erasure law conflicts with retained-history semantics",
+        "delivery integrations require independent authoritative workflow semantics",
+        "whole-architecture validation exposes unresolved disclosure, stale-copy, successor or release-history risk"
+      ],
+      "accepted_in_subphase": "019-H",
       "supersedes_decision": null
     },
     {
@@ -1135,7 +1184,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 6,
+    "decisions_accepted": 7,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 3,
     "probes_authorized": 0,
