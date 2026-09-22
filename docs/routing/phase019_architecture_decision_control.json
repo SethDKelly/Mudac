@@ -42,9 +42,10 @@
     "completed_subphases": [
       "019-A",
       "019-B",
-      "019-C"
+      "019-C",
+      "019-D"
     ],
-    "next_eligible_subphase": "019-D",
+    "next_eligible_subphase": "019-E",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -83,7 +84,7 @@
       "questions": [
         "ADQ-003"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-E",
@@ -91,7 +92,7 @@
       "questions": [
         "ADQ-004"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-F",
@@ -354,11 +355,16 @@
       "question_id": "ADQ-003",
       "title": "Authoritative Persistence, History, Provenance & Projection Architecture",
       "owning_subphase": "019-D",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "One logical PostgreSQL-compatible relational authority store with explicit append-stable semantic history and authority-first recovery (PST-001..PST-016)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-D-persistence-history-provenance-projection-migration-recovery-architecture.md",
+      "alternatives_evaluated": [
+        "Historical PostgreSQL/RDS design unchanged",
+        "Provider-neutral relational/hybrid authority store",
+        "System-wide event sourcing / log-as-authority",
+        "PostgreSQL-compatible relational current state plus explicit append-stable semantic history"
+      ],
       "constraint_refs": [
         "ENG-006",
         "ENG-007",
@@ -375,20 +381,60 @@
       "candidate_inputs": [
         "docs/canonical/architecture/data-persistence.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/data-persistence.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/concepts/versioning.md",
+        "docs/canonical/concepts/provenance.md",
+        "docs/canonical/invariants/current-vs-historical-truth.md",
+        "docs/canonical/synchronizations/temporal-truth-correction.md",
+        "docs/canonical/governance/downstream-realization-obligations.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING"
+      ],
       "scenario_seeds": [
         "post-finalization correction",
         "affected Outcome Declaration with same visible winner",
         "stale Export after source correction"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-03",
+        "ERI-09"
+      ],
+      "rationale": "A PostgreSQL-compatible relational authority store best fits stable identity, constrained current state, transactional integrity and the accepted modular-monolith boundary while explicit immutable Version/Provenance history preserves current-versus-historical truth without imposing system-wide event sourcing. Projections remain secondary and rebuildable; migrations and restore are authority/history preserving.",
+      "rejected_alternatives": [
+        "Historical PostgreSQL/RDS design unchanged — persistence-family reasoning is useful but RDS/Multi-AZ and old module topology belong to later/current decisions.",
+        "Provider-neutral relational/hybrid — too underspecified for later implementation planning; PostgreSQL-family coupling is acceptable and explicit.",
+        "System-wide event sourcing — stronger operational/query complexity than current semantic/history obligations require."
+      ],
+      "reversibility_migration": "Intentional PostgreSQL-family coupling with one logical authority database. Stable application IDs, module-owned contracts, additive migrations and no managed-service selection preserve future migration/extraction paths. Moving to a different engine would require data/schema migration but not semantic redesign if PST contracts are preserved.",
+      "residual_uncertainty": [
+        "exact PostgreSQL-compatible runtime/provider",
+        "exact ORM/query builder",
+        "exact migration tool",
+        "exact table/schema layout",
+        "exact cross-module foreign-key policy",
+        "exact transaction/isolation choices",
+        "exact outbox/queue mechanics",
+        "exact backup interval and retention",
+        "exact RTO/RPO",
+        "jurisdiction-specific retention/deletion requirements",
+        "projection storage technology"
+      ],
+      "revisit_triggers": [
+        "required scale/access pattern cannot be met proportionately by relational authority storage",
+        "justified service extraction requires independent module storage",
+        "binding retention/legal obligation conflicts with immutable-history posture",
+        "temporal/audit requirements make log reconstruction materially superior",
+        "selected concurrency/transaction architecture cannot preserve current/history semantics",
+        "required recovery targets cannot be met by accepted storage model",
+        "whole-architecture validation exposes unacceptable persistence, migration or recovery risk"
+      ],
+      "accepted_in_subphase": "019-D",
       "supersedes_decision": null
     },
     {
@@ -853,7 +899,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 2,
+    "decisions_accepted": 3,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 1,
     "probes_authorized": 0,
