@@ -146,6 +146,12 @@ class Validator:
             self.root / "scripts" / "validate_agentic_authority_policy.py",
             self.root / "scripts" / "measure_context_budget.py",
             self.root / "scripts" / "validate_agent_workflows.py",
+            self.root / "scripts" / "run_agentic_conformance.py",
+            self.root / "scripts" / "validate_status_mirrors.py",
+            self.root / "scripts" / "validate_resolution_smoke.py",
+            self.root / "scripts" / "scan_agentic_secrets.py",
+            self.root / "scripts" / "test_agentic_conformance_guards.py",
+            self.docs / "canonical" / "governance" / "agentic-conformance.md",
             self.docs / "routing" / "agent_tool_compatibility.json",
             self.docs / "canonical" / "governance" / "agent-workflow-portability.md",
             self.docs / "routing" / "context_budget.json",
@@ -559,13 +565,7 @@ class Validator:
             return
         required_snippets = [
             "contents: read",
-            "python scripts/validate_knowledge.py",
-            "python scripts/generate_okf_projection.py --check",
-            "python scripts/generate_stable_reference_index.py --check",
-            "python scripts/generate_owner_inventory.py --check",
-            "python scripts/validate_agentic_authority_policy.py",
-            "python scripts/measure_context_budget.py",
-            "python scripts/validate_agent_workflows.py",
+            "python scripts/run_agentic_conformance.py",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:

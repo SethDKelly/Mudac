@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 264,
+    "total": 276,
     "by_role": {
-      "current-authority": 122,
+      "current-authority": 134,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -17,6 +17,7 @@
       "AUTH": 14,
       "AWS": 18,
       "CHG": 5,
+      "CNF": 12,
       "COMP": 2,
       "CTX": 16,
       "DATA": 14,
@@ -509,6 +510,78 @@
       "anchor": "chg-005",
       "role": "current-authority",
       "locator": "docs/canonical/governance/change-governance.md#chg-005"
+    },
+    "CNF-001": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-001"
+    },
+    "CNF-002": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-002"
+    },
+    "CNF-003": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-003"
+    },
+    "CNF-004": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-004"
+    },
+    "CNF-005": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-005"
+    },
+    "CNF-006": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-006"
+    },
+    "CNF-007": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-007"
+    },
+    "CNF-008": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-008"
+    },
+    "CNF-009": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-009"
+    },
+    "CNF-010": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-010"
+    },
+    "CNF-011": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-011"
+    },
+    "CNF-012": {
+      "owner_path": "docs/canonical/governance/agentic-conformance.md",
+      "anchor": "cnf-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-conformance.md#cnf-012"
     },
     "COMP-001": {
       "owner_path": "docs/canonical/concepts/competition.md",

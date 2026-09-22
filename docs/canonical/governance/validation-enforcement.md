@@ -9,7 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:45:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:53:00Z }
 ---
 
 # Purpose
@@ -159,3 +159,16 @@ This keeps validation deterministic and prevents transient external failures fro
 Phase 005 and later may add code, schema, security, accessibility, or architecture conformance checks. Those may cite stable MUDAC rules and coexist with knowledge validation, but they should not overload this validator into a universal application test runner.
 
 The knowledge validator remains responsible for the integrity of the knowledge/governance graph itself.
+
+
+# Integrated Phase-018 conformance
+
+[Agentic Conformance, Drift Detection & CI Evidence Contract](agentic-conformance.md) extends this structural baseline with an integrated agentic/documentation conformance runner, status-mirror derivation checks, stable-resolution behavior, narrow secret scanning and mutation-based negative controls.
+
+The integrated command is:
+
+~~~bash
+python scripts/run_agentic_conformance.py
+~~~
+
+A passing integrated run is repository/static evidence only. It does not upgrade provider runtime, domain behavior, deployment or production claims.

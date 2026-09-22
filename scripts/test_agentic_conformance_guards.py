@@ -47,7 +47,8 @@ def main() -> int:
         status_repo = clone_repo(source, tmp, "status")
         agents = status_repo / "AGENTS.md"
         text = agents.read_text(encoding="utf-8")
-        text = text.replace("018-H NEXT", "018-Z NEXT")
+        import re
+        text = re.sub(r"018-[A-M] NEXT", "018-Z NEXT", text, count=1)
         agents.write_text(text, encoding="utf-8")
         expect_failure(
             "status mirror drift",

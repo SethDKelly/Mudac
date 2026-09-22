@@ -82,6 +82,8 @@ Use minimum-sufficient context under [Agent Context & Progressive Retrieval](doc
 
 Hard repository byte budgets apply to routing/bootstrap surfaces, not to canonical semantic truth.
 
+For full repository agentic/documentation checks, run `python scripts/run_agentic_conformance.py`; a PASS is static repository evidence only.
+
 ## Retrieval discipline
 
 - Known stable rule ID → run `python scripts/resolve_stable_id.py <ID>` and load the returned current owner; do not scan the full registry first.

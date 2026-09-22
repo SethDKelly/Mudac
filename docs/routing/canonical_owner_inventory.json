@@ -3,9 +3,9 @@
   "authority": "DERIVED PATH-ROLE INVENTORY — AUTHORED OWNER FILES RETAIN SEMANTIC AUTHORITY",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 107,
+    "total": 108,
     "by_role": {
-      "current-authority": 84,
+      "current-authority": 85,
       "downstream-candidate": 15,
       "external-reference": 2,
       "historical-adapter": 6
@@ -210,6 +210,10 @@
     },
     {
       "path": "docs/canonical/governance/agentic-authority-scope.md",
+      "role": "current-authority"
+    },
+    {
+      "path": "docs/canonical/governance/agentic-conformance.md",
       "role": "current-authority"
     },
     {

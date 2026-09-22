@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:45:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:53:00Z }
 ---
 
 # Canonical contract
@@ -342,6 +342,21 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-003 — Contradictions Are Surfaced, Not Silently Normalized](change-governance.md#chg-003)
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
+
+# Agentic conformance, drift detection and CI evidence
+
+* [CNF-001 — Integrated Conformance Proves Repository Configuration Health, Not Domain/Runtime Health](agentic-conformance.md#cnf-001)
+* [CNF-002 — Phase Program Indexes Own Phase Progression; Status Mirrors Are Derived](agentic-conformance.md#cnf-002)
+* [CNF-003 — Generated Artifacts Must Be Exactly Reproducible From Authored Sources](agentic-conformance.md#cnf-003)
+* [CNF-004 — Stable-Reference Integrity Is Fail-Closed and Role-Aware](agentic-conformance.md#cnf-004)
+* [CNF-005 — Critical Guards Require Executable Negative Controls](agentic-conformance.md#cnf-005)
+* [CNF-006 — Agent Workflow/Adapters Remain Subordinate Under Conformance](agentic-conformance.md#cnf-006)
+* [CNF-007 — Secret Scanning Is Narrow, High-Confidence and Not a Substitute for Enterprise Scanning](agentic-conformance.md#cnf-007)
+* [CNF-008 — Knowledge CI Remains Read-Only Against Repository Authority](agentic-conformance.md#cnf-008)
+* [CNF-009 — Blocking Checks Cannot Be Silently Downgraded by Orchestration](agentic-conformance.md#cnf-009)
+* [CNF-010 — Evidence Classes Remain Explicit](agentic-conformance.md#cnf-010)
+* [CNF-011 — Provider Runtime Compatibility Remains Separate From Static Adapter Conformance](agentic-conformance.md#cnf-011)
+* [CNF-012 — Conformance Must Remain Proportional and Architecture-Neutral Before Re-entry](agentic-conformance.md#cnf-012)
 
 # Portable agent workflows and tool adapters
 

@@ -11,6 +11,7 @@ Current repository/design-governance authority.
 - [Deterministic Ownership, Stable Reference Resolution & Drift Control](deterministic-ownership-resolution.md)
 - [OKF Metadata, Trust, Lifecycle & Freshness](metadata-trust-lifecycle.md)
 - [Knowledge Validation & CI Enforcement](validation-enforcement.md)
+- [Agentic Conformance, Drift Detection & CI Evidence Contract](agentic-conformance.md)
 
 ## Retrieval and change governance
 
