@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D COMPLETE / 019-E NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -60,7 +60,7 @@ Resolve ADQ-003.
 
 ### 019-E — Identity / Authentication / Participation / Access / Session
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-004.
 
@@ -109,11 +109,11 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C
-next eligible subphase               019-D
+completed subphases                  019-A, 019-B, 019-C, 019-D
+next eligible subphase               019-E
 automatic advance                    false
 
-ADQ decisions accepted               2 / 10
+ADQ decisions accepted               3 / 10
 Q4 repairs complete                  1 / 4
 technical probes authorized          0
 
