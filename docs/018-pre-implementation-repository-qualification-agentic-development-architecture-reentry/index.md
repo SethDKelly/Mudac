@@ -19,8 +19,8 @@ Phase 018 is **IN PROGRESS**.
 - [018-C — OKF v0.2 Conformance, Progressive Disclosure, Metadata & Knowledge-Bundle Qualification](018-C-okf-v0.2-conformance-progressive-disclosure-metadata-knowledge-bundle-qualification.md) — **COMPLETE — PASS**.
 - [018-D — Canonical Ownership, Stable References, Deterministic Resolution & Drift-Control Design](018-D-canonical-ownership-stable-references-deterministic-resolution-drift-control-design.md) — **COMPLETE — PASS**.
 - [018-E — Agentic Development Authority, Human-Directed Scope, Change Classes & Safety Boundaries](018-E-agentic-development-authority-human-directed-scope-change-classes-safety-boundaries.md) — **COMPLETE — PASS**.
-- 018-F — Agent Context, Progressive Retrieval, Context-Budget & Anti-Bloat Architecture — **NEXT**.
-- 018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability — PLANNED.
+- [018-F — Agent Context, Progressive Retrieval, Context-Budget & Anti-Bloat Architecture](018-F-agent-context-progressive-retrieval-context-budget-anti-bloat-architecture.md) — **COMPLETE — PASS**.
+- 018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability — **NEXT**.
 - 018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement — PLANNED.
 - 018-I — Downstream Realization Obligation, Carry-Forward & Engineering-Risk Reconciliation — PLANNED.
 - 018-J — Historical Architecture & Implementation Candidate Qualification Under Q1–Q6 — PLANNED.
@@ -40,7 +40,8 @@ Jackson Concept Design CLOSED
 018-C COMPLETE — PASS
 018-D COMPLETE — PASS
 018-E COMPLETE — PASS
-018-F NEXT
+018-F COMPLETE — PASS
+018-G NEXT
 
 historical architecture candidates SUSPENDED / QUARANTINED
 accepted new architecture NOT ESTABLISHED

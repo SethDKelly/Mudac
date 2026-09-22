@@ -1,6 +1,6 @@
 # Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry
 
-**Status:** IN PROGRESS — 018-A/B/C/D/E COMPLETE / 018-F NEXT
+**Status:** IN PROGRESS — 018-A/B/C/D/E/F COMPLETE / 018-G NEXT
 
 ## Purpose
 
@@ -112,11 +112,13 @@ Define repository-native agent action classes, authority precedence, scope envel
 
 ### 018-F — Agent Context, Progressive Retrieval, Context-Budget & Anti-Bloat Architecture
 
-**Status: NEXT.**
-
 Define bounded retrieval behavior, context budgets, history-loading rules, summary/duplication discipline and measurable anti-bloat expectations.
 
+**Status: COMPLETE — PASS.**
+
 ### 018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability
+
+**Status: NEXT.**
 
 Define tool-neutral repository workflows and thin adapters for coding-agent environments without allowing Cursor, Codex, Claude Code or other tools to become semantic authority.
 
