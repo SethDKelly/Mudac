@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:04:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:58:00Z }
 ---
 
 # Canonical contract
@@ -343,6 +343,20 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
 
+# Architecture re-entry evaluation and decision governance
+
+* [ARE-001 — Phase-018 Architecture Re-entry Planning Does Not Select Architecture](architecture-reentry-evaluation.md#are-001)
+* [ARE-002 — Current Semantic Authority and ENG Obligations Are Hard Decision Constraints](architecture-reentry-evaluation.md#are-002)
+* [ARE-003 — Architecture Questions Have Explicit Scope, Dependencies and Deferrals](architecture-reentry-evaluation.md#are-003)
+* [ARE-004 — Material Architecture Choices Require Credible Alternatives](architecture-reentry-evaluation.md#are-004)
+* [ARE-005 — Q4 Candidate Material Is Inadmissible Unchanged](architecture-reentry-evaluation.md#are-005)
+* [ARE-006 — Architecture Evaluation Uses a Common Evidence Envelope](architecture-reentry-evaluation.md#are-006)
+* [ARE-007 — Evidence Strength and Uncertainty Stay Calibrated](architecture-reentry-evaluation.md#are-007)
+* [ARE-008 — The Architecture Decision Graph Is Dependency-Safe](architecture-reentry-evaluation.md#are-008)
+* [ARE-009 — Accepted Architecture Decisions Require Explicit Decision Evidence](architecture-reentry-evaluation.md#are-009)
+* [ARE-010 — Architecture Authority Is Created Only by Explicit Acceptance](architecture-reentry-evaluation.md#are-010)
+* [ARE-011 — Architecture Probes Are Separate, Bounded Evidence Activities](architecture-reentry-evaluation.md#are-011)
+* [ARE-012 — Architecture Re-entry Ends Before Implementation Execution Begins](architecture-reentry-evaluation.md#are-012)
 # Downstream realization and engineering handoff
 
 * [ENG-001 — Conceptual Obligation Precedes Mechanism Selection](downstream-realization-obligations.md#eng-001)
