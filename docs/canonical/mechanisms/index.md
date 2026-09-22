@@ -23,4 +23,4 @@ Reconciliation = Organizer work context, not Ticket/Workflow authority
 
 [Official Outcome Revision](official-outcome-revision.md) is a deprecated historical adapter; current official authority is [Outcome Declaration](../concepts/outcome-declaration.md).
 
-For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure repository qualification, use [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/).
