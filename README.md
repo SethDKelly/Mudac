@@ -10,7 +10,8 @@ The current product definition is representation-independent: volunteer Judges a
 - [knowledge/index.md](knowledge/index.md) — generated strict OKF v0.2 compatibility projection; routing only, never semantic authority.
 - [Canonical Knowledge](docs/canonical/) — current product/design and governance authority.
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
-- [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — active pre-implementation repository qualification and agentic-development preparation.
+- [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
+- [Phase 019](docs/019-architecture-engineering-reentry/) — active Architecture & Engineering Re-entry decision program.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
