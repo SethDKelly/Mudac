@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:53:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T04:04:00Z }
 ---
 
 # Canonical contract
@@ -343,6 +343,26 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
 
+# Downstream realization and engineering handoff
+
+* [ENG-001 — Conceptual Obligation Precedes Mechanism Selection](downstream-realization-obligations.md#eng-001)
+* [ENG-002 — Retention and Jurisdiction-Specific Compliance Remain Evidence-Bounded Until Externally Established](downstream-realization-obligations.md#eng-002)
+* [ENG-003 — Competition-Specific Policy Values Remain Explicit Configuration](downstream-realization-obligations.md#eng-003)
+* [ENG-004 — Identity, Participation, Access, Authorship and Technical Privilege Remain Distinct](downstream-realization-obligations.md#eng-004)
+* [ENG-005 — One Logical Evaluation and Evidence/Authorship Integrity Survive Retries, Capture Paths and Correction](downstream-realization-obligations.md#eng-005)
+* [ENG-006 — Currentness, History, Provenance and Correction Remain Simultaneously Reconstructible](downstream-realization-obligations.md#eng-006)
+* [ENG-007 — Current-State, Concurrency, Retry and Uncertainty Preserve Owner Truth](downstream-realization-obligations.md#eng-007)
+* [ENG-008 — Offline, Multi-Device, Degraded and Paper Recovery Converge Without Multiplying Domain Subjects](downstream-realization-obligations.md#eng-008)
+* [ENG-009 — Outcome and Officiality Distinctions Remain Explicit](downstream-realization-obligations.md#eng-009)
+* [ENG-010 — Source, Export, Publication and Possession Remain Separate](downstream-realization-obligations.md#eng-010)
+* [ENG-011 — Security, Disclosure and Abuse Controls Protect Semantic Authority Rather Than Replacing It](downstream-realization-obligations.md#eng-011)
+* [ENG-012 — Accessibility and Device Continuity Preserve Consequential Semantic Parity](downstream-realization-obligations.md#eng-012)
+* [ENG-013 — Availability, Deployment and Recovery Mechanisms Preserve Truthful Authority Under Failure](downstream-realization-obligations.md#eng-013)
+* [ENG-014 — Phase-016 Semantic Scenarios Are Mandatory Downstream Verification Seeds](downstream-realization-obligations.md#eng-014)
+* [ENG-015 — Evidence Strength Must Match the Downstream Claim](downstream-realization-obligations.md#eng-015)
+* [ENG-016 — Supply-Chain, Secrets, Fixture/Privacy and Migration Controls Must Exist Before Implementation Sprawl](downstream-realization-obligations.md#eng-016)
+* [ENG-017 — Historical Architecture, Implementation and Executable Substrate Remain Evidence Until Explicitly Qualified](downstream-realization-obligations.md#eng-017)
+* [ENG-018 — Provider/Tool Runtime Compatibility Is Required Only When Relied Upon and Is Evidence-Calibrated](downstream-realization-obligations.md#eng-018)
 # Agentic conformance, drift detection and CI evidence
 
 * [CNF-001 — Integrated Conformance Proves Repository Configuration Health, Not Domain/Runtime Health](agentic-conformance.md#cnf-001)
