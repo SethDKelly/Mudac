@@ -98,6 +98,8 @@ A downstream process begins from current knowledge, especially:
 
 Historical phase records are rationale/evidence, not a substitute for these current owners.
 
+The normalized current realization-obligation register is [Downstream Realization Obligations & Engineering-Risk Handoff](downstream-realization-obligations.md). Use that owner for durable ENG-* downstream preservation rules; use this re-entry contract for Q1–Q6 candidate classification and re-entry sequencing.
+
 # Quarantined downstream-material classification
 
 Pre-Phase-009 architecture/implementation material is not one homogeneous thing.
