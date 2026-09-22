@@ -21,7 +21,7 @@ Current posture:
 Jackson Concept Design: CLOSED — PHASE 017 PASS
 PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 AUTHORIZED — 019-A NEXT ELIGIBLE
+PHASE 019 ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE
 implementation readiness: READY FOR POST-CLOSURE PREPARATION
 implementation program framework: DEFINED / PRE-ARCHITECTURE
 active implementation packages: 0
