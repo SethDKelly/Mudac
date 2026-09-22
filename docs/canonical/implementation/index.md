@@ -53,4 +53,4 @@ A later downstream re-entry must explicitly decide which prior choices remain ju
 
 017-F audited all six documents in this subtree. Each now carries an explicit suspension notice at document level.
 
-The retained runtime/bootstrap remains non-domain. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices are preserved only as candidate/factual downstream knowledge. They remain candidates for Phase-018 qualification/revalidation; 008-F..L remains inactive and no historical first-slice gate has current authority.
+The retained runtime/bootstrap remains non-domain. 018-J has qualified all six implementation documents under Q1–Q6; `docs/routing/downstream_candidate_qualification.json` records their current dispositions. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices remain candidate/factual downstream knowledge, not accepted implementation authority. 008-F..L remains inactive and no historical first-slice gate has current authority.
