@@ -6,7 +6,7 @@ This subtree preserves MUDAC implementation/tooling decisions and planning produ
 
 **DOMAIN IMPLEMENTATION AUTHORITY AND IMPLEMENTATION PLANNING ARE SUSPENDED.**
 
-Concept Design is reopened. No new MUDAC domain implementation is authorized, and the Phase 008 queue is halted after 008-E.
+Jackson-aligned Concept Design is closed. No new MUDAC domain implementation is authorized; Phase 018 is active repository qualification and architecture/engineering re-entry preparation, and the historical Phase 008 queue remains halted after 008-E.
 
 The controlling current owners are:
 
@@ -17,11 +17,12 @@ The controlling current owners are:
 Current posture:
 
 ```text
-Jackson Concept Design: IN PROGRESS — PHASE 017
-implementation readiness: NOT READY
-implementation planning: SUSPENDED
+Jackson Concept Design: CLOSED — PHASE 017 PASS
+Phase 018: IN PROGRESS — 018-A COMPLETE / 018-B ACTIVE
+implementation readiness: READY FOR POST-CLOSURE PREPARATION
+implementation planning: NOT YET ACCEPTED
 new domain implementation: NOT STARTED
-implementation authorization: NOT YET
+implementation execution authorization: NOT GRANTED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
 008-D persistence realization: SUSPENDED DOWNSTREAM CANDIDATE
 008-E identity/auth realization: SUSPENDED DOWNSTREAM CANDIDATE
@@ -43,7 +44,7 @@ Existing executable substrate may receive only narrow safety/build maintenance t
 
 ## No automatic reactivation
 
-A future successful Phase 017 closure authorizes only handoff into a separate architecture/engineering process. It does not automatically restore this subtree as accepted current implementation authority, resume 008-F, authorize a first slice, or ratify 008-D/E physical choices.
+Phase 017 closure authorized only the post-closure preparation/re-entry process now represented by Phase 018. It did not restore this subtree as accepted current implementation authority, resume 008-F, authorize a first slice, or ratify 008-D/E physical choices.
 
 A later downstream re-entry must explicitly decide which prior choices remain justified against the closed conceptual design.
 
@@ -52,4 +53,4 @@ A later downstream re-entry must explicitly decide which prior choices remain ju
 
 017-F audited all six documents in this subtree. Each now carries an explicit suspension notice at document level.
 
-The retained runtime/bootstrap remains non-domain. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices are preserved only as candidate/factual downstream knowledge. They must be revalidated after successful Concept Design closure; 008-F..L remains inactive and no historical first-slice gate has current authority.
+The retained runtime/bootstrap remains non-domain. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices are preserved only as candidate/factual downstream knowledge. They remain candidates for Phase-018 qualification/revalidation; 008-F..L remains inactive and no historical first-slice gate has current authority.
