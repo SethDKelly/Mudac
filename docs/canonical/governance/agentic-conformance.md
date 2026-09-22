@@ -52,7 +52,7 @@ Current resolution must reject quarantined candidates unless candidate inclusion
 
 For controls where a false-positive PASS would materially weaken authority or security boundaries, CI must include mutation-based negative tests showing the relevant validator fails when the protected contract is deliberately broken.
 
-Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage and high-confidence secret insertion.
+Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage, architecture pre-selection leakage and high-confidence secret insertion.
 
 <a id="cnf-006"></a>
 ## CNF-006 — Agent Workflow/Adapters Remain Subordinate Under Conformance
