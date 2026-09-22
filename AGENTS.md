@@ -64,6 +64,18 @@ Follow [Agentic Development Authority, Human-Directed Scope & Action Boundaries]
 
 A passing check does not authorize merge, deploy, the next phase/subphase, or a new implementation package.
 
+## Context budget discipline
+
+Use minimum-sufficient context under [Agent Context & Progressive Retrieval](docs/canonical/governance/agent-context.md).
+
+- Known ID: resolve directly; do not preload the rule registry.
+- Unknown subject: route through the smallest family/owner.
+- Expand to another current owner only for a concrete unresolved dependency.
+- History, quarantined candidates and external/vendor material are on-demand extended tiers, not startup context.
+- Do not persist ad hoc context packs as new summary authority.
+
+Hard repository byte budgets apply to routing/bootstrap surfaces, not to canonical semantic truth.
+
 ## Retrieval discipline
 
 - Known stable rule ID → run `python scripts/resolve_stable_id.py <ID>` and load the returned current owner; do not scan the full registry first.

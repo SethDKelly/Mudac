@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:20:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:32:00Z }
 ---
 
 # Canonical contract
@@ -324,6 +324,16 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CTX-004 — Stop Context Expansion When Authority Is Sufficient](agent-context.md#ctx-004)
 * [CTX-005 — Recursive Corpus Loading Is Not the Default](agent-context.md#ctx-005)
 * [CTX-006 — Resolve a Known Stable ID Directly Before Broad Discovery](agent-context.md#ctx-006)
+* [CTX-007 — Minimum Sufficient Authoritative Context Is the Retrieval Objective](agent-context.md#ctx-007)
+* [CTX-008 — Retrieval Expands Through Explicit Tiers](agent-context.md#ctx-008)
+* [CTX-009 — Hard Byte Budgets Govern Routinely Loaded Routing Surfaces, Not Canonical Truth](agent-context.md#ctx-009)
+* [CTX-010 — Representative Current-Task Packs Are Measured as Regression Evidence](agent-context.md#ctx-010)
+* [CTX-011 — Cross-Owner Expansion Requires an Unresolved Semantic Dependency](agent-context.md#ctx-011)
+* [CTX-012 — History, Quarantined Candidates and External Evidence Are Explicit Extended-Context Tiers](agent-context.md#ctx-012)
+* [CTX-013 — Assembled Context Packs Are Ephemeral Unless They Have Independent Ownership Purpose](agent-context.md#ctx-013)
+* [CTX-014 — Budget Pressure Is Resolved by Routing or Task Decomposition, Never Semantic Truncation](agent-context.md#ctx-014)
+* [CTX-015 — Larger Model Context Windows Do Not Justify Routine Context Growth](agent-context.md#ctx-015)
+* [CTX-016 — Broad-Audit Context Is Task-Scoped and Temporary](agent-context.md#ctx-016)
 
 # Canonical change governance
 

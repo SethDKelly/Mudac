@@ -59,6 +59,9 @@ jobs:
       - name: Check agentic authority policy
         run: python scripts/validate_agentic_authority_policy.py
 
+      - name: Measure context budgets
+        run: python scripts/measure_context_budget.py
+
       - name: Smoke-test stable-ID resolution roles
         shell: bash
         run: |

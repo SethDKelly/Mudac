@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 242,
+    "total": 252,
     "by_role": {
-      "current-authority": 100,
+      "current-authority": 110,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -18,7 +18,7 @@
       "AWS": 18,
       "CHG": 5,
       "COMP": 2,
-      "CTX": 6,
+      "CTX": 16,
       "DATA": 14,
       "DISC": 2,
       "DOC": 7,
@@ -556,6 +556,66 @@
       "anchor": "ctx-006",
       "role": "current-authority",
       "locator": "docs/canonical/governance/agent-context.md#ctx-006"
+    },
+    "CTX-007": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-007"
+    },
+    "CTX-008": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-008"
+    },
+    "CTX-009": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-009"
+    },
+    "CTX-010": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-010"
+    },
+    "CTX-011": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-011"
+    },
+    "CTX-012": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-012"
+    },
+    "CTX-013": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-013"
+    },
+    "CTX-014": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-014"
+    },
+    "CTX-015": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-015"
+    },
+    "CTX-016": {
+      "owner_path": "docs/canonical/governance/agent-context.md",
+      "anchor": "ctx-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agent-context.md#ctx-016"
     },
     "DATA-001": {
       "owner_path": "docs/canonical/architecture/data-persistence.md",

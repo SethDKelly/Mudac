@@ -9,7 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:20:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:32:00Z }
 ---
 
 # Purpose
@@ -109,6 +109,7 @@ The workflow:
 - checks the generated stable-reference index against the authored ownership policy and stable-rule registry;
 - smoke-tests that a current ID resolves normally while a quarantined architecture ID fails current resolution and succeeds only with explicit candidate inclusion;
 - validates the machine-readable agentic action policy against the canonical A1–A4 and human-directed boundaries;
+- runs deterministic context-budget measurement for startup/routing surfaces and representative task packs;
 - uses repository `contents: read` permission;
 - fails the workflow when validator errors exist;
 - never edits knowledge, creates verification metadata, or repairs files automatically.

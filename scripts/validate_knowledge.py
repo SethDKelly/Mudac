@@ -143,6 +143,8 @@ class Validator:
             self.root / "scripts" / "generate_owner_inventory.py",
             self.root / "scripts" / "resolve_stable_id.py",
             self.root / "scripts" / "validate_agentic_authority_policy.py",
+            self.root / "scripts" / "measure_context_budget.py",
+            self.docs / "routing" / "context_budget.json",
             self.docs / "routing" / "agentic_action_policy.json",
             self.docs / "canonical" / "governance" / "agentic-authority-scope.md",
             self.docs / "routing" / "canonical_ownership.json",
@@ -558,6 +560,7 @@ class Validator:
             "python scripts/generate_stable_reference_index.py --check",
             "python scripts/generate_owner_inventory.py --check",
             "python scripts/validate_agentic_authority_policy.py",
+            "python scripts/measure_context_budget.py",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:

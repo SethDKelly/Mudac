@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "authority": "MEASUREMENT/CONFORMANCE POLICY — CANONICAL AGENT CONTEXT CONTRACT RETAINS NORMATIVE MEANING",
+  "canonical_contract": "docs/canonical/governance/agent-context.md",
+  "unit": "utf8_bytes",
+  "hard_limits": {
+    "agents_md": 8192,
+    "docs_index": 8192,
+    "canonical_index": 5120,
+    "canonical_family_index_each": 6144,
+    "knowledge_root_index": 4096,
+    "knowledge_nested_index_each": 6144,
+    "knowledge_concept_each": 4096,
+    "future_canonical_skill_each": 8192
+  },
+  "representative_task_profiles": [
+    {
+      "name": "known-current-rule-small",
+      "limit": 16384,
+      "files": [
+        "AGENTS.md",
+        "docs/canonical/invariants/judge-independence.md"
+      ]
+    },
+    {
+      "name": "known-current-rule-governance",
+      "limit": 24576,
+      "files": [
+        "AGENTS.md",
+        "docs/canonical/governance/agentic-authority-scope.md"
+      ]
+    },
+    {
+      "name": "single-family-current",
+      "limit": 32768,
+      "files": [
+        "AGENTS.md",
+        "docs/index.md",
+        "docs/canonical/index.md",
+        "docs/canonical/concepts/index.md",
+        "docs/canonical/concepts/scorecard.md"
+      ]
+    },
+    {
+      "name": "cross-owner-current",
+      "limit": 49152,
+      "files": [
+        "AGENTS.md",
+        "docs/index.md",
+        "docs/canonical/index.md",
+        "docs/canonical/concepts/index.md",
+        "docs/canonical/synchronizations/index.md",
+        "docs/canonical/concepts/scorecard.md",
+        "docs/canonical/synchronizations/evaluation-outcome-finalization-declaration.md"
+      ]
+    },
+    {
+      "name": "governance-current",
+      "limit": 49152,
+      "files": [
+        "AGENTS.md",
+        "docs/index.md",
+        "docs/canonical/index.md",
+        "docs/canonical/governance/index.md",
+        "docs/canonical/governance/agent-context.md",
+        "docs/canonical/governance/agentic-authority-scope.md"
+      ]
+    }
+  ],
+  "soft_guidance": {
+    "canonical_owner_review_threshold": 32768,
+    "explicit_history_pack_guidance": 98304,
+    "explicit_candidate_pack_guidance": 98304
+  },
+  "semantics": {
+    "hard_budget_failure": "route, decompose, or reduce duplicated routing/procedure content; never truncate required canonical meaning",
+    "aggregate_repository_size": "not a startup-context metric",
+    "provider_token_window": "not a justification for routine context growth",
+    "history_candidates_external": "explicit on-demand tiers only"
+  }
+}
