@@ -13,6 +13,7 @@ The controlling current owners are:
 - [Design / Implementation Boundary](../governance/design-implementation-boundary.md)
 - [Downstream Architecture & Implementation Authority Quarantine](../governance/downstream-authority-quarantine.md)
 - [Post-Concept-Design Architecture & Engineering Re-entry](../governance/post-concept-design-reentry.md)
+- [Implementation Program, Verification & Delivery-Gate Contract](../governance/implementation-program-delivery.md)
 
 Current posture:
 
@@ -20,7 +21,9 @@ Current posture:
 Jackson Concept Design: CLOSED — PHASE 017 PASS
 Phase 018: IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 018-L NEXT
 implementation readiness: READY FOR POST-CLOSURE PREPARATION
-implementation planning: NOT YET ACCEPTED
+implementation program framework: DEFINED / PRE-ARCHITECTURE
+active implementation packages: 0
+implementation planning: PACKAGE DERIVATION DEFERRED UNTIL ACCEPTED ARCHITECTURE
 new domain implementation: NOT STARTED
 implementation execution authorization: NOT GRANTED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -54,3 +57,10 @@ A later downstream re-entry must explicitly decide which prior choices remain ju
 017-F audited all six documents in this subtree. Each now carries an explicit suspension notice at document level.
 
 The retained runtime/bootstrap remains non-domain. 018-J has qualified all six implementation documents under Q1–Q6; `docs/routing/downstream_candidate_qualification.json` records their current dispositions. Concrete package, PostgreSQL, outbox, Cognito, framework/toolchain and historical Phase-008 planning choices remain candidate/factual downstream knowledge, not accepted implementation authority. 008-F..L remains inactive and no historical first-slice gate has current authority.
+
+
+## Current Phase-018 implementation-program framework
+
+018-L defines the technology-neutral package lifecycle, evidence classes and delivery gates in `docs/canonical/governance/implementation-program-delivery.md`, with machine-readable pre-architecture state in `docs/routing/implementation_program_framework.json`.
+
+That framework is current governance. The six documents in this Implementation subtree remain suspended historical candidates. The framework currently requires zero active packages, no package derivation and no execution authorization until a fresh accepted architecture exists.
