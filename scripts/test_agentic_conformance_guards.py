@@ -109,6 +109,20 @@ def main() -> int:
             errors,
         )
 
+        architecture_repo = clone_repo(source, tmp, "architecture")
+        architecture_path = architecture_repo / "docs/routing/architecture_reentry_plan.json"
+        architecture = json.loads(architecture_path.read_text(encoding="utf-8"))
+        architecture["questions"][1]["selected_option"] = architecture["questions"][1]["alternative_classes"][0]
+        architecture["questions"][1]["status"] = "DECIDED"
+        architecture["state"]["selected_question_count"] = 1
+        architecture["state"]["accepted_architecture_established"] = True
+        architecture_path.write_text(json.dumps(architecture, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "architecture pre-selection leakage",
+            run_script(source, architecture_repo, "scripts/validate_architecture_reentry_plan.py", "--repo", str(architecture_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -121,7 +135,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 7 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 8 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
