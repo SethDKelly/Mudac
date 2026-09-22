@@ -4,7 +4,7 @@ This subtree now contains both **current accepted Phase-019 architecture authori
 
 ## Current accepted architecture authority
 
-- [Current Architecture Drivers, Quality Priorities, Workload & Trust Boundaries](architecture-drivers.md) — **ADQ-001 / ADQ-002 ACCEPTED in 019-B; DRV-001..012 current authority.**
+- [Current Architecture Drivers, Quality Priorities, Workload & Trust Boundaries](architecture-drivers.md) — **ADQ-001 ACCEPTED in 019-B; DRV-001..012 current authority.**
 - [Current Application Ownership, Boundary, Coordination & Dependency Architecture](application-ownership-boundaries.md) — **ADQ-002 ACCEPTED in 019-C; BND-001..012 current authority.**
 
 Accepted architecture remains partial. Whole-architecture acceptance is still false until successful 019-L closure.
@@ -43,7 +43,7 @@ Architecture material may be consulted only to:
 
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
-Phase 017 closure did **not** automatically reactivate these documents. Phase 018 qualified them as evidence. Phase 019 may accept bounded current architecture decisions explicitly. 019-B has accepted only the new DRV-* driver owner; all historical candidate documents below remain suspended unless a later decision explicitly adopts/revises/replaces them.
+Phase 017 closure did **not** automatically reactivate these documents. Phase 018 qualified them as evidence. Phase 019 may accept bounded current architecture decisions explicitly. 019-B accepted the new DRV-* driver owner and 019-C accepted the new BND-* application-boundary owner after Q4R-001 repair. Historical candidate documents below remain suspended unless a later decision explicitly adopts, revises, replaces or retires them.
 
 
 ## Phase-017 audit result
@@ -53,7 +53,7 @@ Phase 017 closure did **not** automatically reactivate these documents. Phase 01
 The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K defined the pre-selection question/dependency/evidence plan in `docs/routing/architecture_reentry_plan.json`; every selected option remains null and accepted architecture remains not established. 018-M has now authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A. Phase 019 must compare and explicitly adopt, revise, replace or reject choices under the post-Concept-Design re-entry contract.
 
 
-Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 ACTIVE; 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE.** ADQ-001 is accepted; accepted whole architecture is still not established.
+Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 ACTIVE; 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE.** ADQ-001 and ADQ-002 are accepted; accepted whole architecture is still not established.
 
 
 Current Phase-019 progression:
