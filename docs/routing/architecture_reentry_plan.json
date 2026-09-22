@@ -608,7 +608,7 @@
   ],
   "reentry_program": {
     "proposed_phase": "019 — Architecture & Engineering Re-entry",
-    "authorization_state": "PLANNED_NOT_AUTHORIZED_BY_018_K_ALONE",
+    "authorization_state": "AUTHORIZED_BY_018_M",
     "subphases": [
       {
         "id": "019-A",
@@ -694,6 +694,8 @@
           "ADQ-010"
         ]
       }
-    ]
+    ],
+    "next_subphase": "019-A",
+    "authorization_evidence": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-M-pre-implementation-residual-risk-register-repository-scorecard-regrade-implementation-entry-decision.md"
   }
 }
