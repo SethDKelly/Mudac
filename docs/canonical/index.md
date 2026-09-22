@@ -26,7 +26,7 @@ Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD** and Jackson-aligne
 
 Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) and final 017-H record for closure evidence.
 
-Implementation readiness is **READY** for controlled downstream planning. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is **COMPLETE — PASS**. **018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE.** **Phase 019 is ACTIVE** with 019-A/B/C/D/E/F/G/H complete and 019-I next eligible. Bounded architecture decisions ADQ-001 through ADQ-007 are accepted; accepted whole architecture is not yet established and implementation execution is not authorized.
+Implementation readiness is **READY** for controlled downstream planning. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is **COMPLETE — PASS**. **018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE.** **Phase 019 is ACTIVE** with 019-A/B/C/D/E/F/G/H/I complete and 019-J next eligible. Bounded architecture decisions ADQ-001 through ADQ-008 are accepted; accepted whole architecture is not yet established and implementation execution is not authorized.
 
 ## Downstream boundary
 
@@ -43,17 +43,17 @@ Start from the smallest relevant family/owner. Use [Domain Vocabulary & Expectat
 This index routes; it does not restate the rule bodies owned below it.
 
 
-Current lifecycle: **PHASE 018 COMPLETE — PASS**; **PHASE 019 ACTIVE**; 019-A/B/C/D/E/F/G/H complete and 019-I next eligible.
+Current lifecycle: **PHASE 018 COMPLETE — PASS**; **PHASE 019 ACTIVE**; 019-A/B/C/D/E/F/G/H/I complete and 019-J next eligible.
 
 
 Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H COMPLETE
-019-I NEXT ELIGIBLE
-ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 ACCEPTED
-Q4R-001 / Q4R-002 / Q4R-003 COMPLETE
+019-A/B/C/D/E/F/G/H/I COMPLETE
+019-J NEXT ELIGIBLE
+ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 ACCEPTED
+Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture false
 active implementation packages 0
 implementation execution NOT AUTHORIZED
