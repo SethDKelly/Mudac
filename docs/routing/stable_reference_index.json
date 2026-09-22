@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 276,
+    "total": 294,
     "by_role": {
-      "current-authority": 134,
+      "current-authority": 152,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -23,6 +23,7 @@
       "DATA": 14,
       "DISC": 2,
       "DOC": 7,
+      "ENG": 18,
       "EVAL": 3,
       "EXPORT": 3,
       "FE": 18,
@@ -828,6 +829,114 @@
       "anchor": "doc-007",
       "role": "current-authority",
       "locator": "docs/canonical/governance/documentation-authority.md#doc-007"
+    },
+    "ENG-001": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-001"
+    },
+    "ENG-002": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-002"
+    },
+    "ENG-003": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-003"
+    },
+    "ENG-004": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-004"
+    },
+    "ENG-005": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-005"
+    },
+    "ENG-006": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-006"
+    },
+    "ENG-007": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-007"
+    },
+    "ENG-008": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-008"
+    },
+    "ENG-009": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-009"
+    },
+    "ENG-010": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-010"
+    },
+    "ENG-011": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-011"
+    },
+    "ENG-012": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-012"
+    },
+    "ENG-013": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-013"
+    },
+    "ENG-014": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-014"
+    },
+    "ENG-015": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-015"
+    },
+    "ENG-016": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-016"
+    },
+    "ENG-017": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-017",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-017"
+    },
+    "ENG-018": {
+      "owner_path": "docs/canonical/governance/downstream-realization-obligations.md",
+      "anchor": "eng-018",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/downstream-realization-obligations.md#eng-018"
     },
     "EVAL-001": {
       "owner_path": "docs/canonical/policies/evaluation-policy.md",
