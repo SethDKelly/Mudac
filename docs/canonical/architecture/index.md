@@ -6,7 +6,7 @@ This subtree preserves the architecture MUDAC selected before the latest Jackson
 
 **SUSPENDED AS A CONCEPT-DESIGN CONSTRAINT.**
 
-Concept Design is reopened through the Phase 009 realignment. Until successful Phase 017 closure and a separate downstream architecture/engineering re-entry, these documents are **candidate downstream architecture knowledge**, not current authority over product meaning.
+Jackson-aligned Concept Design closed successfully in Phase 017. These documents remain **candidate downstream architecture knowledge**, not current authority over product meaning, until an explicit downstream architecture/engineering decision adopts, revises, replaces, or retires them.
 
 The controlling rules are:
 
@@ -26,7 +26,7 @@ The controlling rules are:
 * [Front-End State, Navigation & Interaction Architecture](frontend-interaction.md)
 * [AWS Runtime, Security & Operations Architecture](aws-runtime-operations.md)
 
-## Permitted use during Phases 010–017
+## Permitted use before explicit architecture adoption
 
 Architecture material may be consulted only to:
 
@@ -37,11 +37,11 @@ Architecture material may be consulted only to:
 
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
-A successful Phase 017 closure will **not automatically reactivate** these documents. A separate downstream re-entry must compare them against the closed conceptual design and decide what remains justified.
+Phase 017 closure did **not** automatically reactivate these documents. Phase 018 now qualifies the repository and prepares architecture/engineering re-entry; candidate architecture must still be compared against the closed conceptual design and explicitly dispositioned before it gains current downstream authority.
 
 
 ## Phase-017 audit result
 
 017-F audited all nine documents in this subtree. Each now carries an explicit suspension notice at document level.
 
-The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. A future architecture process must classify, compare and explicitly adopt/revise/reject these candidates under the post-Concept-Design re-entry contract.
+The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. Phase 018-J/K or a successor architecture process must classify, compare and explicitly adopt/revise/reject these candidates under the post-Concept-Design re-entry contract.
