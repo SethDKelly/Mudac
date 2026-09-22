@@ -148,19 +148,41 @@ def main() -> int:
         phase019 = json.loads(phase019_path.read_text(encoding="utf-8"))
         completed = set(phase019["phase019_state"]["completed_subphases"])
         premature = next(
-            item
-            for item in phase019["decisions"]
-            if item["owning_subphase"] not in completed
+            (
+                item
+                for item in phase019["decisions"]
+                if item["owning_subphase"] not in completed
+            ),
+            None,
         )
-        premature["state"] = "ACCEPTED"
-        premature["accepted"] = True
-        premature["selected_option"] = "premature selection"
-        premature["decision_document"] = "unauthorized.md"
-        premature["rationale"] = "premature"
-        premature["evidence_refs"] = ["premature"]
-        premature["alternatives_evaluated"] = ["a", "b"]
-        premature["accepted_in_subphase"] = premature["owning_subphase"]
-        phase019["counts"]["decisions_accepted"] += 1
+        if premature is None:
+            # At the 019-K -> 019-L boundary all governed ADQ decisions are
+            # legitimately accepted. Reconstruct a pre-owner-completion state
+            # so this negative control continues to prove that an accepted
+            # decision cannot outrun its owning subphase.
+            premature = phase019["decisions"][-1]
+            owner = premature["owning_subphase"]
+            phase019["phase019_state"]["completed_subphases"] = [
+                sid
+                for sid in phase019["phase019_state"]["completed_subphases"]
+                if sid != owner
+            ]
+            phase019["phase019_state"]["next_eligible_subphase"] = owner
+            for subphase in phase019["subphase_plan"]:
+                if subphase["id"] == owner:
+                    subphase["status"] = "NEXT_ELIGIBLE"
+                elif subphase["id"] > owner and subphase["status"] == "NEXT_ELIGIBLE":
+                    subphase["status"] = "PLANNED"
+        else:
+            premature["state"] = "ACCEPTED"
+            premature["accepted"] = True
+            premature["selected_option"] = "premature selection"
+            premature["decision_document"] = "unauthorized.md"
+            premature["rationale"] = "premature"
+            premature["evidence_refs"] = ["premature"]
+            premature["alternatives_evaluated"] = ["a", "b"]
+            premature["accepted_in_subphase"] = premature["owning_subphase"]
+            phase019["counts"]["decisions_accepted"] += 1
         phase019_path.write_text(json.dumps(phase019, indent=2) + "\n", encoding="utf-8")
         expect_failure(
             "Phase 019 premature decision acceptance",
