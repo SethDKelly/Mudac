@@ -229,6 +229,29 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [RCV-017 — Degraded operation reduces capability rather than weakening semantics](../architecture/offline-continuity-reconciliation.md#rcv-017)
 * [RCV-018 — Continuity mechanisms remain replaceable behind the architecture contract](../architecture/offline-continuity-reconciliation.md#rcv-018)
 
+# Accepted artifact, export, publication and external delivery architecture
+
+* [ART-001 — Externalization Is Downstream of Source Authority](../architecture/artifact-export-publication-delivery.md#art-001)
+* [ART-002 — Every Durable Export Binds an Exact SourceBasis, Purpose and AudienceProfile](../architecture/artifact-export-publication-delivery.md#art-002)
+* [ART-003 — Export Identity, Artifact Identity and Storage/Delivery Locators Are Distinct](../architecture/artifact-export-publication-delivery.md#art-003)
+* [ART-004 — Durable Artifact Bytes Are Immutable and Integrity-Addressable](../architecture/artifact-export-publication-delivery.md#art-004)
+* [ART-005 — Relational Authority Owns Semantic Metadata; Large Binary Payloads Use an Object/Blob-Storage Port](../architecture/artifact-export-publication-delivery.md#art-005)
+* [ART-006 — Disclosure Validation Covers the Complete Externally Observable Artifact Surface](../architecture/artifact-export-publication-delivery.md#art-006)
+* [ART-007 — Generation, Validation, Publication and Delivery Are Distinct States](../architecture/artifact-export-publication-delivery.md#art-007)
+* [ART-008 — Artifact Generation Is Idempotent/Retryable and May Complete Asynchronously](../architecture/artifact-export-publication-delivery.md#art-008)
+* [ART-009 — Artifact Validation Is Purpose-Specific and Never Promotes Source Authority](../architecture/artifact-export-publication-delivery.md#art-009)
+* [ART-010 — Publication Is an Explicit Authoritative Release Record Bound to One Exact Representation](../architecture/artifact-export-publication-delivery.md#art-010)
+* [ART-011 — Publication Eligibility Is Evaluated Against Current Release Prerequisites](../architecture/artifact-export-publication-delivery.md#art-011)
+* [ART-012 — Source Changes Affect Representation Currentness Without Rewriting Historical Bytes or Release Records](../architecture/artifact-export-publication-delivery.md#art-012)
+* [ART-013 — Corrected or Replacement Release Uses Explicit Successor Identities](../architecture/artifact-export-publication-delivery.md#art-013)
+* [ART-014 — Withdrawal Ends Current MUDAC Distribution Authority; It Does Not Claim External Recall](../architecture/artifact-export-publication-delivery.md#art-014)
+* [ART-015 — Delivery Mechanisms Are Transport Capabilities, Not Semantic Authority](../architecture/artifact-export-publication-delivery.md#art-015)
+* [ART-016 — Private and Public Retrieval Preserve the Selected Disclosure/Release Boundary](../architecture/artifact-export-publication-delivery.md#art-016)
+* [ART-017 — MUDAC-Controlled Delivery Reflects Current Publication State Without Rewriting Possession History](../architecture/artifact-export-publication-delivery.md#art-017)
+* [ART-018 — External-Representation Provenance Is Reconstructible End-to-End](../architecture/artifact-export-publication-delivery.md#art-018)
+* [ART-019 — Retention and Deletion Preserve Referenced Historical Meaning and Remain Evidence-Bounded](../architecture/artifact-export-publication-delivery.md#art-019)
+* [ART-020 — Externalization Mechanisms Remain Replaceable Behind Application Contracts](../architecture/artifact-export-publication-delivery.md#art-020)
+
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).

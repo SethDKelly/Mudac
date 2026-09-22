@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 436,
+    "total": 456,
     "by_role": {
-      "current-authority": 294,
+      "current-authority": 314,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -16,6 +16,7 @@
       "API": 15,
       "ARCH": 8,
       "ARE": 12,
+      "ART": 20,
       "AUTH": 14,
       "AWS": 18,
       "BND": 12,
@@ -466,6 +467,126 @@
       "anchor": "are-012",
       "role": "current-authority",
       "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-012"
+    },
+    "ART-001": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-001"
+    },
+    "ART-002": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-002"
+    },
+    "ART-003": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-003"
+    },
+    "ART-004": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-004"
+    },
+    "ART-005": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-005"
+    },
+    "ART-006": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-006"
+    },
+    "ART-007": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-007"
+    },
+    "ART-008": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-008"
+    },
+    "ART-009": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-009"
+    },
+    "ART-010": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-010"
+    },
+    "ART-011": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-011"
+    },
+    "ART-012": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-012"
+    },
+    "ART-013": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-013"
+    },
+    "ART-014": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-014"
+    },
+    "ART-015": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-015"
+    },
+    "ART-016": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-016"
+    },
+    "ART-017": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-017",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-017"
+    },
+    "ART-018": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-018",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-018"
+    },
+    "ART-019": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-019",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-019"
+    },
+    "ART-020": {
+      "owner_path": "docs/canonical/architecture/artifact-export-publication-delivery.md",
+      "anchor": "art-020",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/artifact-export-publication-delivery.md#art-020"
     },
     "AUTH-001": {
       "owner_path": "docs/canonical/architecture/identity-access-session.md",
