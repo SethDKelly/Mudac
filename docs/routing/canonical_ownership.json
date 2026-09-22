@@ -47,6 +47,7 @@
     "fail_closed_on_missing_or_ambiguous_owner": true
   },
   "current_owner_paths": [
+    "docs/canonical/architecture/application-ownership-boundaries.md",
     "docs/canonical/architecture/architecture-drivers.md"
   ]
 }
