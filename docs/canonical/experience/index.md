@@ -29,4 +29,4 @@ Historical evidence does not override the current owners above.
 
 Experience maps current semantic meaning into user-visible actions, disclosure, feedback, recovery, and explanation. It does not create independent domain authority or prescribe a specific frontend framework/navigation topology.
 
-For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure repository qualification, use [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/).
