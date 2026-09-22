@@ -21,4 +21,4 @@ Dependence is distinct from:
 
 Coherent but unadopted contractions remain future-scope candidates rather than unfinished PF-01 work.
 
-For current methodology status and closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/).
+For Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure repository qualification, use [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/).
