@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 294,
+    "total": 306,
     "by_role": {
-      "current-authority": 152,
+      "current-authority": 164,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -14,6 +14,7 @@
       "AGT": 16,
       "API": 15,
       "ARCH": 8,
+      "ARE": 12,
       "AUTH": 14,
       "AWS": 18,
       "CHG": 5,
@@ -289,6 +290,78 @@
       "anchor": "arch-008",
       "role": "downstream-candidate",
       "locator": "docs/canonical/architecture/architectural-foundation.md#arch-008"
+    },
+    "ARE-001": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-001"
+    },
+    "ARE-002": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-002"
+    },
+    "ARE-003": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-003"
+    },
+    "ARE-004": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-004"
+    },
+    "ARE-005": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-005"
+    },
+    "ARE-006": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-006"
+    },
+    "ARE-007": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-007"
+    },
+    "ARE-008": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-008"
+    },
+    "ARE-009": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-009"
+    },
+    "ARE-010": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-010"
+    },
+    "ARE-011": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-011"
+    },
+    "ARE-012": {
+      "owner_path": "docs/canonical/governance/architecture-reentry-evaluation.md",
+      "anchor": "are-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-reentry-evaluation.md#are-012"
     },
     "AUTH-001": {
       "owner_path": "docs/canonical/architecture/identity-access-session.md",
