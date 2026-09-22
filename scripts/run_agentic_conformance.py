@@ -17,6 +17,7 @@ CHECKS = (
     ("portable skills and tool adapters", "scripts/validate_agent_workflows.py", ("--repo", "{repo}")),
     ("status mirror drift", "scripts/validate_status_mirrors.py", ("--repo", "{repo}")),
     ("stable-resolution behavior", "scripts/validate_resolution_smoke.py", ("--repo", "{repo}")),
+    ("downstream candidate qualification", "scripts/validate_candidate_qualification.py", ("--repo", "{repo}")),
     ("agentic/authority secret scan", "scripts/scan_agentic_secrets.py", ("--repo", "{repo}")),
 )
 
