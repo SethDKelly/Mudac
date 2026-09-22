@@ -1,6 +1,6 @@
 # Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry
 
-**Status:** IN PROGRESS — 018-A/B/C/D/E/F/G/H/I COMPLETE / 018-J NEXT
+**Status:** IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J COMPLETE / 018-K NEXT
 
 ## Purpose
 
@@ -136,11 +136,13 @@ Turn Phase-017 carry-forwards and realization obligations into a controlled engi
 
 ### 018-J — Historical Architecture & Implementation Candidate Qualification Under Q1–Q6
 
-**Status: NEXT.**
-
 Evaluate retained 006/008 architecture, implementation, scaffold and tooling artifacts as candidates/evidence only. Classify each as retain, adapt, revalidate, replace, retire or defer under the post-Concept-Design re-entry contract.
 
+**Status: COMPLETE — PASS.**
+
 ### 018-K — Architecture Decision Questions, Constraints, Evaluation Evidence & Re-entry Decomposition
+
+**Status: NEXT.**
 
 Define the actual architecture questions that must be decided, candidate-comparison evidence, decision boundaries and a dependency-safe architecture/engineering re-entry program.
 
