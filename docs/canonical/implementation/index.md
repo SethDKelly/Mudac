@@ -6,7 +6,7 @@ This subtree preserves MUDAC implementation/tooling decisions and planning produ
 
 **DOMAIN IMPLEMENTATION AUTHORITY AND IMPLEMENTATION PLANNING ARE SUSPENDED.**
 
-Jackson-aligned Concept Design is closed. No new MUDAC domain implementation is authorized; Phase 018 is complete and Phase 019 architecture/engineering re-entry is authorized to begin at 019-A. The historical Phase 008 queue remains halted after 008-E.
+Jackson-aligned Concept Design is closed. No new MUDAC domain implementation is authorized; Phase 018 is complete and Phase 019 architecture/engineering re-entry is ACTIVE through 019-D, with 019-E next eligible. The historical Phase 008 queue remains halted after 008-E.
 
 The controlling current owners are:
 
@@ -21,7 +21,7 @@ Current posture:
 Jackson Concept Design: CLOSED — PHASE 017 PASS
 PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE — 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE
+PHASE 019 ACTIVE — 019-A/B/C/D COMPLETE / 019-E NEXT ELIGIBLE
 implementation readiness: READY FOR POST-CLOSURE PREPARATION
 implementation program framework: DEFINED / PRE-ARCHITECTURE
 active implementation packages: 0
@@ -72,9 +72,9 @@ Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A/B/C COMPLETE
-019-D NEXT ELIGIBLE
-ADQ-001 / ADQ-002 ACCEPTED
+019-A/B/C/D COMPLETE
+019-E NEXT ELIGIBLE
+ADQ-001 / ADQ-002 / ADQ-003 ACCEPTED
 Q4R-001 COMPLETE
 accepted whole architecture false
 active implementation packages 0
