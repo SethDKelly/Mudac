@@ -4,13 +4,14 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 322,
+    "total": 338,
     "by_role": {
-      "current-authority": 180,
+      "current-authority": 196,
       "downstream-candidate": 142
     },
     "by_family": {
       "ACC": 2,
+      "ADA": 16,
       "AGT": 16,
       "API": 15,
       "ARCH": 8,
@@ -57,6 +58,102 @@
       "anchor": "acc-002",
       "role": "current-authority",
       "locator": "docs/canonical/concepts/access.md#acc-002"
+    },
+    "ADA-001": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-001"
+    },
+    "ADA-002": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-002"
+    },
+    "ADA-003": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-003"
+    },
+    "ADA-004": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-004"
+    },
+    "ADA-005": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-005"
+    },
+    "ADA-006": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-006"
+    },
+    "ADA-007": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-007"
+    },
+    "ADA-008": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-008"
+    },
+    "ADA-009": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-009"
+    },
+    "ADA-010": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-010"
+    },
+    "ADA-011": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-011"
+    },
+    "ADA-012": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-012"
+    },
+    "ADA-013": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-013"
+    },
+    "ADA-014": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-014"
+    },
+    "ADA-015": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-015"
+    },
+    "ADA-016": {
+      "owner_path": "docs/canonical/governance/architecture-decision-authority.md",
+      "anchor": "ada-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/architecture-decision-authority.md#ada-016"
     },
     "AGT-001": {
       "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
