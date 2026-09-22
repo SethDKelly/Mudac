@@ -38,11 +38,12 @@ The current product/application variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-## Active post-closure qualification
+## Active architecture/engineering re-entry
 
-- [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **PHASE 018 COMPLETE — PASS; 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE; PHASE 019 AUTHORIZED**.
+- [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **COMPLETE — PASS**; closed qualification baseline.
+- [Phase 019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/) — **ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE**.
 
-Phase 018 qualifies repository/documentation/agentic/architecture-reentry readiness without beginning domain implementation.
+Phase 018 qualified repository/documentation/agentic readiness. Phase 019 is now the active architecture decision program. Domain implementation remains unauthorized.
 
 ## Downstream candidate knowledge
 
@@ -70,6 +71,7 @@ For the reopened completion runway, use the phase indexes:
 - [016 — Scenario / Misfit Validation](016-scenario-misfit-exception-failure-adversarial-design-validation/)
 - [017 — Methodology Closure](017-methodology-closure-canonical-consolidation-completion-decision/)
 - [018 — Pre-Implementation Repository Qualification](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/)
+- [019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/)
 
 ## Retrieval rule
 
