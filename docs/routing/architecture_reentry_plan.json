@@ -1,0 +1,699 @@
+{
+  "schema_version": "1.0",
+  "authority": "PRE-SELECTION ARCHITECTURE PLANNING EVIDENCE ONLY — DOES NOT SELECT OR ACCEPT ARCHITECTURE",
+  "governing_contract": "docs/canonical/governance/architecture-reentry-evaluation.md",
+  "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
+  "candidate_qualification": "docs/routing/downstream_candidate_qualification.json",
+  "phase_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-K-architecture-decision-questions-constraints-evaluation-evidence-reentry-decomposition.md",
+  "state": {
+    "framework_state": "PRE_SELECTION",
+    "accepted_architecture_established": false,
+    "implementation_execution_authorized": false,
+    "selected_question_count": 0,
+    "question_count": 10
+  },
+  "evidence_dimensions": [
+    "semantic_authority_fit",
+    "cross_owner_coupling",
+    "failure_retry_uncertainty_recovery",
+    "security_privacy_disclosure",
+    "accessibility_degraded_parity",
+    "operational_availability_observability",
+    "workload_performance_scaling",
+    "cost_organizational_operability",
+    "reversibility_migration_lock_in",
+    "phase_016_scenario_impact",
+    "existing_substrate_reuse_cost"
+  ],
+  "evidence_classes": [
+    "DOCUMENTATION_REASONING",
+    "EXTERNAL_VENDOR_FACT",
+    "BOUNDED_TECHNICAL_PROBE",
+    "EXECUTABLE_INTEGRATION_EVIDENCE",
+    "PRODUCTION_EVIDENCE"
+  ],
+  "questions": [
+    {
+      "id": "ADQ-001",
+      "title": "Architecture Drivers, Quality Attributes, Workload Assumptions & Trust Boundaries",
+      "kind": "FOUNDATION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [],
+      "constraints": [
+        "ENG-001",
+        "ENG-011",
+        "ENG-012",
+        "ENG-013",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/architectural-foundation.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/architectural-foundation.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [],
+      "scope": "Establish the current architecture drivers, quality priorities, live-event workload assumptions, trust boundaries, availability/recovery expectations, operational constraints and evidence thresholds that every later architecture choice must use.",
+      "evidence_focus": [
+        "current semantic trace",
+        "event-day workload and failure shape",
+        "quality attribute priorities",
+        "security/disclosure boundaries",
+        "accessibility/degraded obligations",
+        "operability/cost constraints",
+        "reversibility expectations"
+      ],
+      "scenario_seeds": [
+        "unknown/degraded result",
+        "adversarial request volume",
+        "conflicting legitimate authority"
+      ],
+      "deferrals": [
+        "exact technology selection",
+        "implementation package structure",
+        "production SLO proof"
+      ]
+    },
+    {
+      "id": "ADQ-002",
+      "title": "Application Ownership, Decomposition & Dependency Topology",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-001"
+      ],
+      "constraints": [
+        "ENG-001",
+        "ENG-004",
+        "ENG-009",
+        "ENG-011",
+        "ENG-017",
+        "INV-004",
+        "INV-005",
+        "INV-006"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/application-boundaries.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/application-boundaries.md": "REVISION_REQUIRED_BEFORE_COMPARISON"
+      },
+      "alternative_classes": [
+        "ownership-preserving modular monolith",
+        "ownership-preserving simpler monolith/package topology",
+        "selectively distributed services where boundary evidence justifies operational cost"
+      ],
+      "scope": "Decide how semantic ownership maps to application boundaries, coordination boundaries and deployment-evolution seams without copying the historical module map.",
+      "evidence_focus": [
+        "current Concept ownership map",
+        "cross-owner workflow pressure",
+        "coupling analysis",
+        "change isolation",
+        "deployment independence need",
+        "operational complexity",
+        "migration/reversibility"
+      ],
+      "scenario_seeds": [
+        "conflicting legitimate authority",
+        "partial bulk result",
+        "post-finalization correction"
+      ],
+      "deferrals": [
+        "exact workspace/package names",
+        "deployment provider",
+        "framework choice"
+      ]
+    },
+    {
+      "id": "ADQ-003",
+      "title": "Authoritative Persistence, History, Provenance & Projection Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-001",
+        "ADQ-002"
+      ],
+      "constraints": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-009",
+        "ENG-010",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-003",
+        "INV-005",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/data-persistence.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/data-persistence.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [
+        "relational authority store with explicit history/projection separation",
+        "provider-neutral relational or hybrid persistence with owner-scoped storage",
+        "event/log-oriented or hybrid history model only if current/history and query obligations justify it"
+      ],
+      "scope": "Decide durable authority storage, current/history representation, Provenance, correction lineage, projection/read-model strategy and migration/recovery posture.",
+      "evidence_focus": [
+        "history reconstructibility",
+        "transactional integrity",
+        "projection non-authority",
+        "migration complexity",
+        "restore/recovery",
+        "retention adaptability",
+        "operational burden"
+      ],
+      "scenario_seeds": [
+        "post-finalization correction",
+        "affected Outcome Declaration with same visible winner",
+        "stale Export after source correction"
+      ],
+      "deferrals": [
+        "exact ORM/query builder",
+        "exact migration tool",
+        "jurisdiction-specific retention period"
+      ]
+    },
+    {
+      "id": "ADQ-004",
+      "title": "Identity, Authentication, Participation, Access & Session Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-001",
+        "ADQ-002"
+      ],
+      "constraints": [
+        "ENG-004",
+        "ENG-011",
+        "ENG-012",
+        "ENG-015",
+        "ENG-017",
+        "ACC-001",
+        "ACC-002",
+        "DISC-002",
+        "INV-004",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/identity-access-session.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/identity-access-session.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [
+        "external identity provider plus first-party application session and current Access evaluation",
+        "provider-neutral OIDC/SAML compatible identity with server-controlled session boundary",
+        "managed authentication/session alternative preserving MUDAC-owned Identity Participation and Access"
+      ],
+      "scope": "Decide principal authentication, provider linkage, application session, reverification, compromised-device response and current Access enforcement without transferring Competition authority to the provider.",
+      "evidence_focus": [
+        "authority separation",
+        "shared-device safety",
+        "revocation/currentness",
+        "provider portability",
+        "security and operational burden",
+        "reverification UX",
+        "auditability"
+      ],
+      "scenario_seeds": [
+        "shared-device context handoff",
+        "stale Participation/Access/session state",
+        "adversarial request volume"
+      ],
+      "deferrals": [
+        "specific provider configuration",
+        "final secret-management implementation",
+        "organization SSO features outside PF-01"
+      ]
+    },
+    {
+      "id": "ADQ-005",
+      "title": "Application Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-002",
+        "ADQ-003",
+        "ADQ-004"
+      ],
+      "constraints": [
+        "ENG-005",
+        "ENG-007",
+        "ENG-009",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "INV-002",
+        "INV-003",
+        "INV-005",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/commands-api-concurrency.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/commands-api-concurrency.md": "REVISION_REQUIRED_BEFORE_COMPARISON"
+      },
+      "alternative_classes": [
+        "versioned request/response command-query interface with optimistic concurrency and durable idempotency",
+        "resource-oriented interface with explicit revision/current-state preconditions and reconciliation",
+        "mixed synchronous/asynchronous command handling where high-consequence uncertainty and workload justify it"
+      ],
+      "scope": "Decide application interface contracts and authoritative transaction/concurrency semantics, including stale intent, lost responses, retries, idempotency, partial results and unknown outcomes.",
+      "evidence_focus": [
+        "logical action identity",
+        "transaction boundaries",
+        "current-state validation",
+        "contention shape",
+        "failure semantics",
+        "client reconciliation",
+        "operational complexity"
+      ],
+      "scenario_seeds": [
+        "lost-response retry after consequential authoritative action",
+        "concurrent/repeated legitimate intent",
+        "partial bulk result",
+        "unknown/degraded result"
+      ],
+      "deferrals": [
+        "exact web framework",
+        "generated client tooling",
+        "transport serialization library"
+      ]
+    },
+    {
+      "id": "ADQ-006",
+      "title": "Offline Draft, Multi-device, Degraded & Paper Recovery Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-003",
+        "ADQ-004",
+        "ADQ-005"
+      ],
+      "constraints": [
+        "ENG-005",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017",
+        "INV-002",
+        "INV-008",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/synchronization-recovery.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/synchronization-recovery.md": "REVISION_REQUIRED_BEFORE_COMPARISON"
+      },
+      "alternative_classes": [
+        "bounded local Draft persistence with revision-aware reconciliation",
+        "minimal offline digital continuity with server-authoritative reconnection and paper fallback",
+        "richer local-first Draft synchronization only where conflict semantics remain safely bounded"
+      ],
+      "scope": "Decide how non-authoritative local work survives disconnects, multiple devices, context changes and paper continuity while converging to one logical evaluation.",
+      "evidence_focus": [
+        "conflict semantics",
+        "privacy on shared/lost devices",
+        "reconnect authority checks",
+        "data loss risk",
+        "operational complexity",
+        "browser capability fit",
+        "paper parity"
+      ],
+      "scenario_seeds": [
+        "duplicate/offline Draft convergence",
+        "shared-device context handoff",
+        "paper/electronic capture disagreement",
+        "unknown/degraded result"
+      ],
+      "deferrals": [
+        "exact browser storage API",
+        "background sync library",
+        "device-management product features"
+      ]
+    },
+    {
+      "id": "ADQ-007",
+      "title": "Artifact, Export, Publication & External Delivery Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-003",
+        "ADQ-005"
+      ],
+      "constraints": [
+        "ENG-006",
+        "ENG-010",
+        "ENG-011",
+        "ENG-014",
+        "ENG-015",
+        "ENG-017",
+        "EXPORT-001",
+        "EXPORT-002",
+        "EXPORT-003",
+        "PUB-001",
+        "INV-005",
+        "INV-007"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/external-representation.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/external-representation.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [
+        "immutable generated artifact store with authoritative relational metadata and explicit Publication",
+        "on-demand generation plus retained authoritative release records",
+        "hybrid retained-artifact model based on representation purpose and historical fidelity needs"
+      ],
+      "scope": "Decide binary/artifact storage, generation, validation, Publication, delivery and stale-copy/withdrawal behavior while preserving source authority and currentness.",
+      "evidence_focus": [
+        "source-basis traceability",
+        "artifact immutability needs",
+        "disclosure boundary",
+        "generation/retry model",
+        "distribution currentness",
+        "cost/storage",
+        "external possession limits"
+      ],
+      "scenario_seeds": [
+        "stale Export after source correction",
+        "withdrawn Publication while external copies remain",
+        "post-finalization correction"
+      ],
+      "deferrals": [
+        "specific object-store vendor",
+        "print vendor integration",
+        "rich public browsing portal"
+      ]
+    },
+    {
+      "id": "ADQ-008",
+      "title": "Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-004",
+        "ADQ-005",
+        "ADQ-006",
+        "ADQ-007"
+      ],
+      "constraints": [
+        "ENG-004",
+        "ENG-007",
+        "ENG-008",
+        "ENG-011",
+        "ENG-012",
+        "ENG-014",
+        "ENG-017",
+        "ACC-001",
+        "DISC-002",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/frontend-interaction.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/frontend-interaction.md": "REVISION_REQUIRED_BEFORE_COMPARISON"
+      },
+      "alternative_classes": [
+        "SPA/client-rich browser architecture with explicit server-authority and cache boundaries",
+        "server-rendered or progressively enhanced browser architecture with bounded client state",
+        "hybrid browser architecture selected by live-event interaction and offline continuity needs"
+      ],
+      "scope": "Decide browser application composition, remote/local state partition, navigation/context isolation, responsive behavior and accessibility/degraded architecture using current Phase-013 Experience authority.",
+      "evidence_focus": [
+        "phone-primary judging",
+        "organizer density",
+        "accessibility parity",
+        "state leakage risk",
+        "offline requirements",
+        "complexity/performance",
+        "error/recovery UX"
+      ],
+      "scenario_seeds": [
+        "shared-device context handoff",
+        "duplicate/offline Draft convergence",
+        "unknown/degraded result"
+      ],
+      "deferrals": [
+        "exact component library",
+        "visual design system implementation",
+        "specific query/router package"
+      ]
+    },
+    {
+      "id": "ADQ-009",
+      "title": "Runtime Platform, Deployment, Availability, Observability & Disaster-Recovery Architecture",
+      "kind": "DECISION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-001",
+        "ADQ-002",
+        "ADQ-003",
+        "ADQ-004",
+        "ADQ-005",
+        "ADQ-006",
+        "ADQ-007",
+        "ADQ-008"
+      ],
+      "constraints": [
+        "ENG-011",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/aws-runtime-operations.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/aws-runtime-operations.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [
+        "historical AWS managed-container/data-service architecture",
+        "alternative managed cloud/container or serverless architecture preserving authority/recovery requirements",
+        "simpler managed runtime topology if event scale and recovery evidence show lower complexity is sufficient"
+      ],
+      "scope": "Decide deployment/runtime platform, network/trust placement, availability strategy, worker/asynchronous runtime, observability, backup/restore and regional recovery with cost and operational evidence.",
+      "evidence_focus": [
+        "event-day continuity",
+        "recovery objectives",
+        "restore testing",
+        "security boundaries",
+        "operational staffing",
+        "cost profile",
+        "vendor lock-in",
+        "scaling behavior"
+      ],
+      "scenario_seeds": [
+        "adversarial request volume",
+        "unknown/degraded result",
+        "lost-response retry after consequential authoritative action"
+      ],
+      "deferrals": [
+        "production capacity numbers until workload evidence exists",
+        "jurisdiction-specific data residency if not yet established"
+      ]
+    },
+    {
+      "id": "ADQ-010",
+      "title": "Whole-Architecture Integration, Security, Failure, Performance, Cost & Reversibility Reconciliation",
+      "kind": "VALIDATION",
+      "status": "PLANNED",
+      "selected_option": null,
+      "dependencies": [
+        "ADQ-002",
+        "ADQ-003",
+        "ADQ-004",
+        "ADQ-005",
+        "ADQ-006",
+        "ADQ-007",
+        "ADQ-008",
+        "ADQ-009"
+      ],
+      "constraints": [
+        "ENG-001",
+        "ENG-004",
+        "ENG-005",
+        "ENG-006",
+        "ENG-007",
+        "ENG-008",
+        "ENG-009",
+        "ENG-010",
+        "ENG-011",
+        "ENG-012",
+        "ENG-013",
+        "ENG-014",
+        "ENG-015",
+        "ENG-016",
+        "ENG-017",
+        "INV-001",
+        "INV-002",
+        "INV-003",
+        "INV-004",
+        "INV-005",
+        "INV-006",
+        "INV-007",
+        "INV-008",
+        "INV-009",
+        "INV-010"
+      ],
+      "candidate_inputs": [
+        "docs/canonical/architecture/architectural-foundation.md"
+      ],
+      "candidate_handling": {
+        "docs/canonical/architecture/architectural-foundation.md": "COMPARISON_INPUT"
+      },
+      "alternative_classes": [],
+      "scope": "Reconcile the selected decision set as one architecture, replay semantic/failure scenarios, inspect cross-owner coupling and derived-authority leakage, assess security/accessibility/recovery/performance/cost/reversibility, and determine whether accepted current architecture authority may be created.",
+      "evidence_focus": [
+        "whole-system scenario replay",
+        "cross-decision contradictions",
+        "threat boundaries",
+        "failure propagation",
+        "recovery composition",
+        "performance bottlenecks",
+        "cost/operability",
+        "migration/reversibility",
+        "residual risk"
+      ],
+      "scenario_seeds": [
+        "lost-response retry after consequential authoritative action",
+        "duplicate/offline Draft convergence",
+        "shared-device context handoff",
+        "stale Participation/Access/session state",
+        "paper/electronic capture disagreement",
+        "post-finalization correction",
+        "affected Outcome Declaration with same visible winner",
+        "exceptional no-result closeout",
+        "stale Export after source correction",
+        "withdrawn Publication while external copies remain",
+        "concurrent/repeated legitimate intent",
+        "partial bulk result",
+        "unknown/degraded result",
+        "adversarial request volume",
+        "conflicting legitimate authority"
+      ],
+      "deferrals": [
+        "implementation package execution",
+        "production proof"
+      ]
+    }
+  ],
+  "reentry_program": {
+    "proposed_phase": "019 — Architecture & Engineering Re-entry",
+    "authorization_state": "PLANNED_NOT_AUTHORIZED_BY_018_K_ALONE",
+    "subphases": [
+      {
+        "id": "019-A",
+        "title": "Architecture Re-entry Start Gate, Authority, Current Baseline & Decision-Evidence Model",
+        "questions": [
+          "ADQ-001"
+        ]
+      },
+      {
+        "id": "019-B",
+        "title": "Architecture Drivers, Quality Attributes, Workload, Trust Boundary & Constraint Qualification",
+        "questions": [
+          "ADQ-001"
+        ]
+      },
+      {
+        "id": "019-C",
+        "title": "Application Ownership, Boundary, Coordination & Dependency Architecture",
+        "questions": [
+          "ADQ-002"
+        ]
+      },
+      {
+        "id": "019-D",
+        "title": "Persistence, History, Provenance, Projection, Migration & Recovery Architecture",
+        "questions": [
+          "ADQ-003"
+        ]
+      },
+      {
+        "id": "019-E",
+        "title": "Identity, Authentication, Participation, Access, Session & Technical-Authority Architecture",
+        "questions": [
+          "ADQ-004"
+        ]
+      },
+      {
+        "id": "019-F",
+        "title": "Interface, Command/Query, Transaction, Concurrency, Retry & Idempotency Architecture",
+        "questions": [
+          "ADQ-005"
+        ]
+      },
+      {
+        "id": "019-G",
+        "title": "Offline Draft, Multi-device, Degraded, Paper & Reconciliation Architecture",
+        "questions": [
+          "ADQ-006"
+        ]
+      },
+      {
+        "id": "019-H",
+        "title": "Artifact, Export, Publication, External Representation & Delivery Architecture",
+        "questions": [
+          "ADQ-007"
+        ]
+      },
+      {
+        "id": "019-I",
+        "title": "Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture",
+        "questions": [
+          "ADQ-008"
+        ]
+      },
+      {
+        "id": "019-J",
+        "title": "Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture",
+        "questions": [
+          "ADQ-009"
+        ]
+      },
+      {
+        "id": "019-K",
+        "title": "Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation",
+        "questions": [
+          "ADQ-010"
+        ]
+      },
+      {
+        "id": "019-L",
+        "title": "Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff",
+        "questions": [
+          "ADQ-010"
+        ]
+      }
+    ]
+  }
+}
