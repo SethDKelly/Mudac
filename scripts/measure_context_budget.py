@@ -71,8 +71,8 @@ def main() -> int:
                 limit = limits["knowledge_concept_each"]
             add_measurement(measurements, rel, path, limit)
 
-    claude = repo / ".claude" / "CLAUDE.md"
-    add_measurement(measurements, ".claude/CLAUDE.md", claude, limits["claude_md"])
+    claude = repo / "CLAUDE.md"
+    add_measurement(measurements, "CLAUDE.md", claude, limits["claude_md"])
 
     cursor_rules = sorted((repo / ".cursor" / "rules").glob("*.mdc"))
     cursor_total = sum(max(size(path), 0) for path in cursor_rules)

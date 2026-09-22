@@ -53,7 +53,7 @@ The skill may not convert a human-selected task into autonomous next-work select
 <a id="wfl-004"></a>
 ## WFL-004 — Provider adapters are thin routing bridges
 
-Cursor rules, Claude bridge files and any future provider-specific files may point to:
+Cursor rules, the root Claude import bridge, Claude command bridges and any future provider-specific files may point to:
 
 - AGENTS.md;
 - the canonical workflow skill;
@@ -161,6 +161,6 @@ Current repository targets are:
 
 - **Codex:** root AGENTS.md plus project .agents/skills; no CODEX.md duplicate;
 - **Cursor:** root AGENTS.md plus project .agents/skills, with one optional relevance-selected routing rule;
-- **Claude Code:** thin .claude/CLAUDE.md bridge plus .claude/commands references to canonical .agents/skills.
+- **Claude Code:** tiny root CLAUDE.md import bridge to AGENTS.md plus .claude/commands references to canonical .agents/skills.
 
 Provider mechanics may evolve. WFL-011 requires support claims to track actual evidence rather than assumption.

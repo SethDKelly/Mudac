@@ -39,21 +39,62 @@
       "workflow_mechanism": "project .agents/skills",
       "repository_configuration_status": "documented-provider-mechanism",
       "runtime_status": "not-smoke-verified-by-repository",
-      "duplicate_semantic_adapter": "none"
+      "duplicate_semantic_adapter": "none",
+      "evidence": [
+        {
+          "kind": "provider-documentation",
+          "subject": "AGENTS.md project instructions",
+          "url": "https://developers.openai.com/docs/agent-configuration/agents-md",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": ".agents/skills project skills",
+          "url": "https://developers.openai.com/docs/build-skills",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     "cursor": {
       "instruction_mechanism": "root AGENTS.md plus optional relevance-selected .cursor/rules/00-mudac-routing.mdc",
       "workflow_mechanism": "project .agents/skills",
       "repository_configuration_status": "documented-provider-mechanism",
       "runtime_status": "not-smoke-verified-by-repository",
-      "duplicate_semantic_adapter": "none"
+      "duplicate_semantic_adapter": "none",
+      "evidence": [
+        {
+          "kind": "provider-documentation",
+          "subject": "AGENTS.md and project rules",
+          "url": "https://cursor.com/docs/rules",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": ".agents/skills project skills",
+          "url": "https://cursor.com/docs/skills",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     "claude_code": {
-      "instruction_mechanism": ".claude/CLAUDE.md thin bridge to ../AGENTS.md",
+      "instruction_mechanism": "root CLAUDE.md imports AGENTS.md",
       "workflow_mechanism": ".claude/commands thin bridges to project .agents/skills",
-      "repository_configuration_status": "static-adapter-configured",
+      "repository_configuration_status": "documented-instruction-plus-static-workflow-bridge",
       "runtime_status": "not-smoke-verified-by-repository",
-      "duplicate_semantic_adapter": "none"
+      "duplicate_semantic_adapter": "none",
+      "evidence": [
+        {
+          "kind": "provider-documentation",
+          "subject": "root CLAUDE.md project memory and @ imports",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "kind": "repository-static",
+          "subject": ".claude/commands bridge files point to canonical .agents/skills",
+          "checked_at": "2026-09-22"
+        }
+      ]
     }
   },
   "evidence_notes": [

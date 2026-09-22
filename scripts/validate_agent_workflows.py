@@ -121,17 +121,17 @@ def main() -> int:
             if duplicate.exists():
                 errors.append(f"duplicate workflow source: {duplicate.relative_to(repo)}")
 
-    claude_path = repo / ".claude" / "CLAUDE.md"
+    claude_path = repo / "CLAUDE.md"
     if not claude_path.is_file():
-        errors.append("missing .claude/CLAUDE.md")
+        errors.append("missing root CLAUDE.md")
     else:
         text = claude_path.read_text(encoding="utf-8")
-        if "@../AGENTS.md" not in text:
-            errors.append(".claude/CLAUDE.md must import ../AGENTS.md")
+        if "@AGENTS.md" not in text:
+            errors.append("CLAUDE.md must import AGENTS.md")
         if ".agents/skills/" not in text:
-            errors.append(".claude/CLAUDE.md must route to .agents/skills")
+            errors.append("CLAUDE.md must route to .agents/skills")
         if len(text.encode("utf-8")) > int(budget["hard_limits"]["claude_md"]):
-            errors.append(".claude/CLAUDE.md exceeds adapter budget")
+            errors.append("CLAUDE.md exceeds adapter budget")
 
     cursor = repo / ".cursor" / "rules" / "00-mudac-routing.mdc"
     if not cursor.is_file():
