@@ -18,7 +18,7 @@ Keep the authority boundary among Concept Design, historical downstream work, fu
 
 # Current state
 
-Phase 017 successfully closed Jackson-aligned Concept Design. Phase 018 subsequently qualified the repository and is now complete; Phase 019 architecture/engineering re-entry is authorized to begin at 019-A.
+Phase 017 successfully closed Jackson-aligned Concept Design. Phase 018 subsequently qualified the repository and is now complete; Phase 019 architecture/engineering re-entry is active; 019-A is complete and 019-B is next eligible.
 
 ~~~text
 Jackson Concept Design              CLOSED
@@ -30,7 +30,7 @@ production readiness                NOT ESTABLISHED
 historical architecture candidates  SUSPENDED / QUARANTINED
 accepted new architecture           NOT ESTABLISHED
 Phase 018                          COMPLETE — PASS
-Phase 019                          AUTHORIZED — 019-A NEXT ELIGIBLE
+Phase 019                          ACTIVE — 019-A COMPLETE / 019-B NEXT ELIGIBLE
 architecture evaluation framework   DEFINED / PRE-SELECTION
 accepted architecture               NOT ESTABLISHED
 implementation-program framework    DEFINED / PRE-ARCHITECTURE
