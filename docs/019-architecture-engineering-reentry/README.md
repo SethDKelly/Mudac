@@ -64,8 +64,6 @@ Resolve ADQ-003.
 
 Accepted IAM-001..018: managed external authentication behind an adapter, stable MUDAC Identity linkage, Competition-scoped Participation, contextual Access, opaque first-party server sessions and technical-authority separation.
 
-Resolve ADQ-004.
-
 ### 019-F — Interfaces / Transactions / Concurrency / Retry / Idempotency
 
 **NEXT ELIGIBLE.**
