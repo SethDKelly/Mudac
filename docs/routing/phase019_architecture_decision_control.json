@@ -48,9 +48,10 @@
       "019-F",
       "019-G",
       "019-H",
-      "019-I"
+      "019-I",
+      "019-J"
     ],
-    "next_eligible_subphase": "019-J",
+    "next_eligible_subphase": "019-K",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -137,7 +138,7 @@
       "questions": [
         "ADQ-009"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-K",
@@ -145,7 +146,7 @@
       "questions": [
         "ADQ-010"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "019-L",
@@ -905,11 +906,17 @@
       "question_id": "ADQ-009",
       "title": "Runtime Platform, Deployment, Availability, Observability & Disaster-Recovery Architecture",
       "owning_subphase": "019-J",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "Revised AWS managed-container/data-service topology: single-active us-east-2 Multi-AZ production with cold us-east-1 recovery; CloudFront/WAF private-origin edge; ECS/Fargate API plus bounded workers; RDS PostgreSQL Multi-AZ DB instance; Cognito User Pools; private/versioned S3; SQS; resilient private networking; OIDC-federated deployment; CloudWatch/OpenTelemetry observability; tested backup/recovery; proportional cost (RUN-001..RUN-026)",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-J-runtime-platform-security-deployment-availability-observability-disaster-recovery-architecture.md",
+      "alternatives_evaluated": [
+        "Historical AWS managed-container/data-service architecture unchanged",
+        "Revised AWS managed-container/data-service topology",
+        "AWS serverless-first API and workers",
+        "Kubernetes/EKS runtime platform",
+        "Simpler single-instance/PaaS-style managed runtime"
+      ],
       "constraint_refs": [
         "ENG-011",
         "ENG-013",
@@ -921,20 +928,75 @@
       "candidate_inputs": [
         "docs/canonical/architecture/aws-runtime-operations.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/canonical/architecture/runtime-platform-operations.md",
+        "docs/canonical/architecture/aws-runtime-operations.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/architecture/offline-continuity-reconciliation.md",
+        "docs/canonical/architecture/artifact-export-publication-delivery.md",
+        "docs/canonical/architecture/browser-client-interaction.md",
+        "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-vpc-origins.html",
+        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html",
+        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html",
+        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-requirements.html",
+        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-identity-provider.html",
+        "https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING",
+        "EXTERNAL_VENDOR_FACT"
+      ],
       "scenario_seeds": [
         "adversarial request volume",
         "unknown/degraded result",
         "lost-response retry after consequential authoritative action"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-02",
+        "ERI-07",
+        "ERI-08",
+        "ERI-09",
+        "ERI-10"
+      ],
+      "rationale": "Current accepted architecture maps cleanly to a managed AWS container/relational/object/queue topology. External provider evidence confirms the selected private-edge, ECS/Fargate, RDS Multi-AZ, cross-Region backup, Cognito federation and OIDC-deployment capabilities. The revised topology preserves event continuity and cold regional recovery without importing unjustified active-active, Kubernetes, cache or database complexity.",
+      "rejected_alternatives": [
+        "Historical AWS candidate unchanged — strong baseline but contains stale authority references, a fixed backup-retention value without current recovery/retention objectives, and obsolete over-specific egress/observability assumptions.",
+        "Serverless-first AWS — introduces relational/session/runtime complexity and decomposition pressure without demonstrated need.",
+        "Kubernetes/EKS — operational burden exceeds current scale, team and isolation evidence.",
+        "Simpler single-instance/PaaS runtime — insufficiently aligned with explicit cross-AZ event-continuity and controlled recovery posture."
+      ],
+      "reversibility_migration": "Commits to AWS as the initial platform and to CloudFront/WAF, ECS/Fargate, RDS PostgreSQL Multi-AZ DB instance, Cognito User Pools, S3 and SQS as baseline managed services. Application contracts, PostgreSQL semantics, OIDC/provider adapter boundaries, object-storage ports and queue non-authority preserve migration seams. Exact task sizes, autoscaling, NAT availability mode, backup retention, RTO/RPO and alert thresholds remain evidence-bounded.",
+      "residual_uncertainty": [
+        "exact production task CPU/memory sizes",
+        "autoscaling thresholds",
+        "exact NAT availability mode after account/Region/cost qualification",
+        "exact RDS instance/storage/IOPS configuration",
+        "exact automated-backup retention",
+        "exact RTO/RPO",
+        "exact S3 cross-Region replication scope",
+        "Cognito user-pool/managed-login configuration",
+        "WAF managed/rate rule set",
+        "secrets rotation schedule",
+        "CloudWatch retention and alarm thresholds",
+        "alert routing/on-call process",
+        "cost envelope and budget thresholds",
+        "whether isolated async functions should use Lambda"
+      ],
+      "revisit_triggers": [
+        "measured load makes ECS/Fargate or RDS Multi-AZ DB instance insufficient or disproportionate",
+        "recovery objectives require warmer or active regional topology",
+        "Cognito cannot satisfy authentication/federation requirements proportionately",
+        "retention or data-residency obligations require a different storage/backup design",
+        "runtime cost materially exceeds the accepted operating envelope",
+        "provider lock-in becomes disproportionate",
+        "CloudFront VPC-origin restrictions conflict with required protocol/runtime behavior",
+        "whole-architecture validation exposes unresolved threat, failure, recovery, performance or cost contradictions"
+      ],
+      "accepted_in_subphase": "019-J",
       "supersedes_decision": null
     },
     {
@@ -1292,7 +1354,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 8,
+    "decisions_accepted": 9,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 4,
     "probes_authorized": 0,
