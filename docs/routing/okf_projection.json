@@ -6,7 +6,7 @@
   "generated_root": "knowledge",
   "generator": "scripts/generate_okf_projection.py",
   "okf_version": "0.2",
-  "generated_at": "2026-09-22T06:18:00Z",
+  "generated_at": "2026-09-22T02:50:00Z",
   "domains": [
     {
       "name": "project-context",
