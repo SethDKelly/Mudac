@@ -201,7 +201,7 @@ Possession alone does not establish:
 Camera-independent entry remains possible because QR is convenience, not authority.
 
 <a id="iam-011"></a>
-## IAM-011 — Reverfication and step-up strengthen principal assurance but never create application capability
+## IAM-011 — Reverification and step-up strengthen principal assurance but never create application capability
 
 Fresh authentication or step-up may be required for higher-risk actions such as:
 
