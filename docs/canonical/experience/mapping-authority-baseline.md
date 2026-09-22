@@ -30,9 +30,7 @@ Current Dependence / PF-01 Scope
   ↓
 Policies + Invariants
   ↓
-Phase 013 Mapping Entry Authority
-  ↓
-THIS baseline
+THIS current mapping authority baseline
   ↓
 accepted Experience owners
 ```
