@@ -40,7 +40,9 @@ Phase 016  COMPLETE — PASS WITH CLOSURE HANDOFF
 Phase 017  COMPLETE — PASS WITH BOUNDED CARRY-FORWARD
 Concept Design CLOSED
 
-Phase 018  IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE / 018-M NEXT
+PHASE 018 COMPLETE — PASS
+018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
+PHASE 019 AUTHORIZED — 019-A NEXT ELIGIBLE
 
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
@@ -51,7 +53,7 @@ execution authorization       NOT GRANTED
 
 The active work is:
 
-> **Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry — IN PROGRESS; 018-M NEXT**
+> **PHASE 019 AUTHORIZED — Architecture & Engineering Re-entry — 019-A NEXT ELIGIBLE**
 
 ## Human-directed action boundary
 
@@ -96,4 +98,4 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 repository-governance work does not authorize feature implementation, architecture selection by historical inertia, or automatic continuation into adjacent subphases.
+Phase 018 is complete. Phase 019 may perform only the explicitly selected architecture/engineering re-entry subphase; accepted architecture is not yet established, active implementation packages remain zero, and domain implementation execution is unauthorized.
