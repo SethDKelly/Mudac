@@ -59,8 +59,7 @@ Current Phase-019 progression:
 
 ~~~text
 PHASE 019 ACTIVE
-019-A COMPLETE
-019-B COMPLETE
+019-A/B COMPLETE
 019-C NEXT ELIGIBLE
 ADQ-001 ACCEPTED
 accepted whole architecture false
