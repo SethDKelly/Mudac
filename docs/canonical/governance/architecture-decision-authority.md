@@ -257,20 +257,23 @@ The semantic and architecture meaning remains owned by current canonical documen
 
 Generated or machine-readable state cannot create authority that the corresponding governed acceptance event did not create.
 
-# 019-A start-gate posture
+# Current Phase-019 posture
 
-At 019-A closure:
+After 019-B:
 
 ~~~text
 Phase 019                         ACTIVE
-019-A                             COMPLETE
-019-B                             NEXT
-ADQ decisions accepted            0
-Q4 architecture repairs complete  0
+019-A / 019-B                     COMPLETE
+019-C                             NEXT ELIGIBLE
+ADQ-001                           ACCEPTED
+ADQ decisions accepted            1 / 10
+Q4 architecture repairs complete  0 / 4
 technical probes authorized       0
-accepted architecture             false
+accepted whole architecture       false
 active implementation packages    0
 implementation execution          NOT AUTHORIZED
 ~~~
 
-019-B may now establish ADQ-001 architecture drivers and constraint evidence.
+Current accepted driver authority is owned by docs/canonical/architecture/architecture-drivers.md (DRV-001..012).
+
+019-C may evaluate ADQ-002 only after completing the required Q4 repair for the historical application-boundary candidate.
