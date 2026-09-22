@@ -49,9 +49,10 @@
       "019-G",
       "019-H",
       "019-I",
-      "019-J"
+      "019-J",
+      "019-K"
     ],
-    "next_eligible_subphase": "019-K",
+    "next_eligible_subphase": "019-L",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "accepted_architecture_established": false,
@@ -146,7 +147,7 @@
       "questions": [
         "ADQ-010"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "019-L",
@@ -154,7 +155,7 @@
       "questions": [
         "ADQ-010"
       ],
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     }
   ],
   "decision_state_model": {
@@ -1003,11 +1004,15 @@
       "question_id": "ADQ-010",
       "title": "Whole-Architecture Integration, Security, Failure, Performance, Cost & Reversibility Reconciliation",
       "owning_subphase": "019-K",
-      "state": "PLANNED",
-      "accepted": false,
-      "selected_option": null,
-      "decision_document": null,
-      "alternatives_evaluated": [],
+      "state": "ACCEPTED",
+      "accepted": true,
+      "selected_option": "PASS — DRV/BND/PST/IAM/CMD/RCV/ART/CLT/RUN compose without unresolved contradiction or derived-authority leakage; 15/15 mandatory scenarios pass; 10/10 invariants pass; zero blocking architecture risks remain; residual performance/cost/recovery/security evidence is explicitly bounded and routed",
+      "decision_document": "docs/019-architecture-engineering-reentry/019-K-whole-architecture-integration-threat-failure-recovery-performance-cost-scenario-validation.md",
+      "alternatives_evaluated": [
+        "PASS as composed with bounded residual executable evidence",
+        "PASS only after architecture repair",
+        "FAIL and reopen one or more bounded ADQ decisions"
+      ],
       "constraint_refs": [
         "ENG-001",
         "ENG-004",
@@ -1038,8 +1043,31 @@
       "candidate_inputs": [
         "docs/canonical/architecture/architectural-foundation.md"
       ],
-      "evidence_refs": [],
-      "evidence_classes": [],
+      "evidence_refs": [
+        "docs/019-architecture-engineering-reentry/019-K-whole-architecture-integration-threat-failure-recovery-performance-cost-scenario-validation.md",
+        "docs/019-architecture-engineering-reentry/019-K-whole-architecture-scenario-replay-evidence-matrix.md",
+        "docs/canonical/architecture/architectural-foundation.md",
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/architecture/offline-continuity-reconciliation.md",
+        "docs/canonical/architecture/artifact-export-publication-delivery.md",
+        "docs/canonical/architecture/browser-client-interaction.md",
+        "docs/canonical/architecture/runtime-platform-operations.md",
+        "docs/canonical/invariants/index.md",
+        "docs/canonical/governance/downstream-realization-obligations.md",
+        "docs/canonical/governance/implementation-program-delivery.md",
+        "docs/routing/implementation_program_framework.json",
+        "docs/016-scenario-misfit-exception-failure-adversarial-design-validation/016-K-phase-016-consolidation-validation-completeness-exit-review-phase-017-handoff.md",
+        "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-M-pre-implementation-residual-risk-register-repository-scorecard-regrade-implementation-entry-decision.md"
+      ],
+      "evidence_classes": [
+        "DOCUMENTATION_REASONING",
+        "EXTERNAL_VENDOR_FACT",
+        "REPOSITORY_STATIC"
+      ],
       "scenario_seeds": [
         "lost-response retry after consequential authoritative action",
         "duplicate/offline Draft convergence",
@@ -1057,13 +1085,47 @@
         "adversarial request volume",
         "conflicting legitimate authority"
       ],
-      "risk_refs": [],
-      "rationale": null,
-      "rejected_alternatives": [],
-      "reversibility_migration": null,
-      "residual_uncertainty": [],
-      "revisit_triggers": [],
-      "accepted_in_subphase": null,
+      "risk_refs": [
+        "ERI-01",
+        "ERI-02",
+        "ERI-03",
+        "ERI-04",
+        "ERI-05",
+        "ERI-06",
+        "ERI-07",
+        "ERI-08",
+        "ERI-09",
+        "ERI-10"
+      ],
+      "rationale": "Whole-architecture replay shows a consistent authority spine from natural owner through current Access, commit-confirmed persistence, bounded recovery/externalization/client representation and single-active runtime. All mandatory scenarios and invariants remain expressible without new semantic owners or contradictory mechanisms. Remaining load, cost, recovery, security and provider concerns are executable-evidence obligations rather than architecture contradictions.",
+      "rejected_alternatives": [
+        "Repair-first disposition — not required because no scenario, invariant, threat or failure replay exposed a missing owner or contradictory selected mechanism.",
+        "Fail/reopen disposition — not supported because no blocking contradiction remains across ADQ-001..009."
+      ],
+      "reversibility_migration": "The accepted bounded decisions preserve strong seams at browser packages, application contracts, PostgreSQL semantics, auth adapter, object-storage port and non-authoritative queue/runtime boundaries. AWS operational lock-in is explicit but bounded. 019-L may consolidate current architecture without silently reactivating historical candidate rule families.",
+      "residual_uncertainty": [
+        "exact production capacity and latency envelope remains unmeasured",
+        "exact RTO/RPO remains unmeasured",
+        "production monthly/event-period cost envelope remains unquantified",
+        "AWS failover/restore behavior remains executable evidence",
+        "Cognito/session/shared-device behavior remains integration/security evidence",
+        "browser local-storage/privacy implementation remains unselected",
+        "artifact sanitization/cache-withdrawal mechanisms remain implementation evidence",
+        "supply-chain/secrets/fixture/migration controls remain Phase-020 package gates",
+        "jurisdiction-specific retention/data-residency requirements remain external evidence"
+      ],
+      "revisit_triggers": [
+        "a mandatory scenario cannot be implemented without violating an accepted invariant",
+        "measured workload exceeds the selected runtime without a proportional scaling path",
+        "required RTO/RPO cannot be met by the cold-recovery model",
+        "AWS cost or operational burden becomes disproportionate",
+        "binding legal/data-residency/retention requirements conflict with selected persistence/recovery topology",
+        "selected identity/runtime/client mechanisms require derived semantic authority",
+        "implementation exposes materially broader cross-owner transactions than BND/CMD permit",
+        "accessibility/degraded operation cannot preserve semantic parity",
+        "recovery testing exposes history/Provenance loss or split-brain risk"
+      ],
+      "accepted_in_subphase": "019-K",
       "supersedes_decision": null
     }
   ],
@@ -1354,7 +1416,7 @@
   },
   "counts": {
     "decisions_total": 10,
-    "decisions_accepted": 9,
+    "decisions_accepted": 10,
     "q4_repairs_total": 4,
     "q4_repairs_complete": 4,
     "probes_authorized": 0,
