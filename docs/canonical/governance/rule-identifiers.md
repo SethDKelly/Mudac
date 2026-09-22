@@ -275,6 +275,35 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [CLT-019 — Client Error Boundaries Contain Presentation Failure Without Inventing Source-State Loss](../architecture/browser-client-interaction.md#clt-019)
 * [CLT-020 — Browser Technology Remains Replaceable Behind the Client Architecture Contract](../architecture/browser-client-interaction.md#clt-020)
 
+# Accepted runtime platform, security, deployment and operations architecture
+
+* [RUN-001 — AWS is the selected initial production runtime platform](../architecture/runtime-platform-operations.md#run-001)
+* [RUN-002 — Production is single-active-Region and Multi-AZ; regional recovery is cold](../architecture/runtime-platform-operations.md#run-002)
+* [RUN-003 — Whole-Region loss reduces digital authority rather than creating dual writers](../architecture/runtime-platform-operations.md#run-003)
+* [RUN-004 — CloudFront is the public application edge; application origins remain private](../architecture/runtime-platform-operations.md#run-004)
+* [RUN-005 — AWS WAF and edge controls provide infrastructure abuse reduction, not semantic authorization](../architecture/runtime-platform-operations.md#run-005)
+* [RUN-006 — The authoritative application runs as an ECS/Fargate modular-monolith service](../architecture/runtime-platform-operations.md#run-006)
+* [RUN-007 — Production API capacity preserves cross-AZ continuity before reactive scaling](../architecture/runtime-platform-operations.md#run-007)
+* [RUN-008 — Asynchronous workers are separate runtime roles only for semantically separable work](../architecture/runtime-platform-operations.md#run-008)
+* [RUN-009 — RDS for PostgreSQL Multi-AZ DB instance is the initial authority database](../architecture/runtime-platform-operations.md#run-009)
+* [RUN-010 — Server-controlled application sessions initially use the relational runtime](../architecture/runtime-platform-operations.md#run-010)
+* [RUN-011 — Amazon Cognito User Pools is the initial authentication provider behind the IAM adapter](../architecture/runtime-platform-operations.md#run-011)
+* [RUN-012 — Private Artifact/evidence bytes use versioned encrypted S3 behind ART authority metadata](../architecture/runtime-platform-operations.md#run-012)
+* [RUN-013 — SQS carries bounded asynchronous technical work, never domain authority](../architecture/runtime-platform-operations.md#run-013)
+* [RUN-014 — Application/data tiers remain private and outbound internet dependency is explicit](../architecture/runtime-platform-operations.md#run-014)
+* [RUN-015 — AWS service endpoints are adopted for concrete security/cost benefit, not decoratively](../architecture/runtime-platform-operations.md#run-015)
+* [RUN-016 — IAM roles, secrets and encryption preserve least privilege and actor separation](../architecture/runtime-platform-operations.md#run-016)
+* [RUN-017 — Production and nonproduction deployment authority is separated and GitHub deployment is OIDC-federated](../architecture/runtime-platform-operations.md#run-017)
+* [RUN-018 — Infrastructure and releases are reproducible, immutable and rollback-aware](../architecture/runtime-platform-operations.md#run-018)
+* [RUN-019 — Frontend release promotion preserves immutable assets and API compatibility](../architecture/runtime-platform-operations.md#run-019)
+* [RUN-020 — Observability includes semantic health and release identity](../architecture/runtime-platform-operations.md#run-020)
+* [RUN-021 — Security/audit telemetry is privacy-bounded and attributable](../architecture/runtime-platform-operations.md#run-021)
+* [RUN-022 — Authoritative database recovery uses PITR plus cross-Region backup capability](../architecture/runtime-platform-operations.md#run-022)
+* [RUN-023 — Critical object recovery uses versioning and selective cross-Region replication/copy](../architecture/runtime-platform-operations.md#run-023)
+* [RUN-024 — Recovery capability is trusted only after application-level restore exercises](../architecture/runtime-platform-operations.md#run-024)
+* [RUN-025 — No contractual uptime, RTO or RPO is claimed without evidence](../architecture/runtime-platform-operations.md#run-025)
+* [RUN-026 — Cost optimization removes unjustified complexity, not trust guarantees](../architecture/runtime-platform-operations.md#run-026)
+
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).

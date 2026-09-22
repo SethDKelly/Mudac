@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 476,
+    "total": 502,
     "by_role": {
-      "current-authority": 334,
+      "current-authority": 360,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -48,6 +48,7 @@
       "RANK": 2,
       "RCV": 18,
       "REP": 15,
+      "RUN": 26,
       "SC": 3,
       "SYNC": 14,
       "VAL": 8,
@@ -2688,6 +2689,162 @@
       "anchor": "rep-015",
       "role": "downstream-candidate",
       "locator": "docs/canonical/architecture/external-representation.md#rep-015"
+    },
+    "RUN-001": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-001"
+    },
+    "RUN-002": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-002"
+    },
+    "RUN-003": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-003"
+    },
+    "RUN-004": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-004"
+    },
+    "RUN-005": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-005"
+    },
+    "RUN-006": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-006"
+    },
+    "RUN-007": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-007"
+    },
+    "RUN-008": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-008"
+    },
+    "RUN-009": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-009"
+    },
+    "RUN-010": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-010"
+    },
+    "RUN-011": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-011"
+    },
+    "RUN-012": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-012"
+    },
+    "RUN-013": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-013"
+    },
+    "RUN-014": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-014"
+    },
+    "RUN-015": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-015"
+    },
+    "RUN-016": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-016"
+    },
+    "RUN-017": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-017",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-017"
+    },
+    "RUN-018": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-018",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-018"
+    },
+    "RUN-019": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-019",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-019"
+    },
+    "RUN-020": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-020",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-020"
+    },
+    "RUN-021": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-021",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-021"
+    },
+    "RUN-022": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-022",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-022"
+    },
+    "RUN-023": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-023",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-023"
+    },
+    "RUN-024": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-024",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-024"
+    },
+    "RUN-025": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-025",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-025"
+    },
+    "RUN-026": {
+      "owner_path": "docs/canonical/architecture/runtime-platform-operations.md",
+      "anchor": "run-026",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/runtime-platform-operations.md#run-026"
     },
     "SC-001": {
       "owner_path": "docs/canonical/concepts/scorecard.md",

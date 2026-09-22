@@ -54,6 +54,7 @@
     "docs/canonical/architecture/identity-access-authority.md",
     "docs/canonical/architecture/interface-command-concurrency.md",
     "docs/canonical/architecture/offline-continuity-reconciliation.md",
-    "docs/canonical/architecture/persistence-history-recovery.md"
+    "docs/canonical/architecture/persistence-history-recovery.md",
+    "docs/canonical/architecture/runtime-platform-operations.md"
   ]
 }
