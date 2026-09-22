@@ -48,6 +48,7 @@
   },
   "current_owner_paths": [
     "docs/canonical/architecture/application-ownership-boundaries.md",
-    "docs/canonical/architecture/architecture-drivers.md"
+    "docs/canonical/architecture/architecture-drivers.md",
+    "docs/canonical/architecture/persistence-history-recovery.md"
   ]
 }
