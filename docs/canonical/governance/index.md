@@ -27,6 +27,7 @@ Current repository/design-governance authority.
 - [Post-Concept-Design Architecture & Engineering Re-entry](post-concept-design-reentry.md)
 - [Downstream Realization Obligations & Engineering-Risk Handoff](downstream-realization-obligations.md)
 - [Architecture Re-entry Evaluation & Decision Contract](architecture-reentry-evaluation.md)
+- [Phase-019 Architecture Decision Authority & Evidence Contract](architecture-decision-authority.md)
 - [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md)
 
 ## Current interpretation
