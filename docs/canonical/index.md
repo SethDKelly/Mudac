@@ -26,7 +26,7 @@ Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD** and Jackson-aligne
 
 Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) and final 017-H record for closure evidence.
 
-Implementation readiness is **READY** for post-closure preparation/re-entry. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is now **IN PROGRESS — 018-A/B/C/D/E/F COMPLETE / 018-G NEXT**. Historical architecture/implementation candidates remain quarantined; no accepted new architecture exists and implementation execution is not authorized.
+Implementation readiness is **READY** for post-closure preparation/re-entry. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is now **IN PROGRESS — 018-A/B/C/D/E/F/G COMPLETE / 018-H NEXT**. Historical architecture/implementation candidates remain quarantined; no accepted new architecture exists and implementation execution is not authorized.
 
 ## Downstream boundary
 

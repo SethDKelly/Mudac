@@ -18,7 +18,7 @@ Current posture:
 
 ```text
 Jackson Concept Design: CLOSED — PHASE 017 PASS
-Phase 018: IN PROGRESS — 018-A/B/C/D/E/F COMPLETE / 018-G NEXT
+Phase 018: IN PROGRESS — 018-A/B/C/D/E/F/G COMPLETE / 018-H NEXT
 implementation readiness: READY FOR POST-CLOSURE PREPARATION
 implementation planning: NOT YET ACCEPTED
 new domain implementation: NOT STARTED

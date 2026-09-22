@@ -1,6 +1,6 @@
 # Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry
 
-**Status:** IN PROGRESS — 018-A/B/C/D/E/F COMPLETE / 018-G NEXT
+**Status:** IN PROGRESS — 018-A/B/C/D/E/F/G COMPLETE / 018-H NEXT
 
 ## Purpose
 
@@ -118,11 +118,13 @@ Define bounded retrieval behavior, context budgets, history-loading rules, summa
 
 ### 018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability
 
-**Status: NEXT.**
-
 Define tool-neutral repository workflows and thin adapters for coding-agent environments without allowing Cursor, Codex, Claude Code or other tools to become semantic authority.
 
+**Status: COMPLETE — PASS WITH RUNTIME COMPATIBILITY CARRY-FORWARD.**
+
 ### 018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement
+
+**Status: NEXT.**
 
 Extend existing knowledge validation into appropriately scoped agentic/documentation conformance and CI checks while avoiding architecture-specific premature constraints.
 

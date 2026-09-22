@@ -40,7 +40,7 @@ The current product/application variant remains:
 
 ## Active post-closure qualification
 
-- [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **IN PROGRESS; 018-A/B/C/D/E/F COMPLETE; 018-G NEXT**.
+- [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **IN PROGRESS; 018-A/B/C/D/E/F/G COMPLETE; 018-H NEXT**.
 
 Phase 018 qualifies repository/documentation/agentic/architecture-reentry readiness without beginning domain implementation.
 
@@ -89,6 +89,6 @@ Indexes and READMEs route; they do not replace canonical owners. The generated `
 
 Current lifecycle action:
 
-> **Phase 018 — IN PROGRESS — 018-A/B/C/D/E/F COMPLETE / 018-G NEXT**
+> **Phase 018 — IN PROGRESS — 018-A/B/C/D/E/F/G COMPLETE / 018-H NEXT**
 
-Next: **018-G — Agent Skills, Tool Adapters, Workflow Contracts & Cross-Agent Portability**. Phase 018 remains post-Concept-Design preparation; feature implementation is unauthorized.
+Next: **018-H — Agentic Conformance, Knowledge Validation, Status Drift, Reference Integrity & CI Enforcement**. Phase 018 remains post-Concept-Design preparation; feature implementation is unauthorized.
