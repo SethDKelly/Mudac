@@ -48,6 +48,10 @@ def frontmatter_status(path: Path) -> str | None:
 def classify(repo: Path, rel: str, policy: dict) -> str:
     if rel in set(policy.get("historical_adapter_paths", [])):
         return "historical-adapter"
+    if rel in set(policy.get("current_owner_paths", [])):
+        if frontmatter_status(repo / rel) == "deprecated":
+            return "deprecated-adapter"
+        return "current-authority"
     for root in policy.get("downstream_candidate_roots", []):
         if under(rel, root):
             return "downstream-candidate"
