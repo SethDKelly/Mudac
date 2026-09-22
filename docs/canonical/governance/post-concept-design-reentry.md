@@ -102,6 +102,8 @@ The normalized current realization-obligation register is [Downstream Realizatio
 
 Current downstream-candidate qualification evidence is maintained in `docs/routing/downstream_candidate_qualification.json`. That register records Q1–Q6 classifications and comparison eligibility only; it does not accept, activate, or rank an architecture.
 
+The current pre-selection architecture decision framework is [Architecture Re-entry Evaluation & Decision Contract](architecture-reentry-evaluation.md), with machine-readable question/dependency planning in `docs/routing/architecture_reentry_plan.json`. Those surfaces define how architecture will be evaluated; they do not establish accepted architecture.
+
 # Quarantined downstream-material classification
 
 Pre-Phase-009 architecture/implementation material is not one homogeneous thing.
