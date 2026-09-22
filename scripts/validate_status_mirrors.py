@@ -18,6 +18,9 @@ MIRRORS = (
 )
 COMPLETE_RE = re.compile(r"^- \[018-([A-M])\b.*?— \*\*COMPLETE\b", re.MULTILINE)
 NEXT_RE = re.compile(r"^- (?:\[)?018-([A-M])\b.*?— \*\*NEXT\*\*", re.MULTILINE)
+ALL = [chr(code) for code in range(ord("A"), ord("M") + 1)]
+CLOSED_TOKEN = "PHASE 018 COMPLETE"
+NEXT_LIFECYCLE_TOKEN = "PHASE 019 AUTHORIZED"
 
 
 def main() -> int:
@@ -31,26 +34,31 @@ def main() -> int:
     if not phase.is_file():
         print("ERROR missing Phase-018 status authority index")
         return 1
+
     text = phase.read_text(encoding="utf-8")
     completed = sorted(set(COMPLETE_RE.findall(text)))
     next_items = sorted(set(NEXT_RE.findall(text)))
 
-    if len(next_items) != 1:
-        errors.append(f"Phase-018 index must have exactly one NEXT subphase; found {next_items}")
-        next_letter = next_items[0] if next_items else "?"
-    else:
-        next_letter = next_items[0]
+    closed = False
+    next_letter: str | None = None
 
-    if next_letter != "?":
+    if len(next_items) == 1:
+        next_letter = next_items[0]
         expected_completed = [chr(code) for code in range(ord("A"), ord(next_letter))]
         if completed != expected_completed:
             errors.append(
                 f"Phase-018 completed sequence must be contiguous before {next_letter}; "
                 f"expected {expected_completed}, found {completed}"
             )
+    elif len(next_items) == 0 and completed == ALL:
+        closed = True
+    else:
+        errors.append(
+            "Phase-018 index must either have exactly one NEXT subphase with a contiguous "
+            f"completed prefix or be fully closed A-M; next={next_items}, completed={completed}"
+        )
 
     completed_token = f"018-{'/'.join(completed)} COMPLETE" if completed else ""
-    next_token = f"018-{next_letter} NEXT"
 
     for rel in MIRRORS:
         path = repo / rel
@@ -60,13 +68,27 @@ def main() -> int:
         mirror = path.read_text(encoding="utf-8")
         if completed_token and completed_token not in mirror:
             errors.append(f"{rel}: missing current completed-state mirror {completed_token!r}")
-        if next_token not in mirror:
-            errors.append(f"{rel}: missing current next-state mirror {next_token!r}")
+        if closed:
+            if CLOSED_TOKEN not in mirror:
+                errors.append(f"{rel}: missing closed Phase-018 mirror {CLOSED_TOKEN!r}")
+            if NEXT_LIFECYCLE_TOKEN not in mirror:
+                errors.append(f"{rel}: missing next-lifecycle mirror {NEXT_LIFECYCLE_TOKEN!r}")
+        elif next_letter is not None:
+            next_token = f"018-{next_letter} NEXT"
+            if next_token not in mirror:
+                errors.append(f"{rel}: missing current next-state mirror {next_token!r}")
 
     for error in errors:
         print("ERROR", error)
+
     if not errors:
-        print(f"Status mirror check: 0 errors; {completed_token} / {next_token}")
+        if closed:
+            print(
+                "Status mirror check: 0 errors; "
+                f"{completed_token} / {CLOSED_TOKEN} / {NEXT_LIFECYCLE_TOKEN}"
+            )
+        else:
+            print(f"Status mirror check: 0 errors; {completed_token} / 018-{next_letter} NEXT")
     else:
         print(f"Status mirror check: {len(errors)} error(s)")
     return 1 if errors else 0
