@@ -20,6 +20,8 @@ def under(path: str, root: str) -> bool:
 def classify(path: str, policy: dict) -> str:
     if path in set(policy.get("historical_adapter_paths", [])):
         return "historical-adapter"
+    if path in set(policy.get("current_owner_paths", [])):
+        return "current-authority"
     if any(under(path, root) for root in policy.get("downstream_candidate_roots", [])):
         return "downstream-candidate"
     if any(under(path, root) for root in policy.get("current_owner_roots", [])):
