@@ -4,9 +4,9 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 350,
+    "total": 362,
     "by_role": {
-      "current-authority": 208,
+      "current-authority": 220,
       "downstream-candidate": 142
     },
     "by_family": {
@@ -18,6 +18,7 @@
       "ARE": 12,
       "AUTH": 14,
       "AWS": 18,
+      "BND": 12,
       "CHG": 5,
       "CNF": 12,
       "COMP": 2,
@@ -653,6 +654,78 @@
       "anchor": "aws-018",
       "role": "downstream-candidate",
       "locator": "docs/canonical/architecture/aws-runtime-operations.md#aws-018"
+    },
+    "BND-001": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-001"
+    },
+    "BND-002": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-002"
+    },
+    "BND-003": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-003"
+    },
+    "BND-004": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-004"
+    },
+    "BND-005": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-005"
+    },
+    "BND-006": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-006"
+    },
+    "BND-007": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-007"
+    },
+    "BND-008": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-008"
+    },
+    "BND-009": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-009"
+    },
+    "BND-010": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-010"
+    },
+    "BND-011": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-011"
+    },
+    "BND-012": {
+      "owner_path": "docs/canonical/architecture/application-ownership-boundaries.md",
+      "anchor": "bnd-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/architecture/application-ownership-boundaries.md#bnd-012"
     },
     "CHG-001": {
       "owner_path": "docs/canonical/governance/change-governance.md",
