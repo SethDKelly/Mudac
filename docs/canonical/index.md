@@ -26,7 +26,7 @@ Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD** and Jackson-aligne
 
 Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) and final 017-H record for closure evidence.
 
-Implementation readiness is **READY** for post-closure preparation/re-entry. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is **COMPLETE — PASS**. **018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE. PHASE 019 AUTHORIZED** with 019-A next eligible. Historical architecture/implementation candidates remain quarantined; no accepted new architecture exists and implementation execution is not authorized.
+Implementation readiness is **READY** for post-closure preparation/re-entry. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is **COMPLETE — PASS**. **018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE. PHASE 019 AUTHORIZED** with 019-A complete and 019-B next eligible. Historical architecture/implementation candidates remain quarantined; no accepted new architecture exists and implementation execution is not authorized.
 
 ## Downstream boundary
 
@@ -43,7 +43,7 @@ Start from the smallest relevant family/owner. Use [Domain Vocabulary & Expectat
 This index routes; it does not restate the rule bodies owned below it.
 
 
-Current lifecycle: **PHASE 018 COMPLETE — PASS**; **PHASE 019 AUTHORIZED**; 019-A next eligible.
+Current lifecycle: **PHASE 018 COMPLETE — PASS**; **PHASE 019 AUTHORIZED**; 019-A complete and 019-B next eligible.
 
 
 Current Phase-019 progression:
