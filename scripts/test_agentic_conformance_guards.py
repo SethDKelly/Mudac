@@ -143,6 +143,25 @@ def main() -> int:
             errors,
         )
 
+        phase019_repo = clone_repo(source, tmp, "phase019")
+        phase019_path = phase019_repo / "docs/routing/phase019_architecture_decision_control.json"
+        phase019 = json.loads(phase019_path.read_text(encoding="utf-8"))
+        phase019["decisions"][1]["state"] = "ACCEPTED"
+        phase019["decisions"][1]["accepted"] = True
+        phase019["decisions"][1]["selected_option"] = "historical modular monolith"
+        phase019["decisions"][1]["decision_document"] = "unauthorized.md"
+        phase019["decisions"][1]["rationale"] = "premature"
+        phase019["decisions"][1]["evidence_refs"] = ["premature"]
+        phase019["decisions"][1]["alternatives_evaluated"] = ["a", "b"]
+        phase019["decisions"][1]["accepted_in_subphase"] = "019-C"
+        phase019["counts"]["decisions_accepted"] = 1
+        phase019_path.write_text(json.dumps(phase019, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "Phase 019 premature decision acceptance",
+            run_script(source, phase019_repo, "scripts/validate_phase019_architecture_control.py", "--repo", str(phase019_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -155,7 +174,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 9 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 10 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
