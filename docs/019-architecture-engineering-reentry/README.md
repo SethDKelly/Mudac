@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D COMPLETE / 019-E NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C/D/E COMPLETE / 019-F NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -60,13 +60,15 @@ Resolve ADQ-003.
 
 ### 019-E — Identity / Authentication / Participation / Access / Session
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — ADQ-004 ACCEPTED.**
+
+Accepted IAM-001..018: managed external authentication behind an adapter, stable MUDAC Identity linkage, Competition-scoped Participation, contextual Access, opaque first-party server sessions and technical-authority separation.
 
 Resolve ADQ-004.
 
 ### 019-F — Interfaces / Transactions / Concurrency / Retry / Idempotency
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-005 after required Q4 repair.
 
@@ -109,11 +111,11 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D
-next eligible subphase               019-E
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E
+next eligible subphase               019-F
 automatic advance                    false
 
-ADQ decisions accepted               3 / 10
+ADQ decisions accepted               4 / 10
 Q4 repairs complete                  1 / 4
 technical probes authorized          0
 
