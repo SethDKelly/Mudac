@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T06:35:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T07:55:00-05:00 }
 ---
 
 # Canonical contract
@@ -131,6 +131,20 @@ Logical uniqueness/evaluation weight is separately owned by [INV-002](../invaria
 * [DRV-010 — Operability and Cost Must Be Proportional to Demonstrated Event Needs](../architecture/architecture-drivers.md#drv-010)
 * [DRV-011 — Reversibility and Provider/Service Lock-in Are Explicit Decision Dimensions](../architecture/architecture-drivers.md#drv-011)
 * [DRV-012 — The Current Delivery Environment Constrains Context, Not Service Topology](../architecture/architecture-drivers.md#drv-012)
+# Accepted application boundary architecture
+
+* [BND-001 — The Initial Authoritative Application Topology Is an Ownership-Preserving Modular Monolith](../architecture/application-ownership-boundaries.md#bnd-001)
+* [BND-002 — Current Authoritative Ownership Is Grouped Into Five Cohesive Modules](../architecture/application-ownership-boundaries.md#bnd-002)
+* [BND-003 — Versioning and Provenance Are Cross-Cutting Concepts, Not Central God-Modules](../architecture/application-ownership-boundaries.md#bnd-003)
+* [BND-004 — Every Authoritative Fact and State-Changing Command Has One Primary Module Owner](../architecture/application-ownership-boundaries.md#bnd-004)
+* [BND-005 — Cross-Owner Workflows Coordinate Above Owners Without Becoming a New Semantic Owner](../architecture/application-ownership-boundaries.md#bnd-005)
+* [BND-006 — Cross-Module State Access Uses Public Contracts and Stable Identities, Never Another Module's Storage](../architecture/application-ownership-boundaries.md#bnd-006)
+* [BND-007 — Dependency Direction Is Acyclic and Follows Authority Flow](../architecture/application-ownership-boundaries.md#bnd-007)
+* [BND-008 — Read Projections May Compose Across Modules but Never Become Write Authority](../architecture/application-ownership-boundaries.md#bnd-008)
+* [BND-009 — Identity/Access Enforcement Remains Explicit at Protected Owner Boundaries](../architecture/application-ownership-boundaries.md#bnd-009)
+* [BND-010 — External Representation Is Strictly Downstream of Source Authority](../architecture/application-ownership-boundaries.md#bnd-010)
+* [BND-011 — Module Extraction Is Allowed Only Through Preserved Contracts and Demonstrated Drivers](../architecture/application-ownership-boundaries.md#bnd-011)
+* [BND-012 — Source/Package Layout and Provider/Runtime Deployment Remain Later Decisions](../architecture/application-ownership-boundaries.md#bnd-012)
 # Suspended downstream rule-ID partition
 
 The following architecture/implementation rule IDs are preserved for **historical/candidate downstream referential integrity** while their owner documents remain suspended under the [Downstream Architecture & Implementation Authority Quarantine](downstream-authority-quarantine.md).
