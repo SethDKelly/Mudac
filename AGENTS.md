@@ -6,7 +6,7 @@ This file is a **bootstrap adapter**, not product/design authority.
 
 1. Start at [docs/index.md](docs/index.md). The generated [knowledge/](knowledge/) tree is generic OKF compatibility routing only and is never a substitute for authored authority.
 2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
-3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For active post-closure qualification, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) and the post-Concept-Design re-entry contract.
+3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For the completed repository-qualification baseline, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/). For active architecture work, use [Phase 019](docs/019-architecture-engineering-reentry/) plus the post-Concept-Design re-entry and Phase-019 decision-authority contracts.
 4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
 5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
 
