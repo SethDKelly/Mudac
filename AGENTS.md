@@ -53,6 +53,17 @@ The active work is:
 
 > **Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry — IN PROGRESS; 018-E NEXT**
 
+## Human-directed action boundary
+
+Follow [Agentic Development Authority, Human-Directed Scope & Action Boundaries](docs/canonical/governance/agentic-authority-scope.md).
+
+- **A1 — review / inspect / plan:** read and validate safely; do not edit unless the human also requested change.
+- **A2 — bounded change / build / fix:** make directly necessary repository edits and safe validation inside the selected task; do not start adjacent work automatically.
+- **A3 — external / destructive / scope-expanding:** requires explicit human authorization for the specific consequential action.
+- **A4 — semantic / accepted-architecture change:** requires explicit human change intent plus canonical change/re-entry governance; implementation difficulty is not permission to weaken accepted meaning.
+
+A passing check does not authorize merge, deploy, the next phase/subphase, or a new implementation package.
+
 ## Retrieval discipline
 
 - Known stable rule ID → run `python scripts/resolve_stable_id.py <ID>` and load the returned current owner; do not scan the full registry first.

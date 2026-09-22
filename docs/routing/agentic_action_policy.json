@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "authority": "ROUTING/CONFORMANCE POLICY — CANONICAL AGENTIC AUTHORITY CONTRACT RETAINS NORMATIVE MEANING",
+  "canonical_contract": "docs/canonical/governance/agentic-authority-scope.md",
+  "authority_order": [
+    "human-selected-task",
+    "current-canonical-semantic-and-governance-authority",
+    "repository-agent-and-change-control-governance",
+    "active-accepted-architecture-or-implementation-package",
+    "executable-evidence",
+    "reviewed-external-tool-or-vendor-guidance",
+    "agent-memory-and-conversational-assumptions"
+  ],
+  "human_directed": {
+    "required": true,
+    "no_autonomous_next_work": true,
+    "no_unattended_task_queue": true,
+    "no_autonomous_delegation": true,
+    "no_implicit_merge_or_deploy": true
+  },
+  "scope_envelope_fields": [
+    "requested_objective",
+    "active_phase_or_selected_task",
+    "directly_owned_artifacts",
+    "necessary_supporting_changes",
+    "validation_and_evidence",
+    "directly_impacted_routing_status_or_traceability",
+    "explicit_exclusions"
+  ],
+  "action_classes": {
+    "A1": {
+      "name": "read-review-plan",
+      "repository_edits": false,
+      "safe_read_only_validation": true,
+      "external_or_destructive_actions": false,
+      "semantic_or_architecture_adoption": false,
+      "explicit_additional_authorization": false
+    },
+    "A2": {
+      "name": "bounded-change-build-fix",
+      "repository_edits": true,
+      "safe_read_only_validation": true,
+      "external_or_destructive_actions": false,
+      "semantic_or_architecture_adoption": false,
+      "explicit_additional_authorization": false,
+      "supporting_changes": "directly-necessary-and-proportional"
+    },
+    "A3": {
+      "name": "external-destructive-or-scope-expanding",
+      "repository_edits": "only-as-part-of-explicitly-authorized-action",
+      "safe_read_only_validation": true,
+      "external_or_destructive_actions": true,
+      "semantic_or_architecture_adoption": false,
+      "explicit_additional_authorization": true
+    },
+    "A4": {
+      "name": "semantic-or-architecture-change",
+      "repository_edits": "only-with-explicit-human-change-intent-and-change-control",
+      "safe_read_only_validation": true,
+      "external_or_destructive_actions": false,
+      "semantic_or_architecture_adoption": true,
+      "explicit_additional_authorization": true,
+      "change_control": "docs/canonical/governance/change-governance.md"
+    }
+  },
+  "completion": {
+    "stop_at_selected_task_boundary": true,
+    "report_next_eligible_work_only": true,
+    "validation_pass_does_not_authorize_next_work": true
+  }
+}

@@ -9,7 +9,6 @@ on:
       - "scripts/**"
       - "docs/**"
       - "knowledge/**"
-      - "knowledge/**"
       - ".github/workflows/knowledge-validation.yml"
   pull_request:
     paths:
@@ -18,6 +17,7 @@ on:
       - "requirements-docs.txt"
       - "scripts/**"
       - "docs/**"
+      - "knowledge/**"
       - ".github/workflows/knowledge-validation.yml"
   workflow_dispatch:
 
@@ -55,6 +55,9 @@ jobs:
 
       - name: Check generated stable-reference index
         run: python scripts/generate_stable_reference_index.py --check
+
+      - name: Check agentic authority policy
+        run: python scripts/validate_agentic_authority_policy.py
 
       - name: Smoke-test stable-ID resolution roles
         shell: bash

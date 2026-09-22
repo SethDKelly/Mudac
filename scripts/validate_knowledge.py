@@ -142,6 +142,9 @@ class Validator:
             self.root / "scripts" / "generate_stable_reference_index.py",
             self.root / "scripts" / "generate_owner_inventory.py",
             self.root / "scripts" / "resolve_stable_id.py",
+            self.root / "scripts" / "validate_agentic_authority_policy.py",
+            self.docs / "routing" / "agentic_action_policy.json",
+            self.docs / "canonical" / "governance" / "agentic-authority-scope.md",
             self.docs / "routing" / "canonical_ownership.json",
             self.docs / "routing" / "stable_reference_index.json",
             self.docs / "routing" / "canonical_owner_inventory.json",
@@ -554,6 +557,7 @@ class Validator:
             "python scripts/generate_okf_projection.py --check",
             "python scripts/generate_stable_reference_index.py --check",
             "python scripts/generate_owner_inventory.py --check",
+            "python scripts/validate_agentic_authority_policy.py",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:

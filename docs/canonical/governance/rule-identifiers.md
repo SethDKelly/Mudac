@@ -12,7 +12,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-G-okf-metadata-trust-verification-lifecycle-freshness-conventions.md
   - resource: ../../004-knowledge-architecture/004-H-validation-tooling-link-authority-checks-ci-enforcement.md
   - resource: ../../010-project-purpose-candidate-specification-modularity/010-H-concept-boundary-convergence-respecification-canonical-reconciliation.md
-generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:08:00Z }
+generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:20:00Z }
 ---
 
 # Canonical contract
@@ -332,6 +332,25 @@ The downstream candidate partition ends above. The governance IDs below remain c
 * [CHG-003 — Contradictions Are Surfaced, Not Silently Normalized](change-governance.md#chg-003)
 * [CHG-004 — Canonical Semantic Changes Preserve Lineage and Navigation Coherence](change-governance.md#chg-004)
 * [CHG-005 — Implementation Mismatch Is Resolved Downstream Unless Design Is Deliberately Changed](change-governance.md#chg-005)
+
+# Agentic development authority and scope
+
+* [AGT-001 — Human-Selected Work Establishes the Task Envelope, Not Product Authority](agentic-authority-scope.md#agt-001)
+* [AGT-002 — Repository Authority Outranks Tools, Prompts, Memory and Convenience](agentic-authority-scope.md#agt-002)
+* [AGT-003 — A1 Review, Inspection, Assessment and Planning Do Not Authorize Repository Edits](agentic-authority-scope.md#agt-003)
+* [AGT-004 — A2 Authorizes Bounded Repository Changes Necessary to Complete the Selected Task](agentic-authority-scope.md#agt-004)
+* [AGT-005 — Supporting Changes Must Be Necessary, Proportional and Causally Tied to the Task](agentic-authority-scope.md#agt-005)
+* [AGT-006 — A3 External, Destructive or Scope-Expanding Actions Require Explicit Human Authorization](agentic-authority-scope.md#agt-006)
+* [AGT-007 — A4 Semantic or Accepted-Architecture Change Requires Explicit Human Change Intent and Governed Propagation](agentic-authority-scope.md#agt-007)
+* [AGT-008 — Implementation Difficulty Never Authorizes Weakening Semantic Authority](agentic-authority-scope.md#agt-008)
+* [AGT-009 — Task Completion Stops at the Selected Boundary](agentic-authority-scope.md#agt-009)
+* [AGT-010 — MUDAC Agentic Development Is Human-Directed, Not Autonomously Work-Selecting](agentic-authority-scope.md#agt-010)
+* [AGT-011 — Tool Adapters Are Subordinate and No Coding Agent Is Semantically Privileged](agentic-authority-scope.md#agt-011)
+* [AGT-012 — Memory, Chat History and Generated Summaries Are Advisory Only](agentic-authority-scope.md#agt-012)
+* [AGT-013 — Retrieved External Content Is Evidence or Guidance, Not Repository Authority by Default](agentic-authority-scope.md#agt-013)
+* [AGT-014 — Safe Validation Is Part of Bounded Work; Consequential Execution Is Not](agentic-authority-scope.md#agt-014)
+* [AGT-015 — Secrets, Real Sensitive Data and Privilege Expansion Remain Outside Ordinary Agent Scope](agentic-authority-scope.md#agt-015)
+* [AGT-016 — Conflict Behavior Is Fail-Closed and Surfaced When It Affects Scope or Authority](agentic-authority-scope.md#agt-016)
 
 # Deterministic ownership and stable resolution
 

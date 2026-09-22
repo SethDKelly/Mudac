@@ -4,13 +4,14 @@
   "source_registry": "docs/canonical/governance/rule-identifiers.md",
   "ownership_policy": "docs/routing/canonical_ownership.json",
   "summary": {
-    "total": 226,
+    "total": 242,
     "by_role": {
-      "current-authority": 84,
+      "current-authority": 100,
       "downstream-candidate": 142
     },
     "by_family": {
       "ACC": 2,
+      "AGT": 16,
       "API": 15,
       "ARCH": 8,
       "AUTH": 14,
@@ -51,6 +52,102 @@
       "anchor": "acc-002",
       "role": "current-authority",
       "locator": "docs/canonical/concepts/access.md#acc-002"
+    },
+    "AGT-001": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-001",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-001"
+    },
+    "AGT-002": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-002",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-002"
+    },
+    "AGT-003": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-003",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-003"
+    },
+    "AGT-004": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-004",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-004"
+    },
+    "AGT-005": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-005",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-005"
+    },
+    "AGT-006": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-006",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-006"
+    },
+    "AGT-007": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-007",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-007"
+    },
+    "AGT-008": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-008",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-008"
+    },
+    "AGT-009": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-009",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-009"
+    },
+    "AGT-010": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-010",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-010"
+    },
+    "AGT-011": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-011",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-011"
+    },
+    "AGT-012": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-012",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-012"
+    },
+    "AGT-013": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-013",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-013"
+    },
+    "AGT-014": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-014",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-014"
+    },
+    "AGT-015": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-015",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-015"
+    },
+    "AGT-016": {
+      "owner_path": "docs/canonical/governance/agentic-authority-scope.md",
+      "anchor": "agt-016",
+      "role": "current-authority",
+      "locator": "docs/canonical/governance/agentic-authority-scope.md#agt-016"
     },
     "API-001": {
       "owner_path": "docs/canonical/architecture/commands-api-concurrency.md",
