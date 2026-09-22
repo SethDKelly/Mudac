@@ -46,9 +46,9 @@ Narrow typo/link corrections remain permissible. See [Source Lineage](source-lin
 <a id="doc-005"></a>
 ## DOC-005 — Indexes, READMEs, registries, and agent adapters route; they do not become rule owners
 
-`index.md`, `README.md`, stable-ID registries, traceability tables, `AGENTS.md`, and future IDE/agent adapters may summarize and link authority. Their summaries remain subordinate to the canonical owners they reference.
+`index.md`, `README.md`, stable-ID registries, traceability tables, `AGENTS.md`, the generated top-level `knowledge/` OKF projection, and future IDE/agent adapters may summarize and link authority. Their summaries remain subordinate to the canonical owners they reference.
 
-A routing artifact must not accumulate full rule bodies merely because it is frequently read.
+A routing artifact must not accumulate full rule bodies merely because it is frequently read. Generated OKF projection files are routing-only compatibility artifacts and must never become semantic owners.
 
 <a id="doc-006"></a>
 ## DOC-006 — Knowledge topology does not dictate source-code topology

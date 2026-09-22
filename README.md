@@ -6,7 +6,8 @@ The current product definition is representation-independent: volunteer Judges a
 
 ## Start here
 
-- [docs/index.md](docs/index.md) — preferred OKF v0.2 progressive-disclosure entry point.
+- [docs/index.md](docs/index.md) — preferred authored repository-native progressive-disclosure entry point.
+- [knowledge/index.md](knowledge/index.md) — generated strict OKF v0.2 compatibility projection; routing only, never semantic authority.
 - [Canonical Knowledge](docs/canonical/) — current product/design and governance authority.
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — active pre-implementation repository qualification and agentic-development preparation.

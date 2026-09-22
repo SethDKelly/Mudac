@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "DERIVED ROUTING ONLY — NOT SEMANTIC AUTHORITY",
+  "discovery_root": "docs/index.md",
+  "generated_root": "knowledge",
+  "generator": "scripts/generate_okf_projection.py",
+  "okf_version": "0.2",
+  "generated_at": "2026-09-22T02:28:00Z",
+  "domains": [
+    {
+      "name": "project-context",
+      "title": "Project context, purpose, scope and terminology",
+      "description": "Route to current project mandate, purpose, scope, vocabulary and reusable-design knowledge.",
+      "resource": "docs/canonical/project/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "concepts",
+      "title": "Concept catalog",
+      "description": "Route to the current eighteen-Concept MUDAC catalog.",
+      "resource": "docs/canonical/concepts/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "synchronizations",
+      "title": "Composition and synchronizations",
+      "description": "Route to current cross-Concept composition and application-action authority.",
+      "resource": "docs/canonical/synchronizations/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "dependence",
+      "title": "Dependence and product-family scope",
+      "description": "Route to current inclusion-dependence, subset and PF-01 scope authority.",
+      "resource": "docs/canonical/dependence/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "experience",
+      "title": "Experience and user-visible mapping",
+      "description": "Route to current user-visible mapping, interaction, feedback, disclosure and recovery semantics.",
+      "resource": "docs/canonical/experience/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "mechanisms",
+      "title": "Derived mechanisms",
+      "description": "Route to current derived and supporting non-Concept subjects.",
+      "resource": "docs/canonical/mechanisms/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "policies",
+      "title": "Policies",
+      "description": "Route to current configurable and cross-cutting policy semantics.",
+      "resource": "docs/canonical/policies/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "invariants",
+      "title": "Cross-cutting invariants",
+      "description": "Route to current cross-cutting normative constraints.",
+      "resource": "docs/canonical/invariants/index.md",
+      "role": "current-authority"
+    }
+  ],
+  "project": [
+    {
+      "name": "governance",
+      "title": "Repository and design governance",
+      "description": "Route to methodology, documentation authority, retrieval, change, validation and downstream-boundary governance.",
+      "resource": "docs/canonical/governance/index.md",
+      "role": "current-authority"
+    },
+    {
+      "name": "documentation-topology",
+      "title": "Repository-native documentation topology",
+      "description": "Route to the authored progressive-disclosure discovery root.",
+      "resource": "docs/index.md",
+      "role": "routing"
+    },
+    {
+      "name": "agent-bootstrap",
+      "title": "Repository agent bootstrap",
+      "description": "Route to compact repository-agent startup and authority instructions.",
+      "resource": "AGENTS.md",
+      "role": "routing"
+    },
+    {
+      "name": "concept-design-closure",
+      "title": "Concept Design closure evidence",
+      "description": "Route to Phase 017 closure evidence and post-closure handoff.",
+      "resource": "docs/017-methodology-closure-canonical-consolidation-completion-decision/index.md",
+      "role": "closure-evidence"
+    },
+    {
+      "name": "active-qualification",
+      "title": "Active pre-implementation qualification",
+      "description": "Route to the active Phase 018 repository-qualification program.",
+      "resource": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/index.md",
+      "role": "active-program"
+    },
+    {
+      "name": "downstream-architecture-candidates",
+      "title": "Suspended architecture candidates",
+      "description": "Route to quarantined historical architecture candidates; route presence does not adopt them.",
+      "resource": "docs/canonical/architecture/index.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "name": "downstream-implementation-candidates",
+      "title": "Suspended implementation candidates",
+      "description": "Route to quarantined historical implementation/tooling candidates; route presence does not adopt them.",
+      "resource": "docs/canonical/implementation/index.md",
+      "role": "downstream-candidate"
+    },
+    {
+      "name": "external-references",
+      "title": "External authorities and references",
+      "description": "Route to pinned/profiled external methodologies and standards.",
+      "resource": "docs/references/index.md",
+      "role": "external-reference"
+    }
+  ],
+  "expected_counts": {
+    "domains": 8,
+    "project": 8,
+    "route_documents": 16,
+    "total_markdown_files": 19
+  }
+}

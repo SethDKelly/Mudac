@@ -1,10 +1,8 @@
----
-okf_version: "0.2"
----
+# MUDAC Documentation & Knowledge Index
 
-# MUDAC Knowledge Bundle
+Preferred authored progressive-disclosure entry point for MUDAC repository knowledge. This `docs/` tree is the authoritative repository-native documentation/provenance system; it is **not itself the strict OKF bundle** because preserved legacy phase records intentionally predate OKF frontmatter.
 
-Preferred progressive-disclosure entry point for MUDAC knowledge.
+Generic OKF v0.2 consumers should use the deterministic [generated compatibility projection](../knowledge/). The generated projection routes back here and to current owners; it never becomes semantic authority.
 
 ## Current canonical knowledge
 
@@ -84,7 +82,7 @@ docs/index.md
   → historical source only when rationale/evidence is needed
 ```
 
-Indexes and READMEs route; they do not replace canonical owners.
+Indexes and READMEs route; they do not replace canonical owners. The generated `knowledge/` projection is likewise routing-only and must not be hand-edited.
 
 
 ## Authorized next work

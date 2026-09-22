@@ -44,6 +44,7 @@ class Validator:
     def __init__(self, root: Path, strict_warnings: bool = False) -> None:
         self.root = root.resolve()
         self.docs = self.root / "docs"
+        self.knowledge = self.root / "knowledge"
         self.strict_warnings = strict_warnings
         self.findings: list[Finding] = []
         self.markdown_count = 0
@@ -136,6 +137,9 @@ class Validator:
             self.root / "README.md",
             self.root / "requirements-docs.txt",
             self.root / "scripts" / "validate_knowledge.py",
+            self.root / "scripts" / "generate_okf_projection.py",
+            self.docs / "routing" / "okf_projection.json",
+            self.knowledge / "index.md",
             self.docs / "index.md",
             self.docs / "README.md",
             self.docs / "canonical" / "index.md",
@@ -166,15 +170,15 @@ class Validator:
                     if not index.exists():
                         self.error(index, f"Numbered phase directory {child.name!r} must have index.md.")
 
-        bundle_index = self.docs / "index.md"
+        bundle_index = self.knowledge / "index.md"
         if bundle_index.exists():
             text = self._read(bundle_index)
             if text:
                 fm, _ = self.parse_frontmatter(bundle_index, text)
                 if fm is None:
-                    self.error(bundle_index, "Bundle root must declare okf_version frontmatter.")
+                    self.error(bundle_index, "Generated OKF bundle root must declare okf_version frontmatter.")
                 elif str(fm.get("okf_version")) != "0.2":
-                    self.error(bundle_index, "Bundle root okf_version must be '0.2'.")
+                    self.error(bundle_index, "Generated OKF bundle root okf_version must be '0.2'.")
 
     def validate_frontmatter(self, path: Path, fm: dict | None) -> None:
         name = path.name
@@ -508,6 +512,7 @@ class Validator:
         required_snippets = [
             "contents: read",
             "python scripts/validate_knowledge.py",
+            "python scripts/generate_okf_projection.py --check",
             "requirements-docs.txt",
         ]
         for snippet in required_snippets:

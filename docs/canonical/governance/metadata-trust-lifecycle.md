@@ -30,7 +30,7 @@ Substantive current knowledge under `docs/canonical/` should use:
 - `tags` — useful cross-cutting retrieval labels;
 - `sources` — material provenance for how the current knowledge was derived.
 
-`resource`, `generated`, `verified`, and `stale_after` are used according to the rules below. `index.md` remains a reserved routing document rather than a concept document and does not receive ordinary concept frontmatter; the bundle-root `docs/index.md` may carry `okf_version`.
+`resource`, `generated`, `verified`, and `stale_after` are used according to the rules below. `index.md` remains a reserved routing document rather than a concept document and does not receive ordinary concept frontmatter. The strict OKF bundle root is the generated `knowledge/index.md`, which alone declares `okf_version: "0.2"`; `docs/index.md` is the authored repository-native discovery root.
 
 MUDAC does not add custom metadata fields merely because OKF allows extensions. New producer-defined keys require a concrete machine-readable governance need that links/prose cannot satisfy.
 
@@ -151,9 +151,35 @@ Examples:
 
 Metadata is part of the knowledge contract and is subject to [Canonical Change & Conflict Governance](change-governance.md) where the change affects authority, provenance, or interpretation.
 
+<a id="meta-010"></a>
+## META-010 — Authored documentation and strict OKF compatibility are separate layers
+
+MUDAC uses a two-layer topology:
+
+~~~text
+authored repository authority / provenance
+  = docs/
+
+strict machine-consumable OKF v0.2 compatibility bundle
+  = generated knowledge/
+~~~
+
+The generated projection is deterministic routing only. Its source is `docs/routing/okf_projection.json`, its generator is `scripts/generate_okf_projection.py`, and its targets remain the authored repository surfaces.
+
+This separation exists because preserved legacy phase records intentionally lack OKF frontmatter and must not be bulk-rewritten merely to make the entire historical `docs/` corpus look like a strict bundle.
+
+Rules:
+
+- `docs/` remains semantic/provenance authority according to Documentation Authority & Canonical Ownership;
+- `knowledge/` must never be hand-edited;
+- projection `status: stable` means the routing artifact is current in its routing role, not that a suspended candidate target is accepted;
+- generated routing may point to current authority, closure evidence, active-program records, external references, or explicitly quarantined candidates, but it must label the target role;
+- if projection and authored authority disagree, authored authority wins and projection drift is a validation failure;
+- a projection route never upgrades the authority of its target.
+
 # `log.md` convention
 
-OKF reserves optional `log.md` files for chronological update history. MUDAC does **not** create a bundle-level `docs/log.md` merely for formal completeness.
+OKF reserves optional `log.md` files for chronological update history. MUDAC does **not** create a bundle-level `knowledge/log.md` merely for formal completeness.
 
 Git history plus numbered phase records already provide detailed chronology and attribution. A manually duplicated bundle changelog would create another maintenance surface and drift risk.
 
@@ -199,7 +225,7 @@ The retrofit does not require rewriting that body to manufacture modern metadata
 
 # Relationship to validation tooling
 
-004-H will validate structural properties such as:
+Current repository validation, including `scripts/validate_knowledge.py` and the deterministic OKF projection check, validates structural properties such as:
 
 - allowed/required frontmatter fields for applicable MUDAC document classes;
 - timestamp syntax;
@@ -208,4 +234,4 @@ The retrofit does not require rewriting that body to manufacture modern metadata
 - source/link resolution where appropriate;
 - stable-ID uniqueness.
 
-Those checks must not add `verified` merely because the file is structurally valid.
+Those checks must not add `verified` merely because the file is structurally valid. The projection generator/check additionally proves that every generated route matches its declared source specification and that no hand-authored Markdown has appeared under `knowledge/`.

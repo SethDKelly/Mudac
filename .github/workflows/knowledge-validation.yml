@@ -42,5 +42,8 @@ jobs:
       - name: Install documentation validation dependencies
         run: python -m pip install -r requirements-docs.txt
 
-      - name: Validate MUDAC knowledge structure
+      - name: Validate MUDAC authored knowledge structure
         run: python scripts/validate_knowledge.py
+
+      - name: Check generated OKF projection
+        run: python scripts/generate_okf_projection.py --check

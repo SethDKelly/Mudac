@@ -14,7 +14,7 @@ generated: { by: openai/gpt-5.6-sol, at: 2026-09-04T03:26:36Z }
 
 # Authority
 
-MUDAC adopts **Open Knowledge Format v0.2** as its knowledge representation/navigation convention.
+MUDAC adopts **Open Knowledge Format v0.2** for its machine-consumable knowledge compatibility layer and uses the same metadata/progressive-disclosure semantics in current authored documentation where applicable.
 
 The pinned source above reflects upstream `GoogleCloudPlatform/open-knowledge-format` `main` at commit `ad30107c31c06aec8a7d5636e0d1058118604e6f` when 004-G was performed. MUDAC's adopted version does not float automatically with future upstream changes; a later OKF release or materially changed v0.2 interpretation requires explicit compatibility review under the Phase 004 governance model.
 
@@ -34,6 +34,8 @@ MUDAC uses the v0.2 conventions for:
 - OKF actor conventions for generation/verification metadata.
 
 The exact MUDAC profile is governed by [OKF Metadata, Trust, Verification, Lifecycle & Freshness](../canonical/governance/metadata-trust-lifecycle.md).
+
+The strict OKF bundle is the generated top-level `knowledge/` projection. The authored `docs/` tree remains the repository-native authority and provenance system and intentionally contains pre-OKF historical phase records that are not rewritten merely for format uniformity.
 
 # MUDAC-specific boundaries
 
