@@ -22,7 +22,7 @@ Jackson Concept Design        CLOSED — PHASE 017 PASS WITH BOUNDED CARRY-FORWA
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
 017-A..H                      COMPLETE
 
-Phase 018                     IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 018-L NEXT
+Phase 018                     IN PROGRESS — 018-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE / 018-M NEXT
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
 implementation readiness      READY
@@ -37,4 +37,4 @@ The sole adopted product/application variant remains:
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
 
 
-Phase 018 is active. **018-A through 018-K are complete**; **018-L — Implementation Program Structure, Verification Strategy & Delivery-Gate Design** is next. No feature implementation is authorized.
+Phase 018 is active. **018-A through 018-L are complete**; **018-M — Pre-Implementation Residual Risk Register, Repository Scorecard Regrade & Implementation Entry Decision** is next. No feature implementation is authorized.
