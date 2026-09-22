@@ -2,7 +2,7 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B COMPLETE / 019-C NEXT ELIGIBLE
+**Status:** ACTIVE — 019-A/B/C COMPLETE / 019-D NEXT ELIGIBLE
 
 PHASE 019 ACTIVE
 
@@ -48,13 +48,13 @@ Established the current DRV-001..012 architecture driver baseline.
 
 ### 019-C — Application Ownership / Boundaries / Dependencies
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — Q4R-001 COMPLETE / ADQ-002 ACCEPTED.**
 
-Resolve ADQ-002 after any required Q4 repair of the historical application-boundary hypothesis.
+Accepted the five-boundary ownership-preserving modular-monolith topology in BND-001..012.
 
 ### 019-D — Persistence / History / Provenance / Projections
 
-PLANNED.
+**NEXT ELIGIBLE.**
 
 Resolve ADQ-003.
 
@@ -109,12 +109,12 @@ Create current accepted architecture authority if all acceptance prerequisites p
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B
-next eligible subphase               019-C
+completed subphases                  019-A, 019-B, 019-C
+next eligible subphase               019-D
 automatic advance                    false
 
-ADQ decisions accepted               1 / 10
-Q4 repairs complete                  0 / 4
+ADQ decisions accepted               2 / 10
+Q4 repairs complete                  1 / 4
 technical probes authorized          0
 
 accepted whole architecture          false
