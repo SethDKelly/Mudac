@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-B SUBSTRATE / HISTORICAL IMPLEMENTATION REUSE QUALIFICATION — PLANNING EVIDENCE ONLY",
+  "phase": "020-B",
+  "baseline_head": "09411c8d1685c4a5abcace7dbc23fcefb7498f62",
+  "qualification_classes": [
+    "REUSE_AS_IS",
+    "REUSE_WITH_REVISION",
+    "REFERENCE_ONLY",
+    "REPLACE",
+    "DEFER"
+  ],
+  "current_authority": "docs/canonical/architecture/accepted-architecture.md",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-B-existing-substrate-historical-implementation-reuse-qualification.md",
+  "execution_boundary": {
+    "active_implementation_packages": 0,
+    "g2_authorized_packages": 0,
+    "domain_implementation_authorized": false
+  },
+  "executable_substrate": [
+    {
+      "id": "SUB-001",
+      "surface": "Node 24 + TypeScript 6 + pnpm 11 workspace/lockfile",
+      "disposition": "REUSE_AS_IS",
+      "notes": "strict/reproducible baseline; upgrades remain evidence-gated"
+    },
+    {
+      "id": "SUB-002",
+      "surface": "TypeScript/ESLint/Prettier static-quality configuration",
+      "disposition": "REUSE_AS_IS",
+      "notes": "business-neutral static gate"
+    },
+    {
+      "id": "SUB-003",
+      "surface": "Fastify API composition root and /healthz",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "retain host/bootstrap; add accepted transport/readiness/semantic health later"
+    },
+    {
+      "id": "SUB-004",
+      "surface": "React/Vite/Router/Query browser shell",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "retain shell; CLT implementation and library justification remain downstream"
+    },
+    {
+      "id": "SUB-005",
+      "surface": "worker lifecycle bootstrap",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "RUN-008 compatible; actual SQS/idempotent work not implemented"
+    },
+    {
+      "id": "SUB-006",
+      "surface": "application/foundation/projections/test-support package seams",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "roles useful; exact contracts/dependencies must follow current architecture"
+    },
+    {
+      "id": "SUB-007",
+      "surface": "six historical authoritative module package set",
+      "disposition": "REPLACE",
+      "notes": "BND-002 accepts five modules; judging-operations must not remain independent semantic owner"
+    },
+    {
+      "id": "SUB-008",
+      "surface": "dependency-cruiser enforcement",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "mechanism retained; six-module dependency assumptions must be regenerated"
+    },
+    {
+      "id": "SUB-009",
+      "surface": "local PostgreSQL Docker Compose",
+      "disposition": "REUSE_AS_IS",
+      "notes": "useful local PostgreSQL semantics; not production engine version contract"
+    },
+    {
+      "id": "SUB-010",
+      "surface": "Vitest configuration",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "runner usable; zero current test files"
+    },
+    {
+      "id": "SUB-011",
+      "surface": "Playwright configuration",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "browser harness usable; empty desktop-Chromium-only suite insufficient"
+    },
+    {
+      "id": "SUB-012",
+      "surface": "Knowledge Validation workflow",
+      "disposition": "REUSE_AS_IS",
+      "notes": "current repository/authority conformance gate"
+    },
+    {
+      "id": "SUB-013",
+      "surface": "CodeQL workflow",
+      "disposition": "REUSE_AS_IS",
+      "notes": "static-security input; not behavioral proof"
+    },
+    {
+      "id": "SUB-014",
+      "surface": "Implementation Verification workflow",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "retain stable check identity; later add implementation/scanning/evidence integration"
+    },
+    {
+      "id": "SUB-015",
+      "surface": "Dependabot npm/GitHub Actions configuration",
+      "disposition": "REUSE_AS_IS",
+      "notes": "supply-chain input; does not prove zero open alerts"
+    },
+    {
+      "id": "SUB-016",
+      "surface": "OpenTofu environment roots / S3 backend pattern",
+      "disposition": "REUSE_AS_IS",
+      "notes": "accepted environment/Region skeleton; application resources absent"
+    },
+    {
+      "id": "SUB-017",
+      "surface": "infra/modules placeholder",
+      "disposition": "REUSE_AS_IS",
+      "notes": "retain location; avoid speculative modules"
+    },
+    {
+      "id": "SUB-018",
+      "surface": ".env.example local configuration",
+      "disposition": "REUSE_WITH_REVISION",
+      "notes": "extend with typed/test-control config and production-safe separation"
+    },
+    {
+      "id": "SUB-019",
+      "surface": "tests/e2e location",
+      "disposition": "REUSE_AS_IS",
+      "notes": "retain location; no verification credit until tests are authored"
+    }
+  ],
+  "historical_candidates": [
+    {
+      "path": "docs/canonical/implementation/implementation-foundation.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "HIGH",
+      "mandatory_repairs": [
+        "current five-owner architecture references",
+        "remove Phase-008/009 execution gates",
+        "requalify uninstalled concrete mechanisms",
+        "autonomous exact-SHA review/verification model"
+      ]
+    },
+    {
+      "path": "docs/canonical/implementation/verification-strategy.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "HIGH",
+      "mandatory_repairs": [
+        "E1-E7 terminology",
+        "MCP nonproduction control plane",
+        "protected hidden evaluator",
+        "independent reviewer/gatekeeper model",
+        "current rule families and 15 scenarios"
+      ]
+    },
+    {
+      "path": "docs/canonical/implementation/source-topology.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "CRITICAL",
+      "mandatory_repairs": [
+        "six-to-five owner topology",
+        "dependency allowlist",
+        "current BND/PST/CMD/CLT rule references",
+        "physical package names re-derived"
+      ]
+    },
+    {
+      "path": "docs/canonical/implementation/runtime-delivery-bootstrap.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "HIGH",
+      "mandatory_repairs": [
+        "current five-owner topology",
+        "RUN-001..026 runtime authority",
+        "remove historical 006/008 execution language",
+        "Phase-020/021 lifecycle"
+      ]
+    },
+    {
+      "path": "docs/canonical/implementation/persistence-history-projection.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "HIGH",
+      "mandatory_repairs": [
+        "five-owner physical model",
+        "remove obsolete Outcome Revision substrate",
+        "requalify Kysely/pg/migration runner",
+        "leave exact table/retention details downstream"
+      ]
+    },
+    {
+      "path": "docs/canonical/implementation/identity-authentication-access-session.md",
+      "disposition": "REUSE_WITH_REVISION",
+      "priority": "HIGH",
+      "mandatory_repairs": [
+        "IAM/BND/PST/CMD/RUN references",
+        "remove historical Phase-008 boundary",
+        "rederive exact persistence/session/provider SDK configuration",
+        "retain Cognito/opaque session/relational session alignment"
+      ]
+    }
+  ],
+  "material_gaps": [
+    "accepted five-owner source/package realization",
+    "database schema/migrations/history/Provenance/outbox",
+    "commands/idempotency/concurrency/reconciliation",
+    "Cognito/Identity/Participation/Access/session implementation",
+    "offline/local Draft continuity",
+    "Artifact/Publication implementation",
+    "substantive browser journeys",
+    "synthetic fixture factory",
+    "non-production MCP test-control plane",
+    "OpenTelemetry/semantic observability",
+    "AWS application resources and deployment roles",
+    "protected hidden evaluator",
+    "independent autonomous code-review evidence",
+    "accessibility evidence",
+    "load/failover/restore exercises"
+  ],
+  "repository_administration": {
+    "rulesets_endpoint_count": 0,
+    "main_branch_protection_read": "UNAVAILABLE_403_TO_CURRENT_INTEGRATION",
+    "enforced_merge_policy_claim_allowed": false,
+    "owner": "020-G"
+  },
+  "counts": {
+    "workspace_packages": 13,
+    "authored_test_files": 0,
+    "migration_files": 0,
+    "historical_implementation_candidates": 6,
+    "candidate_reuse_with_revision": 6,
+    "active_implementation_packages": 0
+  }
+}
