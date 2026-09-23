@@ -10,6 +10,7 @@ CONTROL = "docs/routing/phase019_architecture_decision_control.json"
 ARCH_PLAN = "docs/routing/architecture_reentry_plan.json"
 QUALIFICATION = "docs/routing/downstream_candidate_qualification.json"
 IMPLEMENTATION = "docs/routing/implementation_program_framework.json"
+DISPOSITION = "docs/routing/phase019_architecture_candidate_disposition.json"
 
 EXPECTED_CLOSURE_COMMIT = "526b8533395e7cbdabf567c56115f024b78a10f5"
 EXPECTED_QUESTIONS = [f"ADQ-{i:03d}" for i in range(1, 11)]
@@ -56,6 +57,7 @@ def main() -> int:
         plan = json.loads((repo / ARCH_PLAN).read_text(encoding="utf-8"))
         qualification = json.loads((repo / QUALIFICATION).read_text(encoding="utf-8"))
         implementation = json.loads((repo / IMPLEMENTATION).read_text(encoding="utf-8"))
+        disposition = json.loads((repo / DISPOSITION).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -90,13 +92,8 @@ def main() -> int:
                 errors.append(f"{path}: snapshot blob_sha must be a 40-char git SHA")
 
     state = control.get("phase019_state", {})
-    if state.get("status") != "ACTIVE":
-        errors.append("Phase 019 must be ACTIVE after 019-A start gate")
     if state.get("automatic_advance") is not False:
         errors.append("Phase 019 automatic advance must remain false")
-    if state.get("accepted_architecture_established") is not False:
-        # whole-architecture acceptance is checked below; until that state is accepted this must remain false.
-        pass
 
     completed = state.get("completed_subphases")
     if not isinstance(completed, list):
@@ -282,6 +279,12 @@ def main() -> int:
 
     whole = control.get("whole_architecture_acceptance", {})
     whole_accepted = whole.get("accepted")
+    phase_closed = len(completed) == len(EXPECTED_SUBPHASES)
+    expected_phase_status = "COMPLETE" if phase_closed else "ACTIVE"
+    if state.get("status") != expected_phase_status:
+        errors.append(f"Phase 019 status must be {expected_phase_status} for current completion state")
+
+    impl_state = implementation.get("state", {})
     if whole_accepted is True:
         if "019-L" not in completed:
             errors.append("whole architecture cannot be accepted before 019-L completes")
@@ -293,17 +296,54 @@ def main() -> int:
             errors.append("whole architecture accepted=true requires state ACCEPTED")
         if not whole.get("acceptance_document"):
             errors.append("whole architecture acceptance requires acceptance_document")
+        if whole.get("accepted_architecture_owner") != "docs/canonical/architecture/accepted-architecture.md":
+            errors.append("whole architecture acceptance must identify accepted-architecture current owner")
+        if whole.get("historical_candidate_disposition") != DISPOSITION:
+            errors.append("whole architecture acceptance must identify candidate disposition register")
+        if state.get("package_derivation_allowed") is not True:
+            errors.append("G0 acceptance must allow package derivation")
+        if state.get("implementation_execution_authorized") is not False:
+            errors.append("019-L acceptance must not authorize implementation execution")
+        if state.get("implementation_package_count") != 0:
+            errors.append("019-L must close with zero implementation packages")
+        if impl_state.get("framework_state") != "PLANNING_READY":
+            errors.append("implementation framework must be PLANNING_READY after architecture acceptance")
+        if impl_state.get("accepted_architecture_established") is not True:
+            errors.append("implementation framework must acknowledge accepted architecture")
+        if impl_state.get("package_derivation_allowed") is not True:
+            errors.append("implementation framework must allow package derivation after G0")
+        if impl_state.get("implementation_execution_authorized") is not False:
+            errors.append("implementation framework execution must remain unauthorized after G0")
+        if impl_state.get("active_package_count") != 0:
+            errors.append("019-L handoff must retain zero active packages")
+
+        qualified_architecture = {
+            item.get("path")
+            for item in qualification.get("records", [])
+            if isinstance(item, dict) and item.get("layer") == "architecture"
+        }
+        disposition_records = disposition.get("records", [])
+        disposition_by_path = {
+            item.get("path"): item
+            for item in disposition_records
+            if isinstance(item, dict)
+        }
+        if set(disposition_by_path) != qualified_architecture:
+            errors.append("historical architecture candidate disposition set must exactly match qualified architecture candidates")
+        for path in sorted(qualified_architecture):
+            item = disposition_by_path.get(path, {})
+            if item.get("disposition") != "SUPERSEDED_RETAINED_EVIDENCE":
+                errors.append(f"{path}: accepted architecture requires explicit superseded/retained-evidence disposition")
+            owners = item.get("replacement_current_owners")
+            if not isinstance(owners, list) or not owners:
+                errors.append(f"{path}: disposition requires replacement current owner(s)")
+        if disposition.get("disposition_state") != "COMPLETE":
+            errors.append("historical architecture candidate disposition must be COMPLETE")
     else:
         if whole.get("state") == "ACCEPTED":
             errors.append("whole architecture state ACCEPTED requires accepted=true")
         if state.get("accepted_architecture_established") is not False:
             errors.append("phase state cannot establish architecture before whole acceptance")
-
-    if state.get("accepted_architecture_established") is not bool(whole_accepted):
-        errors.append("phase/whole architecture acceptance state drift")
-
-    impl_state = implementation.get("state", {})
-    if whole_accepted is not True:
         if state.get("implementation_package_count") != 0:
             errors.append("implementation package count must remain zero before whole architecture acceptance")
         if state.get("package_derivation_allowed") is not False:
@@ -316,6 +356,9 @@ def main() -> int:
             errors.append("implementation framework package derivation must remain false")
         if impl_state.get("implementation_execution_authorized") is not False:
             errors.append("implementation framework execution authority must remain false")
+
+    if state.get("accepted_architecture_established") is not bool(whole_accepted):
+        errors.append("phase/whole architecture acceptance state drift")
 
     counts = control.get("counts", {})
     expected_counts = {
