@@ -213,6 +213,17 @@ def main() -> int:
             errors,
         )
 
+        test_control_repo = clone_repo(source, tmp, "test-control")
+        test_control_path = test_control_repo / "docs/routing/phase020_nonproduction_test_control_architecture.json"
+        test_control = json.loads(test_control_path.read_text(encoding="utf-8"))
+        test_control["production_denial"]["production_target_forbidden"] = False
+        test_control_path.write_text(json.dumps(test_control, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "Nonproduction MCP production-target leakage",
+            run_script(source, test_control_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(test_control_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -225,7 +236,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 12 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 13 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
