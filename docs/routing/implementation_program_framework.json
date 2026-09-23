@@ -282,9 +282,10 @@
       "020-B",
       "020-C",
       "020-D",
-      "020-E"
+      "020-E",
+      "020-F"
     ],
-    "next_eligible_subphase": "020-F",
+    "next_eligible_subphase": "020-G",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -303,6 +304,11 @@
     "active_package_count": 0,
     "g2_authorized_package_count": 0,
     "package_graph_acyclic": true,
-    "final_phase_grouping_deferred_to": "020-K"
+    "final_phase_grouping_deferred_to": "020-K",
+    "implementation_phase_contract": "docs/routing/phase020_implementation_phase_contract.json",
+    "visible_success_criteria_required": true,
+    "normative_thresholds_visible": true,
+    "hidden_requirements_forbidden": true,
+    "protected_probe_details_allowed": true
   }
 }
