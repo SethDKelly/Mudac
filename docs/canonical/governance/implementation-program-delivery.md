@@ -48,6 +48,8 @@ The framework itself still does not:
 
 At the Phase-019 → Phase-020 handoff, active package count remains zero and implementation execution remains unauthorized.
 
+Phase 020 is the final **pre-implementation program-design lifecycle**. It may derive the phase/package roadmap, evidence contracts and readiness state, but it does not grant G2 or execute MUDAC domain implementation. The first implementation execution may occur only in Phase 021 or later after the relevant package/phase receives explicit G2 human/program authorization.
+
 <a id="ipg-002"></a>
 ## IPG-002 — Implementation Packages Derive From Accepted Architecture and Current Semantic Authority
 
@@ -326,9 +328,9 @@ Those principles may inform this framework only where they align with current EN
 
 Concrete historical choices such as Vitest, Playwright, PostgreSQL/Testcontainers, Fastify test hosts or AWS-specific scanners remain Q3 implementation hypotheses until architecture and package planning make them applicable.
 
-# Phase-020 implementation-program start gate
+# Phase-020 autonomous implementation-program design
 
-Accepted architecture now exists. The Phase-020 start gate must:
+Accepted architecture now exists and 020-A has opened the final pre-implementation design lifecycle. Phase 020 must:
 
 1. confirm the exact accepted architecture baseline;
 2. create the implementation-package namespace;
