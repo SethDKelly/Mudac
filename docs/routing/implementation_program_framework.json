@@ -62,7 +62,8 @@
       "adversarial_review_policy",
       "repair_budget",
       "gatekeeper_policy",
-      "reopen_policy"
+      "reopen_policy",
+      "crosscutting_verification_profile"
     ],
     "identity_rule": "Package IDs are durable and independent of source layout; retired IDs are never reused.",
     "boundary_rule": "Package boundaries derive from accepted architecture plus current semantic authority, not one-to-one Concept mapping or historical file topology."
@@ -172,7 +173,10 @@
         "dependencies explicit",
         "semantic/architecture traceability complete",
         "evidence contract explicit",
-        "risk/migration/security impacts identified"
+        "risk/migration/security impacts identified",
+        "cross-cutting migration/recovery/accessibility/performance/cost applicability classified",
+        "affected scenario obligations explicit",
+        "visible acceptance thresholds and workload/cost assumptions declared where material"
       ],
       "execution_authority": false
     },
@@ -208,7 +212,9 @@
       "requires": [
         "shared-state and integration compatibility closed",
         "migration/recovery evidence where applicable",
-        "affected scenario seeds reconciled"
+        "affected scenario seeds reconciled",
+        "cross-cutting migration/recovery integration evidence closed where applicable",
+        "affected scenario evidence reaches its material composed boundary"
       ],
       "execution_authority": false
     },
@@ -236,7 +242,8 @@
       "requires": [
         "release authority",
         "applicable E6 evidence",
-        "deployment/migration/rollback evidence"
+        "deployment/migration/rollback evidence",
+        "applicable restore/load/manual accessibility/cost-control evidence"
       ],
       "execution_authority": false
     },
@@ -297,9 +304,10 @@
       "020-E",
       "020-F",
       "020-G",
-      "020-H"
+      "020-H",
+      "020-I"
     ],
-    "next_eligible_subphase": "020-I",
+    "next_eligible_subphase": "020-J",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -333,6 +341,9 @@
     "adversarial_conformance_review_required": true,
     "repair_may_expand_g2_scope": false,
     "completion_record_immutable": true,
-    "post_g5_reopen_requires_reauthorization": true
+    "post_g5_reopen_requires_reauthorization": true,
+    "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json",
+    "all_15_scenarios_mapped": true,
+    "migration_recovery_accessibility_performance_cost_mapping_complete": true
   }
 }
