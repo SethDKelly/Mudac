@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-F IMPLEMENTATION PHASE/PACKAGE CONTRACT — DESIGN ONLY; DEFINES G1/G2 INPUT SHAPE AND VERIFICATION DISCIPLINE",
+  "phase": "020-F",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md",
+  "applies_to": {
+    "implementation_phase": true,
+    "implementation_package": true,
+    "work_unit_context_manifest": true,
+    "protected_evaluator": true
+  },
+  "boundary": {
+    "phase020_execution_authorized": false,
+    "active_packages": 0,
+    "g2_authorized_packages": 0,
+    "contract_definition_does_not_make_packages_g1_ready": true,
+    "contract_definition_does_not_grant_g2": true
+  },
+  "phase_contract": {
+    "required_sections": [
+      "phase_id_and_title",
+      "purpose",
+      "included_package_ids",
+      "package_g1_state",
+      "exact_entry_baseline",
+      "scope_in",
+      "scope_out",
+      "semantic_architecture_engineering_refs",
+      "hard_integration_evidence_dependencies",
+      "owned_surfaces",
+      "serialized_surfaces",
+      "coordinator_and_role_policy",
+      "declared_work_unit_graph",
+      "context_manifest_rules",
+      "visible_success_criteria",
+      "evidence_obligations",
+      "scenario_obligations",
+      "security_privacy_disclosure_impacts",
+      "migration_compatibility_impacts",
+      "accessibility_degraded_impacts",
+      "failure_recovery_impacts",
+      "performance_cost_obligations",
+      "required_nonproduction_tiers",
+      "allowed_external_actions",
+      "circuit_breakers",
+      "repair_budget_and_escalation",
+      "rollback_or_recovery_plan",
+      "known_residual_risks",
+      "g2_authorization_record",
+      "exit_gate_contract"
+    ],
+    "multi_package_phase_rule": "EVERY_INCLUDED_PACKAGE_MUST_BE_G1_COMPLETE_AND_EXPLICITLY_INCLUDED_IN_THE_G2_AUTHORIZATION_SET",
+    "package_scope_inference_forbidden": true,
+    "next_phase_auto_authorization": false
+  },
+  "package_g1_contract": {
+    "required_before_g1": [
+      "package_schema_complete",
+      "scope_and_exclusions_explicit",
+      "semantic_architecture_engineering_traceability_complete",
+      "dependencies_and_serialized_surfaces_explicit",
+      "visible_success_criteria_instantiated",
+      "required_evidence_obligations_instantiated",
+      "scenario_obligations_instantiated",
+      "migration_security_accessibility_recovery_performance_cost_impacts_classified",
+      "compatibility_or_rollback_plan_explicit",
+      "residual_risks_and_reopen_triggers_explicit",
+      "phase_assignment_or_explicit_planning_owner_known"
+    ],
+    "package_g1_is_execution_authority": false
+  },
+  "visible_success_criterion_schema": {
+    "required_fields": [
+      "id",
+      "statement",
+      "criterion_type",
+      "required",
+      "authority_refs",
+      "evidence_floor",
+      "material_boundary",
+      "verification_visibility",
+      "failure_class",
+      "applies_to"
+    ],
+    "optional_fields": [
+      "visible_normative_threshold",
+      "required_environment_tiers",
+      "scenario_refs",
+      "dependency_refs",
+      "notes"
+    ],
+    "id_rule": "STABLE_WITHIN_PACKAGE_OR_PHASE_AND_NEVER_SILENTLY_REPURPOSED",
+    "statement_rule": "OUTCOME_OR_OBLIGATION_ORIENTED_NOT_TEST_IMPLEMENTATION_OR_FILE_CHANGE",
+    "required_default": true,
+    "allowed_criterion_types": [
+      "SEMANTIC_BEHAVIOR",
+      "FUNCTIONAL_BEHAVIOR",
+      "AUTHORITY_SECURITY_DISCLOSURE",
+      "DATA_HISTORY_MIGRATION",
+      "ACCESSIBILITY_INTERACTION",
+      "FAILURE_RECOVERY",
+      "CONCURRENCY_IDEMPOTENCY",
+      "PERFORMANCE_CAPACITY",
+      "COST_OPERABILITY",
+      "OBSERVABILITY",
+      "COMPATIBILITY",
+      "STATIC_QUALITY",
+      "DOCUMENTATION_TRACEABILITY"
+    ],
+    "normative_threshold_rule": "ANY_THRESHOLD_THAT_DEFINES_ACCEPTANCE_OR_PRODUCT_RUNTIME_OBLIGATION_MUST_BE_VISIBLE",
+    "test_name_as_criterion_forbidden_unless_test_itself_is_deliverable": true
+  },
+  "evidence_obligation_schema": {
+    "required_fields": [
+      "id",
+      "criterion_refs",
+      "evidence_class",
+      "claim",
+      "material_boundary",
+      "environment_tier",
+      "required",
+      "exact_sha_required",
+      "reproducibility",
+      "visibility",
+      "producer",
+      "retention_or_reference"
+    ],
+    "evidence_classes": {
+      "E1": {
+        "name": "documentation/static",
+        "can_establish": [
+          "documentation-conformance",
+          "type-lint-format",
+          "static-analysis",
+          "generated-contract-integrity"
+        ],
+        "cannot_alone_establish": [
+          "runtime-behavior",
+          "provider-behavior",
+          "production-behavior"
+        ]
+      },
+      "E2": {
+        "name": "unit/component",
+        "can_establish": [
+          "pure-logic",
+          "isolated-component-behavior",
+          "deterministic-local-contract"
+        ],
+        "cannot_alone_establish": [
+          "real-database-semantics",
+          "real-provider-behavior",
+          "whole-journey",
+          "production-behavior"
+        ]
+      },
+      "E3": {
+        "name": "integration/runtime",
+        "can_establish": [
+          "real-selected-database-semantics",
+          "material-provider-runtime-contract",
+          "transaction-concurrency-boundary",
+          "deployed-nonproduction-runtime"
+        ],
+        "cannot_alone_establish": [
+          "whole-user-journey-when-not-exercised",
+          "production-behavior"
+        ]
+      },
+      "E4": {
+        "name": "scenario/end-to-end",
+        "can_establish": [
+          "cross-boundary-consequential-workflow",
+          "browser-api-integrated-journey",
+          "scenario-composition"
+        ],
+        "cannot_alone_establish": [
+          "production-readiness"
+        ]
+      },
+      "E5": {
+        "name": "security/accessibility/recovery",
+        "can_establish": [
+          "authority-disclosure-abuse-behavior",
+          "accessibility",
+          "failure-recovery-concurrency-adversarial-behavior"
+        ],
+        "cannot_alone_establish": [
+          "production-readiness"
+        ]
+      },
+      "E6": {
+        "name": "operational/deployment",
+        "can_establish": [
+          "migration-rollout-restore-load-observability-dr",
+          "deployment-operability"
+        ],
+        "cannot_alone_establish": [
+          "production-behavior-without-E7"
+        ]
+      },
+      "E7": {
+        "name": "production",
+        "can_establish": [
+          "authorized-production-behavior",
+          "production-operational-evidence"
+        ],
+        "phase020_or_normal_package_exit_required": false
+      }
+    },
+    "evidence_floor_rule": "A_CLAIM_MAY_USE_STRONGER_OR_COMPOSED_EVIDENCE_BUT_NOT_WEAKER_EVIDENCE_THAN_THE_VISIBLE_FLOOR",
+    "exact_sha_rule": "MANDATORY_FOR_CODE_RUNTIME_AND_EXIT_GATING_EVIDENCE_UNLESS_EXTERNAL_MANUAL_EVIDENCE_IS_EXPLICITLY_VERSION_LINKED"
+  },
+  "verification_visibility": {
+    "PUBLIC": {
+      "description": "Visible to implementer before execution",
+      "must_include": [
+        "all_requirements_and_semantic_obligations",
+        "scope_and_exclusions",
+        "success_criteria",
+        "normative_acceptance_thresholds",
+        "required_evidence_classes_and_material_boundaries",
+        "required_environment_tiers",
+        "mandatory_scenario_categories",
+        "security_accessibility_recovery_compatibility_obligations",
+        "circuit_breakers_and_exit_predicates"
+      ]
+    },
+    "PROTECTED": {
+      "description": "Evaluator implementation details may remain unavailable to ordinary implementers",
+      "may_hide": [
+        "test_source_and_internal_probe_names",
+        "exact_fixture_seeds",
+        "specific_sample_values",
+        "randomized_case_generation",
+        "exact_concurrency_interleavings",
+        "fault_injection_timing",
+        "request_ordering",
+        "mutation_variants",
+        "probe_selection_and_sampling_distribution",
+        "evaluator_only_credentials_and_infrastructure",
+        "non_normative_harness_timeouts"
+      ],
+      "may_not_hide": [
+        "product_or_semantic_requirement",
+        "accepted_architecture_rule",
+        "normative_acceptance_threshold",
+        "required_evidence_class",
+        "required_material_boundary",
+        "required_environment_tier",
+        "mandatory_scenario_category",
+        "security_or_disclosure_property",
+        "accessibility_target",
+        "compatibility_requirement",
+        "migration_or_recovery_obligation",
+        "performance_or_cost_requirement_when_normative",
+        "known_preexisting_blocker"
+      ]
+    }
+  },
+  "protected_evaluator": {
+    "separate_runtime_or_principal": true,
+    "ordinary_implementer_has_test_source_access": false,
+    "derives_only_from_visible_contract": true,
+    "hidden_requirements_forbidden": true,
+    "secret_semantic_bypass_forbidden": true,
+    "production_use_forbidden": true,
+    "modifies_candidate_code": false,
+    "grants_g2": false,
+    "grants_next_phase_authority": false,
+    "evaluates_exact_candidate_revision": true,
+    "may_use_test_control_capabilities": true,
+    "direct_fixture_seed_cannot_prove_bypassed_command": true,
+    "anti_gaming_checks": [
+      "no-evaluator-detection-or-special-case-behavior",
+      "no-fixture-id-or-hidden-seed-hardcoding",
+      "no-synthetic-actor-authority-bypass",
+      "no-mandatory-test-or-scanner-disablement",
+      "no-evidence-fabrication-or-result-rewrite",
+      "no-test-only-domain-semantic-fork",
+      "no-hidden-probe-exfiltration-as-completion-strategy"
+    ]
+  },
+  "evaluation_result_contract": {
+    "per_criterion_states": [
+      "PASS",
+      "FAIL",
+      "BLOCKED",
+      "INCONCLUSIVE",
+      "NOT_APPLICABLE_WITH_APPROVED_RATIONALE"
+    ],
+    "package_or_phase_pass_requires": "ALL_REQUIRED_CRITERIA_PASS_AND_ALL_REQUIRED_EVIDENCE_OBLIGATIONS_SATISFIED_AND_NO_BLOCKING_REVIEW_FINDING",
+    "fail_closed_states": [
+      "FAIL",
+      "BLOCKED",
+      "INCONCLUSIVE"
+    ],
+    "protected_failure_diagnostics": {
+      "must_disclose": [
+        "criterion_id",
+        "obligation_category",
+        "failure_class",
+        "candidate_sha",
+        "environment_or_evidence_boundary",
+        "sufficient_repair_direction_without_new_requirement"
+      ],
+      "may_withhold": [
+        "exact_hidden_fixture",
+        "exact_hidden_seed",
+        "exact_probe_source",
+        "exact_interleaving_or_fault_timing_when_disclosure_would_destroy_probe_value"
+      ]
+    }
+  },
+  "failure_taxonomy": [
+    "IMPLEMENTATION_DEFECT",
+    "INTEGRATION_OR_COMPATIBILITY_DEFECT",
+    "SECURITY_OR_AUTHORITY_DEFECT",
+    "ACCESSIBILITY_OR_INTERACTION_DEFECT",
+    "MIGRATION_OR_RECOVERY_DEFECT",
+    "PERFORMANCE_OR_COST_DEFECT",
+    "OBSERVABILITY_OR_EVIDENCE_DEFECT",
+    "TEST_HARNESS_OR_EVALUATOR_DEFECT",
+    "ENVIRONMENT_OR_PROVIDER_DEFECT",
+    "NONDETERMINISTIC_EVIDENCE",
+    "REQUIREMENT_OR_ARCHITECTURE_CONTRADICTION"
+  ],
+  "repair_rules": {
+    "ordinary_failure_routes_to_repair": true,
+    "evaluator_failure_does_not_authorize_requirement_change": true,
+    "repeated_or_contradictory_failure_may_trigger_circuit_breaker": true,
+    "hidden_probe_should_be_minimized_to_public_repro_when_practical": true,
+    "mandatory_failure_may_not_be_quarantined_or_reclassified_without_governed_rationale": true
+  },
+  "phase_exit_contract": {
+    "candidate_revision_frozen_for_review": true,
+    "exact_sha_required": true,
+    "public_ci_required": true,
+    "protected_evaluation_required_when_declared": true,
+    "independent_code_review_required": true,
+    "adversarial_conformance_review_required": true,
+    "mandatory_evidence_bundle_required": true,
+    "traceability_current_required": true,
+    "unresolved_blocker_forbidden": true,
+    "implementer_self_close_forbidden": true,
+    "gatekeeper_may_record_complete_only_when_predicates_pass": true,
+    "next_phase_result": "NEXT_ELIGIBLE_NOT_AUTHORIZED"
+  },
+  "package_discovery_relation": {
+    "source": "docs/routing/phase020_implementation_package_discovery.json",
+    "proposed_package_count": 15,
+    "package_specific_criteria_instantiated_by_020f": false,
+    "reason": "020-F defines the reusable contract; 020-I and 020-K complete package-specific criteria/evidence/phase assignments.",
+    "g1_ready_count_after_020f": 0
+  }
+}
