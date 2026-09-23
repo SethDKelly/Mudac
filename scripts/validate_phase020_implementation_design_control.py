@@ -14,6 +14,7 @@ TEST_CONTROL = "docs/routing/phase020_nonproduction_test_control_architecture.js
 PACKAGE_DISCOVERY = "docs/routing/phase020_implementation_package_discovery.json"
 PHASE_CONTRACT = "docs/routing/phase020_implementation_phase_contract.json"
 CI_EVIDENCE = "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
+REVIEW_EXIT = "docs/routing/phase020_review_repair_exit_gate_governance.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -35,6 +36,7 @@ def main() -> int:
         package_discovery = json.loads((repo / PACKAGE_DISCOVERY).read_text(encoding="utf-8")) if (repo / PACKAGE_DISCOVERY).is_file() else None
         phase_contract = json.loads((repo / PHASE_CONTRACT).read_text(encoding="utf-8")) if (repo / PHASE_CONTRACT).is_file() else None
         ci_evidence = json.loads((repo / CI_EVIDENCE).read_text(encoding="utf-8")) if (repo / CI_EVIDENCE).is_file() else None
+        review_exit = json.loads((repo / REVIEW_EXIT).read_text(encoding="utf-8")) if (repo / REVIEW_EXIT).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -607,6 +609,117 @@ def main() -> int:
             if imp015.get("status") != "PROPOSED" or imp015.get("g1_ready") is not False or imp015.get("g2_authorized") is not False:
                 errors.append("020-G must not promote IMP-015 beyond PROPOSED")
 
+    if "020-H" in completed:
+        if review_exit is None:
+            errors.append("020-H completion requires review/repair/exit-gate governance")
+        else:
+            if control.get("review_repair_exit_gate_governance") != REVIEW_EXIT:
+                errors.append("Phase-020 control must point to 020-H review/repair/exit-gate governance")
+
+            boundary_h = review_exit.get("boundary", {})
+            if boundary_h.get("design_only") is not True:
+                errors.append("020-H must remain design-only")
+            for key in ("implementation_execution_authorized","release_authorized","production_authorized","review_pass_grants_merge_authority","g5_grants_next_g2","reopen_restores_old_g2_automatically"):
+                if boundary_h.get(key) is not False:
+                    errors.append(f"020-H boundary.{key} must be false")
+            if boundary_h.get("active_packages") != 0 or boundary_h.get("g1_ready_packages") != 0 or boundary_h.get("g2_authorized_packages") != 0:
+                errors.append("020-H must retain zero active/G1-ready/G2-authorized packages")
+
+            code_review = review_exit.get("independent_code_review", {})
+            for key in ("required","same_authoring_run_forbidden","independent_context_required","reviewer_edits_candidate_becomes_implementer","reviewer_edit_requires_new_independent_review"):
+                if code_review.get(key) is not True:
+                    errors.append(f"020-H independent_code_review.{key} must be true")
+            if code_review.get("default_write_authority") is not False:
+                errors.append("020-H reviewer default write authority must remain false")
+
+            adversarial = review_exit.get("adversarial_conformance_review", {})
+            for key in ("required","same_authoring_run_forbidden","derives_only_from_visible_authority","hidden_requirements_forbidden","production_target_forbidden","candidate_source_mutation_while_reviewer_forbidden","probe_exfiltration_forbidden"):
+                if adversarial.get(key) is not True:
+                    errors.append(f"020-H adversarial_conformance_review.{key} must be true")
+            categories = adversarial.get("challenge_categories", {})
+            for key in ("contract_evasion","authority_erosion","evidence_gaming","security_privacy_escape","complexity_scope_gaming"):
+                if not categories.get(key):
+                    errors.append(f"020-H adversarial challenge category missing: {key}")
+
+            finding = review_exit.get("finding_schema", {})
+            required_finding_fields = set(finding.get("required_fields", []))
+            for field in ("finding_id","candidate_sha","severity","blocking","statement","authority_refs","affected_criteria","status","disposition_rationale"):
+                if field not in required_finding_fields:
+                    errors.append(f"020-H finding schema missing field: {field}")
+            if finding.get("open_blocking_finding_compatible_with_pass") is not False:
+                errors.append("020-H PASS cannot coexist with open blocking finding")
+            if finding.get("comment_resolution_alone_closes_finding") is not False or finding.get("implementer_assertion_alone_closes_finding") is not False:
+                errors.append("020-H blocking finding cannot close by UI/implementer assertion alone")
+            if finding.get("risk_acceptance_requires_authorized_actor") is not True:
+                errors.append("020-H risk acceptance requires authorized actor")
+            if finding.get("reviewer_or_gatekeeper_may_self_create_risk_acceptance_authority") is not False:
+                errors.append("020-H reviewer/gatekeeper cannot create risk-acceptance authority")
+
+            outcomes = review_exit.get("review_outcomes", {})
+            if outcomes.get("only_exit_success") != "PASS":
+                errors.append("020-H only PASS may satisfy review exit")
+            if outcomes.get("inconclusive_fails_closed") is not True:
+                errors.append("020-H INCONCLUSIVE must fail closed")
+
+            repair = review_exit.get("repair", {})
+            for key in ("pre_g5_existing_g2_may_cover_repair_if_within_original_scope","source_change_creates_new_candidate_sha","affected_evidence_must_rerun","affected_review_must_rerun","failed_retry_history_preserved","budget_required_before_g2"):
+                if repair.get(key) is not True:
+                    errors.append(f"020-H repair.{key} must be true")
+            for key in ("may_expand_scope","may_add_undeclared_package_or_work_unit","may_change_visible_criteria","may_change_semantics_or_architecture","may_require_unplanned_privilege","may_disable_mandatory_evidence","universal_numeric_budget_defined_by_020h"):
+                if repair.get(key) is not False:
+                    errors.append(f"020-H repair.{key} must be false")
+            if repair.get("budget_exhaustion_result") != "BLOCKED_OR_EXPLICIT_HUMAN_PROGRAM_EXTENSION":
+                errors.append("020-H repair budget exhaustion must block or require explicit extension")
+
+            gatekeeper = review_exit.get("gatekeeper", {})
+            if gatekeeper.get("same_authoring_run_as_implementer_for_candidate_forbidden") is not True:
+                errors.append("020-H Gatekeeper must not be candidate's authoring run")
+            for key in ("candidate_source_write_forbidden",):
+                if gatekeeper.get(key) is not True:
+                    errors.append(f"020-H gatekeeper.{key} must be true")
+            for key in ("may_override_mandatory_failure","may_fabricate_missing_evidence","may_change_criteria","may_grant_next_g2","may_merge_or_deploy_from_g5"):
+                if gatekeeper.get(key) is not False:
+                    errors.append(f"020-H gatekeeper.{key} must be false")
+            if set(gatekeeper.get("decisions", [])) != {"COMPLETE","REPAIR_REQUIRED","BLOCKED","INCONCLUSIVE"}:
+                errors.append("020-H Gatekeeper decision vocabulary drift")
+            if gatekeeper.get("complete_only_creates_g5") is not True:
+                errors.append("020-H COMPLETE must create only G5")
+
+            completion = review_exit.get("completion_record", {})
+            if completion.get("immutable") is not True or completion.get("content_addressed") is not True:
+                errors.append("020-H G5 completion record must be immutable/content-addressed")
+            if completion.get("next_state") != "NEXT_ELIGIBLE_NOT_AUTHORIZED":
+                errors.append("020-H G5 completion must not authorize next execution")
+            if completion.get("correction_rewrites_historical_record") is not False:
+                errors.append("020-H completion correction must not rewrite historical record")
+
+            reopen = review_exit.get("reopen_authorization", {})
+            if reopen.get("old_g2_closed_at_g5") is not True:
+                errors.append("020-H old G2 must close at G5")
+            if reopen.get("automatic_old_g2_restoration") is not False:
+                errors.append("020-H reopen must not automatically restore old G2")
+            if reopen.get("semantic_or_architecture_contradiction_requires_upstream_reentry_first") is not True:
+                errors.append("020-H semantic/architecture contradiction must re-enter upstream first")
+            required_reopen = set(reopen.get("requirements_before_repair", []))
+            for item in ("reopen_record_with_invalidating_evidence","dependency_impact_review","explicit_human_or_program_reauthorization","new_candidate_evidence_review_exit_cycle"):
+                if item not in required_reopen:
+                    errors.append(f"020-H reopen missing prerequisite: {item}")
+
+            invalidation = review_exit.get("post_completion_invalidation", {})
+            if invalidation.get("historical_completion_record_erased") is not False:
+                errors.append("020-H invalidation must preserve historical completion")
+            if invalidation.get("invalidation_record_required") is not True:
+                errors.append("020-H post-completion invalidation requires record")
+            if invalidation.get("reopen_required_grants_execution_authority") is not False:
+                errors.append("020-H REOPEN_REQUIRED must not grant execution authority")
+
+            downstream = review_exit.get("downstream_invalidation", {})
+            if downstream.get("automatic_all_downstream_reopen") is not False:
+                errors.append("020-H upstream reopen must not automatically reopen all downstream packages")
+            expected_dispositions = {"NO_IMPACT","EVIDENCE_REFRESH_REQUIRED","REVIEW_REFRESH_REQUIRED","REOPEN_REQUIRED","UPSTREAM_REENTRY_BLOCKER"}
+            if set(downstream.get("dispositions", [])) != expected_dispositions:
+                errors.append("020-H downstream invalidation disposition vocabulary drift")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -634,6 +747,8 @@ def main() -> int:
         errors.append("implementation framework must reference 020-F phase contract after completion")
     if "020-G" in completed and phase020_fw.get("ci_supplychain_evidence_architecture") != CI_EVIDENCE:
         errors.append("implementation framework must reference 020-G CI/supply-chain/evidence architecture after completion")
+    if "020-H" in completed and phase020_fw.get("review_repair_exit_gate_governance") != REVIEW_EXIT:
+        errors.append("implementation framework must reference 020-H review/repair/exit-gate governance after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
@@ -660,6 +775,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md"] if "020-E" in completed else []),
         *([f"{PHASE_DIR}/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md"] if "020-F" in completed else []),
         *([f"{PHASE_DIR}/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md"] if "020-G" in completed else []),
+        *([f"{PHASE_DIR}/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md"] if "020-H" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
