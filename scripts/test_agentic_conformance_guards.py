@@ -202,6 +202,17 @@ def main() -> int:
             errors,
         )
 
+        autonomous_repo = clone_repo(source, tmp, "autonomous")
+        operating_path = autonomous_repo / "docs/routing/autonomous_implementation_operating_model.json"
+        operating = json.loads(operating_path.read_text(encoding="utf-8"))
+        operating["delegation"]["max_delegation_depth"] = 2
+        operating_path.write_text(json.dumps(operating, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "Autonomous recursive-delegation leakage",
+            run_script(source, autonomous_repo, "scripts/validate_agent_workflows.py", "--repo", str(autonomous_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -214,7 +225,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 11 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 12 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
