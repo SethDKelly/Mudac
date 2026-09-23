@@ -1,6 +1,6 @@
 # Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning
 
-**Status:** ACTIVE — 020-A/B/C/D/E/F COMPLETE / 020-G NEXT ELIGIBLE
+**Status:** ACTIVE — 020-A/B/C/D/E/F/G COMPLETE / 020-H NEXT ELIGIBLE
 
 ## Authority
 
@@ -14,6 +14,7 @@
 - [020-D nonproduction test-control architecture](../routing/phase020_nonproduction_test_control_architecture.json)
 - [020-E implementation package discovery graph](../routing/phase020_implementation_package_discovery.json)
 - [020-F implementation phase/evaluation contract](../routing/phase020_implementation_phase_contract.json)
+- [020-G CI/supply-chain/evidence architecture](../routing/phase020_ci_supplychain_evidence_architecture.json)
 
 ## Planned subphases
 
@@ -23,8 +24,8 @@
 - [020-D — Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture](020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md) — **COMPLETE — PASS**
 - [020-E — Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing](020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md) — **COMPLETE — PASS**
 - [020-F — Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture](020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md) — **COMPLETE — PASS**
-- 020-G — CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **NEXT ELIGIBLE**
-- 020-H — Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — PLANNED
+- [020-G — CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture](020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md) — **COMPLETE — PASS**
+- 020-H — Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **NEXT ELIGIBLE**
 - 020-I — Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — PLANNED
 - 020-J — v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — PLANNED
 - 020-K — Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — PLANNED
@@ -34,8 +35,8 @@
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F COMPLETE
-020-G NEXT ELIGIBLE
+020-A/B/C/D/E/F/G COMPLETE
+020-H NEXT ELIGIBLE
 
 whole architecture               ACCEPTED
 G0                               SATISFIED
