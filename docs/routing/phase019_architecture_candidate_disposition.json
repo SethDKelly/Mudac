@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-019 HISTORICAL ARCHITECTURE CANDIDATE DISPOSITION — RETAINED EVIDENCE, NOT CURRENT AUTHORITY",
+  "acceptance_document": "docs/019-architecture-engineering-reentry/019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md",
+  "accepted_architecture_owner": "docs/canonical/architecture/accepted-architecture.md",
+  "source_qualification": "docs/routing/downstream_candidate_qualification.json",
+  "disposition_state": "COMPLETE",
+  "records": [
+    {
+      "path": "docs/canonical/architecture/architectural-foundation.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/architecture-drivers.md",
+        "docs/canonical/architecture/application-ownership-boundaries.md",
+        "docs/canonical/architecture/accepted-architecture.md"
+      ],
+      "decision_refs": [
+        "ADQ-001",
+        "ADQ-010"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/application-boundaries.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/application-ownership-boundaries.md"
+      ],
+      "decision_refs": [
+        "ADQ-002"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/data-persistence.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/persistence-history-recovery.md",
+        "docs/canonical/architecture/runtime-platform-operations.md"
+      ],
+      "decision_refs": [
+        "ADQ-003",
+        "ADQ-009"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/identity-access-session.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/identity-access-authority.md",
+        "docs/canonical/architecture/runtime-platform-operations.md"
+      ],
+      "decision_refs": [
+        "ADQ-004",
+        "ADQ-009"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/commands-api-concurrency.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/interface-command-concurrency.md"
+      ],
+      "decision_refs": [
+        "ADQ-005"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/synchronization-recovery.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/offline-continuity-reconciliation.md",
+        "docs/canonical/architecture/interface-command-concurrency.md",
+        "docs/canonical/architecture/browser-client-interaction.md"
+      ],
+      "decision_refs": [
+        "ADQ-005",
+        "ADQ-006",
+        "ADQ-008"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/external-representation.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/artifact-export-publication-delivery.md",
+        "docs/canonical/architecture/runtime-platform-operations.md"
+      ],
+      "decision_refs": [
+        "ADQ-007",
+        "ADQ-009"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/frontend-interaction.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/browser-client-interaction.md"
+      ],
+      "decision_refs": [
+        "ADQ-008"
+      ]
+    },
+    {
+      "path": "docs/canonical/architecture/aws-runtime-operations.md",
+      "disposition": "SUPERSEDED_RETAINED_EVIDENCE",
+      "replacement_current_owners": [
+        "docs/canonical/architecture/runtime-platform-operations.md"
+      ],
+      "decision_refs": [
+        "ADQ-009"
+      ]
+    }
+  ]
+}
