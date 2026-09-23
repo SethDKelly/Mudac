@@ -41,9 +41,9 @@ The current product/application variant remains:
 ## Active architecture/engineering re-entry
 
 - [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **COMPLETE — PASS**; closed qualification baseline.
-- [Phase 019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/) — **ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE**.
+- [Phase 019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/) — **ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE**.
 
-Phase 018 qualified repository/documentation/agentic readiness. Phase 019 is now the active architecture decision program. Domain implementation remains unauthorized.
+Phase 018 qualified repository/documentation/agentic readiness. Phase 019 has accepted the whole architecture and closed. Phase 020 planning is authorized to begin at its start gate; domain implementation remains unauthorized until G2.
 
 ## Downstream candidate knowledge
 
@@ -93,20 +93,21 @@ Current lifecycle action:
 
 > **PHASE 018 COMPLETE — PASS — 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE**
 >
-> **PHASE 019 ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE.**
+> **PHASE 019 COMPLETE — PASS — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED.**
 
-Domain implementation remains unauthorized; accepted architecture is not yet established. Phase 018 remains post-Concept-Design preparation; feature implementation is unauthorized.
+Whole architecture is accepted and package derivation is allowed through the Phase-020 start gate. Domain implementation remains unauthorized; no package has G2 authority.
 
 
 Current Phase-019 progression:
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture false
+accepted whole architecture true
+G0 package derivation ALLOWED
+Phase 020 AUTHORIZED / NOT STARTED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

@@ -11,7 +11,7 @@ The current product definition is representation-independent: volunteer Judges a
 - [Canonical Knowledge](docs/canonical/) — current product/design and governance authority.
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
-- [Phase 019](docs/019-architecture-engineering-reentry/) — active Architecture & Engineering Re-entry decision program.
+- [Phase 019](docs/019-architecture-engineering-reentry/) — **COMPLETE — PASS; whole architecture accepted / G0 satisfied**.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -25,7 +25,7 @@ Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
 
 PHASE 018 COMPLETE             PASS — REPOSITORY QUALIFIED FOR ARCHITECTURE/ENGINEERING RE-ENTRY
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE                   019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE                   019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
 implementation readiness      READY
@@ -40,18 +40,19 @@ The sole adopted product/application variant remains:
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
 
 
-Phase 018 is complete with a repository-preparation score of **96/100**. **Phase 019 is ACTIVE**; 019-A through 019-K are complete and 019-L is next eligible. Whole architecture is not yet accepted and domain implementation execution remains unauthorized.
+Phase 018 is complete with a repository-preparation score of **96/100**. **Phase 019 is COMPLETE — PASS**; 019-A through 019-L are complete, whole architecture is accepted, and G0 permits Phase-020 package derivation. Domain implementation execution remains unauthorized until G2.
 
 
 Current Phase-019 progression:
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture false
+accepted whole architecture true
+G0 package derivation ALLOWED
+Phase 020 AUTHORIZED / NOT STARTED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

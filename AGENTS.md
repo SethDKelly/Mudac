@@ -6,7 +6,7 @@ This file is a **bootstrap adapter**, not product/design authority.
 
 1. Start at [docs/index.md](docs/index.md). The generated [knowledge/](knowledge/) tree is generic OKF compatibility routing only and is never a substitute for authored authority.
 2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
-3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For the completed repository-qualification baseline, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/). For active architecture work, use [Phase 019](docs/019-architecture-engineering-reentry/) plus the post-Concept-Design re-entry and Phase-019 decision-authority contracts.
+3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For the completed repository-qualification baseline, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/). For accepted architecture, use [Accepted MUDAC Architecture](docs/canonical/architecture/accepted-architecture.md) plus the Phase-019 closure record. Phase 020 planning must use the implementation-program contract and accepted architecture.
 4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
 5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
 
@@ -42,7 +42,7 @@ Concept Design CLOSED
 
 PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE — PASS — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED
 
 historical architecture       SUSPENDED / QUARANTINED
 accepted new architecture      NOT ESTABLISHED
@@ -53,7 +53,7 @@ execution authorization       NOT GRANTED
 
 The active work is:
 
-> **PHASE 019 ACTIVE — Architecture & Engineering Re-entry — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE**
+> **PHASE 019 COMPLETE — Architecture & Engineering Re-entry — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE**
 
 ## Human-directed action boundary
 
@@ -98,18 +98,19 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 is complete. Phase 019 may perform only the explicitly selected architecture/engineering re-entry subphase; accepted architecture is not yet established, active implementation packages remain zero, and domain implementation execution is unauthorized.
+Phase 018 and Phase 019 are complete. Whole architecture is accepted and G0 permits package derivation only through Phase-020 planning. Active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
 
 
 Current Phase-019 progression:
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture false
+accepted whole architecture true
+G0 package derivation ALLOWED
+Phase 020 AUTHORIZED / NOT STARTED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
