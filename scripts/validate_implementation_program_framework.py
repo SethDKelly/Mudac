@@ -8,6 +8,7 @@ from pathlib import Path
 FRAMEWORK = "docs/routing/implementation_program_framework.json"
 ARCHITECTURE_PLAN = "docs/routing/architecture_reentry_plan.json"
 PHASE019_CONTROL = "docs/routing/phase019_architecture_decision_control.json"
+PHASE020_CONTROL = "docs/routing/phase020_implementation_design_control.json"
 
 EXPECTED_LIFECYCLE = [
     "PROPOSED",
@@ -57,6 +58,7 @@ def main() -> int:
         framework = json.loads((repo / FRAMEWORK).read_text(encoding="utf-8"))
         architecture = json.loads((repo / ARCHITECTURE_PLAN).read_text(encoding="utf-8"))
         phase019 = json.loads((repo / PHASE019_CONTROL).read_text(encoding="utf-8"))
+        phase020 = json.loads((repo / PHASE020_CONTROL).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -186,11 +188,22 @@ def main() -> int:
         errors.append("planning_rules.auto_advance_packages must be false")
 
     start_gate = framework.get("future_start_gate", {})
-    expected_decomposition = "READY_FOR_PHASE_020_START_GATE" if architecture_accepted else "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE"
+    phase020_active_or_closed = phase020.get("state", {}).get("status") in {"ACTIVE", "COMPLETE"}
+    if architecture_accepted and phase020_active_or_closed:
+        expected_decomposition = "PHASE_020_START_GATE_COMPLETE"
+        expected_lifecycle = "Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning"
+    else:
+        expected_decomposition = "READY_FOR_PHASE_020_START_GATE" if architecture_accepted else "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE"
+        expected_lifecycle = "Phase 020 — Implementation Planning & Controlled Delivery"
     if start_gate.get("decomposition_state") != expected_decomposition:
         errors.append(f"implementation start-gate state must be {expected_decomposition}")
-    if start_gate.get("proposed_lifecycle") != "Phase 020 — Implementation Planning & Controlled Delivery":
-        errors.append("future implementation lifecycle label drift")
+    if start_gate.get("proposed_lifecycle") != expected_lifecycle:
+        errors.append("implementation lifecycle label drift")
+    if phase020_active_or_closed:
+        if framework.get("phase020_design_control") != PHASE020_CONTROL:
+            errors.append("implementation framework must reference Phase-020 design control")
+        if start_gate.get("completed_by") != "020-A":
+            errors.append("Phase-020 start gate must be recorded as completed by 020-A")
     actions = start_gate.get("required_actions")
     if not isinstance(actions, list) or len(actions) < 8:
         errors.append("future implementation start gate actions are incomplete")
