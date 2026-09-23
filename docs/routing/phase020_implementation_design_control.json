@@ -17,9 +17,10 @@
       "020-D",
       "020-E",
       "020-F",
-      "020-G"
+      "020-G",
+      "020-H"
     ],
-    "next_eligible_subphase": "020-H",
+    "next_eligible_subphase": "020-I",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -68,12 +69,12 @@
     {
       "id": "020-H",
       "title": "Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-I",
       "title": "Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-J",
@@ -152,7 +153,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 7,
+    "completed_subphases": 8,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -257,5 +258,25 @@
     "imp014_status": "PROPOSED",
     "imp014_g1_ready": false,
     "imp014_g2_authorized": false
+  },
+  "review_repair_exit_gate_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+  "review_repair_exit_gate_summary": {
+    "governing_rules": [
+      "AUTHOR_DOES_NOT_CERTIFY_OWN_IMPLEMENTATION",
+      "REPAIR_MAY_CORRECT_AUTHORIZED_IMPLEMENTATION_BUT_NOT_ENLARGE_AUTHORIZATION",
+      "COMPLETION_RECORD_IS_IMMUTABLE",
+      "POST_G5_INVALIDATION_CREATES_REOPEN_OBLIGATION_NOT_EXECUTION_AUTHORITY"
+    ],
+    "independent_code_review_required": true,
+    "adversarial_conformance_review_required": true,
+    "reviewer_edits_require_new_independent_review": true,
+    "repair_scope_expansion_forbidden": true,
+    "gatekeeper_may_override_mandatory_failure": false,
+    "completion_record_immutable": true,
+    "post_g5_old_g2_automatically_restored": false,
+    "next_phase_auto_authorization": false,
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0
   }
 }
