@@ -12,6 +12,7 @@ sources:
   - resource: design-implementation-boundary.md
   - resource: post-concept-design-reentry.md
   - resource: ../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-D-canonical-ownership-stable-references-deterministic-resolution-drift-control-design.md
+  - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:20:00Z }
 ---
 
@@ -115,11 +116,13 @@ A3 includes actions such as:
 - unattended merge where not already explicitly requested and governed;
 - access/expose secrets or sensitive data beyond established task permissions;
 - begin an unrelated phase, implementation package, feature or backlog item;
-- delegate/spawn repository implementation to other agents under this foundation.
+- delegate/spawn implementation outside an explicitly authorized autonomous implementation envelope, or create undeclared implementation work units.
 
 A broad request to work on the repository does not imply A3 authorization.
 
-The specific A3 action must be explicitly human-authorized and still obey repository/environment approval gates.
+A future G2-authorized implementation phase/package may explicitly establish a bounded multi-agent envelope under the implementation-program contract. Inside that envelope, a named Coordinator may assign only declared work units using the approved work graph, concurrency/serialized-surface rules and circuit breakers. That bounded delegation is ordinary A2 execution; it does not create new phase/package scope, recursive delegation authority, merge/deploy authority or A4 change authority.
+
+The specific A3 action must otherwise be explicitly human-authorized and still obey repository/environment approval gates.
 
 <a id="agt-007"></a>
 ## AGT-007 — A4 semantic or accepted-architecture change requires explicit human change intent and governed propagation
@@ -164,18 +167,31 @@ It does not authorize starting that next item automatically.
 A successful CI run likewise does not select or authorize subsequent work.
 
 <a id="agt-010"></a>
-## AGT-010 — MUDAC agentic development is human-directed, not autonomously work-selecting
+## AGT-010 — MUDAC lifecycle authority is human-directed; bounded implementation autonomy may operate inside an authorized envelope
 
-The current foundation does not authorize agents to:
+Agents do not receive authority to:
 
-- select the next backlog item;
+- select the next backlog item, implementation package or phase;
 - reprioritize the roadmap;
-- continue through Phase subphases without a human selecting the next work;
-- operate an unattended implementation queue;
-- recursively delegate implementation;
+- continue into the next lifecycle item merely because the current item completes;
+- operate an unbounded unattended implementation queue;
+- recursively delegate implementation outside the declared Coordinator/work-unit graph;
 - merge/deploy merely because validation passes.
 
-Future autonomy, if desired, requires an explicit later governance decision.
+After explicit G2 authorization, a phase/package may declare a bounded autonomous execution envelope. A named Coordinator may schedule and delegate declared dependency-safe work units, run ordinary repair loops and request review/verification without per-edit human approval.
+
+That bounded autonomy remains subordinate to:
+
+- the selected phase/package scope;
+- exact base revisions;
+- role separation;
+- worktree/shared-writer isolation;
+- context/provenance requirements;
+- autonomy circuit breakers;
+- independent review and verification;
+- separate merge/release/deployment/production authority.
+
+Completion makes later work eligible; it does not grant later work G2.
 
 <a id="agt-011"></a>
 ## AGT-011 — Tool adapters are subordinate and no coding agent is semantically privileged
