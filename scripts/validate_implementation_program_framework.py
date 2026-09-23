@@ -44,6 +44,14 @@ EXPECTED_REQUIRED_FIELDS = {
     "scenario_seeds",
     "compatibility_rollback",
     "residual_risks",
+    "review_policy",
+    "adversarial_review_policy",
+    "repair_budget",
+    "gatekeeper_policy",
+    "reopen_policy",
+    "crosscutting_verification_profile",
+    "v1_scope_disposition",
+    "final_integration_relation",
 }
 
 
@@ -78,8 +86,19 @@ def main() -> int:
         errors.append("implementation execution must remain unauthorized until an explicit G2 package decision")
 
     if architecture_accepted:
-        if state.get("framework_state") != "PLANNING_READY":
-            errors.append("framework_state must be PLANNING_READY after whole-architecture acceptance")
+        phase020_completed = set(phase020.get("state", {}).get("completed_subphases", []))
+        if "020-K" in phase020_completed:
+            allowed_framework_states = {
+                "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_PENDING",
+                "ROADMAP_READY_PHASE020_COMPLETE",
+            }
+        else:
+            allowed_framework_states = {"PLANNING_READY"}
+        if state.get("framework_state") not in allowed_framework_states:
+            errors.append(
+                "framework_state incompatible with Phase-020 progression; "
+                f"expected one of {sorted(allowed_framework_states)}, got {state.get('framework_state')!r}"
+            )
         if state.get("accepted_architecture_established") is not True:
             errors.append("implementation framework must acknowledge accepted architecture")
         if state.get("package_derivation_allowed") is not True:
