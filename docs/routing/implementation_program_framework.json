@@ -281,9 +281,10 @@
       "020-A",
       "020-B",
       "020-C",
-      "020-D"
+      "020-D",
+      "020-E"
     ],
-    "next_eligible_subphase": "020-E",
+    "next_eligible_subphase": "020-F",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -295,6 +296,13 @@
     "nonproduction_test_control_architecture": "docs/routing/phase020_nonproduction_test_control_architecture.json",
     "production_target_forbidden": true,
     "mcp_server_implemented": false,
-    "nonproduction_environment_deployed": false
+    "nonproduction_environment_deployed": false,
+    "implementation_package_discovery": "docs/routing/phase020_implementation_package_discovery.json",
+    "proposed_package_count": 15,
+    "g1_ready_package_count": 0,
+    "active_package_count": 0,
+    "g2_authorized_package_count": 0,
+    "package_graph_acyclic": true,
+    "final_phase_grouping_deferred_to": "020-K"
   }
 }
