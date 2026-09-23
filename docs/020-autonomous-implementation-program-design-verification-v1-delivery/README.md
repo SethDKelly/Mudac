@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A COMPLETE
-020-B NEXT ELIGIBLE
+020-A/B COMPLETE
+020-C NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -121,8 +121,8 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | Subphase | Purpose |
 |---|---|
 | **020-A** | Start Gate, Authority, Accepted Baseline & Autonomous-Development Method |
-| **020-B** | Existing Substrate, Historical Implementation & Reuse Qualification |
-| **020-C** | Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers |
+| **020-B** | Existing Substrate, Historical Implementation & Reuse Qualification — **COMPLETE — PASS** |
+| **020-C** | Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers — **NEXT ELIGIBLE** |
 | **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture |
 | **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing |
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture |
@@ -207,3 +207,10 @@ It does not mean:
 - the first package is automatically G2-authorized;
 - v1 is a release candidate;
 - production is authorized.
+
+
+## 020-B qualification result
+
+020-B found a substantial reusable non-domain bootstrap, but not an already-implemented MUDAC application. Preserve sound Node/TypeScript/pnpm, PostgreSQL, CI and OpenTofu scaffolding; revise runtime/testing seams as responsibilities arrive; replace/merge the historical six-owner topology into the accepted five-owner BND topology; keep all six historical implementation documents as REUSE_WITH_REVISION evidence; and preserve zero active packages / zero G2 execution authority.
+
+Machine evidence: `docs/routing/phase020_substrate_reuse_qualification.json`.
