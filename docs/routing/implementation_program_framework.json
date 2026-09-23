@@ -279,12 +279,17 @@
     "state": "ACTIVE",
     "completed_subphases": [
       "020-A",
-      "020-B"
+      "020-B",
+      "020-C"
     ],
-    "next_eligible_subphase": "020-C",
+    "next_eligible_subphase": "020-D",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
-    "substrate_reuse_qualification": "docs/routing/phase020_substrate_reuse_qualification.json"
+    "substrate_reuse_qualification": "docs/routing/phase020_substrate_reuse_qualification.json",
+    "autonomous_implementation_operating_model": "docs/routing/autonomous_implementation_operating_model.json",
+    "coordinator_only_delegation": true,
+    "max_delegation_depth": 1,
+    "phase020_domain_execution_authorized": false
   }
 }
