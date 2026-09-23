@@ -1119,12 +1119,25 @@ def main() -> int:
                 "028":["IMP-012","IMP-013","IMP-015"],
                 "029":[],
             }
+            expected_phase_predecessors = {
+                "021":[],
+                "022":["021"],
+                "023":["022"],
+                "024":["023"],
+                "025":["024"],
+                "026":["025"],
+                "027":["026"],
+                "028":["027"],
+                "029":["028"],
+            }
             for p in phases_k:
                 if not isinstance(p, dict):
                     continue
                 pid = p.get("id")
                 if p.get("packages") != expected_phase_packages.get(pid):
                     errors.append(f"020-K phase {pid} package assignment drift")
+                if p.get("hard_predecessors") != expected_phase_predecessors.get(pid):
+                    errors.append(f"020-K phase {pid} predecessor chain drift")
                 if p.get("g2_authorized") is not False or p.get("next_phase_auto_authorization") is not False:
                     errors.append(f"020-K phase {pid} must not be G2-authorized or auto-authorize next phase")
                 if p.get("start_gate_required") is not True or p.get("exit_gate_required") is not True:
@@ -1175,6 +1188,26 @@ def main() -> int:
                     errors.append(f"020-K {pid} must be G1 PASS / READY_FOR_AUTHORIZATION")
                 if pkg.get("implementation_phase") not in expected_phase_packages or pid not in expected_phase_packages.get(pkg.get("implementation_phase"), []):
                     errors.append(f"020-K {pid} implementation phase assignment invalid")
+                assignment = pkg.get("preferred_agent_assignment", {})
+                if assignment.get("implementer") not in {"CURSOR","CODEX"} or assignment.get("reviewer") not in {"CURSOR","CODEX"}:
+                    errors.append(f"020-K {pid} preferred agent assignment must use Cursor/Codex profiles")
+                if assignment.get("implementer") == assignment.get("reviewer"):
+                    errors.append(f"020-K {pid} preferred implementer/reviewer profiles should be reciprocal")
+
+                if package_discovery:
+                    source_pkg = next((sp for sp in package_discovery.get("candidate_packages", []) if isinstance(sp,dict) and sp.get("id")==pid), None)
+                    if source_pkg is None:
+                        errors.append(f"020-K {pid} missing from 020-E discovery")
+                    else:
+                        deps = pkg.get("dependencies", {})
+                        if deps.get("hard") != source_pkg.get("hard_dependencies", []):
+                            errors.append(f"020-K {pid} hard dependency drift from 020-E")
+                        if deps.get("integration") != source_pkg.get("integration_dependencies", []):
+                            errors.append(f"020-K {pid} integration dependency drift from 020-E")
+                        if deps.get("evidence") != source_pkg.get("evidence_dependencies", []):
+                            errors.append(f"020-K {pid} evidence dependency drift from 020-E")
+                        if pkg.get("scope_in") != source_pkg.get("scope_in") or pkg.get("scope_out") != source_pkg.get("scope_out"):
+                            errors.append(f"020-K {pid} scope drift from retained 020-E package without explicit disposition")
 
                 field_aliases={
                     "dependencies":"dependencies",
@@ -1198,8 +1231,12 @@ def main() -> int:
                 }
                 base_required={"id","title","purpose","status","scope_in","scope_out","semantic_refs","architecture_refs","eng_refs"}
                 for field in base_required | set(field_aliases):
-                    if field not in pkg or pkg.get(field) in (None,"",[]):
-                        errors.append(f"020-K {pid} G1 package schema missing/empty: {field}")
+                    if field not in pkg:
+                        errors.append(f"020-K {pid} G1 package schema missing: {field}")
+                    elif field != "scenario_seeds" and pkg.get(field) in (None,"",[]):
+                        errors.append(f"020-K {pid} G1 package schema empty: {field}")
+                if not isinstance(pkg.get("scenario_seeds"), list):
+                    errors.append(f"020-K {pid} scenario_seeds must be an explicit list")
 
                 criteria_k=pkg.get("visible_success_criteria", [])
                 if not criteria_k:
