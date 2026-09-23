@@ -30,6 +30,7 @@ Current repository/design-governance authority.
 - [Phase-019 Architecture Decision Authority & Evidence Contract](architecture-decision-authority.md)
 - [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md)
 - Phase-020 autonomous implementation operating projection: [`docs/routing/autonomous_implementation_operating_model.json`](../../routing/autonomous_implementation_operating_model.json)
+- Phase-020 nonproduction test-control projection: [`docs/routing/phase020_nonproduction_test_control_architecture.json`](../../routing/phase020_nonproduction_test_control_architecture.json)
 
 ## Current interpretation
 
@@ -37,4 +38,4 @@ Indexes, READMEs, registries, and agent adapters route; they do not become produ
 
 Jackson-aligned Concept Design is closed and Phase 019 accepted the whole architecture. Phase 020 is the active final pre-implementation design lifecycle; implementation execution remains unauthorized until a later explicit G2 phase/package.
 
-For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Phase 018 and Phase 019 are complete. [Phase 020](../../020-autonomous-implementation-program-design-verification-v1-delivery/) is active with 020-A/B/C complete and 020-D next eligible; downstream work remains governed by the Design / Implementation Boundary, accepted architecture and Implementation Program contract.
+For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Phase 018 and Phase 019 are complete. [Phase 020](../../020-autonomous-implementation-program-design-verification-v1-delivery/) is active with 020-A/B/C/D complete and 020-E next eligible; downstream work remains governed by the Design / Implementation Boundary, accepted architecture and Implementation Program contract.
