@@ -83,3 +83,13 @@ PHASE 020 ACTIVE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
+
+
+## Autonomous implementation roadmap
+
+The current Phase-020 implementation roadmap is routed through:
+
+- [Implementation roadmap](../../implementation-roadmap/index.md)
+- [Machine roadmap](../../routing/phase020_autonomous_implementation_roadmap.json)
+
+All fifteen retained packages are G1 planning-complete / READY_FOR_AUTHORIZATION. G2 remains explicit and ungranted during Phase 020.
