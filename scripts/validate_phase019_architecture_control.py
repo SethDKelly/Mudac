@@ -306,8 +306,12 @@ def main() -> int:
             errors.append("019-L acceptance must not authorize implementation execution")
         if state.get("implementation_package_count") != 0:
             errors.append("019-L must close with zero implementation packages")
-        if impl_state.get("framework_state") != "PLANNING_READY":
-            errors.append("implementation framework must be PLANNING_READY after architecture acceptance")
+        if impl_state.get("framework_state") not in {
+            "PLANNING_READY",
+            "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_PENDING",
+            "ROADMAP_READY_PHASE020_COMPLETE",
+        }:
+            errors.append("implementation framework must remain in an accepted post-architecture planning state")
         if impl_state.get("accepted_architecture_established") is not True:
             errors.append("implementation framework must acknowledge accepted architecture")
         if impl_state.get("package_derivation_allowed") is not True:
