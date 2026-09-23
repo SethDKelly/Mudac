@@ -520,3 +520,20 @@ Core browser workflows target WCAG 2.2 AA semantic parity. Automated scanners ar
 Performance acceptance thresholds, workload profiles and environment capacity are visible when material. Load/latency pressure cannot alter Access, authority, partial-result or unknown-result semantics. RTO/RPO are measured exercise claims, not invented documentation targets.
 
 Cost evidence models material steady-state/event/runtime/storage/network/telemetry/backup/security/test infrastructure drivers. Cost optimization cannot remove mandatory availability, backup, encryption, security-logging or evidence-preservation controls.
+
+
+# v1 whole-system completion and terminal integration/hardening
+
+Phase 020-J defines the current v1 implementation-completion projection at:
+
+> docs/routing/phase020_v1_completion_integration_design.json
+
+The initial implementation target is the sole adopted PF-01 product variant. All eighteen current Concepts remain in v1 product scope, while the current explicit project non-goals remain excluded unless separate change authority activates them.
+
+Package G5 closure is necessary but insufficient for v1 completion. The terminal program must qualify one composed exact revision against nine integrated journey families, all fifteen ENG-014 scenarios and twelve whole-system blocking criteria. A collection of package-local PASS records is not itself whole-system proof.
+
+The logical terminal phase is V1-FINAL; 020-K assigns its final implementation-phase number/title. It owns only explicitly declared integration/hardening surfaces. It may not use final hardening as blanket authority to edit completed package-owned source: a source-changing defect in a G5 package follows 020-H reopen/re-authorization.
+
+Successful terminal completion records V1_IMPLEMENTATION_COMPLETE and advances only to RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED. It does not grant G6, deployment authority, G7 or production readiness. G6 remains a separate release-authority boundary and G7 remains separately authorized.
+
+V1 completion requires zero known blocking findings. Non-blocking residual risk may remain only with owner, rationale, impact and revisit trigger; residual-risk labeling cannot hide an unsatisfied visible criterion, semantic contradiction or architecture contradiction.
