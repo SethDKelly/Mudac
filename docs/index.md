@@ -43,7 +43,7 @@ The current product/application variant remains:
 - [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **COMPLETE — PASS**; closed qualification baseline.
 - [Phase 019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/) — **ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE**.
 
-Phase 018 qualified repository/documentation/agentic readiness and Phase 019 accepted the whole architecture. Phase 020 is now active as the final pre-implementation design phase; 020-A is complete and 020-B is next eligible. Domain implementation remains unauthorized until a later explicit G2 decision.
+Phase 018 qualified repository/documentation/agentic readiness and Phase 019 accepted the whole architecture. Phase 020 is now active as the final pre-implementation design phase; 020-A/B are complete and 020-C is next eligible. Domain implementation remains unauthorized until a later explicit G2 decision.
 
 ## Downstream candidate knowledge
 
@@ -108,8 +108,8 @@ Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 ACTIVE
-020-A COMPLETE
-020-B NEXT ELIGIBLE
+020-A/B COMPLETE
+020-C NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
