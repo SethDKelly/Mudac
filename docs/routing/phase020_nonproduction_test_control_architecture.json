@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-D NON-PRODUCTION AGENT TEST-CONTROL ARCHITECTURE — DESIGN ONLY; NO DEPLOYMENT OR DOMAIN EXECUTION",
+  "phase": "020-D",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md",
+  "current_contracts": [
+    "docs/canonical/architecture/runtime-platform-operations.md",
+    "docs/canonical/architecture/interface-command-concurrency.md",
+    "docs/canonical/architecture/identity-access-authority.md",
+    "docs/canonical/architecture/browser-client-interaction.md",
+    "docs/canonical/architecture/persistence-history-recovery.md",
+    "docs/canonical/governance/implementation-program-delivery.md",
+    "docs/routing/autonomous_implementation_operating_model.json"
+  ],
+  "status": "ACCEPTED_FOR_IMPLEMENTATION_DESIGN",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "environment_tiers": {
+    "NPT-L": {
+      "name": "worktree-local-sandbox",
+      "default_for_repair_loops": true,
+      "externally_public": false,
+      "real_production_credentials": false,
+      "real_production_data": false,
+      "deterministic_reset_required": true
+    },
+    "NPT-P": {
+      "name": "isolated-nonproduction-preview-integration",
+      "use_when": "real-provider-network-runtime-boundary-is-material",
+      "aws_account_class": "NONPRODUCTION",
+      "isolation_granularity": "PHASE_OR_PR_OR_NAMESPACE_DECIDED_BY_IMPLEMENTATION_EVIDENCE"
+    },
+    "NPT-S": {
+      "name": "shared-nonproduction-integration",
+      "use_when": "expensive-or-singleton-evidence-boundary",
+      "serialized_or_leased": true,
+      "default_for_repair_loops": false
+    }
+  },
+  "production_denial": {
+    "production_target_forbidden": true,
+    "arbitrary_target_url_forbidden": true,
+    "environment_registry_required": true,
+    "nonproduction_account_allowlist_required": true,
+    "environment_class_check_required": true,
+    "capability_allowlist_required": true,
+    "test_control_audience_required": true,
+    "synthetic_namespace_requirement_for_mutating_fixture_tools": true,
+    "production_iac_must_exclude_test_control": true,
+    "production_route_must_not_exist": true,
+    "production_fault_hooks_forbidden": true,
+    "production_fixture_reset_endpoint_forbidden": true,
+    "production_test_control_role_forbidden": true,
+    "fail_closed": true
+  },
+  "protocol": {
+    "primary_sdk": "MCP TypeScript SDK v2",
+    "target_revision": "2026-07-28",
+    "shared_transport": "STREAMABLE_HTTP_STATELESS",
+    "shared_transport_tls_required": true,
+    "local_transports": [
+      "STDIO",
+      "LOOPBACK_OR_IN_PROCESS"
+    ],
+    "server_side_sampling_required": false,
+    "prompts_required": false,
+    "protocol_logging_as_observability": false,
+    "compatibility": {
+      "legacy_stateless_allowed_only_after_client_smoke_need": true,
+      "must_share_same_tool_implementation": true,
+      "may_not_change_tool_authority": true
+    }
+  },
+  "authorization": {
+    "remote_auth_required_for_all_tools": true,
+    "issuer_validation_required": true,
+    "signature_validation_required": true,
+    "expiry_validation_required": true,
+    "audience_resource_validation_required": true,
+    "token_passthrough_forbidden": true,
+    "technical_principal_distinct_from_mudac_actor": true,
+    "suggested_scopes": [
+      "test.observe",
+      "test.fixture",
+      "test.act",
+      "test.browser",
+      "test.fault.basic",
+      "test.fault.privileged",
+      "test.environment.reset"
+    ]
+  },
+  "planes": {
+    "environment": {
+      "arbitrary_cloud_api": false,
+      "arbitrary_resource_target": false,
+      "remote_create_destroy_may_require_a3": true
+    },
+    "fixture": {
+      "registered_blueprints_only": true,
+      "deterministic_seed_required": true,
+      "synthetic_data_default": true,
+      "production_copy_as_fixture_forbidden": true,
+      "direct_seed_allowed_for_prerequisite_setup": true,
+      "direct_seed_counts_as_command_evidence": false,
+      "ttl_cleanup_required": true
+    },
+    "action": {
+      "real_application_boundaries_required": true,
+      "schema_bound_named_capabilities": true,
+      "arbitrary_http_client": false,
+      "mcp_token_to_mudac_access_translation": false
+    },
+    "browser": {
+      "real_browser_adapter_required": true,
+      "allowed_origin_registry_required": true,
+      "semantic_locator_preferred": true,
+      "arbitrary_external_navigation": false,
+      "arbitrary_javascript_eval": false,
+      "arbitrary_local_file_access": false,
+      "credential_extraction": false
+    },
+    "observation": {
+      "run020_observability_path_authoritative": true,
+      "allowlisted_metrics_only": true,
+      "trace_lookup_by_test_or_trace_id": true,
+      "unrestricted_log_search": false,
+      "release_identity_required": true,
+      "semantic_health_required": true
+    },
+    "fault": {
+      "registered_profiles_only": true,
+      "arbitrary_aws_command": false,
+      "arbitrary_shell": false,
+      "max_duration_required": true,
+      "automatic_expiry_required_where_possible": true,
+      "cleanup_status_required": true,
+      "privileged_profiles_require_explicit_environment_authority": true
+    }
+  },
+  "synthetic_identity": {
+    "technical_mcp_principal_distinct_from_synthetic_identity": true,
+    "participation_access_evaluated_normally": true,
+    "local_test_auth_adapter_allowed_when_provider_not_material": true,
+    "real_nonproduction_cognito_required_when_provider_or_session_behavior_is_material": true,
+    "direct_session_row_injection_counts_as_iam_evidence": false
+  },
+  "observability": {
+    "structured_logging": true,
+    "opentelemetry_compatible": true,
+    "cloudwatch_for_aws_nonproduction": true,
+    "w3c_trace_context": true,
+    "test_run_id_required": true,
+    "environment_id_required": true,
+    "release_sha_required": true,
+    "mcp_tool_call_identity_required": true,
+    "request_correlation_identity_required": true,
+    "logical_operation_identity_when_applicable": true,
+    "credentials_redacted": true,
+    "technical_telemetry_not_domain_provenance": true
+  },
+  "health_model": [
+    "liveness",
+    "readiness",
+    "dependency_health",
+    "semantic_health",
+    "release_identity"
+  ],
+  "hidden_evaluator": {
+    "separate_runtime_principal": true,
+    "uses_declared_capability_families": true,
+    "hidden_inputs_timing_interleavings_allowed": true,
+    "hidden_requirements_forbidden": true,
+    "production_use_forbidden": true,
+    "secret_semantic_bypass_forbidden": true
+  },
+  "forbidden_generic_capabilities": [
+    "ARBITRARY_SQL",
+    "ARBITRARY_SHELL",
+    "ARBITRARY_AWS_OR_CLOUD_API",
+    "ARBITRARY_EXTERNAL_HTTP",
+    "SECRET_RETRIEVAL",
+    "ARBITRARY_BROWSER_JAVASCRIPT_EVAL",
+    "PRODUCTION_TARGET_SELECTION"
+  ],
+  "evidence_boundary": {
+    "nonproduction_evidence_may_support": [
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "SELECTED_E6"
+    ],
+    "cannot_create": "E7_PRODUCTION_EVIDENCE",
+    "fixture_seed_evidence_limited_to": "SETUP_BASIS_NOT_USER_COMMAND_BEHAVIOR"
+  },
+  "phase020_boundary": {
+    "mcp_server_implemented": false,
+    "environment_deployed": false,
+    "active_implementation_packages": 0,
+    "g2_authorized_packages": 0,
+    "domain_implementation_authorized": false
+  }
+}
