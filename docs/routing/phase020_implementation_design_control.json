@@ -33,7 +33,16 @@
     "release_authorized": false,
     "production_authorized": false,
     "g1_ready_packages": 15,
-    "ready_for_authorization_packages": 15
+    "ready_for_authorization_packages": 15,
+    "preimplementation_audit_status": "BLOCKED",
+    "blocked_subphase": "020-L",
+    "blocker_ids": [
+      "P020L-001"
+    ],
+    "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
+    "phase021_handoff_status": "BLOCKED_PENDING_REPOSITORY_ENFORCEMENT",
+    "phase021_start_gate_eligible": false,
+    "phase021_g2_authorized": false
   },
   "subphase_plan": [
     {
@@ -94,7 +103,11 @@
     {
       "id": "020-L",
       "title": "Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff",
-      "status": "NEXT_ELIGIBLE"
+      "status": "NEXT_ELIGIBLE",
+      "audit_state": "BLOCKED",
+      "blocker_id": "P020L-001",
+      "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
+      "resumption_condition": "REPOSITORY_MAIN_ENFORCEMENT_CONFIGURED_AND_REOBSERVED"
     }
   ],
   "phase_contract_model": {
@@ -340,5 +353,22 @@
     "first_g2_authorized": false,
     "final_phase": "029 / V1-FINAL",
     "phase021_requires_020l_pass": true
+  },
+  "preimplementation_exit_audit": "docs/routing/phase020_preimplementation_exit_audit.json",
+  "preimplementation_audit_summary": {
+    "result": "BLOCKED",
+    "blocker": "P020L-001_MAIN_PROTECTION_NOT_ENFORCED",
+    "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
+    "workflow_action_pins_immutable": true,
+    "exact_head_ci_candidate": "e139155520e68f516709bfdfa68e359d5149c699",
+    "knowledge_validation": "PASS",
+    "implementation_verification": "PASS",
+    "codeql": "PASS",
+    "main_protected": false,
+    "ruleset_count": 0,
+    "required_status_checks_enforced": false,
+    "phase020_complete": false,
+    "phase021_eligible": false,
+    "phase021_g2_authorized": false
   }
 }
