@@ -57,7 +57,12 @@
       "required_evidence_classes",
       "scenario_seeds",
       "compatibility_rollback",
-      "residual_risks"
+      "residual_risks",
+      "review_policy",
+      "adversarial_review_policy",
+      "repair_budget",
+      "gatekeeper_policy",
+      "reopen_policy"
     ],
     "identity_rule": "Package IDs are durable and independent of source layout; retired IDs are never reused.",
     "boundary_rule": "Package boundaries derive from accepted architecture plus current semantic authority, not one-to-one Concept mapping or historical file topology."
@@ -179,7 +184,9 @@
         "G1 complete",
         "required predecessors complete or independence proven",
         "explicit human/program authorization",
-        "no unresolved semantic/architecture blocker"
+        "no unresolved semantic/architecture blocker",
+        "review/exit policy explicit",
+        "bounded repair budget explicit"
       ],
       "execution_authority": true
     },
@@ -213,7 +220,12 @@
         "G3/G4 applicable evidence closure",
         "traceability/docs current",
         "residual risks assigned",
-        "no hidden blockers"
+        "no hidden blockers",
+        "independent code review PASS",
+        "adversarial conformance review PASS",
+        "no open blocking review finding",
+        "exact-revision evidence bundle finalized",
+        "immutable G5 completion record"
       ],
       "execution_authority": false
     },
