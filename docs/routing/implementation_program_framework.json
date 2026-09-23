@@ -7,7 +7,7 @@
   "candidate_qualification": "docs/routing/downstream_candidate_qualification.json",
   "phase_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-L-implementation-program-structure-verification-strategy-delivery-gate-design.md",
   "state": {
-    "framework_state": "PLANNING_READY",
+    "framework_state": "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_PENDING",
     "accepted_architecture_required": true,
     "accepted_architecture_established": true,
     "package_derivation_allowed": true,
@@ -310,9 +310,10 @@
       "020-G",
       "020-H",
       "020-I",
-      "020-J"
+      "020-J",
+      "020-K"
     ],
-    "next_eligible_subphase": "020-K",
+    "next_eligible_subphase": "020-L",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -327,11 +328,11 @@
     "nonproduction_environment_deployed": false,
     "implementation_package_discovery": "docs/routing/phase020_implementation_package_discovery.json",
     "proposed_package_count": 15,
-    "g1_ready_package_count": 0,
+    "g1_ready_package_count": 15,
     "active_package_count": 0,
     "g2_authorized_package_count": 0,
     "package_graph_acyclic": true,
-    "final_phase_grouping_deferred_to": "020-K",
+    "final_phase_grouping_deferred_to": null,
     "implementation_phase_contract": "docs/routing/phase020_implementation_phase_contract.json",
     "visible_success_criteria_required": true,
     "normative_thresholds_visible": true,
@@ -356,6 +357,17 @@
     "v1_whole_system_criterion_count": 12,
     "v1_final_logical_phase": "V1-FINAL",
     "v1_implementation_complete_grants_g6": false,
-    "v1_implementation_complete_grants_g7": false
+    "v1_implementation_complete_grants_g7": false,
+    "autonomous_implementation_roadmap": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+    "final_implementation_phase_count": 9,
+    "retained_package_count": 15,
+    "ready_for_authorization_count": 15,
+    "first_implementation_phase": "021",
+    "first_g2_candidate_packages": [
+      "IMP-001"
+    ],
+    "first_g2_authorized": false,
+    "final_phase_grouping_completed_by": "020-K",
+    "phase021_requires_020l_exit": true
   }
 }
