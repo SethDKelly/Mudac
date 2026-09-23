@@ -36,6 +36,7 @@ Current repository/design-governance authority.
 - Phase-020 CI/supply-chain/evidence architecture: [`docs/routing/phase020_ci_supplychain_evidence_architecture.json`](../../routing/phase020_ci_supplychain_evidence_architecture.json)
 - Phase-020 review/repair/exit-gate governance: [`docs/routing/phase020_review_repair_exit_gate_governance.json`](../../routing/phase020_review_repair_exit_gate_governance.json)
 - Phase-020 cross-cutting verification architecture: [`docs/routing/phase020_crosscutting_verification_architecture.json`](../../routing/phase020_crosscutting_verification_architecture.json)
+- Phase-020 v1 completion/integration design: [`docs/routing/phase020_v1_completion_integration_design.json`](../../routing/phase020_v1_completion_integration_design.json)
 
 ## Current interpretation
 
@@ -43,4 +44,4 @@ Indexes, READMEs, registries, and agent adapters route; they do not become produ
 
 Jackson-aligned Concept Design is closed and Phase 019 accepted the whole architecture. Phase 020 is the active final pre-implementation design lifecycle; implementation execution remains unauthorized until a later explicit G2 phase/package.
 
-For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Phase 018 and Phase 019 are complete. [Phase 020](../../020-autonomous-implementation-program-design-verification-v1-delivery/) is active with 020-A/B/C/D/E/F/G/H/I complete and 020-J next eligible; downstream work remains governed by the Design / Implementation Boundary, accepted architecture and Implementation Program contract.
+For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Phase 018 and Phase 019 are complete. [Phase 020](../../020-autonomous-implementation-program-design-verification-v1-delivery/) is active with 020-A/B/C/D/E/F/G/H/I/J complete and 020-K next eligible; downstream work remains governed by the Design / Implementation Boundary, accepted architecture and Implementation Program contract.
