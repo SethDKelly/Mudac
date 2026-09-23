@@ -16,9 +16,10 @@
       "020-C",
       "020-D",
       "020-E",
-      "020-F"
+      "020-F",
+      "020-G"
     ],
-    "next_eligible_subphase": "020-G",
+    "next_eligible_subphase": "020-H",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -62,12 +63,12 @@
     {
       "id": "020-G",
       "title": "CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-H",
       "title": "Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-I",
@@ -151,7 +152,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 6,
+    "completed_subphases": 7,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -236,5 +237,25 @@
     "proposed_packages": 15,
     "g1_ready_packages": 0,
     "g2_authorized_packages": 0
+  },
+  "ci_supplychain_evidence_architecture": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+  "ci_supplychain_evidence_summary": {
+    "governing_rules": [
+      "EVIDENCE_PROVES_ONLY_THE_REVISION_IT_NAMES",
+      "BUILD_ONCE_PROMOTE_BY_IMMUTABLE_DIGEST",
+      "CI_DOES_NOT_CREATE_SEMANTIC_OR_RELEASE_OR_PRODUCTION_AUTHORITY"
+    ],
+    "exact_candidate_sha_required": true,
+    "exact_tree_identity_required": true,
+    "blocking_exit_actions_full_commit_sha_required": true,
+    "evidence_bundle_content_addressed": true,
+    "failure_retry_history_preserved": true,
+    "public_protected_evidence_split": true,
+    "protected_evaluator_may_modify_candidate_source": false,
+    "production_use_by_protected_evaluator_forbidden": true,
+    "repository_main_enforcement_verified": false,
+    "imp014_status": "PROPOSED",
+    "imp014_g1_ready": false,
+    "imp014_g2_authorized": false
   }
 }
