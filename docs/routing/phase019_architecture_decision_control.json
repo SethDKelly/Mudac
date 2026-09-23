@@ -38,7 +38,7 @@
     ]
   },
   "phase019_state": {
-    "status": "ACTIVE",
+    "status": "COMPLETE",
     "completed_subphases": [
       "019-A",
       "019-B",
@@ -50,14 +50,15 @@
       "019-H",
       "019-I",
       "019-J",
-      "019-K"
+      "019-K",
+      "019-L"
     ],
-    "next_eligible_subphase": "019-L",
+    "next_eligible_subphase": null,
     "currently_authorized_subphase": null,
     "automatic_advance": false,
-    "accepted_architecture_established": false,
+    "accepted_architecture_established": true,
     "implementation_package_count": 0,
-    "package_derivation_allowed": false,
+    "package_derivation_allowed": true,
     "implementation_execution_authorized": false
   },
   "subphase_plan": [
@@ -155,7 +156,7 @@
       "questions": [
         "ADQ-010"
       ],
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     }
   ],
   "decision_state_model": {
@@ -1399,10 +1400,10 @@
     "PRODUCTION_EVIDENCE"
   ],
   "whole_architecture_acceptance": {
-    "state": "NOT_ELIGIBLE",
-    "accepted": false,
+    "state": "ACCEPTED",
+    "accepted": true,
     "acceptance_subphase": "019-L",
-    "acceptance_document": null,
+    "acceptance_document": "docs/019-architecture-engineering-reentry/019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md",
     "prerequisites": [
       "ADQ-001 through ADQ-009 accepted",
       "ADQ-010 whole-architecture validation passed",
@@ -1412,7 +1413,9 @@
       "residual architecture risks dispositioned",
       "historical candidate disposition explicit",
       "current architecture owners created and routed"
-    ]
+    ],
+    "accepted_architecture_owner": "docs/canonical/architecture/accepted-architecture.md",
+    "historical_candidate_disposition": "docs/routing/phase019_architecture_candidate_disposition.json"
   },
   "counts": {
     "decisions_total": 10,
@@ -1421,5 +1424,13 @@
     "q4_repairs_complete": 4,
     "probes_authorized": 0,
     "implementation_packages": 0
+  },
+  "phase020_handoff": {
+    "lifecycle": "Phase 020 — Implementation Planning & Controlled Delivery",
+    "state": "AUTHORIZED_NOT_STARTED",
+    "start_gate": "REQUIRED",
+    "package_derivation_allowed": true,
+    "active_packages": 0,
+    "implementation_execution_authorized": false
   }
 }
