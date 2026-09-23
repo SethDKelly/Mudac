@@ -250,6 +250,19 @@ def main() -> int:
             errors,
         )
 
+        ci_evidence_repo = clone_repo(source, tmp, "ci-evidence")
+        ci_evidence_path = ci_evidence_repo / "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
+        ci_evidence = json.loads(ci_evidence_path.read_text(encoding="utf-8"))
+        ci_evidence["exact_revision"]["required_for_exit_evidence"] = False
+        ci_evidence["supply_chain"]["github_actions"]["blocking_and_exit_actions_full_commit_sha_required"] = False
+        ci_evidence["protected_evaluator_binding"]["may_modify_candidate_source"] = True
+        ci_evidence_path.write_text(json.dumps(ci_evidence, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "020-G exact-revision/evidence-contract weakening",
+            run_script(source, ci_evidence_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(ci_evidence_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -262,7 +275,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 15 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 16 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
