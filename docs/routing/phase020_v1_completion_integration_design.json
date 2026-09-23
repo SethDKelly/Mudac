@@ -1,0 +1,565 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-J V1 SCOPE / WHOLE-SYSTEM COMPLETION / FINAL INTEGRATION-HARDENING DESIGN — DESIGN ONLY; NO G1/G2/G6/G7 AUTHORITY",
+  "phase": "020-J",
+  "baseline_head": "73c56b965060321e1f742df5026ec75465b0fbd6",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md",
+  "inputs": [
+    "docs/canonical/project/mandate-context.md",
+    "docs/canonical/project/purpose-needs-success-tensions.md",
+    "docs/canonical/dependence/product-family-scope.md",
+    "docs/canonical/architecture/accepted-architecture.md",
+    "docs/canonical/governance/implementation-program-delivery.md",
+    "docs/routing/phase020_implementation_package_discovery.json",
+    "docs/routing/phase020_implementation_phase_contract.json",
+    "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "docs/routing/phase020_review_repair_exit_gate_governance.json",
+    "docs/routing/phase020_crosscutting_verification_architecture.json"
+  ],
+  "boundary": {
+    "design_only": true,
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0,
+    "active_packages": 0,
+    "v1_implementation_complete_now": false,
+    "release_candidate_authorized_now": false,
+    "final_integration_phase_authorized_now": false
+  },
+  "v1_scope": {
+    "adopted_product_variant": "PF-01 — MUDAC Live Competition Judging & Official Outcome",
+    "version_claim": "INITIAL IMPLEMENTED PF-01 BASELINE",
+    "all_current_concepts_in_product_scope": true,
+    "current_concepts": [
+      "Competition",
+      "Division",
+      "Team",
+      "Panel",
+      "Evaluation Occurrence",
+      "Evaluation Obligation",
+      "Rubric",
+      "Scorecard",
+      "Award",
+      "Identity",
+      "Participation",
+      "Alias",
+      "Access",
+      "Versioning",
+      "Provenance",
+      "Outcome Declaration",
+      "Export",
+      "Publication"
+    ],
+    "purpose_obligations": [
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05",
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09"
+    ],
+    "required_capability_envelope": [
+      "competition judging-context and policy setup",
+      "competitor establishment and bias-aware competition-facing identity/alias handling",
+      "Judge/Organizer Identity Participation Access and session realization",
+      "Panel and Evaluation Occurrence preparation/operation",
+      "Evaluation Obligation and remaining-work realization",
+      "Rubric basis/version realization",
+      "independent Scorecard Draft and authoritative Finalization",
+      "offline/shared-device/paper/electronic continuity and reconciliation",
+      "live Organizer readiness/gap/exception visibility",
+      "history/Provenance-preserving amendment/correction",
+      "Coverage/Aggregate/Rank derivation with missingness preserved",
+      "Award support as event-optional recognition",
+      "explicit ordinary or exceptional Outcome Declaration",
+      "source-bound Export generation/currentness",
+      "controlled Publication/release/withdrawal/successor behavior",
+      "accessible/responsive/degraded interaction parity",
+      "operational deployment/backup/recovery/evidence infrastructure sufficient for release evaluation"
+    ],
+    "in_scope_profiles": [
+      "Award-optional Competition",
+      "official but non-public",
+      "Export without Publication",
+      "public non-official representation",
+      "public official result representation",
+      "exceptional/no-result official disposition",
+      "paper/electronic/mixed continuity"
+    ],
+    "explicit_non_goals": [
+      "student registration/accounts/dashboard",
+      "student submission management",
+      "dataset hosting/distribution",
+      "notebook/analytics/ML execution infrastructure",
+      "faculty-advisor management",
+      "general ticketing/marketing",
+      "prize payment/disbursement",
+      "general-purpose competition management outside judging/outcomes",
+      "advanced Judge normalization/calibration as default core behavior",
+      "formal room/time-slot scheduling optimization",
+      "notification systems as required core functionality",
+      "rich public-results portal beyond controlled representation/release",
+      "unadopted product-family contractions or intentionally non-blinded judging",
+      "new semantic owners introduced solely for workflow convenience"
+    ],
+    "scope_change_required_for_non_goal_activation": true,
+    "optional_capability_instance_absence_does_not_remove_capability_from_v1_scope": true
+  },
+  "package_scope": {
+    "current_candidate_set": [
+      "IMP-001",
+      "IMP-002",
+      "IMP-003",
+      "IMP-004",
+      "IMP-005",
+      "IMP-006",
+      "IMP-007",
+      "IMP-008",
+      "IMP-009",
+      "IMP-010",
+      "IMP-011",
+      "IMP-012",
+      "IMP-013",
+      "IMP-014",
+      "IMP-015"
+    ],
+    "current_expectation": "ALL_15_REQUIRED_FOR_V1_IF_RETAINED_BY_020K",
+    "final_retained_or_superseded_disposition_owner": "020-K",
+    "split_merge_supersede_allowed_only_with_no_obligation_loss": true,
+    "package_g5_completion_alone_equals_v1_complete": false,
+    "package_graph_closure_required": true
+  },
+  "integrated_journeys": [
+    {
+      "id": "JNY-01",
+      "name": "competition preparation and blinded judging context",
+      "actors": [
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "Competition/Division/Team/Alias setup",
+        "Judge Identity/Participation/Access preparation",
+        "Panel/Evaluation Occurrence/Evaluation Obligation setup",
+        "Rubric exact basis"
+      ]
+    },
+    {
+      "id": "JNY-02",
+      "name": "Judge entry, Draft, independent evaluation and Finalization",
+      "actors": [
+        "Judge"
+      ],
+      "required_capabilities": [
+        "correct context/access resolution",
+        "bias-sensitive disclosure",
+        "accessible Draft work",
+        "authoritative Finalization",
+        "truthful confirmation and remaining-work update"
+      ]
+    },
+    {
+      "id": "JNY-03",
+      "name": "interruption, device, offline and paper continuity",
+      "actors": [
+        "Judge",
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "local Draft continuity",
+        "shared-device privacy reset",
+        "paper fallback",
+        "one logical evaluation",
+        "reconnect/access revalidation",
+        "conflict/uncertain result recovery"
+      ]
+    },
+    {
+      "id": "JNY-04",
+      "name": "Organizer live operations, incompletion and exceptions",
+      "actors": [
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "readiness/gap visibility",
+        "substitution/reassignment without authorship rewrite",
+        "missingness preservation",
+        "exception authority at natural owner",
+        "partial/unknown result visibility"
+      ]
+    },
+    {
+      "id": "JNY-05",
+      "name": "correction, Versioning, Provenance and affectedness",
+      "actors": [
+        "Judge",
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "legitimate amendment/correction",
+        "historical truth retention",
+        "current/superseded/affected distinction",
+        "downstream currentness propagation"
+      ]
+    },
+    {
+      "id": "JNY-06",
+      "name": "outcome formation, recognition and official declaration",
+      "actors": [
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "Coverage/Aggregate/Rank",
+        "Award optionality",
+        "ordinary and no-result closeout",
+        "Outcome Declaration officiality",
+        "affected/successor declaration behavior"
+      ]
+    },
+    {
+      "id": "JNY-07",
+      "name": "Export, Publication and external possession",
+      "actors": [
+        "Organizer",
+        "External recipient"
+      ],
+      "required_capabilities": [
+        "source-bound Export",
+        "audience/disclosure control",
+        "Publication release",
+        "withdrawal/supersession",
+        "external-copy persistence truth"
+      ]
+    },
+    {
+      "id": "JNY-08",
+      "name": "access revocation, privacy and technical support separation",
+      "actors": [
+        "Judge",
+        "Organizer",
+        "Technical administrator/support operator"
+      ],
+      "required_capabilities": [
+        "stale/revoked Access denial",
+        "private-state/cache protection",
+        "technical privilege not semantic authority",
+        "support/recovery without authorship transfer"
+      ]
+    },
+    {
+      "id": "JNY-09",
+      "name": "deployment failure, restore and resumed digital authority",
+      "actors": [
+        "Technical administrator/support operator",
+        "Organizer"
+      ],
+      "required_capabilities": [
+        "immutable release identity",
+        "backup/restore",
+        "application consistency validation",
+        "derived-state recovery",
+        "one-authority regional recovery",
+        "paper reconciliation after outage"
+      ]
+    }
+  ],
+  "whole_system_criteria": [
+    {
+      "id": "V1-WS-01",
+      "title": "PF-01 scope fidelity",
+      "statement": "The integrated system realizes PF-01's required capability envelope and does not introduce an unapproved non-goal or alternate product variant.",
+      "required_evidence": [
+        "E1",
+        "E4"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-02",
+      "title": "Implementation package and dependency closure",
+      "statement": "Every 020-K retained V1-required package has a qualifying immutable G5 completion record; package hard/integration/evidence dependencies are closed or explicitly proven non-applicable.",
+      "required_evidence": [
+        "E1",
+        "E3"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-03",
+      "title": "Purpose and semantic traceability",
+      "statement": "P-01..P-09, all eighteen PF-01 Concepts, applicable current policies/invariants and accepted architecture have implemented owners and exact traceability with no unexplained semantic gap.",
+      "required_evidence": [
+        "E1",
+        "E4"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-04",
+      "title": "Integrated critical journeys",
+      "statement": "JNY-01..JNY-09 pass through the composed browser/API/persistence/provider boundaries applicable to each journey without semantic shortcuts.",
+      "required_evidence": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-05",
+      "title": "Fifteen-scenario composed replay",
+      "statement": "SCN-01..SCN-15 all have PASS evidence at their final composed material boundaries on the qualifying integrated candidate.",
+      "required_evidence": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-06",
+      "title": "Architecture and ownership conformance",
+      "statement": "All nine accepted architecture families remain satisfied; no reverse-authority path, owner-boundary contradiction or unapproved architecture change is present.",
+      "required_evidence": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-07",
+      "title": "Security, privacy and authority hardening",
+      "statement": "Integrated identity/access/disclosure, abuse, secrets, privilege and test-control boundaries pass applicable behavioral and supply-chain evidence without technical privilege becoming MUDAC authority.",
+      "required_evidence": [
+        "E1",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-08",
+      "title": "Migration, recovery and degraded continuity",
+      "statement": "The supported migration path, uncertain-command recovery, projection rebuild, backup restore and applicable DR/degraded paths preserve authority/history and are proven at the required evidence floors.",
+      "required_evidence": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-09",
+      "title": "Accessibility and responsive semantic parity",
+      "statement": "Critical Judge and Organizer flows meet the visible WCAG 2.2 AA-oriented semantic-parity contract with automated plus required manual evidence across representative consequential states.",
+      "required_evidence": [
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-10",
+      "title": "Performance, event-load and cost evidence",
+      "statement": "Visible performance/workload thresholds applicable to v1 pass on the declared environment; event-load behavior preserves semantic truth; material runtime costs and controls are evidenced without removing trust guarantees.",
+      "required_evidence": [
+        "E3",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-11",
+      "title": "Build, supply-chain and evidence integrity",
+      "statement": "The qualifying integrated candidate has reproducible exact-revision CI, required scanners, SBOM/provenance/attestation where applicable and one immutable whole-system evidence bundle.",
+      "required_evidence": [
+        "E1",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "V1-WS-12",
+      "title": "Knowledge, operations and residual-risk closure",
+      "statement": "Canonical/routing/operational documentation matches the qualifying revision; no known blocker remains hidden; every accepted non-blocking residual risk has owner and revisit gate.",
+      "required_evidence": [
+        "E1",
+        "E5",
+        "E6"
+      ],
+      "blocking": true
+    }
+  ],
+  "final_integration_hardening_phase": {
+    "logical_id": "V1-FINAL",
+    "final_number_and_name_owner": "020-K",
+    "phase_type": "TERMINAL_IMPLEMENTATION_PROGRAM_INTEGRATION_AND_HARDENING_PHASE",
+    "creates_new_product_scope": false,
+    "creates_new_semantic_owner": false,
+    "purpose": [
+      "qualify one composed v1 candidate rather than a collection of individually green packages",
+      "replay all program-level scenarios and integrated journeys",
+      "find boundary defects visible only after composition",
+      "prove migration/recovery/accessibility/security/performance/cost/operational integration",
+      "produce the immutable whole-system implementation-completion evidence bundle"
+    ],
+    "entry_gate": {
+      "explicit_g2_required": true,
+      "all_retained_v1_packages_g1_required": true,
+      "all_predecessor_implementation_phases_complete": true,
+      "all_retained_v1_packages_g5_required_before_final_evidence_freeze": true,
+      "exact_integrated_baseline_required": true,
+      "integration_environment_healthy_required": true,
+      "test_control_and_evidence_infrastructure_required": true,
+      "unresolved_semantic_or_architecture_blocker_forbidden": true,
+      "repository_enforcement_evidence_required_before_trusting_main_as_protected_control": true
+    },
+    "note_on_package_g5_and_hardening": "The final phase may begin orchestration before the final evidence freeze as 020-K permits, but any source-changing fix to a package already at G5 follows 020-H reopen/re-authorization; V1-FINAL itself does not silently reopen package authority.",
+    "owned_or_declared_surfaces_rule": "020-K must explicitly declare integration-only surfaces. V1-FINAL has no blanket write authority over completed package-owned source.",
+    "permitted_work": [
+      "whole-system test/evidence orchestration",
+      "integration-only configuration explicitly assigned by 020-K",
+      "scenario and journey harness composition",
+      "release-candidate evidence assembly without granting G6",
+      "documentation/traceability reconciliation",
+      "non-semantic operational hardening inside explicitly assigned surfaces"
+    ],
+    "prohibited_work": [
+      "new product feature or Concept",
+      "activation of explicit v1 non-goal",
+      "silent architecture change",
+      "direct modification of completed package-owned source without 020-H reopen/re-authorization",
+      "lowering visible criteria or evidence floors",
+      "production testing merely to obtain missing preproduction evidence",
+      "release or production authorization"
+    ],
+    "defect_routes": {
+      "integration_only_defect_within_declared_surface": "REPAIR_INSIDE_V1_FINAL_G2",
+      "completed_package_source_defect": "020-H REOPEN_REQUIRED + EXPLICIT REAUTHORIZATION",
+      "missing_package_scope": "020-K/PROGRAM_REPLAN_OR_NEW_PACKAGE_AUTHORITY",
+      "semantic_contradiction": "CHG_CONCEPT_GOVERNANCE",
+      "architecture_contradiction": "ARCHITECTURE_REENTRY",
+      "external_legal_or_provider_blocker": "BLOCKED_OR_EVIDENCE_BOUNDED_ESCALATION"
+    },
+    "final_candidate": {
+      "exact_commit_sha_required": true,
+      "exact_tree_sha_required": true,
+      "immutable_artifact_digest_set_required": true,
+      "integrated_environment_identity_required": true,
+      "criteria_contract_version_required": true,
+      "scenario_matrix_version_required": true
+    },
+    "review": {
+      "independent_code_review_required": true,
+      "adversarial_conformance_review_required": true,
+      "whole_system_gatekeeper_required": true,
+      "implementer_self_close_forbidden": true
+    },
+    "exit_decisions": [
+      "V1_IMPLEMENTATION_COMPLETE",
+      "REPAIR_REQUIRED",
+      "BLOCKED",
+      "INCONCLUSIVE"
+    ],
+    "pass_requires_all_whole_system_criteria": true
+  },
+  "completion_evidence_bundle": {
+    "model": "IMMUTABLE_CONTENT_ADDRESSED_WHOLE_SYSTEM_BUNDLE",
+    "builds_on": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "required_refs": [
+      "final integrated candidate SHA/tree",
+      "retained package G5 completion records",
+      "V1-WS-01..12 outcomes",
+      "JNY-01..09 evidence",
+      "SCN-01..15 evidence",
+      "architecture conformance result",
+      "security/privacy/access review",
+      "migration/recovery evidence",
+      "accessibility evidence including manual critical-flow review",
+      "performance/event-load evidence and visible thresholds",
+      "cost model/guard evidence",
+      "SBOM/provenance/attestation references",
+      "independent code and adversarial review records",
+      "repository enforcement evidence",
+      "known failure/retry history",
+      "approved exceptions and residual risks",
+      "Gatekeeper decision"
+    ],
+    "missing_required_ref_result": "BLOCKED_OR_INCONCLUSIVE",
+    "historical_failed_attempts_preserved": true
+  },
+  "v1_completion_state": {
+    "successful_state": "V1_IMPLEMENTATION_COMPLETE",
+    "meaning": "PF-01 v1 implementation-program obligations are complete on one qualifying integrated revision.",
+    "grants_g6_release_candidate": false,
+    "grants_deployment_authority": false,
+    "grants_g7_production_readiness": false,
+    "next_state": "RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED",
+    "release_authority_must_be_explicit": true,
+    "production_authority_must_be_separate": true
+  },
+  "release_candidate_handoff": {
+    "g6_is_separate": true,
+    "g6_requires_explicit_release_authority": true,
+    "may_reuse_valid_v1_e6_evidence": true,
+    "must_bind_to_same_or_explicitly_requalified_revision_and_artifact_identity": true,
+    "if_release_packaging_or_configuration_changes_material_tree_or_artifact": "RERUN_AFFECTED_EVIDENCE",
+    "g6_minimum_reconciliation": [
+      "release artifact identity and provenance",
+      "deployment/migration/rollback evidence",
+      "restore/recovery evidence applicable to release",
+      "event-load evidence applicable to release",
+      "critical-flow accessibility evidence",
+      "runtime cost/security/observability controls"
+    ],
+    "g6_does_not_equal_g7": true
+  },
+  "residual_risk_policy": {
+    "zero_known_blocking_findings_required": true,
+    "nonblocking_risk_may_remain": true,
+    "nonblocking_risk_requires": [
+      "owner",
+      "rationale",
+      "impact",
+      "revisit_gate_or_trigger"
+    ],
+    "must_not_hide_unsatisfied_visible_criterion": true,
+    "must_not_hide_architecture_or_semantic_contradiction": true,
+    "future_improvement_does_not_block_v1_if_outside_visible_v1_requirement_and_risk_is_governed": true
+  },
+  "anti_bloat_rules": [
+    "final hardening is not a feature catch-all",
+    "do not activate explicit non-goals to make tests or architecture cleaner",
+    "do not introduce generic infrastructure without a v1 obligation",
+    "do not duplicate semantic rules in final-phase orchestration",
+    "do not redesign accepted architecture for aesthetic consistency",
+    "record non-required improvement as backlog/residual risk unless separately authorized"
+  ],
+  "package_program_relation": {
+    "all_15_current_candidates_remain_proposed": true,
+    "g1_ready_after_020j": 0,
+    "g2_authorized_after_020j": 0,
+    "active_after_020j": 0,
+    "final_phase_grouping_and_package_definitions_owned_by": "020-K",
+    "020j_closes_v1_scope_and_terminal_phase_design_gap": true
+  },
+  "phase020_carry_forward": {
+    "next_eligible": "020-K",
+    "automatic_authorization": false,
+    "final_roadmap_agent_assignment_and_package_g1_instantiation": "020-K",
+    "preimplementation_audit_and_phase021_handoff": "020-L"
+  }
+}
