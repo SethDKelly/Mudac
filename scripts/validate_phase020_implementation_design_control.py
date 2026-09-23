@@ -16,6 +16,7 @@ PHASE_CONTRACT = "docs/routing/phase020_implementation_phase_contract.json"
 CI_EVIDENCE = "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
 REVIEW_EXIT = "docs/routing/phase020_review_repair_exit_gate_governance.json"
 CROSSCUT = "docs/routing/phase020_crosscutting_verification_architecture.json"
+V1_COMPLETION = "docs/routing/phase020_v1_completion_integration_design.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -39,6 +40,7 @@ def main() -> int:
         ci_evidence = json.loads((repo / CI_EVIDENCE).read_text(encoding="utf-8")) if (repo / CI_EVIDENCE).is_file() else None
         review_exit = json.loads((repo / REVIEW_EXIT).read_text(encoding="utf-8")) if (repo / REVIEW_EXIT).is_file() else None
         crosscut = json.loads((repo / CROSSCUT).read_text(encoding="utf-8")) if (repo / CROSSCUT).is_file() else None
+        v1_completion = json.loads((repo / V1_COMPLETION).read_text(encoding="utf-8")) if (repo / V1_COMPLETION).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -890,6 +892,197 @@ def main() -> int:
                     if pkg.get("g1_ready") is not False or pkg.get("status") != "PROPOSED":
                         errors.append(f"020-I {pid} must remain PROPOSED and below G1")
 
+    if "020-J" in completed:
+        if v1_completion is None:
+            errors.append("020-J completion requires v1 completion/integration design")
+        else:
+            if control.get("v1_completion_integration_design") != V1_COMPLETION:
+                errors.append("Phase-020 control must point to 020-J v1 completion/integration design")
+
+            boundary_j = v1_completion.get("boundary", {})
+            if boundary_j.get("design_only") is not True:
+                errors.append("020-J must remain design-only")
+            for key in (
+                "implementation_execution_authorized","release_authorized","production_authorized",
+                "v1_implementation_complete_now","release_candidate_authorized_now",
+                "final_integration_phase_authorized_now",
+            ):
+                if boundary_j.get(key) is not False:
+                    errors.append(f"020-J boundary.{key} must be false")
+            if boundary_j.get("g1_ready_packages") != 0 or boundary_j.get("g2_authorized_packages") != 0 or boundary_j.get("active_packages") != 0:
+                errors.append("020-J must retain zero G1/G2/active packages")
+
+            scope = v1_completion.get("v1_scope", {})
+            if scope.get("adopted_product_variant") != "PF-01 — MUDAC Live Competition Judging & Official Outcome":
+                errors.append("020-J v1 target must remain PF-01")
+            if scope.get("all_current_concepts_in_product_scope") is not True:
+                errors.append("020-J must retain all current Concepts in v1 product scope")
+            expected_concepts = {
+                "Competition","Division","Team","Panel","Evaluation Occurrence","Evaluation Obligation",
+                "Rubric","Scorecard","Award","Identity","Participation","Alias","Access","Versioning",
+                "Provenance","Outcome Declaration","Export","Publication",
+            }
+            if set(scope.get("current_concepts", [])) != expected_concepts or len(scope.get("current_concepts", [])) != 18:
+                errors.append("020-J v1 scope must contain exactly the eighteen current PF-01 Concepts")
+            expected_purposes = {f"P-{i:02d}" for i in range(1, 10)}
+            if set(scope.get("purpose_obligations", [])) != expected_purposes:
+                errors.append("020-J v1 must retain P-01..P-09")
+            if scope.get("scope_change_required_for_non_goal_activation") is not True:
+                errors.append("020-J explicit non-goal activation must require scope change")
+            if scope.get("optional_capability_instance_absence_does_not_remove_capability_from_v1_scope") is not True:
+                errors.append("020-J optional instance absence must not shrink v1 product scope")
+            if len(scope.get("explicit_non_goals", [])) < 10:
+                errors.append("020-J v1 non-goal boundary appears incomplete")
+
+            package_scope = v1_completion.get("package_scope", {})
+            expected_packages = {f"IMP-{i:03d}" for i in range(1, 16)}
+            if set(package_scope.get("current_candidate_set", [])) != expected_packages:
+                errors.append("020-J current candidate set must remain IMP-001..IMP-015")
+            if package_scope.get("final_retained_or_superseded_disposition_owner") != "020-K":
+                errors.append("020-J must leave final package retain/supersede disposition to 020-K")
+            if package_scope.get("split_merge_supersede_allowed_only_with_no_obligation_loss") is not True:
+                errors.append("020-J decomposition changes may not lose v1 obligations")
+            if package_scope.get("package_g5_completion_alone_equals_v1_complete") is not False:
+                errors.append("020-J package G5 alone must not equal v1 completion")
+            if package_scope.get("package_graph_closure_required") is not True:
+                errors.append("020-J v1 requires package dependency closure")
+
+            journeys = v1_completion.get("integrated_journeys", [])
+            expected_journeys = [f"JNY-{i:02d}" for i in range(1, 10)]
+            actual_journeys = [item.get("id") for item in journeys if isinstance(item, dict)]
+            if actual_journeys != expected_journeys:
+                errors.append(f"020-J integrated journey IDs drift: {actual_journeys}")
+            for item in journeys:
+                if not isinstance(item, dict):
+                    continue
+                if not item.get("actors") or not item.get("required_capabilities"):
+                    errors.append(f"020-J {item.get('id')} must define actors and required capabilities")
+
+            criteria = v1_completion.get("whole_system_criteria", [])
+            expected_ws = [f"V1-WS-{i:02d}" for i in range(1, 13)]
+            actual_ws = [item.get("id") for item in criteria if isinstance(item, dict)]
+            if actual_ws != expected_ws:
+                errors.append(f"020-J whole-system criterion IDs drift: {actual_ws}")
+            known_evidence_j = {item.get("id") for item in framework.get("evidence_classes", []) if isinstance(item, dict)}
+            for item in criteria:
+                if not isinstance(item, dict):
+                    continue
+                cid = item.get("id")
+                if item.get("blocking") is not True:
+                    errors.append(f"020-J {cid} must remain blocking")
+                floor = item.get("required_evidence", [])
+                if not floor or any(e not in known_evidence_j for e in floor):
+                    errors.append(f"020-J {cid} has invalid evidence requirements")
+                if not item.get("statement"):
+                    errors.append(f"020-J {cid} missing criterion statement")
+
+            final_phase = v1_completion.get("final_integration_hardening_phase", {})
+            if final_phase.get("logical_id") != "V1-FINAL":
+                errors.append("020-J terminal logical phase must remain V1-FINAL")
+            if final_phase.get("final_number_and_name_owner") != "020-K":
+                errors.append("020-J final phase numbering/naming must remain owned by 020-K")
+            if final_phase.get("creates_new_product_scope") is not False or final_phase.get("creates_new_semantic_owner") is not False:
+                errors.append("020-J V1-FINAL must not create product scope or semantic owner")
+            entry = final_phase.get("entry_gate", {})
+            for key in (
+                "explicit_g2_required","all_retained_v1_packages_g1_required",
+                "all_predecessor_implementation_phases_complete",
+                "all_retained_v1_packages_g5_required_before_final_evidence_freeze",
+                "exact_integrated_baseline_required","integration_environment_healthy_required",
+                "test_control_and_evidence_infrastructure_required",
+                "unresolved_semantic_or_architecture_blocker_forbidden",
+                "repository_enforcement_evidence_required_before_trusting_main_as_protected_control",
+            ):
+                if entry.get(key) is not True:
+                    errors.append(f"020-J V1-FINAL entry_gate.{key} must be true")
+            if "020-H REOPEN_REQUIRED + EXPLICIT REAUTHORIZATION" != final_phase.get("defect_routes", {}).get("completed_package_source_defect"):
+                errors.append("020-J completed package source defects must route through 020-H reopen/re-authorization")
+            prohibited = set(final_phase.get("prohibited_work", []))
+            for item in (
+                "new product feature or Concept",
+                "activation of explicit v1 non-goal",
+                "silent architecture change",
+                "direct modification of completed package-owned source without 020-H reopen/re-authorization",
+                "lowering visible criteria or evidence floors",
+                "release or production authorization",
+            ):
+                if item not in prohibited:
+                    errors.append(f"020-J V1-FINAL prohibited work missing: {item}")
+            review_j = final_phase.get("review", {})
+            for key in ("independent_code_review_required","adversarial_conformance_review_required","whole_system_gatekeeper_required","implementer_self_close_forbidden"):
+                if review_j.get(key) is not True:
+                    errors.append(f"020-J V1-FINAL review.{key} must be true")
+            if set(final_phase.get("exit_decisions", [])) != {"V1_IMPLEMENTATION_COMPLETE","REPAIR_REQUIRED","BLOCKED","INCONCLUSIVE"}:
+                errors.append("020-J V1-FINAL exit decision vocabulary drift")
+            if final_phase.get("pass_requires_all_whole_system_criteria") is not True:
+                errors.append("020-J V1-FINAL PASS must require all whole-system criteria")
+
+            bundle_j = v1_completion.get("completion_evidence_bundle", {})
+            if bundle_j.get("model") != "IMMUTABLE_CONTENT_ADDRESSED_WHOLE_SYSTEM_BUNDLE":
+                errors.append("020-J whole-system evidence bundle model drift")
+            if bundle_j.get("historical_failed_attempts_preserved") is not True:
+                errors.append("020-J whole-system evidence must preserve failed attempts")
+            refs = set(bundle_j.get("required_refs", []))
+            for item in (
+                "V1-WS-01..12 outcomes","JNY-01..09 evidence","SCN-01..15 evidence",
+                "repository enforcement evidence","independent code and adversarial review records",
+            ):
+                if item not in refs:
+                    errors.append(f"020-J whole-system evidence bundle missing: {item}")
+
+            completion_j = v1_completion.get("v1_completion_state", {})
+            if completion_j.get("successful_state") != "V1_IMPLEMENTATION_COMPLETE":
+                errors.append("020-J successful state must remain V1_IMPLEMENTATION_COMPLETE")
+            for key in ("grants_g6_release_candidate","grants_deployment_authority","grants_g7_production_readiness"):
+                if completion_j.get(key) is not False:
+                    errors.append(f"020-J v1 completion must not grant {key}")
+            if completion_j.get("next_state") != "RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED":
+                errors.append("020-J v1 completion next state must remain release-candidate eligible, not authorized")
+            if completion_j.get("release_authority_must_be_explicit") is not True or completion_j.get("production_authority_must_be_separate") is not True:
+                errors.append("020-J release/production authority must remain explicit/separate")
+
+            release = v1_completion.get("release_candidate_handoff", {})
+            if release.get("g6_is_separate") is not True or release.get("g6_requires_explicit_release_authority") is not True or release.get("g6_does_not_equal_g7") is not True:
+                errors.append("020-J must keep G6 separate and explicit, and G6 != G7")
+            if release.get("must_bind_to_same_or_explicitly_requalified_revision_and_artifact_identity") is not True:
+                errors.append("020-J G6 handoff must bind same or explicitly requalified revision/artifact")
+
+            risks = v1_completion.get("residual_risk_policy", {})
+            if risks.get("zero_known_blocking_findings_required") is not True:
+                errors.append("020-J v1 completion requires zero known blocking findings")
+            if risks.get("nonblocking_risk_may_remain") is not True:
+                errors.append("020-J may retain governed non-blocking residual risk")
+            if risks.get("must_not_hide_unsatisfied_visible_criterion") is not True or risks.get("must_not_hide_architecture_or_semantic_contradiction") is not True:
+                errors.append("020-J residual risk must not hide required/architecture/semantic blockers")
+
+            relation_j = v1_completion.get("package_program_relation", {})
+            if relation_j.get("g1_ready_after_020j") != 0 or relation_j.get("g2_authorized_after_020j") != 0 or relation_j.get("active_after_020j") != 0:
+                errors.append("020-J must not promote packages or activate implementation")
+            if relation_j.get("final_phase_grouping_and_package_definitions_owned_by") != "020-K":
+                errors.append("020-J must leave final phase/package definitions to 020-K")
+
+            if crosscut:
+                if crosscut.get("scenario_program_rules", {}).get("final_v1_all_15_must_have_pass_evidence") is not True:
+                    errors.append("020-J requires 020-I final all-15 scenario replay obligation")
+            if package_discovery:
+                if package_discovery.get("v1_completion_integration_design") != V1_COMPLETION:
+                    errors.append("020-J package discovery must reference v1 completion design")
+                if package_discovery.get("semantics", {}).get("g1_ready_after_020j") != 0:
+                    errors.append("020-J package discovery must retain zero G1-ready packages")
+                for pkg in package_discovery.get("candidate_packages", []):
+                    if not isinstance(pkg, dict):
+                        continue
+                    pid = pkg.get("id")
+                    if pkg.get("v1_scope_disposition") != "V1_REQUIRED_IF_RETAINED_BY_020K":
+                        errors.append(f"020-J {pid} v1 scope disposition drift")
+                    rel = pkg.get("final_integration_relation", {})
+                    if rel.get("source") != V1_COMPLETION or rel.get("logical_final_phase") != "V1-FINAL":
+                        errors.append(f"020-J {pid} missing V1-FINAL relation")
+                    if rel.get("package_g5_required_before_final_evidence_freeze") is not True or rel.get("post_g5_source_change_requires_020h_reopen") is not True:
+                        errors.append(f"020-J {pid} final integration/reopen relation drift")
+                    if pkg.get("g1_ready") is not False or pkg.get("status") != "PROPOSED":
+                        errors.append(f"020-J {pid} must remain PROPOSED and below G1")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -921,6 +1114,8 @@ def main() -> int:
         errors.append("implementation framework must reference 020-H review/repair/exit-gate governance after completion")
     if "020-I" in completed and phase020_fw.get("crosscutting_verification_architecture") != CROSSCUT:
         errors.append("implementation framework must reference 020-I cross-cutting verification architecture after completion")
+    if "020-J" in completed and phase020_fw.get("v1_completion_integration_design") != V1_COMPLETION:
+        errors.append("implementation framework must reference 020-J v1 completion/integration design after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
@@ -949,6 +1144,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md"] if "020-G" in completed else []),
         *([f"{PHASE_DIR}/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md"] if "020-H" in completed else []),
         *([f"{PHASE_DIR}/020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md"] if "020-I" in completed else []),
+        *([f"{PHASE_DIR}/020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md"] if "020-J" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
