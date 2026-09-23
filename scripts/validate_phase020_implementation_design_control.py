@@ -9,6 +9,7 @@ CONTROL = "docs/routing/phase020_implementation_design_control.json"
 FRAMEWORK = "docs/routing/implementation_program_framework.json"
 PHASE019 = "docs/routing/phase019_architecture_decision_control.json"
 QUALIFICATION = "docs/routing/phase020_substrate_reuse_qualification.json"
+OPERATING = "docs/routing/autonomous_implementation_operating_model.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -25,6 +26,7 @@ def main() -> int:
         framework = json.loads((repo / FRAMEWORK).read_text(encoding="utf-8"))
         phase019 = json.loads((repo / PHASE019).read_text(encoding="utf-8"))
         qualification = json.loads((repo / QUALIFICATION).read_text(encoding="utf-8")) if (repo / QUALIFICATION).is_file() else None
+        operating = json.loads((repo / OPERATING).read_text(encoding="utf-8")) if (repo / OPERATING).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -188,6 +190,41 @@ def main() -> int:
             if admin.get("enforced_merge_policy_claim_allowed") is not False:
                 errors.append("020-B must not claim enforced merge policy from workflow existence")
 
+    if "020-C" in completed:
+        if operating is None:
+            errors.append("020-C completion requires autonomous implementation operating model")
+        else:
+            if control.get("autonomous_implementation_operating_model") != OPERATING:
+                errors.append("Phase-020 control must point to autonomous implementation operating model")
+            activation = operating.get("activation", {})
+            if activation.get("requires_g2") is not True:
+                errors.append("020-C operating model must require G2")
+            if activation.get("phase020_domain_execution_authorized") is not False:
+                errors.append("020-C cannot authorize Phase-020 domain implementation")
+            delegation = operating.get("delegation", {})
+            if delegation.get("mode") != "COORDINATOR_ONLY_WITHIN_ACTIVE_G2_ENVELOPE":
+                errors.append("020-C delegation mode drift")
+            if delegation.get("max_delegation_depth") != 1:
+                errors.append("020-C recursive delegation must remain prohibited")
+            roles = operating.get("roles", {})
+            if roles.get("coordinator", {}).get("may_grant_g2") is not False:
+                errors.append("Coordinator may not grant G2")
+            if roles.get("implementer", {}).get("may_self_close_phase") is not False:
+                errors.append("Implementer may not self-close phase")
+            if roles.get("reviewer", {}).get("independent_run_required") is not True:
+                errors.append("020-C requires independent reviewer run")
+            isolation = operating.get("work_isolation", {})
+            if isolation.get("exact_base_sha_required") is not True or isolation.get("isolated_writable_worktree_required") is not True:
+                errors.append("020-C requires exact-base isolated writable worktrees")
+            provenance = operating.get("provenance", {})
+            if provenance.get("technical_not_domain_provenance") is not True:
+                errors.append("020-C technical agent provenance must remain distinct from domain Provenance")
+            completion = operating.get("completion", {})
+            if completion.get("next_phase_g2") != "NOT_GRANTED":
+                errors.append("020-C completion must not auto-grant next-phase G2")
+            if not (repo / ".cursor" / "worktrees.json").is_file():
+                errors.append("020-C requires Cursor worktree setup adapter")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -217,6 +254,7 @@ def main() -> int:
         f"{PHASE_DIR}/index.md",
         f"{PHASE_DIR}/020-A-start-gate-authority-accepted-baseline-autonomous-development-method.md",
         *([f"{PHASE_DIR}/020-B-existing-substrate-historical-implementation-reuse-qualification.md"] if "020-B" in completed else []),
+        *([f"{PHASE_DIR}/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md"] if "020-C" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
