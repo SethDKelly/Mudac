@@ -1,6 +1,6 @@
 # Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning
 
-**Status:** ACTIVE — 020-A/B/C COMPLETE / 020-D NEXT ELIGIBLE
+**Status:** ACTIVE — 020-A/B/C/D COMPLETE / 020-E NEXT ELIGIBLE
 
 ## Authority
 
@@ -11,14 +11,15 @@
 - [Phase-020 machine control](../routing/phase020_implementation_design_control.json)
 - [020-B substrate/reuse qualification](../routing/phase020_substrate_reuse_qualification.json)
 - [020-C autonomous implementation operating model](../routing/autonomous_implementation_operating_model.json)
+- [020-D nonproduction test-control architecture](../routing/phase020_nonproduction_test_control_architecture.json)
 
 ## Planned subphases
 
 - [020-A — Start Gate, Authority, Accepted Baseline & Autonomous-Development Method](020-A-start-gate-authority-accepted-baseline-autonomous-development-method.md) — **COMPLETE — PASS**
 - [020-B — Existing Substrate, Historical Implementation & Reuse Qualification](020-B-existing-substrate-historical-implementation-reuse-qualification.md) — **COMPLETE — PASS**
 - [020-C — Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers](020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md) — **COMPLETE — PASS**
-- 020-D — Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture — **NEXT ELIGIBLE**
-- 020-E — Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing — PLANNED
+- [020-D — Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture](020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md) — **COMPLETE — PASS**
+- 020-E — Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing — **NEXT ELIGIBLE**
 - 020-F — Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture — PLANNED
 - 020-G — CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — PLANNED
 - 020-H — Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — PLANNED
@@ -31,8 +32,8 @@
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C COMPLETE
-020-D NEXT ELIGIBLE
+020-A/B/C/D COMPLETE
+020-E NEXT ELIGIBLE
 
 whole architecture               ACCEPTED
 G0                               SATISFIED
