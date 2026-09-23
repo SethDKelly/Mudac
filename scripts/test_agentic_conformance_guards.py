@@ -190,6 +190,18 @@ def main() -> int:
             errors,
         )
 
+        phase020_repo = clone_repo(source, tmp, "phase020")
+        phase020_path = phase020_repo / "docs/routing/phase020_implementation_design_control.json"
+        phase020 = json.loads(phase020_path.read_text(encoding="utf-8"))
+        phase020["state"]["implementation_execution_authorized"] = True
+        phase020["implementation_boundary"]["mudac_domain_implementation_authorized"] = True
+        phase020_path.write_text(json.dumps(phase020, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "Phase 020 implementation-authority leakage",
+            run_script(source, phase020_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(phase020_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -202,7 +214,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 10 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 11 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
