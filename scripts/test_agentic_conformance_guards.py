@@ -278,6 +278,21 @@ def main() -> int:
             errors,
         )
 
+        crosscut_repo = clone_repo(source, tmp, "crosscut")
+        crosscut_path = crosscut_repo / "docs/routing/phase020_crosscutting_verification_architecture.json"
+        crosscut = json.loads(crosscut_path.read_text(encoding="utf-8"))
+        crosscut["scenario_matrix"] = crosscut["scenario_matrix"][:-1]
+        crosscut["accessibility_verification"]["automated_scan_alone_proves_wcag_conformance"] = True
+        crosscut["recovery_verification"]["database_restore_alone_is_semantic_recovery"] = True
+        crosscut["performance_verification"]["threshold_contract"]["hidden_threshold_forbidden"] = False
+        crosscut["cost_verification"]["mandatory_trust_controls_may_be_removed_for_cost_only"] = True
+        crosscut_path.write_text(json.dumps(crosscut, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "020-I cross-cutting scenario/evidence erosion",
+            run_script(source, crosscut_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(crosscut_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -290,7 +305,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 17 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 18 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
