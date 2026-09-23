@@ -12,7 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
 - [Phase 019](docs/019-architecture-engineering-reentry/) — **COMPLETE — PASS; whole architecture accepted / G0 satisfied**.
-- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 020-L NEXT ELIGIBLE**.
+- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 020-L NEXT ELIGIBLE — BLOCKED BY P020L-001**.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -53,9 +53,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
-PHASE 020 ACTIVE
+PHASE 020 ACTIVE — EXIT BLOCKED BY REPOSITORY ENFORCEMENT
 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-020-L NEXT ELIGIBLE
+020-L NEXT ELIGIBLE — BLOCKED BY P020L-001
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
