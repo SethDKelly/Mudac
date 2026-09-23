@@ -1,6 +1,6 @@
 # Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning
 
-**Status:** ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 020-L NEXT ELIGIBLE
+**Status:** ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 020-L NEXT ELIGIBLE — BLOCKED BY REPOSITORY ENFORCEMENT
 
 ## Authority
 
@@ -19,6 +19,7 @@
 - [020-I cross-cutting verification architecture](../routing/phase020_crosscutting_verification_architecture.json)
 - [020-J v1 completion/integration design](../routing/phase020_v1_completion_integration_design.json)
 - [020-K autonomous implementation roadmap](../routing/phase020_autonomous_implementation_roadmap.json)
+- [020-L pre-implementation exit audit](../routing/phase020_preimplementation_exit_audit.json)
 - [Implementation roadmap progressive-disclosure index](../implementation-roadmap/index.md)
 
 ## Planned subphases
@@ -34,14 +35,14 @@
 - [020-I — Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design](020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md) — **COMPLETE — PASS**
 - [020-J — v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design](020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md) — **COMPLETE — PASS**
 - [020-K — Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness](020-K-full-autonomous-implementation-roadmap-agent-assignment-phase-package-definitions-entry-readiness.md) — **COMPLETE — PASS**
-- 020-L — Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff — **NEXT ELIGIBLE**
+- [020-L — Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff](020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md) — **NEXT ELIGIBLE** — **BLOCKED: P020L-001 / main protection (#10)**
 
 ## Current state
 
 ~~~text
-PHASE 020 ACTIVE
+PHASE 020 ACTIVE — EXIT BLOCKED BY REPOSITORY ENFORCEMENT
 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-020-L NEXT ELIGIBLE
+020-L NEXT ELIGIBLE — BLOCKED BY P020L-001
 
 whole architecture               ACCEPTED
 G0                               SATISFIED
