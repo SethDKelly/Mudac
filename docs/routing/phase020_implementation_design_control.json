@@ -11,9 +11,10 @@
   "state": {
     "status": "ACTIVE",
     "completed_subphases": [
-      "020-A"
+      "020-A",
+      "020-B"
     ],
-    "next_eligible_subphase": "020-B",
+    "next_eligible_subphase": "020-C",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -32,12 +33,12 @@
     {
       "id": "020-B",
       "title": "Existing Substrate, Historical Implementation & Reuse Qualification",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-C",
       "title": "Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-D",
@@ -146,8 +147,20 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 1,
+    "completed_subphases": 2,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
+  },
+  "substrate_reuse_qualification": "docs/routing/phase020_substrate_reuse_qualification.json",
+  "substrate_reuse_summary": {
+    "historical_candidates_qualified": 6,
+    "historical_candidates_reuse_with_revision": 6,
+    "live_workspace_packages": 13,
+    "authored_test_files": 0,
+    "migration_files": 0,
+    "accepted_owner_topology": "FIVE",
+    "historical_workspace_owner_topology": "SIX",
+    "mandatory_topology_repair": true,
+    "active_implementation_packages": 0
   }
 }
