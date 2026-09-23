@@ -4,9 +4,9 @@ This subtree preserves MUDAC implementation/tooling decisions and planning produ
 
 ## Current authority state
 
-**DOMAIN IMPLEMENTATION AUTHORITY AND IMPLEMENTATION PLANNING ARE SUSPENDED.**
+**IMPLEMENTATION PLANNING IS ENABLED UNDER G0; DOMAIN IMPLEMENTATION EXECUTION REMAINS SUSPENDED.**
 
-Jackson-aligned Concept Design is closed. No new MUDAC domain implementation is authorized; Phase 018 is complete and Phase 019 architecture/engineering re-entry is ACTIVE through 019-K, with 019-L next eligible. The historical Phase 008 queue remains halted after 008-E.
+Jackson-aligned Concept Design is closed. Phase 018 and Phase 019 are complete, whole architecture is accepted, and G0 permits Phase-020 package derivation. No MUDAC domain implementation package is authorized for execution; the historical Phase-008 queue remains halted after 008-E.
 
 The controlling current owners are:
 
@@ -21,11 +21,11 @@ Current posture:
 Jackson Concept Design: CLOSED — PHASE 017 PASS
 PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 implementation readiness: READY FOR POST-CLOSURE PREPARATION
-implementation program framework: DEFINED / PRE-ARCHITECTURE
+implementation program framework: PLANNING_READY / G0 SATISFIED
 active implementation packages: 0
-implementation planning: PACKAGE DERIVATION DEFERRED UNTIL ACCEPTED ARCHITECTURE
+implementation planning: PACKAGE DERIVATION ALLOWED THROUGH PHASE-020 START GATE
 new domain implementation: NOT STARTED
 implementation execution authorization: NOT GRANTED
 006-D bootstrap: FROZEN HISTORICAL NON-DOMAIN SUBSTRATE
@@ -65,18 +65,19 @@ The retained runtime/bootstrap remains non-domain. 018-J has qualified all six i
 
 018-L defines the technology-neutral package lifecycle, evidence classes and delivery gates in `docs/canonical/governance/implementation-program-delivery.md`, with machine-readable pre-architecture state in `docs/routing/implementation_program_framework.json`.
 
-That framework is current governance. The six documents in this Implementation subtree remain suspended historical candidates. The framework currently requires zero active packages, no package derivation and no execution authorization until a fresh accepted architecture exists.
+That framework is current governance. The six documents in this Implementation subtree remain suspended historical candidates. After 019-L, the framework is PLANNING_READY: package derivation is allowed, the active package set is still empty, and execution remains unauthorized until explicit G2.
 
 
 Current Phase-019 progression:
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture false
+accepted whole architecture true
+G0 package derivation ALLOWED
+Phase 020 AUTHORIZED / NOT STARTED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

@@ -4,6 +4,8 @@ This subtree now contains both **current accepted Phase-019 architecture authori
 
 ## Current accepted architecture authority
 
+- [Accepted MUDAC Architecture](accepted-architecture.md) — **WHOLE ARCHITECTURE ACCEPTED in 019-L; consolidation/routing authority.**
+
 - [Current Architecture Drivers, Quality Priorities, Workload & Trust Boundaries](architecture-drivers.md) — **ADQ-001 ACCEPTED in 019-B; DRV-001..012 current authority.**
 - [Current Application Ownership, Boundary, Coordination & Dependency Architecture](application-ownership-boundaries.md) — **ADQ-002 ACCEPTED in 019-C; BND-001..012 current authority.**
 - [Current Persistence, History, Provenance, Projection, Migration & Recovery Architecture](persistence-history-recovery.md) — **ADQ-003 ACCEPTED in 019-D; PST-001..016 current authority.**
@@ -14,11 +16,11 @@ This subtree now contains both **current accepted Phase-019 architecture authori
 - [Current Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture](browser-client-interaction.md) — **ADQ-008 ACCEPTED in 019-I after Q4R-004; CLT-001..020 current authority.**
 - [Current Runtime Platform, Security, Deployment & Operations Architecture](runtime-platform-operations.md) — **ADQ-009 ACCEPTED in 019-J; RUN-001..026 current authority.**
 
-Accepted architecture remains partial. Whole-architecture acceptance is still false until successful 019-L closure.
+**Whole architecture is accepted.** The family documents above remain the normative rule owners; the accepted-architecture manifest consolidates/routs them without duplicating rule bodies.
 
-## Preserved candidate authority state
+## Preserved historical candidate state
 
-All other historical architecture documents listed below remain **downstream candidates**. Jackson-aligned Concept Design closed successfully in Phase 017; historical architecture does not become current merely because Phase 019 is active.
+All nine historical architecture documents listed below are **SUPERSEDED AS CURRENT ARCHITECTURE / RETAINED AS HISTORICAL EVIDENCE** by 019-L. Their exact replacement owners are recorded in `docs/routing/phase019_architecture_candidate_disposition.json`.
 
 The controlling rules are:
 
@@ -39,7 +41,7 @@ The controlling rules are:
 * [Front-End State, Navigation & Interaction Architecture](frontend-interaction.md)
 * [AWS Runtime, Security & Operations Architecture](aws-runtime-operations.md)
 
-## Permitted use before explicit architecture adoption
+## Permitted use of superseded historical candidates
 
 Architecture material may be consulted only to:
 
@@ -50,7 +52,7 @@ Architecture material may be consulted only to:
 
 It must not be used to justify a Concept boundary, dependency, scope decision, mapping, familiar concept, synchronization, integrity trade-off, or misfit disposition because a framework/database/cloud/module design already expects it.
 
-Phase 017 did not reactivate these candidates. Phase 018 qualified them as evidence; Phase 019 accepts only explicit bounded decisions. Current accepted families are DRV, BND, PST, IAM, CMD, RCV, ART and CLT. Historical candidates remain suspended unless explicitly adopted, revised, replaced or retired.
+Phase 017 did not reactivate these candidates. Phase 018 qualified them as evidence. Phase 019 has now explicitly superseded all nine in favor of DRV, BND, PST, IAM, CMD, RCV, ART, CLT and RUN plus the accepted-architecture manifest.
 
 
 ## Phase-017 audit result
@@ -60,18 +62,18 @@ Phase 017 did not reactivate these candidates. Phase 018 qualified them as evide
 The corpus contains useful architectural forces and plausible hypotheses, but also stale semantic bindings and concrete topology/vendor decisions. It is therefore **not safe for automatic reactivation**. 018-J completed classification without adopting any candidate. 018-K defined the pre-selection question/dependency/evidence plan in `docs/routing/architecture_reentry_plan.json`; every selected option remains null and accepted architecture remains not established. 018-M has now authorized **Phase 019 — Architecture & Engineering Re-entry** to begin at 019-A. Phase 019 must compare and explicitly adopt, revise, replace or reject choices under the post-Concept-Design re-entry contract.
 
 
-Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 ACTIVE; 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE.** ADQ-001 through ADQ-010 are accepted; accepted whole architecture is still not established.
+Current lifecycle: **PHASE 018 COMPLETE — PASS; PHASE 019 COMPLETE — PASS; 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE.** ADQ-001 through ADQ-010 are accepted and whole architecture is accepted.
 
 
 Current Phase-019 progression:
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture false
+accepted whole architecture true
+G0 package derivation ALLOWED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

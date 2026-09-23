@@ -1,6 +1,6 @@
 # Phase 019 — Architecture & Engineering Re-entry
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE
+**Status:** COMPLETE — PASS — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED
 
 Phase 019 is the fresh architecture decision and acceptance program authorized by 018-M.
 
@@ -40,7 +40,7 @@ implementation execution       false
 - [019-I — Browser/Client State, Navigation, Accessibility & Degraded Interaction Architecture](019-I-browser-client-state-navigation-accessibility-degraded-interaction-architecture.md) — **COMPLETE — PASS — Q4R-004 COMPLETE / ADQ-008 ACCEPTED**
 - [019-J — Runtime Platform, Security, Deployment, Availability, Observability & Disaster Recovery Architecture](019-J-runtime-platform-security-deployment-availability-observability-disaster-recovery-architecture.md) — **COMPLETE — PASS — ADQ-009 ACCEPTED**
 - [019-K — Whole-Architecture Integration, Threat, Failure, Recovery, Performance, Cost & Scenario Validation](019-K-whole-architecture-integration-threat-failure-recovery-performance-cost-scenario-validation.md) — **COMPLETE — PASS — ADQ-010 ACCEPTED / 15 OF 15 SCENARIOS PASS**
-- 019-L — Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff — **NEXT ELIGIBLE**
+- [019-L — Architecture Consolidation, Acceptance, Candidate Supersession & Implementation Handoff](019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md) — **COMPLETE — PASS — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED**
 
 ## Current authority
 
@@ -53,19 +53,21 @@ Use:
 - docs/routing/phase019_architecture_decision_control.json
 - docs/routing/architecture_reentry_plan.json
 - docs/routing/downstream_candidate_qualification.json
+- docs/routing/phase019_architecture_candidate_disposition.json
+- docs/canonical/architecture/accepted-architecture.md
 
 ## Current lifecycle state
 
 ~~~text
-PHASE 019 ACTIVE
-019-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-019-L NEXT ELIGIBLE
+PHASE 019 COMPLETE
+019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 
 ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture          NOT ESTABLISHED
+accepted whole architecture          ACCEPTED
+G0 package derivation                 ALLOWED
 active implementation packages       0
 implementation execution             NOT AUTHORIZED
 ~~~
 
-Subphase progression is human-directed. NEXT ELIGIBLE is not automatic authorization.
+Phase 019 is closed. Phase 020 planning is authorized to begin only through its explicit start gate; implementation execution still requires G2 authority.

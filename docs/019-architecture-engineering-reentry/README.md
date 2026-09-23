@@ -2,9 +2,9 @@
 
 Phase 019 is the first post-Concept-Design lifecycle permitted to make fresh architecture decisions.
 
-**Status:** ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 019-L NEXT ELIGIBLE
+**Status:** COMPLETE — PASS — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED
 
-PHASE 019 ACTIVE
+PHASE 019 COMPLETE
 
 ## Objective
 
@@ -91,9 +91,9 @@ Accepted CLT-001..020: client-rich but server-authoritative browser interaction,
 
 ### 019-J — Runtime / Platform / Security / Availability / Observability / DR
 
-PLANNED.
+**COMPLETE — PASS — ADQ-009 ACCEPTED.**
 
-Resolve ADQ-009.
+Accepted RUN-001..026: revised AWS single-active Multi-AZ runtime using CloudFront/WAF private origins, ECS/Fargate, RDS PostgreSQL Multi-AZ, Cognito, S3/SQS, OIDC deployment, semantic observability and tested cold regional recovery.
 
 ### 019-K — Whole-Architecture Reconciliation
 
@@ -103,25 +103,25 @@ Validated DRV/BND/PST/IAM/CMD/RCV/ART/CLT/RUN as one architecture: zero cross-de
 
 ### 019-L — Consolidation / Acceptance / Candidate Supersession / Handoff
 
-**NEXT ELIGIBLE.**
+**COMPLETE — PASS — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED.**
 
-Create current accepted architecture authority if all acceptance prerequisites pass, explicitly disposition historical candidates, and hand the accepted architecture to the still-empty implementation-program framework.
+Established `docs/canonical/architecture/accepted-architecture.md`, explicitly superseded/retained all nine historical architecture candidates, transitioned the implementation framework to PLANNING_READY, enabled package derivation for Phase 020, and retained zero packages / no execution authority.
 
 ## Current machine state
 
 ~~~text
-completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G, 019-H, 019-I, 019-J, 019-K
-next eligible subphase               019-L
+completed subphases                  019-A, 019-B, 019-C, 019-D, 019-E, 019-F, 019-G, 019-H, 019-I, 019-J, 019-K, 019-L
+next eligible subphase               none — Phase 019 closed
 automatic advance                    false
 
 ADQ decisions accepted               10 / 10
 Q4 repairs complete                  4 / 4
 technical probes authorized          0
 
-accepted whole architecture          false
+accepted whole architecture          true
 
 active implementation packages       0
-package derivation                    false
+package derivation                    true — G0 satisfied
 implementation execution             false
 ~~~
 
@@ -138,4 +138,4 @@ individual architecture decision
   != implementation authorization
 ~~~
 
-The earliest point at which G0 — Architecture Accepted may become satisfied is successful 019-L closure.
+G0 — Architecture Accepted is satisfied. Phase 020 may derive implementation packages through its start gate, but G2 remains required before implementation execution.

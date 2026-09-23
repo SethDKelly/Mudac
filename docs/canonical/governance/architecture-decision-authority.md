@@ -237,6 +237,8 @@ implementation execution authorized = false
 
 Architecture decision documents, Q4 repairs, evaluation matrices and authorized probes are architecture evidence, not implementation packages.
 
+After successful 019-L acceptance, G0 permits package derivation but still does not authorize implementation execution; execution remains a package-specific G2 transition.
+
 <a id="ada-016"></a>
 ## ADA-016 — Machine Decision Control Is Routing and Evidence State, Not Independent Semantic Authority
 
@@ -259,14 +261,13 @@ Generated or machine-readable state cannot create authority that the correspondi
 
 # Current Phase-019 posture
 
-After 019-K:
+After 019-L:
 
 ~~~text
-Phase 019                         ACTIVE
+Phase 019                         COMPLETE — PASS
 019-A / 019-B / 019-C / 019-D /
 019-E / 019-F / 019-G / 019-H /
-019-I / 019-J / 019-K             COMPLETE
-019-L                             NEXT ELIGIBLE
+019-I / 019-J / 019-K / 019-L     COMPLETE
 ADQ-001 / ADQ-002 / ADQ-003 /
 ADQ-004 / ADQ-005 / ADQ-006 /
 ADQ-007 / ADQ-008 / ADQ-009 /
@@ -274,7 +275,8 @@ ADQ-010                           ACCEPTED
 ADQ decisions accepted            10 / 10
 Q4 architecture repairs complete  4 / 4
 technical probes authorized       0
-accepted whole architecture       false
+accepted whole architecture       true
+G0 package derivation              ALLOWED
 active implementation packages    0
 implementation execution          NOT AUTHORIZED
 ~~~
@@ -289,6 +291,7 @@ Current accepted architecture owners are:
 - docs/canonical/architecture/offline-continuity-reconciliation.md (RCV-001..018);
 - docs/canonical/architecture/artifact-export-publication-delivery.md (ART-001..020);
 - docs/canonical/architecture/browser-client-interaction.md (CLT-001..020);
-- docs/canonical/architecture/runtime-platform-operations.md (RUN-001..026).
+- docs/canonical/architecture/runtime-platform-operations.md (RUN-001..026);
+- docs/canonical/architecture/accepted-architecture.md (whole-architecture consolidation/routing authority).
 
-Q4R-001 through Q4R-004 remain complete. ADQ-010 whole-architecture validation has passed with 15/15 mandatory scenarios, zero cross-decision contradictions and zero blocking architecture risks. 019-L is next eligible to perform final consolidation, historical-candidate disposition and the explicit whole-architecture acceptance decision.
+Q4R-001 through Q4R-004 remain complete. 019-L verified ADA-012, accepted the whole architecture, explicitly superseded/retained all nine historical architecture candidates, satisfied G0, and handed a PLANNING_READY / zero-package / execution-unauthorized framework to Phase 020.
