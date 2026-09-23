@@ -10,6 +10,7 @@ FRAMEWORK = "docs/routing/implementation_program_framework.json"
 PHASE019 = "docs/routing/phase019_architecture_decision_control.json"
 QUALIFICATION = "docs/routing/phase020_substrate_reuse_qualification.json"
 OPERATING = "docs/routing/autonomous_implementation_operating_model.json"
+TEST_CONTROL = "docs/routing/phase020_nonproduction_test_control_architecture.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -27,6 +28,7 @@ def main() -> int:
         phase019 = json.loads((repo / PHASE019).read_text(encoding="utf-8"))
         qualification = json.loads((repo / QUALIFICATION).read_text(encoding="utf-8")) if (repo / QUALIFICATION).is_file() else None
         operating = json.loads((repo / OPERATING).read_text(encoding="utf-8")) if (repo / OPERATING).is_file() else None
+        test_control = json.loads((repo / TEST_CONTROL).read_text(encoding="utf-8")) if (repo / TEST_CONTROL).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -225,6 +227,71 @@ def main() -> int:
             if not (repo / ".cursor" / "worktrees.json").is_file():
                 errors.append("020-C requires Cursor worktree setup adapter")
 
+    if "020-D" in completed:
+        if test_control is None:
+            errors.append("020-D completion requires non-production test-control architecture")
+        else:
+            if control.get("nonproduction_test_control_architecture") != TEST_CONTROL:
+                errors.append("Phase-020 control must point to non-production test-control architecture")
+            if test_control.get("status") != "ACCEPTED_FOR_IMPLEMENTATION_DESIGN":
+                errors.append("020-D test-control architecture must be accepted for implementation design")
+            if test_control.get("implementation_status") != "NOT_IMPLEMENTED":
+                errors.append("020-D must not claim test-control implementation")
+            denial = test_control.get("production_denial", {})
+            required_denial = (
+                "production_target_forbidden",
+                "arbitrary_target_url_forbidden",
+                "environment_registry_required",
+                "nonproduction_account_allowlist_required",
+                "production_iac_must_exclude_test_control",
+                "production_route_must_not_exist",
+                "production_fault_hooks_forbidden",
+                "production_fixture_reset_endpoint_forbidden",
+                "production_test_control_role_forbidden",
+                "fail_closed",
+            )
+            for key in required_denial:
+                if denial.get(key) is not True:
+                    errors.append(f"020-D production_denial.{key} must be true")
+            protocol = test_control.get("protocol", {})
+            if protocol.get("target_revision") != "2026-07-28":
+                errors.append("020-D MCP target revision drift")
+            if protocol.get("shared_transport") != "STREAMABLE_HTTP_STATELESS":
+                errors.append("020-D shared MCP transport must remain stateless Streamable HTTP")
+            auth = test_control.get("authorization", {})
+            for key in ("remote_auth_required_for_all_tools","audience_resource_validation_required","token_passthrough_forbidden","technical_principal_distinct_from_mudac_actor"):
+                if auth.get(key) is not True:
+                    errors.append(f"020-D authorization.{key} must be true")
+            planes = test_control.get("planes", {})
+            if planes.get("fixture", {}).get("direct_seed_counts_as_command_evidence") is not False:
+                errors.append("020-D direct fixture seeding must not count as command evidence")
+            if planes.get("action", {}).get("real_application_boundaries_required") is not True:
+                errors.append("020-D behavior testing must use real application boundaries")
+            if planes.get("action", {}).get("mcp_token_to_mudac_access_translation") is not False:
+                errors.append("020-D MCP technical token must not become MUDAC Access")
+            for key in ("arbitrary_external_navigation","arbitrary_javascript_eval","arbitrary_local_file_access","credential_extraction"):
+                if planes.get("browser", {}).get(key) is not False:
+                    errors.append(f"020-D browser.{key} must remain false")
+            if planes.get("observation", {}).get("unrestricted_log_search") is not False:
+                errors.append("020-D observation must not expose unrestricted logs")
+            if planes.get("fault", {}).get("registered_profiles_only") is not True:
+                errors.append("020-D fault injection must remain profile-bounded")
+            if planes.get("fault", {}).get("arbitrary_aws_command") is not False or planes.get("fault", {}).get("arbitrary_shell") is not False:
+                errors.append("020-D fault plane must not expose arbitrary AWS/shell execution")
+            hidden = test_control.get("hidden_evaluator", {})
+            if hidden.get("hidden_requirements_forbidden") is not True or hidden.get("production_use_forbidden") is not True:
+                errors.append("020-D hidden evaluator must hide probes, not requirements, and remain nonproduction")
+            evidence = test_control.get("evidence_boundary", {})
+            if evidence.get("cannot_create") != "E7_PRODUCTION_EVIDENCE":
+                errors.append("020-D nonproduction plane must not create E7 evidence")
+            phase_boundary = test_control.get("phase020_boundary", {})
+            if phase_boundary.get("mcp_server_implemented") is not False or phase_boundary.get("environment_deployed") is not False:
+                errors.append("020-D design phase must not claim MCP/environment implementation")
+            if phase_boundary.get("active_implementation_packages") != 0 or phase_boundary.get("g2_authorized_packages") != 0:
+                errors.append("020-D must retain zero active/G2-authorized packages")
+            if phase_boundary.get("domain_implementation_authorized") is not False:
+                errors.append("020-D must retain domain implementation unauthorized")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -242,6 +309,10 @@ def main() -> int:
         errors.append("implementation framework Phase-020 next-eligible state drift")
     if "020-B" in completed and phase020_fw.get("substrate_reuse_qualification") != QUALIFICATION:
         errors.append("implementation framework must reference 020-B reuse qualification after completion")
+    if "020-C" in completed and phase020_fw.get("autonomous_implementation_operating_model") != OPERATING:
+        errors.append("implementation framework must reference 020-C operating model after completion")
+    if "020-D" in completed and phase020_fw.get("nonproduction_test_control_architecture") != TEST_CONTROL:
+        errors.append("implementation framework must reference 020-D test-control architecture after completion")
 
     gate = framework.get("future_start_gate", {})
     if gate.get("decomposition_state") != "PHASE_020_START_GATE_COMPLETE":
@@ -255,6 +326,7 @@ def main() -> int:
         f"{PHASE_DIR}/020-A-start-gate-authority-accepted-baseline-autonomous-development-method.md",
         *([f"{PHASE_DIR}/020-B-existing-substrate-historical-implementation-reuse-qualification.md"] if "020-B" in completed else []),
         *([f"{PHASE_DIR}/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md"] if "020-C" in completed else []),
+        *([f"{PHASE_DIR}/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md"] if "020-D" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
