@@ -35,7 +35,7 @@ execution authorization       NOT GRANTED
 Current category/index pages are routing surfaces, not alternate rule stores. Follow them to natural canonical owners for product meaning.
 
 
-Phase 018 and Phase 019 are complete. Whole architecture is accepted; G0 permits Phase-020 package derivation. Historical implementation queues remain inactive and domain implementation remains unauthorized until G2.
+Phase 018 and Phase 019 are complete. Whole architecture is accepted. **Phase 020 is ACTIVE**; 020-A is complete and 020-B is next eligible. It designs the autonomous implementation program and v1 delivery path while domain implementation remains unauthorized until G2.
 
 
 Current Phase-019 progression:
@@ -47,7 +47,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
-Phase 020 AUTHORIZED / NOT STARTED
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

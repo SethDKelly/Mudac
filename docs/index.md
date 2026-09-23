@@ -43,7 +43,7 @@ The current product/application variant remains:
 - [Phase 018 — Pre-Implementation Repository Qualification, Documentation Normalization, Agentic Development Foundation & Architecture/Engineering Re-entry](018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — **COMPLETE — PASS**; closed qualification baseline.
 - [Phase 019 — Architecture & Engineering Re-entry](019-architecture-engineering-reentry/) — **ACTIVE — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE**.
 
-Phase 018 qualified repository/documentation/agentic readiness. Phase 019 has accepted the whole architecture and closed. Phase 020 planning is authorized to begin at its start gate; domain implementation remains unauthorized until G2.
+Phase 018 qualified repository/documentation/agentic readiness and Phase 019 accepted the whole architecture. Phase 020 is now active as the final pre-implementation design phase; 020-A is complete and 020-B is next eligible. Domain implementation remains unauthorized until a later explicit G2 decision.
 
 ## Downstream candidate knowledge
 
@@ -95,7 +95,7 @@ Current lifecycle action:
 >
 > **PHASE 019 COMPLETE — PASS — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED.**
 
-Whole architecture is accepted and package derivation is allowed through the Phase-020 start gate. Domain implementation remains unauthorized; no package has G2 authority.
+Whole architecture is accepted. Phase 020 is designing the autonomous v1 implementation program, verification architecture and non-production MCP test-control plane. Domain implementation remains unauthorized; no package has G2 authority.
 
 
 Current Phase-019 progression:
@@ -107,7 +107,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
-Phase 020 AUTHORIZED / NOT STARTED
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

@@ -12,6 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
 - [Phase 019](docs/019-architecture-engineering-reentry/) — **COMPLETE — PASS; whole architecture accepted / G0 satisfied**.
+- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A COMPLETE / 020-B NEXT ELIGIBLE**.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -40,7 +41,7 @@ The sole adopted product/application variant remains:
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
 
 
-Phase 018 is complete with a repository-preparation score of **96/100**. **Phase 019 is COMPLETE — PASS**; 019-A through 019-L are complete, whole architecture is accepted, and G0 permits Phase-020 package derivation. Domain implementation execution remains unauthorized until G2.
+Phase 018 and Phase 019 are complete. **Phase 020 is ACTIVE** as the final pre-implementation design lifecycle; 020-A is complete and 020-B is next eligible. Whole architecture remains accepted and G0 permits program/package derivation, while domain implementation execution remains unauthorized until a later explicit G2 decision.
 
 
 Current Phase-019 progression:
@@ -52,7 +53,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
-Phase 020 AUTHORIZED / NOT STARTED
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~

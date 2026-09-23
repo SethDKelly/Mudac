@@ -6,7 +6,7 @@ This file is a **bootstrap adapter**, not product/design authority.
 
 1. Start at [docs/index.md](docs/index.md). The generated [knowledge/](knowledge/) tree is generic OKF compatibility routing only and is never a substitute for authored authority.
 2. Use [Canonical Knowledge](docs/canonical/) to find the smallest task-relevant current owner.
-3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For the completed repository-qualification baseline, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/). For accepted architecture, use [Accepted MUDAC Architecture](docs/canonical/architecture/accepted-architecture.md) plus the Phase-019 closure record. Phase 020 planning must use the implementation-program contract and accepted architecture.
+3. For Concept Design closure evidence, read [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/). For the completed repository-qualification baseline, use [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/). For accepted architecture, use [Accepted MUDAC Architecture](docs/canonical/architecture/accepted-architecture.md) plus the Phase-019 closure record. Phase 020 is active; use its [phase definition](docs/020-autonomous-implementation-program-design-verification-v1-delivery/README.md), machine control, implementation-program contract and accepted architecture.
 4. Read [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) before architecture, implementation, tooling, runtime, persistence, security, or delivery work.
 5. Load historical phase records only when rationale, chronology, rejected alternatives, repair propagation, or audit evidence is actually needed.
 
@@ -98,7 +98,7 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 and Phase 019 are complete. Whole architecture is accepted and G0 permits package derivation only through Phase-020 planning. Active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
+Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A complete and 020-B next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
 
 
 Current Phase-019 progression:
@@ -110,7 +110,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
-Phase 020 AUTHORIZED / NOT STARTED
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
