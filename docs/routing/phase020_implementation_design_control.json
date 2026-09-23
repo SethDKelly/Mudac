@@ -19,9 +19,10 @@
       "020-F",
       "020-G",
       "020-H",
-      "020-I"
+      "020-I",
+      "020-J"
     ],
-    "next_eligible_subphase": "020-J",
+    "next_eligible_subphase": "020-K",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -80,12 +81,12 @@
     {
       "id": "020-J",
       "title": "v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-K",
       "title": "Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-L",
@@ -142,7 +143,16 @@
     "all_15_scenarios_required": true,
     "architecture_conformance_required": true,
     "implementation_complete_not_equal_release_candidate": true,
-    "implementation_complete_not_equal_production_ready": true
+    "implementation_complete_not_equal_production_ready": true,
+    "adopted_product_variant": "PF-01",
+    "all_18_concepts_in_scope": true,
+    "integrated_journey_count": 9,
+    "whole_system_criterion_count": 12,
+    "final_logical_phase": "V1-FINAL",
+    "v1_implementation_complete_grants_g6": false,
+    "v1_implementation_complete_grants_g7": false,
+    "final_phase_blanket_completed_package_write_authority": false,
+    "explicit_non_goals_preserved": true
   },
   "implementation_boundary": {
     "repository_governance_design_changes_authorized": true,
@@ -154,7 +164,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 9,
+    "completed_subphases": 10,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -293,6 +303,19 @@
     "rto_rpo_invented_by_020i": false,
     "rto_rpo_require_measured_exercise": true,
     "final_v1_all_15_scenarios_required": true,
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0
+  },
+  "v1_completion_integration_design": "docs/routing/phase020_v1_completion_integration_design.json",
+  "v1_completion_summary": {
+    "package_g5_alone_sufficient": false,
+    "final_composed_candidate_required": true,
+    "all_15_scenarios_final_replay_required": true,
+    "integrated_journeys_required": "9/9",
+    "whole_system_criteria_required": "12/12",
+    "zero_known_blocking_findings_required": true,
+    "next_after_success": "RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED",
     "proposed_packages": 15,
     "g1_ready_packages": 0,
     "g2_authorized_packages": 0
