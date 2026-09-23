@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C COMPLETE
-020-D NEXT ELIGIBLE
+020-A/B/C/D COMPLETE
+020-E NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -123,8 +123,8 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-A** | Start Gate, Authority, Accepted Baseline & Autonomous-Development Method |
 | **020-B** | Existing Substrate, Historical Implementation & Reuse Qualification — **COMPLETE — PASS** |
 | **020-C** | Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers — **COMPLETE — PASS** |
-| **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture — **NEXT ELIGIBLE** |
-| **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing |
+| **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture — **COMPLETE — PASS** |
+| **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing — **NEXT ELIGIBLE** |
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture |
 | **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture |
 | **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance |
@@ -221,3 +221,10 @@ Machine evidence: `docs/routing/phase020_substrate_reuse_qualification.json`.
 020-C established human lifecycle authority with bounded autonomous implementation inside later G2 envelopes. A named Coordinator may delegate only declared work units; delegation depth is one, writable work is isolated by exact-base worktrees, shared control surfaces are serialized, reviewer runs are independent, technical agent provenance is retained, and circuit breakers fail closed on authority/safety/integrity conflicts. Phase 020 itself remains non-executing.
 
 Machine projection: `docs/routing/autonomous_implementation_operating_model.json`.
+
+
+## 020-D test-control result
+
+020-D established a non-production-only MCP agent test-control architecture with NPT-L worktree-local, NPT-P isolated preview/integration, and NPT-S shared integration tiers; deterministic synthetic fixtures/actors; real application/browser action paths; RUN-020 OpenTelemetry/CloudWatch observability; registered bounded fault profiles; audience-bound remote MCP authorization; and deterministic production denial. The MCP server and non-production environments remain unimplemented because Phase 020 is design-only.
+
+Machine projection: `docs/routing/phase020_nonproduction_test_control_architecture.json`.
