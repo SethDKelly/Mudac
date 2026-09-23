@@ -1,0 +1,1138 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-I MIGRATION / RECOVERY / ACCESSIBILITY / PERFORMANCE / COST / SCENARIO VERIFICATION DESIGN — DESIGN ONLY; NO G1/G2/RELEASE/PRODUCTION AUTHORITY",
+  "phase": "020-I",
+  "baseline_head": "04612adffb9d295a81f20560db6d705db3e98588",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md",
+  "inputs": [
+    "docs/canonical/governance/downstream-realization-obligations.md",
+    "docs/canonical/architecture/persistence-history-recovery.md",
+    "docs/canonical/architecture/frontend-interaction.md",
+    "docs/canonical/architecture/aws-runtime-operations.md",
+    "docs/canonical/experience/accessibility-resilience.md",
+    "docs/routing/implementation_program_framework.json",
+    "docs/routing/phase020_implementation_package_discovery.json",
+    "docs/routing/phase020_implementation_phase_contract.json",
+    "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  ],
+  "boundary": {
+    "design_only": true,
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false,
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0,
+    "active_packages": 0,
+    "cross_cutting_mapping_alone_makes_package_g1_ready": false
+  },
+  "threshold_policy": {
+    "accepted_existing_thresholds_visible": [
+      "WCAG 2.2 AA for core browser workflows",
+      "production at least two healthy API tasks across at least two AZs",
+      "production RDS 35 days automated PITR",
+      "production active region us-east-2 with cold recovery in us-east-1"
+    ],
+    "new_normative_thresholds_must_be_visible_before_relevant_authorization": true,
+    "hidden_acceptance_thresholds_forbidden": true,
+    "performance_thresholds_not_invented_by_020i": true,
+    "cost_caps_not_invented_by_020i": true,
+    "rto_rpo_not_invented_by_020i": true,
+    "rto_rpo_claims_require_measured_restore_exercise": true,
+    "load_profile_assumptions_must_be_visible": true,
+    "cost_model_assumptions_must_be_visible": true
+  },
+  "migration_verification": {
+    "id": "MIG",
+    "applies_when": "package changes durable database/client/evidence schema, migration machinery, IaC stateful topology, or deployment migration order",
+    "authority_refs": [
+      "PST-014",
+      "AWS-012",
+      "ENG-006",
+      "ENG-016",
+      "IPG-011"
+    ],
+    "required_plan_fields": [
+      "owning module or technical owner",
+      "forward change",
+      "supported prior baseline",
+      "mixed-version compatibility window if applicable",
+      "data transformation/backfill",
+      "validation/reconciliation",
+      "history/Provenance impact",
+      "rollback or roll-forward-only rationale",
+      "partial migration recovery",
+      "ordering/locking/checksum behavior",
+      "destructive contraction prerequisites"
+    ],
+    "evidence_obligations": [
+      {
+        "id": "MIG-01",
+        "claim": "fresh/current schema reaches expected state deterministically",
+        "floor": [
+          "E3"
+        ]
+      },
+      {
+        "id": "MIG-02",
+        "claim": "upgrade from every explicitly supported prior baseline succeeds and preserves authority/history",
+        "floor": [
+          "E3",
+          "E5"
+        ]
+      },
+      {
+        "id": "MIG-03",
+        "claim": "old/new application compatibility is proven where rolling overlap is declared",
+        "floor": [
+          "E3",
+          "E6"
+        ]
+      },
+      {
+        "id": "MIG-04",
+        "claim": "partial/failing migration has deterministic safe recovery or explicit fail-closed roll-forward procedure",
+        "floor": [
+          "E3",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "id": "MIG-05",
+        "claim": "history/Provenance/currentness survive transformation and reconciliation",
+        "floor": [
+          "E3",
+          "E5"
+        ]
+      },
+      {
+        "id": "MIG-06",
+        "claim": "destructive contraction does not occur before compatibility and retention prerequisites close",
+        "floor": [
+          "E1",
+          "E6"
+        ]
+      }
+    ],
+    "sqlite_or_in_memory_substitute_for_postgresql_semantics": false,
+    "application_startup_auto_migration_allowed": false,
+    "production_destructive_rollback_assumed_safe": false
+  },
+  "recovery_verification": {
+    "id": "RCV",
+    "governing_rule": "RECOVERY_REESTABLISHES_TRUTH; IT_NEVER_INVENTS_AUTHORITY",
+    "authority_refs": [
+      "PST-015",
+      "PST-016",
+      "AWS-016",
+      "AWS-017",
+      "ENG-008",
+      "ENG-013"
+    ],
+    "levels": [
+      {
+        "id": "RCV-1",
+        "name": "command/uncertain-result reconciliation",
+        "floor": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "id": "RCV-2",
+        "name": "client/offline/shared-device/paper continuity",
+        "floor": [
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "id": "RCV-3",
+        "name": "outbox/projection/derived-state rebuild",
+        "floor": [
+          "E3",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "id": "RCV-4",
+        "name": "database/object backup restore and application validation",
+        "floor": [
+          "E6"
+        ]
+      },
+      {
+        "id": "RCV-5",
+        "name": "regional disaster recovery and one-authority promotion with paper continuity",
+        "floor": [
+          "E6"
+        ]
+      }
+    ],
+    "readiness_sequence": [
+      "authoritative storage restored",
+      "application consistency verified",
+      "projections/derived state rebuilt or truthfully unavailable",
+      "external integrations reconciled",
+      "service readiness explicitly declared"
+    ],
+    "backup_creation_alone_is_recovery_evidence": false,
+    "database_restore_alone_is_semantic_recovery": false,
+    "unknown_may_be_converted_to_success_without_authority_check": false,
+    "regional_recovery_may_create_dual_writable_authority": false,
+    "paper_and_local_drafts_remain_non_authoritative_until_reconciled": true,
+    "rto_rpo_measured_not_documentation_only": true
+  },
+  "accessibility_verification": {
+    "id": "ACC",
+    "normative_target": "WCAG_2_2_AA_CORE_WORKFLOWS",
+    "authority_refs": [
+      "FE-013",
+      "FE-015",
+      "FE-017",
+      "FE-018",
+      "ENG-012"
+    ],
+    "modalities": [
+      "keyboard",
+      "touch",
+      "pointer",
+      "screen_reader",
+      "zoom_reflow",
+      "reduced_motion",
+      "supported_orientation_changes"
+    ],
+    "semantic_parity_required": true,
+    "critical_meaning_color_only_forbidden": true,
+    "critical_action_hover_gesture_camera_qr_only_forbidden": true,
+    "responsive_authority_or_disclosure_change_forbidden": true,
+    "degraded_accessibility_shortcut_to_weaker_authority_forbidden": true,
+    "states_to_sample": [
+      "ordinary success",
+      "validation failure",
+      "authorization denial",
+      "stale/conflict",
+      "uncertain outcome",
+      "degraded/unavailable",
+      "recovery",
+      "high consequence confirmation"
+    ],
+    "package_g5_evidence": [
+      "semantic markup/name/role/state automated checks where applicable",
+      "keyboard-operability checks for introduced consequential flows",
+      "automated accessibility scan of representative states",
+      "responsive zoom/reflow checks for affected views",
+      "manual targeted review for novel/high-risk interaction patterns"
+    ],
+    "final_v1_or_g6_evidence": [
+      "manual keyboard review of critical Judge and Organizer flows",
+      "screen-reader/assistive-technology review of critical flows",
+      "zoom/reflow and orientation review",
+      "reduced-motion/animation behavior where used",
+      "paper/alternate-channel semantic parity review where applicable"
+    ],
+    "automated_scan_alone_proves_wcag_conformance": false
+  },
+  "performance_verification": {
+    "id": "PERF",
+    "governing_rule": "PERFORMANCE_MAY_CHANGE_CAPACITY_OR_LATENCY; IT_MAY_NOT_CHANGE_DOMAIN_TRUTH",
+    "authority_refs": [
+      "AWS-004",
+      "AWS-005",
+      "AWS-008",
+      "AWS-015",
+      "AWS-018",
+      "ENG-007",
+      "ENG-013"
+    ],
+    "threshold_contract": {
+      "material_performance_claim_requires_visible_threshold": true,
+      "threshold_source": "accepted architecture or explicit package/release performance budget",
+      "hidden_threshold_forbidden": true,
+      "workload_profile_visible": true,
+      "dataset_shape_visible": true,
+      "concurrency_visible": true,
+      "environment_capacity_visible": true,
+      "warmup_and_test_duration_visible": true
+    },
+    "required_dimensions_when_material": [
+      "request/command latency distribution",
+      "error/result-class distribution",
+      "throughput",
+      "database connection/lock/transaction pressure",
+      "worker/outbox/queue lag",
+      "projection freshness",
+      "browser interaction/render responsiveness when user-visible",
+      "artifact/render throughput when applicable",
+      "CPU/memory/runtime saturation",
+      "rate/abuse-control behavior"
+    ],
+    "evidence_tiers": [
+      {
+        "id": "PERF-PKG",
+        "gate": "G3/G4",
+        "floor": [
+          "E3",
+          "E5"
+        ],
+        "purpose": "material package/runtime boundary"
+      },
+      {
+        "id": "PERF-EVENT",
+        "gate": "G6",
+        "floor": [
+          "E6"
+        ],
+        "purpose": "representative event profile, prescale and sustained/peak behavior"
+      },
+      {
+        "id": "PERF-PROD",
+        "gate": "G7",
+        "floor": [
+          "E7"
+        ],
+        "purpose": "authorized production observation; never required to prove preproduction claims"
+      }
+    ],
+    "event_windows_prescaled_and_load_tested_before_judging": true,
+    "at_least_two_api_tasks_two_azs_is_existing_architecture_constraint": true,
+    "overload_may_weaken_authority_semantics": false,
+    "bulk_may_flatten_partial_unknown_results": false
+  },
+  "cost_verification": {
+    "id": "COST",
+    "governing_rule": "COST_OPTIMIZATION_REMOVES_UNJUSTIFIED_INFRASTRUCTURE_NOT_TRUST_GUARANTEES",
+    "authority_refs": [
+      "AWS-009",
+      "AWS-018",
+      "ENG-013",
+      "ENG-016"
+    ],
+    "cost_cap_defined_by_020i": false,
+    "cost_model_required_for_material_runtime_or_provider_package": true,
+    "cost_model_dimensions": [
+      "steady-state runtime",
+      "known event/peak capacity",
+      "database/storage growth",
+      "S3/object storage and lifecycle",
+      "network/NAT/egress",
+      "logs/metrics/traces retention",
+      "backup/cross-region replication",
+      "KMS/secrets/security services",
+      "CI/evaluator/nonproduction test infrastructure"
+    ],
+    "evidence_stages": [
+      {
+        "id": "COST-PLAN",
+        "floor": [
+          "E1"
+        ],
+        "purpose": "visible architecture/IaC/provider estimate and assumptions"
+      },
+      {
+        "id": "COST-NP",
+        "floor": [
+          "E6"
+        ],
+        "purpose": "measured nonproduction consumption where material"
+      },
+      {
+        "id": "COST-GUARD",
+        "floor": [
+          "E6"
+        ],
+        "purpose": "Budgets/anomaly detection/allocation/retention controls configured where runtime exists"
+      },
+      {
+        "id": "COST-PROD",
+        "floor": [
+          "E7"
+        ],
+        "purpose": "authorized production actuals; later operational evidence"
+      }
+    ],
+    "mandatory_trust_controls_may_be_removed_for_cost_only": false,
+    "unjustified_baseline_services_prohibited": true,
+    "cost_exception_requires_visible_owner_rationale_and_revisit_trigger": true
+  },
+  "package_obligation_map": {
+    "IMP-001": {
+      "migration": "NONE_EXCEPT_REPOSITORY_CONFIG",
+      "recovery": [
+        "configuration/build reproducibility"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "toolchain/build verification only unless threshold introduced"
+      ],
+      "cost": [
+        "dependency/tooling cost impact only"
+      ],
+      "scenario_ids": []
+    },
+    "IMP-002": {
+      "migration": "MIG-FOUNDATION",
+      "recovery": [
+        "RCV-MIGRATION",
+        "RCV-PROJECTION",
+        "RCV-DATA"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "PERF-DB",
+        "PERF-PROJECTION"
+      ],
+      "cost": [
+        "COST-DATA"
+      ],
+      "scenario_ids": [
+        "SCN-11",
+        "SCN-13"
+      ]
+    },
+    "IMP-003": {
+      "migration": "MIG-IF_STATE_ADDED",
+      "recovery": [
+        "RCV-COMMAND",
+        "RCV-UNCERTAINTY"
+      ],
+      "accessibility": "N/A_DIRECT_UI",
+      "performance": [
+        "PERF-COMMAND",
+        "PERF-CONCURRENCY",
+        "PERF-BULK"
+      ],
+      "cost": [
+        "COST-DATA",
+        "COST-RUNTIME"
+      ],
+      "scenario_ids": [
+        "SCN-01",
+        "SCN-11",
+        "SCN-12",
+        "SCN-13"
+      ]
+    },
+    "IMP-004": {
+      "migration": "MIG-CLIENT_STORAGE_IF_CHANGED",
+      "recovery": [
+        "RCV-CLIENT",
+        "RCV-DEGRADED"
+      ],
+      "accessibility": "ACC-FOUNDATION",
+      "performance": [
+        "PERF-BROWSER"
+      ],
+      "cost": [
+        "COST-STATIC_ASSET"
+      ],
+      "scenario_ids": [
+        "SCN-03",
+        "SCN-13"
+      ]
+    },
+    "IMP-005": {
+      "migration": "NONE_DOMAIN",
+      "recovery": [
+        "RCV-TEST_ENV_RESET"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "PERF-HARNESS"
+      ],
+      "cost": [
+        "COST-NONPROD-TEST"
+      ],
+      "scenario_ids": [
+        "SCN-03",
+        "SCN-13"
+      ]
+    },
+    "IMP-006": {
+      "migration": "MIG-IAC_COMPATIBILITY",
+      "recovery": [
+        "RCV-NONPROD-RUNTIME"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "PERF-LOAD-ENV",
+        "PERF-PROVIDER"
+      ],
+      "cost": [
+        "COST-NONPROD-RUNTIME"
+      ],
+      "scenario_ids": [
+        "SCN-13",
+        "SCN-14"
+      ]
+    },
+    "IMP-007": {
+      "migration": "MIG-OWNER",
+      "recovery": [
+        "RCV-OWNER-CURRENTNESS"
+      ],
+      "accessibility": "ACC-ORGANIZER",
+      "performance": [
+        "PERF-COMMAND"
+      ],
+      "cost": [
+        "COST-DATA"
+      ],
+      "scenario_ids": [
+        "SCN-11",
+        "SCN-15"
+      ]
+    },
+    "IMP-008": {
+      "migration": "MIG-OWNER",
+      "recovery": [
+        "RCV-SESSION",
+        "RCV-ACCESS"
+      ],
+      "accessibility": "ACC-AUTH-CONTEXT",
+      "performance": [
+        "PERF-AUTH",
+        "PERF-COMMAND"
+      ],
+      "cost": [
+        "COST-AUTH",
+        "COST-DATA"
+      ],
+      "scenario_ids": [
+        "SCN-03",
+        "SCN-04",
+        "SCN-14"
+      ]
+    },
+    "IMP-009": {
+      "migration": "MIG-OWNER",
+      "recovery": [
+        "RCV-CORRECTION",
+        "RCV-CONCURRENCY"
+      ],
+      "accessibility": "ACC-JUDGE-CORE",
+      "performance": [
+        "PERF-JUDGING",
+        "PERF-CONCURRENCY"
+      ],
+      "cost": [
+        "COST-DATA",
+        "COST-RUNTIME"
+      ],
+      "scenario_ids": [
+        "SCN-06",
+        "SCN-11",
+        "SCN-15"
+      ]
+    },
+    "IMP-010": {
+      "migration": "MIG-CLIENT_STORAGE_IF_CHANGED",
+      "recovery": [
+        "RCV-OFFLINE",
+        "RCV-PAPER",
+        "RCV-MULTIDEVICE"
+      ],
+      "accessibility": "ACC-RECOVERY",
+      "performance": [
+        "PERF-SYNC"
+      ],
+      "cost": [
+        "COST-CLIENT-SYNC"
+      ],
+      "scenario_ids": [
+        "SCN-02",
+        "SCN-03",
+        "SCN-05",
+        "SCN-13"
+      ]
+    },
+    "IMP-011": {
+      "migration": "MIG-OWNER",
+      "recovery": [
+        "RCV-OFFICIALITY",
+        "RCV-CORRECTION"
+      ],
+      "accessibility": "ACC-ORGANIZER-OUTCOMES",
+      "performance": [
+        "PERF-AGGREGATION",
+        "PERF-BULK"
+      ],
+      "cost": [
+        "COST-DATA",
+        "COST-RUNTIME"
+      ],
+      "scenario_ids": [
+        "SCN-07",
+        "SCN-08",
+        "SCN-15"
+      ]
+    },
+    "IMP-012": {
+      "migration": "MIG-OWNER",
+      "recovery": [
+        "RCV-ARTIFACT",
+        "RCV-PUBLICATION"
+      ],
+      "accessibility": "ACC-REPRESENTATION",
+      "performance": [
+        "PERF-RENDER",
+        "PERF-DELIVERY"
+      ],
+      "cost": [
+        "COST-STORAGE",
+        "COST-EGRESS",
+        "COST-RENDER"
+      ],
+      "scenario_ids": [
+        "SCN-09",
+        "SCN-10",
+        "SCN-13"
+      ]
+    },
+    "IMP-013": {
+      "migration": "MIG-PROJECTION",
+      "recovery": [
+        "RCV-PROJECTION-REBUILD"
+      ],
+      "accessibility": "ACC-OPERATIONS",
+      "performance": [
+        "PERF-PROJECTION",
+        "PERF-READ"
+      ],
+      "cost": [
+        "COST-PROJECTION"
+      ],
+      "scenario_ids": [
+        "SCN-13"
+      ]
+    },
+    "IMP-014": {
+      "migration": "MIG-EVIDENCE-SCHEMA-ONLY",
+      "recovery": [
+        "RCV-EVIDENCE-INTEGRITY"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "PERF-CI-EVALUATOR"
+      ],
+      "cost": [
+        "COST-CI-EVALUATOR"
+      ],
+      "scenario_ids": [
+        "SCN-14"
+      ]
+    },
+    "IMP-015": {
+      "migration": "MIG-DEPLOYMENT-ORCHESTRATION",
+      "recovery": [
+        "RCV-BACKUP-RESTORE",
+        "RCV-REGIONAL-DR",
+        "RCV-DEPLOYMENT"
+      ],
+      "accessibility": "N/A_PRODUCT_UI",
+      "performance": [
+        "PERF-PRODUCTION-TOPOLOGY",
+        "PERF-EVENT-LOAD"
+      ],
+      "cost": [
+        "COST-PRODUCTION-RUNTIME",
+        "COST-DR"
+      ],
+      "scenario_ids": [
+        "SCN-13",
+        "SCN-14"
+      ]
+    }
+  },
+  "scenario_matrix": [
+    {
+      "id": "SCN-01",
+      "seed": "lost-response retry after consequential authoritative action",
+      "source_refs": [
+        "ENG-007",
+        "ENG-014",
+        "API-009",
+        "API-010",
+        "SYNC-008"
+      ],
+      "package_owners": [
+        "IMP-003"
+      ],
+      "final_integration_requirements": [
+        "representative consequential natural-owner command chosen in 020-K/020-J"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "request may commit while response is lost; retry/reconciliation crosses real command transaction and user-visible uncertainty boundary",
+      "pass_obligations": [
+        "one semantic result survives retry",
+        "unknown is represented until authoritative reconciliation",
+        "duplicate or contradictory transition is not created",
+        "idempotency misuse remains distinguishable"
+      ]
+    },
+    {
+      "id": "SCN-02",
+      "seed": "duplicate/offline Draft convergence",
+      "source_refs": [
+        "ENG-005",
+        "ENG-008",
+        "ENG-014",
+        "SYNC-002..006"
+      ],
+      "package_owners": [
+        "IMP-010"
+      ],
+      "final_integration_requirements": [
+        "Evaluation owner + browser local Draft adapter + real server revision/concurrency boundary"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "multiple local/device traces converge through authoritative server revision without multiplying logical evaluation",
+      "pass_obligations": [
+        "multiple traces do not create multiple logical Scorecards/evaluation weight",
+        "newer server work is not silently overwritten",
+        "ambiguous conflict preserves both sides for explicit reconciliation"
+      ]
+    },
+    {
+      "id": "SCN-03",
+      "seed": "shared-device context handoff",
+      "source_refs": [
+        "ENG-004",
+        "ENG-008",
+        "ENG-012",
+        "ENG-014",
+        "FE-013",
+        "SYNC-009..011"
+      ],
+      "package_owners": [
+        "IMP-004",
+        "IMP-005",
+        "IMP-008",
+        "IMP-010"
+      ],
+      "final_integration_requirements": [
+        "real browser context transition with private cache/local Draft hygiene"
+      ],
+      "evidence_floor": [
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "same physical browser/device changes Identity/Participation context",
+      "pass_obligations": [
+        "device continuity does not create Identity/Participation/Access continuity",
+        "prior private state is partitioned/cleared appropriately",
+        "protected routes and commands re-resolve current Access"
+      ]
+    },
+    {
+      "id": "SCN-04",
+      "seed": "stale Participation/Access/session state",
+      "source_refs": [
+        "ENG-004",
+        "ENG-014",
+        "SYNC-009",
+        "SYNC-011"
+      ],
+      "package_owners": [
+        "IMP-008"
+      ],
+      "final_integration_requirements": [
+        "real session/Access reevaluation at protected command boundary"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "previously valid session/context becomes stale or revoked before consequential action",
+      "pass_obligations": [
+        "stale client/session state cannot preserve old authority",
+        "private pending work does not auto-upload after revocation",
+        "denial/recovery state remains truthful"
+      ]
+    },
+    {
+      "id": "SCN-05",
+      "seed": "paper/electronic capture disagreement",
+      "source_refs": [
+        "ENG-005",
+        "ENG-008",
+        "ENG-014",
+        "SYNC-012"
+      ],
+      "package_owners": [
+        "IMP-010"
+      ],
+      "final_integration_requirements": [
+        "Evaluation owner + paper capture/reconciliation + Provenance"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "physical and electronic traces overlap for one logical evaluation",
+      "pass_obligations": [
+        "Judge authorship remains distinct from transcription actor",
+        "one logical evaluation/weight is preserved",
+        "ambiguous disagreement is preserved rather than guessed"
+      ]
+    },
+    {
+      "id": "SCN-06",
+      "seed": "post-finalization correction",
+      "source_refs": [
+        "ENG-006",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-009"
+      ],
+      "final_integration_requirements": [
+        "history/Provenance + affected downstream state"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "correction changes authoritative evaluation after Finalization while historical basis remains reconstructible",
+      "pass_obligations": [
+        "historical committed authority is not rewritten",
+        "correction lineage is explicit",
+        "affected downstream state becomes stale/affected rather than silently current"
+      ]
+    },
+    {
+      "id": "SCN-07",
+      "seed": "affected Outcome Declaration with same visible winner",
+      "source_refs": [
+        "ENG-006",
+        "ENG-009",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-011"
+      ],
+      "final_integration_requirements": [
+        "Evaluation correction -> Outcomes officiality integration"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "upstream authoritative basis changes even though displayed winner may remain the same",
+      "pass_obligations": [
+        "basis affectedness is preserved independently of identical visible result",
+        "officiality/currentness is recomputed from authoritative basis",
+        "no historical declaration is silently rewritten"
+      ]
+    },
+    {
+      "id": "SCN-08",
+      "seed": "exceptional no-result closeout",
+      "source_refs": [
+        "ENG-009",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-011"
+      ],
+      "final_integration_requirements": [
+        "organizer closeout workflow + Outcomes owner"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "governed closeout occurs without a legitimate ordinary Rank/Award/result",
+      "pass_obligations": [
+        "missing/unknown/no-result remain distinct",
+        "no fabricated Rank/Award/ordinary result appears",
+        "authorized exceptional disposition and basis are reconstructible"
+      ]
+    },
+    {
+      "id": "SCN-09",
+      "seed": "stale Export after source correction",
+      "source_refs": [
+        "ENG-006",
+        "ENG-010",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-012"
+      ],
+      "final_integration_requirements": [
+        "source correction -> representation currentness propagation"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "Export bytes/metadata exist while exact source basis has been superseded or corrected",
+      "pass_obligations": [
+        "Export is marked stale/affected against exact source basis",
+        "existing bytes do not become current merely because they still exist",
+        "successor generation is explicit rather than automatic semantic rewrite"
+      ]
+    },
+    {
+      "id": "SCN-10",
+      "seed": "withdrawn Publication while external copies remain",
+      "source_refs": [
+        "ENG-010",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-012"
+      ],
+      "final_integration_requirements": [
+        "Publication lifecycle + external-delivery representation"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "current release authority is withdrawn while recipient possession cannot be recalled",
+      "pass_obligations": [
+        "withdrawal changes current publication state",
+        "external possession is not represented as erased",
+        "successor/current release remains explicit"
+      ]
+    },
+    {
+      "id": "SCN-11",
+      "seed": "concurrent/repeated legitimate intent",
+      "source_refs": [
+        "ENG-007",
+        "ENG-014",
+        "API-007..010"
+      ],
+      "package_owners": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-007",
+        "IMP-009"
+      ],
+      "final_integration_requirements": [
+        "real PostgreSQL transaction/concurrency boundary on at least one natural-owner command"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "legitimate concurrent requests race against same or related authoritative state",
+      "pass_obligations": [
+        "newer authority is not silently overwritten",
+        "same intent converges where idempotent",
+        "distinct legitimate intent is not incorrectly deduplicated",
+        "conflict/result classes are explicit"
+      ]
+    },
+    {
+      "id": "SCN-12",
+      "seed": "partial bulk result",
+      "source_refs": [
+        "ENG-007",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-003"
+      ],
+      "final_integration_requirements": [
+        "representative bulk operation selected in 020-K/020-J"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "bulk/coordinated request contains per-subject success, failure and/or unknown outcomes",
+      "pass_obligations": [
+        "partial result is not flattened into universal success",
+        "each natural owner retains its own truth",
+        "retry/recovery can target unresolved subjects without duplicating successful authority"
+      ]
+    },
+    {
+      "id": "SCN-13",
+      "seed": "unknown/degraded result",
+      "source_refs": [
+        "ENG-007",
+        "ENG-008",
+        "ENG-013",
+        "ENG-014",
+        "FE-015",
+        "FE-018",
+        "SYNC-013..014"
+      ],
+      "package_owners": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-004",
+        "IMP-005",
+        "IMP-006",
+        "IMP-010",
+        "IMP-012",
+        "IMP-013",
+        "IMP-015"
+      ],
+      "final_integration_requirements": [
+        "whole-system degraded-state exercise across browser/API/runtime with at least one consequential command"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "material_boundary": "material infrastructure/component is unavailable, stale or uncertain while the user/system must preserve truthful authority",
+      "pass_obligations": [
+        "unknown is neither success nor failure",
+        "degraded operation may reduce capability but not weaken authority",
+        "stale/unavailable projections are not guessed",
+        "recovery does not fabricate domain state"
+      ]
+    },
+    {
+      "id": "SCN-14",
+      "seed": "adversarial request volume",
+      "source_refs": [
+        "ENG-011",
+        "ENG-014",
+        "AWS-004",
+        "AWS-014",
+        "AWS-015",
+        "AWS-018"
+      ],
+      "package_owners": [
+        "IMP-006",
+        "IMP-008",
+        "IMP-014",
+        "IMP-015"
+      ],
+      "final_integration_requirements": [
+        "representative nonproduction event-load/abuse exercise through actual edge/API/runtime controls"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E5",
+        "E6"
+      ],
+      "material_boundary": "high or abusive request pressure reaches real nonproduction runtime/security/authority boundaries",
+      "pass_obligations": [
+        "abuse controls protect availability without creating semantic authority",
+        "authorized traffic retains truthful result classes",
+        "pressure does not weaken Access/domain validation",
+        "capacity/scaling evidence is measurable and linked to visible load profile"
+      ]
+    },
+    {
+      "id": "SCN-15",
+      "seed": "conflicting legitimate authority resolved at the natural owner",
+      "source_refs": [
+        "ENG-004",
+        "ENG-007",
+        "ENG-014"
+      ],
+      "package_owners": [
+        "IMP-007",
+        "IMP-009",
+        "IMP-011"
+      ],
+      "final_integration_requirements": [
+        "cross-owner/application coordination with authoritative decision retained by natural owner"
+      ],
+      "evidence_floor": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "material_boundary": "multiple legitimate actors/owners have conflicting current intents or observations",
+      "pass_obligations": [
+        "coordination does not create a new semantic owner",
+        "natural owner evaluates the governing precondition/authority",
+        "unresolved conflict is surfaced rather than guessed or globally overwritten"
+      ]
+    }
+  ],
+  "scenario_program_rules": {
+    "exactly_fifteen_required": true,
+    "scenario_seed_set_must_match_implementation_program_framework": true,
+    "scenario_is_not_closed_by_unit_test_only": true,
+    "scenario_may_span_multiple_packages": true,
+    "scenario_primary_package_ownership_does_not_create_semantic_authority": true,
+    "final_v1_replay_required": true,
+    "final_v1_all_15_must_have_pass_evidence": true,
+    "representative_semantic_instantiation_required_when_foundation_only_would_be_artificial": true,
+    "hidden_scenario_category_forbidden": true,
+    "synthetic_data_default": true,
+    "production_required_for_scenario_evidence": false
+  },
+  "gate_bindings": {
+    "G1": [
+      "cross-cutting applicability classified",
+      "visible thresholds/workload/cost assumptions declared where material",
+      "scenario obligations instantiated or approved N/A",
+      "migration/recovery/accessibility/performance/cost evidence floor declared"
+    ],
+    "G2": [
+      "no unresolved cross-cutting blocker",
+      "repair budget/review contract already present from 020-H",
+      "required nonproduction/test infrastructure dependency declared"
+    ],
+    "G3": [
+      "package-local E1-E5 cross-cutting evidence passes where applicable"
+    ],
+    "G4": [
+      "migration/recovery integration closes",
+      "affected scenario seeds pass at material cross-package boundary"
+    ],
+    "G5": [
+      "package cross-cutting obligations closed or explicitly assigned to later gate with authority",
+      "no hidden performance/accessibility/recovery/cost blocker"
+    ],
+    "G6": [
+      "release migration/rollback/restore evidence",
+      "event-load/performance evidence where material",
+      "critical-flow manual accessibility evidence",
+      "runtime cost guard/configuration evidence"
+    ],
+    "G7": [
+      "production-specific operational evidence only after separate authorization"
+    ]
+  },
+  "phase020_effect": {
+    "removes_from_package_g1_missing": "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+    "does_not_complete": "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
+    "leaves_for_020k": "020-K final package plan and implementation-phase assignment",
+    "g1_ready_after_020i": 0,
+    "g2_authorized_after_020i": 0,
+    "active_after_020i": 0
+  },
+  "phase020_carry_forward": {
+    "next_eligible": "020-J",
+    "automatic_authorization": false,
+    "whole_system_completion_design": "020-J",
+    "final_package_criteria_and_phase_assignment": "020-K",
+    "final_preimplementation_audit": "020-L"
+  }
+}
