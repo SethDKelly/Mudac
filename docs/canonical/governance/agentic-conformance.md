@@ -16,6 +16,7 @@ sources:
   - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md
   - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md
   - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md
+  - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:53:00Z }
 ---
 
@@ -58,7 +59,7 @@ Current resolution must reject quarantined candidates unless candidate inclusion
 
 For controls where a false-positive PASS would materially weaken authority or security boundaries, CI must include mutation-based negative tests showing the relevant validator fails when the protected contract is deliberately broken.
 
-Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage, architecture pre-selection leakage, implementation-execution leakage, Phase-019 premature decision acceptance, Phase-020 implementation-authority leakage, recursive autonomous-delegation leakage, non-production MCP production-target leakage, implementation-package dependency-cycle leakage, protected-evaluator hidden-requirement leakage, exact-revision/evidence-contract weakening, review/reopen authority collapse, cross-cutting scenario/evidence erosion and high-confidence secret insertion.
+Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage, architecture pre-selection leakage, implementation-execution leakage, Phase-019 premature decision acceptance, Phase-020 implementation-authority leakage, recursive autonomous-delegation leakage, non-production MCP production-target leakage, implementation-package dependency-cycle leakage, protected-evaluator hidden-requirement leakage, exact-revision/evidence-contract weakening, review/reopen authority collapse, cross-cutting scenario/evidence erosion, v1 scope/final-integration authority expansion and high-confidence secret insertion.
 
 <a id="cnf-006"></a>
 ## CNF-006 — Agent Workflow/Adapters Remain Subordinate Under Conformance
