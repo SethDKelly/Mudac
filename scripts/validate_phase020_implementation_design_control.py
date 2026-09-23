@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 CONTROL = "docs/routing/phase020_implementation_design_control.json"
@@ -100,6 +101,29 @@ def main() -> int:
 
     if state.get("currently_authorized_subphase") is not None:
         errors.append("persisted Phase-020 resting state must not imply automatic subphase authorization")
+
+    if "020-G" in completed:
+        sha_re = re.compile(r"^[0-9a-f]{40}$")
+        workflow_dir = repo / ".github" / "workflows"
+        if not workflow_dir.is_dir():
+            errors.append("020-G requires repository workflows for CI/evidence controls")
+        else:
+            workflow_files = sorted(list(workflow_dir.glob("*.yml")) + list(workflow_dir.glob("*.yaml")))
+            if not workflow_files:
+                errors.append("020-G requires at least one GitHub Actions workflow")
+            for workflow_path in workflow_files:
+                for lineno, line in enumerate(workflow_path.read_text(encoding="utf-8").splitlines(), start=1):
+                    match = re.match(r"^\s*uses:\s*([^\s@]+)@([^\s#]+)", line)
+                    if not match:
+                        continue
+                    action, ref = match.groups()
+                    if action.startswith("./"):
+                        continue
+                    if not sha_re.fullmatch(ref):
+                        errors.append(
+                            f"{workflow_path.relative_to(repo)}:{lineno}: external action {action}@{ref} "
+                            "must be pinned to an immutable full commit SHA"
+                        )
 
     counts = control.get("counts", {})
     if counts.get("planned_subphases") != len(EXPECTED):
