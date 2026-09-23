@@ -12,9 +12,10 @@
     "status": "ACTIVE",
     "completed_subphases": [
       "020-A",
-      "020-B"
+      "020-B",
+      "020-C"
     ],
-    "next_eligible_subphase": "020-C",
+    "next_eligible_subphase": "020-D",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -38,12 +39,12 @@
     {
       "id": "020-C",
       "title": "Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-D",
       "title": "Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-E",
@@ -147,7 +148,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 2,
+    "completed_subphases": 3,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -162,5 +163,18 @@
     "historical_workspace_owner_topology": "SIX",
     "mandatory_topology_repair": true,
     "active_implementation_packages": 0
+  },
+  "autonomous_implementation_operating_model": "docs/routing/autonomous_implementation_operating_model.json",
+  "autonomous_operating_summary": {
+    "human_lifecycle_authority": true,
+    "g2_required_for_domain_execution": true,
+    "coordinator_only_delegation": true,
+    "max_delegation_depth": 1,
+    "isolated_worktrees_required": true,
+    "independent_reviewer_run_required": true,
+    "technical_agent_provenance_required": true,
+    "circuit_breakers_required": true,
+    "next_phase_auto_authorization": false,
+    "phase020_domain_execution_authorized": false
   }
 }
