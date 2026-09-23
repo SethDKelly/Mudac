@@ -537,3 +537,36 @@ The logical terminal phase is V1-FINAL; 020-K assigns its final implementation-p
 Successful terminal completion records V1_IMPLEMENTATION_COMPLETE and advances only to RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED. It does not grant G6, deployment authority, G7 or production readiness. G6 remains a separate release-authority boundary and G7 remains separately authorized.
 
 V1 completion requires zero known blocking findings. Non-blocking residual risk may remain only with owner, rationale, impact and revisit trigger; residual-risk labeling cannot hide an unsatisfied visible criterion, semantic contradiction or architecture contradiction.
+
+
+# Final autonomous implementation roadmap and G1 readiness
+
+Phase 020-K defines the final implementation roadmap at:
+
+> docs/routing/phase020_autonomous_implementation_roadmap.json
+
+Human-oriented progressive disclosure is:
+
+> docs/implementation-roadmap/index.md
+
+The retained implementation program contains phases 021 through 029 and all fifteen IMP-001..IMP-015 package identities. 020-K instantiates the package-specific success/evidence contracts required by 020-F and records all fifteen packages as **G1 complete / READY_FOR_AUTHORIZATION**.
+
+G1 is planning completeness only. It does not authorize implementation. During Phase 020 the G2-authorized count remains zero and active package count remains zero. The first possible execution candidate is Phase 021 / IMP-001 only after successful 020-L closure plus an exact Phase-021 start gate and explicit human/program G2.
+
+Preferred Cursor/Codex assignments are operating profiles, not lifecycle or semantic authority. Work remains isolated by declared work unit/worktree; shared lockfile, migration, API-contract, client-shell, CI/evidence and IaC surfaces remain one-writer serialized controls.
+
+The final roadmap sequence is:
+
+~~~text
+021 IMP-001
+022 IMP-002/004/005/006
+023 IMP-003/014
+024 IMP-007
+025 IMP-008
+026 IMP-009
+027 IMP-010/011
+028 IMP-012/013/015
+029 V1-FINAL
+~~~
+
+Phase 029 remains constrained by 020-H/020-J: it owns declared integration/hardening surfaces only and cannot silently reopen or edit G5 package-owned source.
