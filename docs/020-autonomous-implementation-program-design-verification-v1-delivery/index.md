@@ -1,6 +1,6 @@
 # Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning
 
-**Status:** ACTIVE — 020-A/B/C/D/E/F/G/H COMPLETE / 020-I NEXT ELIGIBLE
+**Status:** ACTIVE — 020-A/B/C/D/E/F/G/H/I COMPLETE / 020-J NEXT ELIGIBLE
 
 ## Authority
 
@@ -16,6 +16,7 @@
 - [020-F implementation phase/evaluation contract](../routing/phase020_implementation_phase_contract.json)
 - [020-G CI/supply-chain/evidence architecture](../routing/phase020_ci_supplychain_evidence_architecture.json)
 - [020-H review/repair/exit-gate governance](../routing/phase020_review_repair_exit_gate_governance.json)
+- [020-I cross-cutting verification architecture](../routing/phase020_crosscutting_verification_architecture.json)
 
 ## Planned subphases
 
@@ -27,8 +28,8 @@
 - [020-F — Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture](020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md) — **COMPLETE — PASS**
 - [020-G — CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture](020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md) — **COMPLETE — PASS**
 - [020-H — Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance](020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md) — **COMPLETE — PASS**
-- 020-I — Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **NEXT ELIGIBLE**
-- 020-J — v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — PLANNED
+- [020-I — Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design](020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md) — **COMPLETE — PASS**
+- 020-J — v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **NEXT ELIGIBLE**
 - 020-K — Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — PLANNED
 - 020-L — Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff — PLANNED
 
@@ -36,8 +37,8 @@
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G/H COMPLETE
-020-I NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H/I COMPLETE
+020-J NEXT ELIGIBLE
 
 whole architecture               ACCEPTED
 G0                               SATISFIED
