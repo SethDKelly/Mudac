@@ -17,7 +17,8 @@
     "g1_ready_after_020f": 0,
     "g1_ready_after_020g": 0,
     "g1_ready_after_020h": 0,
-    "g1_ready_after_020i": 0
+    "g1_ready_after_020i": 0,
+    "g1_ready_after_020j": 0
   },
   "dependency_edge_types": {
     "HARD_G2_PREDECESSOR": "Default predecessor completion required before downstream G2 unless a later gate explicitly proves independence under IPG-007/G2.",
@@ -93,6 +94,13 @@
           "dependency/tooling cost impact only"
         ],
         "scenario_ids": []
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -184,6 +192,13 @@
           "SCN-11",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -280,6 +295,13 @@
           "SCN-12",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -369,6 +391,13 @@
           "SCN-03",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -463,6 +492,13 @@
           "SCN-03",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -555,6 +591,13 @@
           "SCN-13",
           "SCN-14"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -648,6 +691,13 @@
           "SCN-11",
           "SCN-15"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -749,6 +799,13 @@
           "SCN-04",
           "SCN-14"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -850,6 +907,13 @@
           "SCN-11",
           "SCN-15"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -950,6 +1014,13 @@
           "SCN-05",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -1049,6 +1120,13 @@
           "SCN-08",
           "SCN-15"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -1152,6 +1230,13 @@
           "SCN-10",
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -1245,6 +1330,13 @@
         "scenario_ids": [
           "SCN-13"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -1333,6 +1425,13 @@
         "scenario_ids": [
           "SCN-14"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     },
     {
@@ -1434,6 +1533,13 @@
           "SCN-13",
           "SCN-14"
         ]
+      },
+      "v1_scope_disposition": "V1_REQUIRED_IF_RETAINED_BY_020K",
+      "final_integration_relation": {
+        "source": "docs/routing/phase020_v1_completion_integration_design.json",
+        "logical_final_phase": "V1-FINAL",
+        "package_g5_required_before_final_evidence_freeze": true,
+        "post_g5_source_change_requires_020h_reopen": true
       }
     }
   ],
@@ -2136,5 +2242,6 @@
   ],
   "reusable_implementation_contract": "docs/routing/phase020_implementation_phase_contract.json",
   "review_exit_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json",
-  "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json"
+  "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json",
+  "v1_completion_integration_design": "docs/routing/phase020_v1_completion_integration_design.json"
 }
