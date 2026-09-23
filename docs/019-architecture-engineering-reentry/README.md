@@ -124,8 +124,8 @@ accepted whole architecture          true
 active implementation packages       0
 package derivation                    true — G0 satisfied
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F COMPLETE
-020-G NEXT ELIGIBLE
+020-A/B/C/D/E/F/G COMPLETE
+020-H NEXT ELIGIBLE
 implementation execution             false
 ~~~
 
