@@ -20,9 +20,10 @@
       "020-G",
       "020-H",
       "020-I",
-      "020-J"
+      "020-J",
+      "020-K"
     ],
-    "next_eligible_subphase": "020-K",
+    "next_eligible_subphase": "020-L",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -30,7 +31,9 @@
     "active_implementation_packages": 0,
     "implementation_execution_authorized": false,
     "release_authorized": false,
-    "production_authorized": false
+    "production_authorized": false,
+    "g1_ready_packages": 15,
+    "ready_for_authorization_packages": 15
   },
   "subphase_plan": [
     {
@@ -86,12 +89,12 @@
     {
       "id": "020-K",
       "title": "Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-L",
       "title": "Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     }
   ],
   "phase_contract_model": {
@@ -164,9 +167,11 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 10,
+    "completed_subphases": 11,
     "active_implementation_packages": 0,
-    "g2_authorized_packages": 0
+    "g2_authorized_packages": 0,
+    "g1_ready_packages": 15,
+    "ready_for_authorization_packages": 15
   },
   "substrate_reuse_qualification": "docs/routing/phase020_substrate_reuse_qualification.json",
   "substrate_reuse_summary": {
@@ -319,5 +324,21 @@
     "proposed_packages": 15,
     "g1_ready_packages": 0,
     "g2_authorized_packages": 0
+  },
+  "autonomous_implementation_roadmap": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+  "roadmap_readiness_summary": {
+    "implementation_phase_count": 9,
+    "retained_package_count": 15,
+    "g1_ready_packages": 15,
+    "ready_for_authorization_packages": 15,
+    "g2_authorized_packages": 0,
+    "active_packages": 0,
+    "first_implementation_phase": "021",
+    "first_g2_candidate": [
+      "IMP-001"
+    ],
+    "first_g2_authorized": false,
+    "final_phase": "029 / V1-FINAL",
+    "phase021_requires_020l_pass": true
   }
 }
