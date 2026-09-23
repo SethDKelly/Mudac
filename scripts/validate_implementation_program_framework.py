@@ -90,6 +90,7 @@ def main() -> int:
         if "020-K" in phase020_completed:
             allowed_framework_states = {
                 "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_PENDING",
+                "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_BLOCKED",
                 "ROADMAP_READY_PHASE020_COMPLETE",
             }
         else:
