@@ -14,8 +14,9 @@
   "human_directed": {
     "required": true,
     "no_autonomous_next_work": true,
-    "no_unattended_task_queue": true,
-    "no_autonomous_delegation": true,
+    "no_unbounded_unattended_task_queue": true,
+    "bounded_delegation_requires_authorized_envelope": true,
+    "coordinator_only_delegation": true,
     "no_implicit_merge_or_deploy": true
   },
   "scope_envelope_fields": [
@@ -43,7 +44,8 @@
       "external_or_destructive_actions": false,
       "semantic_or_architecture_adoption": false,
       "explicit_additional_authorization": false,
-      "supporting_changes": "directly-necessary-and-proportional"
+      "supporting_changes": "directly-necessary-and-proportional",
+      "bounded_subagent_delegation": "allowed only inside an active G2-authorized implementation envelope under the autonomous implementation operating model"
     },
     "A3": {
       "name": "external-destructive-or-scope-expanding",
@@ -51,7 +53,8 @@
       "safe_read_only_validation": true,
       "external_or_destructive_actions": true,
       "semantic_or_architecture_adoption": false,
-      "explicit_additional_authorization": true
+      "explicit_additional_authorization": true,
+      "delegation_outside_authorized_envelope": true
     },
     "A4": {
       "name": "semantic-or-architecture-change",
@@ -67,5 +70,12 @@
     "stop_at_selected_task_boundary": true,
     "report_next_eligible_work_only": true,
     "validation_pass_does_not_authorize_next_work": true
+  },
+  "autonomous_implementation": {
+    "operating_model": "docs/routing/autonomous_implementation_operating_model.json",
+    "g2_required": true,
+    "coordinator_only_delegation": true,
+    "recursive_implementation_delegation": false,
+    "next_phase_auto_authorization": false
   }
 }
