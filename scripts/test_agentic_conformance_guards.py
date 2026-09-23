@@ -328,6 +328,22 @@ def main() -> int:
             errors,
         )
 
+        workflow_pin_repo = clone_repo(source, tmp, "workflow-pin")
+        workflow_pin_path = workflow_pin_repo / ".github/workflows/knowledge-validation.yml"
+        workflow_pin_text = workflow_pin_path.read_text(encoding="utf-8")
+        workflow_pin_text = re.sub(
+            r"actions/checkout@[0-9a-f]{40}",
+            "actions/checkout@v6",
+            workflow_pin_text,
+            count=1,
+        )
+        workflow_pin_path.write_text(workflow_pin_text, encoding="utf-8")
+        expect_failure(
+            "020-G mutable GitHub Action pin",
+            run_script(source, workflow_pin_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(workflow_pin_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -340,7 +356,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 20 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 21 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
