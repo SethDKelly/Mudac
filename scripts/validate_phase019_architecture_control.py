@@ -309,6 +309,7 @@ def main() -> int:
         if impl_state.get("framework_state") not in {
             "PLANNING_READY",
             "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_PENDING",
+            "ROADMAP_READY_PREIMPLEMENTATION_AUDIT_BLOCKED",
             "ROADMAP_READY_PHASE020_COMPLETE",
         }:
             errors.append("implementation framework must remain in an accepted post-architecture planning state")
