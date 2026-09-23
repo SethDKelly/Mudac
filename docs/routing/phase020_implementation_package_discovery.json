@@ -15,7 +15,8 @@
     "implementation_execution_authorized": false,
     "package_ids_are_durable_if_retained": "IMP-001..IMP-015; superseded IDs are never reused",
     "g1_ready_after_020f": 0,
-    "g1_ready_after_020g": 0
+    "g1_ready_after_020g": 0,
+    "g1_ready_after_020h": 0
   },
   "dependency_edge_types": {
     "HARD_G2_PREDECESSOR": "Default predecessor completion required before downstream G2 unless a later gate explicitly proves independence under IPG-007/G2.",
@@ -75,7 +76,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-002",
@@ -144,7 +146,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-003",
@@ -215,7 +218,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-004",
@@ -284,7 +288,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-005",
@@ -359,7 +364,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-006",
@@ -431,7 +437,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-007",
@@ -505,7 +512,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-008",
@@ -583,7 +591,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-009",
@@ -661,7 +670,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-010",
@@ -738,7 +748,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-011",
@@ -814,7 +825,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-012",
@@ -893,7 +905,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-013",
@@ -967,7 +980,8 @@
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
-      ]
+      ],
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-014",
@@ -1037,7 +1051,8 @@
         "020-K final package plan and implementation-phase assignment"
       ],
       "phase020g_binding": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
-      "phase020g_contract_complete": true
+      "phase020g_contract_complete": true,
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     },
     {
       "id": "IMP-015",
@@ -1115,7 +1130,8 @@
         "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "phase020g_delivery_contract": "CONSUMER_OF_IMMUTABLE_ARTIFACT_PROVENANCE_AND_PROMOTION_BY_DIGEST"
+      "phase020g_delivery_contract": "CONSUMER_OF_IMMUTABLE_ARTIFACT_PROVENANCE_AND_PROMOTION_BY_DIGEST",
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
     }
   ],
   "hard_edges": [
@@ -1815,5 +1831,6 @@
     "Production-runtime implementation does not imply release or production authorization.",
     "Final implementation-phase numbering/grouping is not frozen until 020-K."
   ],
-  "reusable_implementation_contract": "docs/routing/phase020_implementation_phase_contract.json"
+  "reusable_implementation_contract": "docs/routing/phase020_implementation_phase_contract.json",
+  "review_exit_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json"
 }
