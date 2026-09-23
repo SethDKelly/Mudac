@@ -309,6 +309,25 @@ def main() -> int:
             errors,
         )
 
+        roadmap_repo = clone_repo(source, tmp, "roadmap")
+        roadmap_path = roadmap_repo / "docs/routing/phase020_autonomous_implementation_roadmap.json"
+        roadmap = json.loads(roadmap_path.read_text(encoding="utf-8"))
+        roadmap["boundary"]["package_g1_is_execution_authority"] = True
+        roadmap["boundary"]["implementation_execution_authorized"] = True
+        roadmap["readiness_summary"]["g2_authorized_count"] = 1
+        roadmap["readiness_summary"]["first_phase_g2_authorized"] = True
+        roadmap["agent_strategy"]["recursive_delegation"] = True
+        roadmap["agent_strategy"]["worktree_isolation_required"] = False
+        roadmap["phase_sequence"][0]["next_phase_auto_authorization"] = True
+        roadmap["packages"][0]["g1_evidence"]["visible_criteria_instantiated"] = False
+        roadmap["packages"][0]["dependencies"]["hard"] = ["IMP-015"]
+        roadmap_path.write_text(json.dumps(roadmap, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "020-K G1/G2 roadmap authority collapse",
+            run_script(source, roadmap_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(roadmap_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -321,7 +340,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 19 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 20 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
