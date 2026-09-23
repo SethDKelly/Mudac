@@ -224,6 +224,21 @@ def main() -> int:
             errors,
         )
 
+        package_graph_repo = clone_repo(source, tmp, "package-graph")
+        package_graph_path = package_graph_repo / "docs/routing/phase020_implementation_package_discovery.json"
+        package_graph = json.loads(package_graph_path.read_text(encoding="utf-8"))
+        package_graph["hard_edges"].append({
+            "from": "IMP-012",
+            "to": "IMP-001",
+            "type": "HARD_G2_PREDECESSOR",
+        })
+        package_graph_path.write_text(json.dumps(package_graph, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "Implementation package dependency-cycle leakage",
+            run_script(source, package_graph_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(package_graph_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -236,7 +251,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 13 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 14 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
