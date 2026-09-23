@@ -12,6 +12,7 @@ QUALIFICATION = "docs/routing/phase020_substrate_reuse_qualification.json"
 OPERATING = "docs/routing/autonomous_implementation_operating_model.json"
 TEST_CONTROL = "docs/routing/phase020_nonproduction_test_control_architecture.json"
 PACKAGE_DISCOVERY = "docs/routing/phase020_implementation_package_discovery.json"
+PHASE_CONTRACT = "docs/routing/phase020_implementation_phase_contract.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -31,6 +32,7 @@ def main() -> int:
         operating = json.loads((repo / OPERATING).read_text(encoding="utf-8")) if (repo / OPERATING).is_file() else None
         test_control = json.loads((repo / TEST_CONTROL).read_text(encoding="utf-8")) if (repo / TEST_CONTROL).is_file() else None
         package_discovery = json.loads((repo / PACKAGE_DISCOVERY).read_text(encoding="utf-8")) if (repo / PACKAGE_DISCOVERY).is_file() else None
+        phase_contract = json.loads((repo / PHASE_CONTRACT).read_text(encoding="utf-8")) if (repo / PHASE_CONTRACT).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -385,6 +387,139 @@ def main() -> int:
             if package_discovery.get("final_v1_integration_phase_status") != "DEFERRED_TO_020-J":
                 errors.append("020-E must defer final v1 integration phase to 020-J")
 
+    if "020-F" in completed:
+        if phase_contract is None:
+            errors.append("020-F completion requires implementation phase contract")
+        else:
+            if control.get("implementation_phase_contract") != PHASE_CONTRACT:
+                errors.append("Phase-020 control must point to implementation phase contract")
+            boundary_f = phase_contract.get("boundary", {})
+            if boundary_f.get("phase020_execution_authorized") is not False:
+                errors.append("020-F contract must not authorize Phase-020 implementation")
+            if boundary_f.get("active_packages") != 0 or boundary_f.get("g2_authorized_packages") != 0:
+                errors.append("020-F contract must retain zero active/G2 packages")
+            if boundary_f.get("contract_definition_does_not_make_packages_g1_ready") is not True:
+                errors.append("020-F contract must not make packages G1-ready merely by existing")
+            if boundary_f.get("contract_definition_does_not_grant_g2") is not True:
+                errors.append("020-F contract must not grant G2")
+
+            phase_def = phase_contract.get("phase_contract", {})
+            required_sections = set(phase_def.get("required_sections", []))
+            for required_section in (
+                "visible_success_criteria",
+                "evidence_obligations",
+                "scenario_obligations",
+                "declared_work_unit_graph",
+                "g2_authorization_record",
+                "exit_gate_contract",
+            ):
+                if required_section not in required_sections:
+                    errors.append(f"020-F phase contract missing required section: {required_section}")
+            if phase_def.get("package_scope_inference_forbidden") is not True:
+                errors.append("020-F phase contract must forbid implicit package scope")
+            if phase_def.get("next_phase_auto_authorization") is not False:
+                errors.append("020-F contract must not auto-authorize next phase")
+
+            g1 = phase_contract.get("package_g1_contract", {})
+            if g1.get("package_g1_is_execution_authority") is not False:
+                errors.append("020-F must preserve G1 != execution authority")
+            for required_item in (
+                "visible_success_criteria_instantiated",
+                "required_evidence_obligations_instantiated",
+                "scenario_obligations_instantiated",
+                "semantic_architecture_engineering_traceability_complete",
+            ):
+                if required_item not in g1.get("required_before_g1", []):
+                    errors.append(f"020-F G1 contract missing requirement: {required_item}")
+
+            criterion = phase_contract.get("visible_success_criterion_schema", {})
+            criterion_fields = set(criterion.get("required_fields", []))
+            for field in ("id","statement","authority_refs","evidence_floor","material_boundary","verification_visibility","failure_class"):
+                if field not in criterion_fields:
+                    errors.append(f"020-F success criterion schema missing field: {field}")
+            if criterion.get("normative_threshold_rule") != "ANY_THRESHOLD_THAT_DEFINES_ACCEPTANCE_OR_PRODUCT_RUNTIME_OBLIGATION_MUST_BE_VISIBLE":
+                errors.append("020-F normative acceptance thresholds must remain visible")
+            if criterion.get("test_name_as_criterion_forbidden_unless_test_itself_is_deliverable") is not True:
+                errors.append("020-F must prohibit test-name-as-success-criterion overfitting")
+
+            visibility = phase_contract.get("verification_visibility", {})
+            public = visibility.get("PUBLIC", {})
+            protected = visibility.get("PROTECTED", {})
+            must_include = set(public.get("must_include", []))
+            for item in (
+                "all_requirements_and_semantic_obligations",
+                "success_criteria",
+                "normative_acceptance_thresholds",
+                "required_evidence_classes_and_material_boundaries",
+                "mandatory_scenario_categories",
+            ):
+                if item not in must_include:
+                    errors.append(f"020-F public contract must include {item}")
+            may_not_hide = set(protected.get("may_not_hide", []))
+            for item in (
+                "product_or_semantic_requirement",
+                "accepted_architecture_rule",
+                "normative_acceptance_threshold",
+                "required_evidence_class",
+                "required_material_boundary",
+                "mandatory_scenario_category",
+                "security_or_disclosure_property",
+                "accessibility_target",
+                "migration_or_recovery_obligation",
+            ):
+                if item not in may_not_hide:
+                    errors.append(f"020-F protected evaluator must not hide {item}")
+            if set(protected.get("may_hide", [])) & may_not_hide:
+                errors.append("020-F protected may_hide and may_not_hide sets must be disjoint")
+
+            evaluator = phase_contract.get("protected_evaluator", {})
+            for key in (
+                "separate_runtime_or_principal",
+                "derives_only_from_visible_contract",
+                "hidden_requirements_forbidden",
+                "secret_semantic_bypass_forbidden",
+                "production_use_forbidden",
+                "evaluates_exact_candidate_revision",
+                "direct_fixture_seed_cannot_prove_bypassed_command",
+            ):
+                if evaluator.get(key) is not True:
+                    errors.append(f"020-F protected_evaluator.{key} must be true")
+            for key in ("modifies_candidate_code","grants_g2","grants_next_phase_authority"):
+                if evaluator.get(key) is not False:
+                    errors.append(f"020-F protected_evaluator.{key} must be false")
+
+            result = phase_contract.get("evaluation_result_contract", {})
+            if set(result.get("fail_closed_states", [])) != {"FAIL","BLOCKED","INCONCLUSIVE"}:
+                errors.append("020-F required criterion failures must fail closed on FAIL/BLOCKED/INCONCLUSIVE")
+            if "NOT_APPLICABLE_WITH_APPROVED_RATIONALE" not in result.get("per_criterion_states", []):
+                errors.append("020-F NOT_APPLICABLE must require approved rationale")
+
+            exit_contract = phase_contract.get("phase_exit_contract", {})
+            for key in (
+                "candidate_revision_frozen_for_review",
+                "exact_sha_required",
+                "public_ci_required",
+                "independent_code_review_required",
+                "adversarial_conformance_review_required",
+                "mandatory_evidence_bundle_required",
+                "traceability_current_required",
+                "unresolved_blocker_forbidden",
+                "implementer_self_close_forbidden",
+                "gatekeeper_may_record_complete_only_when_predicates_pass",
+            ):
+                if exit_contract.get(key) is not True:
+                    errors.append(f"020-F exit contract.{key} must be true")
+            if exit_contract.get("next_phase_result") != "NEXT_ELIGIBLE_NOT_AUTHORIZED":
+                errors.append("020-F exit contract must not authorize the next phase")
+
+            relation = phase_contract.get("package_discovery_relation", {})
+            if relation.get("source") != PACKAGE_DISCOVERY or relation.get("proposed_package_count") != 15:
+                errors.append("020-F package-discovery relationship drift")
+            if relation.get("package_specific_criteria_instantiated_by_020f") is not False:
+                errors.append("020-F must not claim package-specific criteria are already instantiated")
+            if relation.get("g1_ready_count_after_020f") != 0:
+                errors.append("020-F must retain zero G1-ready packages")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -408,6 +543,8 @@ def main() -> int:
         errors.append("implementation framework must reference 020-D test-control architecture after completion")
     if "020-E" in completed and phase020_fw.get("implementation_package_discovery") != PACKAGE_DISCOVERY:
         errors.append("implementation framework must reference 020-E package discovery after completion")
+    if "020-F" in completed and phase020_fw.get("implementation_phase_contract") != PHASE_CONTRACT:
+        errors.append("implementation framework must reference 020-F phase contract after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
@@ -432,6 +569,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md"] if "020-C" in completed else []),
         *([f"{PHASE_DIR}/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md"] if "020-D" in completed else []),
         *([f"{PHASE_DIR}/020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md"] if "020-E" in completed else []),
+        *([f"{PHASE_DIR}/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md"] if "020-F" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
