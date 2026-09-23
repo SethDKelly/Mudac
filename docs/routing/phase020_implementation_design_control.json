@@ -15,9 +15,10 @@
       "020-B",
       "020-C",
       "020-D",
-      "020-E"
+      "020-E",
+      "020-F"
     ],
-    "next_eligible_subphase": "020-F",
+    "next_eligible_subphase": "020-G",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -56,12 +57,12 @@
     {
       "id": "020-F",
       "title": "Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-G",
       "title": "CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-H",
@@ -150,7 +151,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 5,
+    "completed_subphases": 6,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -220,5 +221,20 @@
     ],
     "final_phase_grouping_deferred_to": "020-K",
     "v1_integration_phase_deferred_to": "020-J"
+  },
+  "implementation_phase_contract": "docs/routing/phase020_implementation_phase_contract.json",
+  "implementation_phase_contract_summary": {
+    "governing_rule": "HIDE_THE_PROBE_NEVER_THE_REQUIREMENT",
+    "visible_success_criteria_required": true,
+    "normative_thresholds_visible": true,
+    "evidence_floor_visible": true,
+    "protected_probe_details_allowed": true,
+    "hidden_requirements_forbidden": true,
+    "protected_evaluator_separate": true,
+    "exact_candidate_sha_required": true,
+    "implementer_self_close_forbidden": true,
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0
   }
 }
