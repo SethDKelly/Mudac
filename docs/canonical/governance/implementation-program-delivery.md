@@ -570,3 +570,16 @@ The final roadmap sequence is:
 ~~~
 
 Phase 029 remains constrained by 020-H/020-J: it owns declared integration/hardening surfaces only and cannot silently reopen or edit G5 package-owned source.
+
+
+# Phase-020 pre-implementation exit audit
+
+The current exit audit is:
+
+> docs/routing/phase020_preimplementation_exit_audit.json
+
+020-L is currently **BLOCKED** by `P020L-001`: GitHub reports `main` unprotected, required status-check enforcement off, and no repository ruleset. Repository issue #10 tracks the required administrative correction.
+
+The repository-controlled findings identified by 020-L have been repaired: external GitHub Actions are pinned to immutable commit SHAs, the pin rule is machine-validated, and historical framework validators recognize the governed 020-K roadmap state. Exact-head Knowledge Validation, Implementation Verification and CodeQL passed at the audit candidate revision named by the audit record.
+
+Phase 020 must remain ACTIVE until repository enforcement is independently re-observed. Phase 021 / IMP-001 remains G1-ready but **not G2-authorized and not execution-eligible**. Closing issue #10 alone is not evidence; the branch/ruleset state and required-check enforcement must be observed again, followed by exact-head CI.
