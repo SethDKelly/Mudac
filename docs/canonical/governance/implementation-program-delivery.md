@@ -499,3 +499,24 @@ Pre-G5 repair may continue under the current G2 only when it remains inside orig
 The Gatekeeper integrates evidence and review; it does not override mandatory failures, change criteria, edit candidate source, grant next-phase G2, merge or deploy. COMPLETE creates an immutable G5 completion record whose successor state is NEXT_ELIGIBLE_NOT_AUTHORIZED.
 
 After G5 the old G2 envelope is closed. Later invalidation may create REOPEN_REQUIRED, but renewed implementation needs explicit re-authorization and a fresh candidate/evidence/review/exit cycle. Historical completion records are linked, not rewritten.
+
+
+# Cross-cutting verification architecture
+
+Phase 020-I defines the current migration/recovery/accessibility/performance/cost/scenario projection at:
+
+> docs/routing/phase020_crosscutting_verification_architecture.json
+
+Every implementation package classifies cross-cutting applicability before G1. The classification does not make a package G1-ready by itself; package-specific success criteria, open normative thresholds and final phase assignment remain explicit later planning work.
+
+The complete ENG-014 set is retained as fifteen program scenario IDs SCN-01..SCN-15. Scenario evidence must cross the material boundary: a unit test that merely names a scenario cannot close a required E3/E4/E5/E6 claim. Foundation-owned mechanisms require representative natural-owner integration where foundation-only proof would be semantically artificial.
+
+Migration evidence is owner-scoped, additive-first, history-preserving and covers supported prior baselines, rolling compatibility where declared, partial failure, recovery and destructive-contraction prerequisites. Real PostgreSQL semantics require real PostgreSQL evidence.
+
+Recovery evidence distinguishes command reconciliation, client/paper continuity, projection rebuild, backup/restore and regional DR. Backup existence or database restore alone is not semantic recovery; readiness follows authoritative restore -> application consistency -> derived-state/currentness -> external reconciliation -> service readiness.
+
+Core browser workflows target WCAG 2.2 AA semantic parity. Automated scanners are supporting evidence, not proof of conformance; critical flows require manual accessibility evidence before release candidate readiness.
+
+Performance acceptance thresholds, workload profiles and environment capacity are visible when material. Load/latency pressure cannot alter Access, authority, partial-result or unknown-result semantics. RTO/RPO are measured exercise claims, not invented documentation targets.
+
+Cost evidence models material steady-state/event/runtime/storage/network/telemetry/backup/security/test infrastructure drivers. Cost optimization cannot remove mandatory availability, backup, encryption, security-logging or evidence-preservation controls.
