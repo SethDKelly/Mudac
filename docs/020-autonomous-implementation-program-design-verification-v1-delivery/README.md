@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G COMPLETE
-020-H NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H COMPLETE
+020-I NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -127,8 +127,9 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing — **COMPLETE — PASS** |
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture — **COMPLETE — PASS** |
 | **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **COMPLETE — PASS** |
-| **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **NEXT ELIGIBLE** |
-| **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design |
+| **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **COMPLETE — PASS** |
+| **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **NEXT ELIGIBLE** |
+
 | **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design |
 | **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness |
 | **020-L** | Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff |
@@ -249,3 +250,10 @@ Machine contract: `docs/routing/phase020_implementation_phase_contract.json`.
 020-G established exact-revision CI and evidence architecture: exit evidence binds to explicit commit/tree identity; blocking/exit GitHub Actions must ultimately use immutable action commit SHAs; releaseable artifacts are built once and promoted by digest; security/supply-chain checks, SBOM and provenance are explicit inputs; protected evaluator results are bound without exposing hidden probes; retry/failure history remains visible; and evidence bundles are content-addressed manifests rather than unstructured logs. Repository main-branch enforcement remains an unverified administrative obligation rather than a claimed control.
 
 Machine contract: `docs/routing/phase020_ci_supplychain_evidence_architecture.json`.
+
+
+## 020-H review / repair / exit-gate result
+
+020-H established dual-pass independent review: implementation code review plus adversarial conformance review, both bound to the exact candidate. Reviewer source edits convert that reviewer into an implementer for the changed revision and require fresh independent review. Ordinary pre-G5 repair may reuse the current G2 only inside unchanged scope; scope expansion or semantic/architecture contradiction escalates. G5 completion records are immutable, and post-G5 invalidation creates a reopen record whose repair requires explicit re-authorization rather than silently restoring old G2.
+
+Machine contract: `docs/routing/phase020_review_repair_exit_gate_governance.json`.
