@@ -29,11 +29,12 @@ Current repository/design-governance authority.
 - [Architecture Re-entry Evaluation & Decision Contract](architecture-reentry-evaluation.md)
 - [Phase-019 Architecture Decision Authority & Evidence Contract](architecture-decision-authority.md)
 - [Implementation Program, Verification & Delivery-Gate Contract](implementation-program-delivery.md)
+- Phase-020 autonomous implementation operating projection: [`docs/routing/autonomous_implementation_operating_model.json`](../../routing/autonomous_implementation_operating_model.json)
 
 ## Current interpretation
 
 Indexes, READMEs, registries, and agent adapters route; they do not become product-rule owners.
 
-Jackson-aligned Concept Design is closed. Historical architecture/implementation candidates remain suspended until explicit post-closure re-entry decisions; no new architecture or implementation execution authority is established by closure.
+Jackson-aligned Concept Design is closed and Phase 019 accepted the whole architecture. Phase 020 is the active final pre-implementation design lifecycle; implementation execution remains unauthorized until a later explicit G2 phase/package.
 
-For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). [Phase 018](../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is the active post-closure repository qualification program; downstream work remains governed by the Design / Implementation Boundary and Post-Concept-Design Re-entry contract.
+For final Concept Design closure evidence, use [Phase 017](../../017-methodology-closure-canonical-consolidation-completion-decision/). Phase 018 and Phase 019 are complete. [Phase 020](../../020-autonomous-implementation-program-design-verification-v1-delivery/) is active with 020-A/B/C complete and 020-D next eligible; downstream work remains governed by the Design / Implementation Boundary, accepted architecture and Implementation Program contract.
