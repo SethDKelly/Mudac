@@ -44,16 +44,16 @@ PHASE 018 COMPLETE — PASS
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
 PHASE 019 COMPLETE — PASS — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE — WHOLE ARCHITECTURE ACCEPTED / G0 SATISFIED
 
-historical architecture       SUSPENDED / QUARANTINED
-accepted new architecture      NOT ESTABLISHED
-implementation readiness      READY
+historical architecture       SUPERSEDED / RETAINED EVIDENCE
+accepted whole architecture   ESTABLISHED
+implementation readiness      PROGRAM DESIGN ACTIVE
 implementation execution      NOT STARTED
 execution authorization       NOT GRANTED
 ```
 
 The active work is:
 
-> **PHASE 019 COMPLETE — Architecture & Engineering Re-entry — 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE**
+> **PHASE 020 ACTIVE — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning — 020-A/B/C COMPLETE / 020-D NEXT ELIGIBLE**
 
 ## Human-directed action boundary
 
@@ -65,6 +65,8 @@ Follow [Agentic Development Authority, Human-Directed Scope & Action Boundaries]
 - **A4 — semantic / accepted-architecture change:** requires explicit human change intent plus canonical change/re-entry governance; implementation difficulty is not permission to weaken accepted meaning.
 
 A passing check does not authorize merge, deploy, the next phase/subphase, or a new implementation package.
+
+Bounded autonomous implementation is permitted only inside a later explicit G2 phase/package envelope under `docs/routing/autonomous_implementation_operating_model.json`: coordinator-only declared work units, isolated worktrees, independent review, circuit breakers, and no automatic next-phase authorization.
 
 ## Portable workflows
 
@@ -98,7 +100,7 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A/B complete and 020-C next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
+Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A/B/C complete and 020-D next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
 
 
 Current Phase-019 progression:
@@ -111,8 +113,8 @@ Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 ACTIVE
-020-A/B COMPLETE
-020-C NEXT ELIGIBLE
+020-A/B/C COMPLETE
+020-D NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
