@@ -378,3 +378,31 @@ That projection is subordinate to this contract plus canonical agent governance.
 It defines Human Authorizer, Coordinator, Implementer, Reviewer, Verifier and Gatekeeper roles; coordinator-only delegation; worktree isolation; context/provenance fields; serialized surfaces; and fail-closed circuit breakers.
 
 Phase 020 itself remains pre-implementation. These rules become executable only for a later G2-authorized package/phase.
+
+
+# Non-production agent test-control architecture
+
+Phase 020-D defines the current implementation-program testability contract at:
+
+> docs/routing/phase020_nonproduction_test_control_architecture.json
+
+The control plane is non-production-only and uses MCP as an agent protocol around real MUDAC application/runtime boundaries.
+
+Implementation packages that use it must preserve:
+
+- worktree-local deterministic testing as the default repair-loop boundary;
+- escalation to isolated/shared AWS non-production only when the material evidence boundary requires it;
+- deterministic synthetic FixtureBlueprints and explicit synthetic actor identities;
+- separation of MCP technical caller authority from MUDAC Identity / Participation / Access;
+- real application command/query/browser paths for behavior evidence;
+- direct fixture seeding only as setup basis, never as evidence for the command path bypassed;
+- RUN-020/RUN-021 structured/OpenTelemetry observability rather than MCP protocol logging as a second telemetry authority;
+- registered bounded fault profiles rather than arbitrary shell/cloud/database controls;
+- a separate protected evaluator that hides probes, not requirements;
+- deterministic production-denial controls in IaC/configuration/runtime.
+
+Remote MCP authorization must be resource/audience-bound to the test-control plane and must not pass through credentials issued for another downstream resource.
+
+The test-control plane may support E2–E5 and selected E6 evidence. It cannot establish E7 production evidence.
+
+Phase 020 remains design-only: this contract does not itself deploy a non-production environment, implement an MCP server or grant G2.
