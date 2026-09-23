@@ -10,6 +10,7 @@ sources:
   - resource: deterministic-ownership-resolution.md
   - resource: validation-enforcement.md
   - resource: ../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-F-agent-context-progressive-retrieval-context-budget-anti-bloat-architecture.md
+  - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:45:00Z }
 ---
 
@@ -63,13 +64,15 @@ Cursor rules, the root Claude import bridge, Claude command bridges and any futu
 They may not contain a second copy of the workflow or provider-specific semantic rules.
 
 <a id="wfl-005"></a>
-## WFL-005 — Provider-native discovery differences do not change MUDAC authority
+## WFL-005 — Provider-native discovery and orchestration differences do not change MUDAC authority
 
-Tools may discover AGENTS.md, skills, commands or rules differently.
+Tools may discover AGENTS.md, skills, commands, rules, worktrees, cloud agents or subagents differently.
 
-Those mechanics affect ergonomics only.
+Those mechanics affect ergonomics and execution topology only.
 
-The shared authority order, A1–A4 model, current-owner resolution, context discipline and execution boundaries remain identical across tools.
+The shared authority order, A1–A4 model, current-owner resolution, context discipline, G2 envelope, work-unit scope, review independence and execution boundaries remain identical across tools.
+
+Cursor/Codex provider features may implement the Coordinator/Implementer/Reviewer mechanics, but provider orchestration never creates scope or lifecycle authority.
 
 <a id="wfl-006"></a>
 ## WFL-006 — Workflow action class is fixed by the canonical workflow contract
@@ -87,7 +90,17 @@ The generic A2 execution workflow may execute currently authorized repository wo
 
 Before domain implementation, it must confirm implementation execution is actually authorized by the active repository state/package.
 
-Phase-018 governance work does not become domain implementation merely because an A2 skill exists.
+For a delegated implementation work unit, the workflow must also confirm that:
+
+- the parent phase/package has G2;
+- the work unit is declared in the active execution graph;
+- the current agent role is permitted;
+- the exact base/context manifest is present;
+- no circuit breaker has fired.
+
+A delegated work unit inherits its parent task envelope; it is not a new autonomous task-selection event.
+
+Phase-020 design work does not become domain implementation merely because an A2 skill or provider subagent exists.
 
 <a id="wfl-008"></a>
 ## WFL-008 — Run-conformance reports failures faithfully and does not self-fix by default
@@ -164,3 +177,27 @@ Current repository targets are:
 - **Claude Code:** tiny root CLAUDE.md import bridge to AGENTS.md plus .claude/commands references to canonical .agents/skills.
 
 Provider mechanics may evolve. WFL-011 requires support claims to track actual evidence rather than assumption.
+
+
+# Autonomous implementation role portability
+
+The Phase-020 operating model defines logical roles:
+
+- Human Authorizer;
+- Coordinator;
+- Implementer;
+- Reviewer;
+- Verifier;
+- Gatekeeper.
+
+Cursor, Codex or another compatible agent may fill Coordinator, Implementer or Reviewer roles.
+
+The role—not the provider—controls what the run may do.
+
+Provider-specific worktree/cloud/subagent features remain adapters for the same contract. The repository must not create separate semantic instructions for a Cursor implementer and a Codex implementer.
+
+A Coordinator may delegate only within the current G2-authorized execution graph. Implementers cannot recursively delegate implementation. Reviewers use a fresh independent run/context and are read-only unless repair work is separately assigned.
+
+The machine projection is:
+
+> docs/routing/autonomous_implementation_operating_model.json
