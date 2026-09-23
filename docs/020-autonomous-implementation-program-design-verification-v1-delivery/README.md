@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G/H/I/J COMPLETE
-020-K NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H/I/J/K COMPLETE
+020-L NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -130,11 +130,12 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **COMPLETE — PASS** |
 | **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **COMPLETE — PASS** |
 | **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **COMPLETE — PASS** |
-| **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — **NEXT ELIGIBLE** |
+| **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — **COMPLETE — PASS** |
+| **020-L** | Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff — **NEXT ELIGIBLE** |
 
 
 
-| **020-L** | Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff |
+
 
 The decomposition is dependency-driven rather than aesthetically fixed. 020-A has reviewed and accepted this A–L structure as the current Phase-020 plan; later work may reopen it if evidence demonstrates a material dependency mistake.
 
@@ -273,3 +274,12 @@ Machine contract: `docs/routing/phase020_crosscutting_verification_architecture.
 020-J defines PF-01 as the initial implemented v1 boundary, preserving all eighteen current Concepts and the current explicit non-goals. Package G5 completion is necessary but insufficient: v1 requires nine integrated journey families, all fifteen scenarios on one qualifying composed candidate, twelve blocking whole-system criteria, and an immutable whole-system evidence bundle. The terminal logical phase `V1-FINAL` may harden only explicitly assigned integration surfaces; defects in completed package-owned source use 020-H reopen/re-authorization. Successful v1 implementation completion yields `RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED`, not G6/G7 or deployment authority.
 
 Machine contract: `docs/routing/phase020_v1_completion_integration_design.json`.
+
+
+## 020-K final roadmap / package-readiness result
+
+020-K finalized the autonomous implementation program as phases 021–029, retained all 15 IMP package identities, instantiated package-specific visible success/evidence contracts, assigned preferred Cursor/Codex implementer-reviewer profiles, and defined concurrency/serialized-surface rules. All 15 packages now satisfy G1 and are `READY_FOR_AUTHORIZATION`; none is G2-authorized or active. The first execution candidate is Phase 021 / IMP-001 only after 020-L closes Phase 020 and an explicit G2 names IMP-001.
+
+Machine roadmap: `docs/routing/phase020_autonomous_implementation_roadmap.json`.
+
+Progressive-disclosure roadmap: `docs/implementation-roadmap/index.md`.
