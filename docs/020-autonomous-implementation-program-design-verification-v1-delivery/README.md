@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F COMPLETE
-020-G NEXT ELIGIBLE
+020-A/B/C/D/E/F/G COMPLETE
+020-H NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -126,8 +126,8 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture — **COMPLETE — PASS** |
 | **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing — **COMPLETE — PASS** |
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture — **COMPLETE — PASS** |
-| **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **NEXT ELIGIBLE** |
-| **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance |
+| **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **COMPLETE — PASS** |
+| **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **NEXT ELIGIBLE** |
 | **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design |
 | **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design |
 | **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness |
@@ -242,3 +242,10 @@ Machine graph: `docs/routing/phase020_implementation_package_discovery.json`.
 020-F established the reusable visible-obligation/protected-probe implementation contract. Success criteria, normative thresholds, evidence floors/material boundaries, scenario categories and exit predicates remain visible to Implementers; protected evaluators may hide exact probes/fixtures/interleavings but not requirements. Required FAIL/BLOCKED/INCONCLUSIVE states fail closed, exact-SHA review is mandatory, and the 15 proposed packages remain 0/15 G1-ready and 0 G2-authorized until package-specific instantiation in 020-I/020-K.
 
 Machine contract: `docs/routing/phase020_implementation_phase_contract.json`.
+
+
+## 020-G CI / supply-chain / evidence result
+
+020-G established exact-revision CI and evidence architecture: exit evidence binds to explicit commit/tree identity; blocking/exit GitHub Actions must ultimately use immutable action commit SHAs; releaseable artifacts are built once and promoted by digest; security/supply-chain checks, SBOM and provenance are explicit inputs; protected evaluator results are bound without exposing hidden probes; retry/failure history remains visible; and evidence bundles are content-addressed manifests rather than unstructured logs. Repository main-branch enforcement remains an unverified administrative obligation rather than a claimed control.
+
+Machine contract: `docs/routing/phase020_ci_supplychain_evidence_architecture.json`.
