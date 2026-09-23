@@ -100,7 +100,7 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A/B/C/D complete and 020-E next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
+Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A/B/C/D/E complete and 020-F next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
 
 
 Current Phase-019 progression:
@@ -113,8 +113,8 @@ Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 ACTIVE
-020-A/B/C/D COMPLETE
-020-E NEXT ELIGIBLE
+020-A/B/C/D/E COMPLETE
+020-F NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
