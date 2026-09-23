@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G/H COMPLETE
-020-I NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H/I COMPLETE
+020-J NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -128,9 +128,10 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture — **COMPLETE — PASS** |
 | **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **COMPLETE — PASS** |
 | **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **COMPLETE — PASS** |
-| **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **NEXT ELIGIBLE** |
+| **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **COMPLETE — PASS** |
+| **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **NEXT ELIGIBLE** |
 
-| **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design |
+
 | **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness |
 | **020-L** | Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff |
 
@@ -257,3 +258,10 @@ Machine contract: `docs/routing/phase020_ci_supplychain_evidence_architecture.js
 020-H established dual-pass independent review: implementation code review plus adversarial conformance review, both bound to the exact candidate. Reviewer source edits convert that reviewer into an implementer for the changed revision and require fresh independent review. Ordinary pre-G5 repair may reuse the current G2 only inside unchanged scope; scope expansion or semantic/architecture contradiction escalates. G5 completion records are immutable, and post-G5 invalidation creates a reopen record whose repair requires explicit re-authorization rather than silently restoring old G2.
 
 Machine contract: `docs/routing/phase020_review_repair_exit_gate_governance.json`.
+
+
+## 020-I cross-cutting verification result
+
+020-I established explicit migration, recovery, accessibility, performance, cost and fifteen-scenario verification profiles. Existing normative thresholds remain visible (including WCAG 2.2 AA, minimum production API/AZ redundancy and 35-day RDS PITR); new latency, load, cost and RTO/RPO thresholds must be explicit and evidence-backed rather than invented or hidden. Every IMP package now has an applicability profile, but package-specific final criteria/thresholds and phase assignment remain 020-K work, so all 15 packages remain below G1.
+
+Machine contract: `docs/routing/phase020_crosscutting_verification_architecture.json`.
