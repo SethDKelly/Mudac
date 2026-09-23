@@ -284,9 +284,10 @@
       "020-D",
       "020-E",
       "020-F",
-      "020-G"
+      "020-G",
+      "020-H"
     ],
-    "next_eligible_subphase": "020-H",
+    "next_eligible_subphase": "020-I",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -314,6 +315,12 @@
     "ci_supplychain_evidence_architecture": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
     "exact_revision_evidence_required": true,
     "build_once_promote_by_digest": true,
-    "repository_main_enforcement_verified": false
+    "repository_main_enforcement_verified": false,
+    "review_repair_exit_gate_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+    "independent_code_review_required": true,
+    "adversarial_conformance_review_required": true,
+    "repair_may_expand_g2_scope": false,
+    "completion_record_immutable": true,
+    "post_g5_reopen_requires_reauthorization": true
   }
 }
