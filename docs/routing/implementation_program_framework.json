@@ -256,14 +256,18 @@
     "proposed_lifecycle": "Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning",
     "decomposition_state": "PHASE_020_START_GATE_COMPLETE",
     "required_actions": [
-      "confirm accepted architecture baseline",
-      "derive implementation packages from accepted architecture and current semantic authority",
-      "create package dependency graph",
-      "map ENG/IPG/scenario/evidence obligations",
-      "qualify reusable historical Q3/Q5 implementation substrate",
-      "establish supply-chain secrets fixture privacy migration baselines",
-      "identify planning-ready packages",
-      "explicitly decide whether any package receives G2 execution authorization"
+      "confirm accepted architecture and Phase-019 closure baseline",
+      "qualify existing substrate and historical implementation candidates for reuse revision reference replacement or deferral",
+      "define Cursor/Codex roles work isolation context provenance and autonomy circuit breakers",
+      "design the non-production environment synthetic-data observability and MCP agent test-control plane",
+      "derive implementation phases/packages and an acyclic dependency/parallelism graph",
+      "define the reusable implementation phase contract with visible criteria evidence classes and protected hidden verification",
+      "define exact-SHA CI security supply-chain scanning and evidence-bundle requirements",
+      "define independent code review adversarial conformance review repair/reopen and exit-gate governance",
+      "map all fifteen scenarios plus migration recovery accessibility performance and cost obligations",
+      "define v1 completion and the final whole-system integration/hardening phase",
+      "produce the complete autonomous implementation roadmap and agent assignment strategy",
+      "complete Phase-020 pre-implementation exit audit and explicit Phase-021 handoff"
     ],
     "completed_by": "020-A"
   },
@@ -277,6 +281,8 @@
       "020-A"
     ],
     "next_eligible_subphase": "020-B",
-    "implementation_execution_authorized": false
+    "implementation_execution_authorized": false,
+    "execution_authorization_during_phase020": "FORBIDDEN",
+    "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2"
   }
 }
