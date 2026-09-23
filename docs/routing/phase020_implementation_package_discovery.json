@@ -18,7 +18,10 @@
     "g1_ready_after_020g": 0,
     "g1_ready_after_020h": 0,
     "g1_ready_after_020i": 0,
-    "g1_ready_after_020j": 0
+    "g1_ready_after_020j": 0,
+    "g1_ready_after_020k": 15,
+    "final_readiness_authority": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+    "discovery_status_is_not_final_lifecycle_status": true
   },
   "dependency_edge_types": {
     "HARD_G2_PREDECESSOR": "Default predecessor completion required before downstream G2 unless a later gate explicitly proves independence under IPG-007/G2.",
@@ -101,6 +104,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-001",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -199,6 +209,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-002",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -302,6 +319,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-003",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -398,6 +422,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-004",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -499,6 +530,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-005",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -598,6 +636,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-006",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -698,6 +743,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-007",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -806,6 +858,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-008",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -914,6 +973,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-009",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1021,6 +1087,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-010",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1127,6 +1200,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-011",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1237,6 +1317,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-012",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1337,6 +1424,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-013",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1432,6 +1526,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-014",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     },
     {
@@ -1540,6 +1641,13 @@
         "logical_final_phase": "V1-FINAL",
         "package_g5_required_before_final_evidence_freeze": true,
         "post_g5_source_change_requires_020h_reopen": true
+      },
+      "final_020k_contract": {
+        "source": "docs/routing/phase020_autonomous_implementation_roadmap.json",
+        "package_id": "IMP-015",
+        "final_disposition": "RETAINED",
+        "final_g1_status": "READY_FOR_AUTHORIZATION",
+        "discovery_record_status_remains": "PROPOSED"
       }
     }
   ],
@@ -2243,5 +2351,6 @@
   "reusable_implementation_contract": "docs/routing/phase020_implementation_phase_contract.json",
   "review_exit_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json",
   "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json",
-  "v1_completion_integration_design": "docs/routing/phase020_v1_completion_integration_design.json"
+  "v1_completion_integration_design": "docs/routing/phase020_v1_completion_integration_design.json",
+  "final_autonomous_implementation_roadmap": "docs/routing/phase020_autonomous_implementation_roadmap.json"
 }
