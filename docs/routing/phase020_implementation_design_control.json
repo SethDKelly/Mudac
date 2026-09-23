@@ -13,9 +13,10 @@
     "completed_subphases": [
       "020-A",
       "020-B",
-      "020-C"
+      "020-C",
+      "020-D"
     ],
-    "next_eligible_subphase": "020-D",
+    "next_eligible_subphase": "020-E",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -44,12 +45,12 @@
     {
       "id": "020-D",
       "title": "Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-E",
       "title": "Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-F",
@@ -148,7 +149,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 3,
+    "completed_subphases": 4,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -176,5 +177,26 @@
     "circuit_breakers_required": true,
     "next_phase_auto_authorization": false,
     "phase020_domain_execution_authorized": false
+  },
+  "nonproduction_test_control_architecture": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+  "nonproduction_test_control_summary": {
+    "environment_tiers": [
+      "NPT-L",
+      "NPT-P",
+      "NPT-S"
+    ],
+    "production_target_forbidden": true,
+    "protocol_target": "MCP 2026-07-28 / TypeScript SDK v2",
+    "shared_transport": "Streamable HTTP stateless",
+    "remote_auth_required": true,
+    "token_passthrough_forbidden": true,
+    "synthetic_fixture_default": true,
+    "real_application_boundaries_for_behavior": true,
+    "bounded_fault_profiles": true,
+    "run020_observability_path": true,
+    "protected_evaluator_separate": true,
+    "e7_production_evidence": false,
+    "mcp_server_implemented": false,
+    "environment_deployed": false
   }
 }
