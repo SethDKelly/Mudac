@@ -64,9 +64,32 @@ def main() -> int:
         return fail("A4 change-control route drift")
 
     human = policy.get("human_directed", {})
-    for key in ("required","no_autonomous_next_work","no_unattended_task_queue","no_autonomous_delegation","no_implicit_merge_or_deploy"):
+    for key in (
+        "required",
+        "no_autonomous_next_work",
+        "no_unbounded_unattended_task_queue",
+        "bounded_delegation_requires_authorized_envelope",
+        "coordinator_only_delegation",
+        "no_implicit_merge_or_deploy",
+    ):
         if human.get(key) is not True:
             return fail(f"human-directed boundary missing: {key}")
+
+    autonomous = policy.get("autonomous_implementation", {})
+    if autonomous.get("operating_model") != "docs/routing/autonomous_implementation_operating_model.json":
+        return fail("autonomous implementation operating-model route drift")
+    if autonomous.get("g2_required") is not True:
+        return fail("autonomous implementation requires G2")
+    if autonomous.get("coordinator_only_delegation") is not True:
+        return fail("implementation delegation must remain coordinator-only")
+    if autonomous.get("recursive_implementation_delegation") is not False:
+        return fail("recursive implementation delegation must remain false")
+    if autonomous.get("next_phase_auto_authorization") is not False:
+        return fail("bounded autonomy must not auto-authorize next phase")
+    if classes["A2"].get("bounded_subagent_delegation") is None:
+        return fail("A2 must define bounded subagent delegation boundary")
+    if classes["A3"].get("delegation_outside_authorized_envelope") is not True:
+        return fail("A3 must retain out-of-envelope delegation as scope expansion")
 
     completion = policy.get("completion", {})
     for key in ("stop_at_selected_task_boundary","report_next_eligible_work_only","validation_pass_does_not_authorize_next_work"):
@@ -85,7 +108,7 @@ def main() -> int:
         if token not in agents:
             return fail(f"AGENTS.md must expose {token} bootstrap class")
 
-    print("Agentic authority policy check: 0 errors; A1–A4 and human-directed boundaries intact")
+    print("Agentic authority policy check: 0 errors; A1–A4, human lifecycle authority, and bounded G2 delegation intact")
     return 0
 
 if __name__ == "__main__":
