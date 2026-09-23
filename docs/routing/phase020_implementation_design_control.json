@@ -14,9 +14,10 @@
       "020-A",
       "020-B",
       "020-C",
-      "020-D"
+      "020-D",
+      "020-E"
     ],
-    "next_eligible_subphase": "020-E",
+    "next_eligible_subphase": "020-F",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -50,12 +51,12 @@
     {
       "id": "020-E",
       "title": "Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-F",
       "title": "Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-G",
@@ -149,7 +150,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 4,
+    "completed_subphases": 5,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -198,5 +199,26 @@
     "e7_production_evidence": false,
     "mcp_server_implemented": false,
     "environment_deployed": false
+  },
+  "implementation_package_discovery": "docs/routing/phase020_implementation_package_discovery.json",
+  "implementation_package_discovery_summary": {
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0,
+    "active_packages": 0,
+    "hard_dependency_graph_acyclic": true,
+    "mandatory_scenario_seeds_covered": "15/15",
+    "semantic_critical_path": [
+      "IMP-001",
+      "IMP-002",
+      "IMP-003",
+      "IMP-007",
+      "IMP-008",
+      "IMP-009",
+      "IMP-011",
+      "IMP-012"
+    ],
+    "final_phase_grouping_deferred_to": "020-K",
+    "v1_integration_phase_deferred_to": "020-J"
   }
 }
