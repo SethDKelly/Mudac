@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-H INDEPENDENT REVIEW / ADVERSARIAL CONFORMANCE / REPAIR / REOPEN / EXIT-GATE GOVERNANCE — DESIGN ONLY",
+  "phase": "020-H",
+  "baseline_head": "ca89fbd80867c4dc4909eabdf9bd23f13613937a",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md",
+  "inputs": [
+    "docs/routing/autonomous_implementation_operating_model.json",
+    "docs/routing/phase020_implementation_phase_contract.json",
+    "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
+  ],
+  "boundary": {
+    "design_only": true,
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false,
+    "active_packages": 0,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0,
+    "review_pass_grants_merge_authority": false,
+    "g5_grants_next_g2": false,
+    "reopen_restores_old_g2_automatically": false
+  },
+  "governing_rules": [
+    "AUTHOR_DOES_NOT_CERTIFY_OWN_IMPLEMENTATION",
+    "REPAIR_MAY_CORRECT_AUTHORIZED_IMPLEMENTATION_BUT_NOT_ENLARGE_AUTHORIZATION",
+    "COMPLETION_RECORD_IS_IMMUTABLE",
+    "POST_G5_INVALIDATION_CREATES_REOPEN_OBLIGATION_NOT_EXECUTION_AUTHORITY"
+  ],
+  "candidate_review": {
+    "exact_candidate_sha_required": true,
+    "exact_candidate_tree_required": true,
+    "review_record_fields": [
+      "phase_or_package_id",
+      "candidate_sha",
+      "candidate_tree_sha",
+      "base_or_integration_sha",
+      "diff_identity",
+      "criteria_contract_version",
+      "evidence_bundle_reference",
+      "reviewer_identity",
+      "reviewer_run_id",
+      "authority_refs",
+      "findings",
+      "outcome"
+    ],
+    "source_tree_change_invalidates_affected_approval": true,
+    "content_equivalence_reuse_subject_to_020g": true
+  },
+  "independent_code_review": {
+    "required": true,
+    "same_authoring_run_forbidden": true,
+    "independent_context_required": true,
+    "provider_diversity": "PREFERRED_NOT_REQUIRED",
+    "default_write_authority": false,
+    "review_inputs_order": [
+      "phase/package contract",
+      "exact base/candidate diff",
+      "current authority independently resolved",
+      "evidence bundle/raw evidence",
+      "implementer rationale optional after independent resolution"
+    ],
+    "review_dimensions": [
+      "semantic_architecture_fidelity",
+      "correctness",
+      "authority_and_state_transitions",
+      "data_history_provenance",
+      "transaction_concurrency_idempotency_uncertainty",
+      "security_privacy_disclosure",
+      "accessibility_degraded_behavior",
+      "migration_compatibility_recovery",
+      "failure_observability",
+      "dependency_provider_boundaries",
+      "duplicate_authority_or_coupling",
+      "maintainability_comprehensibility",
+      "test_and_evidence_quality",
+      "scope_discipline"
+    ],
+    "reviewer_edits_candidate_becomes_implementer": true,
+    "reviewer_edit_requires_new_independent_review": true
+  },
+  "adversarial_conformance_review": {
+    "required": true,
+    "same_authoring_run_forbidden": true,
+    "derives_only_from_visible_authority": true,
+    "hidden_requirements_forbidden": true,
+    "production_target_forbidden": true,
+    "candidate_source_mutation_while_reviewer_forbidden": true,
+    "probe_exfiltration_forbidden": true,
+    "challenge_categories": {
+      "contract_evasion": [
+        "fixture_or_example_overfit",
+        "evaluator_identity_hardcoding",
+        "test_only_domain_semantics",
+        "semantic_bypass_configuration",
+        "hidden_authority_redefining_defaults",
+        "negative_space_omission"
+      ],
+      "authority_erosion": [
+        "technical_privilege_as_domain_authority",
+        "cross_owner_write_or_natural_owner_leak",
+        "test_control_or_admin_product_authority",
+        "provider_as_semantic_truth",
+        "client_projection_as_authority"
+      ],
+      "evidence_gaming": [
+        "weakened_or_disabled_tests_scanners",
+        "retry_until_green",
+        "stale_revision_evidence",
+        "evidence_class_overclaim",
+        "fixture_seed_as_command_evidence",
+        "hidden_failure_or_quarantine"
+      ],
+      "security_privacy_escape": [
+        "credential_exposure",
+        "privileged_token_to_untrusted_code",
+        "sensitive_evidence_logging",
+        "synthetic_actor_authority_bypass",
+        "unsafe_shell_cloud_db_navigation_escape"
+      ],
+      "complexity_scope_gaming": [
+        "unnecessary_abstraction_to_evade_boundaries",
+        "duplicated_semantics",
+        "speculative_out_of_scope_framework",
+        "generic_infrastructure_authority_expansion",
+        "superseded_architecture_compatibility_path"
+      ]
+    }
+  },
+  "finding_schema": {
+    "required_fields": [
+      "finding_id",
+      "review_type",
+      "candidate_sha",
+      "category",
+      "severity",
+      "blocking",
+      "statement",
+      "authority_refs",
+      "affected_criteria",
+      "evidence_refs",
+      "recommended_repair_direction",
+      "status",
+      "disposition_rationale"
+    ],
+    "severities": [
+      "CRITICAL",
+      "MAJOR",
+      "MINOR",
+      "NOTE"
+    ],
+    "blocking_is_explicit": true,
+    "low_severity_cannot_make_required_criterion_defect_nonblocking": true,
+    "open_blocking_finding_compatible_with_pass": false,
+    "dispositions": [
+      "RESOLVED",
+      "ACCEPTED_RISK_WITH_AUTHORITY",
+      "NOT_APPLICABLE_WITH_APPROVED_RATIONALE",
+      "SUPERSEDED_BY_NEW_FINDING"
+    ],
+    "comment_resolution_alone_closes_finding": false,
+    "implementer_assertion_alone_closes_finding": false,
+    "risk_acceptance_requires_authorized_actor": true,
+    "reviewer_or_gatekeeper_may_self_create_risk_acceptance_authority": false
+  },
+  "review_outcomes": {
+    "states": [
+      "PASS",
+      "CHANGES_REQUIRED",
+      "BLOCKED",
+      "INCONCLUSIVE"
+    ],
+    "only_exit_success": "PASS",
+    "changes_required_routes_to": "REPAIR",
+    "blocked_routes_to": "ESCALATION_OR_REENTRY",
+    "inconclusive_fails_closed": true
+  },
+  "repair": {
+    "pre_g5_existing_g2_may_cover_repair_if_within_original_scope": true,
+    "source_change_creates_new_candidate_sha": true,
+    "affected_evidence_must_rerun": true,
+    "affected_review_must_rerun": true,
+    "failed_retry_history_preserved": true,
+    "may_expand_scope": false,
+    "may_add_undeclared_package_or_work_unit": false,
+    "may_change_visible_criteria": false,
+    "may_change_semantics_or_architecture": false,
+    "may_require_unplanned_privilege": false,
+    "may_disable_mandatory_evidence": false,
+    "repair_diagnostics_should_identify_obligation_not_prescribe_secret_answer": true,
+    "budget_required_before_g2": true,
+    "universal_numeric_budget_defined_by_020h": false,
+    "budget_dimensions": [
+      "repair_cycles",
+      "elapsed_review_window",
+      "compute_cost_envelope",
+      "repeated_identical_failure_threshold",
+      "explicit_combination"
+    ],
+    "budget_exhaustion_result": "BLOCKED_OR_EXPLICIT_HUMAN_PROGRAM_EXTENSION"
+  },
+  "repair_escalation_triggers": [
+    "scope_expansion_required",
+    "new_package_or_dependency_required",
+    "semantic_or_architecture_contradiction",
+    "repeated_mandatory_failure_threshold",
+    "nondeterministic_evidence",
+    "migration_or_recovery_safety_unknown",
+    "security_repair_changes_trust_or_authority_boundary",
+    "production_access_or_unplanned_destructive_action_required",
+    "serialized_surface_collision_unresolved"
+  ],
+  "gatekeeper": {
+    "role": "EXIT_DECISION_INTEGRATOR",
+    "may_be": "PREAUTHORIZED_AGENT_OR_DETERMINISTIC_AUTOMATION",
+    "same_authoring_run_as_implementer_for_candidate_forbidden": true,
+    "candidate_source_write_forbidden": true,
+    "may_override_mandatory_failure": false,
+    "may_fabricate_missing_evidence": false,
+    "may_change_criteria": false,
+    "may_grant_next_g2": false,
+    "may_merge_or_deploy_from_g5": false,
+    "required_predicates": [
+      "exact_candidate_sha_tree_matches_mandatory_evidence",
+      "visible_criteria_satisfied",
+      "evidence_obligations_satisfied",
+      "public_ci_clean",
+      "protected_evaluation_clean_when_declared",
+      "independent_code_review_pass",
+      "adversarial_conformance_review_pass",
+      "no_open_blocking_findings",
+      "risk_acceptance_authority_valid",
+      "traceability_docs_current",
+      "failure_retry_history_retained",
+      "residual_risks_owned",
+      "no_unresolved_circuit_breaker"
+    ],
+    "decisions": [
+      "COMPLETE",
+      "REPAIR_REQUIRED",
+      "BLOCKED",
+      "INCONCLUSIVE"
+    ],
+    "complete_only_creates_g5": true,
+    "human_judgment_requirements_must_reference_human_authority": true
+  },
+  "completion_record": {
+    "immutable": true,
+    "content_addressed": true,
+    "required_fields": [
+      "phase_or_package_id",
+      "completed_candidate_sha",
+      "completed_candidate_tree_sha",
+      "evidence_bundle_digest",
+      "code_review_record_ref",
+      "adversarial_review_record_ref",
+      "gatekeeper_identity",
+      "gatekeeper_run_id",
+      "completed_at",
+      "residual_risk_refs",
+      "next_state"
+    ],
+    "next_state": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+    "correction_rewrites_historical_record": false
+  },
+  "integration_after_review": {
+    "integration_sha_recorded": true,
+    "material_difference_classification_required": true,
+    "affected_evidence_rerun_required": true,
+    "materially_different_integrated_code_covered_by_preintegration_approval": false
+  },
+  "post_completion_invalidation": {
+    "triggers": [
+      "new_security_or_authority_defect",
+      "integration_regression",
+      "evidence_corruption_or_provenance_mismatch",
+      "provider_assumption_invalidated",
+      "migration_or_recovery_failure",
+      "semantic_or_architecture_mismatch",
+      "mandatory_criterion_later_shown_not_to_have_passed"
+    ],
+    "historical_completion_record_erased": false,
+    "invalidation_record_required": true,
+    "assessment_states": [
+      "COMPLETION_REMAINS_VALID",
+      "REOPEN_REQUIRED",
+      "UPSTREAM_CHANGE_OR_ARCHITECTURE_REENTRY_REQUIRED",
+      "INCONCLUSIVE"
+    ],
+    "reopen_required_grants_execution_authority": false
+  },
+  "reopen_authorization": {
+    "old_g2_closed_at_g5": true,
+    "automatic_old_g2_restoration": false,
+    "requirements_before_repair": [
+      "reopen_record_with_invalidating_evidence",
+      "updated_scope_criteria_evidence_if_needed",
+      "dependency_impact_review",
+      "explicit_human_or_program_reauthorization",
+      "new_candidate_evidence_review_exit_cycle"
+    ],
+    "semantic_or_architecture_contradiction_requires_upstream_reentry_first": true
+  },
+  "downstream_invalidation": {
+    "automatic_all_downstream_reopen": false,
+    "impact_inputs": [
+      "hard_dependency",
+      "integration_dependency",
+      "evidence_dependency",
+      "shared_durable_state_or_schema",
+      "shared_public_contract",
+      "affected_scenario_obligations",
+      "reused_artifact_or_evidence_identity"
+    ],
+    "dispositions": [
+      "NO_IMPACT",
+      "EVIDENCE_REFRESH_REQUIRED",
+      "REVIEW_REFRESH_REQUIRED",
+      "REOPEN_REQUIRED",
+      "UPSTREAM_REENTRY_BLOCKER"
+    ],
+    "impact_classification_retained_as_evidence": true
+  },
+  "nonblocking_improvements": {
+    "may_expand_current_g2_scope": false,
+    "allowed_destinations": [
+      "RESIDUAL_RISK",
+      "BACKLOG_OR_FUTURE_PACKAGE",
+      "LATER_HARDENING",
+      "DOCUMENTATION_CLEANUP"
+    ]
+  },
+  "phase020_carry_forward": {
+    "next_eligible": "020-I",
+    "automatic_authorization": false,
+    "package_specific_review_repair_instantiation": "020-K",
+    "whole_system_exit_integration": "020-J",
+    "final_audit": "020-L"
+  }
+}
