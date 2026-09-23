@@ -123,6 +123,9 @@ accepted whole architecture          true
 
 active implementation packages       0
 package derivation                    true — G0 satisfied
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 implementation execution             false
 ~~~
 
@@ -139,4 +142,4 @@ individual architecture decision
   != implementation authorization
 ~~~
 
-G0 — Architecture Accepted is satisfied. Phase 020 may derive implementation packages through its start gate, but G2 remains required before implementation execution.
+G0 — Architecture Accepted is satisfied. **PHASE 020 ACTIVE — 020-A COMPLETE / 020-B NEXT ELIGIBLE.** Phase 020 is designing the autonomous implementation program; G2 remains required before implementation execution.

@@ -26,7 +26,7 @@ Phase 017 is **COMPLETE — PASS WITH BOUNDED CARRY-FORWARD** and Jackson-aligne
 
 Use its [index](../017-methodology-closure-canonical-consolidation-completion-decision/) and final 017-H record for closure evidence.
 
-Implementation readiness is **READY** for controlled downstream planning. [Phase 018](../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) is **COMPLETE — PASS**. **018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE.** **Phase 019 is COMPLETE — PASS** with 019-A/B/C/D/E/F/G/H/I/J/K/L complete. ADQ-001 through ADQ-010 and the whole architecture are accepted; G0 permits Phase-020 package derivation, while implementation execution remains unauthorized.
+Implementation readiness is **READY** for controlled downstream planning. Phases 018 and 019 are complete, whole architecture is accepted, and **Phase 020 is ACTIVE — 020-A COMPLETE / 020-B NEXT ELIGIBLE** as the final pre-implementation design phase. G0 permits implementation-program derivation while implementation execution remains unauthorized.
 
 ## Downstream boundary
 
@@ -55,6 +55,9 @@ ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / 
 Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
+PHASE 020 ACTIVE
+020-A COMPLETE
+020-B NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
