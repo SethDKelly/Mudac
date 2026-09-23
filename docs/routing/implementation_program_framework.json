@@ -278,11 +278,13 @@
   "phase020_program_design": {
     "state": "ACTIVE",
     "completed_subphases": [
-      "020-A"
+      "020-A",
+      "020-B"
     ],
-    "next_eligible_subphase": "020-B",
+    "next_eligible_subphase": "020-C",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
-    "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2"
+    "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
+    "substrate_reuse_qualification": "docs/routing/phase020_substrate_reuse_qualification.json"
   }
 }
