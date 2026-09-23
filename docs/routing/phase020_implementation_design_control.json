@@ -18,9 +18,10 @@
       "020-E",
       "020-F",
       "020-G",
-      "020-H"
+      "020-H",
+      "020-I"
     ],
-    "next_eligible_subphase": "020-I",
+    "next_eligible_subphase": "020-J",
     "currently_authorized_subphase": null,
     "automatic_advance": false,
     "whole_architecture_accepted": true,
@@ -74,12 +75,12 @@
     {
       "id": "020-I",
       "title": "Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design",
-      "status": "NEXT_ELIGIBLE"
+      "status": "COMPLETE"
     },
     {
       "id": "020-J",
       "title": "v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design",
-      "status": "PLANNED"
+      "status": "NEXT_ELIGIBLE"
     },
     {
       "id": "020-K",
@@ -153,7 +154,7 @@
   },
   "counts": {
     "planned_subphases": 12,
-    "completed_subphases": 8,
+    "completed_subphases": 9,
     "active_implementation_packages": 0,
     "g2_authorized_packages": 0
   },
@@ -275,6 +276,23 @@
     "completion_record_immutable": true,
     "post_g5_old_g2_automatically_restored": false,
     "next_phase_auto_authorization": false,
+    "proposed_packages": 15,
+    "g1_ready_packages": 0,
+    "g2_authorized_packages": 0
+  },
+  "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json",
+  "crosscutting_verification_summary": {
+    "scenario_seed_count": 15,
+    "scenario_seed_coverage": "15/15",
+    "migration_profile_defined": true,
+    "recovery_profile_defined": true,
+    "accessibility_target": "WCAG 2.2 AA core workflows",
+    "performance_thresholds_visible_when_material": true,
+    "hidden_performance_thresholds_forbidden": true,
+    "cost_caps_invented_by_020i": false,
+    "rto_rpo_invented_by_020i": false,
+    "rto_rpo_require_measured_exercise": true,
+    "final_v1_all_15_scenarios_required": true,
     "proposed_packages": 15,
     "g1_ready_packages": 0,
     "g2_authorized_packages": 0
