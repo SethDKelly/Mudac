@@ -7,6 +7,7 @@ from pathlib import Path
 
 FRAMEWORK = "docs/routing/implementation_program_framework.json"
 ARCHITECTURE_PLAN = "docs/routing/architecture_reentry_plan.json"
+PHASE019_CONTROL = "docs/routing/phase019_architecture_decision_control.json"
 
 EXPECTED_LIFECYCLE = [
     "PROPOSED",
@@ -55,32 +56,47 @@ def main() -> int:
     try:
         framework = json.loads((repo / FRAMEWORK).read_text(encoding="utf-8"))
         architecture = json.loads((repo / ARCHITECTURE_PLAN).read_text(encoding="utf-8"))
+        phase019 = json.loads((repo / PHASE019_CONTROL).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
 
     state = framework.get("state", {})
     arch_state = architecture.get("state", {})
+    whole = phase019.get("whole_architecture_acceptance", {})
+    architecture_accepted = whole.get("accepted") is True
 
-    if state.get("framework_state") != "PRE_ARCHITECTURE":
-        errors.append("framework_state must remain PRE_ARCHITECTURE in Phase 018-L")
+    # The Phase-018 architecture plan remains immutable pre-selection evidence.
+    if arch_state.get("accepted_architecture_established") is not False:
+        errors.append("historical architecture re-entry plan must remain pre-selection evidence")
+
     if state.get("accepted_architecture_required") is not True:
         errors.append("accepted_architecture_required must be true")
-    if state.get("accepted_architecture_established") is not False:
-        errors.append("implementation framework cannot claim accepted architecture")
-    if state.get("package_derivation_allowed") is not False:
-        errors.append("package derivation must remain blocked before architecture acceptance")
     if state.get("implementation_execution_authorized") is not False:
-        errors.append("implementation execution must remain unauthorized")
-    if state.get("active_package_count") != 0:
-        errors.append("active_package_count must remain zero before architecture acceptance")
-    if state.get("active_packages") != []:
-        errors.append("active_packages must remain empty before architecture acceptance")
+        errors.append("implementation execution must remain unauthorized until an explicit G2 package decision")
 
-    if arch_state.get("accepted_architecture_established") is not False:
-        errors.append("architecture plan is not in expected pre-selection state")
-    if arch_state.get("accepted_architecture_established") != state.get("accepted_architecture_established"):
-        errors.append("architecture/implementation accepted-architecture state drift")
+    if architecture_accepted:
+        if state.get("framework_state") != "PLANNING_READY":
+            errors.append("framework_state must be PLANNING_READY after whole-architecture acceptance")
+        if state.get("accepted_architecture_established") is not True:
+            errors.append("implementation framework must acknowledge accepted architecture")
+        if state.get("package_derivation_allowed") is not True:
+            errors.append("G0 must permit package derivation after architecture acceptance")
+        if state.get("active_package_count") != 0 or state.get("active_packages") != []:
+            errors.append("019-L handoff must retain zero active implementation packages")
+        if framework.get("accepted_architecture_control") != PHASE019_CONTROL:
+            errors.append("post-architecture framework must identify Phase-019 acceptance control")
+        if framework.get("accepted_architecture_owner") != "docs/canonical/architecture/accepted-architecture.md":
+            errors.append("post-architecture framework must identify accepted architecture owner")
+    else:
+        if state.get("framework_state") != "PRE_ARCHITECTURE":
+            errors.append("framework_state must remain PRE_ARCHITECTURE before architecture acceptance")
+        if state.get("accepted_architecture_established") is not False:
+            errors.append("implementation framework cannot claim accepted architecture early")
+        if state.get("package_derivation_allowed") is not False:
+            errors.append("package derivation must remain blocked before architecture acceptance")
+        if state.get("active_package_count") != 0 or state.get("active_packages") != []:
+            errors.append("active packages must remain empty before architecture acceptance")
 
     if framework.get("package_lifecycle") != EXPECTED_LIFECYCLE:
         errors.append("package lifecycle drift")
@@ -170,8 +186,9 @@ def main() -> int:
         errors.append("planning_rules.auto_advance_packages must be false")
 
     start_gate = framework.get("future_start_gate", {})
-    if start_gate.get("decomposition_state") != "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE":
-        errors.append("future implementation decomposition must remain deferred until architecture acceptance")
+    expected_decomposition = "READY_FOR_PHASE_020_START_GATE" if architecture_accepted else "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE"
+    if start_gate.get("decomposition_state") != expected_decomposition:
+        errors.append(f"implementation start-gate state must be {expected_decomposition}")
     if start_gate.get("proposed_lifecycle") != "Phase 020 — Implementation Planning & Controlled Delivery":
         errors.append("future implementation lifecycle label drift")
     actions = start_gate.get("required_actions")
@@ -180,7 +197,7 @@ def main() -> int:
 
     authority = str(framework.get("authority", ""))
     if "DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION" not in authority:
-        errors.append("framework authority banner must deny package creation and execution authority")
+        errors.append("framework authority banner must deny automatic package creation and execution authority")
 
     for error in errors:
         print("ERROR", error)
