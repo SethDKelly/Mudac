@@ -16,7 +16,8 @@
     "package_ids_are_durable_if_retained": "IMP-001..IMP-015; superseded IDs are never reused",
     "g1_ready_after_020f": 0,
     "g1_ready_after_020g": 0,
-    "g1_ready_after_020h": 0
+    "g1_ready_after_020h": 0,
+    "g1_ready_after_020i": 0
   },
   "dependency_edge_types": {
     "HARD_G2_PREDECESSOR": "Default predecessor completion required before downstream G2 unless a later gate explicitly proves independence under IPG-007/G2.",
@@ -74,10 +75,25 @@
       "parallelism": "FIRST FOUNDATION; later packages may not assume repaired topology before this completes.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-001",
+        "migration": "NONE_EXCEPT_REPOSITORY_CONFIG",
+        "recovery": [
+          "configuration/build reproducibility"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "toolchain/build verification only unless threshold introduced"
+        ],
+        "cost": [
+          "dependency/tooling cost impact only"
+        ],
+        "scenario_ids": []
+      }
     },
     {
       "id": "IMP-002",
@@ -144,10 +160,31 @@
       "parallelism": "May run in parallel with IMP-004/005/006 after IMP-001; migration catalog remains serialized.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-002",
+        "migration": "MIG-FOUNDATION",
+        "recovery": [
+          "RCV-MIGRATION",
+          "RCV-PROJECTION",
+          "RCV-DATA"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "PERF-DB",
+          "PERF-PROJECTION"
+        ],
+        "cost": [
+          "COST-DATA"
+        ],
+        "scenario_ids": [
+          "SCN-11",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-003",
@@ -216,10 +253,34 @@
       "parallelism": "Begins after IMP-002; later owner verticals depend on it. Browser/test-control integration may proceed concurrently once contracts stabilize.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-003",
+        "migration": "MIG-IF_STATE_ADDED",
+        "recovery": [
+          "RCV-COMMAND",
+          "RCV-UNCERTAINTY"
+        ],
+        "accessibility": "N/A_DIRECT_UI",
+        "performance": [
+          "PERF-COMMAND",
+          "PERF-CONCURRENCY",
+          "PERF-BULK"
+        ],
+        "cost": [
+          "COST-DATA",
+          "COST-RUNTIME"
+        ],
+        "scenario_ids": [
+          "SCN-01",
+          "SCN-11",
+          "SCN-12",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-004",
@@ -286,10 +347,29 @@
       "parallelism": "Can run immediately after IMP-001 in parallel with persistence/test-control/runtime foundations; integrates with IMP-003 later.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-004",
+        "migration": "MIG-CLIENT_STORAGE_IF_CHANGED",
+        "recovery": [
+          "RCV-CLIENT",
+          "RCV-DEGRADED"
+        ],
+        "accessibility": "ACC-FOUNDATION",
+        "performance": [
+          "PERF-BROWSER"
+        ],
+        "cost": [
+          "COST-STATIC_ASSET"
+        ],
+        "scenario_ids": [
+          "SCN-03",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-005",
@@ -362,10 +442,28 @@
       "parallelism": "Can run after IMP-001 in parallel with IMP-002/004/006. Owner packages extend capabilities rather than creating separate test backdoors.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-005",
+        "migration": "NONE_DOMAIN",
+        "recovery": [
+          "RCV-TEST_ENV_RESET"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "PERF-HARNESS"
+        ],
+        "cost": [
+          "COST-NONPROD-TEST"
+        ],
+        "scenario_ids": [
+          "SCN-03",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-006",
@@ -435,10 +533,29 @@
       "parallelism": "Can run after IMP-001 alongside local foundations; does not block local implementation but becomes an integration/evidence dependency for provider-sensitive packages.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-006",
+        "migration": "MIG-IAC_COMPATIBILITY",
+        "recovery": [
+          "RCV-NONPROD-RUNTIME"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "PERF-LOAD-ENV",
+          "PERF-PROVIDER"
+        ],
+        "cost": [
+          "COST-NONPROD-RUNTIME"
+        ],
+        "scenario_ids": [
+          "SCN-13",
+          "SCN-14"
+        ]
+      }
     },
     {
       "id": "IMP-007",
@@ -510,10 +627,28 @@
       "parallelism": "First semantic-owner vertical. IMP-008 may prepare technical IAM internals in parallel only after this package exposes a stable Competition reference contract; default ordering remains Competition before IAM.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-007",
+        "migration": "MIG-OWNER",
+        "recovery": [
+          "RCV-OWNER-CURRENTNESS"
+        ],
+        "accessibility": "ACC-ORGANIZER",
+        "performance": [
+          "PERF-COMMAND"
+        ],
+        "cost": [
+          "COST-DATA"
+        ],
+        "scenario_ids": [
+          "SCN-11",
+          "SCN-15"
+        ]
+      }
     },
     {
       "id": "IMP-008",
@@ -589,10 +724,32 @@
       "parallelism": "Default hard ordering follows Competition Context → Identity & Access. 020-K may permit limited contract-first overlap, but not a reversed semantic dependency.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-008",
+        "migration": "MIG-OWNER",
+        "recovery": [
+          "RCV-SESSION",
+          "RCV-ACCESS"
+        ],
+        "accessibility": "ACC-AUTH-CONTEXT",
+        "performance": [
+          "PERF-AUTH",
+          "PERF-COMMAND"
+        ],
+        "cost": [
+          "COST-AUTH",
+          "COST-DATA"
+        ],
+        "scenario_ids": [
+          "SCN-03",
+          "SCN-04",
+          "SCN-14"
+        ]
+      }
     },
     {
       "id": "IMP-009",
@@ -668,10 +825,32 @@
       "parallelism": "Semantic hinge for the program. Downstream Continuity, Outcomes and operational views can fan out after this owner is stable.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-009",
+        "migration": "MIG-OWNER",
+        "recovery": [
+          "RCV-CORRECTION",
+          "RCV-CONCURRENCY"
+        ],
+        "accessibility": "ACC-JUDGE-CORE",
+        "performance": [
+          "PERF-JUDGING",
+          "PERF-CONCURRENCY"
+        ],
+        "cost": [
+          "COST-DATA",
+          "COST-RUNTIME"
+        ],
+        "scenario_ids": [
+          "SCN-06",
+          "SCN-11",
+          "SCN-15"
+        ]
+      }
     },
     {
       "id": "IMP-010",
@@ -746,10 +925,32 @@
       "parallelism": "Can run in parallel with IMP-011 and much of IMP-013 once IMP-009 is complete.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-010",
+        "migration": "MIG-CLIENT_STORAGE_IF_CHANGED",
+        "recovery": [
+          "RCV-OFFLINE",
+          "RCV-PAPER",
+          "RCV-MULTIDEVICE"
+        ],
+        "accessibility": "ACC-RECOVERY",
+        "performance": [
+          "PERF-SYNC"
+        ],
+        "cost": [
+          "COST-CLIENT-SYNC"
+        ],
+        "scenario_ids": [
+          "SCN-02",
+          "SCN-03",
+          "SCN-05",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-011",
@@ -823,10 +1024,32 @@
       "parallelism": "Runs after Evaluation and can proceed alongside Continuity and operational projection work.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-011",
+        "migration": "MIG-OWNER",
+        "recovery": [
+          "RCV-OFFICIALITY",
+          "RCV-CORRECTION"
+        ],
+        "accessibility": "ACC-ORGANIZER-OUTCOMES",
+        "performance": [
+          "PERF-AGGREGATION",
+          "PERF-BULK"
+        ],
+        "cost": [
+          "COST-DATA",
+          "COST-RUNTIME"
+        ],
+        "scenario_ids": [
+          "SCN-07",
+          "SCN-08",
+          "SCN-15"
+        ]
+      }
     },
     {
       "id": "IMP-012",
@@ -903,10 +1126,33 @@
       "parallelism": "Downstream semantic package. May integrate with production-runtime work in parallel after its public/runtime contracts stabilize.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-012",
+        "migration": "MIG-OWNER",
+        "recovery": [
+          "RCV-ARTIFACT",
+          "RCV-PUBLICATION"
+        ],
+        "accessibility": "ACC-REPRESENTATION",
+        "performance": [
+          "PERF-RENDER",
+          "PERF-DELIVERY"
+        ],
+        "cost": [
+          "COST-STORAGE",
+          "COST-EGRESS",
+          "COST-RENDER"
+        ],
+        "scenario_ids": [
+          "SCN-09",
+          "SCN-10",
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-013",
@@ -978,10 +1224,28 @@
       "parallelism": "May start after Evaluation with incremental sources; completion waits for all v1 source owners it projects.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-013",
+        "migration": "MIG-PROJECTION",
+        "recovery": [
+          "RCV-PROJECTION-REBUILD"
+        ],
+        "accessibility": "ACC-OPERATIONS",
+        "performance": [
+          "PERF-PROJECTION",
+          "PERF-READ"
+        ],
+        "cost": [
+          "COST-PROJECTION"
+        ],
+        "scenario_ids": [
+          "SCN-13"
+        ]
+      }
     },
     {
       "id": "IMP-014",
@@ -1047,12 +1311,29 @@
       "parallelism": "Early support package after IMP-005. Should be available before most domain packages reach exit review.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
       "phase020g_binding": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
       "phase020g_contract_complete": true,
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-014",
+        "migration": "MIG-EVIDENCE-SCHEMA-ONLY",
+        "recovery": [
+          "RCV-EVIDENCE-INTEGRITY"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "PERF-CI-EVALUATOR"
+        ],
+        "cost": [
+          "COST-CI-EVALUATOR"
+        ],
+        "scenario_ids": [
+          "SCN-14"
+        ]
+      }
     },
     {
       "id": "IMP-015",
@@ -1127,11 +1408,33 @@
       "parallelism": "May begin after nonproduction/verification foundations, but should complete only after application/provider contracts needed for deployment are stable. It does not grant release or production authority.",
       "g1_missing": [
         "020-I/020-K package-specific success/evidence instantiation under the 020-F reusable contract",
-        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
         "020-K final package plan and implementation-phase assignment"
       ],
       "phase020g_delivery_contract": "CONSUMER_OF_IMMUTABLE_ARTIFACT_PROVENANCE_AND_PROMOTION_BY_DIGEST",
-      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+      "review_exit_governance_ref": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "crosscutting_verification_profile": {
+        "source": "docs/routing/phase020_crosscutting_verification_architecture.json",
+        "package_id": "IMP-015",
+        "migration": "MIG-DEPLOYMENT-ORCHESTRATION",
+        "recovery": [
+          "RCV-BACKUP-RESTORE",
+          "RCV-REGIONAL-DR",
+          "RCV-DEPLOYMENT"
+        ],
+        "accessibility": "N/A_PRODUCT_UI",
+        "performance": [
+          "PERF-PRODUCTION-TOPOLOGY",
+          "PERF-EVENT-LOAD"
+        ],
+        "cost": [
+          "COST-PRODUCTION-RUNTIME",
+          "COST-DR"
+        ],
+        "scenario_ids": [
+          "SCN-13",
+          "SCN-14"
+        ]
+      }
     }
   ],
   "hard_edges": [
@@ -1832,5 +2135,6 @@
     "Final implementation-phase numbering/grouping is not frozen until 020-K."
   ],
   "reusable_implementation_contract": "docs/routing/phase020_implementation_phase_contract.json",
-  "review_exit_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  "review_exit_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+  "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json"
 }
