@@ -31,19 +31,22 @@ It defines:
 - what gates separate planning, implementation, merge, release and production claims;
 - how semantic or architecture mismatches are escalated.
 
-It does not derive current implementation packages because accepted architecture does not yet exist.
+Phase 019 has now established accepted architecture and satisfied G0. This contract therefore permits Phase-020 package derivation, but it does not itself create a package or authorize implementation execution.
 
 <a id="ipg-001"></a>
-## IPG-001 — Phase-018 Implementation Framework Does Not Create Active Packages or Execution Authority
+## IPG-001 — Implementation Framework Does Not Create Active Packages or Execution Authority
 
-During Phase 018:
+Phase 018 created this framework while architecture was not yet accepted and therefore kept package derivation blocked.
 
-- accepted architecture remains not established;
-- active implementation package count remains zero;
-- package derivation remains blocked;
-- domain implementation execution remains unauthorized.
+Successful Phase 019 closure now satisfies G0 and permits package derivation through the Phase-020 planning lifecycle.
 
-The framework may define schemas, gates and evidence expectations only.
+The framework itself still does not:
+
+- create an implementation package automatically;
+- authorize package execution;
+- authorize merge, release, deployment or production.
+
+At the Phase-019 → Phase-020 handoff, active package count remains zero and implementation execution remains unauthorized.
 
 <a id="ipg-002"></a>
 ## IPG-002 — Implementation Packages Derive From Accepted Architecture and Current Semantic Authority
@@ -288,13 +291,13 @@ The program must stop at the selected lifecycle boundary.
 
 # Generic package schema
 
-The machine-readable pre-architecture framework is:
+The machine-readable framework is:
 
 docs/routing/implementation_program_framework.json
 
-It defines the package fields, lifecycle and gates.
+It defines package fields, lifecycle and gates.
 
-During Phase 018 the active package set must remain empty.
+At Phase-019 closure it is in PLANNING_READY state with G0 satisfied, package derivation allowed, zero active packages and no implementation execution authority.
 
 # Delivery-gate model
 
@@ -323,9 +326,9 @@ Those principles may inform this framework only where they align with current EN
 
 Concrete historical choices such as Vitest, Playwright, PostgreSQL/Testcontainers, Fastify test hosts or AWS-specific scanners remain Q3 implementation hypotheses until architecture and package planning make them applicable.
 
-# Future implementation-program start gate
+# Phase-020 implementation-program start gate
 
-After accepted architecture exists, a future implementation-program start gate should:
+Accepted architecture now exists. The Phase-020 start gate must:
 
 1. confirm the exact accepted architecture baseline;
 2. create the implementation-package namespace;
@@ -337,4 +340,4 @@ After accepted architecture exists, a future implementation-program start gate s
 8. identify which packages are planning-ready;
 9. explicitly decide whether any package receives execution authorization.
 
-The actual package decomposition cannot be responsibly frozen before architecture acceptance.
+Package decomposition was deliberately not frozen before architecture acceptance. Phase 020 may now derive it from the accepted architecture, current semantic authority and the retained scenario/evidence obligations.
