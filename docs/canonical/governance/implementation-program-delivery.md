@@ -482,3 +482,20 @@ Package/phase evidence is represented as an immutable, content-addressed manifes
 Repository workflow existence does not prove main-branch protection. Phase 021 may rely on protected-main enforcement only after the administrative configuration is independently observed and recorded.
 
 Phase 020-G remains design-only. It does not implement IMP-014/015, grant G1/G2, authorize release or authorize production.
+
+
+# Independent review, repair, reopen and exit-gate governance
+
+Phase 020-H defines the current review/exit projection at:
+
+> docs/routing/phase020_review_repair_exit_gate_governance.json
+
+A future G5 candidate requires two independent review passes: ordinary code/design-fidelity review and adversarial conformance review. Neither may be the same authoring run as the candidate Implementer. Reviewer edits convert the reviewer into an Implementer for the changed revision and require fresh independent review.
+
+Review findings bind to an exact candidate SHA. Open blocking findings are incompatible with PASS. Risk acceptance requires an actor with actual authority; reviewers and Gatekeepers cannot manufacture that authority.
+
+Pre-G5 repair may continue under the current G2 only when it remains inside original scope and preserves visible criteria/evidence obligations. Source-changing repair creates a new candidate revision and reruns affected evidence/review. Scope expansion, semantic/architecture contradiction, repeated mandatory failure, unsafe migration/recovery ambiguity or authority-boundary change escalates rather than broadening G2.
+
+The Gatekeeper integrates evidence and review; it does not override mandatory failures, change criteria, edit candidate source, grant next-phase G2, merge or deploy. COMPLETE creates an immutable G5 completion record whose successor state is NEXT_ELIGIBLE_NOT_AUTHORIZED.
+
+After G5 the old G2 envelope is closed. Later invalidation may create REOPEN_REQUIRED, but renewed implementation needs explicit re-authorization and a fresh candidate/evidence/review/exit cycle. Historical completion records are linked, not rewritten.
