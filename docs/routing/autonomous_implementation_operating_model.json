@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "authority": "CURRENT ROUTING/CONFORMANCE PROJECTION — CANONICAL AGENT/IPG GOVERNANCE RETAINS NORMATIVE MEANING",
+  "phase_origin": "020-C",
+  "canonical_contracts": [
+    "docs/canonical/governance/agentic-authority-scope.md",
+    "docs/canonical/governance/agent-workflow-portability.md",
+    "docs/canonical/governance/agent-context.md",
+    "docs/canonical/governance/implementation-program-delivery.md"
+  ],
+  "activation": {
+    "requires_g2": true,
+    "phase020_domain_execution_authorized": false,
+    "human_selects_phase_or_package": true,
+    "next_phase_auto_authorized": false
+  },
+  "roles": {
+    "human_authorizer": {
+      "agent_role": false,
+      "grants": [
+        "G2",
+        "A3-when-required",
+        "A4-change-intent",
+        "later-merge-release-production-authority"
+      ]
+    },
+    "coordinator": {
+      "agent_role": true,
+      "may_delegate_declared_work_units": true,
+      "recursive_delegation": false,
+      "may_expand_scope": false,
+      "may_grant_g2": false
+    },
+    "implementer": {
+      "agent_role": true,
+      "one_work_unit_at_a_time": true,
+      "recursive_delegation": false,
+      "may_self_close_phase": false
+    },
+    "reviewer": {
+      "agent_role": true,
+      "independent_run_required": true,
+      "same_authoring_run_forbidden": true,
+      "provider_diversity": "PREFERRED_NOT_REQUIRED",
+      "default_write_authority": false
+    },
+    "verifier": {
+      "agent_role": "AUTOMATION_OR_PROTECTED_EVALUATOR",
+      "evaluates_exact_revision": true,
+      "may_weaken_requirements": false
+    },
+    "gatekeeper": {
+      "agent_role": "AGENT_OR_AUTOMATION",
+      "may_override_mandatory_failure": false,
+      "may_grant_next_g2": false
+    }
+  },
+  "delegation": {
+    "mode": "COORDINATOR_ONLY_WITHIN_ACTIVE_G2_ENVELOPE",
+    "work_units_must_be_declared": true,
+    "max_delegation_depth": 1,
+    "max_concurrency": "PHASE_PLAN_REQUIRED",
+    "undeclared_work_spawn": "FORBIDDEN",
+    "delegation_outside_envelope_action_class": "A3"
+  },
+  "work_isolation": {
+    "exact_base_sha_required": true,
+    "isolated_writable_worktree_required": true,
+    "ordinary_main_checkout_writable_implementation": false,
+    "recommended_branch_pattern": "work/<phase-or-package-id>/<work-unit-id>-<slug>",
+    "integrate_by_reviewed_commit_or_diff": true,
+    "revalidate_after_integration": true
+  },
+  "serialized_surface_classes": [
+    "overlapping-root-lockfile-changes",
+    "migration-order-ledger-catalog",
+    "shared-database-bootstrap-migration-mechanics",
+    "root-ci-workflow-configuration",
+    "shared-opentofu-backend-bootstrap-or-common-environment-authority",
+    "generated-registries-indexes",
+    "canonical-routing-authority-files",
+    "same-source-file-or-private-owner-implementation"
+  ],
+  "context_manifest": {
+    "required": true,
+    "copies_canonical_rule_text": false,
+    "fields": [
+      "work_unit_id",
+      "parent_phase_or_package_id",
+      "role",
+      "base_sha",
+      "purpose",
+      "in_scope",
+      "exclusions",
+      "authority_refs",
+      "owned_surfaces",
+      "dependency_work_units",
+      "visible_success_criteria",
+      "required_evidence",
+      "allowed_external_actions",
+      "serialized_surfaces",
+      "circuit_breakers"
+    ],
+    "minimum_sufficient_retrieval_required": true
+  },
+  "provenance": {
+    "technical_not_domain_provenance": true,
+    "required_fields": [
+      "parent_phase_or_package_id",
+      "work_unit_id",
+      "agent_role",
+      "provider_or_tool",
+      "base_sha",
+      "candidate_head_sha",
+      "branch_or_worktree",
+      "commit_or_diff_identity",
+      "authority_refs",
+      "verification_evidence",
+      "reviewer_verifier_identity",
+      "external_actions",
+      "final_disposition"
+    ],
+    "optional_fields": [
+      "run_or_session_identifier"
+    ],
+    "forbidden_requirements": [
+      "private_chain_of_thought",
+      "full_prompt_transcript",
+      "secrets",
+      "provider_internal_reasoning"
+    ]
+  },
+  "external_actions": {
+    "may_be_pre_authorized_in_g2_envelope": [
+      "push_authorized_branch",
+      "update_selected_pull_request",
+      "create_pull_request_for_authorized_branch"
+    ],
+    "remain_separate": [
+      "merge",
+      "deploy",
+      "cloud_resource_mutation",
+      "production_access",
+      "secret_or_privilege_expansion",
+      "destructive_data_action"
+    ]
+  },
+  "circuit_breakers": {
+    "hard": [
+      "AUTHORITY_CONTRADICTION",
+      "A4_REQUIRED",
+      "SCOPE_EXPANSION",
+      "PRODUCTION_BOUNDARY_AMBIGUITY",
+      "SECRET_OR_SENSITIVE_DATA_EXPOSURE",
+      "UNAUTHORIZED_DESTRUCTIVE_OPERATION",
+      "SERIALIZED_SURFACE_COLLISION",
+      "UNAUTHORIZED_MERGE_DEPLOY_CLOUD_MUTATION",
+      "TECHNICAL_PRIVILEGE_SEMANTIC_AUTHORITY_CONFUSION"
+    ],
+    "engineering_integrity": [
+      "MATERIAL_BASELINE_DRIFT",
+      "MIGRATION_ORDER_OR_COMPATIBILITY_AMBIGUITY",
+      "NONRESTORABLE_TEST_ENVIRONMENT",
+      "NONDETERMINISTIC_OR_FLAKY_EVIDENCE",
+      "REPEATED_VERIFIER_FAILURE_SUGGESTING_REQUIREMENT_MISMATCH",
+      "REPAIR_REQUIRES_OUT_OF_SCOPE_DEPENDENCY_OR_CONTRACT",
+      "SECURITY_REPAIR_REQUIRES_ARCHITECTURE_CHANGE"
+    ],
+    "ordinary_repair_inputs": [
+      "compile_failure",
+      "unit_test_failure",
+      "lint_failure",
+      "format_failure",
+      "local_in_scope_defect"
+    ]
+  },
+  "completion": {
+    "implementer_terminal_claim": "IMPLEMENTATION_COMPLETE_REVIEW_REQUESTED",
+    "independent_review_required": true,
+    "exact_sha_verification_required": true,
+    "preauthorized_gatekeeper_may_record_complete": true,
+    "next_phase_becomes": "NEXT_ELIGIBLE",
+    "next_phase_g2": "NOT_GRANTED"
+  },
+  "provider_posture": {
+    "semantic_provider_preference": "NONE",
+    "codex": {
+      "parallel_agents": "DOCUMENTED",
+      "worktrees": "DOCUMENTED",
+      "runtime_smoke": "NOT_REPOSITORY_VERIFIED"
+    },
+    "cursor": {
+      "parallel_agents": "DOCUMENTED",
+      "worktrees": "DOCUMENTED",
+      "cloud_agents": "DOCUMENTED",
+      "runtime_smoke": "NOT_REPOSITORY_VERIFIED"
+    }
+  }
+}
