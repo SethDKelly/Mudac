@@ -15,6 +15,7 @@ PACKAGE_DISCOVERY = "docs/routing/phase020_implementation_package_discovery.json
 PHASE_CONTRACT = "docs/routing/phase020_implementation_phase_contract.json"
 CI_EVIDENCE = "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
 REVIEW_EXIT = "docs/routing/phase020_review_repair_exit_gate_governance.json"
+CROSSCUT = "docs/routing/phase020_crosscutting_verification_architecture.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -37,6 +38,7 @@ def main() -> int:
         phase_contract = json.loads((repo / PHASE_CONTRACT).read_text(encoding="utf-8")) if (repo / PHASE_CONTRACT).is_file() else None
         ci_evidence = json.loads((repo / CI_EVIDENCE).read_text(encoding="utf-8")) if (repo / CI_EVIDENCE).is_file() else None
         review_exit = json.loads((repo / REVIEW_EXIT).read_text(encoding="utf-8")) if (repo / REVIEW_EXIT).is_file() else None
+        crosscut = json.loads((repo / CROSSCUT).read_text(encoding="utf-8")) if (repo / CROSSCUT).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -720,6 +722,174 @@ def main() -> int:
             if set(downstream.get("dispositions", [])) != expected_dispositions:
                 errors.append("020-H downstream invalidation disposition vocabulary drift")
 
+    if "020-I" in completed:
+        if crosscut is None:
+            errors.append("020-I completion requires cross-cutting verification architecture")
+        else:
+            if control.get("crosscutting_verification_architecture") != CROSSCUT:
+                errors.append("Phase-020 control must point to 020-I cross-cutting verification architecture")
+
+            boundary_i = crosscut.get("boundary", {})
+            if boundary_i.get("design_only") is not True:
+                errors.append("020-I must remain design-only")
+            for key in ("implementation_execution_authorized","release_authorized","production_authorized","cross_cutting_mapping_alone_makes_package_g1_ready"):
+                if boundary_i.get(key) is not False:
+                    errors.append(f"020-I boundary.{key} must be false")
+            if boundary_i.get("proposed_packages") != 15 or boundary_i.get("g1_ready_packages") != 0 or boundary_i.get("g2_authorized_packages") != 0 or boundary_i.get("active_packages") != 0:
+                errors.append("020-I must retain 15 proposed and zero G1/G2/active packages")
+
+            threshold = crosscut.get("threshold_policy", {})
+            for key in ("new_normative_thresholds_must_be_visible_before_relevant_authorization","hidden_acceptance_thresholds_forbidden","rto_rpo_claims_require_measured_restore_exercise","load_profile_assumptions_must_be_visible","cost_model_assumptions_must_be_visible"):
+                if threshold.get(key) is not True:
+                    errors.append(f"020-I threshold_policy.{key} must be true")
+            for key in ("performance_thresholds_not_invented_by_020i","cost_caps_not_invented_by_020i","rto_rpo_not_invented_by_020i"):
+                if threshold.get(key) is not True:
+                    errors.append(f"020-I threshold_policy.{key} must remain true")
+            accepted_thresholds = set(threshold.get("accepted_existing_thresholds_visible", []))
+            for required in (
+                "WCAG 2.2 AA for core browser workflows",
+                "production at least two healthy API tasks across at least two AZs",
+                "production RDS 35 days automated PITR",
+            ):
+                if required not in accepted_thresholds:
+                    errors.append(f"020-I accepted threshold missing: {required}")
+
+            migration = crosscut.get("migration_verification", {})
+            expected_mig = {f"MIG-{i:02d}" for i in range(1, 7)}
+            actual_mig = {item.get("id") for item in migration.get("evidence_obligations", []) if isinstance(item, dict)}
+            if actual_mig != expected_mig:
+                errors.append(f"020-I migration evidence IDs drift: {actual_mig}")
+            if migration.get("sqlite_or_in_memory_substitute_for_postgresql_semantics") is not False:
+                errors.append("020-I real PostgreSQL semantics cannot be proven by SQLite/in-memory substitute")
+            if migration.get("application_startup_auto_migration_allowed") is not False:
+                errors.append("020-I must preserve no application-startup auto-migration")
+            if migration.get("production_destructive_rollback_assumed_safe") is not False:
+                errors.append("020-I must not assume destructive production rollback is safe")
+
+            recovery = crosscut.get("recovery_verification", {})
+            level_ids = [item.get("id") for item in recovery.get("levels", []) if isinstance(item, dict)]
+            if level_ids != [f"RCV-{i}" for i in range(1, 6)]:
+                errors.append(f"020-I recovery levels must remain RCV-1..RCV-5; got {level_ids}")
+            for key in ("paper_and_local_drafts_remain_non_authoritative_until_reconciled","rto_rpo_measured_not_documentation_only"):
+                if recovery.get(key) is not True:
+                    errors.append(f"020-I recovery.{key} must be true")
+            for key in ("backup_creation_alone_is_recovery_evidence","database_restore_alone_is_semantic_recovery","unknown_may_be_converted_to_success_without_authority_check","regional_recovery_may_create_dual_writable_authority"):
+                if recovery.get(key) is not False:
+                    errors.append(f"020-I recovery.{key} must be false")
+            if recovery.get("readiness_sequence") != [
+                "authoritative storage restored",
+                "application consistency verified",
+                "projections/derived state rebuilt or truthfully unavailable",
+                "external integrations reconciled",
+                "service readiness explicitly declared",
+            ]:
+                errors.append("020-I recovery readiness sequence drift")
+
+            accessibility = crosscut.get("accessibility_verification", {})
+            if accessibility.get("normative_target") != "WCAG_2_2_AA_CORE_WORKFLOWS":
+                errors.append("020-I accessibility target must remain WCAG 2.2 AA for core workflows")
+            for key in ("semantic_parity_required","critical_meaning_color_only_forbidden","critical_action_hover_gesture_camera_qr_only_forbidden","responsive_authority_or_disclosure_change_forbidden","degraded_accessibility_shortcut_to_weaker_authority_forbidden"):
+                if accessibility.get(key) is not True:
+                    errors.append(f"020-I accessibility.{key} must be true")
+            if accessibility.get("automated_scan_alone_proves_wcag_conformance") is not False:
+                errors.append("020-I automated accessibility scanning alone cannot prove WCAG conformance")
+            for required in ("keyboard","screen_reader","zoom_reflow"):
+                if required not in accessibility.get("modalities", []):
+                    errors.append(f"020-I accessibility modality missing: {required}")
+
+            perf = crosscut.get("performance_verification", {})
+            threshold_contract = perf.get("threshold_contract", {})
+            for key in ("material_performance_claim_requires_visible_threshold","hidden_threshold_forbidden","workload_profile_visible","dataset_shape_visible","concurrency_visible","environment_capacity_visible","warmup_and_test_duration_visible"):
+                if threshold_contract.get(key) is not True:
+                    errors.append(f"020-I performance threshold contract.{key} must be true")
+            if perf.get("event_windows_prescaled_and_load_tested_before_judging") is not True:
+                errors.append("020-I event windows must be prescaled/load-tested")
+            if perf.get("at_least_two_api_tasks_two_azs_is_existing_architecture_constraint") is not True:
+                errors.append("020-I must retain production API/AZ minimum")
+            if perf.get("overload_may_weaken_authority_semantics") is not False or perf.get("bulk_may_flatten_partial_unknown_results") is not False:
+                errors.append("020-I performance pressure may not weaken authority or flatten partial/unknown truth")
+
+            cost = crosscut.get("cost_verification", {})
+            if cost.get("cost_cap_defined_by_020i") is not False:
+                errors.append("020-I must not invent a dollar cost cap")
+            if cost.get("cost_model_required_for_material_runtime_or_provider_package") is not True:
+                errors.append("020-I material runtime/provider packages require a cost model")
+            if cost.get("mandatory_trust_controls_may_be_removed_for_cost_only") is not False:
+                errors.append("020-I cost optimization may not remove mandatory trust controls")
+            if cost.get("unjustified_baseline_services_prohibited") is not True:
+                errors.append("020-I must prohibit unjustified baseline services")
+
+            scenarios = crosscut.get("scenario_matrix", [])
+            if not isinstance(scenarios, list) or len(scenarios) != 15:
+                errors.append("020-I must define exactly 15 scenarios")
+                scenarios = []
+            expected_scenario_ids = [f"SCN-{i:02d}" for i in range(1, 16)]
+            actual_scenario_ids = [item.get("id") for item in scenarios if isinstance(item, dict)]
+            if actual_scenario_ids != expected_scenario_ids:
+                errors.append(f"020-I scenario IDs drift: expected {expected_scenario_ids}, got {actual_scenario_ids}")
+            scenario_seeds = [item.get("seed") for item in scenarios if isinstance(item, dict)]
+            if set(scenario_seeds) != set(framework.get("scenario_seeds", [])) or len(scenario_seeds) != len(set(scenario_seeds)):
+                errors.append("020-I scenario seeds must exactly and uniquely match implementation-program ENG-014 seeds")
+            known_evidence = {item.get("id") for item in framework.get("evidence_classes", []) if isinstance(item, dict)}
+            known_packages = set()
+            if package_discovery:
+                known_packages = {p.get("id") for p in package_discovery.get("candidate_packages", []) if isinstance(p, dict)}
+            for item in scenarios:
+                if not isinstance(item, dict):
+                    continue
+                sid = item.get("id")
+                owners = item.get("package_owners", [])
+                if not isinstance(owners, list) or not owners:
+                    errors.append(f"020-I {sid} must have package ownership")
+                elif any(owner not in known_packages for owner in owners):
+                    errors.append(f"020-I {sid} references unknown package owner")
+                floor = item.get("evidence_floor", [])
+                if not isinstance(floor, list) or not floor or any(e not in known_evidence for e in floor):
+                    errors.append(f"020-I {sid} has invalid evidence floor")
+                if not item.get("material_boundary") or not item.get("pass_obligations"):
+                    errors.append(f"020-I {sid} must define material boundary and pass obligations")
+
+            program_rules = crosscut.get("scenario_program_rules", {})
+            for key in ("exactly_fifteen_required","scenario_seed_set_must_match_implementation_program_framework","scenario_is_not_closed_by_unit_test_only","scenario_may_span_multiple_packages","final_v1_replay_required","final_v1_all_15_must_have_pass_evidence","representative_semantic_instantiation_required_when_foundation_only_would_be_artificial","hidden_scenario_category_forbidden","synthetic_data_default"):
+                if program_rules.get(key) is not True:
+                    errors.append(f"020-I scenario_program_rules.{key} must be true")
+            if program_rules.get("production_required_for_scenario_evidence") is not False:
+                errors.append("020-I scenario evidence must not require unauthorized production access")
+
+            package_map = crosscut.get("package_obligation_map", {})
+            if set(package_map) != known_packages:
+                errors.append("020-I package obligation map must exactly cover IMP-001..IMP-015")
+            for pid, profile in package_map.items():
+                if not isinstance(profile, dict):
+                    errors.append(f"020-I {pid} cross-cutting profile must be an object")
+                    continue
+                for sid in profile.get("scenario_ids", []):
+                    if sid not in expected_scenario_ids:
+                        errors.append(f"020-I {pid} references unknown scenario ID {sid}")
+
+            effect = crosscut.get("phase020_effect", {})
+            if effect.get("g1_ready_after_020i") != 0 or effect.get("g2_authorized_after_020i") != 0 or effect.get("active_after_020i") != 0:
+                errors.append("020-I cross-cutting mapping must not promote packages or activate execution")
+            if effect.get("removes_from_package_g1_missing") != "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping":
+                errors.append("020-I phase effect must identify the resolved cross-cutting G1 placeholder")
+
+            if package_discovery:
+                if package_discovery.get("crosscutting_verification_architecture") != CROSSCUT:
+                    errors.append("020-I package discovery must reference cross-cutting architecture")
+                if package_discovery.get("semantics", {}).get("g1_ready_after_020i") != 0:
+                    errors.append("020-I package discovery must retain zero G1-ready packages")
+                for pkg in package_discovery.get("candidate_packages", []):
+                    if not isinstance(pkg, dict):
+                        continue
+                    pid = pkg.get("id")
+                    profile = pkg.get("crosscutting_verification_profile", {})
+                    if profile.get("source") != CROSSCUT or profile.get("package_id") != pid:
+                        errors.append(f"020-I {pid} missing cross-cutting profile binding")
+                    if "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping" in pkg.get("g1_missing", []):
+                        errors.append(f"020-I {pid} still carries resolved cross-cutting mapping placeholder")
+                    if pkg.get("g1_ready") is not False or pkg.get("status") != "PROPOSED":
+                        errors.append(f"020-I {pid} must remain PROPOSED and below G1")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -749,6 +919,8 @@ def main() -> int:
         errors.append("implementation framework must reference 020-G CI/supply-chain/evidence architecture after completion")
     if "020-H" in completed and phase020_fw.get("review_repair_exit_gate_governance") != REVIEW_EXIT:
         errors.append("implementation framework must reference 020-H review/repair/exit-gate governance after completion")
+    if "020-I" in completed and phase020_fw.get("crosscutting_verification_architecture") != CROSSCUT:
+        errors.append("implementation framework must reference 020-I cross-cutting verification architecture after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
@@ -776,6 +948,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md"] if "020-F" in completed else []),
         *([f"{PHASE_DIR}/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md"] if "020-G" in completed else []),
         *([f"{PHASE_DIR}/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md"] if "020-H" in completed else []),
+        *([f"{PHASE_DIR}/020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md"] if "020-I" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
