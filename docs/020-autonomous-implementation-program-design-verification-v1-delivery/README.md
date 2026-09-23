@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G/H/I COMPLETE
-020-J NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H/I/J COMPLETE
+020-K NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -129,10 +129,11 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture — **COMPLETE — PASS** |
 | **020-H** | Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance — **COMPLETE — PASS** |
 | **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **COMPLETE — PASS** |
-| **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **NEXT ELIGIBLE** |
+| **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **COMPLETE — PASS** |
+| **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — **NEXT ELIGIBLE** |
 
 
-| **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness |
+
 | **020-L** | Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff |
 
 The decomposition is dependency-driven rather than aesthetically fixed. 020-A has reviewed and accepted this A–L structure as the current Phase-020 plan; later work may reopen it if evidence demonstrates a material dependency mistake.
@@ -265,3 +266,10 @@ Machine contract: `docs/routing/phase020_review_repair_exit_gate_governance.json
 020-I established explicit migration, recovery, accessibility, performance, cost and fifteen-scenario verification profiles. Existing normative thresholds remain visible (including WCAG 2.2 AA, minimum production API/AZ redundancy and 35-day RDS PITR); new latency, load, cost and RTO/RPO thresholds must be explicit and evidence-backed rather than invented or hidden. Every IMP package now has an applicability profile, but package-specific final criteria/thresholds and phase assignment remain 020-K work, so all 15 packages remain below G1.
 
 Machine contract: `docs/routing/phase020_crosscutting_verification_architecture.json`.
+
+
+## 020-J v1 completion / final integration result
+
+020-J defines PF-01 as the initial implemented v1 boundary, preserving all eighteen current Concepts and the current explicit non-goals. Package G5 completion is necessary but insufficient: v1 requires nine integrated journey families, all fifteen scenarios on one qualifying composed candidate, twelve blocking whole-system criteria, and an immutable whole-system evidence bundle. The terminal logical phase `V1-FINAL` may harden only explicitly assigned integration surfaces; defects in completed package-owned source use 020-H reopen/re-authorization. Successful v1 implementation completion yields `RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED`, not G6/G7 or deployment authority.
+
+Machine contract: `docs/routing/phase020_v1_completion_integration_design.json`.
