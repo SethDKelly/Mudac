@@ -9,6 +9,7 @@ sources:
   - resource: ../../004-knowledge-architecture/004-D-historical-phase-migration-provenance-source-lineage-retrofit.md
   - resource: ../../004-knowledge-architecture/004-E-cross-reference-stable-rule-id-restatement-reduction-retrofit.md
   - resource: ../../004-knowledge-architecture/004-F-documentation-governance-agent-context-anti-drift-rules.md
+  - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md
 ---
 
 # Purpose
@@ -149,6 +150,8 @@ An agent may assemble a temporary working set of routes, owners, stable IDs and 
 
 Do not persist that working set as another repository summary merely to make a future agent preload it. Persist durable rules in their natural owner and persist reusable procedures only when they have a real independent workflow purpose.
 
+A future implementation **work-unit context manifest** is an allowed operational artifact because it records the authorized task envelope, exact base revision, authority references, owned surfaces, evidence obligations, external-action permissions and circuit breakers. It must reference current owners/rules rather than copying their normative prose and becoming a shadow authority store.
+
 <a id="ctx-014"></a>
 ## CTX-014 — Budget pressure is resolved by routing or task decomposition, never semantic truncation
 
@@ -212,3 +215,13 @@ When writing downstream documentation, use links/stable IDs plus local consequen
 # Tool-specific adapters
 
 `AGENTS.md` and future IDE-specific rules are bootstrap adapters. They should remain small enough to read on every task and point to this canonical contract rather than copying it.
+
+# Autonomous implementation context discipline
+
+A Coordinator hands an Implementer a compact work-unit context manifest, not a dump of repository history.
+
+The Implementer still resolves current authority through the normal CTX tiers and loads only material dependencies.
+
+Independent Reviewers begin from the phase/package/work-unit contract, exact base/head diff, relevant current owners and evidence outputs. They must not rely solely on the Implementer's summary or provider conversation memory.
+
+Technical run/session history may support diagnosis, but it is not canonical meaning and private model reasoning is never required as repository evidence.
