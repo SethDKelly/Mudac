@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 MANIFEST = "docs/routing/agent_tool_compatibility.json"
+OPERATING_MODEL = "docs/routing/autonomous_implementation_operating_model.json"
 WORKFLOW_CONTRACT = "docs/canonical/governance/agent-workflow-portability.md"
 SKILLS = (
     "resolve-context",
@@ -47,6 +48,7 @@ def main() -> int:
 
     try:
         manifest = json.loads((repo / MANIFEST).read_text(encoding="utf-8"))
+        operating = json.loads((repo / OPERATING_MODEL).read_text(encoding="utf-8"))
         budget = json.loads((repo / "docs/routing/context_budget.json").read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
@@ -162,6 +164,44 @@ def main() -> int:
             errors.append(f"{name}: runtime_status must remain unverified until actual smoke evidence exists")
         if item.get("duplicate_semantic_adapter") != "none":
             errors.append(f"{name}: duplicate semantic adapter is prohibited")
+
+    if manifest.get("operating_model") != OPERATING_MODEL:
+        errors.append("tool compatibility manifest must route to autonomous implementation operating model")
+    for provider in ("codex", "cursor"):
+        caps = tools.get(provider, {}).get("documented_capabilities", {})
+        if caps.get("isolated_worktrees") is not True:
+            errors.append(f"{provider}: isolated worktrees must be documented before autonomous implementation")
+    if tools.get("codex", {}).get("documented_capabilities", {}).get("parallel_agents") is not True:
+        errors.append("codex: parallel-agent capability evidence missing")
+    if tools.get("cursor", {}).get("documented_capabilities", {}).get("parallel_or_multitask_agents") is not True:
+        errors.append("cursor: parallel/multitask capability evidence missing")
+
+    activation = operating.get("activation", {})
+    delegation = operating.get("delegation", {})
+    roles = operating.get("roles", {})
+    if activation.get("requires_g2") is not True or activation.get("phase020_domain_execution_authorized") is not False:
+        errors.append("autonomous operating model must require G2 and keep Phase 020 execution disabled")
+    if delegation.get("mode") != "COORDINATOR_ONLY_WITHIN_ACTIVE_G2_ENVELOPE":
+        errors.append("autonomous delegation mode drift")
+    if delegation.get("max_delegation_depth") != 1:
+        errors.append("autonomous implementation delegation depth must remain one")
+    if roles.get("implementer", {}).get("recursive_delegation") is not False:
+        errors.append("implementer recursive delegation must remain false")
+    if roles.get("reviewer", {}).get("independent_run_required") is not True:
+        errors.append("independent reviewer run must remain required")
+
+    cursor_worktrees = repo / ".cursor" / "worktrees.json"
+    if not cursor_worktrees.is_file():
+        errors.append("missing Cursor worktree setup file")
+    else:
+        try:
+            worktree_setup = json.loads(cursor_worktrees.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            errors.append(f".cursor/worktrees.json invalid JSON: {exc}")
+        else:
+            commands = worktree_setup.get("setup-worktree")
+            if commands != ["pnpm install --frozen-lockfile"]:
+                errors.append("Cursor worktree setup must remain minimal and reproducible")
 
     contract = (repo / WORKFLOW_CONTRACT).read_text(encoding="utf-8")
     for i in range(1, 13):
