@@ -280,9 +280,10 @@
     "completed_subphases": [
       "020-A",
       "020-B",
-      "020-C"
+      "020-C",
+      "020-D"
     ],
-    "next_eligible_subphase": "020-D",
+    "next_eligible_subphase": "020-E",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -290,6 +291,10 @@
     "autonomous_implementation_operating_model": "docs/routing/autonomous_implementation_operating_model.json",
     "coordinator_only_delegation": true,
     "max_delegation_depth": 1,
-    "phase020_domain_execution_authorized": false
+    "phase020_domain_execution_authorized": false,
+    "nonproduction_test_control_architecture": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+    "production_target_forbidden": true,
+    "mcp_server_implemented": false,
+    "nonproduction_environment_deployed": false
   }
 }
