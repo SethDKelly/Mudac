@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "authority": "PRE-ARCHITECTURE IMPLEMENTATION PROGRAM FRAMEWORK ONLY — DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
+  "authority": "POST-ARCHITECTURE IMPLEMENTATION PROGRAM FRAMEWORK — PACKAGE DERIVATION ALLOWED; DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
   "governing_contract": "docs/canonical/governance/implementation-program-delivery.md",
   "architecture_plan": "docs/routing/architecture_reentry_plan.json",
   "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
   "candidate_qualification": "docs/routing/downstream_candidate_qualification.json",
   "phase_record": "docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-L-implementation-program-structure-verification-strategy-delivery-gate-design.md",
   "state": {
-    "framework_state": "PRE_ARCHITECTURE",
+    "framework_state": "PLANNING_READY",
     "accepted_architecture_required": true,
-    "accepted_architecture_established": false,
-    "package_derivation_allowed": false,
+    "accepted_architecture_established": true,
+    "package_derivation_allowed": true,
     "implementation_execution_authorized": false,
     "active_package_count": 0,
     "active_packages": []
@@ -254,7 +254,7 @@
   },
   "future_start_gate": {
     "proposed_lifecycle": "Phase 020 — Implementation Planning & Controlled Delivery",
-    "decomposition_state": "DEFERRED_UNTIL_ACCEPTED_ARCHITECTURE",
+    "decomposition_state": "READY_FOR_PHASE_020_START_GATE",
     "required_actions": [
       "confirm accepted architecture baseline",
       "derive implementation packages from accepted architecture and current semantic authority",
@@ -265,5 +265,8 @@
       "identify planning-ready packages",
       "explicitly decide whether any package receives G2 execution authorization"
     ]
-  }
+  },
+  "accepted_architecture_control": "docs/routing/phase019_architecture_decision_control.json",
+  "accepted_architecture_owner": "docs/canonical/architecture/accepted-architecture.md",
+  "acceptance_record": "docs/019-architecture-engineering-reentry/019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md"
 }
