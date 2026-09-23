@@ -96,7 +96,13 @@ A package plan states at minimum:
 - required evidence classes;
 - Phase-016 scenario seeds affected;
 - rollback/recovery or compatibility considerations;
-- residual risks and later-gate assignments.
+- residual risks and later-gate assignments;
+- autonomous execution mode (single-agent or coordinated multi-agent);
+- Coordinator/Implementer/Reviewer role policy;
+- declared work-unit graph where delegation is allowed;
+- exact-base/worktree isolation and serialized-surface rules;
+- context-manifest and technical-provenance requirements;
+- bounded external actions, autonomy circuit breakers and repair/escalation boundaries.
 
 A package is not execution-ready merely because code locations are known.
 
@@ -134,9 +140,21 @@ Only an explicit authorization transition permits domain implementation work.
 Planning status never implies authorization.
 
 <a id="ipg-006"></a>
-## IPG-006 — Package Execution Is Human-Directed and Cannot Auto-Advance
+## IPG-006 — Package Execution Is Human-Directed at the Lifecycle Boundary and Cannot Auto-Advance
 
-A human-selected authorized package establishes the implementation task envelope.
+A human-selected G2-authorized package establishes the implementation task envelope.
+
+Inside that envelope, the package may authorize a named Coordinator to schedule declared dependency-safe work units among autonomous agents without per-edit human approval. That bounded delegation is execution of the selected package, not autonomous package selection.
+
+The package plan must preserve:
+
+- coordinator-only delegation;
+- no recursive undeclared implementation delegation;
+- exact-base work isolation;
+- shared-writer serialization;
+- independent review;
+- circuit-breaker escalation;
+- separate merge/release/deployment authority.
 
 Completion of one package may identify the next dependency-safe package but does not authorize an agent to begin it automatically.
 
@@ -153,6 +171,8 @@ A package may enter execution only when:
 - or the package is demonstrably independent of their unresolved outputs.
 
 Parallel execution is allowed only where ownership, migration and shared-resource conflicts are explicitly controlled.
+
+Within a package, parallel work units require isolated worktrees/checkouts plus an explicit serialized-surface set for shared control points such as migration order, lockfiles, root CI, common infrastructure authority, generated registries and overlapping owner-private code.
 
 The program must prevent package ordering from being inferred from file order, numbering convenience or historical 006/008 sequences.
 
@@ -242,6 +262,8 @@ package COMPLETE
 ~~~
 
 Repository checks may gate review/merge.
+
+A G2 package may pre-authorize bounded branch/PR mechanics required for its work envelope, but merge remains distinct and cannot be inferred from green CI or reviewer approval.
 
 Release/deployment requires separate environment and release authority.
 
@@ -343,3 +365,16 @@ Accepted architecture now exists and 020-A has opened the final pre-implementati
 9. explicitly decide whether any package receives execution authorization.
 
 Package decomposition was deliberately not frozen before architecture acceptance. Phase 020 may now derive it from the accepted architecture, current semantic authority and the retained scenario/evidence obligations.
+
+
+# Autonomous implementation operating projection
+
+Phase 020-C defines the current tool-neutral role/isolation/delegation projection at:
+
+> docs/routing/autonomous_implementation_operating_model.json
+
+That projection is subordinate to this contract plus canonical agent governance.
+
+It defines Human Authorizer, Coordinator, Implementer, Reviewer, Verifier and Gatekeeper roles; coordinator-only delegation; worktree isolation; context/provenance fields; serialized surfaces; and fail-closed circuit breakers.
+
+Phase 020 itself remains pre-implementation. These rules become executable only for a later G2-authorized package/phase.
