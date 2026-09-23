@@ -19,6 +19,7 @@ REVIEW_EXIT = "docs/routing/phase020_review_repair_exit_gate_governance.json"
 CROSSCUT = "docs/routing/phase020_crosscutting_verification_architecture.json"
 V1_COMPLETION = "docs/routing/phase020_v1_completion_integration_design.json"
 ROADMAP = "docs/routing/phase020_autonomous_implementation_roadmap.json"
+PREIMPLEMENTATION_AUDIT = "docs/routing/phase020_preimplementation_exit_audit.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -44,6 +45,7 @@ def main() -> int:
         crosscut = json.loads((repo / CROSSCUT).read_text(encoding="utf-8")) if (repo / CROSSCUT).is_file() else None
         v1_completion = json.loads((repo / V1_COMPLETION).read_text(encoding="utf-8")) if (repo / V1_COMPLETION).is_file() else None
         roadmap = json.loads((repo / ROADMAP).read_text(encoding="utf-8")) if (repo / ROADMAP).is_file() else None
+        preimplementation_audit = json.loads((repo / PREIMPLEMENTATION_AUDIT).read_text(encoding="utf-8")) if (repo / PREIMPLEMENTATION_AUDIT).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -1360,6 +1362,86 @@ def main() -> int:
                     final_ref=pkg.get("final_020k_contract",{})
                     if final_ref.get("source")!=ROADMAP or final_ref.get("final_disposition")!="RETAINED" or final_ref.get("final_g1_status")!="READY_FOR_AUTHORIZATION":
                         errors.append(f"020-K discovery binding missing for {pkg.get('id')}")
+
+    if control.get("preimplementation_exit_audit"):
+        if control.get("preimplementation_exit_audit") != PREIMPLEMENTATION_AUDIT:
+            errors.append("Phase-020 control must reference the canonical 020-L preimplementation audit")
+        if preimplementation_audit is None:
+            errors.append("020-L audit reference requires a readable preimplementation audit")
+        else:
+            l_complete = "020-L" in completed
+            audit_status = preimplementation_audit.get("audit_status")
+            audit_outcome = preimplementation_audit.get("audit_outcome")
+            findings_l = preimplementation_audit.get("blocking_findings", [])
+            handoff_l = preimplementation_audit.get("phase021_handoff", {})
+            closure_l = preimplementation_audit.get("closure_rule", {})
+            ci_l = preimplementation_audit.get("exact_head_ci_evidence", {})
+
+            if l_complete:
+                if audit_status not in {"PASS", "COMPLETE"}:
+                    errors.append("completed 020-L requires PASS/COMPLETE preimplementation audit")
+                if findings_l:
+                    errors.append("completed 020-L may not retain blocking findings")
+                if handoff_l.get("g2_state") != "NOT_AUTHORIZED":
+                    errors.append("Phase 021 handoff after 020-L must still leave G2 NOT_AUTHORIZED")
+            else:
+                if audit_status != "BLOCKED" or audit_outcome != "BLOCKED_REPOSITORY_ENFORCEMENT":
+                    errors.append("open 020-L audit must remain BLOCKED on the observed repository-enforcement finding")
+                blocker_ids = {x.get("id") for x in findings_l if isinstance(x, dict)}
+                if "P020L-001" not in blocker_ids:
+                    errors.append("blocked 020-L audit must retain P020L-001")
+                finding = next((x for x in findings_l if isinstance(x, dict) and x.get("id") == "P020L-001"), {})
+                evidence_l = finding.get("evidence", {})
+                if evidence_l.get("observed_protected") is not False:
+                    errors.append("P020L-001 must record observed main protected=false until reverified")
+                if evidence_l.get("observed_required_status_checks_enforcement") != "off":
+                    errors.append("P020L-001 must record status-check enforcement off until reverified")
+                if evidence_l.get("observed_rulesets") != []:
+                    errors.append("P020L-001 must record the observed empty ruleset set until reverified")
+                if finding.get("repository_admin_action_required") is not True:
+                    errors.append("P020L-001 must remain an explicit repository-admin action")
+                if state.get("preimplementation_audit_status") != "BLOCKED":
+                    errors.append("Phase-020 state must expose blocked preimplementation audit")
+                if state.get("blocked_subphase") != "020-L":
+                    errors.append("Phase-020 state must expose 020-L as the blocked subphase")
+                if state.get("phase021_start_gate_eligible") is not False or state.get("phase021_g2_authorized") is not False:
+                    errors.append("blocked 020-L must keep Phase 021 ineligible and G2 unauthorized")
+                if handoff_l.get("status") != "BLOCKED_PENDING_REPOSITORY_ENFORCEMENT":
+                    errors.append("blocked 020-L must expose a blocked Phase-021 handoff")
+                if handoff_l.get("g1_state") != "READY_FOR_AUTHORIZATION" or handoff_l.get("g2_state") != "NOT_AUTHORIZED":
+                    errors.append("Phase-021 handoff must preserve IMP-001 G1 readiness and zero G2")
+                if handoff_l.get("execution_before_resolution_forbidden") is not True:
+                    errors.append("Phase-021 execution must remain forbidden while 020-L is blocked")
+
+            runs_l = ci_l.get("runs", [])
+            required_ci_names = {"Knowledge Validation", "Implementation Verification", "CodeQL"}
+            successful_ci_names = {
+                run.get("name")
+                for run in runs_l
+                if isinstance(run, dict) and run.get("conclusion") == "success"
+            }
+            if ci_l.get("all_required_runs_success") is not True or not required_ci_names.issubset(successful_ci_names):
+                errors.append("020-L audit must retain successful exact-head evidence for all required workflows")
+
+            if closure_l.get("phase020_may_close_with_p020l001_open") is not False:
+                errors.append("020-L closure rule must forbid closing Phase 020 with P020L-001 open")
+            if closure_l.get("issue_closure_alone_is_sufficient") is not False:
+                errors.append("020-L closure rule must require observed enforcement, not issue closure")
+            if closure_l.get("repository_enforcement_must_be_observed") is not True:
+                errors.append("020-L closure rule must require observed repository enforcement")
+            if closure_l.get("exact_head_ci_must_be_rechecked_after_final_closure_commit") is not True:
+                errors.append("020-L closure rule must require final exact-head CI recheck")
+            if closure_l.get("phase021_g2_must_be_explicit_after_phase020_close") is not True:
+                errors.append("020-L closure rule must preserve explicit Phase-021 G2")
+
+            if ci_evidence:
+                enforcement_l = ci_evidence.get("repository_enforcement", {})
+                if not l_complete:
+                    if enforcement_l.get("current_enforcement_verified") is not False:
+                        errors.append("blocked 020-L must not claim repository enforcement verified")
+                    last_l = enforcement_l.get("last_observation", {})
+                    if last_l.get("protected") is not False or last_l.get("result") != "BLOCKING":
+                        errors.append("020-G enforcement record must preserve the blocking main-protection observation")
 
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
