@@ -19,8 +19,8 @@ sources:
 
 ~~~text
 PHASE 020 ACTIVE
-020-A/B COMPLETE
-020-C NEXT ELIGIBLE
+020-A/B/C COMPLETE
+020-D NEXT ELIGIBLE
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -122,8 +122,8 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 |---|---|
 | **020-A** | Start Gate, Authority, Accepted Baseline & Autonomous-Development Method |
 | **020-B** | Existing Substrate, Historical Implementation & Reuse Qualification — **COMPLETE — PASS** |
-| **020-C** | Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers — **NEXT ELIGIBLE** |
-| **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture |
+| **020-C** | Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers — **COMPLETE — PASS** |
+| **020-D** | Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture — **NEXT ELIGIBLE** |
 | **020-E** | Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing |
 | **020-F** | Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture |
 | **020-G** | CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture |
@@ -214,3 +214,10 @@ It does not mean:
 020-B found a substantial reusable non-domain bootstrap, but not an already-implemented MUDAC application. Preserve sound Node/TypeScript/pnpm, PostgreSQL, CI and OpenTofu scaffolding; revise runtime/testing seams as responsibilities arrive; replace/merge the historical six-owner topology into the accepted five-owner BND topology; keep all six historical implementation documents as REUSE_WITH_REVISION evidence; and preserve zero active packages / zero G2 execution authority.
 
 Machine evidence: `docs/routing/phase020_substrate_reuse_qualification.json`.
+
+
+## 020-C operating-model result
+
+020-C established human lifecycle authority with bounded autonomous implementation inside later G2 envelopes. A named Coordinator may delegate only declared work units; delegation depth is one, writable work is isolated by exact-base worktrees, shared control surfaces are serialized, reviewer runs are independent, technical agent provenance is retained, and circuit breakers fail closed on authority/safety/integrity conflicts. Phase 020 itself remains non-executing.
+
+Machine projection: `docs/routing/autonomous_implementation_operating_model.json`.
