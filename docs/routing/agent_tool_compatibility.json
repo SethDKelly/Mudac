@@ -52,8 +52,26 @@
           "subject": ".agents/skills project skills",
           "url": "https://developers.openai.com/docs/build-skills",
           "checked_at": "2026-09-22"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": "Codex app parallel agents and built-in worktrees",
+          "url": "https://openai.com/index/introducing-the-codex-app/",
+          "checked_at": "2026-09-23"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": "Codex bounded execution, sandboxing and approvals",
+          "url": "https://openai.com/index/running-codex-safely/",
+          "checked_at": "2026-09-23"
         }
-      ]
+      ],
+      "documented_capabilities": {
+        "isolated_worktrees": true,
+        "parallel_agents": true,
+        "project_skills": true,
+        "cloud_or_background_execution": true
+      }
     },
     "cursor": {
       "instruction_mechanism": "root AGENTS.md plus optional relevance-selected .cursor/rules/00-mudac-routing.mdc",
@@ -73,8 +91,33 @@
           "subject": ".agents/skills project skills",
           "url": "https://cursor.com/docs/skills",
           "checked_at": "2026-09-22"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": "Cursor worktree isolation and setup",
+          "url": "https://cursor.com/docs/configuration/worktrees",
+          "checked_at": "2026-09-23"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": "Cursor project rules",
+          "url": "https://cursor.com/docs/rules",
+          "checked_at": "2026-09-23"
+        },
+        {
+          "kind": "provider-documentation",
+          "subject": "Cursor parallel/multitask agent workflow",
+          "url": "https://cursor.com/changelog/04-24-26",
+          "checked_at": "2026-09-23"
         }
-      ]
+      ],
+      "documented_capabilities": {
+        "isolated_worktrees": true,
+        "parallel_or_multitask_agents": true,
+        "cloud_agents": true,
+        "project_rules": true,
+        "project_skills": true
+      }
     },
     "claude_code": {
       "instruction_mechanism": "root CLAUDE.md imports AGENTS.md",
@@ -100,6 +143,8 @@
   "evidence_notes": [
     "Repository validators prove file structure, references, budgets and subordination only.",
     "Provider runtime discovery/obedience is a separate compatibility claim and remains unverified until an actual provider smoke test is performed.",
-    "Tool availability never changes MUDAC semantic authority."
-  ]
+    "Tool availability never changes MUDAC semantic authority.",
+    "020-C permits provider worktree/parallel-agent mechanics only inside a human-selected G2 envelope; documented provider capability is not runtime smoke verification or lifecycle authority."
+  ],
+  "operating_model": "docs/routing/autonomous_implementation_operating_model.json"
 }
