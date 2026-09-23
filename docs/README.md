@@ -48,8 +48,8 @@ Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 ACTIVE
-020-A/B/C/D/E/F/G/H/I COMPLETE
-020-J NEXT ELIGIBLE
+020-A/B/C/D/E/F/G/H/I/J COMPLETE
+020-K NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
