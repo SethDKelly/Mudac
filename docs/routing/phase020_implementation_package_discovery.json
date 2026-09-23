@@ -1,0 +1,1828 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-E PROPOSED IMPLEMENTATION PACKAGE DISCOVERY / DEPENDENCY GRAPH — NOT G1, NOT G2, NOT EXECUTION AUTHORITY",
+  "phase": "020-E",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md",
+  "baseline_head": "fada1315bf40226cbe05b3a0be0d039a05212e71",
+  "semantics": {
+    "proposed_package_count": 15,
+    "statuses_allowed": [
+      "PROPOSED"
+    ],
+    "proposed_packages_are_active": false,
+    "g1_satisfied": false,
+    "g2_authorized": false,
+    "implementation_execution_authorized": false,
+    "package_ids_are_durable_if_retained": "IMP-001..IMP-015; superseded IDs are never reused"
+  },
+  "dependency_edge_types": {
+    "HARD_G2_PREDECESSOR": "Default predecessor completion required before downstream G2 unless a later gate explicitly proves independence under IPG-007/G2.",
+    "INTEGRATION_G4_DEPENDENCY": "Does not necessarily block parallel implementation; downstream package cannot close G4/G5 until the integration contract/evidence is reconciled.",
+    "EVIDENCE_DEPENDENCY": "Evidence infrastructure/provider boundary needed for the downstream claim; may not need to precede coding."
+  },
+  "candidate_packages": [
+    {
+      "id": "IMP-001",
+      "title": "Source Topology & Implementation Foundation",
+      "kind": "foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Repair the executable repository to the accepted five-owner topology and establish implementation-safe package seams, dependency rules and configuration conventions without adding product behavior.",
+      "hard_dependencies": [],
+      "integration_dependencies": [],
+      "evidence_dependencies": [],
+      "scope_in": [
+        "six-to-five owner package/topology repair",
+        "public/private package seam enforcement",
+        "dependency-cruiser rules from BND",
+        "implementation-neutral configuration/bootstrap conventions",
+        "removal/quarantine of obsolete judging-operations semantic owner"
+      ],
+      "scope_out": [
+        "domain behavior",
+        "database schema beyond bootstrap mechanics",
+        "provider deployment",
+        "feature UI"
+      ],
+      "architecture_refs": [
+        "BND-001..012",
+        "DRV-001..012"
+      ],
+      "semantic_refs": [
+        "ENG-001",
+        "ENG-017"
+      ],
+      "provisional_owned_surfaces": [
+        "workspace/package topology",
+        "dependency rules",
+        "shared implementation bootstrap/configuration"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2"
+      ],
+      "scenario_seed_hints": [],
+      "serialized_surfaces": [
+        "root package/workspace manifests",
+        "root lockfile",
+        "dependency rules",
+        "generated routing/ownership indexes"
+      ],
+      "parallelism": "FIRST FOUNDATION; later packages may not assume repaired topology before this completes.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-002",
+      "title": "Persistence, Migration, History & Projection Substrate",
+      "kind": "foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the PostgreSQL-compatible persistence substrate, owner-local storage pattern, migration machinery, current/history/Provenance primitives, durable outbox semantics and rebuildable projection infrastructure.",
+      "hard_dependencies": [
+        "IMP-001"
+      ],
+      "integration_dependencies": [],
+      "evidence_dependencies": [
+        "IMP-006",
+        "IMP-014"
+      ],
+      "scope_in": [
+        "database driver/unit-of-work selection",
+        "owner-scoped migration framework",
+        "current/history representation primitives",
+        "append-stable technical support for domain Provenance",
+        "durable outbox/commit coupling",
+        "projection rebuild/freshness substrate",
+        "local PostgreSQL integration"
+      ],
+      "scope_out": [
+        "owner-specific business tables beyond proving the substrate",
+        "domain lifecycle rules",
+        "production RDS deployment"
+      ],
+      "architecture_refs": [
+        "PST-001..016",
+        "BND-003",
+        "BND-006",
+        "BND-008",
+        "CMD-004..009"
+      ],
+      "semantic_refs": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-016"
+      ],
+      "provisional_owned_surfaces": [
+        "persistence adapters/framework",
+        "migration catalog/runner",
+        "outbox infrastructure",
+        "projection infrastructure"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "concurrent/repeated legitimate intent",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "migration order/catalog",
+        "shared database bootstrap",
+        "root lockfile"
+      ],
+      "parallelism": "May run in parallel with IMP-004/005/006 after IMP-001; migration catalog remains serialized.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-003",
+      "title": "Application Interface, Command, Transaction, Idempotency & Reconciliation Foundation",
+      "kind": "foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement versioned application contracts and reusable command/query, transaction, concurrency, idempotency, result and reconciliation mechanics used by natural owners.",
+      "hard_dependencies": [
+        "IMP-001",
+        "IMP-002"
+      ],
+      "integration_dependencies": [
+        "IMP-004",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "HTTPS/JSON transport conventions",
+        "command/query DTO boundaries",
+        "natural-owner transaction orchestration primitives",
+        "optimistic concurrency/currentness",
+        "durable logical-operation idempotency",
+        "lost-response reconciliation/result lookup",
+        "partial bulk result contract",
+        "CSRF/origin protection foundation"
+      ],
+      "scope_out": [
+        "owner-specific command semantics",
+        "browser feature workflows",
+        "provider runtime deployment"
+      ],
+      "architecture_refs": [
+        "CMD-001..022",
+        "BND-004..007",
+        "IAM-005"
+      ],
+      "semantic_refs": [
+        "ENG-007",
+        "ENG-011"
+      ],
+      "provisional_owned_surfaces": [
+        "application transport/contracts",
+        "shared command result types",
+        "idempotency/reconciliation infrastructure"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "lost-response retry after consequential authoritative action",
+        "concurrent/repeated legitimate intent",
+        "partial bulk result",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "root API contract conventions",
+        "shared transaction/idempotency schema",
+        "root lockfile"
+      ],
+      "parallelism": "Begins after IMP-002; later owner verticals depend on it. Browser/test-control integration may proceed concurrently once contracts stabilize.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-004",
+      "title": "Browser Client, State & Accessibility Foundation",
+      "kind": "foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the non-authoritative browser architecture: context-safe routing, cache partitioning, explicit command states, accessible primitives, responsive foundations and degraded/error boundaries.",
+      "hard_dependencies": [
+        "IMP-001"
+      ],
+      "integration_dependencies": [
+        "IMP-003",
+        "IMP-008",
+        "IMP-010"
+      ],
+      "evidence_dependencies": [
+        "IMP-005",
+        "IMP-014"
+      ],
+      "scope_in": [
+        "client composition layers",
+        "route/context isolation",
+        "remote-cache freshness/basis model",
+        "command pending/confirmed/unknown UI state",
+        "accessible primitive/pattern baseline",
+        "responsive phone/organizer layout foundation",
+        "error boundaries",
+        "browser telemetry hooks"
+      ],
+      "scope_out": [
+        "owner-specific workflows",
+        "authoritative validation",
+        "local Draft continuity semantics beyond adapter seam"
+      ],
+      "architecture_refs": [
+        "CLT-001..020",
+        "IAM-009",
+        "CMD-015..022"
+      ],
+      "semantic_refs": [
+        "ENG-012"
+      ],
+      "provisional_owned_surfaces": [
+        "apps/web shared shell",
+        "client state/cache adapters",
+        "accessible UI primitives/patterns",
+        "browser error/telemetry foundation"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "shared-device context handoff",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "shared client shell/routing configuration",
+        "root frontend dependency/lockfile integration"
+      ],
+      "parallelism": "Can run immediately after IMP-001 in parallel with persistence/test-control/runtime foundations; integrates with IMP-003 later.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-005",
+      "title": "Non-Production Test-Control, Fixtures & Observability Foundation",
+      "kind": "verification-foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement NPT-L and the core MCP test-control service, deterministic FixtureBlueprints, browser/action adapters, test-run correlation, semantic health and bounded local fault profiles.",
+      "hard_dependencies": [
+        "IMP-001"
+      ],
+      "integration_dependencies": [
+        "IMP-003",
+        "IMP-004",
+        "IMP-006"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "MCP server/tool factory",
+        "NPT-L environment registry/reset",
+        "deterministic synthetic fixture framework",
+        "technical-vs-synthetic actor separation",
+        "browser adapter foundation",
+        "test-run/trace correlation",
+        "semantic health/release identity",
+        "basic registered fault profiles"
+      ],
+      "scope_out": [
+        "production deployment",
+        "arbitrary SQL/shell/cloud tools",
+        "hidden evaluator implementation",
+        "owner-specific MCP capabilities beyond foundation"
+      ],
+      "architecture_refs": [
+        "RUN-020..021",
+        "CMD-010",
+        "IAM-001..018",
+        "CLT-001..020"
+      ],
+      "semantic_refs": [
+        "ENG-015",
+        "ENG-016",
+        "ENG-018"
+      ],
+      "provisional_owned_surfaces": [
+        "test-control service",
+        "packages/test-support realization",
+        "fixture blueprint registry",
+        "local observation/fault adapters"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "unknown/degraded result",
+        "shared-device context handoff"
+      ],
+      "serialized_surfaces": [
+        "test fixture registry",
+        "MCP capability registry",
+        "root lockfile",
+        "shared test environment configuration"
+      ],
+      "parallelism": "Can run after IMP-001 in parallel with IMP-002/004/006. Owner packages extend capabilities rather than creating separate test backdoors.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-006",
+      "title": "AWS Non-Production Runtime, Deployment & Provider Foundation",
+      "kind": "runtime-foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the isolated non-production AWS runtime and provider substrate needed for real-provider evidence: networking/edge, ECS/Fargate, RDS, Cognito test resources, S3/SQS, OIDC and CloudWatch/OpenTelemetry integration.",
+      "hard_dependencies": [
+        "IMP-001"
+      ],
+      "integration_dependencies": [
+        "IMP-002",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "NPT-P/NPT-S environment infrastructure",
+        "nonproduction OIDC deployment roles",
+        "ECS/Fargate app/worker substrate",
+        "RDS PostgreSQL nonproduction",
+        "Cognito nonproduction provider substrate",
+        "S3/SQS provider resources",
+        "CloudWatch/OTel sinks",
+        "environment registry identity inputs"
+      ],
+      "scope_out": [
+        "production deployment",
+        "domain authority in AWS resources",
+        "owner-specific provider semantics",
+        "release/production authorization"
+      ],
+      "architecture_refs": [
+        "RUN-001..021",
+        "RUN-026",
+        "PST-001",
+        "IAM-016"
+      ],
+      "semantic_refs": [
+        "ENG-011",
+        "ENG-013",
+        "ENG-016",
+        "ENG-018"
+      ],
+      "provisional_owned_surfaces": [
+        "infra nonproduction modules/roots",
+        "nonproduction deployment workflow/roles",
+        "provider test resources"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E3",
+        "E5",
+        "E6"
+      ],
+      "scenario_seed_hints": [
+        "adversarial request volume",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "nonproduction OpenTofu roots/backend",
+        "shared deployment workflow",
+        "root lockfile if tooling changes"
+      ],
+      "parallelism": "Can run after IMP-001 alongside local foundations; does not block local implementation but becomes an integration/evidence dependency for provider-sensitive packages.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-007",
+      "title": "Competition Context Owner Vertical",
+      "kind": "owner-vertical",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the Competition Context owner and its organizer-facing application/browser realization, including Competition-scoped configuration and stable owner contracts consumed downstream.",
+      "hard_dependencies": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-004"
+      ],
+      "integration_dependencies": [
+        "IMP-008",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "Competition Context owner state/lifecycle",
+        "Competition-scoped configuration",
+        "team/division/setup authority represented by current semantic owners",
+        "owner migrations/history/provenance",
+        "public contracts for downstream stable references",
+        "organizer setup browser flows"
+      ],
+      "scope_out": [
+        "Participation/Access",
+        "Evaluation",
+        "Outcomes",
+        "Publication"
+      ],
+      "architecture_refs": [
+        "BND-002",
+        "BND-004..007",
+        "PST-003..008",
+        "CMD-001..017",
+        "CLT-001..020"
+      ],
+      "semantic_refs": [
+        "ENG-003",
+        "ENG-006",
+        "ENG-007"
+      ],
+      "provisional_owned_surfaces": [
+        "Competition Context module",
+        "its persistence/migrations",
+        "its API contracts",
+        "its browser feature surfaces"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "conflicting legitimate authority resolved at the natural owner",
+        "concurrent/repeated legitimate intent"
+      ],
+      "serialized_surfaces": [
+        "Competition Context migrations",
+        "shared API contract indexes",
+        "root lockfile if dependencies change"
+      ],
+      "parallelism": "First semantic-owner vertical. IMP-008 may prepare technical IAM internals in parallel only after this package exposes a stable Competition reference contract; default ordering remains Competition before IAM.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-008",
+      "title": "Identity, Participation, Access & Session Vertical",
+      "kind": "owner-vertical",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement application-owned Identity, Competition-scoped Participation, current Access evaluation, first-party sessions, Cognito adapter/reverification and safe shared-device/context transitions.",
+      "hard_dependencies": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-004",
+        "IMP-007"
+      ],
+      "integration_dependencies": [
+        "IMP-006",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "Identity linkage",
+        "Participation/context authority",
+        "Access evaluation",
+        "opaque server session",
+        "session revocation/rotation",
+        "Cognito adapter",
+        "invitation/claim/reverification boundaries",
+        "shared-device/logout context clearing",
+        "IAM browser flows"
+      ],
+      "scope_out": [
+        "Competition ownership",
+        "Evaluation authority",
+        "technical break-glass production operations"
+      ],
+      "architecture_refs": [
+        "IAM-001..018",
+        "BND-009",
+        "RUN-010..011",
+        "CMD-020",
+        "CLT-006"
+      ],
+      "semantic_refs": [
+        "ENG-004",
+        "ENG-011"
+      ],
+      "provisional_owned_surfaces": [
+        "Identity & Access module",
+        "IAM/session persistence",
+        "Cognito adapter",
+        "protected-boundary access hooks",
+        "client session/context surfaces"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "shared-device context handoff",
+        "stale Participation/Access/session state",
+        "adversarial request volume"
+      ],
+      "serialized_surfaces": [
+        "IAM/session migrations",
+        "auth middleware/contracts",
+        "root lockfile/provider SDK integration"
+      ],
+      "parallelism": "Default hard ordering follows Competition Context → Identity & Access. 020-K may permit limited contract-first overlap, but not a reversed semantic dependency.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-009",
+      "title": "Evaluation Owner Vertical",
+      "kind": "owner-vertical",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the accepted Evaluation owner—Panel, occurrence, obligation, Rubric and Scorecard—through electronic Draft/finalization/correction workflows and phone-primary Judge UX.",
+      "hard_dependencies": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-004",
+        "IMP-007",
+        "IMP-008"
+      ],
+      "integration_dependencies": [
+        "IMP-005",
+        "IMP-006"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "Panel/evaluation occurrence/obligation",
+        "Rubric",
+        "Scorecard Draft/finalized state",
+        "evaluation basis/authorship",
+        "owner history/provenance",
+        "electronic finalization/correction",
+        "judge browser workflow",
+        "paper-entry seam but not full continuity reconciliation"
+      ],
+      "scope_out": [
+        "offline/local continuity mechanics",
+        "Outcome officiality",
+        "Export/Publication"
+      ],
+      "architecture_refs": [
+        "BND-002",
+        "PST-005..008",
+        "CMD-004..016",
+        "CLT-008..016"
+      ],
+      "semantic_refs": [
+        "ENG-005",
+        "ENG-006",
+        "ENG-007",
+        "ENG-012"
+      ],
+      "provisional_owned_surfaces": [
+        "Evaluation module",
+        "evaluation persistence/migrations",
+        "judge API/contracts",
+        "judge browser workspace"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "post-finalization correction",
+        "concurrent/repeated legitimate intent",
+        "conflicting legitimate authority resolved at the natural owner"
+      ],
+      "serialized_surfaces": [
+        "Evaluation migrations",
+        "Scorecard command contracts",
+        "judge client feature surfaces"
+      ],
+      "parallelism": "Semantic hinge for the program. Downstream Continuity, Outcomes and operational views can fan out after this owner is stable.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-010",
+      "title": "Offline, Multi-Device, Paper & Reconciliation Continuity",
+      "kind": "cross-cutting",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement RCV continuity around the Evaluation/IAM/client foundations: local Draft recovery, reconnect/currentness, multi-device convergence, shared-device privacy, paper capture/reconciliation and truthful degraded state.",
+      "hard_dependencies": [
+        "IMP-003",
+        "IMP-004",
+        "IMP-008",
+        "IMP-009"
+      ],
+      "integration_dependencies": [
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014",
+        "IMP-006"
+      ],
+      "scope_in": [
+        "local Draft recovery envelope",
+        "browser persistence adapter",
+        "revision-aware reconnect",
+        "conflict preservation",
+        "multi-device convergence",
+        "shared-device continuity",
+        "paper capture/transcription/reconciliation",
+        "degraded/unknown UI states"
+      ],
+      "scope_out": [
+        "disconnected authoritative finalization",
+        "second evaluation model",
+        "Outcome authority"
+      ],
+      "architecture_refs": [
+        "RCV-001..018",
+        "CLT-007..009",
+        "CLT-017",
+        "CMD-014",
+        "CMD-022"
+      ],
+      "semantic_refs": [
+        "ENG-005",
+        "ENG-008",
+        "ENG-012",
+        "ENG-013"
+      ],
+      "provisional_owned_surfaces": [
+        "continuity adapters",
+        "local Draft persistence",
+        "reconciliation application service/UI",
+        "paper capture integration"
+      ],
+      "provisional_evidence_classes": [
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "duplicate/offline Draft convergence",
+        "shared-device context handoff",
+        "paper/electronic capture disagreement",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "Evaluation Draft/reconciliation contract",
+        "client local-storage adapter"
+      ],
+      "parallelism": "Can run in parallel with IMP-011 and much of IMP-013 once IMP-009 is complete.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-011",
+      "title": "Outcomes & Officiality Owner Vertical",
+      "kind": "owner-vertical",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement Coverage/Aggregate/Rank realization, Awards, Outcome Declaration, readiness/finalization and correction/officiality semantics with organizer workflows.",
+      "hard_dependencies": [
+        "IMP-003",
+        "IMP-004",
+        "IMP-007",
+        "IMP-009"
+      ],
+      "integration_dependencies": [
+        "IMP-008",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "outcome-readiness calculations under owner authority",
+        "Coverage/Aggregate/Rank realization",
+        "Awards",
+        "Outcome Declaration",
+        "officiality/finalization/correction",
+        "owner history/provenance",
+        "organizer result/reconciliation workflows"
+      ],
+      "scope_out": [
+        "Artifact bytes",
+        "Publication/delivery",
+        "generic cross-owner dashboard"
+      ],
+      "architecture_refs": [
+        "BND-002",
+        "BND-005",
+        "PST-005..009",
+        "CMD-005..018",
+        "CLT-011..016"
+      ],
+      "semantic_refs": [
+        "ENG-006",
+        "ENG-007",
+        "ENG-009"
+      ],
+      "provisional_owned_surfaces": [
+        "Outcomes & Officiality module",
+        "outcome persistence/migrations",
+        "organizer outcome API/contracts",
+        "outcome browser workspace"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "affected Outcome Declaration with same visible winner",
+        "exceptional no-result closeout",
+        "conflicting legitimate authority resolved at the natural owner"
+      ],
+      "serialized_surfaces": [
+        "Outcome migrations",
+        "officiality command contracts",
+        "organizer outcome client surfaces"
+      ],
+      "parallelism": "Runs after Evaluation and can proceed alongside Continuity and operational projection work.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-012",
+      "title": "External Representation, Artifact & Publication Vertical",
+      "kind": "owner-vertical",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement exact-source Export, immutable Artifact metadata/bytes, explicit Publication, successor/withdrawal/currentness and controlled external delivery.",
+      "hard_dependencies": [
+        "IMP-003",
+        "IMP-004",
+        "IMP-011"
+      ],
+      "integration_dependencies": [
+        "IMP-002",
+        "IMP-006",
+        "IMP-005"
+      ],
+      "evidence_dependencies": [
+        "IMP-014"
+      ],
+      "scope_in": [
+        "Export SourceBasis/AudienceProfile",
+        "artifact generation/registration/integrity",
+        "object-storage adapter",
+        "Publication/release/withdraw/successor",
+        "controlled retrieval/delivery",
+        "external-representation provenance",
+        "browser/operator release surfaces",
+        "bounded async worker integration"
+      ],
+      "scope_out": [
+        "upstream source authority",
+        "external recipient possession recall",
+        "production release authorization"
+      ],
+      "architecture_refs": [
+        "ART-001..020",
+        "BND-010",
+        "RUN-008",
+        "RUN-012..013",
+        "CMD-019"
+      ],
+      "semantic_refs": [
+        "ENG-006",
+        "ENG-010",
+        "ENG-011"
+      ],
+      "provisional_owned_surfaces": [
+        "External Representation module",
+        "artifact/publication persistence/migrations",
+        "generation worker contracts",
+        "object-storage adapter",
+        "publication browser surfaces"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "scenario_seed_hints": [
+        "stale Export after source correction",
+        "withdrawn Publication while external copies remain",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "External Representation migrations",
+        "artifact worker/queue contracts",
+        "S3/SQS integration surfaces"
+      ],
+      "parallelism": "Downstream semantic package. May integrate with production-runtime work in parallel after its public/runtime contracts stabilize.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-013",
+      "title": "Cross-Owner Operational Projections & Read Models",
+      "kind": "derived-read",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement non-authoritative dashboards, readiness/search/reconciliation views and projection rebuild/freshness behavior across owners without acquiring write authority.",
+      "hard_dependencies": [
+        "IMP-003",
+        "IMP-004",
+        "IMP-007",
+        "IMP-009"
+      ],
+      "integration_dependencies": [
+        "IMP-008",
+        "IMP-010",
+        "IMP-011",
+        "IMP-012"
+      ],
+      "evidence_dependencies": [
+        "IMP-005",
+        "IMP-014"
+      ],
+      "scope_in": [
+        "cross-owner projection consumers",
+        "operational dashboards",
+        "search/readiness views",
+        "reconciliation queues/views",
+        "projection freshness/basis exposure",
+        "projection rebuild/failure UX"
+      ],
+      "scope_out": [
+        "authoritative transitions",
+        "Coverage/Aggregate/Rank ownership already assigned to Outcomes",
+        "generic god read/write model"
+      ],
+      "architecture_refs": [
+        "BND-008",
+        "PST-009..010",
+        "CMD-017",
+        "RUN-020",
+        "CLT-005"
+      ],
+      "semantic_refs": [
+        "ENG-006",
+        "ENG-013"
+      ],
+      "provisional_owned_surfaces": [
+        "packages/projections realization",
+        "projection consumers/storage",
+        "operational read APIs",
+        "dashboard/read-only browser views"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "scenario_seed_hints": [
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "projection registry/rebuild catalog",
+        "shared dashboard navigation if overlapping"
+      ],
+      "parallelism": "May start after Evaluation with incremental sources; completion waits for all v1 source owners it projects.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-014",
+      "title": "Verification, Protected Evaluator & Supply-Chain Evidence Infrastructure",
+      "kind": "verification-foundation",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement exact-SHA evidence bundles, protected evaluator integration, security/supply-chain scanners and repository delivery evidence required by autonomous exit gates.",
+      "hard_dependencies": [
+        "IMP-001",
+        "IMP-005"
+      ],
+      "integration_dependencies": [
+        "IMP-004",
+        "IMP-006"
+      ],
+      "evidence_dependencies": [],
+      "scope_in": [
+        "evidence bundle format/collector",
+        "protected evaluator runner/interface",
+        "secret/dependency/license/SBOM/container/IaC scan integration",
+        "exact-SHA evidence identity",
+        "review/CI evidence ingestion",
+        "repository enforcement evidence hooks"
+      ],
+      "scope_out": [
+        "hidden product requirements",
+        "product semantics",
+        "production deployment authorization"
+      ],
+      "architecture_refs": [
+        "RUN-016..021",
+        "IPG-008..015"
+      ],
+      "semantic_refs": [
+        "ENG-011",
+        "ENG-015",
+        "ENG-016",
+        "ENG-018"
+      ],
+      "provisional_owned_surfaces": [
+        "CI/evidence tooling",
+        "protected evaluator integration",
+        "scanner configuration",
+        "evidence bundle schema/storage"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E2",
+        "E3",
+        "E5",
+        "E6"
+      ],
+      "scenario_seed_hints": [
+        "adversarial request volume"
+      ],
+      "serialized_surfaces": [
+        "root CI workflows",
+        "scanner configuration",
+        "evidence schema",
+        "repository rule/check configuration"
+      ],
+      "parallelism": "Early support package after IMP-005. Should be available before most domain packages reach exit review.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    },
+    {
+      "id": "IMP-015",
+      "title": "Production Runtime, Deployment, Backup & Recovery Infrastructure",
+      "kind": "runtime",
+      "status": "PROPOSED",
+      "g1_ready": false,
+      "purpose": "Implement the production/recovery IaC and operational substrate required by RUN while preserving separate release/production authority.",
+      "hard_dependencies": [
+        "IMP-006",
+        "IMP-014"
+      ],
+      "integration_dependencies": [
+        "IMP-002",
+        "IMP-003",
+        "IMP-004",
+        "IMP-008",
+        "IMP-012"
+      ],
+      "evidence_dependencies": [
+        "IMP-005"
+      ],
+      "scope_in": [
+        "production/recovery OpenTofu modules",
+        "CloudFront/WAF/private origins",
+        "ECS/Fargate API/worker runtime",
+        "RDS Multi-AZ/PITR/backup copy",
+        "production Cognito/S3/SQS infrastructure",
+        "least-privilege roles/secrets/KMS",
+        "immutable build/deployment mechanics",
+        "cold recovery infrastructure",
+        "operational observability hooks"
+      ],
+      "scope_out": [
+        "production authorization",
+        "claiming G7",
+        "business semantic behavior",
+        "contractual uptime/RTO/RPO values without evidence"
+      ],
+      "architecture_refs": [
+        "RUN-001..026",
+        "PST-015..016",
+        "ART-004..019",
+        "IAM-014..017"
+      ],
+      "semantic_refs": [
+        "ENG-011",
+        "ENG-013",
+        "ENG-015",
+        "ENG-016"
+      ],
+      "provisional_owned_surfaces": [
+        "production/recovery infra",
+        "deployment/recovery workflows",
+        "runtime IAM/secrets/backup configuration"
+      ],
+      "provisional_evidence_classes": [
+        "E1",
+        "E3",
+        "E5",
+        "E6"
+      ],
+      "scenario_seed_hints": [
+        "adversarial request volume",
+        "unknown/degraded result"
+      ],
+      "serialized_surfaces": [
+        "production/recovery OpenTofu roots/backend",
+        "deployment workflows",
+        "migration/deployment ordering"
+      ],
+      "parallelism": "May begin after nonproduction/verification foundations, but should complete only after application/provider contracts needed for deployment are stable. It does not grant release or production authority.",
+      "g1_missing": [
+        "020-F final phase/package visible-success/evidence contract",
+        "020-G exact-SHA CI/supply-chain/evidence-bundle binding",
+        "020-I final scenario/migration/recovery/accessibility/performance/cost evidence mapping",
+        "020-K final package plan and implementation-phase assignment"
+      ]
+    }
+  ],
+  "hard_edges": [
+    {
+      "from": "IMP-001",
+      "to": "IMP-002",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-001",
+      "to": "IMP-003",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-003",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-001",
+      "to": "IMP-004",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-001",
+      "to": "IMP-005",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-001",
+      "to": "IMP-006",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-007",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-007",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-007",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-008",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-008",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-008",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-007",
+      "to": "IMP-008",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-009",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-009",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-009",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-007",
+      "to": "IMP-009",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-009",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-010",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-010",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-010",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-009",
+      "to": "IMP-010",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-011",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-011",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-007",
+      "to": "IMP-011",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-009",
+      "to": "IMP-011",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-012",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-012",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-011",
+      "to": "IMP-012",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-013",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-013",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-007",
+      "to": "IMP-013",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-009",
+      "to": "IMP-013",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-001",
+      "to": "IMP-014",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-014",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-015",
+      "type": "HARD_G2_PREDECESSOR"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-015",
+      "type": "HARD_G2_PREDECESSOR"
+    }
+  ],
+  "integration_edges": [
+    {
+      "from": "IMP-004",
+      "to": "IMP-003",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-003",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-004",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-004",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-010",
+      "to": "IMP-004",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-005",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-005",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-005",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-006",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-006",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-007",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-007",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-008",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-008",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-009",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-009",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-010",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-011",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-011",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-012",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-012",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-012",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-013",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-010",
+      "to": "IMP-013",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-011",
+      "to": "IMP-013",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-012",
+      "to": "IMP-013",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-014",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-014",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-002",
+      "to": "IMP-015",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-003",
+      "to": "IMP-015",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-004",
+      "to": "IMP-015",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-008",
+      "to": "IMP-015",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    },
+    {
+      "from": "IMP-012",
+      "to": "IMP-015",
+      "type": "INTEGRATION_G4_DEPENDENCY"
+    }
+  ],
+  "evidence_edges": [
+    {
+      "from": "IMP-006",
+      "to": "IMP-002",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-002",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-003",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-004",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-004",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-005",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-006",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-007",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-008",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-009",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-010",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-006",
+      "to": "IMP-010",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-011",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-012",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-013",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-014",
+      "to": "IMP-013",
+      "type": "EVIDENCE_DEPENDENCY"
+    },
+    {
+      "from": "IMP-005",
+      "to": "IMP-015",
+      "type": "EVIDENCE_DEPENDENCY"
+    }
+  ],
+  "topological_layers": [
+    {
+      "layer": 0,
+      "packages": [
+        "IMP-001"
+      ],
+      "meaning": "repair current executable topology before domain work"
+    },
+    {
+      "layer": 1,
+      "packages": [
+        "IMP-002",
+        "IMP-004",
+        "IMP-005",
+        "IMP-006"
+      ],
+      "meaning": "parallel technical foundations after topology"
+    },
+    {
+      "layer": 2,
+      "packages": [
+        "IMP-003",
+        "IMP-014"
+      ],
+      "meaning": "command/concurrency and independent verification infrastructure"
+    },
+    {
+      "layer": 3,
+      "packages": [
+        "IMP-007",
+        "IMP-015"
+      ],
+      "meaning": "first semantic owner plus production-runtime infrastructure work that can start without production authority"
+    },
+    {
+      "layer": 4,
+      "packages": [
+        "IMP-008"
+      ],
+      "meaning": "Identity/Access after Competition Context by default BND direction"
+    },
+    {
+      "layer": 5,
+      "packages": [
+        "IMP-009"
+      ],
+      "meaning": "Evaluation semantic hinge"
+    },
+    {
+      "layer": 6,
+      "packages": [
+        "IMP-010",
+        "IMP-011",
+        "IMP-013"
+      ],
+      "meaning": "continuity, outcomes and operational read-model fan-out"
+    },
+    {
+      "layer": 7,
+      "packages": [
+        "IMP-012"
+      ],
+      "meaning": "external representation downstream of official source authority"
+    }
+  ],
+  "semantic_critical_path": [
+    "IMP-001",
+    "IMP-002",
+    "IMP-003",
+    "IMP-007",
+    "IMP-008",
+    "IMP-009",
+    "IMP-011",
+    "IMP-012"
+  ],
+  "early_parallel_tracks": [
+    [
+      "IMP-002",
+      "IMP-004",
+      "IMP-005",
+      "IMP-006"
+    ],
+    [
+      "IMP-003",
+      "IMP-014"
+    ],
+    [
+      "IMP-010",
+      "IMP-011",
+      "IMP-013"
+    ]
+  ],
+  "serialization_groups": [
+    {
+      "id": "SER-LOCK",
+      "surfaces": [
+        "root lockfile",
+        "root package/workspace manifests"
+      ],
+      "policy": "one integration owner at a time when overlapping dependency edits occur",
+      "likely_packages": [
+        "IMP-001",
+        "IMP-002",
+        "IMP-003",
+        "IMP-004",
+        "IMP-005",
+        "IMP-006",
+        "IMP-008",
+        "IMP-012",
+        "IMP-014"
+      ]
+    },
+    {
+      "id": "SER-MIG",
+      "surfaces": [
+        "migration order/catalog",
+        "shared DB bootstrap"
+      ],
+      "policy": "owner-local migration authoring may parallelize; global registration/order integration is serialized",
+      "likely_packages": [
+        "IMP-002",
+        "IMP-007",
+        "IMP-008",
+        "IMP-009",
+        "IMP-011",
+        "IMP-012"
+      ]
+    },
+    {
+      "id": "SER-CI",
+      "surfaces": [
+        "root CI/workflows",
+        "scanner/check configuration"
+      ],
+      "policy": "single integration owner during workflow/check changes",
+      "likely_packages": [
+        "IMP-005",
+        "IMP-006",
+        "IMP-014",
+        "IMP-015"
+      ]
+    },
+    {
+      "id": "SER-IAC-NP",
+      "surfaces": [
+        "nonproduction OpenTofu backend/common modules/deployment roles"
+      ],
+      "policy": "serialize changes that touch common environment authority",
+      "likely_packages": [
+        "IMP-006",
+        "IMP-005",
+        "IMP-014"
+      ]
+    },
+    {
+      "id": "SER-IAC-PRD",
+      "surfaces": [
+        "production/recovery OpenTofu roots",
+        "deployment/recovery workflows"
+      ],
+      "policy": "single owner/integration window",
+      "likely_packages": [
+        "IMP-015"
+      ]
+    },
+    {
+      "id": "SER-AUTH",
+      "surfaces": [
+        "canonical/routing authority",
+        "generated indexes/registries"
+      ],
+      "policy": "implementation packages do not casually edit governance; explicitly assigned integration work only",
+      "likely_packages": [
+        "IMP-001",
+        "IMP-014"
+      ]
+    }
+  ],
+  "scenario_seed_coverage": {
+    "lost-response retry after consequential authoritative action": [
+      "IMP-003"
+    ],
+    "duplicate/offline Draft convergence": [
+      "IMP-010"
+    ],
+    "shared-device context handoff": [
+      "IMP-004",
+      "IMP-005",
+      "IMP-008",
+      "IMP-010"
+    ],
+    "stale Participation/Access/session state": [
+      "IMP-008"
+    ],
+    "paper/electronic capture disagreement": [
+      "IMP-010"
+    ],
+    "post-finalization correction": [
+      "IMP-009"
+    ],
+    "affected Outcome Declaration with same visible winner": [
+      "IMP-011"
+    ],
+    "exceptional no-result closeout": [
+      "IMP-011"
+    ],
+    "stale Export after source correction": [
+      "IMP-012"
+    ],
+    "withdrawn Publication while external copies remain": [
+      "IMP-012"
+    ],
+    "concurrent/repeated legitimate intent": [
+      "IMP-002",
+      "IMP-003",
+      "IMP-007",
+      "IMP-009"
+    ],
+    "partial bulk result": [
+      "IMP-003"
+    ],
+    "unknown/degraded result": [
+      "IMP-002",
+      "IMP-003",
+      "IMP-004",
+      "IMP-005",
+      "IMP-006",
+      "IMP-010",
+      "IMP-012",
+      "IMP-013",
+      "IMP-015"
+    ],
+    "adversarial request volume": [
+      "IMP-006",
+      "IMP-008",
+      "IMP-014",
+      "IMP-015"
+    ],
+    "conflicting legitimate authority resolved at the natural owner": [
+      "IMP-007",
+      "IMP-009",
+      "IMP-011"
+    ]
+  },
+  "phase_grouping_status": "DEFERRED_TO_020-K",
+  "final_v1_integration_phase_status": "DEFERRED_TO_020-J",
+  "constraints": [
+    "Existing directories do not define package identity.",
+    "The historical six-module topology is not a package decomposition.",
+    "The five accepted semantic owners remain authoritative even where implementation packages include cross-cutting technical work.",
+    "No proposed package is G1-ready at 020-E.",
+    "No proposed package is active or G2-authorized.",
+    "Parallelism never overrides serialized-surface or authority dependencies.",
+    "Production-runtime implementation does not imply release or production authorization.",
+    "Final implementation-phase numbering/grouping is not frozen until 020-K."
+  ]
+}
