@@ -8,6 +8,7 @@ from pathlib import Path
 CONTROL = "docs/routing/phase020_implementation_design_control.json"
 FRAMEWORK = "docs/routing/implementation_program_framework.json"
 PHASE019 = "docs/routing/phase019_architecture_decision_control.json"
+QUALIFICATION = "docs/routing/phase020_substrate_reuse_qualification.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -23,6 +24,7 @@ def main() -> int:
         control = json.loads((repo / CONTROL).read_text(encoding="utf-8"))
         framework = json.loads((repo / FRAMEWORK).read_text(encoding="utf-8"))
         phase019 = json.loads((repo / PHASE019).read_text(encoding="utf-8"))
+        qualification = json.loads((repo / QUALIFICATION).read_text(encoding="utf-8")) if (repo / QUALIFICATION).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -154,6 +156,38 @@ def main() -> int:
     if boundary.get("active_g2_authorizations") != []:
         errors.append("Phase 020 must not carry active G2 authorizations")
 
+    if "020-B" in completed:
+        if qualification is None:
+            errors.append("020-B completion requires substrate reuse qualification register")
+        else:
+            if control.get("substrate_reuse_qualification") != QUALIFICATION:
+                errors.append("Phase-020 control must point to substrate reuse qualification")
+            candidates = qualification.get("historical_candidates")
+            if not isinstance(candidates, list) or len(candidates) != 6:
+                errors.append("020-B must qualify exactly six historical implementation candidates")
+            elif any(item.get("disposition") != "REUSE_WITH_REVISION" for item in candidates if isinstance(item, dict)):
+                errors.append("all six historical implementation candidates must remain REUSE_WITH_REVISION at 020-B")
+            substrate = qualification.get("executable_substrate")
+            if not isinstance(substrate, list) or len(substrate) < 15:
+                errors.append("020-B executable substrate inventory is incomplete")
+            else:
+                old_topology = next((item for item in substrate if item.get("id") == "SUB-007"), None)
+                if not old_topology or old_topology.get("disposition") != "REPLACE":
+                    errors.append("020-B must mark the historical six-module topology for replacement/merge")
+            qcounts = qualification.get("counts", {})
+            if qcounts.get("workspace_packages") != 13:
+                errors.append("020-B baseline workspace-package count drift")
+            if qcounts.get("authored_test_files") != 0 or qcounts.get("migration_files") != 0:
+                errors.append("020-B baseline must not fabricate existing tests or migrations")
+            qboundary = qualification.get("execution_boundary", {})
+            if qboundary.get("active_implementation_packages") != 0 or qboundary.get("g2_authorized_packages") != 0:
+                errors.append("020-B qualification cannot create implementation packages/G2 authority")
+            if qboundary.get("domain_implementation_authorized") is not False:
+                errors.append("020-B qualification cannot authorize domain implementation")
+            admin = qualification.get("repository_administration", {})
+            if admin.get("enforced_merge_policy_claim_allowed") is not False:
+                errors.append("020-B must not claim enforced merge policy from workflow existence")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -163,6 +197,15 @@ def main() -> int:
         errors.append("implementation framework must retain zero active packages")
     if framework.get("phase020_design_control") != CONTROL:
         errors.append("implementation framework must point to Phase-020 design control")
+    phase020_fw = framework.get("phase020_program_design", {})
+    if phase020_fw.get("completed_subphases") != completed:
+        errors.append("implementation framework Phase-020 completed-subphase state drift")
+    expected_next = state.get("next_eligible_subphase")
+    if phase020_fw.get("next_eligible_subphase") != expected_next:
+        errors.append("implementation framework Phase-020 next-eligible state drift")
+    if "020-B" in completed and phase020_fw.get("substrate_reuse_qualification") != QUALIFICATION:
+        errors.append("implementation framework must reference 020-B reuse qualification after completion")
+
     gate = framework.get("future_start_gate", {})
     if gate.get("decomposition_state") != "PHASE_020_START_GATE_COMPLETE":
         errors.append("implementation framework must record Phase-020 start gate complete")
@@ -173,6 +216,7 @@ def main() -> int:
         f"{PHASE_DIR}/README.md",
         f"{PHASE_DIR}/index.md",
         f"{PHASE_DIR}/020-A-start-gate-authority-accepted-baseline-autonomous-development-method.md",
+        *([f"{PHASE_DIR}/020-B-existing-substrate-historical-implementation-reuse-qualification.md"] if "020-B" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
