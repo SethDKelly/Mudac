@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "authority": "POST-ARCHITECTURE IMPLEMENTATION PROGRAM FRAMEWORK — PACKAGE DERIVATION ALLOWED; DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
+  "authority": "PHASE-020 PROGRAM DESIGN ACTIVE — PACKAGE DERIVATION ALLOWED; DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
   "governing_contract": "docs/canonical/governance/implementation-program-delivery.md",
   "architecture_plan": "docs/routing/architecture_reentry_plan.json",
   "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
@@ -253,8 +253,8 @@
     "migration_compatibility_required_when_state_changes": true
   },
   "future_start_gate": {
-    "proposed_lifecycle": "Phase 020 — Implementation Planning & Controlled Delivery",
-    "decomposition_state": "READY_FOR_PHASE_020_START_GATE",
+    "proposed_lifecycle": "Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning",
+    "decomposition_state": "PHASE_020_START_GATE_COMPLETE",
     "required_actions": [
       "confirm accepted architecture baseline",
       "derive implementation packages from accepted architecture and current semantic authority",
@@ -264,9 +264,19 @@
       "establish supply-chain secrets fixture privacy migration baselines",
       "identify planning-ready packages",
       "explicitly decide whether any package receives G2 execution authorization"
-    ]
+    ],
+    "completed_by": "020-A"
   },
   "accepted_architecture_control": "docs/routing/phase019_architecture_decision_control.json",
   "accepted_architecture_owner": "docs/canonical/architecture/accepted-architecture.md",
-  "acceptance_record": "docs/019-architecture-engineering-reentry/019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md"
+  "acceptance_record": "docs/019-architecture-engineering-reentry/019-L-architecture-consolidation-acceptance-candidate-supersession-implementation-handoff.md",
+  "phase020_design_control": "docs/routing/phase020_implementation_design_control.json",
+  "phase020_program_design": {
+    "state": "ACTIVE",
+    "completed_subphases": [
+      "020-A"
+    ],
+    "next_eligible_subphase": "020-B",
+    "implementation_execution_authorized": false
+  }
 }
