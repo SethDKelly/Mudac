@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020-G CI/CD / SECURITY / SUPPLY-CHAIN / EXACT-REVISION EVIDENCE ARCHITECTURE — DESIGN ONLY; NO G2, RELEASE OR PRODUCTION AUTHORITY",
+  "phase": "020-G",
+  "baseline_head": "5f6933eb046d4efcffbce4a0af95dc1e0190e540",
+  "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md",
+  "prior_contract": "docs/routing/phase020_implementation_phase_contract.json",
+  "boundary": {
+    "design_only": true,
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false,
+    "active_packages": 0,
+    "g2_authorized_packages": 0,
+    "g1_ready_packages": 0,
+    "ci_pass_grants_merge_authority": false,
+    "merge_grants_deploy_authority": false,
+    "deploy_grants_production_readiness": false
+  },
+  "current_substrate": {
+    "workflows": [
+      {
+        "name": "Knowledge Validation",
+        "path": ".github/workflows/knowledge-validation.yml",
+        "role": "E1_REPOSITORY_GOVERNANCE"
+      },
+      {
+        "name": "Implementation Verification",
+        "path": ".github/workflows/implementation-verification.yml",
+        "role": "PUBLIC_IMPLEMENTATION_BASELINE"
+      },
+      {
+        "name": "CodeQL",
+        "path": ".github/workflows/codeql.yml",
+        "role": "STATIC_SECURITY_INPUT"
+      }
+    ],
+    "controls": [
+      "pnpm-lock.yaml committed",
+      "pnpm install --frozen-lockfile",
+      "packageManager and Node/pnpm engine constraints",
+      "pnpm lifecycle allowBuilds boundary",
+      "Dependabot npm and GitHub Actions updates",
+      "OpenTofu pinned installer version in implementation verification",
+      "read-only default permissions for ordinary validation"
+    ],
+    "observed_gaps": [
+      "blocking workflow action references use mutable release tags",
+      "no blocking dependency-review contract",
+      "no application-wide secret-scanning contract",
+      "no SBOM/provenance/attestation pipeline",
+      "no container/IaC vulnerability scanning pipeline",
+      "no exact-SHA evidence bundle",
+      "no protected-evaluator evidence binding",
+      "repository main protection enforcement not independently verified",
+      "no deployment workflow or production OIDC role"
+    ]
+  },
+  "principles": [
+    "EVIDENCE_PROVES_ONLY_THE_REVISION_IT_NAMES",
+    "BUILD_ONCE_PROMOTE_BY_IMMUTABLE_DIGEST",
+    "CI_DOES_NOT_CREATE_SEMANTIC_OR_RELEASE_OR_PRODUCTION_AUTHORITY",
+    "PUBLIC_AND_PROTECTED_VERIFICATION_REMAIN_SEPARATE",
+    "FAILED_OR_BLOCKED_EVIDENCE_IS_NOT_ERASED_BY_RETRY"
+  ],
+  "logical_ci_gates": {
+    "CI-KNOWLEDGE": {
+      "purpose": "repository knowledge/agentic/governance conformance",
+      "evidence_classes": [
+        "E1"
+      ],
+      "current_workflow": "Knowledge Validation"
+    },
+    "CI-IMPLEMENTATION": {
+      "purpose": "reproducible install, static quality, tests/build, local runtime and IaC baseline",
+      "evidence_classes": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "current_workflow": "Implementation Verification",
+      "rule": "E3 may be claimed only when the material runtime boundary is actually exercised"
+    },
+    "CI-SECURITY-SUPPLYCHAIN": {
+      "purpose": "dependency, secret, license-policy, SAST, IaC, container, SBOM and provenance controls",
+      "evidence_classes": [
+        "E1",
+        "E5",
+        "E6"
+      ],
+      "implementation_status": "NOT_IMPLEMENTED"
+    },
+    "CI-INTEGRATION": {
+      "purpose": "material DB/provider/runtime, cross-package, scenario, migration and nonproduction evidence",
+      "evidence_classes": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "implementation_status": "PARTIAL_FUTURE"
+    },
+    "CI-EVIDENCE": {
+      "purpose": "exact-revision evidence completeness and bundle finalization",
+      "evidence_classes": [
+        "E1"
+      ],
+      "implementation_status": "NOT_IMPLEMENTED",
+      "may_override_underlying_failure": false
+    }
+  },
+  "execution_tiers": [
+    {
+      "id": "T0",
+      "name": "LOCAL",
+      "authoritative_exit_evidence_default": false
+    },
+    {
+      "id": "T1",
+      "name": "PR_PUBLIC",
+      "purpose": "merge-facing public evidence"
+    },
+    {
+      "id": "T2",
+      "name": "EXACT_CANDIDATE",
+      "purpose": "frozen package/phase exit evidence and protected evaluation"
+    },
+    {
+      "id": "T3",
+      "name": "MAIN_INTEGRATION",
+      "purpose": "integration continuity and deep/scheduled evidence"
+    },
+    {
+      "id": "T4",
+      "name": "RELEASE_CANDIDATE",
+      "purpose": "G6 release evidence"
+    },
+    {
+      "id": "T5",
+      "name": "PRODUCTION",
+      "purpose": "G7/E7 evidence only"
+    }
+  ],
+  "exact_revision": {
+    "required_for_exit_evidence": true,
+    "identity_fields": [
+      "repository",
+      "source_commit_sha",
+      "source_tree_sha",
+      "workflow_or_evaluator_identity",
+      "workflow_definition_revision",
+      "run_id",
+      "attempt_id",
+      "started_at",
+      "completed_at",
+      "environment_tier",
+      "tool_versions",
+      "result",
+      "artifact_digests"
+    ],
+    "revision_classes": [
+      "base_sha",
+      "candidate_sha",
+      "integration_sha",
+      "release_sha"
+    ],
+    "checkout_rules": [
+      "fetch exact requested SHA",
+      "checkout exact SHA",
+      "record commit and tree identity",
+      "reject unexpected HEAD",
+      "reject uncommitted source mutation before capture",
+      "do not silently substitute another ref"
+    ],
+    "pr_merge_ref_is_exact_candidate_by_default": false,
+    "changed_tree_requires_affected_evidence_rerun": true,
+    "proven_content_equivalence_may_be_used_when_materially_valid": true
+  },
+  "supply_chain": {
+    "pnpm_lock_committed": true,
+    "frozen_lockfile_required": true,
+    "bounded_lifecycle_scripts_required": true,
+    "mutable_vcs_branch_dependency_for_production_forbidden": true,
+    "exact_runtime_tool_versions_for_exit_evidence": true,
+    "tofu_provider_lock_required_when_providers_exist": true,
+    "release_container_base_digest_pin_required": true,
+    "github_actions": {
+      "blocking_and_exit_actions_full_commit_sha_required": true,
+      "human_readable_release_comment_allowed": true,
+      "dependabot_updates_allowed": true,
+      "update_bypasses_review": false
+    },
+    "scanners": {
+      "dependency_review_required": true,
+      "secret_scanning_required": true,
+      "sast_required": true,
+      "iac_scanning_required_when_iac_exists": true,
+      "container_scanning_required_when_images_exist": true,
+      "license_policy_required_before_blocking_license_gate": true,
+      "scanner_unavailable_for_mandatory_check": "BLOCKED_OR_INCONCLUSIVE",
+      "zero_vulnerability_claim_from_configuration_forbidden": true
+    }
+  },
+  "credentials_and_permissions": {
+    "default_workflow_permissions": "READ_ONLY",
+    "job_scoped_permission_escalation_required": true,
+    "untrusted_pr_protected_credentials_forbidden": true,
+    "long_lived_aws_deployment_keys_forbidden": true,
+    "aws_oidc_for_future_deployment_required": true,
+    "protected_evaluator_credentials_resource_audience_bound": true,
+    "signing_credentials_after_trust_established_only": true,
+    "secrets_in_public_logs_or_evidence_forbidden": true
+  },
+  "artifact_integrity": {
+    "build_once_promote_by_digest": true,
+    "backend_container_digest_required_when_containerized": true,
+    "frontend_content_addressed_identity_required": true,
+    "rebuild_for_production_of_same_release_forbidden": true,
+    "sbom": {
+      "required_for_deployable_artifacts": true,
+      "allowed_format_class": [
+        "SPDX",
+        "CycloneDX",
+        "later accepted equivalent"
+      ],
+      "exact_format_version_must_be_visible": true
+    },
+    "provenance": {
+      "required_for_releaseable_artifacts": true,
+      "cryptographic_attestation_required": true,
+      "vendor_not_fixed_by_020g": true,
+      "minimum_bindings": [
+        "source_revision",
+        "build_definition",
+        "builder_identity",
+        "artifact_digest"
+      ]
+    }
+  },
+  "evidence_bundle": {
+    "model": "IMMUTABLE_CONTENT_ADDRESSED_MANIFEST_PLUS_REFERENCED_EVIDENCE",
+    "minimum_fields": [
+      "schema_version",
+      "phase_or_package_id",
+      "candidate_sha",
+      "candidate_tree_sha",
+      "integration_sha_if_applicable",
+      "criteria_contract_version",
+      "evidence_obligation_version",
+      "public_ci_results",
+      "protected_evaluator_result_reference",
+      "independent_review_references",
+      "adversarial_review_reference",
+      "scanner_results",
+      "scenario_test_control_refs",
+      "build_sbom_provenance_refs_if_applicable",
+      "environment_identities",
+      "artifact_digests",
+      "failure_retry_history",
+      "approved_exceptions",
+      "repository_enforcement_evidence",
+      "residual_risks",
+      "bundle_digest",
+      "finalization_actor",
+      "finalized_at"
+    ],
+    "every_required_criterion_mapped": true,
+    "opaque_log_archive_without_mapping_sufficient": false,
+    "final_manifest_mutable_after_finalization": false,
+    "public_protected_split_required": true,
+    "public_bundle_may_reference_protected_digest": true,
+    "hidden_probe_material_in_public_bundle_forbidden": true
+  },
+  "protected_evaluator_binding": {
+    "exact_candidate_sha_required": true,
+    "evaluator_definition_revision_recorded": true,
+    "tamper_evident_result_required": true,
+    "safe_criterion_outcomes_public": true,
+    "hidden_probe_material_outside_ordinary_implementer_context": true,
+    "may_modify_candidate_source": false,
+    "may_modify_visible_criteria": false,
+    "may_grant_g2_or_g5": false,
+    "production_use_forbidden": true,
+    "hidden_requirements_forbidden": true,
+    "if_secrecy_material_same_public_repo_for_probe_source_forbidden": true,
+    "narrow_status_or_attestation_write_principal_allowed": true
+  },
+  "retry_and_quarantine": {
+    "attempt_history_preserved": true,
+    "retry_may_erase_initial_failure": false,
+    "retry_until_green_for_flake_forbidden": true,
+    "mandatory_quarantine_requires_owner_reason_criterion_expiry": true,
+    "mandatory_security_authority_recovery_criteria_permanent_quarantine_forbidden": true,
+    "mandatory_evidence_service_outage_result": "BLOCKED_OR_INCONCLUSIVE"
+  },
+  "repository_enforcement": {
+    "desired_controls": [
+      "pull-request integration to main",
+      "required current blocking checks",
+      "force-push prohibited",
+      "branch deletion prohibited",
+      "review/conversation resolution as applicable",
+      "bypass restricted to explicit human break-glass/admin authority",
+      "branch freshness or merge-queue equivalent"
+    ],
+    "current_enforcement_verified": false,
+    "workflow_existence_proves_enforcement": false,
+    "phase021_may_claim_trusted_main_protection_without_evidence": false,
+    "verification_owner": "020-L / Phase-021 start gate and repository administration"
+  },
+  "deployment": {
+    "separate_from_verification": true,
+    "future_aws_oidc_required": true,
+    "protected_environment_required_where_available": true,
+    "exact_artifact_digest_required": true,
+    "separate_migrator_authority_required": true,
+    "application_startup_auto_migration_forbidden": true,
+    "production_from_untrusted_pr_forbidden": true,
+    "nonproduction_may_support": [
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "production_requires_separate_authorization": true
+  },
+  "imp014_binding": {
+    "package_id": "IMP-014",
+    "status": "PROPOSED",
+    "g1_ready": false,
+    "g2_authorized": false,
+    "owns": [
+      "exact-SHA evidence collector and manifest validator",
+      "public CI gate mapping",
+      "protected evaluator runner/result adapter",
+      "security and supply-chain scanner integration",
+      "SBOM/provenance/attestation",
+      "evidence retention plumbing",
+      "repository enforcement evidence capture",
+      "CI permissions and untrusted-code boundary"
+    ]
+  },
+  "imp015_binding": {
+    "package_id": "IMP-015",
+    "status": "PROPOSED",
+    "g1_ready": false,
+    "g2_authorized": false,
+    "consumes": [
+      "immutable artifact identity",
+      "build provenance",
+      "promotion-by-digest",
+      "deployment/recovery evidence contract"
+    ],
+    "production_authority_granted": false
+  },
+  "phase020_carry_forward": {
+    "next_eligible": "020-H",
+    "automatic_authorization": false,
+    "package_specific_instantiation": [
+      "020-I",
+      "020-K"
+    ],
+    "repository_enforcement_reconciliation": "020-L / Phase-021 start gate"
+  }
+}
