@@ -17,6 +17,7 @@ CI_EVIDENCE = "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
 REVIEW_EXIT = "docs/routing/phase020_review_repair_exit_gate_governance.json"
 CROSSCUT = "docs/routing/phase020_crosscutting_verification_architecture.json"
 V1_COMPLETION = "docs/routing/phase020_v1_completion_integration_design.json"
+ROADMAP = "docs/routing/phase020_autonomous_implementation_roadmap.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -41,6 +42,7 @@ def main() -> int:
         review_exit = json.loads((repo / REVIEW_EXIT).read_text(encoding="utf-8")) if (repo / REVIEW_EXIT).is_file() else None
         crosscut = json.loads((repo / CROSSCUT).read_text(encoding="utf-8")) if (repo / CROSSCUT).is_file() else None
         v1_completion = json.loads((repo / V1_COMPLETION).read_text(encoding="utf-8")) if (repo / V1_COMPLETION).is_file() else None
+        roadmap = json.loads((repo / ROADMAP).read_text(encoding="utf-8")) if (repo / ROADMAP).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -1083,6 +1085,221 @@ def main() -> int:
                     if pkg.get("g1_ready") is not False or pkg.get("status") != "PROPOSED":
                         errors.append(f"020-J {pid} must remain PROPOSED and below G1")
 
+    if "020-K" in completed:
+        if roadmap is None:
+            errors.append("020-K completion requires final autonomous implementation roadmap")
+        else:
+            if control.get("autonomous_implementation_roadmap") != ROADMAP:
+                errors.append("Phase-020 control must point to 020-K autonomous implementation roadmap")
+
+            boundary_k = roadmap.get("boundary", {})
+            if boundary_k.get("design_only") is not True or boundary_k.get("package_g1_decisions_may_be_recorded") is not True:
+                errors.append("020-K must remain design-only while permitting G1 decisions")
+            if boundary_k.get("package_g1_is_execution_authority") is not False:
+                errors.append("020-K G1 must not be execution authority")
+            for key in ("implementation_execution_authorized","release_authorized","production_authorized","automatic_phase_021_g2"):
+                if boundary_k.get(key) is not False:
+                    errors.append(f"020-K boundary.{key} must be false")
+            if boundary_k.get("g2_authorized_packages") != 0 or boundary_k.get("active_packages") != 0:
+                errors.append("020-K must retain zero G2-authorized and active packages")
+
+            phases_k = roadmap.get("phase_sequence", [])
+            expected_phase_ids = [f"{i:03d}" for i in range(21, 30)]
+            actual_phase_ids = [p.get("id") for p in phases_k if isinstance(p, dict)]
+            if actual_phase_ids != expected_phase_ids:
+                errors.append(f"020-K implementation phase sequence drift: {actual_phase_ids}")
+            expected_phase_packages = {
+                "021":["IMP-001"],
+                "022":["IMP-002","IMP-004","IMP-005","IMP-006"],
+                "023":["IMP-003","IMP-014"],
+                "024":["IMP-007"],
+                "025":["IMP-008"],
+                "026":["IMP-009"],
+                "027":["IMP-010","IMP-011"],
+                "028":["IMP-012","IMP-013","IMP-015"],
+                "029":[],
+            }
+            for p in phases_k:
+                if not isinstance(p, dict):
+                    continue
+                pid = p.get("id")
+                if p.get("packages") != expected_phase_packages.get(pid):
+                    errors.append(f"020-K phase {pid} package assignment drift")
+                if p.get("g2_authorized") is not False or p.get("next_phase_auto_authorization") is not False:
+                    errors.append(f"020-K phase {pid} must not be G2-authorized or auto-authorize next phase")
+                if p.get("start_gate_required") is not True or p.get("exit_gate_required") is not True:
+                    errors.append(f"020-K phase {pid} must retain start/exit gates")
+                if p.get("exact_entry_baseline_required") is not True or p.get("visible_criteria_required") is not True:
+                    errors.append(f"020-K phase {pid} must retain exact baseline and visible criteria")
+            final_phase_k = next((p for p in phases_k if isinstance(p, dict) and p.get("id")=="029"), {})
+            if final_phase_k.get("logical_alias") != "V1-FINAL":
+                errors.append("020-K phase 029 must remain V1-FINAL")
+
+            strategy = roadmap.get("agent_strategy", {})
+            if strategy.get("provider_preference_is_non_normative") is not True:
+                errors.append("020-K Cursor/Codex provider preference must remain non-normative")
+            if strategy.get("max_delegation_depth") != 1 or strategy.get("recursive_delegation") is not False:
+                errors.append("020-K delegation depth must remain one and recursive delegation forbidden")
+            if strategy.get("worktree_isolation_required") is not True or strategy.get("context_manifest_required") is not True or strategy.get("provenance_required") is not True:
+                errors.append("020-K must preserve worktree/context/provenance controls")
+
+            concurrency_k = roadmap.get("concurrency", {})
+            if not concurrency_k.get("shared_surface_rule") or not concurrency_k.get("root_lockfile_rule") or not concurrency_k.get("migration_catalog_rule"):
+                errors.append("020-K serialized-surface concurrency controls incomplete")
+            if concurrency_k.get("phase_maxima", {}).get("022") != 3 or concurrency_k.get("phase_maxima", {}).get("028") != 3:
+                errors.append("020-K key phase concurrency maxima drift")
+
+            packages_k = roadmap.get("packages", [])
+            expected_package_ids = [f"IMP-{i:03d}" for i in range(1, 16)]
+            actual_package_ids = [p.get("id") for p in packages_k if isinstance(p, dict)]
+            if actual_package_ids != expected_package_ids:
+                errors.append("020-K final package set must remain IMP-001..IMP-015 in order")
+            required_schema = set(framework.get("package_schema", {}).get("required_fields", []))
+            allowed_evidence = {e.get("id") for e in framework.get("evidence_classes", []) if isinstance(e, dict)}
+            assigned_packages = {pkg for vals in expected_phase_packages.values() for pkg in vals}
+            if assigned_packages != set(expected_package_ids):
+                errors.append("020-K phase assignment must cover every retained package exactly once before V1-FINAL")
+            seen_assigned=[]
+            for vals in expected_phase_packages.values():
+                seen_assigned.extend(vals)
+            if len(seen_assigned) != len(set(seen_assigned)):
+                errors.append("020-K package assigned to more than one implementation phase")
+
+            criterion_ids=set()
+            evidence_ids=set()
+            for pkg in packages_k:
+                if not isinstance(pkg, dict):
+                    continue
+                pid=pkg.get("id")
+                if pkg.get("status") != "READY_FOR_AUTHORIZATION" or pkg.get("g1_ready") is not True or pkg.get("g1_decision") != "PASS":
+                    errors.append(f"020-K {pid} must be G1 PASS / READY_FOR_AUTHORIZATION")
+                if pkg.get("implementation_phase") not in expected_phase_packages or pid not in expected_phase_packages.get(pkg.get("implementation_phase"), []):
+                    errors.append(f"020-K {pid} implementation phase assignment invalid")
+
+                field_aliases={
+                    "dependencies":"dependencies",
+                    "owned_surfaces":"owned_surfaces",
+                    "data_migration_impact":"data_migration_impact",
+                    "security_privacy_impact":"security_privacy_impact",
+                    "accessibility_degraded_impact":"accessibility_degraded_impact",
+                    "failure_recovery_impact":"failure_recovery_impact",
+                    "required_evidence_classes":"required_evidence_classes",
+                    "scenario_seeds":"scenario_seeds",
+                    "compatibility_rollback":"compatibility_rollback",
+                    "residual_risks":"residual_risks",
+                    "review_policy":"review_policy",
+                    "adversarial_review_policy":"adversarial_review_policy",
+                    "repair_budget":"repair_budget",
+                    "gatekeeper_policy":"gatekeeper_policy",
+                    "reopen_policy":"reopen_policy",
+                    "crosscutting_verification_profile":"crosscutting_verification_profile",
+                    "v1_scope_disposition":"v1_scope_disposition",
+                    "final_integration_relation":"final_integration_relation",
+                }
+                base_required={"id","title","purpose","status","scope_in","scope_out","semantic_refs","architecture_refs","eng_refs"}
+                for field in base_required | set(field_aliases):
+                    if field not in pkg or pkg.get(field) in (None,"",[]):
+                        errors.append(f"020-K {pid} G1 package schema missing/empty: {field}")
+
+                criteria_k=pkg.get("visible_success_criteria", [])
+                if not criteria_k:
+                    errors.append(f"020-K {pid} must instantiate visible success criteria")
+                for crit in criteria_k:
+                    if not isinstance(crit, dict):
+                        errors.append(f"020-K {pid} criterion must be object")
+                        continue
+                    cid=crit.get("id")
+                    if not cid or cid in criterion_ids:
+                        errors.append(f"020-K criterion ID missing/duplicate: {cid}")
+                    criterion_ids.add(cid)
+                    for field in ("statement","criterion_type","authority_refs","evidence_floor","material_boundary","verification_visibility","failure_class","applies_to"):
+                        if crit.get(field) in (None,"",[]):
+                            errors.append(f"020-K {cid} missing criterion field: {field}")
+                    if crit.get("required") is not True or crit.get("verification_visibility") != "PUBLIC":
+                        errors.append(f"020-K {cid} must remain required and publicly visible")
+                    floor=crit.get("evidence_floor", [])
+                    if not isinstance(floor,list) or any(e not in allowed_evidence for e in floor):
+                        errors.append(f"020-K {cid} evidence floor invalid")
+
+                evidence_k=pkg.get("evidence_obligations", [])
+                if not evidence_k:
+                    errors.append(f"020-K {pid} must instantiate evidence obligations")
+                criterion_local={x.get("id") for x in criteria_k if isinstance(x,dict)}
+                for ev in evidence_k:
+                    if not isinstance(ev,dict):
+                        errors.append(f"020-K {pid} evidence obligation must be object")
+                        continue
+                    eid=ev.get("id")
+                    if not eid or eid in evidence_ids:
+                        errors.append(f"020-K evidence obligation ID missing/duplicate: {eid}")
+                    evidence_ids.add(eid)
+                    for field in ("criterion_refs","evidence_class","claim","material_boundary","environment_tier","reproducibility","visibility","producer","retention_or_reference"):
+                        if ev.get(field) in (None,"",[]):
+                            errors.append(f"020-K {eid} missing evidence field: {field}")
+                    if ev.get("required") is not True:
+                        errors.append(f"020-K {eid} must remain required")
+                    if ev.get("evidence_class") not in allowed_evidence:
+                        errors.append(f"020-K {eid} evidence class invalid")
+                    if any(ref not in criterion_local for ref in ev.get("criterion_refs", [])):
+                        errors.append(f"020-K {eid} references unknown local criterion")
+                covered={ref for ev in evidence_k if isinstance(ev,dict) for ref in ev.get("criterion_refs",[])}
+                if criterion_local - covered:
+                    errors.append(f"020-K {pid} has criteria without evidence obligations: {sorted(criterion_local-covered)}")
+
+                g1e=pkg.get("g1_evidence", {})
+                for key in (
+                    "schema_complete","scope_explicit","traceability_complete","dependencies_explicit",
+                    "visible_criteria_instantiated","evidence_instantiated","scenario_obligations_instantiated",
+                    "crosscutting_classified","compatibility_rollback_explicit","residual_risks_explicit",
+                    "phase_assignment_known",
+                ):
+                    if g1e.get(key) is not True:
+                        errors.append(f"020-K {pid} g1_evidence.{key} must be true")
+                rb=pkg.get("repair_budget", {})
+                if rb.get("required") is not True or rb.get("scope_may_expand") is not False:
+                    errors.append(f"020-K {pid} repair budget must be bounded and non-expanding")
+                if rb.get("default_cycles") != 3 or rb.get("repeated_identical_failure_threshold") != 2:
+                    errors.append(f"020-K {pid} repair budget default drift")
+                if pkg.get("visible_thresholds_and_assumptions",{}).get("hidden_thresholds_forbidden") is not True:
+                    errors.append(f"020-K {pid} must forbid hidden thresholds")
+
+            readiness=roadmap.get("readiness_summary", {})
+            if readiness.get("package_count") != 15 or readiness.get("g1_ready_count") != 15 or readiness.get("ready_for_authorization_count") != 15:
+                errors.append("020-K readiness summary must record 15/15 G1 READY_FOR_AUTHORIZATION")
+            if readiness.get("g2_authorized_count") != 0 or readiness.get("active_count") != 0 or readiness.get("implementation_execution_authorized") is not False:
+                errors.append("020-K readiness summary must retain zero G2/active/execution")
+            if readiness.get("first_g2_candidate_packages") != ["IMP-001"] or readiness.get("first_phase_g2_authorized") is not False:
+                errors.append("020-K first G2 candidate must be IMP-001 and remain unauthorized")
+
+            entry_k=roadmap.get("phase_entry_readiness",{}).get("021",{})
+            if entry_k.get("after_phase020_exit") is not True or entry_k.get("explicit_g2_required") is not True or entry_k.get("currently_authorized") is not False:
+                errors.append("020-K Phase 021 entry must require Phase-020 exit + explicit G2 and remain unauthorized")
+            if entry_k.get("packages") != ["IMP-001"] or entry_k.get("g1_required") != ["IMP-001"]:
+                errors.append("020-K Phase 021 entry package set must be IMP-001")
+
+            terminal_k=roadmap.get("v1_terminal",{})
+            if terminal_k.get("phase_id")!="029" or terminal_k.get("logical_alias")!="V1-FINAL":
+                errors.append("020-K v1 terminal must be phase 029 / V1-FINAL")
+            if terminal_k.get("grants_g6") is not False or terminal_k.get("grants_g7") is not False:
+                errors.append("020-K v1 terminal must not grant G6/G7")
+            if terminal_k.get("next_state")!="RELEASE_CANDIDATE_ELIGIBLE_NOT_AUTHORIZED":
+                errors.append("020-K v1 terminal next state drift")
+
+            if package_discovery:
+                if package_discovery.get("final_autonomous_implementation_roadmap") != ROADMAP:
+                    errors.append("020-K discovery graph must bind final roadmap")
+                semk=package_discovery.get("semantics",{})
+                if semk.get("g1_ready_after_020k") != 15 or semk.get("final_readiness_authority") != ROADMAP:
+                    errors.append("020-K discovery semantics must point to 15-package final G1 authority")
+                if semk.get("discovery_status_is_not_final_lifecycle_status") is not True:
+                    errors.append("020-K must preserve discovery-vs-final status distinction")
+                for pkg in package_discovery.get("candidate_packages",[]):
+                    if not isinstance(pkg,dict):
+                        continue
+                    final_ref=pkg.get("final_020k_contract",{})
+                    if final_ref.get("source")!=ROADMAP or final_ref.get("final_disposition")!="RETAINED" or final_ref.get("final_g1_status")!="READY_FOR_AUTHORIZATION":
+                        errors.append(f"020-K discovery binding missing for {pkg.get('id')}")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -1116,13 +1333,18 @@ def main() -> int:
         errors.append("implementation framework must reference 020-I cross-cutting verification architecture after completion")
     if "020-J" in completed and phase020_fw.get("v1_completion_integration_design") != V1_COMPLETION:
         errors.append("implementation framework must reference 020-J v1 completion/integration design after completion")
+    if "020-K" in completed and phase020_fw.get("autonomous_implementation_roadmap") != ROADMAP:
+        errors.append("implementation framework must reference 020-K autonomous implementation roadmap after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
-        if phase020_fw.get("g1_ready_package_count") != 0 or phase020_fw.get("g2_authorized_package_count") != 0:
-            errors.append("implementation framework must keep 020-E packages below G1/G2")
+        expected_g1 = 15 if "020-K" in completed else 0
+        if phase020_fw.get("g1_ready_package_count") != expected_g1:
+            errors.append(f"implementation framework G1-ready count drift: expected {expected_g1}")
+        if phase020_fw.get("g2_authorized_package_count") != 0:
+            errors.append("implementation framework must retain zero G2-authorized packages during Phase 020")
         if phase020_fw.get("active_package_count") != 0:
-            errors.append("implementation framework must keep proposed packages inactive")
+            errors.append("implementation framework must keep packages inactive during Phase 020")
         if phase020_fw.get("package_graph_acyclic") is not True:
             errors.append("implementation framework must record acyclic 020-E graph")
 
@@ -1145,6 +1367,8 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-H-independent-code-review-adversarial-review-repair-reopen-exit-gate-governance.md"] if "020-H" in completed else []),
         *([f"{PHASE_DIR}/020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md"] if "020-I" in completed else []),
         *([f"{PHASE_DIR}/020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md"] if "020-J" in completed else []),
+        *([f"{PHASE_DIR}/020-K-full-autonomous-implementation-roadmap-agent-assignment-phase-package-definitions-entry-readiness.md"] if "020-K" in completed else []),
+        *(["docs/implementation-roadmap/index.md"] if "020-K" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
