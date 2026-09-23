@@ -163,6 +163,7 @@ class Validator:
             self.docs / "routing" / "phase020_implementation_design_control.json",
             self.docs / "routing" / "phase020_substrate_reuse_qualification.json",
             self.docs / "routing" / "autonomous_implementation_operating_model.json",
+            self.docs / "routing" / "phase020_nonproduction_test_control_architecture.json",
             self.docs / "canonical" / "governance" / "architecture-decision-authority.md",
             self.docs / "canonical" / "governance" / "implementation-program-delivery.md",
             self.docs / "canonical" / "governance" / "architecture-reentry-evaluation.md",
