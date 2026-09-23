@@ -38,6 +38,7 @@ Current repository/design-governance authority.
 - Phase-020 cross-cutting verification architecture: [`docs/routing/phase020_crosscutting_verification_architecture.json`](../../routing/phase020_crosscutting_verification_architecture.json)
 - Phase-020 v1 completion/integration design: [`docs/routing/phase020_v1_completion_integration_design.json`](../../routing/phase020_v1_completion_integration_design.json)
 - Phase-020 final autonomous implementation roadmap: [`docs/routing/phase020_autonomous_implementation_roadmap.json`](../../routing/phase020_autonomous_implementation_roadmap.json)
+- Phase-020 pre-implementation exit audit: [`docs/routing/phase020_preimplementation_exit_audit.json`](../../routing/phase020_preimplementation_exit_audit.json)
 - Implementation roadmap index: [`docs/implementation-roadmap/index.md`](../../implementation-roadmap/index.md)
 
 ## Current interpretation
