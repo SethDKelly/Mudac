@@ -63,7 +63,9 @@
       "repair_budget",
       "gatekeeper_policy",
       "reopen_policy",
-      "crosscutting_verification_profile"
+      "crosscutting_verification_profile",
+      "v1_scope_disposition",
+      "final_integration_relation"
     ],
     "identity_rule": "Package IDs are durable and independent of source layout; retired IDs are never reused.",
     "boundary_rule": "Package boundaries derive from accepted architecture plus current semantic authority, not one-to-one Concept mapping or historical file topology."
@@ -231,7 +233,8 @@
         "adversarial conformance review PASS",
         "no open blocking review finding",
         "exact-revision evidence bundle finalized",
-        "immutable G5 completion record"
+        "immutable G5 completion record",
+        "package completion does not by itself satisfy whole-system v1 completion"
       ],
       "execution_authority": false
     },
@@ -243,7 +246,8 @@
         "release authority",
         "applicable E6 evidence",
         "deployment/migration/rollback evidence",
-        "applicable restore/load/manual accessibility/cost-control evidence"
+        "applicable restore/load/manual accessibility/cost-control evidence",
+        "V1_IMPLEMENTATION_COMPLETE or an explicitly governed equivalent integrated-program completion state"
       ],
       "execution_authority": false
     },
@@ -305,9 +309,10 @@
       "020-F",
       "020-G",
       "020-H",
-      "020-I"
+      "020-I",
+      "020-J"
     ],
-    "next_eligible_subphase": "020-J",
+    "next_eligible_subphase": "020-K",
     "implementation_execution_authorized": false,
     "execution_authorization_during_phase020": "FORBIDDEN",
     "first_possible_domain_execution_lifecycle": "Phase 021 or later, after explicit G2",
@@ -344,6 +349,13 @@
     "post_g5_reopen_requires_reauthorization": true,
     "crosscutting_verification_architecture": "docs/routing/phase020_crosscutting_verification_architecture.json",
     "all_15_scenarios_mapped": true,
-    "migration_recovery_accessibility_performance_cost_mapping_complete": true
+    "migration_recovery_accessibility_performance_cost_mapping_complete": true,
+    "v1_completion_integration_design": "docs/routing/phase020_v1_completion_integration_design.json",
+    "v1_product_variant": "PF-01",
+    "v1_integrated_journey_count": 9,
+    "v1_whole_system_criterion_count": 12,
+    "v1_final_logical_phase": "V1-FINAL",
+    "v1_implementation_complete_grants_g6": false,
+    "v1_implementation_complete_grants_g7": false
   }
 }
