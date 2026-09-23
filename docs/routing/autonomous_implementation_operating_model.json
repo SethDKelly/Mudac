@@ -52,7 +52,11 @@
     "gatekeeper": {
       "agent_role": "AGENT_OR_AUTOMATION",
       "may_override_mandatory_failure": false,
-      "may_grant_next_g2": false
+      "may_grant_next_g2": false,
+      "same_authoring_run_as_implementer_for_candidate_forbidden": true,
+      "may_edit_candidate_source": false,
+      "may_fabricate_missing_evidence": false,
+      "may_merge_or_deploy_from_g5": false
     }
   },
   "delegation": {
@@ -180,7 +184,10 @@
     "exact_sha_verification_required": true,
     "preauthorized_gatekeeper_may_record_complete": true,
     "next_phase_becomes": "NEXT_ELIGIBLE",
-    "next_phase_g2": "NOT_GRANTED"
+    "next_phase_g2": "NOT_GRANTED",
+    "g5_record_immutable": true,
+    "post_g5_old_g2_closed": true,
+    "reopen_requires_explicit_reauthorization": true
   },
   "provider_posture": {
     "semantic_provider_preference": "NONE",
@@ -195,5 +202,6 @@
       "cloud_agents": "DOCUMENTED",
       "runtime_smoke": "NOT_REPOSITORY_VERIFIED"
     }
-  }
+  },
+  "review_repair_exit_gate_governance": "docs/routing/phase020_review_repair_exit_gate_governance.json"
 }
