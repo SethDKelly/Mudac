@@ -13,6 +13,7 @@ OPERATING = "docs/routing/autonomous_implementation_operating_model.json"
 TEST_CONTROL = "docs/routing/phase020_nonproduction_test_control_architecture.json"
 PACKAGE_DISCOVERY = "docs/routing/phase020_implementation_package_discovery.json"
 PHASE_CONTRACT = "docs/routing/phase020_implementation_phase_contract.json"
+CI_EVIDENCE = "docs/routing/phase020_ci_supplychain_evidence_architecture.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -33,6 +34,7 @@ def main() -> int:
         test_control = json.loads((repo / TEST_CONTROL).read_text(encoding="utf-8")) if (repo / TEST_CONTROL).is_file() else None
         package_discovery = json.loads((repo / PACKAGE_DISCOVERY).read_text(encoding="utf-8")) if (repo / PACKAGE_DISCOVERY).is_file() else None
         phase_contract = json.loads((repo / PHASE_CONTRACT).read_text(encoding="utf-8")) if (repo / PHASE_CONTRACT).is_file() else None
+        ci_evidence = json.loads((repo / CI_EVIDENCE).read_text(encoding="utf-8")) if (repo / CI_EVIDENCE).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -520,6 +522,91 @@ def main() -> int:
             if relation.get("g1_ready_count_after_020f") != 0:
                 errors.append("020-F must retain zero G1-ready packages")
 
+    if "020-G" in completed:
+        if ci_evidence is None:
+            errors.append("020-G completion requires CI/supply-chain/evidence architecture")
+        else:
+            if control.get("ci_supplychain_evidence_architecture") != CI_EVIDENCE:
+                errors.append("Phase-020 control must point to 020-G CI/supply-chain/evidence architecture")
+            boundary_g = ci_evidence.get("boundary", {})
+            for key in ("design_only",):
+                if boundary_g.get(key) is not True:
+                    errors.append(f"020-G boundary.{key} must be true")
+            for key in ("implementation_execution_authorized","release_authorized","production_authorized","ci_pass_grants_merge_authority","merge_grants_deploy_authority","deploy_grants_production_readiness"):
+                if boundary_g.get(key) is not False:
+                    errors.append(f"020-G boundary.{key} must be false")
+            if boundary_g.get("active_packages") != 0 or boundary_g.get("g2_authorized_packages") != 0 or boundary_g.get("g1_ready_packages") != 0:
+                errors.append("020-G must retain zero active/G1-ready/G2-authorized packages")
+
+            exact = ci_evidence.get("exact_revision", {})
+            if exact.get("required_for_exit_evidence") is not True:
+                errors.append("020-G exit evidence must require exact revision")
+            for field in ("repository","source_commit_sha","source_tree_sha","workflow_definition_revision","run_id","attempt_id","result","artifact_digests"):
+                if field not in exact.get("identity_fields", []):
+                    errors.append(f"020-G exact-revision identity missing field: {field}")
+            if exact.get("pr_merge_ref_is_exact_candidate_by_default") is not False:
+                errors.append("020-G must not silently treat PR merge refs as exact candidate identity")
+            if exact.get("changed_tree_requires_affected_evidence_rerun") is not True:
+                errors.append("020-G changed source tree must require affected evidence rerun")
+
+            supply = ci_evidence.get("supply_chain", {})
+            actions = supply.get("github_actions", {})
+            if actions.get("blocking_and_exit_actions_full_commit_sha_required") is not True:
+                errors.append("020-G blocking/exit GitHub Actions must require immutable full commit SHAs")
+            if actions.get("update_bypasses_review") is not False:
+                errors.append("020-G dependency/action updates must not bypass review")
+            if supply.get("frozen_lockfile_required") is not True or supply.get("bounded_lifecycle_scripts_required") is not True:
+                errors.append("020-G must retain frozen-lockfile and bounded lifecycle-script supply-chain controls")
+
+            artifacts = ci_evidence.get("artifact_integrity", {})
+            if artifacts.get("build_once_promote_by_digest") is not True:
+                errors.append("020-G must build once and promote by digest")
+            if artifacts.get("rebuild_for_production_of_same_release_forbidden") is not True:
+                errors.append("020-G must forbid production rebuild of an already-reviewed release")
+            if artifacts.get("provenance", {}).get("cryptographic_attestation_required") is not True:
+                errors.append("020-G releaseable artifacts require cryptographic provenance attestation")
+            if artifacts.get("sbom", {}).get("required_for_deployable_artifacts") is not True:
+                errors.append("020-G deployable artifacts require SBOM evidence")
+
+            bundle = ci_evidence.get("evidence_bundle", {})
+            if bundle.get("model") != "IMMUTABLE_CONTENT_ADDRESSED_MANIFEST_PLUS_REFERENCED_EVIDENCE":
+                errors.append("020-G evidence-bundle model drift")
+            if bundle.get("every_required_criterion_mapped") is not True:
+                errors.append("020-G evidence bundle must map every required criterion")
+            if bundle.get("final_manifest_mutable_after_finalization") is not False:
+                errors.append("020-G finalized evidence manifest must be immutable")
+            if bundle.get("hidden_probe_material_in_public_bundle_forbidden") is not True:
+                errors.append("020-G public evidence bundle must not expose hidden probe material")
+
+            evaluator_g = ci_evidence.get("protected_evaluator_binding", {})
+            for key in ("exact_candidate_sha_required","tamper_evident_result_required","hidden_probe_material_outside_ordinary_implementer_context","production_use_forbidden","hidden_requirements_forbidden"):
+                if evaluator_g.get(key) is not True:
+                    errors.append(f"020-G protected evaluator binding.{key} must be true")
+            for key in ("may_modify_candidate_source","may_modify_visible_criteria","may_grant_g2_or_g5"):
+                if evaluator_g.get(key) is not False:
+                    errors.append(f"020-G protected evaluator binding.{key} must be false")
+
+            retry = ci_evidence.get("retry_and_quarantine", {})
+            if retry.get("attempt_history_preserved") is not True or retry.get("retry_may_erase_initial_failure") is not False:
+                errors.append("020-G failure/retry history must remain preserved")
+            if retry.get("retry_until_green_for_flake_forbidden") is not True:
+                errors.append("020-G must forbid retry-until-green as trusted evidence")
+
+            enforcement = ci_evidence.get("repository_enforcement", {})
+            if enforcement.get("current_enforcement_verified") is not False:
+                errors.append("020-G must not claim repository main enforcement has been verified")
+            if enforcement.get("workflow_existence_proves_enforcement") is not False:
+                errors.append("020-G must not infer branch protection from workflow existence")
+            if enforcement.get("phase021_may_claim_trusted_main_protection_without_evidence") is not False:
+                errors.append("020-G must require evidence before Phase 021 trusts main protection")
+
+            imp014 = ci_evidence.get("imp014_binding", {})
+            if imp014.get("status") != "PROPOSED" or imp014.get("g1_ready") is not False or imp014.get("g2_authorized") is not False:
+                errors.append("020-G must not promote IMP-014 beyond PROPOSED")
+            imp015 = ci_evidence.get("imp015_binding", {})
+            if imp015.get("status") != "PROPOSED" or imp015.get("g1_ready") is not False or imp015.get("g2_authorized") is not False:
+                errors.append("020-G must not promote IMP-015 beyond PROPOSED")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -545,6 +632,8 @@ def main() -> int:
         errors.append("implementation framework must reference 020-E package discovery after completion")
     if "020-F" in completed and phase020_fw.get("implementation_phase_contract") != PHASE_CONTRACT:
         errors.append("implementation framework must reference 020-F phase contract after completion")
+    if "020-G" in completed and phase020_fw.get("ci_supplychain_evidence_architecture") != CI_EVIDENCE:
+        errors.append("implementation framework must reference 020-G CI/supply-chain/evidence architecture after completion")
     if "020-E" in completed:
         if phase020_fw.get("proposed_package_count") != 15:
             errors.append("implementation framework proposed package count drift")
@@ -570,6 +659,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md"] if "020-D" in completed else []),
         *([f"{PHASE_DIR}/020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md"] if "020-E" in completed else []),
         *([f"{PHASE_DIR}/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md"] if "020-F" in completed else []),
+        *([f"{PHASE_DIR}/020-G-ci-cd-security-supply-chain-exact-sha-verification-evidence-bundle-architecture.md"] if "020-G" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
