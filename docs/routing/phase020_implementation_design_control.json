@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-020 AUTONOMOUS IMPLEMENTATION PROGRAM DESIGN CONTROL — DESIGN/PLANNING ONLY; NO DOMAIN IMPLEMENTATION EXECUTION",
+  "phase": "020",
+  "title": "Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning",
+  "governing_phase_definition": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/README.md",
+  "accepted_architecture_owner": "docs/canonical/architecture/accepted-architecture.md",
+  "architecture_acceptance_control": "docs/routing/phase019_architecture_decision_control.json",
+  "implementation_program_framework": "docs/routing/implementation_program_framework.json",
+  "phase019_closure_head": "5dd4f08023fff964d1d6f055a2f53f79df460d1e",
+  "state": {
+    "status": "ACTIVE",
+    "completed_subphases": [
+      "020-A"
+    ],
+    "next_eligible_subphase": "020-B",
+    "currently_authorized_subphase": null,
+    "automatic_advance": false,
+    "whole_architecture_accepted": true,
+    "g0_satisfied": true,
+    "active_implementation_packages": 0,
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false
+  },
+  "subphase_plan": [
+    {
+      "id": "020-A",
+      "title": "Start Gate, Authority, Accepted Baseline & Autonomous-Development Method",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "020-B",
+      "title": "Existing Substrate, Historical Implementation & Reuse Qualification",
+      "status": "NEXT_ELIGIBLE"
+    },
+    {
+      "id": "020-C",
+      "title": "Cursor/Codex Roles, Work Isolation, Context, Provenance & Autonomy Circuit Breakers",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-D",
+      "title": "Non-Production Environment, Synthetic Data, Observability & MCP Agent Test-Control-Plane Architecture",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-E",
+      "title": "Implementation Phase/Package Discovery, Dependency Graph, Parallelism & Sequencing",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-F",
+      "title": "Implementation Phase Contract, Visible Criteria, Evidence Classes & Hidden Evaluation Architecture",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-G",
+      "title": "CI/CD, Security, Supply Chain, Exact-SHA Verification & Evidence-Bundle Architecture",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-H",
+      "title": "Independent Code Review, Adversarial Review, Repair/Reopen & Exit-Gate Governance",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-I",
+      "title": "Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-J",
+      "title": "v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-K",
+      "title": "Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness",
+      "status": "PLANNED"
+    },
+    {
+      "id": "020-L",
+      "title": "Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff",
+      "status": "PLANNED"
+    }
+  ],
+  "phase_contract_model": {
+    "start_gate_required": true,
+    "phase_definition_required": true,
+    "visible_success_criteria_required": true,
+    "required_evidence_visible": true,
+    "g2_execution_authorization_required": true,
+    "implementer_may_self_close": false,
+    "independent_code_review_required": true,
+    "adversarial_conformance_review_required": true,
+    "exact_sha_ci_required": true,
+    "hidden_evaluation_allowed": true,
+    "hidden_requirements_forbidden": true,
+    "repair_loop_required": true,
+    "automatic_next_phase_authorization": false
+  },
+  "autonomous_roles": {
+    "implementer": "Cursor or Codex; performs only explicitly G2-authorized work",
+    "reviewer": "prefer a different agent from implementer; independent code/design-fidelity review",
+    "verifier": "public CI plus protected criteria-derived evaluator",
+    "gatekeeper": "integrates evidence and decides exit outcome",
+    "authorizer": "human/program authority; sole source of G2 or later authorization",
+    "role_rotation_allowed": true
+  },
+  "mcp_test_control_plane": {
+    "required_design_subphase": "020-D",
+    "environment": "NON_PRODUCTION_ONLY",
+    "planes": [
+      "fixture",
+      "action/browser",
+      "observation",
+      "approved-fault"
+    ],
+    "normal_application_boundaries_required": true,
+    "synthetic_fixtures_default": true,
+    "action_trace_correlation_required": true,
+    "production_target_forbidden": true,
+    "arbitrary_sql_forbidden": true,
+    "arbitrary_shell_forbidden": true,
+    "arbitrary_cloud_admin_forbidden": true,
+    "secret_retrieval_forbidden": true,
+    "semantic_authority_bypass_forbidden": true,
+    "hidden_evaluator_separate_from_mcp_server": true
+  },
+  "v1_boundary": {
+    "final_integrated_v1_phase_required": true,
+    "whole_system_hardening_required": true,
+    "all_15_scenarios_required": true,
+    "architecture_conformance_required": true,
+    "implementation_complete_not_equal_release_candidate": true,
+    "implementation_complete_not_equal_production_ready": true
+  },
+  "implementation_boundary": {
+    "repository_governance_design_changes_authorized": true,
+    "implementation_program_design_authorized": true,
+    "phase_package_derivation_authorized": true,
+    "mudac_domain_implementation_authorized": false,
+    "active_g2_authorizations": [],
+    "production_mcp_deployment_forbidden": true
+  },
+  "counts": {
+    "planned_subphases": 12,
+    "completed_subphases": 1,
+    "active_implementation_packages": 0,
+    "g2_authorized_packages": 0
+  }
+}
