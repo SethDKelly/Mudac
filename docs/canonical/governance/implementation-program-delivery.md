@@ -432,3 +432,36 @@ All Phase-016/IPG mandatory scenario seeds must have at least one proposed packa
 Final implementation-phase grouping remains owned by 020-K. The final whole-system v1 integration/hardening phase remains owned by 020-J.
 
 A package becomes G1-ready only after later Phase-020 work completes its visible success/evidence contract, CI/evidence bindings, cross-cutting scenario obligations and final package/phase assignment.
+
+
+# Implementation phase, success-criterion and protected-evaluation contract
+
+Phase 020-F defines the reusable implementation contract at:
+
+> docs/routing/phase020_implementation_phase_contract.json
+
+The governing rule is:
+
+> **Hide the probe, never the requirement.**
+
+Before G2, a future implementation phase exposes its actual scope, package set, exact baseline, authority references, dependencies, work graph, success criteria, evidence obligations, scenario/security/accessibility/recovery/performance/cost obligations, allowed external actions, circuit breakers and exit predicates.
+
+Each real acceptance threshold that defines required product/runtime behavior is visible. Protected evaluation may hide exact fixtures, samples, randomized generation, interleavings, fault timing, request ordering, mutation variants, test source and evaluator-only infrastructure; it may not hide the requirement, architecture rule, normative threshold, evidence floor, material boundary, required environment tier, mandatory scenario category or known blocker.
+
+Success criteria are outcome/obligation statements with stable IDs and explicit minimum evidence boundaries. A stronger evidence composition may satisfy a criterion; a weaker evidence class may not be substituted merely for convenience.
+
+The protected evaluator:
+
+- is independent of the ordinary Implementer run/context;
+- evaluates the exact candidate revision;
+- derives probes only from the visible contract;
+- cannot use production;
+- cannot alter candidate code, acceptance criteria, G2 or next-phase authority;
+- cannot use secret semantic bypasses;
+- cannot count fixture seeding as proof of the application command it bypassed.
+
+Required criterion outcomes fail closed on **FAIL**, **BLOCKED** or **INCONCLUSIVE**. `NOT_APPLICABLE` requires governed rationale and is not an Implementer escape hatch.
+
+A multi-package implementation phase may receive G2 only when every package in its explicit authorization set is G1-complete and its predecessor/independence state is satisfied.
+
+Defining this reusable contract does not itself make the Phase-020 proposed packages G1-ready. Package-specific criteria/evidence are instantiated later under 020-I/020-K.
