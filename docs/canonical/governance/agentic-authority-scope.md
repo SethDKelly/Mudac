@@ -275,21 +275,27 @@ If an action could reasonably be A3 or A4 and the required explicit intent is ab
 | A3 | external / destructive / scope-expanding | Only as specifically authorized | **Yes** |
 | A4 | semantic / accepted-architecture change | Only through explicit change intent and governance | **Yes** |
 
-# Phase-018 boundary
+# Current implementation-program boundary
 
-During Phase 018:
+Phase 020 is the final pre-implementation design lifecycle.
 
-- A1 and bounded A2 repository-governance work are allowed within the selected subphase;
-- A3 remains separately authorized action by action;
-- A4 may be analyzed/proposed, but Phase 018 does not silently reopen Concept Design or adopt architecture;
-- domain implementation remains unauthorized until a later explicit execution gate.
+During Phase 020:
 
-# Relationship to 018-F/G/H
+- A1 and bounded A2 repository-governance/program-design work are allowed within the selected subphase;
+- A3 remains separately authorized unless a bounded external action is explicitly included in the selected task;
+- A4 may be analyzed/proposed but requires explicit human change intent and governed propagation;
+- active implementation packages and G2 authorizations remain zero;
+- domain implementation remains unauthorized.
 
-018-E owns authority and scope semantics.
+For Phase 021 or later, a human-selected G2 phase/package may activate the bounded autonomous execution model defined by 020-C. That permits Coordinator-managed declared work units without granting autonomous next-phase selection, recursive delegation, merge/deploy authority or semantic/architecture change authority.
 
-Later work should not duplicate them:
+# Relationship to supporting governance
 
-- 018-F defines context budgets and retrieval economics;
-- 018-G defines reusable skills/tool adapters that inherit this contract;
-- 018-H defines proportionate conformance tests proving adapters and status/routing surfaces honor it.
+This contract owns authority/scope semantics.
+
+Supporting owners refine, but do not replace, it:
+
+- Agent Context defines retrieval/context discipline;
+- Portable Agent Workflows defines shared procedures and provider adapters;
+- Implementation Program Delivery defines G0–G7/package execution gates;
+- Phase-020 machine projections encode conformance/routing for the accepted autonomous operating model.
