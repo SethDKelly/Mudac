@@ -12,7 +12,7 @@ The current product definition is representation-independent: volunteer Judges a
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
 - [Phase 019](docs/019-architecture-engineering-reentry/) — **COMPLETE — PASS; whole architecture accepted / G0 satisfied**.
-- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A/B COMPLETE / 020-C NEXT ELIGIBLE**.
+- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A/B/C COMPLETE / 020-D NEXT ELIGIBLE**.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -41,7 +41,7 @@ The sole adopted product/application variant remains:
 Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
 
 
-Phase 018 and Phase 019 are complete. **Phase 020 is ACTIVE** as the final pre-implementation design lifecycle; 020-A/B are complete and 020-C is next eligible. Whole architecture remains accepted and G0 permits program/package derivation, while domain implementation execution remains unauthorized until a later explicit G2 decision.
+Phase 018 and Phase 019 are complete. **Phase 020 is ACTIVE** as the final pre-implementation design lifecycle; 020-A/B/C are complete and 020-D is next eligible. Whole architecture remains accepted and G0 permits program/package derivation, while domain implementation execution remains unauthorized until a later explicit G2 decision.
 
 
 Current Phase-019 progression:
@@ -54,8 +54,8 @@ Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
 accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 ACTIVE
-020-A/B COMPLETE
-020-C NEXT ELIGIBLE
+020-A/B/C COMPLETE
+020-D NEXT ELIGIBLE
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
