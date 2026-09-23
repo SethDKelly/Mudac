@@ -406,3 +406,29 @@ Remote MCP authorization must be resource/audience-bound to the test-control pla
 The test-control plane may support E2–E5 and selected E6 evidence. It cannot establish E7 production evidence.
 
 Phase 020 remains design-only: this contract does not itself deploy a non-production environment, implement an MCP server or grant G2.
+
+
+# Phase-020 proposed implementation-package graph
+
+Phase 020-E derives the current proposed package catalog and dependency graph at:
+
+> docs/routing/phase020_implementation_package_discovery.json
+
+The catalog currently contains **IMP-001 through IMP-015** in lifecycle state **PROPOSED**.
+
+These identities are planning outputs under G0. They are not active implementation packages and do not satisfy G1 or G2.
+
+The graph distinguishes:
+
+- hard G2 predecessor edges;
+- integration/G4 dependencies that may allow implementation overlap;
+- evidence dependencies that may close later than ordinary coding;
+- serialized shared surfaces that constrain otherwise parallel work.
+
+The hard dependency graph must remain acyclic.
+
+All Phase-016/IPG mandatory scenario seeds must have at least one proposed package owner before Phase 020-E may remain closed.
+
+Final implementation-phase grouping remains owned by 020-K. The final whole-system v1 integration/hardening phase remains owned by 020-J.
+
+A package becomes G1-ready only after later Phase-020 work completes its visible success/evidence contract, CI/evidence bindings, cross-cutting scenario obligations and final package/phase assignment.
