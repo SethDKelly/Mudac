@@ -263,6 +263,21 @@ def main() -> int:
             errors,
         )
 
+        review_exit_repo = clone_repo(source, tmp, "review-exit")
+        review_exit_path = review_exit_repo / "docs/routing/phase020_review_repair_exit_gate_governance.json"
+        review_exit = json.loads(review_exit_path.read_text(encoding="utf-8"))
+        review_exit["independent_code_review"]["same_authoring_run_forbidden"] = False
+        review_exit["repair"]["may_expand_scope"] = True
+        review_exit["gatekeeper"]["may_override_mandatory_failure"] = True
+        review_exit["completion_record"]["immutable"] = False
+        review_exit["reopen_authorization"]["automatic_old_g2_restoration"] = True
+        review_exit_path.write_text(json.dumps(review_exit, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "020-H review/reopen authority collapse",
+            run_script(source, review_exit_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(review_exit_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -275,7 +290,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 16 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 17 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
