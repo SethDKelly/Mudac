@@ -293,6 +293,22 @@ def main() -> int:
             errors,
         )
 
+        v1_repo = clone_repo(source, tmp, "v1-completion")
+        v1_path = v1_repo / "docs/routing/phase020_v1_completion_integration_design.json"
+        v1 = json.loads(v1_path.read_text(encoding="utf-8"))
+        v1["v1_scope"]["current_concepts"] = v1["v1_scope"]["current_concepts"][:-1]
+        v1["integrated_journeys"] = v1["integrated_journeys"][:-1]
+        v1["whole_system_criteria"][0]["blocking"] = False
+        v1["final_integration_hardening_phase"]["creates_new_product_scope"] = True
+        v1["v1_completion_state"]["grants_g6_release_candidate"] = True
+        v1["residual_risk_policy"]["zero_known_blocking_findings_required"] = False
+        v1_path.write_text(json.dumps(v1, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "020-J v1 scope/final-integration authority expansion",
+            run_script(source, v1_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(v1_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -305,7 +321,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 18 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 19 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
