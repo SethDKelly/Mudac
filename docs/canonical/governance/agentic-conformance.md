@@ -12,6 +12,7 @@ sources:
   - resource: ../../018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/018-G-agent-skills-tool-adapters-workflow-contracts-cross-agent-portability.md
   - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md
   - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md
+  - resource: ../../020-autonomous-implementation-program-design-verification-v1-delivery/020-F-implementation-phase-contract-visible-criteria-evidence-classes-hidden-evaluation-architecture.md
 generated: { by: openai/gpt-5.6-sol, at: 2026-09-22T03:53:00Z }
 ---
 
@@ -54,7 +55,7 @@ Current resolution must reject quarantined candidates unless candidate inclusion
 
 For controls where a false-positive PASS would materially weaken authority or security boundaries, CI must include mutation-based negative tests showing the relevant validator fails when the protected contract is deliberately broken.
 
-Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage, architecture pre-selection leakage, implementation-execution leakage, Phase-019 premature decision acceptance, Phase-020 implementation-authority leakage, recursive autonomous-delegation leakage, non-production MCP production-target leakage and high-confidence secret insertion.
+Current negative controls cover status-mirror drift, A1 edit-authority corruption, duplicate provider workflow source, generated OKF drift, stable-reference index drift, downstream-candidate adoption leakage, architecture pre-selection leakage, implementation-execution leakage, Phase-019 premature decision acceptance, Phase-020 implementation-authority leakage, recursive autonomous-delegation leakage, non-production MCP production-target leakage, implementation-package dependency-cycle leakage, protected-evaluator hidden-requirement leakage and high-confidence secret insertion.
 
 <a id="cnf-006"></a>
 ## CNF-006 — Agent Workflow/Adapters Remain Subordinate Under Conformance
