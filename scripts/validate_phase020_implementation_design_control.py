@@ -11,6 +11,7 @@ PHASE019 = "docs/routing/phase019_architecture_decision_control.json"
 QUALIFICATION = "docs/routing/phase020_substrate_reuse_qualification.json"
 OPERATING = "docs/routing/autonomous_implementation_operating_model.json"
 TEST_CONTROL = "docs/routing/phase020_nonproduction_test_control_architecture.json"
+PACKAGE_DISCOVERY = "docs/routing/phase020_implementation_package_discovery.json"
 PHASE_DIR = "docs/020-autonomous-implementation-program-design-verification-v1-delivery"
 EXPECTED = [f"020-{chr(code)}" for code in range(ord("A"), ord("L") + 1)]
 
@@ -29,6 +30,7 @@ def main() -> int:
         qualification = json.loads((repo / QUALIFICATION).read_text(encoding="utf-8")) if (repo / QUALIFICATION).is_file() else None
         operating = json.loads((repo / OPERATING).read_text(encoding="utf-8")) if (repo / OPERATING).is_file() else None
         test_control = json.loads((repo / TEST_CONTROL).read_text(encoding="utf-8")) if (repo / TEST_CONTROL).is_file() else None
+        package_discovery = json.loads((repo / PACKAGE_DISCOVERY).read_text(encoding="utf-8")) if (repo / PACKAGE_DISCOVERY).is_file() else None
     except (OSError, json.JSONDecodeError) as exc:
         print("ERROR", exc)
         return 1
@@ -292,6 +294,97 @@ def main() -> int:
             if phase_boundary.get("domain_implementation_authorized") is not False:
                 errors.append("020-D must retain domain implementation unauthorized")
 
+    if "020-E" in completed:
+        if package_discovery is None:
+            errors.append("020-E completion requires implementation package discovery graph")
+        else:
+            if control.get("implementation_package_discovery") != PACKAGE_DISCOVERY:
+                errors.append("Phase-020 control must point to implementation package discovery graph")
+            semantics = package_discovery.get("semantics", {})
+            if semantics.get("proposed_package_count") != 15:
+                errors.append("020-E must retain exactly 15 proposed package candidates")
+            if semantics.get("proposed_packages_are_active") is not False:
+                errors.append("020-E proposed packages must not be active")
+            if semantics.get("g1_satisfied") is not False or semantics.get("g2_authorized") is not False:
+                errors.append("020-E package discovery must not satisfy G1 or G2")
+            if semantics.get("implementation_execution_authorized") is not False:
+                errors.append("020-E package discovery must not authorize implementation execution")
+
+            packages = package_discovery.get("candidate_packages")
+            if not isinstance(packages, list):
+                errors.append("020-E candidate_packages must be a list")
+                packages = []
+            expected_pkg_ids = [f"IMP-{i:03d}" for i in range(1, 16)]
+            pkg_ids = [p.get("id") for p in packages if isinstance(p, dict)]
+            if pkg_ids != expected_pkg_ids:
+                errors.append(f"020-E package ID drift: expected {expected_pkg_ids}, got {pkg_ids}")
+            if len(set(pkg_ids)) != len(pkg_ids):
+                errors.append("020-E package IDs must be unique")
+            for pkg in packages:
+                if not isinstance(pkg, dict):
+                    continue
+                if pkg.get("status") != "PROPOSED":
+                    errors.append(f"{pkg.get('id')}: 020-E packages must remain PROPOSED")
+                if pkg.get("g1_ready") is not False:
+                    errors.append(f"{pkg.get('id')}: 020-E package must not be G1-ready")
+                if not pkg.get("g1_missing"):
+                    errors.append(f"{pkg.get('id')}: missing explicit G1 carry-forward")
+
+            pkg_set = set(pkg_ids)
+            hard_edges = package_discovery.get("hard_edges", [])
+            adjacency = {pid: [] for pid in pkg_ids}
+            indegree = {pid: 0 for pid in pkg_ids}
+            for edge in hard_edges:
+                if not isinstance(edge, dict):
+                    errors.append("020-E hard edge must be an object")
+                    continue
+                src, dst = edge.get("from"), edge.get("to")
+                if src not in pkg_set or dst not in pkg_set:
+                    errors.append(f"020-E hard edge references unknown package: {src}->{dst}")
+                    continue
+                if src == dst:
+                    errors.append(f"020-E hard edge self-cycle: {src}")
+                    continue
+                adjacency[src].append(dst)
+                indegree[dst] += 1
+            queue = [pid for pid in pkg_ids if indegree[pid] == 0]
+            visited = []
+            while queue:
+                node = queue.pop(0)
+                visited.append(node)
+                for nxt in adjacency[node]:
+                    indegree[nxt] -= 1
+                    if indegree[nxt] == 0:
+                        queue.append(nxt)
+            if len(visited) != len(pkg_ids):
+                errors.append("020-E hard dependency graph must remain acyclic")
+
+            for pkg in packages:
+                if not isinstance(pkg, dict):
+                    continue
+                for dep_key in ("hard_dependencies", "integration_dependencies", "evidence_dependencies"):
+                    for dep in pkg.get(dep_key, []):
+                        if dep not in pkg_set:
+                            errors.append(f"{pkg.get('id')}: unknown {dep_key} dependency {dep}")
+                        if dep == pkg.get("id"):
+                            errors.append(f"{pkg.get('id')}: self dependency in {dep_key}")
+
+            scenario_coverage = package_discovery.get("scenario_seed_coverage", {})
+            expected_scenarios = framework.get("scenario_seeds", [])
+            if set(scenario_coverage) != set(expected_scenarios):
+                errors.append("020-E scenario coverage keys must exactly match IPG scenario seeds")
+            for scenario in expected_scenarios:
+                owners = scenario_coverage.get(scenario)
+                if not isinstance(owners, list) or not owners:
+                    errors.append(f"020-E scenario seed has no proposed package owner: {scenario}")
+                elif any(owner not in pkg_set for owner in owners):
+                    errors.append(f"020-E scenario seed references unknown package: {scenario}")
+
+            if package_discovery.get("phase_grouping_status") != "DEFERRED_TO_020-K":
+                errors.append("020-E must defer final phase grouping to 020-K")
+            if package_discovery.get("final_v1_integration_phase_status") != "DEFERRED_TO_020-J":
+                errors.append("020-E must defer final v1 integration phase to 020-J")
+
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
         errors.append("G0 package derivation must remain allowed")
@@ -313,6 +406,17 @@ def main() -> int:
         errors.append("implementation framework must reference 020-C operating model after completion")
     if "020-D" in completed and phase020_fw.get("nonproduction_test_control_architecture") != TEST_CONTROL:
         errors.append("implementation framework must reference 020-D test-control architecture after completion")
+    if "020-E" in completed and phase020_fw.get("implementation_package_discovery") != PACKAGE_DISCOVERY:
+        errors.append("implementation framework must reference 020-E package discovery after completion")
+    if "020-E" in completed:
+        if phase020_fw.get("proposed_package_count") != 15:
+            errors.append("implementation framework proposed package count drift")
+        if phase020_fw.get("g1_ready_package_count") != 0 or phase020_fw.get("g2_authorized_package_count") != 0:
+            errors.append("implementation framework must keep 020-E packages below G1/G2")
+        if phase020_fw.get("active_package_count") != 0:
+            errors.append("implementation framework must keep proposed packages inactive")
+        if phase020_fw.get("package_graph_acyclic") is not True:
+            errors.append("implementation framework must record acyclic 020-E graph")
 
     gate = framework.get("future_start_gate", {})
     if gate.get("decomposition_state") != "PHASE_020_START_GATE_COMPLETE":
@@ -327,6 +431,7 @@ def main() -> int:
         *([f"{PHASE_DIR}/020-B-existing-substrate-historical-implementation-reuse-qualification.md"] if "020-B" in completed else []),
         *([f"{PHASE_DIR}/020-C-cursor-codex-roles-work-isolation-context-provenance-autonomy-circuit-breakers.md"] if "020-C" in completed else []),
         *([f"{PHASE_DIR}/020-D-nonproduction-environment-synthetic-data-observability-mcp-agent-test-control-plane-architecture.md"] if "020-D" in completed else []),
+        *([f"{PHASE_DIR}/020-E-implementation-phase-package-discovery-dependency-graph-parallelism-sequencing.md"] if "020-E" in completed else []),
     ):
         if not (repo / rel).is_file():
             errors.append(f"missing Phase-020 authority surface: {rel}")
