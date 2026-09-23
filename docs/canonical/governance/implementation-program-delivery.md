@@ -465,3 +465,20 @@ Required criterion outcomes fail closed on **FAIL**, **BLOCKED** or **INCONCLUSI
 A multi-package implementation phase may receive G2 only when every package in its explicit authorization set is G1-complete and its predecessor/independence state is satisfied.
 
 Defining this reusable contract does not itself make the Phase-020 proposed packages G1-ready. Package-specific criteria/evidence are instantiated later under 020-I/020-K.
+
+
+# CI, supply-chain, exact-revision and evidence-bundle architecture
+
+Phase 020-G defines the current delivery/evidence projection at:
+
+> docs/routing/phase020_ci_supplychain_evidence_architecture.json
+
+Exit-relevant evidence must bind to the exact source commit/tree it evaluates. Public CI, protected evaluation, independent review, release/promotion and production remain separate control planes; PASS at one plane never grants the authority of the next.
+
+Future blocking/exit GitHub Actions dependencies must be pinned to immutable full commit SHAs, releaseable artifacts must be built once and promoted by digest, and deployable artifacts require explicit SBOM/provenance/attestation evidence. Security scanners supplement rather than replace behavioral E5 evidence.
+
+Package/phase evidence is represented as an immutable, content-addressed manifest plus referenced evidence. The bundle preserves failed/retried attempts, criterion/evidence mappings, public/protected boundaries, artifact digests, exceptions, review references and residual risks. Protected evaluator probes remain outside ordinary implementer context when secrecy is material.
+
+Repository workflow existence does not prove main-branch protection. Phase 021 may rely on protected-main enforcement only after the administrative configuration is independently observed and recorded.
+
+Phase 020-G remains design-only. It does not implement IMP-014/015, grant G1/G2, authorize release or authorize production.
