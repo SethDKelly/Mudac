@@ -1385,7 +1385,7 @@ def main() -> int:
                 if handoff_l.get("g2_state") != "NOT_AUTHORIZED":
                     errors.append("Phase 021 handoff after 020-L must still leave G2 NOT_AUTHORIZED")
             else:
-                if audit_status != "BLOCKED" or audit_outcome != "BLOCKED_REPOSITORY_ENFORCEMENT":
+                if audit_status != "BLOCKED" or audit_outcome not in {"BLOCKED_REPOSITORY_ENFORCEMENT", "BLOCKED_RULESET_ENFORCEMENT_DISABLED"}:
                     errors.append("open 020-L audit must remain BLOCKED on the observed repository-enforcement finding")
                 blocker_ids = {x.get("id") for x in findings_l if isinstance(x, dict)}
                 if "P020L-001" not in blocker_ids:
@@ -1396,8 +1396,24 @@ def main() -> int:
                     errors.append("P020L-001 must record observed main protected=false until reverified")
                 if evidence_l.get("observed_required_status_checks_enforcement") != "off":
                     errors.append("P020L-001 must record status-check enforcement off until reverified")
-                if evidence_l.get("observed_rulesets") != []:
-                    errors.append("P020L-001 must record the observed empty ruleset set until reverified")
+                observed_rulesets_l = evidence_l.get("observed_rulesets", [])
+                if audit_outcome == "BLOCKED_REPOSITORY_ENFORCEMENT":
+                    if observed_rulesets_l != []:
+                        errors.append("P020L-001 legacy blocker must record the observed empty ruleset set")
+                else:
+                    if not isinstance(observed_rulesets_l, list) or len(observed_rulesets_l) != 1:
+                        errors.append("P020L-001 ruleset-disabled state must record exactly one observed ruleset")
+                    else:
+                        observed_ruleset_l = observed_rulesets_l[0]
+                        if observed_ruleset_l.get("id") != 24024518 or observed_ruleset_l.get("name") != "main — protected":
+                            errors.append("P020L-001 observed ruleset identity drift")
+                        if observed_ruleset_l.get("enforcement") != "disabled":
+                            errors.append("P020L-001 ruleset-disabled state must record enforcement=disabled")
+                        expected_checks_l = {"Validate agentic/documentation conformance", "Implementation Verification", "CodeQL JavaScript/TypeScript"}
+                        if set(observed_ruleset_l.get("required_checks", [])) != expected_checks_l:
+                            errors.append("P020L-001 required-check set drift")
+                        if observed_ruleset_l.get("strict_required_status_checks_policy") is not True:
+                            errors.append("P020L-001 strict required status checks must remain enabled")
                 if finding.get("repository_admin_action_required") is not True:
                     errors.append("P020L-001 must remain an explicit repository-admin action")
                 if state.get("preimplementation_audit_status") != "BLOCKED":
@@ -1406,7 +1422,7 @@ def main() -> int:
                     errors.append("Phase-020 state must expose 020-L as the blocked subphase")
                 if state.get("phase021_start_gate_eligible") is not False or state.get("phase021_g2_authorized") is not False:
                     errors.append("blocked 020-L must keep Phase 021 ineligible and G2 unauthorized")
-                if handoff_l.get("status") != "BLOCKED_PENDING_REPOSITORY_ENFORCEMENT":
+                if handoff_l.get("status") not in {"BLOCKED_PENDING_REPOSITORY_ENFORCEMENT", "BLOCKED_PENDING_RULESET_ACTIVATION"}:
                     errors.append("blocked 020-L must expose a blocked Phase-021 handoff")
                 if handoff_l.get("g1_state") != "READY_FOR_AUTHORIZATION" or handoff_l.get("g2_state") != "NOT_AUTHORIZED":
                     errors.append("Phase-021 handoff must preserve IMP-001 G1 readiness and zero G2")
@@ -1440,8 +1456,10 @@ def main() -> int:
                     if enforcement_l.get("current_enforcement_verified") is not False:
                         errors.append("blocked 020-L must not claim repository enforcement verified")
                     last_l = enforcement_l.get("last_observation", {})
-                    if last_l.get("protected") is not False or last_l.get("result") != "BLOCKING":
-                        errors.append("020-G enforcement record must preserve the blocking main-protection observation")
+                    if last_l.get("protected") is not False:
+                        errors.append("020-G enforcement record must preserve protected=false until ruleset activation")
+                    if last_l.get("result") not in {"BLOCKING", "BLOCKING_RULESET_DISABLED"}:
+                        errors.append("020-G enforcement record must preserve a blocking enforcement observation")
 
     fw_state = framework.get("state", {})
     if fw_state.get("package_derivation_allowed") is not True:
