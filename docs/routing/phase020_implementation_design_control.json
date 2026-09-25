@@ -357,7 +357,7 @@
   "preimplementation_exit_audit": "docs/routing/phase020_preimplementation_exit_audit.json",
   "preimplementation_audit_summary": {
     "result": "BLOCKED",
-    "blocker": "P020L-001_MAIN_PROTECTION_NOT_ENFORCED",
+    "blocker": "P020L-001_RULESET_ENFORCEMENT_DISABLED",
     "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
     "workflow_action_pins_immutable": true,
     "exact_head_ci_candidate": "e139155520e68f516709bfdfa68e359d5149c699",
@@ -365,10 +365,15 @@
     "implementation_verification": "PASS",
     "codeql": "PASS",
     "main_protected": false,
-    "ruleset_count": 0,
+    "ruleset_count": 1,
     "required_status_checks_enforced": false,
     "phase020_complete": false,
     "phase021_eligible": false,
-    "phase021_g2_authorized": false
+    "phase021_g2_authorized": false,
+    "ruleset_id": 24024518,
+    "ruleset_name": "main — protected",
+    "ruleset_contract_validated": true,
+    "ruleset_enforcement": "disabled",
+    "knowledge_validation_universal_pr_trigger": true
   }
 }
