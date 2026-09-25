@@ -370,9 +370,16 @@
     "final_phase_grouping_completed_by": "020-K",
     "phase021_requires_020l_exit": true,
     "preimplementation_audit_state": "BLOCKED",
-    "preimplementation_blocker": "P020L-001_MAIN_PROTECTION_NOT_ENFORCED",
+    "preimplementation_blocker": "P020L-001_RULESET_ENFORCEMENT_DISABLED",
     "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
     "phase021_start_gate_eligible": false,
-    "phase021_g2_authorized": false
+    "phase021_g2_authorized": false,
+    "preimplementation_ruleset": {
+      "id": 24024518,
+      "name": "main — protected",
+      "contract_validated": true,
+      "enforcement": "disabled",
+      "knowledge_validation_universal_pr_trigger": true
+    }
   }
 }
