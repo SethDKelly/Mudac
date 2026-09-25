@@ -3,7 +3,7 @@
   "authority": "PHASE-020-L PRE-IMPLEMENTATION EXIT AUDIT / PHASE-021 HANDOFF — CURRENT OUTCOME BLOCKED; NO G2",
   "phase": "020-L",
   "audit_status": "BLOCKED",
-  "audit_outcome": "BLOCKED_REPOSITORY_ENFORCEMENT",
+  "audit_outcome": "BLOCKED_RULESET_ENFORCEMENT_DISABLED",
   "audit_candidate_head": "e139155520e68f516709bfdfa68e359d5149c699",
   "audit_candidate_tree": null,
   "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md",
@@ -12,12 +12,35 @@
     {
       "id": "P020L-001",
       "severity": "BLOCKING",
-      "title": "main branch is not protected",
+      "title": "main protection ruleset is valid but enforcement is disabled",
       "evidence": {
         "branch_endpoint": "https://api.github.com/repos/SethDKelly/Mudac/branches/main",
         "observed_protected": false,
         "observed_required_status_checks_enforcement": "off",
-        "observed_rulesets": [],
+        "observed_rulesets": [
+          {
+            "id": 24024518,
+            "name": "main — protected",
+            "enforcement": "disabled",
+            "target": "branch",
+            "include": [
+              "~DEFAULT_BRANCH"
+            ],
+            "required_checks": [
+              "Validate agentic/documentation conformance",
+              "Implementation Verification",
+              "CodeQL JavaScript/TypeScript"
+            ],
+            "strict_required_status_checks_policy": true,
+            "required_approving_review_count": 1,
+            "dismiss_stale_reviews_on_push": true,
+            "require_last_push_approval": true,
+            "required_review_thread_resolution": true,
+            "deletion_prohibited": true,
+            "non_fast_forward_prohibited": true,
+            "bypass_actors": []
+          }
+        ],
         "branch_protection_detail_endpoint": "403 Resource not accessible by integration"
       },
       "violated_controls": [
@@ -26,15 +49,10 @@
         "020-K Phase-021 entry requires repository enforcement observation"
       ],
       "required_resolution": [
-        "require pull-request integration to main",
-        "require Validate agentic/documentation conformance",
-        "require Implementation Verification",
-        "require CodeQL JavaScript/TypeScript",
-        "require current/up-to-date branch or merge-queue equivalent",
-        "require conversation resolution",
-        "prohibit force pushes",
-        "prohibit main deletion",
-        "restrict bypass to explicit human break-glass/admin authority"
+        "change ruleset 24024518 (main — protected) enforcement from disabled to active",
+        "re-observe main protection/ruleset enforcement through GitHub",
+        "verify the three required status checks are enforced",
+        "verify exact-head Knowledge Validation, Implementation Verification and CodeQL pass"
       ],
       "connector_can_resolve": false,
       "repository_admin_action_required": true
@@ -189,7 +207,7 @@
     "production_authorized": false
   },
   "phase021_handoff": {
-    "status": "BLOCKED_PENDING_REPOSITORY_ENFORCEMENT",
+    "status": "BLOCKED_PENDING_RULESET_ACTIVATION",
     "phase": "021",
     "title": "Source Topology & Implementation Foundation",
     "package_set": [
