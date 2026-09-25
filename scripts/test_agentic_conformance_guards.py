@@ -362,8 +362,8 @@ def main() -> int:
         knowledge_pr_path = knowledge_pr_repo / ".github/workflows/knowledge-validation.yml"
         knowledge_pr_text = knowledge_pr_path.read_text(encoding="utf-8")
         knowledge_pr_text = knowledge_pr_text.replace(
-            "  pull_request:\\n    branches:\\n      - main\\n",
-            "  pull_request:\\n    paths:\\n      - docs/**\\n",
+            "  pull_request:\n    branches:\n      - main\n",
+            "  pull_request:\n    paths:\n      - docs/**\n",
             1,
         )
         knowledge_pr_path.write_text(knowledge_pr_text, encoding="utf-8")
