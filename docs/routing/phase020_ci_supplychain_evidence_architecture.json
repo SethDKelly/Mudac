@@ -316,7 +316,10 @@
         {
           "id": 24024518,
           "name": "main — protected",
-          "enforcement": "active"
+          "enforcement": "active",
+          "required_approving_review_count": 0,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true
         }
       ],
       "ruleset_contract_validated": true,
@@ -328,6 +331,8 @@
       ],
       "strict_required_status_checks_policy": true,
       "bypass_actors": [],
+      "phase020_closure_merge_commit": "056535009d83f11f6edb96c6f4cf57fcdbaf72f8",
+      "post_merge_required_checks_passed": true,
       "result": "PASS"
     },
     "exit_blocker_id": null
