@@ -47,22 +47,27 @@ Entry planning head:
 
 Phase 020 is **not** complete.
 
-The repository planning corpus is coherent and exact-head CI was made clean during this audit, but the administrative repository trust boundary required by 020-G and 020-K is not currently enforced.
+The repository planning corpus is coherent and exact-head CI was made clean during this audit. A correctly configured `main — protected` ruleset now exists, but its enforcement is currently disabled, so the administrative trust boundary required by 020-G and 020-K is still not enforced.
 
 The blocking finding is:
 
 > **P020L-001 — `main` is not protected.**
 
-GitHub reports:
+GitHub currently reports:
 
 ~~~text
 main.protected                           false
 main.protection.enabled                  false
 required status-check enforcement        off
-repository rulesets                      []
+ruleset                                  main — protected
+ruleset enforcement                      disabled
 ~~~
 
-The connected GitHub integration does not have repository-administration permission to install branch protection or a ruleset.
+The ruleset contract has been validated: it targets the default branch, requires one approving review, dismisses stale approvals, requires approval of the most recent push and resolved review threads, requires the three expected GitHub Actions checks in strict mode, prohibits deletion/non-fast-forward updates, and grants no bypass actors.
+
+`Knowledge Validation` now runs on every pull request targeting `main`, so its required check can no longer be skipped by PR path filtering.
+
+The connected GitHub integration does not have repository-administration permission to activate the ruleset.
 
 This blocker is tracked as:
 
@@ -147,7 +152,7 @@ It does **not** prove repository enforcement.
 
 # Required main enforcement
 
-Before this phase may pass, repository administration must configure branch protection or a ruleset targeting `main` that enforces the controls already accepted in 020-G:
+Before this phase may pass, repository administration must change ruleset `main — protected` from **Disabled** to **Active**. Its configured controls already satisfy the accepted 020-G policy:
 
 - pull-request integration to `main`;
 - required **Validate agentic/documentation conformance** check;
@@ -174,7 +179,7 @@ Package G2                  NOT AUTHORIZED
 Execution                   FORBIDDEN
 ~~~
 
-After repository enforcement is configured, 020-L must re-run the exit audit and verify:
+After the ruleset is activated, 020-L must re-run the exit audit and verify:
 
 1. Phase-020 authority is otherwise unchanged;
 2. exact `main` SHA/tree is known;
