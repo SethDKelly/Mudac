@@ -38,9 +38,9 @@ bypass actors                            none
 
 The active ruleset targets the default branch and requires:
 
-- one approving review;
+- no mandatory GitHub approval count for the current single-owner repository policy;
 - dismissal of stale approvals after new pushes;
-- approval of the most recent push;
+- no last-push approval requirement for the current single-owner repository policy;
 - review-thread resolution;
 - **Validate agentic/documentation conformance**;
 - **Implementation Verification**;
@@ -78,22 +78,24 @@ The adversarial/negative-control suite now exercises **23 guard mutations**, inc
 
 # Protected-main entry evidence
 
-The repository-enforcement and pre-closure CI baseline is:
+The final Phase-020 closure merge is:
 
 ~~~text
-commit  f30c3a4344b0e14c2181460cf320c6a791bb6cb9
-tree    06dff17834c037ea8feb6a5824cc76481073a188
+commit  056535009d83f11f6edb96c6f4cf57fcdbaf72f8
+tree    1c9e01d42d388173062a809a0ea5ab3a8282272d
 ~~~
+
+The closure PR itself used head `86108f08e9860cf2d2c824d4231967784b3fd061` and passed all required checks before merge.
 
 At that exact revision:
 
 | Required check | Run | Result |
 |---|---:|---|
-| Knowledge Validation | 36201699103 | **PASS** |
-| Implementation Verification | 36201699097 | **PASS** |
-| CodeQL | 36201699081 | **PASS** |
+| Knowledge Validation | 36202790011 | **PASS** |
+| Implementation Verification | 36202790134 | **PASS** |
+| CodeQL | 36202790110 | **PASS** |
 
-The Phase-020 closure itself is submitted through the newly protected main PR path. Therefore the closure candidate must also satisfy the same required checks and human approval before it can enter main.
+The Phase-020 closure was merged through the protected `main` PR path after its required checks passed. The resulting merge commit also passed Knowledge Validation, Implementation Verification, and CodeQL.
 
 # Phase-020 exit criteria
 
