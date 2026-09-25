@@ -15,18 +15,8 @@ on:
       - ".claude/**"
       - ".github/workflows/knowledge-validation.yml"
   pull_request:
-    paths:
-      - "AGENTS.md"
-      - "CLAUDE.md"
-      - "README.md"
-      - "requirements-docs.txt"
-      - "scripts/**"
-      - "docs/**"
-      - "knowledge/**"
-      - ".agents/**"
-      - ".cursor/**"
-      - ".claude/**"
-      - ".github/workflows/knowledge-validation.yml"
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
