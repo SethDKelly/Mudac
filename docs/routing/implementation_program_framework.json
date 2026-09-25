@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "authority": "PHASE-020 PROGRAM DESIGN ACTIVE — PACKAGE DERIVATION ALLOWED; DOES NOT CREATE PACKAGES OR AUTHORIZE EXECUTION",
+  "authority": "PHASE-020 PROGRAM DESIGN COMPLETE — PACKAGE G1 READINESS ESTABLISHED; IMPLEMENTATION STILL REQUIRES EXPLICIT G2",
   "governing_contract": "docs/canonical/governance/implementation-program-delivery.md",
   "architecture_plan": "docs/routing/architecture_reentry_plan.json",
   "obligation_register": "docs/canonical/governance/downstream-realization-obligations.md",
