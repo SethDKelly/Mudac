@@ -7,7 +7,7 @@
   "audit_candidate_head": "f30c3a4344b0e14c2181460cf320c6a791bb6cb9",
   "audit_candidate_tree": "06dff17834c037ea8feb6a5824cc76481073a188",
   "phase_record": "docs/020-autonomous-implementation-program-design-verification-v1-delivery/020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md",
-  "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
+  "blocking_issue": null,
   "blocking_findings": [],
   "repairs_completed_during_020l": [
     {
@@ -212,5 +212,13 @@
     "bypass_actors": [],
     "knowledge_validation_universal_pr_trigger": true,
     "result": "PASS"
-  }
+  },
+  "resolved_findings": [
+    {
+      "id": "P020L-001",
+      "title": "main protection ruleset enforcement",
+      "resolution": "RESOLVED",
+      "evidence": "ruleset 24024518 / main — protected observed active; main.protected=true; required checks configured strict; no bypass actors"
+    }
+  ]
 }
