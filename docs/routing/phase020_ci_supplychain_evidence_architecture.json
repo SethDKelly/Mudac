@@ -303,30 +303,34 @@
       "bypass restricted to explicit human break-glass/admin authority",
       "branch freshness or merge-queue equivalent"
     ],
-    "current_enforcement_verified": false,
+    "current_enforcement_verified": true,
     "workflow_existence_proves_enforcement": false,
     "phase021_may_claim_trusted_main_protection_without_evidence": false,
     "verification_owner": "020-L / Phase-021 start gate and repository administration",
     "last_observation": {
       "observed_on": "2026-09-25",
       "branch": "main",
-      "protected": false,
-      "protection_enabled": false,
-      "required_status_checks_enforcement": "off",
+      "protected": true,
       "ruleset_count": 1,
       "rulesets": [
         {
           "id": 24024518,
           "name": "main — protected",
-          "enforcement": "disabled"
+          "enforcement": "active"
         }
       ],
       "ruleset_contract_validated": true,
       "knowledge_validation_universal_pr_trigger": true,
-      "blocking_issue": "https://github.com/SethDKelly/Mudac/issues/10",
-      "result": "BLOCKING_RULESET_DISABLED"
+      "required_checks": [
+        "Validate agentic/documentation conformance",
+        "Implementation Verification",
+        "CodeQL JavaScript/TypeScript"
+      ],
+      "strict_required_status_checks_policy": true,
+      "bypass_actors": [],
+      "result": "PASS"
     },
-    "exit_blocker_id": "P020L-001"
+    "exit_blocker_id": null
   },
   "deployment": {
     "separate_from_verification": true,

@@ -643,8 +643,12 @@ def main() -> int:
                 errors.append("020-G must forbid retry-until-green as trusted evidence")
 
             enforcement = ci_evidence.get("repository_enforcement", {})
-            if enforcement.get("current_enforcement_verified") is not False:
-                errors.append("020-G must not claim repository main enforcement has been verified")
+            expected_enforcement_verified = "020-L" in completed
+            if enforcement.get("current_enforcement_verified") is not expected_enforcement_verified:
+                errors.append(
+                    "020-G repository-enforcement verification state must remain false before 020-L "
+                    "and become true only after successful 020-L observation"
+                )
             if enforcement.get("workflow_existence_proves_enforcement") is not False:
                 errors.append("020-G must not infer branch protection from workflow existence")
             if enforcement.get("phase021_may_claim_trusted_main_protection_without_evidence") is not False:
@@ -1394,12 +1398,46 @@ def main() -> int:
             ci_l = preimplementation_audit.get("exact_head_ci_evidence", {})
 
             if l_complete:
-                if audit_status not in {"PASS", "COMPLETE"}:
-                    errors.append("completed 020-L requires PASS/COMPLETE preimplementation audit")
+                if audit_status not in {"PASS", "COMPLETE"} or audit_outcome != "PASS":
+                    errors.append("completed 020-L requires PASS preimplementation audit")
                 if findings_l:
                     errors.append("completed 020-L may not retain blocking findings")
-                if handoff_l.get("g2_state") != "NOT_AUTHORIZED":
-                    errors.append("Phase 021 handoff after 020-L must still leave G2 NOT_AUTHORIZED")
+
+                enforcement_evidence_l = preimplementation_audit.get("repository_enforcement_evidence", {})
+                if enforcement_evidence_l.get("main_protected") is not True:
+                    errors.append("completed 020-L requires observed main protection")
+                if enforcement_evidence_l.get("ruleset_id") != 24024518 or enforcement_evidence_l.get("ruleset_name") != "main — protected":
+                    errors.append("completed 020-L ruleset identity drift")
+                if enforcement_evidence_l.get("ruleset_enforcement") != "active":
+                    errors.append("completed 020-L requires active main ruleset")
+                if enforcement_evidence_l.get("strict_required_status_checks_policy") is not True:
+                    errors.append("completed 020-L requires strict required status checks")
+                expected_checks_l = {
+                    "Validate agentic/documentation conformance",
+                    "Implementation Verification",
+                    "CodeQL JavaScript/TypeScript",
+                }
+                if set(enforcement_evidence_l.get("required_status_checks", [])) != expected_checks_l:
+                    errors.append("completed 020-L required-check set drift")
+                if enforcement_evidence_l.get("bypass_actors") != []:
+                    errors.append("completed 020-L currently requires no ruleset bypass actors")
+                if enforcement_evidence_l.get("knowledge_validation_universal_pr_trigger") is not True:
+                    errors.append("completed 020-L requires universal Knowledge Validation PR trigger")
+
+                if state.get("preimplementation_audit_status") != "PASS":
+                    errors.append("completed 020-L must expose PASS preimplementation audit")
+                if state.get("blocked_subphase") is not None or state.get("blocker_ids") != []:
+                    errors.append("completed 020-L may not retain Phase-020 blockers")
+                if state.get("phase021_start_gate_eligible") is not True:
+                    errors.append("completed 020-L must make Phase 021 eligible for its start gate")
+                if state.get("phase021_g2_authorized") is not False:
+                    errors.append("completed 020-L must not grant Phase 021 G2")
+                if handoff_l.get("status") != "READY_FOR_START_GATE":
+                    errors.append("completed 020-L must expose READY_FOR_START_GATE handoff")
+                if handoff_l.get("g1_state") != "READY_FOR_AUTHORIZATION" or handoff_l.get("g2_state") != "NOT_AUTHORIZED":
+                    errors.append("completed 020-L must preserve IMP-001 G1 readiness and zero G2")
+                if handoff_l.get("execution_before_g2_forbidden") is not True:
+                    errors.append("Phase-021 execution must remain forbidden before explicit G2")
             else:
                 if audit_status != "BLOCKED" or audit_outcome not in {"BLOCKED_REPOSITORY_ENFORCEMENT", "BLOCKED_RULESET_ENFORCEMENT_DISABLED"}:
                     errors.append("open 020-L audit must remain BLOCKED on the observed repository-enforcement finding")
@@ -1461,14 +1499,27 @@ def main() -> int:
                 errors.append("020-L closure rule must require observed enforcement, not issue closure")
             if closure_l.get("repository_enforcement_must_be_observed") is not True:
                 errors.append("020-L closure rule must require observed repository enforcement")
-            if closure_l.get("exact_head_ci_must_be_rechecked_after_final_closure_commit") is not True:
-                errors.append("020-L closure rule must require final exact-head CI recheck")
+            if closure_l.get("closure_pr_required_checks_must_pass") is not True:
+                errors.append("020-L closure rule must require protected closure-PR checks to pass")
             if closure_l.get("phase021_g2_must_be_explicit_after_phase020_close") is not True:
                 errors.append("020-L closure rule must preserve explicit Phase-021 G2")
 
             if ci_evidence:
                 enforcement_l = ci_evidence.get("repository_enforcement", {})
-                if not l_complete:
+                if l_complete:
+                    if enforcement_l.get("current_enforcement_verified") is not True:
+                        errors.append("completed 020-L requires verified repository enforcement")
+                    last_l = enforcement_l.get("last_observation", {})
+                    if last_l.get("protected") is not True or last_l.get("result") != "PASS":
+                        errors.append("completed 020-L requires a passing protected-main observation")
+                    observed_rulesets_l = last_l.get("rulesets", [])
+                    if not isinstance(observed_rulesets_l, list) or len(observed_rulesets_l) != 1:
+                        errors.append("completed 020-L must record exactly one active main ruleset")
+                    else:
+                        ruleset_l = observed_rulesets_l[0]
+                        if ruleset_l.get("id") != 24024518 or ruleset_l.get("name") != "main — protected" or ruleset_l.get("enforcement") != "active":
+                            errors.append("completed 020-L active ruleset observation drift")
+                else:
                     if enforcement_l.get("current_enforcement_verified") is not False:
                         errors.append("blocked 020-L must not claim repository enforcement verified")
                     last_l = enforcement_l.get("last_observation", {})

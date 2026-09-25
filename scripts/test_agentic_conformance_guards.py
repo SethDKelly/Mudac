@@ -347,13 +347,12 @@ def main() -> int:
         exit_audit_repo = clone_repo(source, tmp, "exit-audit")
         exit_audit_path = exit_audit_repo / "docs/routing/phase020_preimplementation_exit_audit.json"
         exit_audit = json.loads(exit_audit_path.read_text(encoding="utf-8"))
-        exit_audit["audit_status"] = "PASS"
-        exit_audit["audit_outcome"] = "PASS"
-        exit_audit["phase021_handoff"]["status"] = "READY_FOR_START_GATE"
+        exit_audit["repository_enforcement_evidence"]["main_protected"] = False
+        exit_audit["repository_enforcement_evidence"]["ruleset_enforcement"] = "disabled"
         exit_audit["phase021_handoff"]["g2_state"] = "AUTHORIZED"
         exit_audit_path.write_text(json.dumps(exit_audit, indent=2) + "\n", encoding="utf-8")
         expect_failure(
-            "020-L false PASS over unprotected main",
+            "020-L enforcement regression after closure",
             run_script(source, exit_audit_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(exit_audit_repo)),
             errors,
         )

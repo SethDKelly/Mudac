@@ -1,6 +1,6 @@
 # Phase 020 — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning
 
-**Status:** ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K COMPLETE / 020-L NEXT ELIGIBLE — BLOCKED BY REPOSITORY ENFORCEMENT
+**Status:** COMPLETE — 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
 
 ## Authority
 
@@ -35,22 +35,24 @@
 - [020-I — Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design](020-I-migration-recovery-accessibility-performance-cost-scenario-verification-design.md) — **COMPLETE — PASS**
 - [020-J — v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design](020-J-v1-scope-whole-system-completion-criteria-final-integration-hardening-phase-design.md) — **COMPLETE — PASS**
 - [020-K — Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness](020-K-full-autonomous-implementation-roadmap-agent-assignment-phase-package-definitions-entry-readiness.md) — **COMPLETE — PASS**
-- [020-L — Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff](020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md) — **NEXT ELIGIBLE** — **BLOCKED: P020L-001 / main protection (#10)**
+- [020-L — Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff](020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md) — **COMPLETE — PASS**
 
 ## Current state
 
 ~~~text
-PHASE 020 ACTIVE — EXIT BLOCKED BY REPOSITORY ENFORCEMENT
-020-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-020-L NEXT ELIGIBLE — BLOCKED BY P020L-001
+PHASE 020 COMPLETE
+020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
+
+Phase 021 start gate            ELIGIBLE
+IMP-001 G2                      NOT AUTHORIZED
 
 whole architecture               ACCEPTED
 G0                               SATISFIED
-implementation program design    ACTIVE
+implementation program design    COMPLETE
 G1-ready packages                15
 READY_FOR_AUTHORIZATION packages 15
 active implementation packages   0
 implementation execution         NOT AUTHORIZED
 ~~~
 
-Subphase progression is human-directed. **NEXT ELIGIBLE is not execution authorization.**
+Phase 020 is closed. Phase 021 start-gate eligibility is not execution authorization; IMP-001 still requires explicit G2.

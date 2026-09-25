@@ -574,12 +574,12 @@ Phase 029 remains constrained by 020-H/020-J: it owns declared integration/harde
 
 # Phase-020 pre-implementation exit audit
 
-The current exit audit is:
+The final exit audit is:
 
 > docs/routing/phase020_preimplementation_exit_audit.json
 
-020-L is currently **BLOCKED** by `P020L-001`: GitHub reports `main` unprotected, required status-check enforcement off, and no repository ruleset. Repository issue #10 tracks the required administrative correction.
+020-L is **COMPLETE — PASS**. Ruleset `main — protected` (ID 24024518) was independently observed active, GitHub reports `main.protected=true`, strict required status checks are configured for Knowledge Validation, Implementation Verification and CodeQL, and no bypass actors are present.
 
-The repository-controlled findings identified by 020-L have been repaired: external GitHub Actions are pinned to immutable commit SHAs, the pin rule is machine-validated, and historical framework validators recognize the governed 020-K roadmap state. Exact-head Knowledge Validation, Implementation Verification and CodeQL passed at the audit candidate revision named by the audit record.
+Repository-controlled findings discovered during 020-L were repaired: external GitHub Actions are pinned to immutable commit SHAs; required Knowledge Validation runs on every PR targeting `main`; historical framework validators recognize the governed 020-K roadmap state; and the conformance suite protects these boundaries with negative controls.
 
-Phase 020 must remain ACTIVE until repository enforcement is independently re-observed. Phase 021 / IMP-001 remains G1-ready but **not G2-authorized and not execution-eligible**. Closing issue #10 alone is not evidence; the branch/ruleset state and required-check enforcement must be observed again, followed by exact-head CI.
+Phase 020 is therefore COMPLETE. Phase 021 / IMP-001 is **eligible for its start gate only**: it remains G1 READY_FOR_AUTHORIZATION, G2 is NOT AUTHORIZED, and implementation execution remains forbidden until a separate explicit human/program authorization names IMP-001.

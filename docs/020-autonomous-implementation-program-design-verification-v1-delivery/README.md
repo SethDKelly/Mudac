@@ -18,9 +18,11 @@ sources:
 ## Status
 
 ~~~text
-PHASE 020 ACTIVE — EXIT BLOCKED BY REPOSITORY ENFORCEMENT
-020-A/B/C/D/E/F/G/H/I/J/K COMPLETE
-020-L NEXT ELIGIBLE — BLOCKED BY P020L-001
+PHASE 020 COMPLETE
+020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
+
+Phase 021 start gate             ELIGIBLE
+IMP-001 G2                       NOT AUTHORIZED
 
 accepted whole architecture       true
 G0 Architecture Accepted          SATISFIED
@@ -131,7 +133,7 @@ Ordinary behavior testing must traverse the same IAM/CMD/PST/application contrac
 | **020-I** | Migration, Recovery, Accessibility, Performance, Cost & Scenario Verification Design — **COMPLETE — PASS** |
 | **020-J** | v1 Scope, Whole-System Completion Criteria & Final Integration/Hardening Phase Design — **COMPLETE — PASS** |
 | **020-K** | Full Autonomous Implementation Roadmap, Agent Assignment Strategy, Phase/Package Definitions & Entry Readiness — **COMPLETE — PASS** |
-| **020-L** | [Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff](020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md) — **NEXT ELIGIBLE / BLOCKED — P020L-001** |
+| **020-L** | [Phase-020 Consolidation, Pre-Implementation Audit, Exit Decision & Phase-021 Handoff](020-L-consolidation-preimplementation-audit-exit-decision-phase021-handoff.md) — **COMPLETE — PASS** |
 
 
 
@@ -287,6 +289,8 @@ Progressive-disclosure roadmap: `docs/implementation-roadmap/index.md`.
 
 ## 020-L pre-implementation exit audit
 
-020-L has been executed and is **BLOCKED**, not complete. In-repository repairs made during the audit include immutable commit-SHA pinning for every external GitHub Action and reconciliation of historical framework validators with the legitimate 020-K roadmap state. Exact-head Knowledge Validation, Implementation Verification and CodeQL passed at the recorded audit candidate head. GitHub administration, however, reports `main` unprotected with required status checks off and no ruleset. This violates the accepted 020-G/020-K trusted-main entry condition. Phase 020 therefore remains ACTIVE, Phase 021 remains ineligible for G2, and repository issue #10 tracks the required administrative correction.
+020-L is **COMPLETE — PASS**. The audit repaired immutable-action-pin, validator-state, context-budget and negative-control defects; verified Knowledge Validation as an unconditional required PR check for `main`; and re-observed ruleset `main — protected` as active with strict required checks and no bypass actors. The protected-main entry baseline passed Knowledge Validation, Implementation Verification and CodeQL. Phase 020 is therefore complete.
+
+Phase 021 / IMP-001 is **eligible for its start gate only**. G2 remains NOT AUTHORIZED and implementation execution remains forbidden until a separate explicit human/program authorization names IMP-001.
 
 Machine audit: `docs/routing/phase020_preimplementation_exit_audit.json`.
