@@ -358,6 +358,21 @@ def main() -> int:
             errors,
         )
 
+        knowledge_pr_repo = clone_repo(source, tmp, "knowledge-pr-filter")
+        knowledge_pr_path = knowledge_pr_repo / ".github/workflows/knowledge-validation.yml"
+        knowledge_pr_text = knowledge_pr_path.read_text(encoding="utf-8")
+        knowledge_pr_text = knowledge_pr_text.replace(
+            "  pull_request:\\n    branches:\\n      - main\\n",
+            "  pull_request:\\n    paths:\\n      - docs/**\\n",
+            1,
+        )
+        knowledge_pr_path.write_text(knowledge_pr_text, encoding="utf-8")
+        expect_failure(
+            "020-G required Knowledge Validation path filtering",
+            run_script(source, knowledge_pr_repo, "scripts/validate_phase020_implementation_design_control.py", "--repo", str(knowledge_pr_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -370,7 +385,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 22 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 23 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
