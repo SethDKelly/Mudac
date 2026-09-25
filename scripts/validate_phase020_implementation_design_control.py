@@ -127,6 +127,22 @@ def main() -> int:
                             "must be pinned to an immutable full commit SHA"
                         )
 
+            knowledge_workflow = workflow_dir / "knowledge-validation.yml"
+            if not knowledge_workflow.is_file():
+                errors.append("Knowledge Validation workflow is required")
+            else:
+                knowledge_text = knowledge_workflow.read_text(encoding="utf-8")
+                if "\n  pull_request:\n" not in knowledge_text:
+                    errors.append("Knowledge Validation must define a pull_request trigger")
+                else:
+                    pr_tail = knowledge_text.split("\n  pull_request:\n", 1)[1]
+                    next_top = re.search(r"\n  [A-Za-z_][A-Za-z0-9_-]*:\s*(?:\n|$)", pr_tail)
+                    pr_block = pr_tail[:next_top.start()] if next_top else pr_tail
+                    if "    paths:" in pr_block or "    paths-ignore:" in pr_block:
+                        errors.append("Knowledge Validation pull_request trigger must not use path filters when required universally")
+                    if "    branches:" not in pr_block or "      - main" not in pr_block:
+                        errors.append("Knowledge Validation pull_request trigger must explicitly target main")
+
     counts = control.get("counts", {})
     if counts.get("planned_subphases") != len(EXPECTED):
         errors.append("planned_subphases count drift")
