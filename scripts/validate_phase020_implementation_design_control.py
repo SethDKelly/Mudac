@@ -643,8 +643,12 @@ def main() -> int:
                 errors.append("020-G must forbid retry-until-green as trusted evidence")
 
             enforcement = ci_evidence.get("repository_enforcement", {})
-            if enforcement.get("current_enforcement_verified") is not False:
-                errors.append("020-G must not claim repository main enforcement has been verified")
+            expected_enforcement_verified = "020-L" in completed
+            if enforcement.get("current_enforcement_verified") is not expected_enforcement_verified:
+                errors.append(
+                    "020-G repository-enforcement verification state must remain false before 020-L "
+                    "and become true only after successful 020-L observation"
+                )
             if enforcement.get("workflow_existence_proves_enforcement") is not False:
                 errors.append("020-G must not infer branch protection from workflow existence")
             if enforcement.get("phase021_may_claim_trusted_main_protection_without_evidence") is not False:
