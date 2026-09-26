@@ -1,5 +1,7 @@
 # MUDAC Autonomous Implementation Roadmap
 
+Operational setup: [Cursor + Codex Autonomous Implementation Runbook](cursor-codex-autonomous-coding-runbook.md)
+
 **Authority:** Phase 020-K final planning projection  
 **Execution:** NOT AUTHORIZED  
 **Package G1:** 15/15 READY_FOR_AUTHORIZATION  
@@ -233,3 +235,8 @@ Phase 020-K does not start Phase 021.
 - Phase-021 entry handoff.
 
 Only after a successful 020-L exit may Phase 021 be presented for explicit G2 authorization.
+
+
+## Phase 021 start gate
+
+Phase 021 / IMP-001 start-gate authority is `docs/routing/phase021_start_gate_control.json`. The gate is **PASS — READY FOR G2 DECISION**, but G2 and implementation execution remain ungranted.
