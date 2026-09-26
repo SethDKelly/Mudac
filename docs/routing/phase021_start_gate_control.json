@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-021 START GATE — READY FOR G2 DECISION; IMPLEMENTATION NOT AUTHORIZED",
+  "phase": "021",
+  "title": "Source Topology & Implementation Foundation",
+  "package_id": "IMP-001",
+  "status": "START_GATE_COMPLETE",
+  "start_gate_decision": "PASS_READY_FOR_G2_DECISION",
+  "entry_baseline": {
+    "main_sha": "37d7f30713424c89408573cf62269a388d9a0c4c",
+    "main_tree": "5bd544961bc94eed27aae9955e3cd3cacb4d4dc8",
+    "phase020_complete": true,
+    "main_protected": true,
+    "ruleset_id": 24024518,
+    "ruleset_name": "main — protected",
+    "ruleset_enforcement": "active",
+    "required_checks": [
+      "Validate agentic/documentation conformance",
+      "Implementation Verification",
+      "CodeQL JavaScript/TypeScript"
+    ]
+  },
+  "authority_boundary": {
+    "g1_state": "READY_FOR_AUTHORIZATION",
+    "g2_state": "NOT_AUTHORIZED",
+    "implementation_execution_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false,
+    "coding_before_g2_forbidden": true,
+    "automatic_g2": false
+  },
+  "substrate_finding": {
+    "accepted_owner_count": 5,
+    "executable_owner_shell_count": 6,
+    "obsolete_owner": "packages/modules/judging-operations",
+    "obsolete_owner_contains_domain_behavior": false,
+    "accepted_owners": [
+      "Competition Context",
+      "Identity & Access",
+      "Evaluation",
+      "Outcomes & Officiality",
+      "External Representation"
+    ],
+    "consequence": "Phase 021 may mechanically retire the obsolete empty owner shell without semantic code migration."
+  },
+  "implementation_scope": {
+    "in": [
+      "retire packages/modules/judging-operations executable package shell",
+      "remove obsolete workspace/lockfile references",
+      "rewrite dependency-cruiser rules to the accepted five-owner topology",
+      "preserve public/private package seam rules",
+      "preserve implementation-neutral bootstrap/configuration",
+      "prove deterministic build/type/lint/test/dependency verification"
+    ],
+    "out": [
+      "domain behavior",
+      "database schema",
+      "provider deployment",
+      "feature UI",
+      "semantic redesign",
+      "architecture change"
+    ]
+  },
+  "work_unit_graph": [
+    {
+      "id": "021-I01",
+      "role": "IMPLEMENTER",
+      "provider": "CODEX",
+      "writable": true,
+      "purpose": "Implement the complete bounded IMP-001 topology repair.",
+      "max_parallel": 1,
+      "steps": [
+        "retire the empty judging-operations package and references",
+        "rewrite dependency rules from six-owner to five-owner topology",
+        "refresh workspace/lockfile metadata only as required",
+        "run repository verification and prove no active six-owner executable path"
+      ],
+      "branch_pattern": "work/021/imp-001-topology",
+      "serialized_surfaces": [
+        "package.json",
+        "pnpm-workspace.yaml",
+        "pnpm-lock.yaml",
+        ".dependency-cruiser.cjs",
+        "package/module ownership indexes"
+      ],
+      "completion": "candidate commit SHA/tree frozen and pushed; no further edits until review findings"
+    },
+    {
+      "id": "021-R01",
+      "role": "INDEPENDENT_CODE_REVIEWER",
+      "provider": "CURSOR",
+      "writable": false,
+      "purpose": "Review exact candidate SHA for IMP-001 correctness, scope discipline, architecture fidelity and maintainability.",
+      "requires": [
+        "021-I01 candidate SHA"
+      ],
+      "completion": "PASS or structured findings keyed to candidate SHA"
+    },
+    {
+      "id": "021-R02",
+      "role": "ADVERSARIAL_CONFORMANCE_REVIEWER",
+      "provider": "CURSOR",
+      "writable": false,
+      "fresh_session_required": true,
+      "purpose": "Challenge exact candidate SHA for boundary evasion, stale six-owner authority, hidden domain movement and evidence gaming.",
+      "requires": [
+        "021-I01 candidate SHA"
+      ],
+      "completion": "PASS or structured findings keyed to candidate SHA"
+    },
+    {
+      "id": "021-V01",
+      "role": "VERIFIER",
+      "provider": "GITHUB_ACTIONS",
+      "writable": false,
+      "purpose": "Run protected required checks and package-local E1/E2 verification on exact candidate revision."
+    },
+    {
+      "id": "021-G01",
+      "role": "GATEKEEPER",
+      "provider": "DETERMINISTIC_PLUS_HUMAN",
+      "writable": false,
+      "purpose": "Integrate exact-SHA evidence and decide G5/repair/block; cannot grant next G2 or merge by itself."
+    }
+  ],
+  "implementation_checks": [
+    "pnpm install --frozen-lockfile (or lock refresh only when the authorized topology removal requires it)",
+    "pnpm verify",
+    "python scripts/run_agentic_conformance.py",
+    "prove no executable package/import/dependency rule references @mudac/judging-operations"
+  ],
+  "repair_loop": {
+    "owner": "021-I01 Codex implementer",
+    "default_cycles": 3,
+    "repeated_identical_failure_threshold": 2,
+    "reviewer_edits_forbidden": true,
+    "findings_return_to_implementer": true,
+    "every_source_change_creates_new_candidate_sha": true,
+    "affected_reviews_and_checks_rerun": true
+  },
+  "cursor_codex_operating_model": {
+    "shared_writable_checkout_forbidden": true,
+    "control_checkout": "human/coordinator main checkout; no implementation edits",
+    "implementer_worktree": "Codex writable worktree from exact authorized base SHA",
+    "review_worktree": "separate Cursor detached/read-only worktree at exact candidate SHA",
+    "coordination_surface": "Git branch + PR + candidate SHA + structured findings; not shared chat memory",
+    "role_rotation_rule": "implementation provider and independent review provider swap according to package assignment in the Phase-020 roadmap"
+  },
+  "g2_candidate": {
+    "package_id": "IMP-001",
+    "phase": "021",
+    "eligible_for_human_decision": true,
+    "authorized": false,
+    "exact_scope": "implementation_scope.in only",
+    "preferred_implementer": "CODEX",
+    "preferred_reviewer": "CURSOR"
+  }
+}

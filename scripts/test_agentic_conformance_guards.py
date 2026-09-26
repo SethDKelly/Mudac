@@ -372,6 +372,21 @@ def main() -> int:
             errors,
         )
 
+        phase021_repo = clone_repo(source, tmp, "phase021-g2-collapse")
+        phase021_path = phase021_repo / "docs/routing/phase021_start_gate_control.json"
+        phase021 = json.loads(phase021_path.read_text(encoding="utf-8"))
+        phase021["authority_boundary"]["g2_state"] = "AUTHORIZED"
+        phase021["authority_boundary"]["implementation_execution_authorized"] = True
+        phase021["authority_boundary"]["coding_before_g2_forbidden"] = False
+        phase021["g2_candidate"]["authorized"] = True
+        phase021["cursor_codex_operating_model"]["shared_writable_checkout_forbidden"] = False
+        phase021_path.write_text(json.dumps(phase021, indent=2) + "\n", encoding="utf-8")
+        expect_failure(
+            "021 start-gate premature G2 and shared-worktree collapse",
+            run_script(source, phase021_repo, "scripts/validate_phase021_start_gate.py", "--repo", str(phase021_repo)),
+            errors,
+        )
+
         secret_repo = clone_repo(source, tmp, "secret")
         leak = secret_repo / ".agents/leak.txt"
         leak.parent.mkdir(parents=True, exist_ok=True)
@@ -384,7 +399,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic negative controls: {len(errors)} error(s), 23 guard mutation(s) exercised")
+    print(f"Agentic negative controls: {len(errors)} error(s), 24 guard mutation(s) exercised")
     return 1 if errors else 0
 
 
