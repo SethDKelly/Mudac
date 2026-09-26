@@ -37,9 +37,10 @@ def main() -> int:
     repo = Path(args.repo).resolve()
     checks = list(CHECKS)
     if not args.skip_negative_controls:
-        checks.append(
-            ("cross-cutting negative controls", "scripts/test_agentic_conformance_guards.py", ("--repo", "{repo}"))
-        )
+        checks.extend([
+            ("cross-cutting negative controls", "scripts/test_agentic_conformance_guards.py", ("--repo", "{repo}")),
+            ("Phase 021 G2 negative controls", "scripts/test_phase021_g2_guards.py", ("--repo", "{repo}")),
+        ])
 
     results: list[tuple[str, int, str]] = []
     for name, rel, raw_args in checks:
