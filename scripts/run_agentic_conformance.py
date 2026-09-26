@@ -22,6 +22,7 @@ CHECKS = (
     ("implementation program framework", "scripts/validate_implementation_program_framework.py", ("--repo", "{repo}")),
     ("Phase 019 architecture decision control", "scripts/validate_phase019_architecture_control.py", ("--repo", "{repo}")),
     ("Phase 020 implementation design control", "scripts/validate_phase020_implementation_design_control.py", ("--repo", "{repo}")),
+    ("Phase 021 start gate", "scripts/validate_phase021_start_gate.py", ("--repo", "{repo}")),
     ("agentic/authority secret scan", "scripts/scan_agentic_secrets.py", ("--repo", "{repo}")),
 )
 
