@@ -53,7 +53,7 @@ execution authorization       NOT GRANTED
 
 The active work is:
 
-> **PHASE 020 COMPLETE — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning — 020-A/B/C COMPLETE / 020-D NEXT ELIGIBLE**
+> **PHASE 020 COMPLETE — Autonomous Implementation Program Design, Verification Architecture & v1 Delivery Planning**
 
 ## Human-directed action boundary
 
@@ -100,7 +100,7 @@ For full repository agentic/documentation checks, run `python scripts/run_agenti
 
 Do not treat an index, README, generated `knowledge/` projection, agent rule, phase record, architecture candidate, implementation candidate, code artifact, or test as permission to override a current canonical owner.
 
-Phase 018 and Phase 019 are complete. Phase 020 is ACTIVE with 020-A/B/C/D/E/F complete and 020-G next eligible. Phase 020 may design/derive the implementation program but active implementation packages remain zero and domain implementation execution is unauthorized until explicit G2.
+Phase 018 and Phase 019 are complete. Phase 020 is COMPLETE. Phase 021 start gate is COMPLETE and READY FOR G2 DECISION; IMP-001 remains G2 NOT AUTHORIZED and implementation execution remains unauthorized.
 
 
 Current Phase-019 progression:
@@ -114,7 +114,7 @@ accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 COMPLETE
 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-Phase 021 start gate ELIGIBLE — G2 NOT AUTHORIZED
+Phase 021 START GATE COMPLETE — READY FOR G2 DECISION — G2 NOT AUTHORIZED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
