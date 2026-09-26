@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-021 / IMP-001 / 021-I01 G2 EXECUTION AUTHORIZATION",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "gate": "G2",
+  "status": "AUTHORIZED",
+  "authorization_source": "EXPLICIT_HUMAN_PROGRAM_AUTHORITY",
+  "authorization_date": "2026-09-25",
+  "authorized_baseline": {
+    "main_sha": "fdbcff0ee7e3a08deb870f51659a59b65b333893",
+    "main_tree": "279fb97425d189a843cf90612ee6dff10c520d9c",
+    "main_protected": true,
+    "ruleset_id": 24024518,
+    "ruleset_name": "main — protected",
+    "ruleset_enforcement": "active",
+    "required_checks": [
+      "Validate agentic/documentation conformance",
+      "Implementation Verification",
+      "CodeQL JavaScript/TypeScript"
+    ]
+  },
+  "authorization": {
+    "implementation_execution_authorized": true,
+    "authorized_package_count": 1,
+    "active_package_count": 1,
+    "authorized_packages": ["IMP-001"],
+    "authorized_work_units": ["021-I01"],
+    "release_authorized": false,
+    "production_authorized": false,
+    "next_phase_authorized": false,
+    "merge_to_main_authorized_by_g2": false
+  },
+  "implementer": {
+    "provider": "CODEX",
+    "role": "IMPLEMENTER",
+    "writable": true,
+    "max_parallel_work_units": 1,
+    "branch": "work/021/imp-001-topology",
+    "worktree": "dedicated writable Codex worktree created from authorized_baseline.main_sha"
+  },
+  "review": {
+    "independent_reviewer_provider": "CURSOR",
+    "adversarial_reviewer_provider": "CURSOR",
+    "reviewer_writable": false,
+    "review_worktree": "separate detached/read-only Cursor worktree at exact candidate SHA",
+    "fresh_adversarial_session_required": true,
+    "implementer_may_not_self_certify": true
+  },
+  "scope_in": [
+    "retire packages/modules/judging-operations executable package shell",
+    "remove obsolete workspace and lockfile references to @mudac/judging-operations",
+    "rewrite dependency-cruiser rules to the accepted five-owner topology",
+    "preserve public/private package seam rules",
+    "preserve implementation-neutral bootstrap/configuration",
+    "prove deterministic build/type/lint/test/dependency verification",
+    "prove no active executable package, importer, dependency rule, source import, build configuration, or current implementation authority treats Judging Operations as an independent semantic owner"
+  ],
+  "scope_out": [
+    "domain behavior",
+    "database schema",
+    "provider deployment",
+    "feature UI",
+    "semantic redesign",
+    "architecture change",
+    "historical/superseded documentation cleanup unless required to distinguish history from current executable authority",
+    "Phase 022 or later package work"
+  ],
+  "serialized_surfaces": [
+    "package.json",
+    "pnpm-workspace.yaml",
+    "pnpm-lock.yaml",
+    ".dependency-cruiser.cjs",
+    "package/module ownership indexes"
+  ],
+  "required_verification": [
+    "pnpm install --frozen-lockfile, except an authorized deterministic lock refresh required solely by removal of the obsolete workspace package",
+    "pnpm verify",
+    "python scripts/run_agentic_conformance.py",
+    "explicit executable-surface residual-reference search for @mudac/judging-operations and packages/modules/judging-operations",
+    "protected PR required checks",
+    "independent Cursor code review PASS",
+    "fresh-session Cursor adversarial conformance review PASS"
+  ],
+  "repair_budget": {
+    "default_cycles": 3,
+    "repeated_identical_failure_threshold": 2,
+    "scope_may_expand": false,
+    "every_source_change_requires_new_candidate_sha": true,
+    "affected_review_and_evidence_must_rerun": true
+  },
+  "circuit_breakers": [
+    "domain behavior becomes necessary",
+    "accepted architecture appears contradictory",
+    "work requires a package outside IMP-001",
+    "another active writer owns a serialized surface",
+    "production access, production data, or production credentials become relevant",
+    "verification becomes nondeterministic",
+    "repair would require weakening tests, criteria, or repository protection",
+    "repair budget is exhausted"
+  ],
+  "lifecycle": {
+    "current_state": "AUTHORIZED",
+    "next_expected_state": "IN_PROGRESS",
+    "candidate_freeze_state": "EVIDENCE_REVIEW",
+    "completion_gate": "G5",
+    "g5_does_not_authorize_phase022": true,
+    "authorization_ends_on_g5_or_explicit_revocation": true
+  },
+  "base_drift_rule": "If the implementation worktree has not yet been created and protected main moves from the authorized SHA, stop and rebind or explicitly reauthorize before coding. Once the worktree is created from the authorized SHA, later main movement does not silently change the authorized base; integration drift is handled through the protected PR and compatibility review.",
+  "start_gate_authority": "docs/routing/phase021_start_gate_control.json",
+  "operator_runbook": "docs/implementation-roadmap/cursor-codex-autonomous-coding-runbook.md",
+  "context_manifest": "docs/021-source-topology-implementation-foundation/021-I01-context-manifest.md"
+}

@@ -23,6 +23,7 @@ CHECKS = (
     ("Phase 019 architecture decision control", "scripts/validate_phase019_architecture_control.py", ("--repo", "{repo}")),
     ("Phase 020 implementation design control", "scripts/validate_phase020_implementation_design_control.py", ("--repo", "{repo}")),
     ("Phase 021 start gate", "scripts/validate_phase021_start_gate.py", ("--repo", "{repo}")),
+    ("Phase 021 G2 authorization", "scripts/validate_phase021_g2_authorization.py", ("--repo", "{repo}")),
     ("agentic/authority secret scan", "scripts/scan_agentic_secrets.py", ("--repo", "{repo}")),
 )
 
@@ -36,9 +37,10 @@ def main() -> int:
     repo = Path(args.repo).resolve()
     checks = list(CHECKS)
     if not args.skip_negative_controls:
-        checks.append(
-            ("cross-cutting negative controls", "scripts/test_agentic_conformance_guards.py", ("--repo", "{repo}"))
-        )
+        checks.extend([
+            ("cross-cutting negative controls", "scripts/test_agentic_conformance_guards.py", ("--repo", "{repo}")),
+            ("Phase 021 G2 negative controls", "scripts/test_phase021_g2_guards.py", ("--repo", "{repo}")),
+        ])
 
     results: list[tuple[str, int, str]] = []
     for name, rel, raw_args in checks:
