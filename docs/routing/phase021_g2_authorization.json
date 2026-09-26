@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "authority": "PHASE-021 / IMP-001 / 021-I01 G2 EXECUTION AUTHORIZATION",
   "phase": "021",
   "package_id": "IMP-001",
@@ -11,6 +11,7 @@
   "authorized_baseline": {
     "main_sha": "fdbcff0ee7e3a08deb870f51659a59b65b333893",
     "main_tree": "279fb97425d189a843cf90612ee6dff10c520d9c",
+    "meaning": "authorized executable/application content baseline before the G2 authority overlay was committed",
     "main_protected": true,
     "ruleset_id": 24024518,
     "ruleset_name": "main — protected",
@@ -20,6 +21,15 @@
       "Implementation Verification",
       "CodeQL JavaScript/TypeScript"
     ]
+  },
+  "implementation_checkout": {
+    "commit_sha": "7812339629241cb7b4bd34d320166ee27a5c07ff",
+    "tree_sha": "4e6924f026d5e9c583df3f020bcfae32d98b3372",
+    "branch": "work/021/imp-001-topology",
+    "purpose": "authority-overlay checkout used to create the Codex worktree so the G2 record, validators and context manifest are present locally",
+    "executable_content_equivalence": "The diff from authorized_baseline.main_sha to this commit is limited to G2 governance, validation and status/documentation surfaces; no application/workspace/package/dependency implementation surface changed.",
+    "verified_governance_only_diff": true,
+    "may_be_used_as_worktree_base": true
   },
   "authorization": {
     "implementation_execution_authorized": true,
@@ -38,7 +48,7 @@
     "writable": true,
     "max_parallel_work_units": 1,
     "branch": "work/021/imp-001-topology",
-    "worktree": "dedicated writable Codex worktree created from authorized_baseline.main_sha"
+    "worktree": "dedicated writable Codex worktree created from implementation_checkout.commit_sha"
   },
   "review": {
     "independent_reviewer_provider": "CURSOR",
@@ -108,7 +118,7 @@
     "g5_does_not_authorize_phase022": true,
     "authorization_ends_on_g5_or_explicit_revocation": true
   },
-  "base_drift_rule": "If the implementation worktree has not yet been created and protected main moves from the authorized SHA, stop and rebind or explicitly reauthorize before coding. Once the worktree is created from the authorized SHA, later main movement does not silently change the authorized base; integration drift is handled through the protected PR and compatibility review.",
+  "base_drift_rule": "Executable authorization remains anchored to authorized_baseline.main_sha/tree. The governance-only G2 authority overlay identified by implementation_checkout may be used as the implementation worktree base because its diff from the executable baseline contains no application/workspace/package/dependency implementation changes. Any other protected-main movement before the implementation worktree is created requires stop-and-rebind or explicit reauthorization. After worktree creation, later main movement is handled by protected-PR integration and compatibility review rather than silently changing the authorized base.",
   "start_gate_authority": "docs/routing/phase021_start_gate_control.json",
   "operator_runbook": "docs/implementation-roadmap/cursor-codex-autonomous-coding-runbook.md",
   "context_manifest": "docs/021-source-topology-implementation-foundation/021-I01-context-manifest.md"

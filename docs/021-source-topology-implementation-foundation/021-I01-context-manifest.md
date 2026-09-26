@@ -6,8 +6,10 @@
 **Gate:** G2 AUTHORIZED  
 **Implementer:** Codex  
 **Independent reviewer:** Cursor  
-**Authorized base commit:** `fdbcff0ee7e3a08deb870f51659a59b65b333893`  
-**Authorized base tree:** `279fb97425d189a843cf90612ee6dff10c520d9c`
+**Authorized executable-content baseline:** `fdbcff0ee7e3a08deb870f51659a59b65b333893` / tree `279fb97425d189a843cf90612ee6dff10c520d9c`  
+**Authorized implementation checkout:** `7812339629241cb7b4bd34d320166ee27a5c07ff` / tree `4e6924f026d5e9c583df3f020bcfae32d98b3372`
+
+The implementation checkout contains only the G2 authority, validation and status/documentation overlay above the authorized executable-content baseline. The compared diff contains no application/workspace/package/dependency implementation changes. This lets the Codex worktree contain its own authority files without silently adopting later product implementation.
 
 ## Authority
 
@@ -111,9 +113,9 @@ Before handing off to Cursor:
 
 ## Initial Codex instruction
 
-Use this prompt when starting Codex in the dedicated writable worktree:
+Use this prompt when starting Codex in the dedicated writable worktree created from `7812339629241cb7b4bd34d320166ee27a5c07ff`:
 
-> You are the Implementer for MUDAC Phase 021 work unit 021-I01 / package IMP-001. G2 is explicitly authorized only for the scope defined by `docs/routing/phase021_g2_authorization.json` and this context manifest. Read `AGENTS.md` and the cited authority files before editing. Starting from the exact authorized base SHA, retire the obsolete empty `packages/modules/judging-operations` executable package, remove its workspace/lockfile references, and rewrite dependency-cruiser rules to the accepted five-owner topology. Preserve current semantic behavior and public/private seams. Do not add domain behavior, persistence, provider/deployment, UI, authentication, semantic redesign, architecture changes, or Phase 022 work. Historical documentation may continue to mention Judging Operations where explicitly historical. Stop on any circuit breaker or scope ambiguity. Run the required verification and residual executable-reference search. Commit and push the completed bounded candidate, then report the exact candidate SHA/tree, changed files, commands/results, residual-reference result, and residual concerns. Do not self-review or merge.
+> You are the Implementer for MUDAC Phase 021 work unit 021-I01 / package IMP-001. G2 is explicitly authorized only for the scope defined by `docs/routing/phase021_g2_authorization.json` and this context manifest. Read `AGENTS.md` and the cited authority files before editing. The executable-content authorization is anchored to `fdbcff0ee7e3a08deb870f51659a59b65b333893`; this checkout adds only the approved G2 governance/validation overlay. Retire the obsolete empty `packages/modules/judging-operations` executable package, remove its workspace/lockfile references, and rewrite dependency-cruiser rules to the accepted five-owner topology. Preserve current semantic behavior and public/private seams. Do not add domain behavior, persistence, provider/deployment, UI, authentication, semantic redesign, architecture changes, or Phase 022 work. Historical documentation may continue to mention Judging Operations where explicitly historical. Stop on any circuit breaker or scope ambiguity. Run the required verification and residual executable-reference search. Commit and push the completed bounded candidate, then report the exact candidate SHA/tree, changed files, commands/results, residual-reference result, and residual concerns. Do not self-review or merge.
 
 ## Cursor handoff
 
