@@ -12,7 +12,8 @@ The current product definition is representation-independent: volunteer Judges a
 - [Phase 017](docs/017-methodology-closure-canonical-consolidation-completion-decision/) — final Concept Design closure evidence and post-closure handoff.
 - [Phase 018](docs/018-pre-implementation-repository-qualification-agentic-development-architecture-reentry/) — completed repository qualification and architecture-reentry preparation baseline.
 - [Phase 019](docs/019-architecture-engineering-reentry/) — **COMPLETE — PASS; whole architecture accepted / G0 satisfied**.
-- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **ACTIVE — 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE / Phase 021 START GATE COMPLETE — READY FOR G2 DECISION — G2 NOT AUTHORIZED**.
+- [Phase 020](docs/020-autonomous-implementation-program-design-verification-v1-delivery/) — **COMPLETE — autonomous implementation program and delivery controls accepted**.
+- [Phase 021](docs/021-source-topology-implementation-foundation/) — **ACTIVE — IMP-001 / 021-I01 G2 AUTHORIZED; Codex implementation only within the bounded authorization**.
 - [Design / Implementation Boundary](docs/canonical/governance/design-implementation-boundary.md) — current downstream-authority boundary.
 
 Repository-agent bootstrap instructions live in [AGENTS.md](AGENTS.md).
@@ -24,38 +25,33 @@ Jackson Concept Design        CLOSED — PHASE 017 PASS WITH BOUNDED CARRY-FORWA
 Phase 016                     COMPLETE — PASS WITH CLOSURE HANDOFF
 017-A..H                      COMPLETE
 
-PHASE 018 COMPLETE             PASS — REPOSITORY QUALIFIED FOR ARCHITECTURE/ENGINEERING RE-ENTRY
+PHASE 018 COMPLETE            PASS — REPOSITORY QUALIFIED FOR ARCHITECTURE/ENGINEERING RE-ENTRY
 018-A/B/C/D/E/F/G/H/I/J/K/L/M COMPLETE
-PHASE 019 COMPLETE                   019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-historical architecture       SUSPENDED / QUARANTINED
-accepted new architecture      NOT ESTABLISHED
-implementation readiness      READY
-implementation execution      NOT STARTED
-execution authorization       NOT GRANTED
+PHASE 019 COMPLETE            019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
+PHASE 020 COMPLETE            020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
+PHASE 021                     ACTIVE
+IMP-001                       AUTHORIZED
+021-I01                       G2 AUTHORIZED
+implementation execution      AUTHORIZED — IMP-001 / 021-I01 ONLY
+release                       NOT AUTHORIZED
+production                    NOT AUTHORIZED
+Phase 022                     NOT AUTHORIZED
 ```
 
 The sole adopted product/application variant remains:
 
 > **PF-01 — MUDAC Live Competition Judging & Official Outcome**
 
-Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry process.
+Historical architecture and implementation work is preserved but does not automatically regain authority after Concept Design closure. Any downstream work must follow the separate post-Concept-Design re-entry and implementation-gate process.
 
-
-Phase 018 and Phase 019 are complete. **Phase 020 is ACTIVE** as the final pre-implementation design lifecycle; 020-A/B/C/D/E/F are complete and 020-G is next eligible. Whole architecture remains accepted and G0 permits program/package derivation, while domain implementation execution remains unauthorized until a later explicit G2 decision.
-
-
-Current Phase-019 progression:
+The current execution authority is `docs/routing/phase021_g2_authorization.json`. It binds work unit 021-I01 to the protected `main` baseline `fdbcff0ee7e3a08deb870f51659a59b65b333893`, assigns Codex as Implementer and Cursor as independent Reviewer, and explicitly withholds release, production, Phase-022, and merge-to-main authority.
 
 ~~~text
 PHASE 019 COMPLETE
 019-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-ADQ-001 / ADQ-002 / ADQ-003 / ADQ-004 / ADQ-005 / ADQ-006 / ADQ-007 / ADQ-008 / ADQ-009 / ADQ-010 ACCEPTED
-Q4R-001 / Q4R-002 / Q4R-003 / Q4R-004 COMPLETE
-accepted whole architecture true
-G0 package derivation ALLOWED
 PHASE 020 COMPLETE
 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-Phase 021 START GATE COMPLETE — READY FOR G2 DECISION — G2 NOT AUTHORIZED
-active implementation packages 0
-implementation execution NOT AUTHORIZED
+PHASE 021 ACTIVE — IMP-001 / 021-I01 G2 AUTHORIZED
+active implementation packages 1
+implementation execution AUTHORIZED — IMP-001 / 021-I01 ONLY
 ~~~
