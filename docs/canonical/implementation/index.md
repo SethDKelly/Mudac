@@ -79,7 +79,7 @@ accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 COMPLETE
 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-Phase 021 start gate ELIGIBLE — G2 NOT AUTHORIZED
+Phase 021 START GATE COMPLETE — READY FOR G2 DECISION — G2 NOT AUTHORIZED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
@@ -93,3 +93,12 @@ The current Phase-020 implementation roadmap is routed through:
 - [Machine roadmap](../../routing/phase020_autonomous_implementation_roadmap.json)
 
 All fifteen retained packages are G1 planning-complete / READY_FOR_AUTHORIZATION. G2 remains explicit and ungranted during Phase 020.
+
+
+## Phase 021 start gate
+
+- [Phase-021 start-gate control](../../routing/phase021_start_gate_control.json)
+- [Phase-021 start-gate record](../../021-source-topology-implementation-foundation/021-start-gate.md)
+- [Cursor + Codex autonomous coding runbook](../../implementation-roadmap/cursor-codex-autonomous-coding-runbook.md)
+
+Phase 021 / IMP-001 is **READY FOR G2 DECISION**. G2 is NOT AUTHORIZED and implementation execution remains forbidden until a separate explicit human/program authorization.
