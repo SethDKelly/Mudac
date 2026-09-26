@@ -57,7 +57,7 @@ accepted whole architecture true
 G0 package derivation ALLOWED
 PHASE 020 COMPLETE
 020-A/B/C/D/E/F/G/H/I/J/K/L COMPLETE
-Phase 021 start gate ELIGIBLE — G2 NOT AUTHORIZED
+Phase 021 START GATE COMPLETE — READY FOR G2 DECISION — G2 NOT AUTHORIZED
 active implementation packages 0
 implementation execution NOT AUTHORIZED
 ~~~
