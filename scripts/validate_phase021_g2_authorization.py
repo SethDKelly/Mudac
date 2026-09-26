@@ -25,6 +25,10 @@ EXPECTED_SCOPE = {
     "prove deterministic build/type/lint/test/dependency verification",
     "prove no active executable package, importer, dependency rule, source import, build configuration, or current implementation authority treats Judging Operations as an independent semantic owner",
 }
+BASE_SHA = "fdbcff0ee7e3a08deb870f51659a59b65b333893"
+BASE_TREE = "279fb97425d189a843cf90612ee6dff10c520d9c"
+CHECKOUT_SHA = "7812339629241cb7b4bd34d320166ee27a5c07ff"
+CHECKOUT_TREE = "4e6924f026d5e9c583df3f020bcfae32d98b3372"
 
 
 def main() -> int:
@@ -58,14 +62,25 @@ def main() -> int:
         errors.append("G2 must be explicitly human/program authorized")
 
     baseline = auth.get("authorized_baseline", {})
-    if baseline.get("main_sha") != "fdbcff0ee7e3a08deb870f51659a59b65b333893":
-        errors.append("G2 authorized main SHA drift")
-    if baseline.get("main_tree") != "279fb97425d189a843cf90612ee6dff10c520d9c":
-        errors.append("G2 authorized main tree drift")
+    if baseline.get("main_sha") != BASE_SHA:
+        errors.append("G2 authorized executable-content SHA drift")
+    if baseline.get("main_tree") != BASE_TREE:
+        errors.append("G2 authorized executable-content tree drift")
     if baseline.get("main_protected") is not True or baseline.get("ruleset_enforcement") != "active":
         errors.append("G2 requires observed protected active main baseline")
     if set(baseline.get("required_checks", [])) != EXPECTED_CHECKS:
         errors.append("G2 required-check set drift")
+
+    checkout = auth.get("implementation_checkout", {})
+    if checkout.get("commit_sha") != CHECKOUT_SHA or checkout.get("tree_sha") != CHECKOUT_TREE:
+        errors.append("G2 implementation checkout authority-overlay identity drift")
+    if checkout.get("branch") != "work/021/imp-001-topology":
+        errors.append("G2 implementation checkout branch drift")
+    if checkout.get("verified_governance_only_diff") is not True or checkout.get("may_be_used_as_worktree_base") is not True:
+        errors.append("G2 implementation checkout must remain an explicitly verified governance-only overlay")
+    equivalence = str(checkout.get("executable_content_equivalence", ""))
+    if "no application/workspace/package/dependency implementation surface changed" not in equivalence:
+        errors.append("G2 authority overlay must explicitly preserve executable-content equivalence")
 
     grant = auth.get("authorization", {})
     if grant.get("implementation_execution_authorized") is not True:
@@ -83,6 +98,8 @@ def main() -> int:
         errors.append("021-I01 must remain a writable Codex implementation assignment")
     if implementer.get("max_parallel_work_units") != 1 or implementer.get("branch") != "work/021/imp-001-topology":
         errors.append("021-I01 implementation isolation/branch drift")
+    if "implementation_checkout.commit_sha" not in str(implementer.get("worktree", "")):
+        errors.append("021-I01 worktree must derive from the explicit authority-overlay checkout")
 
     review = auth.get("review", {})
     if review.get("independent_reviewer_provider") != "CURSOR" or review.get("adversarial_reviewer_provider") != "CURSOR":
@@ -120,9 +137,13 @@ def main() -> int:
             errors.append(f"missing G2 authority surface: {rel}")
 
     context_text = (repo / CONTEXT).read_text(encoding="utf-8") if (repo / CONTEXT).is_file() else ""
-    for token in ("fdbcff0ee7e3a08deb870f51659a59b65b333893", "work/021/imp-001-topology", "Codex", "Cursor", "Do not self-review or merge"):
+    for token in (BASE_SHA, CHECKOUT_SHA, "work/021/imp-001-topology", "Codex", "Cursor", "Do not self-review or merge"):
         if token not in context_text:
             errors.append(f"021-I01 context manifest missing required token: {token}")
+
+    drift_rule = str(auth.get("base_drift_rule", ""))
+    if "governance-only G2 authority overlay" not in drift_rule or "Any other protected-main movement" not in drift_rule:
+        errors.append("G2 base-drift rule must distinguish the verified authority overlay from later main drift")
 
     for error in errors:
         print("ERROR", error)
@@ -130,7 +151,7 @@ def main() -> int:
         print(f"Phase 021 G2 authorization validation: FAIL ({len(errors)} error(s))")
         return 1
     print("Phase 021 G2 authorization validation: PASS")
-    print("IMP-001 / 021-I01 G2 AUTHORIZED; Codex implementation allowed only within bounded scope; release/production/Phase-022 remain unauthorized.")
+    print("IMP-001 / 021-I01 G2 AUTHORIZED; Codex worktree may use the verified authority-overlay checkout while executable scope remains anchored to the approved content baseline.")
     return 0
 
 
