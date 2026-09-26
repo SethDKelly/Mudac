@@ -91,7 +91,6 @@ implementation execution NOT AUTHORIZED
 - [Phase-021 gate](../../routing/phase021_start_gate_control.json)
 - [Cursor/Codex runbook](../../implementation-roadmap/cursor-codex-autonomous-coding-runbook.md)
 
-IMP-001 is G1-ready; G2 is ungranted.
 
 ## Phase 021
 
