@@ -85,20 +85,14 @@ implementation execution NOT AUTHORIZED
 ~~~
 
 
-## Autonomous implementation roadmap
+## Implementation program
 
-The current Phase-020 implementation roadmap is routed through:
+- [Roadmap](../../implementation-roadmap/index.md)
+- [Phase-021 gate](../../routing/phase021_start_gate_control.json)
+- [Cursor/Codex runbook](../../implementation-roadmap/cursor-codex-autonomous-coding-runbook.md)
 
-- [Implementation roadmap](../../implementation-roadmap/index.md)
-- [Machine roadmap](../../routing/phase020_autonomous_implementation_roadmap.json)
+IMP-001 is G1-ready. Phase 021 start gate is complete; G2 and execution remain ungranted.
 
-All fifteen retained packages are G1 planning-complete / READY_FOR_AUTHORIZATION. G2 remains explicit and ungranted during Phase 020.
+## Phase 021
 
-
-## Phase 021 start gate
-
-- [Phase-021 start-gate control](../../routing/phase021_start_gate_control.json)
-- [Phase-021 start-gate record](../../021-source-topology-implementation-foundation/021-start-gate.md)
-- [Cursor + Codex autonomous coding runbook](../../implementation-roadmap/cursor-codex-autonomous-coding-runbook.md)
-
-Phase 021 / IMP-001 is **READY FOR G2 DECISION**. G2 is NOT AUTHORIZED and implementation execution remains forbidden until a separate explicit human/program authorization.
+[Start gate](../../021-source-topology-implementation-foundation/021-start-gate.md): **READY FOR G2 DECISION**. G2 NOT AUTHORIZED.
