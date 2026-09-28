@@ -1,0 +1,37 @@
+{
+  "schema": "mudac.aut001-g2-authorization/v1",
+  "package_id": "AUT-001",
+  "decision": "AUTHORIZED_CORE_COORDINATION_ENVELOPE",
+  "authority_source": "HUMAN_PROGRAM_AUTHORITY",
+  "authority_recorded_from_instruction": "proceed_to_next_logical_subphase_after_AUT_001_start_gate",
+  "authorized_execution": [
+    "AUT-001-A",
+    "AUT-001-B",
+    "AUT-001-C",
+    "AUT-001-D",
+    "AUT-001-E",
+    "AUT-001-G_CORE"
+  ],
+  "current_executable_subphase": "AUT-001-A",
+  "predecessor_gating_remains_required": true,
+  "not_authorized": [
+    "AUT-001-F",
+    "AUT-001-G_FULL_COMPOSED",
+    "PHASE-022_EXECUTION",
+    "PROTECTED_IMPLEMENTATION_MERGE",
+    "CLOSURE_MERGE",
+    "RELEASE",
+    "PRODUCTION"
+  ],
+  "bound_g1_records": {
+    "start_gate": "docs/routing/aut001_start_gate.json",
+    "package_contract": "docs/routing/aut001_implementation_package_contract.json",
+    "material_surface_manifest": "docs/routing/aut001_material_surface_manifest.json",
+    "human_readable_record": "docs/AUT-001-bounded-development-control-plane/AUT-001-g2-authorization.md"
+  },
+  "status_projection_rule": "The bound G1 records are immutable planning snapshots. Their pre-authorization status fields are superseded for current authority only by this G2 record; their scope, criteria, evidence, material-surface, repair, rollback and human-stop constraints remain binding unless a separately reviewed authority delta changes them.",
+  "scope_expansion_authorized": false,
+  "criteria_weakening_authorized": false,
+  "production_authority": false,
+  "phase022_authority": false
+}
