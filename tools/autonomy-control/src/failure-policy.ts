@@ -2,7 +2,12 @@ import { classifyRevisionDelta } from './evidence.js';
 import { AppendOnlyFactStore } from './fact-store.js';
 import { projectLifecycle } from './lifecycle.js';
 import { phase021Identity } from './replay.js';
-import type { GuardDecision, HumanAuthorityKind, LifecycleFact } from './model.js';
+import type {
+  GuardDecision,
+  HumanAuthorityKind,
+  LifecycleFact,
+  RepairBlockerKind,
+} from './model.js';
 
 export type AutFailureStage =
   'AUT-001-A' | 'AUT-001-B' | 'AUT-001-C' | 'AUT-001-D' | 'AUT-001-E' | 'AUT-001-F' | 'AUT-001-G';
@@ -200,6 +205,7 @@ function lifecycleFact(
     stale?: boolean;
     humanAuthorityRef?: string;
     humanAuthorityKind?: HumanAuthorityKind;
+    repairBlocker?: RepairBlockerKind;
   } = {},
 ): LifecycleFact {
   return {
@@ -213,6 +219,7 @@ function lifecycleFact(
       ...(options.stale === true ? { stale: true } : {}),
       ...(options.humanAuthorityRef ? { humanAuthorityRef: options.humanAuthorityRef } : {}),
       ...(options.humanAuthorityKind ? { humanAuthorityKind: options.humanAuthorityKind } : {}),
+      ...(options.repairBlocker ? { repairBlocker: options.repairBlocker } : {}),
     },
   };
 }
@@ -334,24 +341,31 @@ export function executeStageAFailureCase(id: FailureCaseId): FailureExecutionRes
     }
     case 'FI-11': {
       const projection = projectLifecycle('REPAIR_REQUIRED', [
-        lifecycleFact('scope-expansion', 'repair.resume', { guardDecision: 'BLOCKED' }),
+        lifecycleFact('scope-expansion', 'repair.scope_or_budget_expansion_required', {
+          repairBlocker: 'SCOPE_EXPANSION',
+        }),
       ]);
       return executed(
         definition,
-        projection.state === 'BLOCKED'
+        projection.state === 'BLOCKED' &&
+          projection.terminalReason ===
+            'repair_scope_expansion_requires_human_disposition_or_reauthorization'
           ? 'BLOCKED_HUMAN_DISPOSITION_OR_REAUTHORIZATION'
-          : projection.state,
+          : projection.terminalReason ?? projection.state,
       );
     }
     case 'FI-12': {
       const projection = projectLifecycle('REPAIR_REQUIRED', [
-        lifecycleFact('budget-exhausted', 'repair.resume', { guardDecision: 'BLOCKED' }),
+        lifecycleFact('budget-exhausted', 'repair.scope_or_budget_expansion_required', {
+          repairBlocker: 'BUDGET_EXHAUSTED',
+        }),
       ]);
       return executed(
         definition,
-        projection.state === 'BLOCKED'
+        projection.state === 'BLOCKED' &&
+          projection.terminalReason === 'repair_budget_exhausted_requires_human_program_extension'
           ? 'BLOCKED_HUMAN_PROGRAM_EXTENSION_REQUIRED'
-          : projection.state,
+          : projection.terminalReason ?? projection.state,
       );
     }
     case 'FI-20': {
