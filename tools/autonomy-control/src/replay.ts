@@ -43,7 +43,9 @@ function event(
     factId,
     factType: 'lifecycle.event',
     logicalOrder,
-    payloadDigest: `${logicalOrder}:${eventType}:${options.subjectSha ?? ''}:${options.stale === true ? 'stale' : 'current'}`,
+    payloadDigest: `${logicalOrder}:${eventType}:${options.subjectSha ?? ''}:${
+      options.stale === true ? 'stale' : 'current'
+    }`,
     payload: {
       eventType,
       guardDecision: 'PASS',
@@ -60,32 +62,62 @@ export const phase021LifecycleFacts: readonly LifecycleFact[] = [
   event('021-03', 3, 'authority.g2_granted', { humanAuthorityRef: 'phase021-g2' }),
   event('021-04', 4, 'workspace.provision_requested'),
   event('021-05', 5, 'workspace.provisioned'),
-  event('021-06', 6, 'candidate.registered', { subjectSha: phase021Identity.initialCandidate.sha }),
-  event('021-07', 7, 'verification.started', { subjectSha: phase021Identity.initialCandidate.sha }),
-  event('021-08', 8, 'verification.pass', { subjectSha: phase021Identity.initialCandidate.sha }),
-  event('021-09', 9, 'review.independent.pass', { subjectSha: phase021Identity.initialCandidate.sha }),
+  event('021-06', 6, 'candidate.registered', {
+    subjectSha: phase021Identity.initialCandidate.sha,
+  }),
+  event('021-07', 7, 'verification.started', {
+    subjectSha: phase021Identity.initialCandidate.sha,
+  }),
+  event('021-08', 8, 'verification.pass', {
+    subjectSha: phase021Identity.initialCandidate.sha,
+  }),
+  event('021-09', 9, 'review.independent.pass', {
+    subjectSha: phase021Identity.initialCandidate.sha,
+  }),
   event('021-10', 10, 'failure.changes_required_within_existing_g2', {
     subjectSha: phase021Identity.initialCandidate.sha,
   }),
   event('021-11', 11, 'repair.resume'),
-  event('021-12', 12, 'candidate.registered', { subjectSha: phase021Identity.repairedCandidate.sha }),
-  event('021-13', 13, 'verification.started', { subjectSha: phase021Identity.repairedCandidate.sha }),
-  event('021-14', 14, 'verification.pass', { subjectSha: phase021Identity.repairedCandidate.sha }),
-  event('021-15', 15, 'review.independent.pass', { subjectSha: phase021Identity.repairedCandidate.sha }),
+  event('021-12', 12, 'candidate.registered', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
+  event('021-13', 13, 'verification.started', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
+  event('021-14', 14, 'verification.pass', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
+  event('021-15', 15, 'review.independent.pass', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
   event('021-stale-check', 15.5, 'github.check.required_set_pass', {
     subjectSha: phase021Identity.initialCandidate.sha,
     stale: true,
   }),
-  event('021-16', 16, 'review.adversarial.pass', { subjectSha: phase021Identity.repairedCandidate.sha }),
+  event('021-16', 16, 'review.adversarial.pass', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
   event('021-17', 17, 'github.check.required_set_pass', {
     subjectSha: phase021Identity.repairedCandidate.sha,
   }),
-  event('021-18', 18, 'gate.g5.pass', { subjectSha: phase021Identity.repairedCandidate.sha }),
-  event('021-19', 19, 'invalidation.review_required', { subjectSha: phase021Identity.reboundHead.sha }),
-  event('021-20', 20, 'review.independent.pass', { subjectSha: phase021Identity.reboundHead.sha }),
-  event('021-21', 21, 'review.adversarial.pass', { subjectSha: phase021Identity.reboundHead.sha }),
-  event('021-22', 22, 'github.check.required_set_pass', { subjectSha: phase021Identity.reboundHead.sha }),
-  event('021-23', 23, 'gate.g5.pass', { subjectSha: phase021Identity.reboundHead.sha }),
+  event('021-18', 18, 'gate.g5.pass', {
+    subjectSha: phase021Identity.repairedCandidate.sha,
+  }),
+  event('021-19', 19, 'invalidation.review_required', {
+    subjectSha: phase021Identity.reboundHead.sha,
+  }),
+  event('021-20', 20, 'review.independent.pass', {
+    subjectSha: phase021Identity.reboundHead.sha,
+  }),
+  event('021-21', 21, 'review.adversarial.pass', {
+    subjectSha: phase021Identity.reboundHead.sha,
+  }),
+  event('021-22', 22, 'github.check.required_set_pass', {
+    subjectSha: phase021Identity.reboundHead.sha,
+  }),
+  event('021-23', 23, 'gate.g5.pass', {
+    subjectSha: phase021Identity.reboundHead.sha,
+  }),
   event('021-24', 24, 'github.pull_request.merged_after_human_approval', {
     subjectSha: phase021Identity.implementationIntegration.sha,
     humanAuthorityRef: 'human-merge-pr19',
@@ -104,17 +136,37 @@ export const phase021RevisionCases: readonly RevisionDeltaInput[] = [
     oldRevision: phase021Identity.initialCandidate,
     newRevision: phase021Identity.repairedCandidate,
     changedSurfaces: [
-      { surfaceId: 'dependency-enforcement', surfaceClass: 'EXECUTABLE_MATERIAL', mapped: true },
-      { surfaceId: 'dependency-regression-tests', surfaceClass: 'EXECUTABLE_MATERIAL', mapped: true },
+      {
+        surfaceId: 'dependency-enforcement',
+        surfaceClass: 'EXECUTABLE_MATERIAL',
+        mapped: true,
+      },
+      {
+        surfaceId: 'dependency-regression-tests',
+        surfaceClass: 'EXECUTABLE_MATERIAL',
+        mapped: true,
+      },
     ],
   },
   {
     oldRevision: phase021Identity.repairedCandidate,
     newRevision: phase021Identity.reboundHead,
     changedSurfaces: [
-      { surfaceId: 'phase021-g2-authority', surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL', mapped: true },
-      { surfaceId: 'phase021-context', surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL', mapped: true },
-      { surfaceId: 'phase021-g2-validator', surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL', mapped: true },
+      {
+        surfaceId: 'phase021-g2-authority',
+        surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL',
+        mapped: true,
+      },
+      {
+        surfaceId: 'phase021-context',
+        surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL',
+        mapped: true,
+      },
+      {
+        surfaceId: 'phase021-g2-validator',
+        surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL',
+        mapped: true,
+      },
     ],
   },
   {
@@ -127,7 +179,11 @@ export const phase021RevisionCases: readonly RevisionDeltaInput[] = [
     newRevision: phase021Identity.closureHead,
     changedSurfaces: [
       { surfaceId: 'phase021-closure-evidence', surfaceClass: 'EVIDENCE_ONLY', mapped: true },
-      { surfaceId: 'phase021-routing-projection', surfaceClass: 'ROUTING_PROJECTION', mapped: true },
+      {
+        surfaceId: 'phase021-routing-projection',
+        surfaceClass: 'ROUTING_PROJECTION',
+        mapped: true,
+      },
     ],
   },
   {
@@ -146,7 +202,8 @@ export interface ReplayCaseResult {
 export function runPhase021Replay(): readonly ReplayCaseResult[] {
   const projection = projectLifecycle('PLANNING_READY', phase021LifecycleFacts);
   const classifications = phase021RevisionCases.map(classifyRevisionDelta);
-  const stateAfter = (factId: string) => projection.trace.find((entry) => entry.factId === factId)?.stateAfter;
+  const stateAfter = (factId: string) =>
+    projection.trace.find((entry) => entry.factId === factId)?.stateAfter;
   const disposition = (factId: string) =>
     projection.trace.find((entry) => entry.factId === factId)?.disposition;
 
@@ -156,7 +213,8 @@ export function runPhase021Replay(): readonly ReplayCaseResult[] {
       pass:
         stateAfter('021-10') === 'REPAIR_REQUIRED' &&
         classifications[0]?.classification === 'EXECUTABLE_MATERIAL_DELTA',
-      detail: 'initial adversarial failure routes bounded repair and executable-material reverification',
+      detail:
+        'initial adversarial failure routes bounded repair and executable-material reverification',
     },
     {
       id: 'SR-02',
@@ -175,7 +233,8 @@ export function runPhase021Replay(): readonly ReplayCaseResult[] {
       pass:
         stateAfter('021-23') === 'AWAITING_HUMAN_MERGE' &&
         disposition('021-stale-check') === 'HISTORICAL_NO_ADVANCE',
-      detail: 'exact-head CI/G5 reaches but does not cross the human merge stop; stale CI is historical only',
+      detail:
+        'exact-head CI/G5 reaches but does not cross the human merge stop; stale CI is historical only',
     },
     {
       id: 'SR-05',
@@ -194,8 +253,10 @@ export function runPhase021Replay(): readonly ReplayCaseResult[] {
     {
       id: 'SR-07',
       pass:
-        classifications[4]?.classification === 'PROVENANCE_ONLY_CHANGE' && projection.state === 'COMPLETE',
-      detail: 'final human closure merge completes Phase 021 without synthesizing a later authority transition',
+        classifications[4]?.classification === 'PROVENANCE_ONLY_CHANGE' &&
+        projection.state === 'COMPLETE',
+      detail:
+        'final human closure merge completes Phase 021 without synthesizing a later authority transition',
     },
   ];
 }
