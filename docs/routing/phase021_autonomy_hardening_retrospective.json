@@ -52,8 +52,8 @@
     {"id":"021-R-B","status":"COMPLETE_PASS","purpose":"orchestrator state machine, transition guards, human authority stops and fail-closed semantics"},
     {"id":"021-R-C","status":"COMPLETE_PASS","purpose":"evidence dependency graph, invalidation, content equivalence and evidence reuse"},
     {"id":"021-R-D","status":"COMPLETE_PASS","purpose":"agent dispatcher, role identity, session isolation, context generation and provenance manifests"},
-    {"id":"021-R-E","status":"NEXT_ELIGIBLE","purpose":"GitHub events, idempotency, PR/CI choreography and reconciliation"},
-    {"id":"021-R-F","status":"PLANNED","purpose":"development-control MCP interface and security boundary"},
+    {"id":"021-R-E","status":"COMPLETE_PASS","purpose":"GitHub event integration, deduplication/idempotency, PR/CI choreography and reconciliation"},
+    {"id":"021-R-F","status":"NEXT_ELIGIBLE","purpose":"development-control MCP interface and security boundary"},
     {"id":"021-R-G","status":"PLANNED","purpose":"shadow replay, exit review and Phase-022 handoff recommendation"}
   ],
   "retrospective_findings": [
@@ -128,9 +128,34 @@
     "serialized_surface_reservation_required_for_parallel_write": true,
     "complete_does_not_authorize_phase022": true
   },
+  "r_e_exit": {
+    "status": "COMPLETE_PASS",
+    "machine_contract": "docs/routing/autonomy_github_event_contract.json",
+    "control_plane_contract": "docs/routing/autonomy_control_plane_interfaces.json",
+    "reconciled_inputs": [
+      "docs/routing/autonomy_orchestrator_contract.json",
+      "docs/routing/autonomy_evidence_dependency_contract.json",
+      "docs/routing/autonomy_agent_dispatch_contract.json",
+      "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+      "docs/routing/phase020_review_repair_exit_gate_governance.json"
+    ],
+    "github_event_is_notification_not_truth": true,
+    "delivery_and_semantic_fact_idempotency_separate": true,
+    "out_of_order_and_stale_events_fail_safe": true,
+    "current_github_truth_reconciliation_required": true,
+    "exact_head_required_check_evaluation_defined": true,
+    "head_and_base_drift_route_through_evidence_graph": true,
+    "implementation_and_closure_pr_choreography_defined": true,
+    "post_merge_identity_capture_defined": true,
+    "missed_event_reconciliation_defined": true,
+    "idempotent_side_effect_operations_and_optimistic_preconditions_defined": true,
+    "serialized_surface_reservation_event_lifecycle_defined": true,
+    "github_event_cannot_create_human_authority": true,
+    "complete_does_not_authorize_phase022": true
+  },
   "next_action": {
-    "subphase": "021-R-E",
-    "action": "define_github_event_ingestion_deduplication_idempotency_pr_ci_choreography_and_reconciliation",
+    "subphase": "021-R-F",
+    "action": "define_development_control_mcp_capability_authorization_security_and_test_control_composition",
     "implementation_execution": false
   }
 }
