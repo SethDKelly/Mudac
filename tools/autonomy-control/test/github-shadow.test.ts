@@ -15,10 +15,7 @@ import {
   classifyDeliveryAgainstTruth,
   reconcileShadowTruth,
 } from '../src/github/reconciliation.js';
-import {
-  collectAuthoritativeGitHubTruth,
-  runReadOnlyShadow,
-} from '../src/github/shadow.js';
+import { collectAuthoritativeGitHubTruth, runReadOnlyShadow } from '../src/github/shadow.js';
 import { ShadowJournal } from '../src/storage/shadow-journal.js';
 
 const candidateSha = 'candidate-123';
@@ -363,47 +360,53 @@ describe('AUT-001-B live read-only shadow orchestration', () => {
     );
   });
 
-  it('preserves append-only history across restart and performs fresh authoritative reconciliation', async () => {
-    const client = new FakeReadClient();
-    const first = new ShadowJournal();
-    first.appendDelivery(delivery(), 'delivery-attempt-1');
-    await runReadOnlyShadow(client, first, request, target(), 'run-1', 'obs-1');
+  it(
+    'preserves append-only history across restart and performs fresh authoritative reconciliation',
+    async () => {
+      const client = new FakeReadClient();
+      const first = new ShadowJournal();
+      first.appendDelivery(delivery(), 'delivery-attempt-1');
+      await runReadOnlyShadow(client, first, request, target(), 'run-1', 'obs-1');
 
-    const restarted = new ShadowJournal(first.snapshot());
-    client.checks = [{ ...successfulCheck(), attempt: 2 }];
-    await runReadOnlyShadow(
-      client,
-      restarted,
-      { ...request, observedAt: '2026-09-28T17:50:00Z' },
-      target(),
-      'run-2',
-      'obs-2',
-    );
+      const restarted = new ShadowJournal(first.snapshot());
+      client.checks = [{ ...successfulCheck(), attempt: 2 }];
+      await runReadOnlyShadow(
+        client,
+        restarted,
+        { ...request, observedAt: '2026-09-28T17:50:00Z' },
+        target(),
+        'run-2',
+        'obs-2',
+      );
 
-    const snapshot = restarted.snapshot();
-    expect(snapshot.deliveries).toHaveLength(1);
-    expect(snapshot.observations).toHaveLength(2);
-    expect(snapshot.runAttempts).toHaveLength(2);
-  });
+      const snapshot = restarted.snapshot();
+      expect(snapshot.deliveries).toHaveLength(1);
+      expect(snapshot.observations).toHaveLength(2);
+      expect(snapshot.runAttempts).toHaveLength(2);
+    },
+  );
 
-  it('fails inconclusive when mandatory GitHub truth is unavailable and does not fabricate an observation', async () => {
-    const client = new FakeReadClient();
-    client.failOn = 'readChecks';
-    const journal = new ShadowJournal();
-    const result = await runReadOnlyShadow(
-      client,
-      journal,
-      request,
-      target(),
-      'run-unavailable',
-      'obs-unavailable',
-    );
-    expect(result.status).toBe('INCONCLUSIVE');
-    expect(journal.snapshot().observations).toHaveLength(0);
-    expect(journal.snapshot().runAttempts[0]?.reason).toContain(
-      'mandatory_github_truth_unavailable',
-    );
-  });
+  it(
+    'fails inconclusive when mandatory GitHub truth is unavailable and does not fabricate an observation',
+    async () => {
+      const client = new FakeReadClient();
+      client.failOn = 'readChecks';
+      const journal = new ShadowJournal();
+      const result = await runReadOnlyShadow(
+        client,
+        journal,
+        request,
+        target(),
+        'run-unavailable',
+        'obs-unavailable',
+      );
+      expect(result.status).toBe('INCONCLUSIVE');
+      expect(journal.snapshot().observations).toHaveLength(0);
+      expect(journal.snapshot().runAttempts[0]?.reason).toContain(
+        'mandatory_github_truth_unavailable',
+      );
+    },
+  );
 
   it('preserves zero-mutation behavior during a complete shadow run', async () => {
     const client = new FakeReadClient();
