@@ -33,17 +33,31 @@ const transitions: readonly Transition[] = [
   transition('candidate.registered', 'IMPLEMENTING', 'CANDIDATE_REGISTERED'),
   transition('verification.started', 'CANDIDATE_REGISTERED', 'VERIFYING'),
   transition('verification.pass', 'VERIFYING', 'AWAITING_INDEPENDENT_REVIEW'),
-  transition('review.independent.pass', 'AWAITING_INDEPENDENT_REVIEW', 'AWAITING_ADVERSARIAL_REVIEW'),
+  transition(
+    'review.independent.pass',
+    'AWAITING_INDEPENDENT_REVIEW',
+    'AWAITING_ADVERSARIAL_REVIEW',
+  ),
   transition('review.adversarial.pass', 'AWAITING_ADVERSARIAL_REVIEW', 'AWAITING_PR_CI'),
   transition('github.check.required_set_pass', 'AWAITING_PR_CI', 'AWAITING_G5'),
   transition('gate.g5.pass', 'AWAITING_G5', 'AWAITING_HUMAN_MERGE'),
   transition(
     'failure.changes_required_within_existing_g2',
-    ['VERIFYING', 'AWAITING_INDEPENDENT_REVIEW', 'AWAITING_ADVERSARIAL_REVIEW', 'AWAITING_PR_CI', 'AWAITING_G5'],
+    [
+      'VERIFYING',
+      'AWAITING_INDEPENDENT_REVIEW',
+      'AWAITING_ADVERSARIAL_REVIEW',
+      'AWAITING_PR_CI',
+      'AWAITING_G5',
+    ],
     'REPAIR_REQUIRED',
   ),
   transition('repair.resume', 'REPAIR_REQUIRED', 'IMPLEMENTING'),
-  transition('invalidation.review_required', 'AWAITING_HUMAN_MERGE', 'AWAITING_INDEPENDENT_REVIEW'),
+  transition(
+    'invalidation.review_required',
+    'AWAITING_HUMAN_MERGE',
+    'AWAITING_INDEPENDENT_REVIEW',
+  ),
   transition(
     'github.pull_request.merged_after_human_approval',
     'AWAITING_HUMAN_MERGE',
@@ -51,10 +65,20 @@ const transitions: readonly Transition[] = [
     true,
   ),
   transition('integration.pass', 'INTEGRATION_VERIFYING', 'AWAITING_CLOSURE_MERGE'),
-  transition('closure.merged_after_human_approval', 'AWAITING_CLOSURE_MERGE', 'COMPLETE', true),
+  transition(
+    'closure.merged_after_human_approval',
+    'AWAITING_CLOSURE_MERGE',
+    'COMPLETE',
+    true,
+  ),
   transition('invalidation.material_confirmed', 'COMPLETE', 'REOPEN_REQUIRED'),
   transition('authority.reopen_g2_granted', 'REOPEN_REQUIRED', 'G2_AUTHORIZED', true),
-  transition('invalidation.disposition_completion_remains_valid', 'REOPEN_REQUIRED', 'COMPLETE', true),
+  transition(
+    'invalidation.disposition_completion_remains_valid',
+    'REOPEN_REQUIRED',
+    'COMPLETE',
+    true,
+  ),
 ];
 
 const nextActions: Readonly<Record<LifecycleState, readonly string[]>> = {
@@ -76,7 +100,10 @@ const nextActions: Readonly<Record<LifecycleState, readonly string[]>> = {
     'review.adversarial.pass',
     'failure.changes_required_within_existing_g2',
   ],
-  AWAITING_PR_CI: ['github.check.required_set_pass', 'failure.changes_required_within_existing_g2'],
+  AWAITING_PR_CI: [
+    'github.check.required_set_pass',
+    'failure.changes_required_within_existing_g2',
+  ],
   AWAITING_G5: ['gate.g5.pass', 'failure.changes_required_within_existing_g2'],
   AWAITING_HUMAN_MERGE: [
     'github.pull_request.merged_after_human_approval',
@@ -106,7 +133,8 @@ export function projectLifecycle(
   inputFacts: readonly LifecycleFact[],
 ): ProjectionResult {
   const facts = [...inputFacts].sort(
-    (left, right) => left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
+    (left, right) =>
+      left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
   );
   const trace: ProjectionTraceEntry[] = [];
   const seenIds = new Map<string, string>();
