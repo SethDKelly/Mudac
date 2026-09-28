@@ -1,53 +1,30 @@
 {
-  "schema": "mudac.autonomy-control-plane-interfaces/v0.1-draft",
-  "status": "RETROSPECTIVE_DESIGN_DRAFT",
+  "schema": "mudac.autonomy-control-plane-interfaces/v0.2-retrospective",
+  "status": "R_D_COMPLETE_REMAINDER_DESIGN_DRAFT",
   "implementation_status": "NOT_IMPLEMENTED",
   "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
-  "purpose": "Define the initial agent-dispatch, GitHub-event and development-control MCP interfaces used to automate coordination without increasing semantic or execution authority.",
-  "roles": {
-    "ORCHESTRATOR": {"writes_source": false, "writes_routing_evidence": true, "grants_g2": false, "merges": false},
-    "CODEX_IMPLEMENTER": {"writes_source": "ONLY_AUTHORIZED_WORKTREE", "self_reviews": false, "merges": false},
-    "CURSOR_IMPLEMENTER": {"writes_source": "ONLY_AUTHORIZED_WORKTREE", "self_reviews": false, "merges": false},
-    "INDEPENDENT_REVIEWER": {"writes_source": false, "fresh_run_required": true, "merges": false},
-    "ADVERSARIAL_REVIEWER": {"writes_source": false, "fresh_run_required": true, "merges": false},
-    "GATEKEEPER": {"writes_source": false, "repairs_source": false, "merges": false, "grants_next_phase": false},
-    "HUMAN_PROGRAM_AUTHORITY": {"grants_g2": true, "may_authorize_scope_change": true, "protected_merge_decision": true, "release_and_production_authority": true}
+  "contracts": {
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
+    "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json"
   },
-  "dispatcher": {
+  "purpose": "Define the common control-plane interfaces used to automate coordination without increasing semantic or execution authority.",
+  "agent_dispatcher": {
+    "status": "R_D_COMPLETE_DESIGN_ONLY",
+    "contract": "docs/routing/autonomy_agent_dispatch_contract.json",
     "agent_may_self_select_next_task": false,
-    "dispatch_requires_state_machine_next_action": true,
-    "dispatch_packet_requires": [
-      "phase_package_work_unit",
-      "role",
-      "exact_base_or_candidate_sha_tree",
-      "authority_record_identity",
-      "in_scope",
-      "out_of_scope",
-      "serialized_surfaces",
-      "required_verification_or_review",
-      "repair_generation_if_any",
-      "circuit_breakers",
-      "session_freshness_requirement"
-    ],
-    "run_manifest_requires": [
-      "run_id",
-      "role",
-      "provider",
-      "input_sha_tree",
-      "authority_identity",
-      "start_time",
-      "end_time",
-      "result",
-      "changed_files_if_implementer",
-      "commands_or_evidence_refs",
-      "finding_ids",
-      "output_candidate_identity_if_any"
-    ],
+    "role_identity_separate_from_provider_identity": true,
+    "dispatch_requires_orchestrator_next_action": true,
+    "exact_revision_and_authority_digest_required": true,
+    "context_manifest_required": true,
+    "provenance_manifest_required": true,
+    "serialized_surface_reservation_required_for_parallel_writes": true,
     "private_chain_of_thought_transfer_forbidden": true,
     "protected_probe_transfer_to_implementer_forbidden": true,
-    "secrets_transfer_forbidden": true
+    "secret_values_in_dispatch_or_provenance_forbidden": true
   },
   "github_event_adapter": {
+    "status": "R_E_NOT_YET_COMPLETE",
     "design_mode_only": true,
     "accepted_event_families": [
       "pull_request.opened",
@@ -61,20 +38,15 @@
       "workflow_run.completed",
       "push"
     ],
-    "idempotency_key": "github_delivery_id_plus_repository_plus_event_action_plus_subject_sha",
     "event_order_not_trusted": true,
     "reconcile_against_github_current_truth": true,
-    "duplicate_delivery_is_noop_after_same_fact_recorded": true,
+    "duplicate_delivery_must_be_idempotent": true,
     "unknown_event_may_not_advance_state": true,
-    "required_behaviors": {
-      "pr_head_changed_after_evidence_binding": "CLASSIFY_DELTA",
-      "required_ci_complete": "RECONCILE_EXACT_HEAD_AND_REQUIRED_CHECK_SET",
-      "implementation_pr_merged": "REGISTER_INTEGRATION_SHA_TREE_AND_START_POST_MERGE_VERIFICATION",
-      "dependent_closure_pr_out_of_date": "SYNCHRONIZATION_ELIGIBLE_BUT_MERGE_STILL_HUMAN",
-      "main_changed_outside_expected_integration": "RECONCILE_AND_FAIL_CLOSED_IF_MATERIAL"
-    }
+    "must_correlate_dispatch_run_candidate_and_pr_identities": true,
+    "next_design_owner": "021-R-E"
   },
   "development_control_mcp": {
+    "status": "R_F_NOT_YET_COMPLETE",
     "separate_from_application_test_control_semantics": true,
     "may_compose_with_phase020_d_test_control": true,
     "mcp_tool_existence_does_not_grant_authority": true,
@@ -84,7 +56,7 @@
     "arbitrary_cloud_api_forbidden": true,
     "arbitrary_sql_forbidden": true,
     "secret_retrieval_forbidden": true,
-    "read_tools": [
+    "read_tools_proposed": [
       "implementation.get_state",
       "implementation.get_authority",
       "implementation.get_candidate",
@@ -93,7 +65,7 @@
       "implementation.get_merge_eligibility",
       "implementation.get_next_action"
     ],
-    "record_or_compute_tools": [
+    "record_or_compute_tools_proposed": [
       "implementation.register_candidate",
       "implementation.record_verification",
       "implementation.record_review",
@@ -108,16 +80,17 @@
       "implementation.open_or_update_draft_pr",
       "implementation.synchronize_dependency_branch"
     ],
-    "human_authority_tools_explicitly_forbidden": [
+    "human_authority_tools_forbidden": [
       "implementation.grant_g2",
       "implementation.approve_merge",
       "implementation.authorize_release",
       "implementation.authorize_production",
       "implementation.authorize_next_phase"
-    ]
+    ],
+    "next_design_owner": "021-R-F"
   },
   "phase020_d_composition": {
-    "development_control_plane_role": "coordinates_implementation_lifecycle_and_evidence",
+    "development_control_plane_role": "coordinates_implementation_lifecycle_agents_and_evidence",
     "test_control_plane_role": "exercises_nonproduction_application_behavior_and_observability",
     "shared_security_principles": [
       "capability_allowlist",
@@ -130,13 +103,16 @@
     "development_control_must_not_become_application_semantic_bypass": true,
     "test_control_must_not_grant_implementation_authority": true
   },
-  "open_design_work": [
-    "define_dispatch_transport_and_provider_adapters",
-    "define_webhook_or_actions_event_ingress_choice",
-    "define durable event_store_and_projection_storage",
-    "define github_permission_minimums",
-    "define mcp_schema_and_error_model",
-    "define authorization_claims_for_each_bounded_action",
-    "define dry_run_and_shadow_mode_before_live_routing"
-  ]
+  "remaining_design_work": [
+    "R_E_github_event_ingress_idempotency_reconciliation",
+    "R_F_mcp_schema_authorization_error_model_and_security_boundary",
+    "R_G_shadow_mode_failure_injection_and_exit_review"
+  ],
+  "authority_denials": {
+    "runtime_implementation_authorized": false,
+    "phase022_authorized": false,
+    "merge_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false
+  }
 }
