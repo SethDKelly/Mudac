@@ -50,6 +50,11 @@ function nullableText(value: unknown, context: string): string | null {
   return text(value, context);
 }
 
+function pullRequestState(value: unknown): PullRequestTruth['state'] {
+  if (value === 'open' || value === 'closed') return value;
+  throw new Error('invalid_github_response:pull_request.state');
+}
+
 function conclusion(value: unknown): CheckTruth['conclusion'] {
   if (value === null) return null;
   if (
@@ -130,7 +135,7 @@ export class GitHubRestReadClient implements GitHubReadClient {
     const baseRef = text(base.ref, 'pull_request.base.ref');
     return {
       number: numberValue(value.number, 'pull_request.number'),
-      state: text(value.state, 'pull_request.state') === 'open' ? 'open' : 'closed',
+      state: pullRequestState(value.state),
       merged: booleanValue(value.merged, 'pull_request.merged'),
       draft: booleanValue(value.draft, 'pull_request.draft'),
       headSha: text(head.sha, 'pull_request.head.sha'),
