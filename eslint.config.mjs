@@ -47,7 +47,6 @@ export default tseslint.config(
           patterns: [
             '@mudac/competition*',
             '@mudac/identity-access*',
-            '@mudac/judging-operations*',
             '@mudac/evaluation*',
             '@mudac/outcomes*',
             '@mudac/external-representation*',
