@@ -351,7 +351,7 @@ export function executeStageAFailureCase(id: FailureCaseId): FailureExecutionRes
           projection.terminalReason ===
             'repair_scope_expansion_requires_human_disposition_or_reauthorization'
           ? 'BLOCKED_HUMAN_DISPOSITION_OR_REAUTHORIZATION'
-          : projection.terminalReason ?? projection.state,
+          : (projection.terminalReason ?? projection.state),
       );
     }
     case 'FI-12': {
@@ -365,7 +365,7 @@ export function executeStageAFailureCase(id: FailureCaseId): FailureExecutionRes
         projection.state === 'BLOCKED' &&
           projection.terminalReason === 'repair_budget_exhausted_requires_human_program_extension'
           ? 'BLOCKED_HUMAN_PROGRAM_EXTENSION_REQUIRED'
-          : projection.terminalReason ?? projection.state,
+          : (projection.terminalReason ?? projection.state),
       );
     }
     case 'FI-20': {
