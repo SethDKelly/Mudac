@@ -51,8 +51,8 @@
     {"id":"021-R-A","status":"COMPLETE","purpose":"retrospective authority, coordination debt and lifecycle truth"},
     {"id":"021-R-B","status":"COMPLETE_PASS","purpose":"orchestrator state machine, transition guards, human authority stops and fail-closed semantics"},
     {"id":"021-R-C","status":"COMPLETE_PASS","purpose":"evidence dependency graph, invalidation, content equivalence and evidence reuse"},
-    {"id":"021-R-D","status":"NEXT_ELIGIBLE","purpose":"agent dispatcher, role identity, session isolation, context generation and provenance"},
-    {"id":"021-R-E","status":"PLANNED","purpose":"GitHub events, idempotency, PR/CI choreography and reconciliation"},
+    {"id":"021-R-D","status":"COMPLETE_PASS","purpose":"agent dispatcher, role identity, session isolation, context generation and provenance manifests"},
+    {"id":"021-R-E","status":"NEXT_ELIGIBLE","purpose":"GitHub events, idempotency, PR/CI choreography and reconciliation"},
     {"id":"021-R-F","status":"PLANNED","purpose":"development-control MCP interface and security boundary"},
     {"id":"021-R-G","status":"PLANNED","purpose":"shadow replay, exit review and Phase-022 handoff recommendation"}
   ],
@@ -80,11 +80,6 @@
   "r_b_exit": {
     "status": "COMPLETE_PASS",
     "machine_contract": "docs/routing/autonomy_orchestrator_contract.json",
-    "reconciled_inputs": [
-      "docs/routing/autonomous_implementation_operating_model.json",
-      "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
-      "docs/routing/phase020_review_repair_exit_gate_governance.json"
-    ],
     "guarded_transitions_required": true,
     "dynamic_transition_synthesis_forbidden": true,
     "optional_stages_require_predeclared_lifecycle_profile": true,
@@ -93,12 +88,6 @@
   "r_c_exit": {
     "status": "COMPLETE_PASS",
     "machine_contract": "docs/routing/autonomy_evidence_dependency_contract.json",
-    "reconciled_inputs": [
-      "docs/routing/phase020_implementation_phase_contract.json",
-      "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
-      "docs/routing/phase020_review_repair_exit_gate_governance.json",
-      "docs/routing/autonomy_orchestrator_contract.json"
-    ],
     "reuse_by_reference_not_relabeling": true,
     "material_surface_manifest_required_before_g2": true,
     "unmapped_change_fails_inconclusive": true,
@@ -106,9 +95,23 @@
     "phase021_replay_oracle_defined": true,
     "complete_does_not_authorize_phase022": true
   },
+  "r_d_exit": {
+    "status": "COMPLETE_PASS",
+    "machine_contract": "docs/routing/autonomy_agent_dispatch_contract.json",
+    "control_plane_contract": "docs/routing/autonomy_control_plane_interfaces.json",
+    "role_provider_separation_required": true,
+    "exact_revision_authority_bound_dispatch": true,
+    "implementer_reviewer_isolation_required": true,
+    "fresh_adversarial_session_evidence_required": true,
+    "minimum_sufficient_context_manifest_required": true,
+    "private_reasoning_and_secret_capture_forbidden": true,
+    "append_only_run_provenance_required": true,
+    "serialized_surface_reservation_required_for_parallel_write": true,
+    "complete_does_not_authorize_phase022": true
+  },
   "next_action": {
-    "subphase": "021-R-D",
-    "action": "define_agent_dispatch_role_identity_session_isolation_context_generation_and_provenance_manifests",
+    "subphase": "021-R-E",
+    "action": "define_github_event_ingestion_deduplication_idempotency_pr_ci_choreography_and_reconciliation",
     "implementation_execution": false
   }
 }
