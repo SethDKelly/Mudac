@@ -1,0 +1,371 @@
+{
+  "schema": "mudac.autonomy-github-event-contract/v0.1-retrospective",
+  "status": "R_E_COMPLETE_DESIGN_ONLY",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "normative_inputs": {
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
+    "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json",
+    "exact_revision_ci": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  },
+  "external_mechanics_refs": [
+    "https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks",
+    "https://docs.github.com/en/webhooks/webhook-events-and-payloads",
+    "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
+  ],
+  "principles": [
+    "github_event_is_notification_not_lifecycle_truth",
+    "consequential_transition_requires_reconciliation_against_current_repository_truth",
+    "delivery_idempotency_and_semantic_fact_idempotency_are_distinct",
+    "event_arrival_order_is_not_trusted",
+    "stale_events_remain_historical_and_cannot_regress_current_state",
+    "exact_head_check_evidence_only_satisfies_exact_head",
+    "pr_number_identity_never_substitutes_for_candidate_sha_tree_identity",
+    "head_or_base_drift_routes_through_r_c_invalidation",
+    "webhooks_are_accelerators_not_the_only_reconciliation_source",
+    "bounded_side_effects_use_preconditions_and_idempotent_operation_ids",
+    "github_activity_never_creates_human_authority"
+  ],
+  "ingress": {
+    "live_ingress_requires_signature_verification": true,
+    "acknowledge_then_process_asynchronously": true,
+    "minimum_event_subscription": true,
+    "accepted_event_families": [
+      "pull_request",
+      "check_run",
+      "check_suite",
+      "workflow_run",
+      "push"
+    ],
+    "accepted_pull_request_actions": [
+      "opened",
+      "reopened",
+      "synchronize",
+      "ready_for_review",
+      "converted_to_draft",
+      "closed"
+    ],
+    "unknown_event_or_action": "RECORD_WITHOUT_LIFECYCLE_ADVANCEMENT",
+    "raw_secret_bearing_headers_in_public_evidence": false
+  },
+  "delivery_envelope": {
+    "immutable": true,
+    "required_fields": [
+      "delivery_id",
+      "source_type",
+      "repository_id",
+      "repository_full_name",
+      "event_family",
+      "action_or_null",
+      "received_at",
+      "signature_verified",
+      "payload_digest"
+    ],
+    "conditional_fields": [
+      "hook_or_app_installation_id",
+      "sender_identity",
+      "pull_request_number",
+      "ref",
+      "payload_head_sha",
+      "payload_base_sha",
+      "check_run_id",
+      "check_suite_id",
+      "workflow_run_id",
+      "workflow_attempt",
+      "redelivery_indicator"
+    ],
+    "signature_invalid": "REJECT",
+    "raw_payload_retention": "IMPLEMENTATION_POLICY_DEFERRED_BUT_DIGEST_REQUIRED"
+  },
+  "delivery_idempotency": {
+    "primary_key": ["source_or_hook_identity", "repository_id", "delivery_id"],
+    "same_key_same_payload_digest": "IDEMPOTENT_NOOP_AFTER_FIRST_ACCEPTED_RECORD",
+    "same_key_conflicting_payload_digest": "INCONCLUSIVE_SECURITY_RECONCILIATION",
+    "redelivery_same_delivery_id": "RETAIN_PROCESSING_ATTEMPT_BUT_DO_NOT_CREATE_DUPLICATE_SEMANTIC_FACT",
+    "processing_attempt_has_distinct_identity": true,
+    "original_delivery_record_overwrite_forbidden": true
+  },
+  "semantic_fact_model": {
+    "immutable": true,
+    "current_truth_is_projection": true,
+    "fact_types": {
+      "PR_HEAD": ["repository_id", "pull_request_number", "head_sha"],
+      "PR_STATE": ["repository_id", "pull_request_number", "state", "draft"],
+      "PR_MERGE": ["repository_id", "pull_request_number", "merge_commit_sha"],
+      "REF": ["repository_id", "ref", "sha"],
+      "CHECK": ["repository_id", "check_run_id", "attempt_or_run_identity", "head_sha", "conclusion"],
+      "WORKFLOW": ["repository_id", "workflow_run_id", "attempt", "head_sha", "conclusion"],
+      "REVIEW_THREAD": ["repository_id", "pull_request_number", "thread_or_review_identity", "state"],
+      "SERIALIZED_SURFACE_RESERVATION": ["reservation_id", "surface_id", "owner_run_id", "state"]
+    },
+    "duplicate_same_fact": "NOOP",
+    "newer_superseding_fact": "APPEND_AND_PROJECT_NEW_CURRENT_TRUTH",
+    "prior_fact_erasure": false
+  },
+  "event_order": {
+    "arrival_time_establishes_lifecycle_order": false,
+    "late_event_for_superseded_head": "HISTORICAL_NO_CURRENT_TRANSITION",
+    "late_check_for_superseded_candidate": "DOES_NOT_SATISFY_CURRENT_CI",
+    "merge_event_requires_current_pr_and_ref_reconciliation": true,
+    "out_of_order_or_ambiguous": "RECONCILE_OR_INCONCLUSIVE"
+  },
+  "reconcilers": {
+    "pull_request": {
+      "required_truth": [
+        "pr_number",
+        "state",
+        "merged",
+        "draft",
+        "current_head_sha",
+        "base_ref",
+        "current_base_sha",
+        "merge_commit_sha_if_any",
+        "mergeability_or_freshness_signal_if_available",
+        "required_unresolved_review_threads_if_applicable"
+      ]
+    },
+    "ref": {
+      "required_truth": ["implementation_branch_sha", "closure_branch_sha_if_any", "main_sha", "tree_sha_where_evidence_requires"]
+    },
+    "ci": {
+      "required_truth": [
+        "subject_sha",
+        "required_check_set",
+        "check_and_workflow_run_ids",
+        "attempts",
+        "workflow_definition_identity_when_required",
+        "conclusions",
+        "current_candidate_applicability"
+      ]
+    },
+    "evidence": {
+      "correlates": [
+        "dispatch_id",
+        "run_id",
+        "candidate_generation",
+        "candidate_sha_tree",
+        "r_c_evidence_nodes",
+        "g5_candidate",
+        "integration_identity",
+        "closure_identity"
+      ]
+    }
+  },
+  "ci_truth": {
+    "primary_execution_signal": "EXACT_HEAD_REQUIRED_CHECK_RUNS_AND_WORKFLOW_RUNS",
+    "workflow_metadata_role": "RUN_ATTEMPT_AND_PROVENANCE_IDENTITY",
+    "required_set_source": "CURRENT_REPOSITORY_ENFORCEMENT_AND_PACKAGE_CONTRACT",
+    "legacy_combined_commit_status": "OBSERVABLE_NONAUTHORITATIVE_WHEN_EMPTY_LAGGING_OR_SEMANTICALLY_DIFFERENT",
+    "contradictory_signals": "RECONCILIATION_REQUIRED",
+    "required_set_pass_requires": [
+      "exact_current_candidate_sha_tree_known",
+      "required_check_set_known",
+      "all_required_checks_bound_to_relevant_exact_head",
+      "all_required_checks_terminal_success",
+      "no_required_check_missing_running_cancelled_or_incompatibly_skipped",
+      "r_c_evaluator_material_current",
+      "candidate_not_superseded_by_later_head"
+    ],
+    "ci_pass_grants_merge_authority": false
+  },
+  "pr_choreography": {
+    "draft_pr": {
+      "automation_may_prepare_if_external_action_authorized": true,
+      "may_update_coordination_metadata": true,
+      "may_observe_checks": true,
+      "may_merge": false
+    },
+    "ready_for_review": {
+      "eligibility_requires_declared_lifecycle_choreography": true,
+      "ready_state_grants_merge_authority": false
+    },
+    "head_change": {
+      "action": [
+        "freeze_merge_eligibility",
+        "reconcile_new_head_sha_tree",
+        "invoke_r_c_delta_classification",
+        "invalidate_or_rebind_evidence",
+        "dispatch_required_delta_or_full_reviews",
+        "require_exact_head_ci",
+        "refresh_gate_binding_if_required"
+      ],
+      "stale_pr_number_based_approval_reuse_forbidden": true
+    },
+    "base_drift": {
+      "synchronization_may_become_eligible": true,
+      "requires_declared_lifecycle_profile_and_external_action_authority": true,
+      "synchronization_creates_new_head_identity": true,
+      "r_c_classification_required": true,
+      "synchronization_grants_merge_authority": false
+    },
+    "merge": {
+      "requires": [
+        "reconciled_pr_merged_state",
+        "expected_pr_head_relationship_known",
+        "merge_commit_or_integration_sha_known",
+        "human_merge_authority_when_required",
+        "main_ref_reflects_expected_integration",
+        "integration_sha_tree_registered"
+      ],
+      "merge_event_alone_sufficient": false
+    }
+  },
+  "closure_pr_dependency": {
+    "default_profile_uses_separate_closure_pr": true,
+    "closure_may_not_precede_required_implementation_integration": true,
+    "implementation_merge_triggers": [
+      "register_integration_sha_tree",
+      "prepare_or_update_closure_evidence",
+      "reconcile_closure_branch_freshness"
+    ],
+    "out_of_date_closure_branch": "COORDINATION_CONDITION_NOT_IMPLEMENTATION_DEFECT",
+    "authorized_synchronization_creates_new_closure_head": true,
+    "fresh_required_checks_after_synchronization": true,
+    "closure_merge_remains_human_when_profile_requires": true
+  },
+  "post_merge": {
+    "register_main_commit_and_tree": true,
+    "classify_candidate_to_integration_delta_with_r_c": true,
+    "classify_integration_to_closure_delta_with_r_c": true,
+    "collect_declared_main_integration_checks": true,
+    "content_equivalence_reuse_requires_explicit_r_c_proof": true,
+    "premerge_evidence_relabel_to_merge_sha_forbidden": true
+  },
+  "reconciliation_fallback": {
+    "webhooks_are_only_source_of_truth": false,
+    "startup_or_periodic_reconciliation_required_by_implementation": true,
+    "cadence_deferred": true,
+    "triggers": [
+      "missed_delivery",
+      "control_plane_restart",
+      "processing_failure",
+      "ambiguous_delivery_order",
+      "pr_ref_check_change_without_correlated_event",
+      "projection_disagrees_with_github_truth"
+    ],
+    "reconstruction_source": "CURRENT_GITHUB_API_AND_REPOSITORY_FACTS_PLUS_IMMUTABLE_LOCAL_RECORDS"
+  },
+  "event_store": {
+    "storage_technology_deferred": true,
+    "append_only_raw_delivery_metadata": true,
+    "append_only_normalized_facts": true,
+    "append_only_processing_attempts": true,
+    "current_lifecycle_state_is_projection": true,
+    "deterministic_replay_required": true,
+    "failed_stale_or_superseded_fact_erasure_forbidden": true
+  },
+  "side_effect_operations": {
+    "operation_identity_separate_from_delivery_identity": true,
+    "operation_types": [
+      "OPEN_OR_UPDATE_DRAFT_PR",
+      "MARK_PR_READY_OR_DRAFT",
+      "SYNCHRONIZE_DEPENDENCY_BRANCH",
+      "WRITE_COORDINATION_METADATA_OR_EVIDENCE_REFERENCE"
+    ],
+    "required_fields": [
+      "operation_id",
+      "operation_type",
+      "subject_identity",
+      "expected_current_state_or_head",
+      "bounded_requested_mutation",
+      "authority_or_external_action_ref",
+      "result_identity",
+      "retry_policy"
+    ],
+    "same_successful_operation_retry": "IDEMPOTENT_NOOP",
+    "precondition_changed": "RECONCILE_NEW_OPERATION_REQUIRED",
+    "force_overwrite_on_drift": false
+  },
+  "optimistic_concurrency": {
+    "recheck_subject_before_write": true,
+    "pr_head_bound_metadata_requires_expected_head": true,
+    "branch_sync_requires_expected_old_head_and_current_base": true,
+    "newer_candidate_coordination_state_may_not_be_overwritten": true,
+    "closure_sync_serialized_branch_collision_forbidden": true,
+    "mismatch_result": "RECONCILE_FAIL_CLOSED"
+  },
+  "serialized_surface_reservations": {
+    "event_backed": true,
+    "states": ["REQUESTED", "ACQUIRED", "RELEASED", "ABANDONED_REQUIRES_RECONCILIATION"],
+    "conflict": "BLOCKED",
+    "release_requires_immutable_fact": true,
+    "stale_owner_requires_run_terminal_evidence_and_reconciliation": true,
+    "silent_steal_forbidden": true
+  },
+  "security": {
+    "minimum_event_subscriptions": true,
+    "webhook_signature_verification": true,
+    "https_tls_live_ingress": true,
+    "bounded_github_permissions": true,
+    "read_only_reconciliation_where_possible": true,
+    "narrow_write_for_authorized_coordination_only": true,
+    "untrusted_pr_protected_credentials_forbidden": true,
+    "secret_or_signature_values_in_public_evidence_forbidden": true,
+    "payload_may_synthesize_authority": false,
+    "exact_permission_matrix_deferred_to_autonomy_implementation_and_r_f": true
+  },
+  "failure_classes": {
+    "DELIVERY_SIGNATURE_INVALID": "REJECT",
+    "DUPLICATE_IDENTICAL": "IDEMPOTENT_NOOP",
+    "DUPLICATE_CONFLICTING": "INCONCLUSIVE",
+    "UNKNOWN_EVENT_OR_ACTION": "RECORD_NO_ADVANCE",
+    "STALE_SUBJECT_EVENT": "HISTORICAL_NO_ADVANCE",
+    "CURRENT_TRUTH_CONTRADICTS_EVENT": "RECONCILIATION_REQUIRED",
+    "REQUIRED_CHECK_MISSING": "NO_CI_PASS_TRANSITION",
+    "REQUIRED_CHECK_FAILED": "GOVERNED_FAILURE_OR_REPAIR_ROUTING",
+    "EVALUATOR_IDENTITY_CHANGED": "R_C_EVALUATOR_INVALIDATION",
+    "PR_HEAD_CHANGED": "R_C_DELTA_CLASSIFICATION",
+    "BASE_DRIFT": "SYNCHRONIZATION_AND_EVIDENCE_CLASSIFICATION",
+    "MERGE_IDENTITY_AMBIGUOUS": "INCONCLUSIVE",
+    "SIDE_EFFECT_PRECONDITION_FAILED": "RECONCILE_NO_FORCE",
+    "SERIALIZED_RESERVATION_CONFLICT": "BLOCKED",
+    "GITHUB_API_UNAVAILABLE_FOR_MANDATORY_FACT": "BLOCKED_OR_INCONCLUSIVE"
+  },
+  "retry_policy": {
+    "transport_or_transient_processing_retry_allowed": true,
+    "mandatory_evidence_retry_until_green_forbidden": true,
+    "failed_attempt_history_retained": true,
+    "redelivery_does_not_erase_prior_failure": true
+  },
+  "phase021_replay_oracle": {
+    "pr19": {
+      "original_candidate": "dc8d4ddc56c3feb011eb49abc060fdb6980ddfce",
+      "repaired_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+      "rebound_head": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+      "integration": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3"
+    },
+    "final_phase021_main": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "expected_behaviors": [
+      "superseded_candidate_checks_and_reviews_remain_historical",
+      "1c36_to_280c_head_change_freezes_merge_and_routes_governance_delta_review",
+      "exact_head_required_ci_pass_required_before_rebinding",
+      "280c_to_a38d_integration_registers_distinct_identity_and_same_tree_proof",
+      "closure_pr_dependency_waits_for_implementation_merge",
+      "closure_branch_sync_creates_new_head_and_fresh_ci",
+      "final_closure_merge_registers_29637_main",
+      "no_github_event_authorizes_phase022"
+    ]
+  },
+  "required_queries": [
+    "current_exact_pr_head_base_merge_identity",
+    "delivery_or_fact_that_triggered_reconciliation",
+    "delivery_or_semantic_fact_already_processed",
+    "required_checks_complete_for_exact_head",
+    "authoritative_check_or_workflow_attempt_and_reason",
+    "pr_head_moved_after_review_or_g5",
+    "r_c_invalidation_or_rebinding_for_move",
+    "branch_synchronization_eligible_and_authorized",
+    "closure_pr_dependency_satisfied",
+    "current_main_sha_tree",
+    "lifecycle_projection_consistent_with_github_truth"
+  ],
+  "handoff": {
+    "next_subphase": "021-R-F",
+    "purpose": "define development-control MCP capabilities and authorization/security boundaries over the orchestrator, evidence graph, dispatcher and GitHub reconciler",
+    "runtime_implementation_authorized": false,
+    "phase022_authorized": false,
+    "merge_release_production_authorized": false
+  }
+}
