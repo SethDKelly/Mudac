@@ -11,8 +11,14 @@ import type {
   ShadowTarget,
   WorkflowTruth,
 } from '../src/github/model.js';
-import { classifyDeliveryAgainstTruth, reconcileShadowTruth } from '../src/github/reconciliation.js';
-import { collectAuthoritativeGitHubTruth, runReadOnlyShadow } from '../src/github/shadow.js';
+import {
+  classifyDeliveryAgainstTruth,
+  reconcileShadowTruth,
+} from '../src/github/reconciliation.js';
+import {
+  collectAuthoritativeGitHubTruth,
+  runReadOnlyShadow,
+} from '../src/github/shadow.js';
 import { ShadowJournal } from '../src/storage/shadow-journal.js';
 
 const candidateSha = 'candidate-123';
