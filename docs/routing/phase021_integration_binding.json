@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-021 / IMP-001 PRE-MERGE INTEGRATION BINDING",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "historical_g5": {
+    "candidate_sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "candidate_tree": "4bdc870c791f5b014c5d564ee01007d75be06dac",
+    "status": "COMPLETE_AND_IMMUTABLE"
+  },
+  "premerge_head_binding": {
+    "pull_request": 19,
+    "branch": "work/021/imp-001-topology",
+    "head_sha": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "head_tree": "62acfc068e568c0ab298b668e9390bc6c5a39adc",
+    "merge_base": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "status": "BOUND_BEFORE_HUMAN_MERGE"
+  },
+  "delta": {
+    "classification": "GOVERNANCE_AND_VALIDATION_ONLY",
+    "material_imp001_executable_change": false,
+    "changed_files": [
+      "docs/021-source-topology-implementation-foundation/021-I01-context-manifest.md",
+      "docs/021-source-topology-implementation-foundation/021-g2-authorization.md",
+      "docs/routing/phase021_g2_authorization.json",
+      "scripts/validate_phase021_g2_authorization.py"
+    ],
+    "executable_content_equivalence": "PASS"
+  },
+  "reviews": {
+    "focused_independent_integration_delta": {
+      "provider": "CURSOR",
+      "fresh_session": true,
+      "result": "PASS",
+      "blocking_findings": 0
+    },
+    "fresh_adversarial_integration_delta": {
+      "provider": "CURSOR",
+      "fresh_session": true,
+      "result": "PASS",
+      "blocking_findings": 0,
+      "prior_g5_disposition": "G5_IMPLEMENTATION_ACCEPTANCE_REMAINS_VALID_WITH_NEW_INTEGRATION_BINDING"
+    }
+  },
+  "fresh_ci": [
+    {
+      "required_check": "Validate agentic/documentation conformance",
+      "run_id": 36368260327,
+      "result": "SUCCESS"
+    },
+    {
+      "required_check": "Implementation Verification",
+      "run_id": 36368260317,
+      "result": "SUCCESS"
+    },
+    {
+      "required_check": "CodeQL JavaScript/TypeScript",
+      "run_id": 36368260400,
+      "result": "SUCCESS"
+    }
+  ],
+  "decision": {
+    "historical_g5_remains_valid": true,
+    "premerge_head_is_content_equivalent_for_imp001": true,
+    "pr19_merge_eligible": true,
+    "human_merge_decision_required": true,
+    "final_main_integration_sha_pending": true,
+    "pr20_should_remain_draft_until_final_integration_binding": true,
+    "phase022_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false
+  },
+  "next_required_action": "After human-authorized merge of PR #19, capture the resulting main integration SHA/tree, classify material differences, record post-integration CI/equivalence evidence, then finalize PR #20 closure evidence."
+}
