@@ -1,0 +1,179 @@
+{
+  "schema": "mudac.aut001-material-surface-manifest/v1",
+  "package_id": "AUT-001",
+  "status": "G1_COMPLETE_PRE_G2",
+  "execution_authorized": false,
+  "authority_refs": [
+    "docs/routing/aut001_implementation_package_contract.json",
+    "docs/routing/autonomy_evidence_dependency_contract.json"
+  ],
+  "unmatched_changed_path": "INCONCLUSIVE_UNTIL_CLASSIFIED",
+  "overlap_rule": "MOST_RESTRICTIVE_EFFECT_WINS",
+  "surfaces": [
+    {
+      "surface_id": "AUT-MS-ORCH",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/orchestrator/", "tools/autonomy-control/src/facts/"],
+      "criterion_refs": ["AUT-C01", "AUT-C02", "AUT-C12"],
+      "evidence_obligation_refs": ["AUT-E01", "AUT-E02", "AUT-E09"],
+      "change_effect": ["replay_rerun", "failure_injection_rerun", "independent_review_refresh", "adversarial_review_refresh", "g5_rebinding"],
+      "equivalence_method": "DECLARED_SURFACE_OBJECT_OR_CONTENT_IDENTITY_OTHERWISE_REVERIFY",
+      "owner": "AUT-001-A",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-EVIDENCE",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/evidence/"],
+      "criterion_refs": ["AUT-C03"],
+      "evidence_obligation_refs": ["AUT-E01", "AUT-E02", "AUT-E09"],
+      "change_effect": ["revision_classification_rerun", "invalidation_reuse_tests_rerun", "review_refresh", "g5_rebinding"],
+      "equivalence_method": "DECLARED_SURFACE_OBJECT_OR_CONTENT_IDENTITY_OTHERWISE_REVERIFY",
+      "owner": "AUT-001-A",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-GITHUB",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/github/"],
+      "criterion_refs": ["AUT-C02", "AUT-C05", "AUT-C09", "AUT-C15"],
+      "evidence_obligation_refs": ["AUT-E03", "AUT-E06", "AUT-E09"],
+      "change_effect": ["github_reconciliation_rerun", "shadow_rerun", "bounded_action_tests_rerun", "security_review_refresh", "g5_rebinding"],
+      "equivalence_method": "DECLARED_SURFACE_OBJECT_OR_CONTENT_IDENTITY_OTHERWISE_REVERIFY",
+      "owner": "AUT-001-B/AUT-001-E",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-DISPATCH",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/dispatch/", "tools/autonomy-control/src/providers/"],
+      "criterion_refs": ["AUT-C04", "AUT-C13"],
+      "evidence_obligation_refs": ["AUT-E04", "AUT-E09"],
+      "change_effect": ["adapter_conformance_rerun", "role_session_isolation_rerun", "review_refresh", "g5_rebinding"],
+      "equivalence_method": "DECLARED_SURFACE_OBJECT_OR_CONTENT_IDENTITY_OTHERWISE_REVERIFY",
+      "owner": "AUT-001-C",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-MCP-AUTH",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/mcp/", "tools/autonomy-control/src/auth/"],
+      "criterion_refs": ["AUT-C06", "AUT-C07", "AUT-C08", "AUT-C09", "AUT-C12"],
+      "evidence_obligation_refs": ["AUT-E05", "AUT-E06", "AUT-E09"],
+      "change_effect": ["security_abuse_matrix_rerun", "authorization_tests_rerun", "bounded_action_tests_rerun", "independent_security_review_refresh", "g5_rebinding"],
+      "equivalence_method": "NO_SEMANTIC_REUSE_FOR_AUTHORIZATION_OR_CAPABILITY_CHANGE_WITHOUT_FRESH_SECURITY_REVIEW",
+      "owner": "AUT-001-D/AUT-001-E",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-TEST-BRIDGE",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/test-control/"],
+      "criterion_refs": ["AUT-C07", "AUT-C10"],
+      "evidence_obligation_refs": ["AUT-E05", "AUT-E07", "AUT-E09"],
+      "change_effect": ["020d_bridge_rerun", "production_denial_rerun", "cross_plane_security_review_refresh", "g5_rebinding"],
+      "equivalence_method": "NO_REUSE_FOR_AUTHORIZATION_ENVIRONMENT_OR_CAPABILITY_SEMANTIC_CHANGE_WITHOUT_FRESH_BRIDGE_EVIDENCE",
+      "owner": "AUT-001-F",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-STORAGE-OPS",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/src/storage/", "tools/autonomy-control/src/observability/", "tools/autonomy-control/src/health/"],
+      "criterion_refs": ["AUT-C11", "AUT-C14", "AUT-C15"],
+      "evidence_obligation_refs": ["AUT-E03", "AUT-E08", "AUT-E09"],
+      "change_effect": ["restart_replay_rerun", "operational_recovery_rerun", "shadow_observability_rerun", "review_refresh", "g5_rebinding"],
+      "equivalence_method": "DECLARED_SURFACE_OBJECT_OR_CONTENT_IDENTITY_OTHERWISE_OPERATIONAL_REVERIFY",
+      "owner": "AUT-001-A/AUT-001-B/AUT-001-G",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-HARNESS",
+      "surface_class": "CI_EVALUATOR_MATERIAL",
+      "selectors": ["tools/autonomy-control/test/", "tools/autonomy-control/fixtures/"],
+      "criterion_refs": ["AUT-C01", "AUT-C02", "AUT-C03", "AUT-C05", "AUT-C06", "AUT-C07", "AUT-C08", "AUT-C09", "AUT-C10", "AUT-C11", "AUT-C12", "AUT-C13", "AUT-C14", "AUT-C15"],
+      "evidence_obligation_refs": ["AUT-E01", "AUT-E02", "AUT-E04", "AUT-E05", "AUT-E06", "AUT-E07", "AUT-E08"],
+      "change_effect": ["affected_evaluator_evidence_invalidated", "evaluator_integrity_review_required", "g5_rebinding"],
+      "equivalence_method": "EVALUATOR_CHANGE_REQUIRES_AFFECTED_EVIDENCE_RERUN_OR_INDEPENDENT_INTEGRITY_PROOF",
+      "owner": "AUT-001 verification",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-TOOL-MANIFEST",
+      "surface_class": "EXECUTABLE_MATERIAL",
+      "selectors": ["tools/autonomy-control/package.json", "tools/autonomy-control/tsconfig.json", "tools/autonomy-control/eslint.config.mjs"],
+      "criterion_refs": ["AUT-C01", "AUT-C04", "AUT-C05", "AUT-C06", "AUT-C13"],
+      "evidence_obligation_refs": ["AUT-E01", "AUT-E04", "AUT-E05"],
+      "change_effect": ["build_and_dependency_verification", "affected_evidence_rerun", "dependency_security_review_if_material"],
+      "equivalence_method": "EXACT_OBJECT_OR_DECLARED_DEPENDENCY_DELTA_REVIEW",
+      "owner": "AUT-001-A",
+      "serialized_or_shared": false
+    },
+    {
+      "surface_id": "AUT-MS-ROOT-WORKSPACE",
+      "surface_class": "CI_EVALUATOR_MATERIAL",
+      "selectors": ["package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml", "tsconfig.json", "tsconfig.node.json", "eslint.config.mjs"],
+      "criterion_refs": ["AUT-C13"],
+      "evidence_obligation_refs": ["AUT-E04", "AUT-E09"],
+      "change_effect": ["whole_repository_verification", "dependency_or_evaluator_delta_review", "other_package_impact_review"],
+      "equivalence_method": "EXACT_OBJECT_IDENTITY_OR_EXPLICIT_REPOSITORY_WIDE_DELTA_REVIEW",
+      "owner": "shared repository",
+      "serialized_or_shared": true
+    },
+    {
+      "surface_id": "AUT-MS-GITHUB-WORKFLOWS",
+      "surface_class": "CI_EVALUATOR_MATERIAL",
+      "selectors": [".github/workflows/autonomy-control-shadow.yml", ".github/workflows/autonomy-control-verify.yml"],
+      "criterion_refs": ["AUT-C05", "AUT-C11", "AUT-C15"],
+      "evidence_obligation_refs": ["AUT-E03", "AUT-E08"],
+      "change_effect": ["workflow_integrity_review", "affected_ci_evidence_rerun", "required_check_impact_review_if_status_context_changes"],
+      "equivalence_method": "WORKFLOW_CHANGE_REQUIRES_FRESH_EVALUATOR_INTEGRITY_REVIEW",
+      "owner": "AUT-001-B/AUT-001-G",
+      "serialized_or_shared": true
+    },
+    {
+      "surface_id": "AUT-MS-AGENT-CONFIG",
+      "surface_class": "AUTHORITY_GOVERNANCE_MATERIAL",
+      "selectors": ["AGENTS.md", ".agents/", ".cursor/"],
+      "criterion_refs": ["AUT-C04", "AUT-C12", "AUT-C13"],
+      "evidence_obligation_refs": ["AUT-E04", "AUT-E09"],
+      "change_effect": ["authority_delta_review", "agent_context_conformance_review", "fresh_adversarial_delta_review"],
+      "equivalence_method": "NO_CHANGE_PREFERRED; ANY_SEMANTIC_CHANGE_REQUIRES_AUTHORITY_DELTA_REVIEW",
+      "owner": "shared governance",
+      "serialized_or_shared": true
+    },
+    {
+      "surface_id": "AUT-MS-AUTHORITY",
+      "surface_class": "AUTHORITY_GOVERNANCE_MATERIAL",
+      "selectors": ["docs/routing/aut001_", "docs/AUT-001-bounded-development-control-plane/"],
+      "criterion_refs": ["AUT-C01", "AUT-C03", "AUT-C04", "AUT-C06", "AUT-C07", "AUT-C08", "AUT-C09", "AUT-C10", "AUT-C11", "AUT-C12", "AUT-C13", "AUT-C14", "AUT-C15"],
+      "evidence_obligation_refs": ["AUT-E09"],
+      "change_effect": ["authority_consistency_review", "adversarial_authority_delta_review", "exact_head_gate_rebinding"],
+      "equivalence_method": "EXECUTABLE_ACCEPTANCE_MAY_REUSE_ONLY_IF_EXECUTABLE_SURFACES_ARE_EQUIVALENT_AND_AUTHORITY_MEANING_IS_NOT_EXPANDED_OR_WEAKENED",
+      "owner": "AUT-001 governance",
+      "serialized_or_shared": true
+    },
+    {
+      "surface_id": "AUT-MS-EVIDENCE-RECORDS",
+      "surface_class": "EVIDENCE_ONLY",
+      "selectors": ["docs/evidence/aut001/"],
+      "criterion_refs": [],
+      "evidence_obligation_refs": ["AUT-E01", "AUT-E02", "AUT-E03", "AUT-E04", "AUT-E05", "AUT-E06", "AUT-E07", "AUT-E08", "AUT-E09"],
+      "change_effect": ["provenance_integrity_check"],
+      "equivalence_method": "APPEND_ONLY_NEW_RECORDS; HISTORICAL_RECORD_REWRITE_FORBIDDEN",
+      "owner": "AUT-001 evidence",
+      "serialized_or_shared": true
+    }
+  ],
+  "forbidden_default_write_surfaces": [
+    "apps/",
+    "packages/modules/",
+    "packages/application/",
+    "packages/projections/",
+    "packages/foundation/",
+    "application persistence or migration sources",
+    "production infrastructure",
+    "production secrets or credentials"
+  ],
+  "g2_rule": "Any G2 record must bind this manifest digest/identity. A changed selector, new writable surface or new material class after G2 requires R-C classification and authority-delta review before use."
+}
