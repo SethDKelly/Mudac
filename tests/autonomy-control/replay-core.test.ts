@@ -331,7 +331,7 @@ describe('AUT-001-A revision classification and evidence reuse', () => {
 describe('AUT-001-A R-G failure-case partition and executable subset', () => {
   it('covers every canonical FI identity and injection without reading contract expected/result fields', () => {
     expect(failureCaseMatrix.map(({ id, injection }) => ({ id, injection }))).toEqual(
-      replayContract.failure_injection_cases,
+      replayContract.failure_injection_cases.map(({ id, injection }) => ({ id, injection })),
     );
     expect(failureCaseMatrix).toHaveLength(28);
   });
