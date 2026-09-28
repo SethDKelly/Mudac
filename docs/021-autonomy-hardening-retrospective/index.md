@@ -10,8 +10,8 @@ PHASE 021-R RETROSPECTIVE            ACTIVE — PLANNING/DESIGN ONLY
 021-R-C                              COMPLETE — PASS
 021-R-D                              COMPLETE — PASS
 021-R-E                              COMPLETE — PASS
-021-R-F                              NEXT ELIGIBLE
-021-R-G                              PLANNED
+021-R-F                              COMPLETE — PASS
+021-R-G                              NEXT ELIGIBLE
 PHASE 022                            NEXT ELIGIBLE / NOT AUTHORIZED
 AUTONOMY RUNTIME IMPLEMENTATION      NOT AUTHORIZED
 RELEASE / PRODUCTION                 NOT AUTHORIZED
@@ -38,64 +38,63 @@ Protected evaluator implementation may remain hidden; semantic requirements, cri
 | **021-R-C** | Evidence dependency graph, invalidation, equivalence, evidence reuse | **COMPLETE — PASS** |
 | **021-R-D** | Agent dispatcher, role identity, session isolation, context generation, provenance | **COMPLETE — PASS** |
 | **021-R-E** | GitHub event integration, deduplication/idempotency, PR/CI choreography, reconciliation | **COMPLETE — PASS** |
-| **021-R-F** | Development-control MCP interfaces, authorization/security boundary, test-control composition | **NEXT ELIGIBLE** |
-| **021-R-G** | Shadow replay, failure injection, exit review, autonomy implementation recommendation | PLANNED |
+| **021-R-F** | Development-control MCP interfaces, authorization/security boundary, test-control composition | **COMPLETE — PASS** |
+| **021-R-G** | Shadow replay, failure injection, exit review, autonomy implementation recommendation | **NEXT ELIGIBLE** |
 
-## 021-R-B result
+## R-B through R-E result
 
-R-B defines the guarded lifecycle state machine and immutable-fact projection. GitHub events, agent outputs, CI, G5, or MCP calls cannot synthesize human authority.
+R-B defines the guarded lifecycle state machine and immutable-fact projection; R-C defines evidence dependency/invalidation and content-equivalence reuse; R-D defines provider-neutral dispatch, isolation, context and provenance; and R-E defines idempotent GitHub event/reconciliation choreography.
 
-Machine contract: `docs/routing/autonomy_orchestrator_contract.json`.
+Machine contracts:
 
-## 021-R-C result
+- `docs/routing/autonomy_orchestrator_contract.json`
+- `docs/routing/autonomy_evidence_dependency_contract.json`
+- `docs/routing/autonomy_agent_dispatch_contract.json`
+- `docs/routing/autonomy_github_event_contract.json`
 
-R-C defines append-only evidence dependencies, material-surface manifests, deterministic revision classification, content-equivalence proof, minimal transitive reverification, and reuse by binding rather than evidence relabeling.
+## 021-R-F result
 
-Machine contract: `docs/routing/autonomy_evidence_dependency_contract.json`.
-
-## 021-R-D result
-
-R-D defines provider-neutral agent dispatch and provenance: exact revision/authority-bound dispatch packets, implementer/reviewer isolation, evidentiary session freshness, minimum-sufficient context manifests, append-only technical provenance, deterministic repair/review generation, and serialized-surface reservations.
-
-Machine contract: `docs/routing/autonomy_agent_dispatch_contract.json`.
-
-## 021-R-E result
-
-R-E defines GitHub event ingestion and reconciliation.
+R-F defines the development-control MCP capability and security boundary.
 
 Key results:
 
-- a webhook/check/workflow event is a notification, not lifecycle truth;
-- raw delivery identity and semantic fact identity are separate, making redelivery/retry idempotent;
-- duplicate, late, stale, and out-of-order events cannot advance state without reconciliation;
-- current PR/ref/check/workflow truth is fetched/reconciled before consequential transitions;
-- required CI is evaluated against the exact current head and current required-check set;
-- legacy combined-status output cannot override exact check-run/workflow evidence when semantically different;
-- PR head/base drift freezes merge eligibility and routes through R-C invalidation/equivalence;
-- implementation and closure PR dependency/synchronization choreography is explicit;
-- post-merge SHA/tree identity and integration evidence are separately registered;
-- missed webhook delivery can be recovered by startup/periodic reconciliation;
-- bounded GitHub side effects use idempotent operation IDs and optimistic preconditions;
-- R-D serialized-surface reservations now have immutable event lifecycle semantics;
-- GitHub events cannot create G2, merge, release, production, reopen, or Phase-022 authority.
+- MCP capability exposes already-resolved authority; it never creates authority;
+- query, record/compute and bounded-action capability classes are distinct;
+- consequential requests bind principal, role/dispatch, exact SHA/tree, R-B state and authority digest;
+- agent-callable G2, scope expansion, merge approval, reopen authorization, release, production and next-phase tools are intentionally absent;
+- arbitrary shell, Git/GitHub API, HTTP, SQL, AWS/cloud, browser-eval, filesystem escape, secret retrieval and generic deploy/merge capabilities are forbidden;
+- GitHub mutations route through R-E optimistic preconditions/idempotency;
+- agent launches route through R-D dispatch/session isolation;
+- evidence/G5 validity remains governed by R-C and 020-H;
+- development-control MCP is separate from the 020-D non-production application test-control MCP;
+- `implementation.request_test_control_run` may request only a declared evidence profile and cannot bypass 020-D environment, capability, actor or production-denial checks;
+- 020-D evidence returns through a bounded provenance/evidence-reference bridge and cannot itself advance implementation lifecycle state;
+- production control/test composition remains structurally forbidden;
+- stable error classes, idempotency, concurrency and audit/provenance envelopes are defined.
 
-Machine contract: `docs/routing/autonomy_github_event_contract.json`.
+Machine contract: `docs/routing/autonomy_development_control_mcp_contract.json`.
 
-## Architectural layers
+## Control-plane composition
 
 ```text
-Authority
-   ↓
-Lifecycle State Machine
-   ↓
-Agent Dispatcher ───── Evidence Dependency Graph
-   ↓                           ↓
-GitHub Event Adapter ─── Evidence Collector
-   ↓                           ↓
-Gatekeeper Preparation / Human Authority Stops
-   ↓
-Development-Control MCP Interface
+Authority / immutable program records
+              ↓
+      R-B lifecycle state
+              ↓
+R-D Dispatcher ───────── R-C Evidence Graph
+      ↓                         ↑
+R-E GitHub Adapter              │
+      ↓                         │
+Development-Control MCP ────────┤
+      │                         │
+      └─ declared evidence request
+                 ↓
+       020-D Test-Control MCP
+                 ↓
+       real NON-PRODUCTION MUDAC
 ```
+
+Development-control and test-control remain distinct technical authority planes. Neither becomes a MUDAC semantic owner.
 
 ## Human-only decisions retained
 
@@ -121,12 +120,13 @@ Current machine projections:
 - `docs/routing/autonomy_evidence_dependency_contract.json`
 - `docs/routing/autonomy_agent_dispatch_contract.json`
 - `docs/routing/autonomy_github_event_contract.json`
+- `docs/routing/autonomy_development_control_mcp_contract.json`
 - `docs/routing/autonomy_control_plane_interfaces.json`
 
 These contracts do not authorize runtime execution.
 
 ## Next eligible work
 
-> **021-R-F — Development-Control MCP Interfaces, Authorization, Production Denial & Composition with the 020-D Test-Control Plane**
+> **021-R-G — Shadow Replay, Failure Injection, Exit Review & Autonomy Implementation Recommendation**
 
-Phase 022 remains **NEXT ELIGIBLE / NOT AUTHORIZED**; completing R-E does not alter that boundary.
+R-G must validate the R-B..F design against the actual Phase-021 sequence and adversarial authority/failure cases before recommending any bounded autonomy implementation work. Phase 022 remains **NEXT ELIGIBLE / NOT AUTHORIZED**; completing R-F does not alter that boundary.
