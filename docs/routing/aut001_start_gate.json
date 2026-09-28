@@ -1,0 +1,140 @@
+{
+  "schema": "mudac.aut001-start-gate/v1",
+  "package_id": "AUT-001",
+  "title": "Bounded Development-Control Plane Implementation",
+  "decision": "PASS_READY_FOR_G2_DECISION",
+  "package_g1_state": "READY_FOR_AUTHORIZATION",
+  "g2_status": "NOT_AUTHORIZED",
+  "execution_status": "NOT_AUTHORIZED",
+  "phase022_status": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+  "release_status": "NOT_AUTHORIZED",
+  "production_status": "NOT_AUTHORIZED",
+  "entry_baseline": {
+    "protected_main_sha": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "protected_main_tree": "4878dcfa09540033d2f51d88ef93b1d460a2fe29",
+    "r_g_handoff_sha": "1dd32506baf692549ffb435b1893e7fc76feaff3",
+    "r_g_handoff_tree": "badbb48be7df2dfbe2c0513a5bb4a2495aab7d0a",
+    "planning_branch": "aut-001/start-gate",
+    "main_ruleset": "main — protected",
+    "main_ruleset_active": true,
+    "required_checks": [
+      "Validate agentic/documentation conformance",
+      "Implementation Verification",
+      "CodeQL JavaScript/TypeScript"
+    ],
+    "bypass_actors": []
+  },
+  "authority": {
+    "source": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+    "r_g_contract": "docs/routing/autonomy_shadow_replay_exit_contract.json",
+    "package_contract": "docs/routing/aut001_implementation_package_contract.json",
+    "start_gate_may_grant_g2": false,
+    "start_gate_may_authorize_execution": false,
+    "start_gate_may_authorize_phase022": false
+  },
+  "g1_checks": {
+    "package_schema_complete": true,
+    "purpose_scope_and_exclusions_explicit": true,
+    "exact_entry_baseline_bound": true,
+    "semantic_architecture_engineering_traceability_complete": true,
+    "hard_dependencies_classified": true,
+    "owned_and_serialized_surfaces_explicit": true,
+    "declared_work_unit_graph_complete": true,
+    "coordinator_provider_and_role_policy_explicit": true,
+    "context_manifest_rules_explicit": true,
+    "visible_success_criteria_instantiated": true,
+    "evidence_obligations_instantiated": true,
+    "scenario_obligations_instantiated": true,
+    "security_privacy_disclosure_impacts_classified": true,
+    "migration_compatibility_impacts_classified": true,
+    "accessibility_degraded_impacts_classified": true,
+    "failure_recovery_impacts_classified": true,
+    "performance_cost_obligations_classified": true,
+    "required_nonproduction_tiers_defined": true,
+    "allowed_external_actions_defined": true,
+    "circuit_breakers_defined": true,
+    "repair_budget_and_escalation_defined": true,
+    "rollback_human_fallback_defined": true,
+    "known_residual_risks_explicit": true,
+    "g2_record_path_reserved_but_not_created": true,
+    "exit_gate_contract_defined": true
+  },
+  "subphase_plan": [
+    {"id":"AUT-001-A","state":"G1_READY_NOT_AUTHORIZED","title":"Control-Plane Substrate & Deterministic Replay Core"},
+    {"id":"AUT-001-B","state":"PLANNED_NOT_AUTHORIZED","title":"Live Read-Only Shadow & GitHub Reconciliation"},
+    {"id":"AUT-001-C","state":"PLANNED_NOT_AUTHORIZED","title":"Dispatcher, Provider Adapters, Isolation & Provenance"},
+    {"id":"AUT-001-D","state":"PLANNED_NOT_AUTHORIZED","title":"Development-Control MCP Query/Record & Authorization Boundary"},
+    {"id":"AUT-001-E","state":"PLANNED_NOT_AUTHORIZED","title":"Bounded Non-Human Side Effects"},
+    {"id":"AUT-001-F","state":"DEPENDENCY_BLOCKED_NOT_AUTHORIZED","title":"020-D Test-Control Evidence Bridge","blocking_dependency":"020-D runtime independently operational/accepted"},
+    {"id":"AUT-001-G","state":"PLANNED_NOT_AUTHORIZED","title":"Independent Exit, Shadow Qualification & Enablement Recommendation"}
+  ],
+  "acceptance_profiles": {
+    "CORE_COORDINATION": {
+      "requires": ["AUT-001-A", "AUT-001-B", "AUT-001-C", "AUT-001-D", "AUT-001-E", "AUT-001-G_CORE"],
+      "may_coordinate_separately_authorized_phase022_work": "ONLY_AFTER_SEPARATE_OPERATIONAL_ENABLEMENT_AND_PHASE022_G2",
+      "test_control_bridge_enabled": false
+    },
+    "FULL_COMPOSED": {
+      "requires": ["CORE_COORDINATION", "AUT-001-F", "AUT-001-G_FULL_COMPOSED"],
+      "requires_020d_runtime": true,
+      "test_control_bridge_enabled": true,
+      "production_test_control": false
+    }
+  },
+  "recommended_initial_g2_envelope": {
+    "decision_owner": "HUMAN_PROGRAM_AUTHORITY",
+    "authorize_if_explicitly_granted": ["AUT-001-A", "AUT-001-B", "AUT-001-C", "AUT-001-D", "AUT-001-E", "AUT-001-G_CORE"],
+    "do_not_authorize_yet": ["AUT-001-F", "AUT-001-G_FULL_COMPOSED"],
+    "reason_for_deferred_F": "020-D runtime is designed but not yet operationally accepted; bridge live integration cannot bypass that dependency.",
+    "g2_authorizes_protected_merge": false,
+    "g2_authorizes_release_or_production": false,
+    "g2_authorizes_phase022": false,
+    "side_effecting_stage_enablement_is_progressive": true
+  },
+  "implementation_shape": {
+    "preferred_source_root": "tools/autonomy-control/",
+    "application_semantic_packages_modified_by_default": false,
+    "shared_root_or_workflow_surfaces_are_serialized": true,
+    "default_stage_execution": "SEQUENTIAL",
+    "provider_pairing": "ALTERNATE_CODEX_CURSOR_IMPLEMENTER_AND_INDEPENDENT_REVIEWER_WITH_FRESH_ADVERSARIAL_SESSION",
+    "provider_pairing_creates_authority": false,
+    "reviewer_repairs_candidate_in_place": false
+  },
+  "start_gate_findings": [
+    {
+      "id": "AUT-SG-01",
+      "class": "DEPENDENCY",
+      "blocking_g1": false,
+      "statement": "020-D runtime is not implemented; AUT-001-F and the FULL_COMPOSED acceptance profile remain dependency-blocked until it is independently accepted and authorized."
+    },
+    {
+      "id": "AUT-SG-02",
+      "class": "IMPLEMENTATION_QUALIFICATION",
+      "blocking_g1": false,
+      "statement": "Cursor and Codex adapter mechanics, session identity fidelity and remote invocation capabilities must be qualified during AUT-001-C; absence of a required capability must block rather than trigger a generic shell or authority-expanding fallback."
+    },
+    {
+      "id": "AUT-SG-03",
+      "class": "SECURITY",
+      "blocking_g1": false,
+      "statement": "Remote identity-provider realization and the exact GitHub App permission matrix remain implementation decisions, but package criteria require resource-bound least privilege and no production principal before consequential tools can be enabled."
+    }
+  ],
+  "start_gate_decision_basis": [
+    "R_G_complete_pass_and_runtime_handoff_recommends_AUT_001",
+    "main_protection_and_required_checks_active",
+    "control_plane_isolated_from_domain_semantic_owners",
+    "scope_and_non_authority_boundaries_explicit",
+    "seven_subphase_dependency_graph_explicit",
+    "visible_criteria_and_evidence_obligations_complete",
+    "production_denial_and_human_stops_explicit",
+    "repair_budget_rollback_and_circuit_breakers_explicit",
+    "unsatisfied_020D_runtime_dependency_is_confined_to_deferred_stage_F_and_does_not_require_optimistic_bypass"
+  ],
+  "next_action": {
+    "decision": "EXPLICIT_HUMAN_G2_DECISION_FOR_RECOMMENDED_INITIAL_AUT_001_ENVELOPE",
+    "if_authorized_next_subphase": "AUT-001-A",
+    "if_not_authorized": "NO_EXECUTION",
+    "g2_record_path": "docs/routing/aut001_g2_authorization.json"
+  }
+}
