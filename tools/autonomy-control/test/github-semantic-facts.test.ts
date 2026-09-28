@@ -3,7 +3,10 @@ import { describe, expect, it } from 'vitest';
 import { normalizeGitHubTruth, ShadowJournal } from '../src/index.js';
 import type { GitHubTruthSnapshot } from '../src/index.js';
 
-function snapshot(status: 'in_progress' | 'completed', conclusion: 'success' | null): GitHubTruthSnapshot {
+function snapshot(
+  status: 'in_progress' | 'completed',
+  conclusion: 'success' | null,
+): GitHubTruthSnapshot {
   return {
     repositoryId: 1,
     repositoryFullName: 'SethDKelly/Mudac',
@@ -49,7 +52,9 @@ describe('AUT-001-B immutable semantic fact versions', () => {
     const first = normalizeGitHubTruth(snapshot('in_progress', null));
     const second = normalizeGitHubTruth(snapshot('completed', 'success'));
 
-    for (const fact of first) expect(journal.appendSemanticFact(fact).status).toBe('APPENDED');
+    for (const fact of first) {
+      expect(journal.appendSemanticFact(fact).status).toBe('APPENDED');
+    }
     for (const fact of second) {
       expect(journal.appendSemanticFact(fact).status).not.toBe('CONFLICT');
     }
