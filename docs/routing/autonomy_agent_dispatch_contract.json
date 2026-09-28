@@ -1,0 +1,363 @@
+{
+  "schema": "mudac.autonomy-agent-dispatch-contract/v0.1-retrospective",
+  "status": "R_D_COMPLETE_DESIGN_ONLY",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "normative_inputs": {
+    "agentic_authority": "docs/canonical/governance/agentic-authority-scope.md",
+    "agent_context": "docs/canonical/governance/agent-context.md",
+    "operating_model": "docs/routing/autonomous_implementation_operating_model.json",
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
+    "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  },
+  "principles": [
+    "role_identity_is_distinct_from_provider_identity",
+    "provider_capability_does_not_create_authority",
+    "dispatcher_may_route_only_declared_work_inside_current_authority",
+    "agent_may_not_self_select_next_work",
+    "exact_revision_and_authority_digest_bind_every_dispatch",
+    "implementation_and_review_sessions_are_isolated",
+    "context_is_minimum_sufficient_and_reference_based_not_shadow_authority",
+    "reviewer_freshness_is_evidence_not_a_prose_claim",
+    "provenance_records_technical_facts_not_private_reasoning",
+    "protected_probe_and_secret_boundaries_survive_automation",
+    "serialized_surface_conflicts_fail_closed"
+  ],
+  "roles": {
+    "COORDINATOR_ORCHESTRATOR": {
+      "writes_candidate_source": false,
+      "may_dispatch_declared_work_units": true,
+      "may_expand_scope": false,
+      "may_grant_g2": false,
+      "may_merge": false,
+      "may_grant_next_phase": false
+    },
+    "IMPLEMENTER": {
+      "writes_candidate_source": "AUTHORIZED_WORKTREE_AND_SURFACES_ONLY",
+      "one_declared_work_unit_per_dispatch": true,
+      "may_self_review": false,
+      "may_merge": false,
+      "may_expand_scope": false
+    },
+    "INDEPENDENT_REVIEWER": {
+      "writes_candidate_source": false,
+      "distinct_authoring_run_required": true,
+      "read_only_candidate": true,
+      "authority_must_be_resolved_independently": true,
+      "editing_candidate_converts_run_to_implementer": true
+    },
+    "ADVERSARIAL_REVIEWER": {
+      "writes_candidate_source": false,
+      "fresh_run_after_independent_review_required": true,
+      "visible_requirements_only_as_semantic_basis": true,
+      "hidden_requirements_forbidden": true,
+      "editing_candidate_forbidden": true
+    },
+    "VERIFIER": {
+      "writes_candidate_source": false,
+      "exact_revision_required": true,
+      "may_record_evidence": true,
+      "may_redefine_requirements": false
+    },
+    "GATEKEEPER": {
+      "writes_candidate_source": false,
+      "may_integrate_evidence": true,
+      "may_fabricate_evidence": false,
+      "may_merge": false,
+      "may_grant_next_g2": false
+    },
+    "HUMAN_PROGRAM_AUTHORITY": {
+      "agent_role": false,
+      "retains_g2_scope_merge_reopen_release_production_next_phase_authority": true
+    }
+  },
+  "provider_model": {
+    "semantic_provider_preference": "NONE",
+    "adapters": ["CURSOR", "CODEX", "CI_AUTOMATION", "DETERMINISTIC_SCRIPT", "FUTURE_COMPATIBLE_PROVIDER"],
+    "provider_same_across_roles_allowed": true,
+    "provider_sameness_alone_breaks_independence": false,
+    "independence_requires_distinct_run_session_and_role_context": true,
+    "adapter_may_not_reinterpret_authority": true
+  },
+  "dispatch_packet": {
+    "immutable": true,
+    "content_addressed": true,
+    "required_fields": [
+      "dispatch_id",
+      "phase_or_package_id",
+      "work_unit_id_or_null",
+      "role",
+      "provider_adapter",
+      "base_or_candidate_commit_sha",
+      "base_or_candidate_tree_sha",
+      "candidate_generation_or_null",
+      "authority_refs",
+      "authority_digest",
+      "expected_orchestrator_state",
+      "purpose",
+      "in_scope",
+      "out_of_scope",
+      "writable_surface_ids",
+      "read_only_surface_ids",
+      "serialized_surface_reservations",
+      "dependency_work_units",
+      "visible_criterion_refs",
+      "evidence_obligation_refs",
+      "material_surface_ids",
+      "required_output",
+      "allowed_external_actions",
+      "circuit_breakers",
+      "context_manifest_id",
+      "session_freshness_requirement",
+      "expected_output_artifact_types"
+    ],
+    "optional_fields": ["resource_envelope", "timeout_policy", "repair_generation", "triggering_finding_ids", "delta_classification_ref"],
+    "preflight_reject_if": [
+      "orchestrator_state_mismatch",
+      "authority_digest_mismatch",
+      "exact_revision_mismatch",
+      "role_not_eligible",
+      "serialized_surface_conflict",
+      "required_isolation_unavailable",
+      "undeclared_external_action_required"
+    ],
+    "idempotency": {
+      "same_dispatch_id_same_digest": "IDEMPOTENT_RECOVERY_ALLOWED",
+      "same_dispatch_id_conflicting_digest": "INCONCLUSIVE_RECONCILIATION_REQUIRED",
+      "retry_uses_new_run_id": true,
+      "new_candidate_generation_requires_new_revision_bound_dispatch": true
+    }
+  },
+  "work_isolation": {
+    "implementer": {
+      "exact_authorized_base_required": true,
+      "isolated_writable_worktree_required": true,
+      "ordinary_main_checkout_writable": false,
+      "shared_writable_worktree_between_agents": false,
+      "cleanliness_recorded_at_start_and_end": true,
+      "unexpected_baseline_drift": "CIRCUIT_BREAKER"
+    },
+    "reviewer": {
+      "detached_exact_candidate_checkout_required": true,
+      "candidate_source_read_only": true,
+      "implementer_worktree_reuse_forbidden": true,
+      "uncommitted_candidate_mutation_forbidden": true,
+      "temporary_probes_must_not_change_reviewed_tree": true
+    }
+  },
+  "session_identity": {
+    "tracked_dimensions": [
+      "provider_account_or_principal_if_available",
+      "provider_or_tool",
+      "dispatch_id",
+      "run_id",
+      "provider_session_or_conversation_id_if_available",
+      "dispatcher_nonce",
+      "worktree_identity",
+      "candidate_generation",
+      "role"
+    ],
+    "independent_review": "DISTINCT_FROM_IMPLEMENTER_RUN_SESSION_AND_WRITE_WORKTREE",
+    "adversarial_review": "DISTINCT_FROM_IMPLEMENTER_AND_PRECEDING_INDEPENDENT_REVIEW_RUN_SESSION",
+    "natural_language_new_session_claim_sufficient": false,
+    "session_id_unavailable": "DECLARED_COMPENSATING_ISOLATION_OR_INCONCLUSIVE_WHEN_FRESHNESS_MANDATORY"
+  },
+  "context_manifest": {
+    "operational_not_normative_authority": true,
+    "minimum_sufficient_retrieval_required": true,
+    "required_fields": [
+      "manifest_id",
+      "manifest_digest",
+      "dispatch_id",
+      "work_unit_id_or_null",
+      "role",
+      "authority_refs",
+      "exact_revision_refs",
+      "canonical_owner_refs",
+      "stable_rule_ids",
+      "material_surface_refs",
+      "visible_criterion_refs",
+      "evidence_obligation_refs",
+      "writable_surfaces",
+      "read_only_surfaces",
+      "dependency_work_units",
+      "allowed_retrieval_tiers",
+      "allowed_external_sources_actions",
+      "exclusions",
+      "circuit_breakers",
+      "protected_information_allowed",
+      "protected_information_forbidden",
+      "context_budget_profile"
+    ],
+    "default_tiers": {
+      "IMPLEMENTER": ["T0", "T1", "T2", "T3_WHEN_MATERIAL"],
+      "INDEPENDENT_REVIEWER": ["TASK_CONTRACT", "EXACT_DIFF", "CURRENT_AUTHORITY", "CURRENT_OWNERS", "RAW_EVIDENCE", "IMPLEMENTER_RATIONALE_OPTIONAL_LAST"],
+      "ADVERSARIAL_REVIEWER": ["FRESH_TASK_CONTRACT", "EXACT_DIFF", "CURRENT_AUTHORITY", "VISIBLE_REQUIREMENTS", "MATERIAL_BOUNDARIES", "RAW_EVIDENCE", "AUTHORIZED_PROTECTED_DETAIL_ONLY"]
+    },
+    "history_or_external_expansion_requires_reason": true,
+    "copy_full_canonical_rule_text_as_shadow_store": false,
+    "recursive_numbered_phase_preload_default": false,
+    "chat_memory_as_authority": false
+  },
+  "protected_information": {
+    "classes": ["PUBLIC_AUTHORITY", "REVIEW_EVIDENCE", "PROTECTED_EVALUATOR_DETAIL", "SECRET_OR_SENSITIVE"],
+    "implementer": {
+      "allowed": ["PUBLIC_AUTHORITY", "PERMITTED_REPAIR_DIAGNOSTICS"],
+      "protected_probe_internal_detail": false,
+      "secret_or_sensitive": false
+    },
+    "reviewer": {
+      "protected_detail": "ONLY_WHEN_ROLE_AND_EVALUATOR_CONTRACT_REQUIRE",
+      "secret_or_sensitive_default": false
+    },
+    "manifest_or_prompt_may_embed_secret_values": false,
+    "provenance_may_embed_secret_values": false
+  },
+  "provenance_manifest": {
+    "immutable": true,
+    "content_addressed": true,
+    "evidence_graph_ingestible": true,
+    "required_fields": [
+      "schema_version",
+      "dispatch_id",
+      "run_id",
+      "phase_or_package_id",
+      "work_unit_id_or_null",
+      "role",
+      "provider_adapter",
+      "adapter_version_or_revision",
+      "dispatcher_version_or_revision",
+      "provider_session_identity_or_freshness_substitute",
+      "started_at",
+      "completed_at",
+      "input_commit_sha",
+      "input_tree_sha",
+      "candidate_generation_or_null",
+      "branch_or_worktree_identity",
+      "worktree_cleanliness_start",
+      "worktree_cleanliness_end",
+      "authority_refs",
+      "authority_digest",
+      "context_manifest_id",
+      "context_manifest_digest",
+      "serialized_surface_reservations",
+      "external_actions_performed",
+      "verification_or_evidence_refs",
+      "changed_files_or_material_surface_summary",
+      "finding_ids",
+      "output_candidate_sha_or_null",
+      "output_candidate_tree_sha_or_null",
+      "final_disposition",
+      "circuit_breakers_encountered",
+      "manifest_digest"
+    ],
+    "optional_fields": ["command_names", "tool_versions", "resource_usage", "failure_classification"],
+    "forbidden_fields_or_requirements": [
+      "private_chain_of_thought",
+      "hidden_model_reasoning",
+      "full_provider_conversation_transcript",
+      "secret_values",
+      "credentials",
+      "implementer_visible_hidden_probe_source_or_fixture_values",
+      "unrelated_user_or_account_data"
+    ]
+  },
+  "run_dispositions": [
+    "COMPLETED_WITH_OUTPUT",
+    "PASS",
+    "CHANGES_REQUIRED",
+    "BLOCKED",
+    "INCONCLUSIVE",
+    "CANCELLED",
+    "SUPERSEDED",
+    "FAILED_INFRASTRUCTURE"
+  ],
+  "repair_dispatch": {
+    "requires_triggering_finding_ids": true,
+    "requires_superseded_candidate_generation": true,
+    "original_g2_scope_and_criteria_unchanged": true,
+    "remaining_repair_budget_required": true,
+    "bounded_repair_direction_required": true,
+    "r_c_invalidated_evidence_plan_required": true,
+    "expected_new_candidate_generation_required": true,
+    "hidden_probe_answers_forbidden": true,
+    "scope_expansion_forbidden": true
+  },
+  "review_dispatch": {
+    "independent": {
+      "exact_candidate_identity_required": true,
+      "current_authority_independent_resolution_required": true,
+      "structured_output_schema_required": true,
+      "read_only_no_repair": true
+    },
+    "adversarial": {
+      "fresh_session_required": true,
+      "falsification_objective_required": true,
+      "visible_requirement_and_material_boundary_refs_required": true,
+      "challenge_categories_from_020h": true,
+      "hidden_requirements_forbidden": true,
+      "candidate_edits_forbidden": true
+    },
+    "delta": {
+      "r_c_changed_surface_plan_required": true,
+      "equivalence_proof_inputs_required": true,
+      "invalidated_or_rebound_evidence_refs_required": true
+    }
+  },
+  "serialized_surface_coordination": {
+    "reservation_required_before_parallel_write_dispatch": true,
+    "conflicting_reservation": "BLOCKED",
+    "reservation_release_is_immutable_event": true,
+    "stale_or_abandoned_reservation_requires_reconciliation": true,
+    "silent_reservation_steal_forbidden": true,
+    "event_mechanics_owned_by": "021-R-E"
+  },
+  "provider_adapter": {
+    "owns_mechanics_not_authority": true,
+    "responsibilities": [
+      "start_run_or_session",
+      "materialize_allowed_workspace",
+      "materialize_allowed_context",
+      "deliver_structured_dispatch_instructions",
+      "collect_structured_output",
+      "report_provider_session_identity_and_capabilities"
+    ],
+    "forbidden": [
+      "reinterpret_semantic_authority",
+      "expand_dispatch_packet",
+      "add_undeclared_write_or_external_capability",
+      "suppress_failure_or_circuit_breaker",
+      "convert_reviewer_to_repair_run_without_new_dispatch"
+    ]
+  },
+  "fail_closed_on": [
+    "role_not_eligible",
+    "authority_digest_changed",
+    "exact_revision_changed",
+    "worktree_isolation_unavailable",
+    "serialized_surface_conflict",
+    "reviewer_independence_not_proven",
+    "adversarial_freshness_not_proven",
+    "context_requires_undeclared_authority_or_retrieval_tier",
+    "provider_requires_unauthorized_secret_or_production_access",
+    "provider_cannot_honor_read_write_boundary",
+    "required_provenance_fields_unavailable",
+    "dispatch_or_session_identity_conflict"
+  ],
+  "phase021_replay_expectations": [
+    "implementer_dispatch_is_021I01_only_and_writable_worktree_only",
+    "independent_review_dispatch_does_not_reuse_implementer_session_or_worktree",
+    "adversarial_review_dispatch_has_distinct_fresh_session_identity",
+    "adversarial_block_routes_bounded_repair_without_hidden_probe_answer",
+    "repair_cycle_creates_new_candidate_generation_and_fresh_review_dispatches",
+    "governance_head_delta_routes_r_c_independent_and_adversarial_delta_reviews",
+    "no_pass_ci_g5_or_merge_event_authorizes_phase022_dispatch"
+  ],
+  "handoff": {
+    "next_subphase": "021-R-E",
+    "purpose": "define GitHub event ingestion, idempotency, PR/CI choreography and reconciliation using dispatch/run identities",
+    "runtime_implementation_authorized": false,
+    "phase022_authorized": false
+  }
+}

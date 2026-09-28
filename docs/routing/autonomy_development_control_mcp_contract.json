@@ -1,0 +1,426 @@
+{
+  "schema": "mudac.autonomy-development-control-mcp/v0.1-retrospective",
+  "status": "R_F_COMPLETE_DESIGN_ONLY",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "normative_inputs": {
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
+    "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json",
+    "github_event_adapter": "docs/routing/autonomy_github_event_contract.json",
+    "test_control": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  },
+  "principles": [
+    "mcp_capability_is_interface_to_existing_authority_not_source_of_authority",
+    "development_control_and_application_test_control_are_separate_planes",
+    "capability_based_tools_not_generic_shell_cloud_sql_http_or_browser_escape",
+    "read_compute_and_action_privileges_are_distinct",
+    "consequential_requests_bind_exact_revision_authority_state_and_principal",
+    "human_authority_operations_are_absent_from_agent_callable_surface",
+    "production_denial_is_structural_and_composes_with_020d",
+    "github_mutations_route_through_r_e_preconditions_and_idempotency",
+    "agent_dispatch_routes_through_r_d_role_and_session_contracts",
+    "evidence_and_g5_validity_remain_owned_by_r_c_and_020h",
+    "test_control_evidence_does_not_create_implementation_authority",
+    "technical_provenance_excludes_private_reasoning_and_secret_values"
+  ],
+  "control_plane_separation": {
+    "development_control": {
+      "purpose": "implementation_lifecycle_dispatch_evidence_github_coordination",
+      "may_be_semantic_owner": false,
+      "may_call_application_domain_paths_directly": false
+    },
+    "test_control_020d": {
+      "purpose": "exercise_real_nonproduction_application_behavior_and_observability",
+      "may_be_semantic_owner": false,
+      "production_target_forbidden": true
+    },
+    "composition": {
+      "allowed": true,
+      "development_control_may_request_declared_evidence_run": true,
+      "development_control_may_override_020d_authorization": false,
+      "test_control_may_grant_implementation_authority": false,
+      "shared_arbitrary_generic_capability_surface": false
+    }
+  },
+  "capability_classes": {
+    "QUERY": {
+      "mutates": false,
+      "tools": [
+        "implementation.get_state",
+        "implementation.get_authority",
+        "implementation.get_candidate",
+        "implementation.get_evidence_status",
+        "implementation.get_invalidated_evidence",
+        "implementation.get_merge_eligibility",
+        "implementation.get_next_action",
+        "implementation.get_pr_reconciliation",
+        "implementation.get_dispatch_status",
+        "implementation.get_serialized_surface_reservations"
+      ]
+    },
+    "RECORD_COMPUTE": {
+      "external_mutation_default": false,
+      "tools": [
+        "implementation.register_candidate",
+        "implementation.record_verification",
+        "implementation.record_review",
+        "implementation.record_dispatch_provenance",
+        "implementation.classify_delta",
+        "implementation.compute_reverification_plan",
+        "implementation.prepare_g5",
+        "implementation.record_integration",
+        "implementation.record_closure",
+        "implementation.reconcile_github"
+      ]
+    },
+    "BOUNDED_ACTION": {
+      "requires_operation_id": true,
+      "requires_authority_and_state_preconditions": true,
+      "tools": [
+        "implementation.create_worktree",
+        "implementation.dispatch_agent",
+        "implementation.open_or_update_draft_pr",
+        "implementation.mark_pr_ready_or_draft",
+        "implementation.synchronize_dependency_branch",
+        "implementation.reserve_serialized_surface",
+        "implementation.release_serialized_surface",
+        "implementation.request_test_control_run"
+      ]
+    }
+  },
+  "forbidden_generic_capabilities": [
+    "ARBITRARY_SHELL",
+    "ARBITRARY_GIT",
+    "ARBITRARY_GITHUB_API",
+    "ARBITRARY_HTTP",
+    "ARBITRARY_SQL",
+    "ARBITRARY_AWS_OR_CLOUD_API",
+    "ARBITRARY_BROWSER_JAVASCRIPT_EVAL",
+    "ARBITRARY_FILESYSTEM_ESCAPE",
+    "SECRET_RETRIEVAL",
+    "PRODUCTION_TARGET_SELECTION",
+    "GENERIC_DEPLOY",
+    "GENERIC_MERGE"
+  ],
+  "human_authority_tools_forbidden": [
+    "implementation.grant_g2",
+    "implementation.expand_scope",
+    "implementation.accept_architecture_change",
+    "implementation.override_repair_budget",
+    "implementation.approve_merge",
+    "implementation.merge_protected_implementation",
+    "implementation.authorize_reopen_execution",
+    "implementation.authorize_release",
+    "implementation.authorize_production",
+    "implementation.authorize_next_phase"
+  ],
+  "principals": {
+    "HUMAN_PROGRAM_AUTHORITY": {
+      "agent_callable_role": false,
+      "creates_consequential_authority_outside_mcp": true
+    },
+    "ORCHESTRATOR_SERVICE": {
+      "computes_state_and_eligibility": true,
+      "may_create_human_authority": false
+    },
+    "DISPATCHER": {
+      "starts_role_bound_agent_runs": true,
+      "requires_r_d_dispatch": true
+    },
+    "AGENT_PROVIDER_RUN": {
+      "requires_dispatch_binding": true,
+      "authority_limited_to_dispatch": true
+    },
+    "VERIFIER_EVALUATOR": {
+      "produces_exact_revision_evidence": true,
+      "may_grant_authority": false
+    },
+    "GITHUB_ADAPTER": {
+      "reconciliation_first": true,
+      "narrow_coordination_writes_only": true,
+      "raw_api_passthrough": false
+    },
+    "TEST_CONTROL_020D": {
+      "nonproduction_only": true,
+      "application_test_authority_only": true,
+      "implementation_authority": false
+    }
+  },
+  "authorization_tuple": {
+    "required_for_consequential_requests": [
+      "principal",
+      "capability",
+      "role_or_dispatch_identity_when_applicable",
+      "phase_or_package_id",
+      "work_unit_id_or_null",
+      "exact_subject_sha_tree",
+      "expected_orchestrator_state",
+      "authority_refs_and_digest",
+      "material_or_evidence_scope",
+      "external_action_envelope_when_applicable",
+      "environment_class_when_applicable"
+    ],
+    "decisions": ["ALLOW", "DENY", "BLOCKED", "INCONCLUSIVE"],
+    "allow_creates_new_authority": false,
+    "missing_required_truth": "INCONCLUSIVE",
+    "known_authority_prohibition": "DENY_OR_BLOCKED"
+  },
+  "remote_authentication": {
+    "required_for_consequential_remote_tools": true,
+    "issuer_validation_required": true,
+    "signature_validation_required": true,
+    "expiry_validation_required": true,
+    "audience_or_resource": "MUDAC_DEVELOPMENT_CONTROL_PLANE",
+    "principal_identity_required": true,
+    "capability_scope_required": true,
+    "dispatch_or_run_binding_supported": true,
+    "credential_passthrough_forbidden": true,
+    "credential_for_other_resource_accepted": false,
+    "short_lived_resource_bound_preferred": true,
+    "identity_provider_realization_deferred": true
+  },
+  "logical_scopes": [
+    "impl.read",
+    "impl.record",
+    "impl.dispatch",
+    "impl.workspace",
+    "impl.github.read",
+    "impl.github.coordinate",
+    "impl.evidence",
+    "impl.test.request"
+  ],
+  "forbidden_scope_classes": [
+    "impl.authority",
+    "impl.merge",
+    "impl.release",
+    "impl.production",
+    "impl.next_phase"
+  ],
+  "production_denial": {
+    "production_application_action": false,
+    "production_database_access": false,
+    "production_browser_or_session_control": false,
+    "production_cloud_mutation": false,
+    "production_deployment_or_release_action": false,
+    "production_secret_access": false,
+    "production_test_control_composition": false,
+    "production_fault_injection": false,
+    "production_target_selector_tool": false,
+    "structural_capability_absence_required": true,
+    "future_public_release_metadata_read_requires_separate_contract": true,
+    "r_f_authorizes_deployment": false
+  },
+  "github_binding": {
+    "raw_github_api_exposed": false,
+    "adapter": "docs/routing/autonomy_github_event_contract.json",
+    "query_routes_through_reconciler": true,
+    "writes_require_r_e_operation_id": true,
+    "writes_require_optimistic_expected_subject_state": true,
+    "force_overwrite_on_drift": false,
+    "merge_eligibility_query_performs_merge": false,
+    "synchronization_creates_new_head_and_r_c_classification": true
+  },
+  "dispatch_binding": {
+    "tool": "implementation.dispatch_agent",
+    "requires_precomputed_eligible_r_b_action": true,
+    "creates_one_immutable_r_d_dispatch": true,
+    "may_expand_role": false,
+    "may_expand_write_surfaces": false,
+    "may_add_undeclared_external_actions": false,
+    "may_reuse_stale_authority_digest": false,
+    "may_convert_review_to_repair": false,
+    "must_preserve_reviewer_freshness": true,
+    "serialized_surface_reservation_bypass": false
+  },
+  "evidence_and_g5": {
+    "prepare_g5_is_gate_preparation_not_gate_authority": true,
+    "prepare_g5_results": ["READY_FOR_GATEKEEPER_EVALUATION", "NOT_READY", "BLOCKED", "INCONCLUSIVE"],
+    "prepare_g5_may_fabricate_missing_evidence": false,
+    "prepare_g5_may_grant_merge": false,
+    "prepare_g5_may_grant_next_phase": false,
+    "r_c_evidence_validity_authoritative": true,
+    "020h_gatekeeper_rules_authoritative": true
+  },
+  "test_control_composition": {
+    "request_tool": "implementation.request_test_control_run",
+    "test_control_contract": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+    "request_requires_declared_evidence_obligation": true,
+    "allowed_environment_tiers": ["NPT-L", "NPT-P", "NPT-S"],
+    "request_fields": [
+      "operation_id",
+      "environment_tier",
+      "registered_test_or_evidence_profile",
+      "exact_application_release_or_candidate_identity",
+      "fixture_blueprint_refs",
+      "synthetic_actor_refs",
+      "named_required_capability_refs",
+      "evidence_obligation_refs",
+      "duration_or_resource_envelope"
+    ],
+    "forbidden_request_fields_or_semantics": [
+      "arbitrary_target_url",
+      "arbitrary_sql",
+      "arbitrary_http",
+      "arbitrary_shell",
+      "arbitrary_cloud_command",
+      "arbitrary_browser_javascript",
+      "production_environment_selector",
+      "secret_value"
+    ],
+    "020d_reauthorizes_independently": true,
+    "development_authority_overrides_020d": false,
+    "test_control_pass_advances_lifecycle_directly": false
+  },
+  "test_control_evidence_bridge": {
+    "required_result_refs": [
+      "development_operation_id",
+      "evidence_request_or_profile_id",
+      "test_run_id",
+      "environment_id_and_class",
+      "exact_release_or_build_sha",
+      "capability_or_profile_versions",
+      "result_class",
+      "trace_or_correlation_handles",
+      "cleanup_or_fault_status_when_applicable",
+      "artifact_or_evidence_digests",
+      "supported_evidence_class_claim",
+      "provenance_identity"
+    ],
+    "r_c_records_reference_not_rewritten_telemetry": true,
+    "nonproduction_may_support": ["E2", "E3", "E4", "E5", "SELECTED_E6"],
+    "cannot_create": "E7_PRODUCTION_EVIDENCE",
+    "fixture_seed_counts_as_user_command_behavior": false
+  },
+  "environment_fault_safety": {
+    "npt_p_s_lease_or_serialization_preserved": true,
+    "privileged_fault_profiles_keep_separate_environment_authority": true,
+    "ordinary_implementer_may_escalate_to_privileged_fault_because_tool_exists": false,
+    "unresolved_fault_or_cleanup_state": "BLOCKED_OR_INCONCLUSIVE"
+  },
+  "tool_request_envelope": {
+    "required_or_resolved_fields": [
+      "request_or_operation_id",
+      "caller_principal",
+      "capability",
+      "phase_or_package_id",
+      "work_unit_id_or_null",
+      "role_dispatch_run_identity_when_applicable",
+      "expected_r_b_state",
+      "exact_sha_tree_subject",
+      "authority_refs_and_digest",
+      "evidence_or_material_surface_refs",
+      "expected_external_subject_state_when_mutating",
+      "idempotency_key",
+      "requested_result_or_evidence_class",
+      "request_digest"
+    ]
+  },
+  "tool_result_envelope": {
+    "required_fields": [
+      "operation_id",
+      "server_or_control_plane_revision",
+      "authorization_decision",
+      "result_or_disposition",
+      "exact_subject_sha_tree_and_currentness",
+      "observed_authority_digest",
+      "created_fact_evidence_or_provenance_refs",
+      "external_result_identity_when_applicable",
+      "side_effect_status",
+      "retryability_classification",
+      "bounded_diagnostics",
+      "result_digest"
+    ],
+    "bare_ok_sufficient_for_consequential_operation": false
+  },
+  "idempotency_and_concurrency": {
+    "reuses_r_d_and_r_e_semantics": true,
+    "same_operation_and_same_request_digest_after_success": "IDEMPOTENT_RESULT_OR_RETRIEVAL",
+    "same_operation_conflicting_request_digest": "INCONCLUSIVE",
+    "expected_subject_mismatch": "RECONCILE_NO_FORCE_OVERWRITE",
+    "transport_retry_erases_failure_history": false,
+    "mandatory_evidence_retry_until_green": false,
+    "serialized_surface_reservations_are_explicit_resources": true
+  },
+  "error_classes": {
+    "AUTHORITY_DENIED": "NON_RETRYABLE_UNLESS_AUTHORITY_CHANGES",
+    "ROLE_NOT_ELIGIBLE": "NON_RETRYABLE_UNTIL_STATE_OR_ROLE_CHANGES",
+    "STATE_MISMATCH": "RECONCILE",
+    "REVISION_MISMATCH": "RECONCILE_R_C_CLASSIFY",
+    "AUTHORITY_DIGEST_STALE": "RECONCILE_AUTHORITY",
+    "CAPABILITY_NOT_GRANTED": "DENY",
+    "HUMAN_AUTHORITY_REQUIRED": "STOP_FOR_HUMAN",
+    "PRODUCTION_TARGET_FORBIDDEN": "DENY_HARD",
+    "SECRET_OR_PROTECTED_DATA_FORBIDDEN": "DENY_HARD",
+    "SERIALIZED_SURFACE_CONFLICT": "BLOCKED",
+    "SIDE_EFFECT_PRECONDITION_FAILED": "RECONCILE",
+    "EVIDENCE_MISSING_OR_INVALIDATED": "NOT_READY_OR_REVERIFY",
+    "TEST_CONTROL_ENVIRONMENT_INELIGIBLE": "DENY_OR_BLOCKED",
+    "TEST_CONTROL_CAPABILITY_DENIED": "DENY",
+    "TEST_CONTROL_CLEANUP_UNRESOLVED": "BLOCKED_OR_INCONCLUSIVE",
+    "EXTERNAL_SYSTEM_UNAVAILABLE": "RETRYABLE_ONLY_WHEN_TRANSPORT_INFRASTRUCTURE_CLASS",
+    "INCONCLUSIVE_RECONCILIATION_REQUIRED": "INCONCLUSIVE",
+    "UNSUPPORTED_CAPABILITY": "DENY"
+  },
+  "security": {
+    "least_privilege_resource_scopes": true,
+    "task_or_dispatch_bound_authorization_supported": true,
+    "auditable_principal_action_result_identity": true,
+    "explicit_allowlist_tool_registration": true,
+    "server_side_schema_validation": true,
+    "request_and_result_size_limits_required": true,
+    "time_and_resource_bounds_required_for_expensive_actions": true,
+    "credential_token_session_cookie_redaction": true,
+    "protected_evaluator_output_separation": true,
+    "arbitrary_filesystem_process_network_cloud_escape": false,
+    "tool_generated_authority_records": false,
+    "tool_description_as_security_boundary": false
+  },
+  "provenance": {
+    "append_only_for_consequential_requests_and_results": true,
+    "links": [
+      "principal",
+      "dispatch_or_run_when_applicable",
+      "exact_revision",
+      "authority_digest",
+      "lifecycle_state",
+      "operation_id",
+      "external_github_or_test_control_identity",
+      "generated_evidence_or_fact_ids"
+    ],
+    "private_chain_of_thought_forbidden": true,
+    "full_provider_conversation_transcript_required": false,
+    "secret_values_forbidden": true
+  },
+  "deployment": {
+    "runtime_topology_deferred": true,
+    "possible_shapes": ["LOCAL_PROCESS", "REPOSITORY_SERVICE", "CI_HOSTED_COMPONENT", "BOUNDED_REMOTE_SERVICE"],
+    "same_authorization_contract_required_for_all": true,
+    "single_process_may_host_multiple_adapters": true,
+    "logical_principal_and_scope_separation_still_required": true,
+    "r_f_authorizes_implementation_or_deployment": false
+  },
+  "r_g_shadow_requirements": [
+    "query_tools_do_not_mutate_state",
+    "human_authority_tools_absent_or_rejected",
+    "stale_revision_or_authority_requests_fail_closed",
+    "duplicate_operations_idempotent",
+    "conflicting_operation_identity_inconclusive",
+    "github_precondition_drift_prevents_overwrite",
+    "production_targets_denied_structurally",
+    "generic_shell_sql_cloud_http_browser_eval_secret_capabilities_absent",
+    "composed_npt_l_request_returns_bounded_020d_evidence_reference",
+    "production_or_ineligible_test_control_request_rejected_by_both_planes",
+    "test_control_pass_does_not_directly_advance_lifecycle",
+    "no_mcp_result_authorizes_phase022"
+  ],
+  "handoff": {
+    "next_subphase": "021-R-G",
+    "purpose": "shadow replay failure injection exit review and bounded autonomy implementation recommendation",
+    "runtime_implementation_authorized": false,
+    "phase022_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false
+  }
+}

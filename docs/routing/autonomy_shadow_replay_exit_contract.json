@@ -1,0 +1,316 @@
+{
+  "schema": "mudac.autonomy-shadow-replay-exit/v0.1-retrospective",
+  "status": "R_G_COMPLETE_DESIGN_VALIDATION",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "purpose": "Validate the R-B through R-F autonomy-control design against the actual Phase-021 history and adversarial failure cases, then produce a bounded implementation recommendation without creating implementation, merge, Phase-022, release or production authority.",
+  "normative_inputs": {
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
+    "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json",
+    "github_event_adapter": "docs/routing/autonomy_github_event_contract.json",
+    "development_control_mcp": "docs/routing/autonomy_development_control_mcp_contract.json",
+    "test_control": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  },
+  "validation_mode": {
+    "kind": "CONTRACTUAL_SHADOW_REPLAY_AGAINST_HISTORICAL_REPOSITORY_FACTS",
+    "runtime_control_plane_executed": false,
+    "historical_records_rewritten": false,
+    "external_side_effects_created": false,
+    "failure_injections_are_contract_level_simulations": true,
+    "pass_meaning": "the declared contracts produce a deterministic fail-safe disposition consistent with historical facts and retained authority boundaries",
+    "pass_does_not_prove_runtime_implementation_correctness": true
+  },
+  "historical_oracle": {
+    "initial_candidate": "dc8d4ddc56c3feb011eb49abc060fdb6980ddfce",
+    "repaired_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "rebound_head": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "implementation_integration": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+    "closure_head": "bf452d0561d9b76509cfd9ecb6811817c73d1f31",
+    "final_phase021_main": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "implementation_pr": 19,
+    "closure_pr": 20,
+    "observed_exact_head_ci": {
+      "head": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+      "runs": [
+        {"name": "Knowledge Validation", "run_id": 36368260327, "conclusion": "success"},
+        {"name": "Implementation Verification", "run_id": 36368260317, "conclusion": "success"},
+        {"name": "CodeQL", "run_id": 36368260400, "conclusion": "success"}
+      ]
+    },
+    "observed_delta_facts": [
+      {
+        "from": "dc8d4ddc56c3feb011eb49abc060fdb6980ddfce",
+        "to": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+        "files": [".dependency-cruiser.cjs", "packages/test-support/src/dependency-topology.test.ts"],
+        "classification": "EXECUTABLE_MATERIAL_DELTA"
+      },
+      {
+        "from": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+        "to": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+        "files": [
+          "docs/021-source-topology-implementation-foundation/021-I01-context-manifest.md",
+          "docs/021-source-topology-implementation-foundation/021-g2-authorization.md",
+          "docs/routing/phase021_g2_authorization.json",
+          "scripts/validate_phase021_g2_authorization.py"
+        ],
+        "classification": "GOVERNANCE_MATERIAL_DELTA"
+      },
+      {
+        "from": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+        "to": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+        "files": [],
+        "classification": "PROVENANCE_ONLY_CHANGE"
+      },
+      {
+        "from": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+        "to": "bf452d0561d9b76509cfd9ecb6811817c73d1f31",
+        "classification": "EVIDENCE_ONLY_OR_GOVERNANCE_CLOSURE_DELTA"
+      },
+      {
+        "from": "bf452d0561d9b76509cfd9ecb6811817c73d1f31",
+        "to": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+        "files": [],
+        "classification": "PROVENANCE_ONLY_CHANGE"
+      }
+    ]
+  },
+  "shadow_replay_cases": [
+    {
+      "id": "SR-01",
+      "name": "adversarial_failure_routes_bounded_repair",
+      "facts": ["initial_candidate_dc8d4dd", "fresh_adversarial_review_found_two_dependency_enforcement_gaps"],
+      "expected": ["AWAITING_ADVERSARIAL_REVIEW_to_REPAIR_REQUIRED", "old_candidate_evidence_remains_historical", "repair_must_remain_inside_existing_g2", "new_candidate_generation_required"],
+      "observed": ["repair_cycle_1_created_1c36dbed", "dependency_rule_and_regression_test_material_changed"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-02",
+      "name": "repaired_candidate_reverification_and_review_freshness",
+      "facts": ["repaired_candidate_1c36dbed"],
+      "expected": ["affected_verification_rerun", "fresh_independent_review", "fresh_adversarial_review", "exact_candidate_g5_binding"],
+      "observed": ["independent_review_pass", "fresh_adversarial_review_pass", "g5_complete"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-03",
+      "name": "governance_head_drift_freezes_and_rebinds",
+      "facts": ["1c36dbed_to_280c896c_governance_material_delta"],
+      "expected": ["freeze_merge_eligibility", "classify_with_r_c", "reuse_executable_acceptance_only_by_equivalence", "independent_authority_delta_review", "fresh_adversarial_delta_review", "new_exact_head_binding"],
+      "observed": ["four_governance_validation_files_only", "focused_independent_delta_review_pass", "fresh_adversarial_delta_review_pass", "new_pre_merge_binding_recorded"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-04",
+      "name": "exact_head_ci_does_not_merge",
+      "facts": ["280c896c_exact_pr_head", "all_declared_required_checks_success"],
+      "expected": ["AWAITING_PR_CI_to_AWAITING_G5_when_other_guards_hold", "ci_pass_does_not_grant_merge", "human_merge_stop_remains"],
+      "observed": ["knowledge_validation_success", "implementation_verification_success", "codeql_success", "pr_body_still_requires_separate_human_merge_decision"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-05",
+      "name": "implementation_merge_registers_distinct_integration_identity",
+      "facts": ["pr19_human_merge", "integration_a38d9cb3", "no_file_delta_from_280c896c"],
+      "expected": ["register_integration_sha_tree", "prove_same_tree_or_no_material_delta", "do_not_relabel_premerge_evidence", "perform_declared_post_merge_verification"],
+      "observed": ["integration_identity_recorded", "same_tree_relationship_recorded", "post_merge_verification_and_codeql_success_recorded_in_closure_evidence"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-06",
+      "name": "closure_dependency_sync_preserves_evidence_only_boundary",
+      "facts": ["implementation_integration_a38d9cb3", "closure_head_bf452d05"],
+      "expected": ["closure_waits_for_implementation_merge", "sync_creates_new_head", "delta_classification_required", "fresh_required_ci_on_new_closure_head", "human_closure_merge_stop_remains"],
+      "observed": ["closure_branch_synchronized_after_pr19", "governance_evidence_only_diff", "all_required_checks_repassed", "separate_human_merge_required"],
+      "result": "PASS"
+    },
+    {
+      "id": "SR-07",
+      "name": "final_closure_merge_completes_phase_without_authorizing_next_phase",
+      "facts": ["pr20_human_merge", "final_main_29637b92", "no_file_delta_from_closure_head"],
+      "expected": ["phase021_complete_integrated", "historical_evidence_immutable", "phase022_next_eligible_not_authorized", "release_and_production_unauthorized"],
+      "observed": ["phase021_complete_integrated", "phase022_next_eligible_not_authorized"],
+      "result": "PASS"
+    }
+  ],
+  "failure_injection_cases": [
+    {"id":"FI-01","injection":"duplicate_delivery_same_payload","expected":"IDEMPOTENT_NOOP","owner":"R_E","result":"PASS"},
+    {"id":"FI-02","injection":"duplicate_delivery_conflicting_payload","expected":"INCONCLUSIVE_SECURITY_RECONCILIATION","owner":"R_E","result":"PASS"},
+    {"id":"FI-03","injection":"late_success_check_for_superseded_candidate","expected":"HISTORICAL_NO_CURRENT_TRANSITION","owner":"R_E_R_C","result":"PASS"},
+    {"id":"FI-04","injection":"out_of_order_merge_notification_without_reconciled_current_truth","expected":"RECONCILE_OR_INCONCLUSIVE","owner":"R_E","result":"PASS"},
+    {"id":"FI-05","injection":"pr_head_moves_after_review_or_g5","expected":"FREEZE_MERGE_AND_R_C_DELTA_CLASSIFY","owner":"R_E_R_C","result":"PASS"},
+    {"id":"FI-06","injection":"changed_path_not_mapped_to_material_surface","expected":"INCONCLUSIVE_FAIL_CLOSED","owner":"R_C","result":"PASS"},
+    {"id":"FI-07","injection":"independent_reviewer_reuses_implementer_run_or_worktree","expected":"REVIEW_INDEPENDENCE_NOT_PROVEN_REJECT","owner":"R_D_020H","result":"PASS"},
+    {"id":"FI-08","injection":"adversarial_review_reuses_prior_review_session","expected":"FRESHNESS_NOT_PROVEN_REJECT_OR_INCONCLUSIVE","owner":"R_D_020H","result":"PASS"},
+    {"id":"FI-09","injection":"reviewer_edits_candidate","expected":"ROLE_CONVERTS_TO_IMPLEMENTER_AND_FRESH_REVIEW_REQUIRED","owner":"R_D_020H","result":"PASS"},
+    {"id":"FI-10","injection":"dispatch_uses_stale_authority_digest","expected":"REJECT_RECONCILE_AUTHORITY","owner":"R_D_R_F","result":"PASS"},
+    {"id":"FI-11","injection":"repair_requires_scope_expansion","expected":"BLOCKED_HUMAN_DISPOSITION_OR_REAUTHORIZATION","owner":"R_B_020H","result":"PASS"},
+    {"id":"FI-12","injection":"repair_budget_exhausted","expected":"BLOCKED_HUMAN_PROGRAM_EXTENSION_REQUIRED","owner":"R_B_020H","result":"PASS"},
+    {"id":"FI-13","injection":"generic_shell_git_github_http_sql_or_cloud_capability_requested","expected":"DENY_UNSUPPORTED_CAPABILITY","owner":"R_F","result":"PASS"},
+    {"id":"FI-14","injection":"production_target_selected_through_development_control","expected":"DENY_HARD","owner":"R_F","result":"PASS"},
+    {"id":"FI-15","injection":"production_target_selected_through_test_control","expected":"DENY_HARD_FAIL_CLOSED","owner":"020D_R_F","result":"PASS"},
+    {"id":"FI-16","injection":"passing_test_control_run_attempts_to_advance_implementation_state","expected":"EVIDENCE_REFERENCE_ONLY_NO_DIRECT_TRANSITION","owner":"R_F_R_C_R_B","result":"PASS"},
+    {"id":"FI-17","injection":"same_operation_id_conflicting_request_digest","expected":"INCONCLUSIVE","owner":"R_F_R_E","result":"PASS"},
+    {"id":"FI-18","injection":"serialized_surface_conflict","expected":"BLOCKED_NO_SILENT_STEAL","owner":"R_D_R_E_R_F","result":"PASS"},
+    {"id":"FI-19","injection":"github_write_precondition_subject_changed","expected":"RECONCILE_NO_FORCE_OVERWRITE","owner":"R_E_R_F","result":"PASS"},
+    {"id":"FI-20","injection":"required_check_missing_running_cancelled_or_failed","expected":"NO_REQUIRED_CI_PASS_TRANSITION","owner":"R_E_R_B","result":"PASS"},
+    {"id":"FI-21","injection":"mandatory_evidence_retry_until_green","expected":"FORBIDDEN_FAILURE_HISTORY_RETAINED","owner":"R_E_020H","result":"PASS"},
+    {"id":"FI-22","injection":"g5_complete_attempts_automatic_protected_merge","expected":"AWAIT_HUMAN_MERGE","owner":"R_B_020H_R_F","result":"PASS"},
+    {"id":"FI-23","injection":"merge_or_completion_event_attempts_to_authorize_phase022","expected":"DENY_NO_AUTHORITY_SYNTHESIS","owner":"R_B_R_E_R_F","result":"PASS"},
+    {"id":"FI-24","injection":"post_completion_material_invalidation","expected":"REOPEN_REQUIRED_OLD_G2_NOT_RESTORED","owner":"R_B_R_C_020H","result":"PASS"},
+    {"id":"FI-25","injection":"secret_or_protected_credential_retrieval","expected":"DENY_HARD","owner":"R_F_020D","result":"PASS"},
+    {"id":"FI-26","injection":"missed_webhook_or_control_plane_restart","expected":"RECONCILE_FROM_CURRENT_GITHUB_AND_IMMUTABLE_LOCAL_FACTS","owner":"R_E","result":"PASS"},
+    {"id":"FI-27","injection":"test_control_fault_or_cleanup_state_unresolved","expected":"BLOCKED_OR_INCONCLUSIVE","owner":"020D_R_F","result":"PASS"},
+    {"id":"FI-28","injection":"same_provider_used_for_implementer_and_reviews_but_distinct_role_bound_fresh_sessions","expected":"ALLOWED_IF_INDEPENDENCE_EVIDENCE_COMPLETE","owner":"R_D","result":"PASS"}
+  ],
+  "cross_contract_consistency": {
+    "r_b_state_transitions_consistent_with_r_c_invalidation": true,
+    "r_c_revision_bindings_consistent_with_r_e_head_and_merge_choreography": true,
+    "r_d_role_freshness_consistent_with_020h_review_independence": true,
+    "r_e_side_effect_idempotency_consistent_with_r_f_operation_envelopes": true,
+    "r_f_test_bridge_preserves_020d_environment_and_capability_authorization": true,
+    "human_authority_stops_preserved_across_all_contracts": true,
+    "phase022_authority_not_synthesized": true,
+    "production_denial_preserved": true,
+    "contradictions_found": []
+  },
+  "exit_criteria": {
+    "historical_replay_cases_pass": true,
+    "failure_injection_cases_have_fail_safe_deterministic_dispositions": true,
+    "known_success_events_do_not_create_human_authority": true,
+    "stale_or_ambiguous_events_fail_closed": true,
+    "evidence_reuse_never_relabels_historical_subjects": true,
+    "review_independence_and_freshness_survive_automation": true,
+    "repair_does_not_expand_g2": true,
+    "github_writes_remain_bounded_and_preconditioned": true,
+    "development_control_has_no_generic_escape_capability": true,
+    "test_control_composition_remains_nonproduction_only": true,
+    "runtime_implementation_limitations_are_explicit": true,
+    "result": "PASS"
+  },
+  "residual_risks_and_deferred_realization": [
+    {
+      "id": "RG-RR-01",
+      "item": "No runtime orchestrator, event store, evidence graph or MCP server exists yet.",
+      "disposition": "IMPLEMENTATION_REQUIRED_BEFORE_OPERATIONAL_RELIANCE"
+    },
+    {
+      "id": "RG-RR-02",
+      "item": "Remote identity-provider and short-lived resource-bound credential realization remains deferred.",
+      "disposition": "RESOLVE_DURING_BOUNDED_CONTROL_PLANE_IMPLEMENTATION_BEFORE_REMOTE_CONSEQUENTIAL_TOOLS"
+    },
+    {
+      "id": "RG-RR-03",
+      "item": "Storage technology for append-only events/evidence and deterministic projection is deferred.",
+      "disposition": "CHOOSE_WITH_REPLAY_IDEMPOTENCY_AND_AUDITABILITY_AS_ACCEPTANCE_CONSTRAINTS"
+    },
+    {
+      "id": "RG-RR-04",
+      "item": "Provider adapters for Cursor, Codex and CI automation are not implemented.",
+      "disposition": "IMPLEMENT_BEHIND_R_D_ADAPTER_CONTRACT_WITH_ROLE_AND_SESSION_CONFORMANCE_TESTS"
+    },
+    {
+      "id": "RG-RR-05",
+      "item": "Exact GitHub App permission matrix and live webhook deployment are deferred.",
+      "disposition": "START_READ_ONLY_AND_ADD_ONLY_DECLARED_COORDINATION_WRITES"
+    },
+    {
+      "id": "RG-RR-06",
+      "item": "020-D test-control MCP is designed but not implemented or deployed.",
+      "disposition": "DEVELOPMENT_CONTROL_BRIDGE_REMAINS_INERT_UNTIL_020D_RUNTIME_EXISTS_AND_PASSES_ITS_OWN_SECURITY_VALIDATION"
+    },
+    {
+      "id": "RG-RR-07",
+      "item": "Contract-level failure injection does not substitute for executable fault/replay testing of the future control plane.",
+      "disposition": "MANDATORY_IMPLEMENTATION_EXIT_EVIDENCE"
+    }
+  ],
+  "bounded_autonomy_implementation_recommendation": {
+    "recommendation": "PROCEED_TO_SEPARATELY_AUTHORIZED_PRE_PHASE022_CONTROL_PLANE_IMPLEMENTATION",
+    "authorization_created_by_r_g": false,
+    "recommended_package_name": "AUT-001",
+    "package_purpose": "Implement the proven coordination control plane before using it to coordinate Phase-022 package execution.",
+    "g2_required_before_execution": true,
+    "phase022_g2_is_not_substitute": true,
+    "recommended_rollout": [
+      {
+        "stage": "AUT-001-A",
+        "name": "deterministic_replay_core",
+        "scope": ["append_only_fact_store", "r_b_projection", "r_c_revision_and_invalidation_engine", "historical_phase021_replay_harness"],
+        "external_side_effects": false,
+        "exit_requirement": "all_SR_and_FI_cases_executable_and_deterministic"
+      },
+      {
+        "stage": "AUT-001-B",
+        "name": "live_read_only_shadow",
+        "scope": ["github_read_reconciliation", "webhook_ingestion", "required_check_projection", "shadow_next_action_comparison"],
+        "github_writes": false,
+        "agent_dispatch": false,
+        "exit_requirement": "zero_unsafe_advancement_and_all_divergence_explained_over_declared_shadow_window"
+      },
+      {
+        "stage": "AUT-001-C",
+        "name": "dispatcher_and_provenance",
+        "scope": ["r_d_dispatch_packets", "cursor_adapter", "codex_adapter", "review_session_isolation", "serialized_surface_reservations", "provenance_manifests"],
+        "protected_merge": false,
+        "exit_requirement": "role_freshness_scope_and_write_boundary_conformance"
+      },
+      {
+        "stage": "AUT-001-D",
+        "name": "development_control_mcp_read_record",
+        "scope": ["query_tools", "record_compute_tools", "resource_bound_auth", "audit_envelopes"],
+        "bounded_actions_enabled": false,
+        "exit_requirement": "no_generic_escape_no_authority_minting_and_auth_failure_injection_pass"
+      },
+      {
+        "stage": "AUT-001-E",
+        "name": "bounded_nonhuman_side_effects",
+        "scope": ["worktree_creation", "agent_dispatch", "draft_pr_coordination", "ready_draft_coordination", "serialized_reservations", "dependency_branch_sync_when_declared"],
+        "requires": ["operation_id", "optimistic_preconditions", "reconciliation", "circuit_breakers"],
+        "forbidden": ["merge", "release", "production", "g2", "scope_expansion", "next_phase_authority"]
+      },
+      {
+        "stage": "AUT-001-F",
+        "name": "020d_test_control_bridge",
+        "scope": ["declared_evidence_request_bridge", "evidence_reference_ingestion"],
+        "requires_020d_runtime": true,
+        "production": false,
+        "lifecycle_direct_advance": false
+      },
+      {
+        "stage": "AUT-001-G",
+        "name": "independent_exit_and_enablement",
+        "scope": ["fresh_independent_review", "fresh_adversarial_review", "executable_replay", "failure_injection", "security_review", "shadow_divergence_review", "g5"],
+        "result": "ELIGIBLE_FOR_HUMAN_DECISION_ON_USE_FOR_PHASE022_COORDINATION_NOT_PHASE022_AUTHORITY"
+      }
+    ],
+    "mandatory_enablement_rule": "No side-effecting stage may be enabled merely because code exists; each stage requires its own predecessor evidence and declared authorization.",
+    "recommended_phase022_relationship": "Phase-022 may remain NEXT_ELIGIBLE while AUT-001 is implemented; using AUT-001 to coordinate Phase-022 requires both AUT-001 operational acceptance and separate Phase-022 authorization.",
+    "rollback": "Disable side-effecting adapters and return to human-coordinated process without invalidating authoritative repository records.",
+    "human_stops_retained": [
+      "g2_authorization",
+      "material_scope_expansion",
+      "architecture_or_semantic_reentry",
+      "repair_budget_override",
+      "protected_implementation_merge",
+      "closure_merge_when_required",
+      "reopen_execution_authorization",
+      "release_authorization",
+      "production_authorization",
+      "next_phase_authorization"
+    ]
+  },
+  "r_g_exit": {
+    "status": "COMPLETE_PASS",
+    "shadow_replay": "PASS_7_OF_7",
+    "failure_injection": "PASS_28_OF_28_CONTRACT_LEVEL",
+    "cross_contract_contradictions": 0,
+    "recommendation": "SEEK_EXPLICIT_G2_FOR_AUT_001_BEFORE_PHASE022_AUTONOMOUS_COORDINATION",
+    "runtime_implementation_authorized": false,
+    "phase022_authorized": false,
+    "merge_authorized": false,
+    "release_authorized": false,
+    "production_authorized": false
+  }
+}
