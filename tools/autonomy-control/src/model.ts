@@ -30,6 +30,8 @@ export type HumanAuthorityKind =
   | 'REOPEN_G2'
   | 'COMPLETION_VALIDITY_DISPOSITION';
 
+export type RepairBlockerKind = 'SCOPE_EXPANSION' | 'BUDGET_EXHAUSTED';
+
 export interface ImmutableFact<TPayload = unknown> {
   factId: string;
   factType: string;
@@ -44,6 +46,7 @@ export interface LifecycleEventPayload {
   subjectSha?: string;
   humanAuthorityRef?: string;
   humanAuthorityKind?: HumanAuthorityKind;
+  repairBlocker?: RepairBlockerKind;
   stale?: boolean;
 }
 
