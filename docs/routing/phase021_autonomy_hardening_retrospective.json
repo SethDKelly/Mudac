@@ -1,0 +1,84 @@
+{
+  "schema": "mudac.phase021-autonomy-hardening-retrospective/v1",
+  "status": "ACTIVE_PLANNING_ONLY",
+  "boundary": "021-R",
+  "title": "Phase 021 Autonomy-Hardening Retrospective",
+  "baseline": {
+    "main_sha": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "main_tree": "4878dcfa09540033d2f51d88ef93b1d460a2fe29",
+    "phase021_status": "COMPLETE_INTEGRATED",
+    "phase022_status": "NEXT_ELIGIBLE_NOT_AUTHORIZED"
+  },
+  "authorization": {
+    "retrospective_planning_authorized": true,
+    "repository_governance_design_changes_authorized": true,
+    "runtime_implementation_authorized": false,
+    "application_implementation_authorized": false,
+    "phase021_reopened": false,
+    "phase022_authorized": false,
+    "merge_authorized_by_this_record": false,
+    "release_authorized": false,
+    "production_authorized": false
+  },
+  "purpose": "Convert the proven Phase-021 human-coordinated operating sequence into a machine-routed autonomy-control design while preserving existing human authority, independent review, exact-revision evidence, circuit breakers and production denial.",
+  "in_scope": [
+    "orchestrator_state_machine_design",
+    "single_current_lifecycle_projection_design",
+    "evidence_dependency_and_invalidation_graph_design",
+    "agent_dispatch_and_context_manifest_design",
+    "review_session_freshness_and_provenance_design",
+    "github_event_ingestion_idempotency_and_reconciliation_design",
+    "pr_ci_and_head_drift_choreography_design",
+    "development_control_mcp_interface_design",
+    "composition_with_phase020_nonproduction_test_control_mcp",
+    "historical_phase021_replay_and_shadow_simulation_plan",
+    "bounded_pre_phase022_autonomy_implementation_recommendation"
+  ],
+  "out_of_scope": [
+    "mudac_domain_behavior",
+    "persistence_schema_changes",
+    "feature_ui",
+    "provider_deployment",
+    "phase022_package_execution",
+    "production_access",
+    "production_data",
+    "production_credentials",
+    "release",
+    "rewriting_phase021_historical_evidence",
+    "weakening_g2_g5_or_review_independence"
+  ],
+  "subphases": [
+    {"id": "021-R-A", "status": "COMPLETE", "purpose": "retrospective authority, coordination debt and lifecycle truth"},
+    {"id": "021-R-B", "status": "STARTED", "purpose": "orchestrator state machine and human authority stops"},
+    {"id": "021-R-C", "status": "PLANNED", "purpose": "evidence dependency graph, invalidation and equivalence"},
+    {"id": "021-R-D", "status": "PLANNED", "purpose": "agent dispatcher, isolation, context and provenance"},
+    {"id": "021-R-E", "status": "PLANNED", "purpose": "GitHub events, idempotency, PR/CI choreography and reconciliation"},
+    {"id": "021-R-F", "status": "PLANNED", "purpose": "development-control MCP interface and security boundary"},
+    {"id": "021-R-G", "status": "PLANNED", "purpose": "shadow replay, exit review and Phase-022 handoff recommendation"}
+  ],
+  "retrospective_findings": [
+    "manual_next_action_routing",
+    "manual_exact_revision_drift_detection",
+    "implicit_evidence_dependencies",
+    "manual_review_prompt_and_session_dispatch",
+    "manual_github_pr_ci_choreography",
+    "stale_current_lifecycle_narratives_across_bootstrap_surfaces",
+    "manual_closure_pr_dependency_synchronization"
+  ],
+  "non_negotiable_human_stops": [
+    "g2_authorization",
+    "material_scope_expansion",
+    "accepted_architecture_contradiction",
+    "repair_budget_override",
+    "protected_implementation_merge",
+    "closure_merge_when_required",
+    "release_authorization",
+    "production_authorization",
+    "next_phase_authorization"
+  ],
+  "next_action": {
+    "subphase": "021-R-B",
+    "action": "complete_state_machine_guard_and_transition_review",
+    "implementation_execution": false
+  }
+}

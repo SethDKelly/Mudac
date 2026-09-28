@@ -1,0 +1,89 @@
+{
+  "schema": "mudac.autonomy-evidence-dependency-contract/v0.1-draft",
+  "status": "RETROSPECTIVE_DESIGN_DRAFT",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "purpose": "Define how source/governance changes invalidate, preserve or require rebinding of implementation evidence without silently reusing evidence across materially different revisions.",
+  "node_types": [
+    "AUTHORITY",
+    "SOURCE_SURFACE",
+    "MATERIAL_SURFACE_CLASS",
+    "VISIBLE_CRITERION",
+    "VERIFICATION_RESULT",
+    "INDEPENDENT_REVIEW",
+    "ADVERSARIAL_REVIEW",
+    "CI_CHECK",
+    "GATE_DECISION",
+    "CANDIDATE_IDENTITY",
+    "INTEGRATION_IDENTITY",
+    "RESIDUAL_RISK",
+    "CLOSURE_RECORD"
+  ],
+  "edge_types": [
+    "DEPENDS_ON",
+    "PROVES",
+    "BOUND_TO_SHA_TREE",
+    "INVALIDATES_ON_CHANGE",
+    "CARRIES_FORWARD_IF_CONTENT_EQUIVALENT",
+    "REQUIRES_REVIEW_IF_CHANGED",
+    "SUPERSEDES_WITHOUT_REWRITING_HISTORY",
+    "CLOSES"
+  ],
+  "surface_classes": {
+    "EXECUTABLE_MATERIAL": {
+      "examples": ["application_source", "module_source", "dependency_rules", "workspace_manifest", "lockfile", "runtime_build_config"],
+      "default_on_change": "INVALIDATE_AFFECTED_VERIFICATION_REVIEWS_CI_AND_G5_BINDING"
+    },
+    "AUTHORITY_GOVERNANCE_MATERIAL": {
+      "examples": ["g2_record", "scope_contract", "gate_contract", "review_contract", "validator_that_defines_acceptance"],
+      "default_on_change": "AUTHORITY_CONSISTENCY_AND_DELTA_REVIEW_REQUIRED_PLUS_G5_REBINDING"
+    },
+    "EVIDENCE_ONLY": {
+      "examples": ["append_only_review_result", "ci_run_reference", "integration_binding", "closure_evidence"],
+      "default_on_change": "VALIDATE_PROVENANCE_AND_APPEND_ONLY_INTEGRITY"
+    },
+    "CI_EVALUATOR_MATERIAL": {
+      "examples": ["workflow", "test_harness", "protected_evaluator_configuration"],
+      "default_on_change": "REVERIFY_AFFECTED_CRITERIA_AND_REVIEW_EVALUATOR_INTEGRITY"
+    },
+    "HISTORICAL_NONCURRENT": {
+      "examples": ["superseded_phase_record", "explicitly_historical_reference"],
+      "default_on_change": "NO_CURRENT_ACCEPTANCE_EFFECT_UNLESS_ROUTING_OR_AUTHORITY_REFERENCES_IT"
+    }
+  },
+  "revision_classification": [
+    {"condition": "old_sha_equals_new_sha", "result": "IDENTICAL_REVISION", "evidence_action": "NONE"},
+    {"condition": "old_tree_equals_new_tree", "result": "PROVENANCE_ONLY_CHANGE", "evidence_action": "REFRESH_IDENTITY_BINDING_ONLY"},
+    {"condition": "tree_changed_and_all_protected_material_surface_hashes_equal", "result": "NON_MATERIAL_TREE_CHANGE", "evidence_action": "DELTA_REVIEW_AND_BINDING_REFRESH"},
+    {"condition": "authority_or_validator_surface_changed_but_executable_material_equal", "result": "GOVERNANCE_MATERIAL_DELTA", "evidence_action": "AUTHORITY_DELTA_REVIEW_PLUS_G5_REBINDING"},
+    {"condition": "any_executable_or_evaluator_material_changed", "result": "MATERIAL_CHANGE", "evidence_action": "INVALIDATE_AFFECTED_EVIDENCE_AND_REENTER_VERIFICATION_CHAIN"},
+    {"condition": "classification_not_provable", "result": "INCONCLUSIVE", "evidence_action": "FAIL_CLOSED"}
+  ],
+  "candidate_generation_rules": {
+    "candidate_generation_monotonic": true,
+    "evidence_must_name_generation_and_sha_tree": true,
+    "prior_generation_evidence_may_not_be_relabelled": true,
+    "repair_source_change_creates_new_generation": true,
+    "historical_pass_remains_historical_fact_after_supersession": true
+  },
+  "review_invalidation": {
+    "implementer_source_change": ["VERIFICATION_RESULT", "INDEPENDENT_REVIEW", "ADVERSARIAL_REVIEW", "CI_CHECK", "GATE_DECISION"],
+    "reviewer_edits_source": ["REVIEWER_INDEPENDENCE_FOR_CHANGED_REVISION"],
+    "governance_material_change": ["AUTHORITY_CONSISTENCY_REVIEW", "EXACT_HEAD_GATE_BINDING"],
+    "ci_evaluator_material_change": ["AFFECTED_CI_EVIDENCE", "AFFECTED_REVIEW_OF_EVALUATOR_INTEGRITY"]
+  },
+  "phase021_replay_expectation": {
+    "old_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "rebound_head": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "expected_classification": "GOVERNANCE_MATERIAL_DELTA",
+    "expected_reuse": "EXECUTABLE_IMPLEMENTATION_ACCEPTANCE_REUSABLE_AFTER_CONTENT_EQUIVALENCE_PROOF",
+    "expected_invalidated_or_refreshed": ["AUTHORITY_DELTA_REVIEW", "ADVERSARIAL_DELTA_REVIEW", "G5_EXACT_HEAD_BINDING"]
+  },
+  "open_design_work": [
+    "map_each_phase022_package_visible_criterion_to_material_surfaces",
+    "define_stable_content_hash_manifest_format",
+    "define_evidence_graph_storage_and_query_model",
+    "define_minimal_reverification_closure_algorithm",
+    "define_historical_record_retention_and_supersession_links"
+  ]
+}

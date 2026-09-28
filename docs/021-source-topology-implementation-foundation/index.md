@@ -39,7 +39,7 @@ Pre-merge rebound PR #19 head:
 - required protected PR CI: PASS
 - executable IMP-001 content equivalence: PASS
 
-Final protected-main integration:
+Final protected-main implementation integration:
 
 - PR #19: MERGED
 - integration SHA: `a38d9cb3da9dcad70467fef15ebd91743a80bbb3`
@@ -52,3 +52,12 @@ Final protected-main integration:
 Phase 021 / IMP-001 / 021-I01 is complete and integrated.
 
 Phase 022 is **NEXT ELIGIBLE / NOT AUTHORIZED**. Release and production authority remain ungranted.
+
+## Post-completion autonomy-hardening retrospective
+
+Phase 021 remains closed. A separate append-only planning boundary now captures lessons from the successful IMP-001 execution and designs a more autonomous coordination/control layer before Phase 022:
+
+- [Phase 021-R — Autonomy-Hardening Retrospective & Pre-022 Control-Plane Design](../021-autonomy-hardening-retrospective/)
+- machine authority: `docs/routing/phase021_autonomy_hardening_retrospective.json`
+
+This retrospective does **not** reopen IMP-001, authorize runtime implementation, grant Phase-022 G2, or change release/production authority.

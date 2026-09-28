@@ -1,0 +1,142 @@
+{
+  "schema": "mudac.autonomy-control-plane-interfaces/v0.1-draft",
+  "status": "RETROSPECTIVE_DESIGN_DRAFT",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "purpose": "Define the initial agent-dispatch, GitHub-event and development-control MCP interfaces used to automate coordination without increasing semantic or execution authority.",
+  "roles": {
+    "ORCHESTRATOR": {"writes_source": false, "writes_routing_evidence": true, "grants_g2": false, "merges": false},
+    "CODEX_IMPLEMENTER": {"writes_source": "ONLY_AUTHORIZED_WORKTREE", "self_reviews": false, "merges": false},
+    "CURSOR_IMPLEMENTER": {"writes_source": "ONLY_AUTHORIZED_WORKTREE", "self_reviews": false, "merges": false},
+    "INDEPENDENT_REVIEWER": {"writes_source": false, "fresh_run_required": true, "merges": false},
+    "ADVERSARIAL_REVIEWER": {"writes_source": false, "fresh_run_required": true, "merges": false},
+    "GATEKEEPER": {"writes_source": false, "repairs_source": false, "merges": false, "grants_next_phase": false},
+    "HUMAN_PROGRAM_AUTHORITY": {"grants_g2": true, "may_authorize_scope_change": true, "protected_merge_decision": true, "release_and_production_authority": true}
+  },
+  "dispatcher": {
+    "agent_may_self_select_next_task": false,
+    "dispatch_requires_state_machine_next_action": true,
+    "dispatch_packet_requires": [
+      "phase_package_work_unit",
+      "role",
+      "exact_base_or_candidate_sha_tree",
+      "authority_record_identity",
+      "in_scope",
+      "out_of_scope",
+      "serialized_surfaces",
+      "required_verification_or_review",
+      "repair_generation_if_any",
+      "circuit_breakers",
+      "session_freshness_requirement"
+    ],
+    "run_manifest_requires": [
+      "run_id",
+      "role",
+      "provider",
+      "input_sha_tree",
+      "authority_identity",
+      "start_time",
+      "end_time",
+      "result",
+      "changed_files_if_implementer",
+      "commands_or_evidence_refs",
+      "finding_ids",
+      "output_candidate_identity_if_any"
+    ],
+    "private_chain_of_thought_transfer_forbidden": true,
+    "protected_probe_transfer_to_implementer_forbidden": true,
+    "secrets_transfer_forbidden": true
+  },
+  "github_event_adapter": {
+    "design_mode_only": true,
+    "accepted_event_families": [
+      "pull_request.opened",
+      "pull_request.synchronize",
+      "pull_request.ready_for_review",
+      "pull_request.converted_to_draft",
+      "pull_request.closed",
+      "pull_request.merged",
+      "check_run.completed",
+      "check_suite.completed",
+      "workflow_run.completed",
+      "push"
+    ],
+    "idempotency_key": "github_delivery_id_plus_repository_plus_event_action_plus_subject_sha",
+    "event_order_not_trusted": true,
+    "reconcile_against_github_current_truth": true,
+    "duplicate_delivery_is_noop_after_same_fact_recorded": true,
+    "unknown_event_may_not_advance_state": true,
+    "required_behaviors": {
+      "pr_head_changed_after_evidence_binding": "CLASSIFY_DELTA",
+      "required_ci_complete": "RECONCILE_EXACT_HEAD_AND_REQUIRED_CHECK_SET",
+      "implementation_pr_merged": "REGISTER_INTEGRATION_SHA_TREE_AND_START_POST_MERGE_VERIFICATION",
+      "dependent_closure_pr_out_of_date": "SYNCHRONIZATION_ELIGIBLE_BUT_MERGE_STILL_HUMAN",
+      "main_changed_outside_expected_integration": "RECONCILE_AND_FAIL_CLOSED_IF_MATERIAL"
+    }
+  },
+  "development_control_mcp": {
+    "separate_from_application_test_control_semantics": true,
+    "may_compose_with_phase020_d_test_control": true,
+    "mcp_tool_existence_does_not_grant_authority": true,
+    "production_target_forbidden": true,
+    "arbitrary_shell_forbidden": true,
+    "arbitrary_git_write_forbidden": true,
+    "arbitrary_cloud_api_forbidden": true,
+    "arbitrary_sql_forbidden": true,
+    "secret_retrieval_forbidden": true,
+    "read_tools": [
+      "implementation.get_state",
+      "implementation.get_authority",
+      "implementation.get_candidate",
+      "implementation.get_evidence_status",
+      "implementation.get_invalidated_evidence",
+      "implementation.get_merge_eligibility",
+      "implementation.get_next_action"
+    ],
+    "record_or_compute_tools": [
+      "implementation.register_candidate",
+      "implementation.record_verification",
+      "implementation.record_review",
+      "implementation.classify_delta",
+      "implementation.prepare_g5",
+      "implementation.record_integration",
+      "implementation.record_closure"
+    ],
+    "bounded_action_tools_proposed_not_authorized": [
+      "implementation.create_worktree",
+      "implementation.dispatch_agent",
+      "implementation.open_or_update_draft_pr",
+      "implementation.synchronize_dependency_branch"
+    ],
+    "human_authority_tools_explicitly_forbidden": [
+      "implementation.grant_g2",
+      "implementation.approve_merge",
+      "implementation.authorize_release",
+      "implementation.authorize_production",
+      "implementation.authorize_next_phase"
+    ]
+  },
+  "phase020_d_composition": {
+    "development_control_plane_role": "coordinates_implementation_lifecycle_and_evidence",
+    "test_control_plane_role": "exercises_nonproduction_application_behavior_and_observability",
+    "shared_security_principles": [
+      "capability_allowlist",
+      "explicit_environment_identity",
+      "production_denial",
+      "technical_principal_identity",
+      "structured_observability",
+      "no_arbitrary_shell_cloud_sql_http_or_secret_capability"
+    ],
+    "development_control_must_not_become_application_semantic_bypass": true,
+    "test_control_must_not_grant_implementation_authority": true
+  },
+  "open_design_work": [
+    "define_dispatch_transport_and_provider_adapters",
+    "define_webhook_or_actions_event_ingress_choice",
+    "define durable event_store_and_projection_storage",
+    "define github_permission_minimums",
+    "define mcp_schema_and_error_model",
+    "define authorization_claims_for_each_bounded_action",
+    "define dry_run_and_shadow_mode_before_live_routing"
+  ]
+}
