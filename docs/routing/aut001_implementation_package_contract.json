@@ -1,0 +1,415 @@
+{
+  "schema": "mudac.aut001-implementation-package/v1",
+  "package_id": "AUT-001",
+  "title": "Bounded Development-Control Plane Implementation",
+  "state": "G1_READY_FOR_G2_DECISION",
+  "execution_authorized": false,
+  "g2_authorized": false,
+  "phase022_authorized": false,
+  "release_authorized": false,
+  "production_authorized": false,
+  "purpose": "Implement the R-B through R-G autonomy-control design as a bounded, replayable, fail-closed coordination control plane that can later coordinate separately authorized implementation work without creating semantic, merge, release, production, reopen or next-phase authority.",
+  "authority_refs": [
+    "docs/routing/phase021_autonomy_hardening_retrospective.json",
+    "docs/routing/autonomy_shadow_replay_exit_contract.json",
+    "docs/routing/autonomy_orchestrator_contract.json",
+    "docs/routing/autonomy_evidence_dependency_contract.json",
+    "docs/routing/autonomy_agent_dispatch_contract.json",
+    "docs/routing/autonomy_github_event_contract.json",
+    "docs/routing/autonomy_development_control_mcp_contract.json",
+    "docs/routing/autonomy_control_plane_interfaces.json",
+    "docs/routing/phase020_implementation_phase_contract.json",
+    "docs/routing/phase020_review_repair_exit_gate_governance.json",
+    "docs/routing/phase020_nonproduction_test_control_architecture.json"
+  ],
+  "exact_entry_baseline": {
+    "protected_main_sha": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "protected_main_tree": "4878dcfa09540033d2f51d88ef93b1d460a2fe29",
+    "r_g_authority_sha": "1dd32506baf692549ffb435b1893e7fc76feaff3",
+    "r_g_authority_tree": "badbb48be7df2dfbe2c0513a5bb4a2495aab7d0a",
+    "planning_branch": "aut-001/start-gate",
+    "main_ruleset": "main — protected",
+    "main_ruleset_enforcement": "active",
+    "required_checks": [
+      "Validate agentic/documentation conformance",
+      "Implementation Verification",
+      "CodeQL JavaScript/TypeScript"
+    ],
+    "main_ruleset_bypass_actors": []
+  },
+  "scope_in": [
+    "append_only_control_plane_fact_and_operation_records",
+    "deterministic_r_b_lifecycle_projection",
+    "r_c_revision_materiality_invalidation_equivalence_and_reverification_engine",
+    "historical_phase021_replay_and_failure_injection_harness",
+    "live_read_only_github_event_ingestion_and_reconciliation_shadow",
+    "r_d_dispatch_packet_context_manifest_session_isolation_and_provenance_mechanics",
+    "cursor_and_codex_provider_adapters_behind_r_d_contract",
+    "r_e_idempotent_bounded_github_coordination_mechanics",
+    "r_f_development_control_mcp_query_record_compute_and_later_bounded_action_surfaces",
+    "resource_bound_authentication_and_authorization_for_consequential_remote_tools",
+    "serialized_surface_reservations",
+    "nonproduction_observability_health_and_recovery_for_control_plane",
+    "bounded_bridge_to_an_independently_authorized_and_operational_020d_test_control_runtime",
+    "shadow_divergence_reporting_and_safe_human_fallback"
+  ],
+  "scope_out": [
+    "mudac_domain_behavior",
+    "mudac_semantic_ownership_changes",
+    "application_feature_ui",
+    "application_persistence_schema_or_migration_changes",
+    "production_application_access",
+    "production_database_access",
+    "production_browser_or_session_control",
+    "production_cloud_mutation",
+    "production_credentials_or_secret_retrieval",
+    "generic_shell_git_github_http_sql_cloud_or_browser_eval_capabilities",
+    "protected_implementation_merge",
+    "closure_merge",
+    "g2_creation",
+    "scope_expansion_authority",
+    "architecture_or_semantic_acceptance_authority",
+    "repair_budget_override",
+    "reopen_execution_authority",
+    "release_or_deployment_authority",
+    "production_authority",
+    "phase022_execution_or_next_phase_authority",
+    "implementation_of_020d_test_control_runtime_itself"
+  ],
+  "semantic_architecture_engineering_refs": {
+    "semantic_owners_unchanged": true,
+    "control_plane_is_not_semantic_owner": true,
+    "control_plane_must_not_import_or_embed_domain_authority_as_private_truth": true,
+    "control_plane_authority_is_resolved_from_versioned_repository_records": true,
+    "application_module_topology": "accepted_five_owner_topology_remains_unchanged"
+  },
+  "source_topology": {
+    "preferred_new_root": "tools/autonomy-control/",
+    "reason": "keep development-control mechanics outside MUDAC application/domain ownership packages",
+    "implementation_may_refine_internal_layout": true,
+    "changing_top_level_root_after_g2": "AUTHORITY_DELTA_REVIEW_REQUIRED",
+    "owned_source_prefixes": [
+      "tools/autonomy-control/"
+    ],
+    "owned_evidence_prefixes": [
+      "docs/evidence/aut001/"
+    ],
+    "owned_documentation_prefixes": [
+      "docs/AUT-001-bounded-development-control-plane/"
+    ],
+    "owned_routing_prefixes": [
+      "docs/routing/aut001_"
+    ],
+    "shared_serialized_surfaces": [
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "tsconfig*.json",
+      "eslint.config.mjs",
+      ".github/workflows/",
+      ".github/dependabot.yml",
+      "AGENTS.md",
+      ".agents/",
+      ".cursor/"
+    ],
+    "shared_surface_rule": "A shared surface may be changed only when a declared AUT work unit proves the change is necessary, reserves the surface, and routes resulting evaluator/governance invalidation through R-C. Avoid shared-surface changes when an isolated tool-local configuration is sufficient."
+  },
+  "hard_dependencies": [
+    {
+      "id": "DEP-AUT-RG",
+      "requirement": "R-G_COMPLETE_PASS",
+      "status": "SATISFIED",
+      "ref": "docs/routing/autonomy_shadow_replay_exit_contract.json"
+    },
+    {
+      "id": "DEP-MAIN-PROTECTED",
+      "requirement": "protected_main_and_required_checks_active",
+      "status": "SATISFIED"
+    },
+    {
+      "id": "DEP-020D-RUNTIME",
+      "requirement": "020-D test-control runtime independently implemented, security-qualified and authorized before AUT-001-F can perform live bridge integration",
+      "status": "UNSATISFIED_STAGE_CONDITION",
+      "blocks_package_g1": false,
+      "blocks_stages": ["AUT-001-F", "AUT-001-G_FULL_COMPOSED_PROFILE"],
+      "may_be_bypassed": false
+    }
+  ],
+  "subphases": [
+    {
+      "id": "AUT-001-A",
+      "title": "Control-Plane Substrate & Deterministic Replay Core",
+      "purpose": "Create the isolated tooling substrate, append-only fact model, deterministic R-B lifecycle projection, R-C revision/evidence engine and executable Phase-021 replay/failure-injection harness.",
+      "predecessors": [],
+      "external_side_effects": false,
+      "provider_role_preference": {"implementer":"CODEX","independent_reviewer":"CURSOR","adversarial_reviewer":"FRESH_SEPARATE_SESSION"}
+    },
+    {
+      "id": "AUT-001-B",
+      "title": "Live Read-Only Shadow & GitHub Reconciliation",
+      "purpose": "Ingest/reconcile real GitHub events and repository truth without writes, compare projected lifecycle/next-action results against human coordination, and record explainable divergence.",
+      "predecessors": ["AUT-001-A"],
+      "github_writes": false,
+      "agent_dispatch": false,
+      "provider_role_preference": {"implementer":"CURSOR","independent_reviewer":"CODEX","adversarial_reviewer":"FRESH_SEPARATE_SESSION"}
+    },
+    {
+      "id": "AUT-001-C",
+      "title": "Dispatcher, Provider Adapters, Isolation & Provenance",
+      "purpose": "Implement R-D dispatcher mechanics and bounded Cursor/Codex adapters with immutable dispatch/context/provenance manifests, role/session isolation and serialized-surface reservations.",
+      "predecessors": ["AUT-001-A", "AUT-001-B"],
+      "provider_role_preference": {"implementer":"CODEX","independent_reviewer":"CURSOR","adversarial_reviewer":"FRESH_SEPARATE_SESSION"},
+      "provider_mechanics_must_be_qualified_before_use": true,
+      "generic_shell_fallback_for_missing_provider_capability": false
+    },
+    {
+      "id": "AUT-001-D",
+      "title": "Development-Control MCP Query/Record & Authorization Boundary",
+      "purpose": "Expose R-F QUERY and RECORD_COMPUTE capabilities with server-side schema validation, resource-bound authentication, authorization tuples, immutable audit envelopes and no side-effecting bounded actions enabled.",
+      "predecessors": ["AUT-001-A", "AUT-001-C"],
+      "bounded_actions_enabled": false,
+      "provider_role_preference": {"implementer":"CURSOR","independent_reviewer":"CODEX","adversarial_reviewer":"FRESH_SEPARATE_SESSION"}
+    },
+    {
+      "id": "AUT-001-E",
+      "title": "Bounded Non-Human Side Effects",
+      "purpose": "Enable only declared R-F bounded actions through operation IDs, optimistic preconditions, reconciliation, circuit breakers and stage-specific capability grants.",
+      "predecessors": ["AUT-001-B", "AUT-001-C", "AUT-001-D"],
+      "allowed_action_families": [
+        "isolated_worktree_creation",
+        "authorized_agent_dispatch",
+        "draft_pr_open_or_coordination_update",
+        "ready_or_draft_state_coordination_when_declared",
+        "declared_dependency_branch_synchronization",
+        "serialized_surface_reservation_and_release"
+      ],
+      "forbidden_action_families": [
+        "protected_merge",
+        "release",
+        "production",
+        "g2_creation",
+        "scope_expansion",
+        "next_phase_authority"
+      ],
+      "provider_role_preference": {"implementer":"CODEX","independent_reviewer":"CURSOR","adversarial_reviewer":"FRESH_SEPARATE_SESSION"}
+    },
+    {
+      "id": "AUT-001-F",
+      "title": "020-D Test-Control Evidence Bridge",
+      "purpose": "Implement the declared-evidence-request and evidence-reference bridge without weakening 020-D authorization, environment isolation or production denial and without direct lifecycle advancement.",
+      "predecessors": ["AUT-001-D", "AUT-001-E", "DEP-020D-RUNTIME"],
+      "live_execution_condition": "020D_RUNTIME_OPERATIONALLY_ACCEPTED_AND_SEPARATELY_AUTHORIZED",
+      "production": false,
+      "provider_role_preference": {"implementer":"CURSOR","independent_reviewer":"CODEX","adversarial_reviewer":"FRESH_SEPARATE_SESSION"}
+    },
+    {
+      "id": "AUT-001-G",
+      "title": "Independent Exit, Shadow Qualification & Enablement Recommendation",
+      "purpose": "Run exact-revision verification, executable historical replay, failure injection, security review, fresh independent/adversarial review, shadow-divergence review and G5; recommend but do not self-authorize operational use.",
+      "predecessors": ["AUT-001-A", "AUT-001-B", "AUT-001-C", "AUT-001-D", "AUT-001-E"],
+      "full_composed_profile_additional_predecessor": "AUT-001-F",
+      "may_enable_itself": false,
+      "may_authorize_phase022": false
+    }
+  ],
+  "work_unit_graph": {
+    "default_execution": "SEQUENTIAL_BY_SUBPHASE",
+    "parallelism_policy": "Parallel implementation is allowed only for proven disjoint nonserialized surfaces. Cross-stage semantic concurrency is forbidden.",
+    "repair_creates_new_candidate_generation": true,
+    "every_stage_candidate_requires_exact_revision_verification": true,
+    "stage_completion_does_not_enable_next_stage_side_effects_without_declared_transition": true
+  },
+  "role_policy": {
+    "human_program_authority": "retains_G2_scope_architecture_merge_reopen_release_production_and_next_phase_authority",
+    "implementer": "one declared AUT subphase/work unit per dispatch with only declared writable surfaces",
+    "independent_reviewer": "fresh read-only exact-candidate review distinct from authoring run/worktree",
+    "adversarial_reviewer": "fresh session after independent review; falsification objective; no candidate edits",
+    "gatekeeper": "integrates evidence only; cannot merge, enable production or grant next phase",
+    "provider_diversity": "PREFERRED_BY_ALTERNATING_CODEX_CURSOR_IMPLEMENTER_REVIEWER_ASSIGNMENT_NOT_AUTHORITY_BEARING",
+    "same_provider_across_roles": "allowed only with R-D session and worktree independence evidence",
+    "reviewer_fix_in_place": false
+  },
+  "context_manifest_policy": {
+    "required_for_every_agent_dispatch": true,
+    "minimum_sufficient_reference_based": true,
+    "chat_memory_is_authority": false,
+    "private_chain_of_thought_capture": false,
+    "secret_value_capture": false,
+    "protected_probe_transfer_to_implementer": false,
+    "must_bind": ["exact_revision", "authority_digest", "role", "work_unit", "material_surfaces", "criteria", "evidence_obligations", "allowed_external_actions", "circuit_breakers"]
+  },
+  "visible_success_criteria": [
+    {"id":"AUT-C01","statement":"The same immutable fact set deterministically produces the same lifecycle state, eligible next action set and authority-stop disposition, including the complete Phase-021 historical oracle.","criterion_type":"FUNCTIONAL_BEHAVIOR","required":true,"evidence_floor":"E2","material_boundary":"orchestrator_projection_replay","verification_visibility":"PUBLIC","failure_class":"IMPLEMENTATION_DEFECT","applies_to":["AUT-001-A","AUT-001-G"]},
+    {"id":"AUT-C02","statement":"Unknown, contradictory, stale, out-of-order or incomplete truth never causes optimistic lifecycle advancement and instead resolves to the declared blocked, inconclusive, historical or reconciliation disposition.","criterion_type":"FAILURE_RECOVERY","required":true,"evidence_floor":"E5","material_boundary":"orchestrator_reconciliation_failure_paths","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-A","AUT-001-B","AUT-001-G"]},
+    {"id":"AUT-C03","statement":"Evidence remains exact-revision and material-boundary scoped; source, authority or evaluator deltas trigger the minimal transitive invalidation/review plan and historical evidence is reused only by explicit equivalence binding rather than relabeling.","criterion_type":"DATA_HISTORY_MIGRATION","required":true,"evidence_floor":"E2","material_boundary":"evidence_dependency_revision_engine","verification_visibility":"PUBLIC","failure_class":"OBSERVABILITY_OR_EVIDENCE_DEFECT","applies_to":["AUT-001-A","AUT-001-G"]},
+    {"id":"AUT-C04","statement":"Agent dispatches are bound to exact revision, authority digest, role, work unit and allowed surfaces; implementer, independent reviewer and adversarial reviewer isolation/freshness are machine-verifiable and provenance excludes private reasoning and secrets.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"dispatcher_provider_adapter_provenance","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-C","AUT-001-G"]},
+    {"id":"AUT-C05","statement":"GitHub delivery idempotency, semantic fact idempotency, exact-head CI evaluation, head/base drift handling, missed-event reconciliation and optimistic write preconditions conform to R-E and never treat notification order as truth.","criterion_type":"CONCURRENCY_IDEMPOTENCY","required":true,"evidence_floor":"E3","material_boundary":"github_event_reconciliation_adapter","verification_visibility":"PUBLIC","failure_class":"INTEGRATION_OR_COMPATIBILITY_DEFECT","applies_to":["AUT-001-B","AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C06","statement":"The development-control MCP exposes only declared capability-based tools and provides no generic shell, Git, GitHub API, HTTP, SQL, cloud API, browser-eval, filesystem escape, secret retrieval, generic deploy or generic merge capability.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"development_control_mcp_capability_registry","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-D","AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C07","statement":"Production application, database, browser/session, cloud mutation, deployment/release, secret retrieval, test-control composition and production target selection are structurally unavailable to AUT-001 runtime principals.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"production_denial_and_runtime_permissions","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-D","AUT-001-E","AUT-001-F","AUT-001-G"]},
+    {"id":"AUT-C08","statement":"Every consequential remote request is authenticated and authorized against principal, resource/audience, capability, exact subject revision, current lifecycle state and authority digest; credential passthrough and cross-resource credential reuse are rejected.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"remote_authentication_authorization","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-D","AUT-001-E","AUT-001-F","AUT-001-G"]},
+    {"id":"AUT-C09","statement":"Side effects remain disabled until their declared stage is accepted; enabled side effects require immutable operation identity, bounded mutation, expected-current-state preconditions, reconciliation on drift and preserved failure history.","criterion_type":"CONCURRENCY_IDEMPOTENCY","required":true,"evidence_floor":"E5","material_boundary":"bounded_side_effect_executor","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C10","statement":"The 020-D bridge can request only declared nonproduction evidence profiles, 020-D independently reauthorizes every live request, returned evidence enters R-C by reference, and a passing test-control run cannot directly advance lifecycle state or create E7 production evidence.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"test_control_evidence_bridge","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-F","AUT-001-G"]},
+    {"id":"AUT-C11","statement":"Control-plane restart, missed delivery or transient external failure can reconstruct current state from append-only local facts plus authoritative external reconciliation without erasing failed/stale history or performing retry-until-green acceptance.","criterion_type":"FAILURE_RECOVERY","required":true,"evidence_floor":"E6","material_boundary":"fact_store_projection_recovery_observability","verification_visibility":"PUBLIC","failure_class":"MIGRATION_OR_RECOVERY_DEFECT","applies_to":["AUT-001-B","AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C12","statement":"G2, material scope expansion, architecture/semantic acceptance, repair-budget override, protected merge, closure merge, reopen execution, release, production and next-phase authorization remain human/program authority stops and cannot be synthesized by events, MCP calls, CI, G5, provider output or package completion.","criterion_type":"AUTHORITY_SECURITY_DISCLOSURE","required":true,"evidence_floor":"E5","material_boundary":"authority_stop_enforcement","verification_visibility":"PUBLIC","failure_class":"SECURITY_OR_AUTHORITY_DEFECT","applies_to":["AUT-001-A","AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C13","statement":"Cursor and Codex provider adapters implement the same R-D semantic dispatch contract; provider-specific mechanics cannot expand scope, writable surfaces, external actions, role authority or provenance requirements.","criterion_type":"COMPATIBILITY","required":true,"evidence_floor":"E3","material_boundary":"provider_adapter_contracts","verification_visibility":"PUBLIC","failure_class":"INTEGRATION_OR_COMPATIBILITY_DEFECT","applies_to":["AUT-001-C","AUT-001-G"]},
+    {"id":"AUT-C14","statement":"AUT-001 can be disabled and the repository can return to the human-coordinated implementation process without rewriting authoritative history, losing evidence, requiring application/domain rollback or leaving an unresolved control-plane side effect.","criterion_type":"FAILURE_RECOVERY","required":true,"evidence_floor":"E5","material_boundary":"operational_disable_and_human_fallback","verification_visibility":"PUBLIC","failure_class":"MIGRATION_OR_RECOVERY_DEFECT","applies_to":["AUT-001-E","AUT-001-G"]},
+    {"id":"AUT-C15","statement":"During live read-only shadowing, every disagreement between AUT-001 projected state/next action and authoritative human/repository truth is recorded, explainable and dispositioned; any unsafe advancement prediction is a blocking defect.","criterion_type":"OBSERVABILITY","required":true,"evidence_floor":"E3","material_boundary":"shadow_divergence_analysis","verification_visibility":"PUBLIC","failure_class":"OBSERVABILITY_OR_EVIDENCE_DEFECT","applies_to":["AUT-001-B","AUT-001-G"]}
+  ],
+  "evidence_obligations": [
+    {"id":"AUT-E01","criterion_refs":["AUT-C01","AUT-C03","AUT-C12"],"evidence_class":"E2","claim":"Executable deterministic replay of the seven R-G historical shadow cases and all declared contract-level failure cases produces the expected lifecycle/evidence/authority dispositions.","material_boundary":"replay_projection_evidence_engine","environment_tier":"AUT-L","required":true,"exact_sha_required":true,"reproducibility":"deterministic_fixture_and_append_only_fact_replay","visibility":"PUBLIC_RESULTS_PROTECTED_ADDITIONAL_CASES_ALLOWED","producer":"verification_harness","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E02","criterion_refs":["AUT-C02","AUT-C03"],"evidence_class":"E5","claim":"Adversarial delta, ambiguity, stale-event, invalidation and post-completion reopen scenarios fail closed with immutable prior history.","material_boundary":"failure_and_reopen_paths","environment_tier":"AUT-L","required":true,"exact_sha_required":true,"reproducibility":"scenario_matrix","visibility":"PUBLIC_OBLIGATIONS_PROTECTED_VARIANTS_ALLOWED","producer":"protected_evaluator_or_verifier","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E03","criterion_refs":["AUT-C05","AUT-C15"],"evidence_class":"E3","claim":"Read-only live GitHub shadow correctly reconciles PR/ref/check/workflow truth and produces no GitHub mutation while divergence is fully recorded.","material_boundary":"github_read_only_shadow","environment_tier":"AUT-S","required":true,"exact_sha_required":true,"reproducibility":"bounded_shadow_window_plus_recorded_event_replay","visibility":"PUBLIC_SUMMARY","producer":"shadow_runtime","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E04","criterion_refs":["AUT-C04","AUT-C13"],"evidence_class":"E3","claim":"Cursor and Codex adapters each execute declared isolated nonconsequential dispatches with exact revision/authority bindings, bounded context, session identity/freshness evidence and immutable provenance.","material_boundary":"provider_dispatch_adapters","environment_tier":"AUT-P","required":true,"exact_sha_required":true,"reproducibility":"registered_adapter_conformance_profiles","visibility":"PUBLIC_RESULTS","producer":"adapter_conformance_harness","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E05","criterion_refs":["AUT-C06","AUT-C07","AUT-C08","AUT-C12"],"evidence_class":"E5","claim":"Capability enumeration, authorization abuse cases, cross-resource credential attempts, generic escape requests, production target attempts and human-authority synthesis attempts are denied or fail closed.","material_boundary":"mcp_auth_capability_and_production_denial","environment_tier":"AUT-P","required":true,"exact_sha_required":true,"reproducibility":"security_abuse_matrix","visibility":"PUBLIC_REQUIREMENTS_PROTECTED_CASE_VALUES_ALLOWED","producer":"security_evaluator","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E06","criterion_refs":["AUT-C09","AUT-C12"],"evidence_class":"E5","claim":"Bounded action operations are idempotent, preconditioned, reconciled on drift, incapable of protected merge and unable to mutate undeclared branches or surfaces.","material_boundary":"bounded_side_effect_executor","environment_tier":"AUT-P","required":true,"exact_sha_required":true,"reproducibility":"isolated_test_branch_and_fault_matrix","visibility":"PUBLIC_RESULTS","producer":"integration_security_evaluator","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E07","criterion_refs":["AUT-C10"],"evidence_class":"E5","claim":"When the 020-D runtime becomes independently eligible, AUT-001 requests only declared nonproduction evidence, preserves independent 020-D authorization and returns evidence references without direct lifecycle transition.","material_boundary":"020d_bridge","environment_tier":"AUT-P_PLUS_020D_NPT","required":true,"exact_sha_required":true,"reproducibility":"registered_bridge_profiles","visibility":"PUBLIC_RESULTS","producer":"cross_plane_integration_evaluator","retention_or_reference":"docs/evidence/aut001/","dependency":"DEP-020D-RUNTIME"},
+    {"id":"AUT-E08","criterion_refs":["AUT-C11","AUT-C14"],"evidence_class":"E6","claim":"Restart/replay, missed-delivery reconciliation, adapter disablement, side-effect drain and human fallback preserve append-only evidence and return the system to a known safe coordination mode.","material_boundary":"operational_recovery_and_disable","environment_tier":"AUT-P","required":true,"exact_sha_required":true,"reproducibility":"documented_runbook_plus_executed_nonproduction_recovery","visibility":"PUBLIC_RESULTS","producer":"operational_evaluator","retention_or_reference":"docs/evidence/aut001/"},
+    {"id":"AUT-E09","criterion_refs":["AUT-C01","AUT-C02","AUT-C04","AUT-C05","AUT-C06","AUT-C07","AUT-C08","AUT-C09","AUT-C10","AUT-C11","AUT-C12","AUT-C13","AUT-C14","AUT-C15"],"evidence_class":"E5","claim":"Fresh independent and adversarial exact-candidate reviews find no unresolved blocking defect, authority erosion, evidence gaming, unsafe escape, production reachability or hidden scope expansion.","material_boundary":"whole_aut001_candidate","environment_tier":"REVIEW","required":true,"exact_sha_required":true,"reproducibility":"structured_review_contract","visibility":"PUBLIC_FINDINGS_AND_DISPOSITIONS","producer":"independent_and_adversarial_reviewers","retention_or_reference":"docs/evidence/aut001/"}
+  ],
+  "scenario_obligations": [
+    "complete_historical_phase021_happy_and_repair_path",
+    "governance_only_head_drift_and_exact_head_rebinding",
+    "duplicate_conflicting_stale_and_out_of_order_events",
+    "reviewer_session_or_worktree_contamination",
+    "evidence_invalidation_and_minimal_reverification",
+    "operation_id_replay_and_conflict",
+    "serialized_surface_collision",
+    "github_write_precondition_drift",
+    "missing_failed_or_superseded_required_ci",
+    "production_target_and_generic_capability_escape_attempts",
+    "test_control_pass_without_direct_lifecycle_advance",
+    "control_plane_restart_or_missed_webhook_reconstruction",
+    "post_completion_material_invalidation_and_reopen_stop",
+    "provider_adapter_switch_with_identical_dispatch_contract",
+    "disable_side_effects_and_resume_human_coordination"
+  ],
+  "environment_model": {
+    "AUT-L": "local_or_CI_deterministic_no_external_side_effects",
+    "AUT-S": "live_read_only_shadow_against_real_repository_truth",
+    "AUT-P": "isolated_nonproduction_or_declared_test_branch_with_bounded_external_actions",
+    "020D_NPT": ["NPT-L", "NPT-P", "NPT-S"],
+    "production_tier_exists_for_aut001": false
+  },
+  "allowed_external_actions": {
+    "AUT-001-A": [],
+    "AUT-001-B": ["github_read_reconciliation", "webhook_ingress_to_shadow_store"],
+    "AUT-001-C": ["declared_provider_run_creation", "isolated_worktree_materialization"],
+    "AUT-001-D": ["remote_query_and_record_compute_mcp_calls_in_nonproduction"],
+    "AUT-001-E": ["declared_bounded_github_coordination_on_nonprotected_test_or_authorized_work_branches", "declared_agent_dispatch", "serialized_surface_reservation"],
+    "AUT-001-F": ["declared_020d_nonproduction_evidence_request_after_dependency_satisfied"],
+    "AUT-001-G": ["read_only_evidence_collection_and_declared_nonproduction_fault_replay"]
+  },
+  "circuit_breakers": [
+    "any_production_target_or_production_credential_required_or_observed",
+    "any_attempted_protected_merge_release_or_next_phase_authority",
+    "generic_shell_git_github_http_sql_cloud_browser_eval_or_secret_capability_required",
+    "same_fact_set_produces_nondeterministic_lifecycle_projection",
+    "unexplained_shadow_projection_that_would_advance_further_than_authoritative_truth",
+    "authority_digest_or_exact_revision_cannot_be_resolved",
+    "provider_adapter_cannot_enforce_declared_write_or_context_boundary",
+    "reviewer_independence_or_adversarial_freshness_not_provable",
+    "operation_id_conflict_or side_effect precondition ambiguity",
+    "serialized_surface_collision_not_reconciled",
+    "evidence_graph_has_unmapped_material_change_or dependency ambiguity",
+    "repeated_identical_mandatory_failure_threshold_reached",
+    "020d_bridge_requires_authorization_or_environment_bypass"
+  ],
+  "repair_budget": {
+    "default_repair_cycles_per_subphase": 2,
+    "repeated_identical_mandatory_failure_threshold": 2,
+    "budget_extension_requires_human_program_authority": true,
+    "scope_expansion_is_never_repair": true,
+    "security_or_authority_boundary_change_requires_reentry": true,
+    "production_access_requirement_is_immediate_blocker": true,
+    "repair_source_change_creates_new_candidate_generation": true,
+    "affected_evidence_and_reviews_must_refresh": true
+  },
+  "migration_compatibility_impacts": {
+    "application_data_migration": "NONE",
+    "application_api_compatibility": "NONE_EXPECTED",
+    "control_plane_event_store_schema": "NEW_INTERNAL_SCHEMA_MUST_BE_APPEND_ONLY_OR_FORWARD_MIGRATABLE",
+    "provider_adapter_compatibility": "VERSIONED_ADAPTER_BOUNDARY_REQUIRED",
+    "github_api_compatibility": "ADAPTER_AND_RECONCILIATION_LAYER_REQUIRED"
+  },
+  "security_privacy_disclosure_impacts": {
+    "high_consequence": true,
+    "secrets_in_provenance": false,
+    "private_reasoning_in_provenance": false,
+    "credential_passthrough": false,
+    "least_privilege_required": true,
+    "production_principal": false,
+    "protected_evaluator_detail_separation": true
+  },
+  "accessibility_degraded_impacts": {
+    "end_user_ui": "NONE",
+    "operator_output": "MUST_BE_TEXTUAL_MACHINE_READABLE_AND_HUMAN_AUDITABLE",
+    "degraded_mode": "HUMAN_COORDINATED_FALLBACK_REQUIRED"
+  },
+  "failure_recovery_impacts": {
+    "append_only_failure_history": true,
+    "automatic_retry_until_green": false,
+    "restart_replay_required": true,
+    "missed_webhook_reconciliation_required": true,
+    "safe_disable_and_human_fallback_required": true
+  },
+  "performance_cost_obligations": {
+    "normative_latency_threshold": null,
+    "unbounded_retry_or_unbounded_context_growth_forbidden": true,
+    "resource_envelope_must_be_recorded_per_dispatch_and_expensive_action": true,
+    "shadow_and_replay_baseline_metrics_required_before_enablement": true,
+    "future_normative_threshold_change_requires_visible_contract_update": true
+  },
+  "rollback_or_recovery_plan": {
+    "primary": "disable_side_effecting_adapters_and_mcp_bounded_actions_then_return_to_human_coordinated_process",
+    "must_preserve": ["append_only_events", "evidence", "provenance", "failure_history", "repository_truth"],
+    "must_reconcile_before_restart": true,
+    "may_not_rollback_application_domain_state": true,
+    "may_not_delete_failed_or_stale_evidence": true,
+    "open_serialized_reservations_require_terminal_reconciliation": true
+  },
+  "known_residual_risks": [
+    "provider_adapter_mechanics_and_stable_session_identity_need_runtime_qualification",
+    "remote_identity_provider_realization_is_not_selected_yet",
+    "append_only_storage_technology_is_not_selected_yet",
+    "live_webhook_and_github_app_permission_matrix_need_implementation_qualification",
+    "020d_runtime_is_not_yet_operational_and_blocks_live_AUT_001_F",
+    "contract_level_R_G_failure_injection_must_be_reimplemented_as_executable_runtime_evidence",
+    "control_plane_itself_becomes_high_consequence_operational_infrastructure_and_requires independent security review"
+  ],
+  "g2_authorization_record": {
+    "status": "NOT_AUTHORIZED",
+    "record_path_reserved": "docs/routing/aut001_g2_authorization.json",
+    "creation_requires_explicit_human_program_decision": true,
+    "start_gate_may_create_record": false,
+    "minimum_authorization_must_bind": [
+      "exact_entry_baseline",
+      "authorized_subphases_or_work_units",
+      "scope_in_and_out",
+      "writable_and_serialized_surfaces",
+      "allowed_external_actions",
+      "repair_budget",
+      "provider_role_policy",
+      "circuit_breakers",
+      "production_denial"
+    ]
+  },
+  "exit_gate_contract": {
+    "exact_candidate_sha_tree_required": true,
+    "all_required_visible_criteria_pass": true,
+    "all_required_evidence_obligations_satisfied": true,
+    "public_ci_clean": true,
+    "independent_review_pass": true,
+    "fresh_adversarial_review_pass": true,
+    "no_open_blocking_findings": true,
+    "executable_replay_and_failure_injection_pass": true,
+    "shadow_divergence_all_dispositioned": true,
+    "production_denial_security_evidence_pass": true,
+    "rollback_human_fallback_evidence_pass": true,
+    "full_composed_profile_requires_AUT_E07": true,
+    "g5_may_enable_itself": false,
+    "protected_merge_remains_human": true,
+    "operational_enablement_requires_separate_human_program_decision": true,
+    "phase022_authority_created": false,
+    "next_state": "AUT_001_ACCEPTED_NOT_SELF_ENABLED"
+  }
+}
