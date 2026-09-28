@@ -6,8 +6,11 @@
 
 - start-gate base: `f87f57fa42edd1ec81fc79626f6c93091793d71f`
 - implementation branch: `aut-001/b-read-only-shadow`
-- implementation commit: `4ed158a21d1584e604202a18eb83b8be5dbccb44`
-- implementation tree: `a54fa669c29c48bf2eef4d7c6db2980ada4da40e`
+- source implementation commit: `4ed158a21d1584e604202a18eb83b8be5dbccb44`
+- source implementation tree: `a54fa669c29c48bf2eef4d7c6db2980ada4da40e`
+- exact verification/review candidate: the reconciled branch head containing both the source implementation and this candidate record; bind CI/reviews to that exact SHA/tree rather than rebinding the source commit.
+
+The source and candidate-record commits were created as sibling commits from the same exact start-gate baseline and are intentionally reconciled without history rewriting before verification.
 
 ## Implemented boundary
 
@@ -32,6 +35,6 @@ Implemented mechanics:
 
 ## Verification boundary
 
-This record does not claim AUT-E03 live-shadow completion yet. Repository CI must first qualify this exact source candidate. A bounded live read-only shadow evidence window must then be recorded against an exact candidate generation before independent/adversarial review and B G5.
+This record does not claim AUT-E03 live-shadow completion yet. Repository CI must first qualify the exact reconciled candidate. A bounded live read-only shadow evidence window must then be recorded against an exact candidate generation before independent/adversarial review and B G5.
 
 Any source repair creates a new candidate generation and invalidates affected exact-revision evidence.
