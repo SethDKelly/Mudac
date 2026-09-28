@@ -1,12 +1,7 @@
 import type { LifecycleFact, LifecycleState, ProjectionResult } from '../model.js';
 
 export type GitHubEventFamily =
-  | 'pull_request'
-  | 'check_run'
-  | 'check_suite'
-  | 'workflow_run'
-  | 'push'
-  | 'unknown';
+  'pull_request' | 'check_run' | 'check_suite' | 'workflow_run' | 'push' | 'unknown';
 
 export interface DeliveryEnvelope {
   deliveryId: string;
@@ -31,12 +26,7 @@ export interface DeliveryEnvelope {
 }
 
 export type GitHubSemanticFactType =
-  | 'PR_HEAD'
-  | 'PR_STATE'
-  | 'PR_MERGE'
-  | 'REF'
-  | 'CHECK'
-  | 'WORKFLOW';
+  'PR_HEAD' | 'PR_STATE' | 'PR_MERGE' | 'REF' | 'CHECK' | 'WORKFLOW';
 
 export interface GitHubSemanticFact {
   factId: string;

@@ -6,7 +6,12 @@ function digest(value: unknown): string {
   return createHash('sha256').update(JSON.stringify(value)).digest('hex');
 }
 
-function fact(factId: string, factType: GitHubSemanticFact['factType'], observedAt: string, payload: Record<string, unknown>): GitHubSemanticFact {
+function fact(
+  factId: string,
+  factType: GitHubSemanticFact['factType'],
+  observedAt: string,
+  payload: Record<string, unknown>,
+): GitHubSemanticFact {
   return {
     factId,
     factType,
@@ -38,11 +43,16 @@ export function normalizeGitHubTruth(snapshot: GitHubTruthSnapshot): readonly Gi
         headSha: pr.headSha,
       },
     ),
-    fact(`REF:${repo}:${snapshot.baseRef.ref}:${snapshot.baseRef.sha}`, 'REF', snapshot.observedAt, {
-      repositoryId: repo,
-      ref: snapshot.baseRef.ref,
-      sha: snapshot.baseRef.sha,
-    }),
+    fact(
+      `REF:${repo}:${snapshot.baseRef.ref}:${snapshot.baseRef.sha}`,
+      'REF',
+      snapshot.observedAt,
+      {
+        repositoryId: repo,
+        ref: snapshot.baseRef.ref,
+        sha: snapshot.baseRef.sha,
+      },
+    ),
   ];
 
   if (pr.merged && pr.mergeCommitSha) {

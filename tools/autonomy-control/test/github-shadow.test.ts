@@ -242,10 +242,7 @@ describe('AUT-001-B required-check reconciliation', () => {
 
   it('fails inconclusive on conflicting latest attempts for the same required context', () => {
     const evaluation = evaluateRequiredChecks(
-      [
-        successfulCheck(),
-        { ...successfulCheck(), id: 99, conclusion: 'failure' },
-      ],
+      [successfulCheck(), { ...successfulCheck(), id: 99, conclusion: 'failure' }],
       [],
       candidateSha,
       ['Implementation Verification'],
@@ -330,9 +327,9 @@ describe('AUT-001-B drift, merge and divergence policy', () => {
       target({ expectedLifecycleState: 'AWAITING_PR_CI', expectedNextActions: [] }),
       truth(),
     );
-    expect(
-      result.divergences.some((item) => item.kind === 'UNSAFE_ADVANCEMENT_PREDICTION'),
-    ).toBe(true);
+    expect(result.divergences.some((item) => item.kind === 'UNSAFE_ADVANCEMENT_PREDICTION')).toBe(
+      true,
+    );
     expect(result.blocking).toBe(true);
   });
 });
@@ -401,7 +398,9 @@ describe('AUT-001-B live read-only shadow orchestration', () => {
     );
     expect(result.status).toBe('INCONCLUSIVE');
     expect(journal.snapshot().observations).toHaveLength(0);
-    expect(journal.snapshot().runAttempts[0]?.reason).toContain('mandatory_github_truth_unavailable');
+    expect(journal.snapshot().runAttempts[0]?.reason).toContain(
+      'mandatory_github_truth_unavailable',
+    );
   });
 
   it('preserves zero-mutation behavior during a complete shadow run', async () => {

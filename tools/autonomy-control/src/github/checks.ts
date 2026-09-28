@@ -1,8 +1,4 @@
-import type {
-  CheckTruth,
-  RequiredCheckEvaluation,
-  WorkflowTruth,
-} from './model.js';
+import type { CheckTruth, RequiredCheckEvaluation, WorkflowTruth } from './model.js';
 
 interface CheckLike {
   name: string;
@@ -24,10 +20,7 @@ function selectLatestForName(
   records: readonly CheckLike[],
   name: string,
   candidateSha: string,
-):
-  | { kind: 'MISSING' }
-  | { kind: 'AMBIGUOUS' }
-  | { kind: 'FOUND'; record: CheckLike } {
+): { kind: 'MISSING' } | { kind: 'AMBIGUOUS' } | { kind: 'FOUND'; record: CheckLike } {
   const matching = records.filter((item) => item.name === name && item.headSha === candidateSha);
   if (matching.length === 0) return { kind: 'MISSING' };
 
@@ -36,11 +29,7 @@ function selectLatestForName(
   const first = latest[0];
   if (!first) return { kind: 'MISSING' };
 
-  if (
-    latest.some(
-      (item) => item.status !== first.status || item.conclusion !== first.conclusion,
-    )
-  ) {
+  if (latest.some((item) => item.status !== first.status || item.conclusion !== first.conclusion)) {
     return { kind: 'AMBIGUOUS' };
   }
 
@@ -54,7 +43,8 @@ export function evaluateRequiredChecks(
   requiredNames: readonly string[],
 ): RequiredCheckEvaluation {
   const records: readonly CheckLike[] = [...checks, ...workflows];
-  const matched: Record<string, { attempt: number; status: string; conclusion: string | null }> = {};
+  const matched: Record<string, { attempt: number; status: string; conclusion: string | null }> =
+    {};
   const missing: string[] = [];
 
   for (const name of [...new Set(requiredNames)].sort()) {

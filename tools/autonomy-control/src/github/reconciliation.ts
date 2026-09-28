@@ -12,9 +12,7 @@ import type {
 } from './model.js';
 
 export type DeliveryTruthDisposition =
-  | 'CURRENT_NOTIFICATION'
-  | 'HISTORICAL_NO_ADVANCE'
-  | 'RECORD_NO_ADVANCE';
+  'CURRENT_NOTIFICATION' | 'HISTORICAL_NO_ADVANCE' | 'RECORD_NO_ADVANCE';
 
 const lifecycleRank: Readonly<Partial<Record<LifecycleState, number>>> = {
   IDLE: 0,
@@ -155,7 +153,8 @@ export function reconcileShadowTruth(
       divergences.push({
         kind: 'MANDATORY_TRUTH_UNAVAILABLE',
         severity: 'BLOCKING',
-        explanation: 'PR reports merged but integration identity/base ancestry is not fully reconciled',
+        explanation:
+          'PR reports merged but integration identity/base ancestry is not fully reconciled',
         disposition: 'MERGE_NOTIFICATION_INSUFFICIENT_RECONCILIATION_REQUIRED',
       });
     }
