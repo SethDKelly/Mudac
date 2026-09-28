@@ -21,6 +21,58 @@ interface Violation {
   rule: { name: string };
 }
 let violations: Violation[];
+let modules: { source: string; dependencies: { resolved: string; couldNotResolve: boolean }[] }[];
+
+// Repair regressions: [consumer, target, pure type import, expected rule names].
+const repairProbes: [string, string, boolean, string[]][] = [
+  ...[
+    'apps/api',
+    'packages/application',
+    'packages/projections',
+    'packages/modules/external-representation/src',
+  ].map((consumer): [string, string, boolean, string[]] => [
+    `${consumer}/use-outside.ts`,
+    'packages/modules/outcomes/outside.ts',
+    false,
+    ['outcomes-exposes-only-public-contracts'],
+  ]),
+  [
+    'packages/modules/outcomes/src/use-own-outside.ts',
+    'packages/modules/outcomes/outside.ts',
+    false,
+    [],
+  ],
+  [
+    'packages/modules/evaluation/src/downstream-type.ts',
+    'packages/modules/outcomes/src/public.ts',
+    true,
+    ['evaluation-uses-only-upstream-owners'],
+  ],
+  [
+    'packages/modules/external-representation/src/private-type.ts',
+    'packages/modules/outcomes/src/private.ts',
+    true,
+    ['outcomes-exposes-only-public-contracts'],
+  ],
+  [
+    'packages/application/outside-type.ts',
+    'packages/modules/outcomes/outside.ts',
+    true,
+    ['outcomes-exposes-only-public-contracts'],
+  ],
+  [
+    'packages/modules/outcomes/src/upstream-type.ts',
+    'packages/modules/evaluation/src/public.ts',
+    true,
+    [],
+  ],
+  [
+    'packages/modules/outcomes/src/self-private-type.ts',
+    'packages/modules/outcomes/src/private.ts',
+    true,
+    [],
+  ],
+];
 
 beforeAll(() => {
   const fixture = mkdtempSync(join(tmpdir(), 'mudac-topology-'));
@@ -29,18 +81,26 @@ beforeAll(() => {
     mkdirSync(dirname(destination), { recursive: true });
     writeFileSync(destination, contents);
   };
-  const edge = (from: string, to: string) => {
+  const edge = (from: string, to: string, typeOnly = false) => {
     const specifier = relative(dirname(from), to).replaceAll('\\', '/');
-    write(from, `import '${specifier.startsWith('.') ? specifier : `./${specifier}`}';\n`);
+    const path = specifier.startsWith('.') ? specifier : `./${specifier}`;
+    write(
+      from,
+      typeOnly
+        ? `import type { FixtureType } from '${path}';\nexport type ConsumerType = FixtureType;\n`
+        : `import '${path}';\n`,
+    );
   };
   try {
     // Exercise the actual cruiser CLI and repository rules, including resolution.
     write('rules.cjs', readFileSync(join(repository, '.dependency-cruiser.cjs'), 'utf8'));
     write('tsconfig.node.json', '{"compilerOptions":{"module":"NodeNext"}}');
     for (const owner of [...owners, 'undeclared']) {
-      write(`packages/modules/${owner}/src/public.ts`, 'export {};\n');
-      write(`packages/modules/${owner}/src/private.ts`, 'export {};\n');
+      write(`packages/modules/${owner}/src/public.ts`, 'export type FixtureType = string;\n');
+      write(`packages/modules/${owner}/src/private.ts`, 'export type FixtureType = string;\n');
     }
+    write('packages/modules/outcomes/outside.ts', 'export type FixtureType = string;\n');
+    for (const [from, to, typeOnly] of repairProbes) edge(from, to, typeOnly);
     for (const from of owners) {
       for (const to of [...owners, 'undeclared']) {
         edge(`packages/modules/${from}/src/use-${to}.ts`, `packages/modules/${to}/src/public.ts`);
@@ -80,8 +140,12 @@ beforeAll(() => {
     expect(result.error).toBeUndefined();
     // The JSON reporter exits zero even with violations; assert its evidence below.
     expect(result.status, result.stderr).toBe(0);
-    const report = JSON.parse(result.stdout) as { summary: { violations: Violation[] } };
+    const report = JSON.parse(result.stdout) as {
+      summary: { violations: Violation[] };
+      modules: typeof modules;
+    };
     violations = report.summary.violations;
+    modules = report.modules;
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
@@ -91,6 +155,15 @@ const rulesFor = (from: string) =>
   violations.filter((violation) => violation.from === from).map((violation) => violation.rule.name);
 
 describe('accepted five-owner topology', () => {
+  for (const [from, to, typeOnly, expectedRules] of repairProbes) {
+    it(`${from} ${typeOnly ? 'type' : 'value'} import respects the full package seam and direction`, () => {
+      // An absent edge is not evidence that an allowed type dependency was checked.
+      expect(modules.find((module) => module.source === from)?.dependencies).toEqual(
+        expect.arrayContaining([expect.objectContaining({ resolved: to, couldNotResolve: false })]),
+      );
+      expect(rulesFor(from)).toEqual(expectedRules);
+    });
+  }
   for (const from of owners) {
     for (const to of owners) {
       it(`${from} ${from === to || upstream[from]?.includes(to) ? 'may' : 'may not'} consume ${to}`, () => {

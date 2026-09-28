@@ -52,7 +52,7 @@ module.exports = {
       severity: 'error',
       from: { pathNot: `^packages/modules/${owner}/` },
       to: {
-        path: `^packages/modules/${owner}/src/`,
+        path: `^packages/modules/${owner}/`,
         pathNot: `^packages/modules/${owner}/src/public\\.ts$`,
       },
     })),
@@ -85,6 +85,7 @@ module.exports = {
     doNotFollow: { path: 'node_modules' },
     exclude: { path: '(^|/)(dist|coverage|playwright-report|test-results)/' },
     tsConfig: { fileName: 'tsconfig.node.json' },
+    tsPreCompilationDeps: true,
     enhancedResolveOptions: {
       exportsFields: ['exports'],
       conditionNames: ['types', 'import', 'default'],
