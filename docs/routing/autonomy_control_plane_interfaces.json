@@ -1,13 +1,15 @@
 {
-  "schema": "mudac.autonomy-control-plane-interfaces/v0.3-retrospective",
-  "status": "R_E_COMPLETE_REMAINDER_DESIGN_DRAFT",
+  "schema": "mudac.autonomy-control-plane-interfaces/v0.4-retrospective",
+  "status": "R_F_COMPLETE_REMAINDER_DESIGN_DRAFT",
   "implementation_status": "NOT_IMPLEMENTED",
   "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
   "contracts": {
     "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
     "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
     "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json",
-    "github_event_adapter": "docs/routing/autonomy_github_event_contract.json"
+    "github_event_adapter": "docs/routing/autonomy_github_event_contract.json",
+    "development_control_mcp": "docs/routing/autonomy_development_control_mcp_contract.json",
+    "application_test_control": "docs/routing/phase020_nonproduction_test_control_architecture.json"
   },
   "purpose": "Define the common control-plane interfaces used to automate coordination without increasing semantic or execution authority.",
   "agent_dispatcher": {
@@ -45,52 +47,41 @@
     "github_event_may_grant_human_authority": false
   },
   "development_control_mcp": {
-    "status": "R_F_NOT_YET_COMPLETE",
+    "status": "R_F_COMPLETE_DESIGN_ONLY",
+    "contract": "docs/routing/autonomy_development_control_mcp_contract.json",
+    "implementation_or_deployment_authorized": false,
+    "mcp_capability_creates_authority": false,
     "separate_from_application_test_control_semantics": true,
-    "may_compose_with_phase020_d_test_control": true,
-    "mcp_tool_existence_does_not_grant_authority": true,
+    "capability_classes": ["QUERY", "RECORD_COMPUTE", "BOUNDED_ACTION"],
+    "exact_revision_authority_state_principal_binding_required": true,
+    "resource_bound_remote_auth_required": true,
+    "credential_passthrough_forbidden": true,
     "production_target_forbidden": true,
     "arbitrary_shell_forbidden": true,
-    "arbitrary_git_write_forbidden": true,
+    "arbitrary_git_or_github_api_forbidden": true,
+    "arbitrary_http_forbidden": true,
     "arbitrary_cloud_api_forbidden": true,
     "arbitrary_sql_forbidden": true,
+    "arbitrary_browser_eval_forbidden": true,
     "secret_retrieval_forbidden": true,
-    "read_tools_proposed": [
-      "implementation.get_state",
-      "implementation.get_authority",
-      "implementation.get_candidate",
-      "implementation.get_evidence_status",
-      "implementation.get_invalidated_evidence",
-      "implementation.get_merge_eligibility",
-      "implementation.get_next_action"
-    ],
-    "record_or_compute_tools_proposed": [
-      "implementation.register_candidate",
-      "implementation.record_verification",
-      "implementation.record_review",
-      "implementation.classify_delta",
-      "implementation.prepare_g5",
-      "implementation.record_integration",
-      "implementation.record_closure"
-    ],
-    "bounded_action_tools_proposed_not_authorized": [
-      "implementation.create_worktree",
-      "implementation.dispatch_agent",
-      "implementation.open_or_update_draft_pr",
-      "implementation.synchronize_dependency_branch"
-    ],
-    "human_authority_tools_forbidden": [
-      "implementation.grant_g2",
-      "implementation.approve_merge",
-      "implementation.authorize_release",
-      "implementation.authorize_production",
-      "implementation.authorize_next_phase"
-    ],
-    "next_design_owner": "021-R-F"
+    "github_writes_route_through_r_e": true,
+    "agent_dispatch_routes_through_r_d": true,
+    "evidence_validity_routes_through_r_c": true,
+    "g5_rules_route_through_020h": true,
+    "human_authority_tools_absent": true,
+    "test_control_composition_requires_declared_evidence_request": true,
+    "test_control_may_grant_implementation_authority": false
   },
   "phase020_d_composition": {
     "development_control_plane_role": "coordinates_implementation_lifecycle_agents_github_and_evidence",
     "test_control_plane_role": "exercises_nonproduction_application_behavior_and_observability",
+    "test_control_contract": "docs/routing/phase020_nonproduction_test_control_architecture.json",
+    "composition_entry": "implementation.request_test_control_run",
+    "development_control_may_override_test_control_environment_or_capability_authorization": false,
+    "production_composition_forbidden": true,
+    "evidence_reference_bridge_required": true,
+    "nonproduction_evidence_may_support": ["E2", "E3", "E4", "E5", "SELECTED_E6"],
+    "test_control_cannot_create": "E7_PRODUCTION_EVIDENCE",
     "shared_security_principles": [
       "capability_allowlist",
       "explicit_environment_identity",
@@ -103,8 +94,7 @@
     "test_control_must_not_grant_implementation_authority": true
   },
   "remaining_design_work": [
-    "R_F_mcp_schema_authorization_error_model_and_security_boundary",
-    "R_G_shadow_mode_failure_injection_and_exit_review"
+    "R_G_shadow_replay_failure_injection_exit_review_and_autonomy_implementation_recommendation"
   ],
   "authority_denials": {
     "runtime_implementation_authorized": false,
