@@ -7,16 +7,17 @@ function digest(value: unknown): string {
 }
 
 function fact(
-  factId: string,
+  identityPrefix: string,
   factType: GitHubSemanticFact['factType'],
   observedAt: string,
   payload: Record<string, unknown>,
 ): GitHubSemanticFact {
+  const payloadDigest = digest(payload);
   return {
-    factId,
+    factId: `${identityPrefix}:${payloadDigest.slice(0, 16)}`,
     factType,
     observedAt,
-    payloadDigest: digest(payload),
+    payloadDigest,
     payload: structuredClone(payload),
   };
 }
@@ -25,34 +26,24 @@ export function normalizeGitHubTruth(snapshot: GitHubTruthSnapshot): readonly Gi
   const repo = snapshot.repositoryId;
   const pr = snapshot.pullRequest;
   const facts: GitHubSemanticFact[] = [
-    fact(`PR_HEAD:${repo}:${pr.number}:${pr.headSha}`, 'PR_HEAD', snapshot.observedAt, {
+    fact(`PR_HEAD:${repo}:${pr.number}`, 'PR_HEAD', snapshot.observedAt, {
       repositoryId: repo,
       pullRequestNumber: pr.number,
       headSha: pr.headSha,
     }),
-    fact(
-      `PR_STATE:${repo}:${pr.number}:${pr.headSha}:${pr.state}:${pr.draft}:${pr.merged}`,
-      'PR_STATE',
-      snapshot.observedAt,
-      {
-        repositoryId: repo,
-        pullRequestNumber: pr.number,
-        state: pr.state,
-        draft: pr.draft,
-        merged: pr.merged,
-        headSha: pr.headSha,
-      },
-    ),
-    fact(
-      `REF:${repo}:${snapshot.baseRef.ref}:${snapshot.baseRef.sha}`,
-      'REF',
-      snapshot.observedAt,
-      {
-        repositoryId: repo,
-        ref: snapshot.baseRef.ref,
-        sha: snapshot.baseRef.sha,
-      },
-    ),
+    fact(`PR_STATE:${repo}:${pr.number}`, 'PR_STATE', snapshot.observedAt, {
+      repositoryId: repo,
+      pullRequestNumber: pr.number,
+      state: pr.state,
+      draft: pr.draft,
+      merged: pr.merged,
+      headSha: pr.headSha,
+    }),
+    fact(`REF:${repo}:${snapshot.baseRef.ref}`, 'REF', snapshot.observedAt, {
+      repositoryId: repo,
+      ref: snapshot.baseRef.ref,
+      sha: snapshot.baseRef.sha,
+    }),
   ];
 
   if (pr.merged && pr.mergeCommitSha) {
