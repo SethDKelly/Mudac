@@ -80,6 +80,11 @@
   "r_b_exit": {
     "status": "COMPLETE_PASS",
     "machine_contract": "docs/routing/autonomy_orchestrator_contract.json",
+    "reconciled_inputs": [
+      "docs/routing/autonomous_implementation_operating_model.json",
+      "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+      "docs/routing/phase020_review_repair_exit_gate_governance.json"
+    ],
     "guarded_transitions_required": true,
     "dynamic_transition_synthesis_forbidden": true,
     "optional_stages_require_predeclared_lifecycle_profile": true,
@@ -88,6 +93,12 @@
   "r_c_exit": {
     "status": "COMPLETE_PASS",
     "machine_contract": "docs/routing/autonomy_evidence_dependency_contract.json",
+    "reconciled_inputs": [
+      "docs/routing/phase020_implementation_phase_contract.json",
+      "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+      "docs/routing/phase020_review_repair_exit_gate_governance.json",
+      "docs/routing/autonomy_orchestrator_contract.json"
+    ],
     "reuse_by_reference_not_relabeling": true,
     "material_surface_manifest_required_before_g2": true,
     "unmapped_change_fails_inconclusive": true,
@@ -99,6 +110,14 @@
     "status": "COMPLETE_PASS",
     "machine_contract": "docs/routing/autonomy_agent_dispatch_contract.json",
     "control_plane_contract": "docs/routing/autonomy_control_plane_interfaces.json",
+    "reconciled_inputs": [
+      "docs/canonical/governance/agentic-authority-scope.md",
+      "docs/canonical/governance/agent-context.md",
+      "docs/routing/autonomous_implementation_operating_model.json",
+      "docs/routing/autonomy_orchestrator_contract.json",
+      "docs/routing/autonomy_evidence_dependency_contract.json",
+      "docs/routing/phase020_review_repair_exit_gate_governance.json"
+    ],
     "role_provider_separation_required": true,
     "exact_revision_authority_bound_dispatch": true,
     "implementer_reviewer_isolation_required": true,
