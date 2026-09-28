@@ -53,11 +53,7 @@ const transitions: readonly Transition[] = [
     'REPAIR_REQUIRED',
   ),
   transition('repair.resume', 'REPAIR_REQUIRED', 'IMPLEMENTING'),
-  transition(
-    'invalidation.review_required',
-    'AWAITING_HUMAN_MERGE',
-    'AWAITING_INDEPENDENT_REVIEW',
-  ),
+  transition('invalidation.review_required', 'AWAITING_HUMAN_MERGE', 'AWAITING_INDEPENDENT_REVIEW'),
   transition(
     'github.pull_request.merged_after_human_approval',
     'AWAITING_HUMAN_MERGE',
@@ -65,12 +61,7 @@ const transitions: readonly Transition[] = [
     true,
   ),
   transition('integration.pass', 'INTEGRATION_VERIFYING', 'AWAITING_CLOSURE_MERGE'),
-  transition(
-    'closure.merged_after_human_approval',
-    'AWAITING_CLOSURE_MERGE',
-    'COMPLETE',
-    true,
-  ),
+  transition('closure.merged_after_human_approval', 'AWAITING_CLOSURE_MERGE', 'COMPLETE', true),
   transition('invalidation.material_confirmed', 'COMPLETE', 'REOPEN_REQUIRED'),
   transition('authority.reopen_g2_granted', 'REOPEN_REQUIRED', 'G2_AUTHORIZED', true),
   transition(
@@ -100,10 +91,7 @@ const nextActions: Readonly<Record<LifecycleState, readonly string[]>> = {
     'review.adversarial.pass',
     'failure.changes_required_within_existing_g2',
   ],
-  AWAITING_PR_CI: [
-    'github.check.required_set_pass',
-    'failure.changes_required_within_existing_g2',
-  ],
+  AWAITING_PR_CI: ['github.check.required_set_pass', 'failure.changes_required_within_existing_g2'],
   AWAITING_G5: ['gate.g5.pass', 'failure.changes_required_within_existing_g2'],
   AWAITING_HUMAN_MERGE: [
     'github.pull_request.merged_after_human_approval',
