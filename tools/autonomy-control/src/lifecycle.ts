@@ -7,6 +7,7 @@ import type {
   LifecycleState,
   ProjectionResult,
   ProjectionTraceEntry,
+  RepairBlockerKind,
 } from './model.js';
 
 interface Transition {
@@ -57,6 +58,7 @@ const transitions: readonly Transition[] = [
     'REPAIR_REQUIRED',
   ),
   transition('repair.resume', 'REPAIR_REQUIRED', 'IMPLEMENTING'),
+  transition('repair.scope_or_budget_expansion_required', 'REPAIR_REQUIRED', 'BLOCKED'),
   transition('invalidation.review_required', 'AWAITING_HUMAN_MERGE', 'AWAITING_INDEPENDENT_REVIEW'),
   transition(
     'github.pull_request.merged_after_human_approval',
@@ -95,7 +97,7 @@ const nextActions: Readonly<Record<LifecycleState, readonly string[]>> = {
     'review.independent.pass',
     'failure.changes_required_within_existing_g2',
   ],
-  REPAIR_REQUIRED: ['repair.resume'],
+  REPAIR_REQUIRED: ['repair.resume', 'repair.scope_or_budget_expansion_required'],
   AWAITING_ADVERSARIAL_REVIEW: [
     'review.adversarial.pass',
     'failure.changes_required_within_existing_g2',
@@ -129,10 +131,36 @@ function isGuardDecision(value: unknown): value is GuardDecision {
   return value === 'PASS' || value === 'BLOCKED' || value === 'INCONCLUSIVE';
 }
 
+function isRepairBlockerKind(value: unknown): value is RepairBlockerKind {
+  return value === 'SCOPE_EXPANSION' || value === 'BUDGET_EXHAUSTED';
+}
+
+function hasRequiredFactEnvelope(fact: LifecycleFact): boolean {
+  return (
+    typeof fact.factId === 'string' &&
+    fact.factId.trim().length > 0 &&
+    typeof fact.factType === 'string' &&
+    fact.factType.trim().length > 0 &&
+    typeof fact.payloadDigest === 'string' &&
+    fact.payloadDigest.trim().length > 0 &&
+    typeof fact.payload === 'object' &&
+    fact.payload !== null &&
+    typeof fact.payload.eventType === 'string' &&
+    fact.payload.eventType.trim().length > 0
+  );
+}
+
 export function projectLifecycle(
   initialState: LifecycleState,
   inputFacts: readonly LifecycleFact[],
 ): ProjectionResult {
+  if (inputFacts.some((fact) => !Number.isFinite(fact.logicalOrder))) {
+    return terminal('INCONCLUSIVE', [], 'invalid_logical_order');
+  }
+  if (inputFacts.some((fact) => !hasRequiredFactEnvelope(fact))) {
+    return terminal('INCONCLUSIVE', [], 'invalid_fact_envelope');
+  }
+
   const facts = [...inputFacts].sort(
     (left, right) =>
       left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
@@ -260,9 +288,38 @@ export function projectLifecycle(
       return terminal('INCONCLUSIVE', trace, 'transition_guard_inconclusive');
     }
 
+    if (fact.payload.eventType === 'repair.scope_or_budget_expansion_required') {
+      if (!isRepairBlockerKind(fact.payload.repairBlocker)) {
+        trace.push({
+          factId: fact.factId,
+          eventType: fact.payload.eventType,
+          stateBefore: state,
+          stateAfter: 'INCONCLUSIVE',
+          disposition: 'INCONCLUSIVE',
+          reason: 'repair_blocker_kind_required',
+        });
+        return terminal('INCONCLUSIVE', trace, 'repair_blocker_kind_required');
+      }
+
+      const reason =
+        fact.payload.repairBlocker === 'SCOPE_EXPANSION'
+          ? 'repair_scope_expansion_requires_human_disposition_or_reauthorization'
+          : 'repair_budget_exhausted_requires_human_program_extension';
+      trace.push({
+        factId: fact.factId,
+        eventType: fact.payload.eventType,
+        stateBefore: state,
+        stateAfter: 'BLOCKED',
+        disposition: 'BLOCKED',
+        reason,
+      });
+      return terminal('BLOCKED', trace, reason);
+    }
+
     if (selected.requiredHumanAuthorityKind) {
       if (
-        !fact.payload.humanAuthorityRef ||
+        typeof fact.payload.humanAuthorityRef !== 'string' ||
+        fact.payload.humanAuthorityRef.trim().length === 0 ||
         fact.payload.humanAuthorityKind !== selected.requiredHumanAuthorityKind
       ) {
         trace.push({
