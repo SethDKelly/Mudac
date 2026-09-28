@@ -8,8 +8,14 @@ import type {
 
 const plans = {
   IDENTICAL_REVISION: [] as const,
-  PROVENANCE_ONLY_CHANGE: ['create_revision_binding', 'register_distinct_integration_identity'] as const,
-  NON_MATERIAL_TREE_CHANGE: ['prove_non_material_delta', 'refresh_revision_specific_bindings'] as const,
+  PROVENANCE_ONLY_CHANGE: [
+    'create_revision_binding',
+    'register_distinct_integration_identity',
+  ] as const,
+  NON_MATERIAL_TREE_CHANGE: [
+    'prove_non_material_delta',
+    'refresh_revision_specific_bindings',
+  ] as const,
   GOVERNANCE_MATERIAL_DELTA: [
     'authority_delta_review',
     'fresh_adversarial_delta_review',
@@ -82,7 +88,11 @@ export function classifyRevisionDelta(input: RevisionDeltaInput): RevisionClassi
     return result('EVALUATOR_MATERIAL_DELTA', true, 'evaluator_material_changed');
   }
 
-  return result('NON_MATERIAL_TREE_CHANGE', true, 'all_changed_surfaces_are_non_acceptance_material');
+  return result(
+    'NON_MATERIAL_TREE_CHANGE',
+    true,
+    'all_changed_surfaces_are_non_acceptance_material',
+  );
 }
 
 function result(
