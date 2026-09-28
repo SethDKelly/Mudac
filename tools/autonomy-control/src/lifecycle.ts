@@ -1,4 +1,8 @@
+import { isDeepStrictEqual } from 'node:util';
+
 import type {
+  GuardDecision,
+  HumanAuthorityKind,
   LifecycleFact,
   LifecycleState,
   ProjectionResult,
@@ -9,35 +13,31 @@ interface Transition {
   eventType: string;
   from: readonly LifecycleState[];
   to: LifecycleState;
-  humanStop?: true;
+  requiredHumanAuthorityKind?: HumanAuthorityKind;
 }
 
 const transition = (
   eventType: string,
   from: LifecycleState | readonly LifecycleState[],
   to: LifecycleState,
-  humanStop = false,
+  requiredHumanAuthorityKind?: HumanAuthorityKind,
 ): Transition => ({
   eventType,
   from: Array.isArray(from) ? from : [from],
   to,
-  ...(humanStop ? { humanStop: true as const } : {}),
+  ...(requiredHumanAuthorityKind ? { requiredHumanAuthorityKind } : {}),
 });
 
 const transitions: readonly Transition[] = [
   transition('start_gate.ready', 'PLANNING_READY', 'START_GATE_READY'),
   transition('start_gate.pass', 'START_GATE_READY', 'AWAITING_G2'),
-  transition('authority.g2_granted', 'AWAITING_G2', 'G2_AUTHORIZED', true),
+  transition('authority.g2_granted', 'AWAITING_G2', 'G2_AUTHORIZED', 'G2'),
   transition('workspace.provision_requested', 'G2_AUTHORIZED', 'WORKSPACE_PROVISIONING'),
   transition('workspace.provisioned', 'WORKSPACE_PROVISIONING', 'IMPLEMENTING'),
   transition('candidate.registered', 'IMPLEMENTING', 'CANDIDATE_REGISTERED'),
   transition('verification.started', 'CANDIDATE_REGISTERED', 'VERIFYING'),
   transition('verification.pass', 'VERIFYING', 'AWAITING_INDEPENDENT_REVIEW'),
-  transition(
-    'review.independent.pass',
-    'AWAITING_INDEPENDENT_REVIEW',
-    'AWAITING_ADVERSARIAL_REVIEW',
-  ),
+  transition('review.independent.pass', 'AWAITING_INDEPENDENT_REVIEW', 'AWAITING_ADVERSARIAL_REVIEW'),
   transition('review.adversarial.pass', 'AWAITING_ADVERSARIAL_REVIEW', 'AWAITING_PR_CI'),
   transition('github.check.required_set_pass', 'AWAITING_PR_CI', 'AWAITING_G5'),
   transition('gate.g5.pass', 'AWAITING_G5', 'AWAITING_HUMAN_MERGE'),
@@ -58,17 +58,22 @@ const transitions: readonly Transition[] = [
     'github.pull_request.merged_after_human_approval',
     'AWAITING_HUMAN_MERGE',
     'INTEGRATION_VERIFYING',
-    true,
+    'PROTECTED_IMPLEMENTATION_MERGE',
   ),
   transition('integration.pass', 'INTEGRATION_VERIFYING', 'AWAITING_CLOSURE_MERGE'),
-  transition('closure.merged_after_human_approval', 'AWAITING_CLOSURE_MERGE', 'COMPLETE', true),
+  transition(
+    'closure.merged_after_human_approval',
+    'AWAITING_CLOSURE_MERGE',
+    'COMPLETE',
+    'CLOSURE_MERGE',
+  ),
   transition('invalidation.material_confirmed', 'COMPLETE', 'REOPEN_REQUIRED'),
-  transition('authority.reopen_g2_granted', 'REOPEN_REQUIRED', 'G2_AUTHORIZED', true),
+  transition('authority.reopen_g2_granted', 'REOPEN_REQUIRED', 'G2_AUTHORIZED', 'REOPEN_G2'),
   transition(
     'invalidation.disposition_completion_remains_valid',
     'REOPEN_REQUIRED',
     'COMPLETE',
-    true,
+    'COMPLETION_VALIDITY_DISPOSITION',
   ),
 ];
 
@@ -116,31 +121,34 @@ function terminal(
   return { state, eligibleNextActions: nextActions[state], trace, terminalReason: reason };
 }
 
+function isGuardDecision(value: unknown): value is GuardDecision {
+  return value === 'PASS' || value === 'BLOCKED' || value === 'INCONCLUSIVE';
+}
+
 export function projectLifecycle(
   initialState: LifecycleState,
   inputFacts: readonly LifecycleFact[],
 ): ProjectionResult {
   const facts = [...inputFacts].sort(
-    (left, right) =>
-      left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
+    (left, right) => left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
   );
   const trace: ProjectionTraceEntry[] = [];
-  const seenIds = new Map<string, string>();
+  const seenFacts = new Map<string, LifecycleFact>();
   let state = initialState;
   let previousLogicalOrder: number | undefined;
   let previousFactId: string | undefined;
 
   for (const fact of facts) {
-    const seenDigest = seenIds.get(fact.factId);
-    if (seenDigest) {
-      if (seenDigest !== fact.payloadDigest) {
+    const seen = seenFacts.get(fact.factId);
+    if (seen) {
+      if (!isDeepStrictEqual(seen, fact)) {
         trace.push({
           factId: fact.factId,
           eventType: fact.payload.eventType,
           stateBefore: state,
           stateAfter: 'INCONCLUSIVE',
           disposition: 'INCONCLUSIVE',
-          reason: 'duplicate_event_identity_has_conflicting_payload',
+          reason: 'duplicate_event_identity_has_conflicting_fact_contents',
         });
         return terminal('INCONCLUSIVE', trace, 'conflicting_duplicate_event');
       }
@@ -150,11 +158,11 @@ export function projectLifecycle(
         stateBefore: state,
         stateAfter: state,
         disposition: 'IDEMPOTENT_NOOP',
-        reason: 'duplicate_event_identity_same_payload',
+        reason: 'duplicate_event_identity_same_fact',
       });
       continue;
     }
-    seenIds.set(fact.factId, fact.payloadDigest);
+    seenFacts.set(fact.factId, structuredClone(fact));
 
     if (
       previousLogicalOrder === fact.logicalOrder &&
@@ -173,6 +181,18 @@ export function projectLifecycle(
     }
     previousLogicalOrder = fact.logicalOrder;
     previousFactId = fact.factId;
+
+    if (!isGuardDecision(fact.payload.guardDecision)) {
+      trace.push({
+        factId: fact.factId,
+        eventType: fact.payload.eventType,
+        stateBefore: state,
+        stateAfter: 'INCONCLUSIVE',
+        disposition: 'INCONCLUSIVE',
+        reason: 'missing_or_invalid_guard_decision',
+      });
+      return terminal('INCONCLUSIVE', trace, 'missing_or_invalid_guard_decision');
+    }
 
     if (fact.payload.stale === true) {
       trace.push({
@@ -234,16 +254,22 @@ export function projectLifecycle(
       });
       return terminal('INCONCLUSIVE', trace, 'transition_guard_inconclusive');
     }
-    if (selected.humanStop === true && !fact.payload.humanAuthorityRef) {
-      trace.push({
-        factId: fact.factId,
-        eventType: fact.payload.eventType,
-        stateBefore: state,
-        stateAfter: 'BLOCKED',
-        disposition: 'BLOCKED',
-        reason: 'human_authority_required',
-      });
-      return terminal('BLOCKED', trace, 'human_authority_required');
+
+    if (selected.requiredHumanAuthorityKind) {
+      if (
+        !fact.payload.humanAuthorityRef ||
+        fact.payload.humanAuthorityKind !== selected.requiredHumanAuthorityKind
+      ) {
+        trace.push({
+          factId: fact.factId,
+          eventType: fact.payload.eventType,
+          stateBefore: state,
+          stateAfter: 'BLOCKED',
+          disposition: 'BLOCKED',
+          reason: 'matching_human_authority_required',
+        });
+        return terminal('BLOCKED', trace, 'matching_human_authority_required');
+      }
     }
 
     const stateBefore = state;
@@ -254,7 +280,7 @@ export function projectLifecycle(
       stateBefore,
       stateAfter: state,
       disposition: 'APPLIED',
-      reason: selected.humanStop === true ? 'human_authority_observed' : 'guards_passed',
+      reason: selected.requiredHumanAuthorityKind ? 'matching_human_authority_observed' : 'guards_passed',
     });
   }
 

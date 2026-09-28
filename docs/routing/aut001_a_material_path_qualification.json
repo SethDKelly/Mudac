@@ -1,0 +1,22 @@
+{
+  "schema": "mudac.aut001-a-material-path-qualification/v1",
+  "package_id": "AUT-001",
+  "subphase": "AUT-001-A",
+  "status": "REPAIR_CYCLE_1_AUTHORITY_DELTA_REVIEW_REQUIRED",
+  "canonical_manifest": "docs/routing/aut001_material_surface_manifest.json",
+  "purpose": "Qualify the concrete Stage-A file layout against existing canonical material-surface classes after independent review identified selector/path mismatch.",
+  "scope_expansion": false,
+  "criteria_weakening": false,
+  "unmatched_path_disposition": "INCONCLUSIVE_UNTIL_CLASSIFIED",
+  "mappings": [
+    {"path":"tools/autonomy-control/src/model.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/fact-store.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/lifecycle.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/replay.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/failure-policy.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/index.ts","surface_id":"AUT-MS-ORCH","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path":"tools/autonomy-control/src/evidence.ts","surface_id":"AUT-MS-EVIDENCE","surface_class":"EXECUTABLE_MATERIAL"},
+    {"path_prefix":"tests/autonomy-control/","surface_id":"AUT-MS-HARNESS","surface_class":"CI_EVALUATOR_MATERIAL"}
+  ],
+  "review_rule": "Because this qualification is recorded after G2 and affects material classification, it must receive independent authority-delta review before AUT-001-A can pass. It does not authorize a new writable surface outside the already-authorized tools/test scope."
+}

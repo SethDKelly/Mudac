@@ -1,3 +1,5 @@
+import { isDeepStrictEqual } from 'node:util';
+
 import type { ImmutableFact } from './model.js';
 
 export type AppendResult =
@@ -12,13 +14,13 @@ export class AppendOnlyFactStore<TPayload = unknown> {
   append(fact: ImmutableFact<TPayload>): AppendResult {
     const existing = this.#byId.get(fact.factId);
     if (existing) {
-      if (existing.payloadDigest === fact.payloadDigest) {
+      if (isDeepStrictEqual(existing, fact)) {
         return { status: 'IDEMPOTENT_NOOP', factId: fact.factId };
       }
       return {
         status: 'CONFLICT',
         factId: fact.factId,
-        reason: 'same_fact_id_has_conflicting_payload_digest',
+        reason: 'same_fact_id_has_conflicting_fact_contents',
       };
     }
 

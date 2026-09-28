@@ -23,6 +23,13 @@ export type LifecycleState =
 
 export type GuardDecision = 'PASS' | 'BLOCKED' | 'INCONCLUSIVE';
 
+export type HumanAuthorityKind =
+  | 'G2'
+  | 'PROTECTED_IMPLEMENTATION_MERGE'
+  | 'CLOSURE_MERGE'
+  | 'REOPEN_G2'
+  | 'COMPLETION_VALIDITY_DISPOSITION';
+
 export interface ImmutableFact<TPayload = unknown> {
   factId: string;
   factType: string;
@@ -33,9 +40,10 @@ export interface ImmutableFact<TPayload = unknown> {
 
 export interface LifecycleEventPayload {
   eventType: string;
-  guardDecision: GuardDecision;
+  guardDecision?: GuardDecision;
   subjectSha?: string;
   humanAuthorityRef?: string;
+  humanAuthorityKind?: HumanAuthorityKind;
   stale?: boolean;
 }
 
@@ -46,7 +54,12 @@ export interface ProjectionTraceEntry {
   eventType: string;
   stateBefore: LifecycleState;
   stateAfter: LifecycleState;
-  disposition: 'APPLIED' | 'HISTORICAL_NO_ADVANCE' | 'IDEMPOTENT_NOOP' | 'BLOCKED' | 'INCONCLUSIVE';
+  disposition:
+    | 'APPLIED'
+    | 'HISTORICAL_NO_ADVANCE'
+    | 'IDEMPOTENT_NOOP'
+    | 'BLOCKED'
+    | 'INCONCLUSIVE';
   reason: string;
 }
 
