@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "record_type": "PHASE_021_IMP_001_G5_EVIDENCE_BUNDLE",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "candidate": {
+    "sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "tree": "4bdc870c791f5b014c5d564ee01007d75be06dac"
+  },
+  "authorized_implementation_checkout": {
+    "sha": "7812339629241cb7b4bd34d320166ee27a5c07ff",
+    "tree": "4e6924f026d5e9c583df3f020bcfae32d98b3372"
+  },
+  "integration_base": {
+    "branch": "main",
+    "sha": "087eeddb321fb9cbb2b69669493861e4413e966e",
+    "tree": "f4be1188f0c44e4bcc748eaa525de2c403f5a3e8",
+    "drift_since_pr_open": false
+  },
+  "pull_request": {
+    "number": 19,
+    "head": "work/021/imp-001-topology",
+    "base": "main",
+    "draft_at_gatekeeper_review": true,
+    "head_sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "open_review_threads": 0
+  },
+  "visible_criteria": {
+    "IMP-001-C01": {
+      "result": "PASS",
+      "claim": "Executable workspace reflects the accepted five-owner topology and removes/quarantines the obsolete semantic owner without changing product behavior.",
+      "evidence_classes": ["E1", "E2"]
+    },
+    "IMP-001-C02": {
+      "result": "PASS",
+      "claim": "Dependency rules enforce allowed owner/package direction and reject reverse or undeclared cross-owner coupling.",
+      "evidence_classes": ["E1", "E2"]
+    },
+    "IMP-001-C03": {
+      "result": "PASS",
+      "claim": "Build/type/lint/test/bootstrap remain deterministic from the repaired workspace and serialized root surfaces are explicit.",
+      "evidence_classes": ["E1", "E2"]
+    },
+    "IMP-001-C04": {
+      "result": "PASS",
+      "claim": "The package introduces no domain lifecycle, persistence schema or feature UI beyond implementation-neutral seams.",
+      "evidence_classes": ["E1"]
+    }
+  },
+  "implementer_verification": {
+    "frozen_install": "PASS",
+    "topology_tests": "76/76 PASS",
+    "pnpm_verify": "PASS",
+    "agentic_conformance": "19/19 PASS",
+    "git_diff_check": "PASS",
+    "residual_judging_operations_active_reference_search": "PASS",
+    "final_worktree": "CLEAN"
+  },
+  "public_ci": [
+    {
+      "workflow": "Knowledge Validation",
+      "required_check": "Validate agentic/documentation conformance",
+      "run_id": 36367297314,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "Implementation Verification",
+      "required_check": "Implementation Verification",
+      "run_id": 36367297276,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "CodeQL",
+      "required_check": "CodeQL JavaScript/TypeScript",
+      "run_id": 36367297286,
+      "result": "SUCCESS"
+    }
+  ],
+  "independent_review": {
+    "provider": "CURSOR",
+    "candidate_sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "result": "PASS",
+    "findings": []
+  },
+  "adversarial_review": {
+    "provider": "CURSOR",
+    "fresh_session": true,
+    "candidate_sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "result": "PASS",
+    "findings": []
+  },
+  "failure_retry_history": [
+    {
+      "candidate_sha": "dc8d4ddc56c3feb011eb49abc060fdb6980ddfce",
+      "candidate_tree": "e99a271185e043b4c7117d0e58f2d475f0f1c49a",
+      "independent_review": "PASS",
+      "adversarial_review": "BLOCKED",
+      "blocking_findings": [
+        "Private module source outside src/ could bypass the public package seam.",
+        "Pure import type dependencies were absent from the dependency graph."
+      ],
+      "disposition": "REPAIR_CYCLE_1"
+    },
+    {
+      "repair_cycle": 1,
+      "repair_commit": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+      "result": "RESOLVED_AND_REVERIFIED"
+    }
+  ],
+  "protected_evaluation": {
+    "result": "NOT_APPLICABLE",
+    "rationale": "IMP-001 declares E1/E2 static/compatibility evidence obligations and no separate protected evaluator obligation for this work unit."
+  },
+  "exceptions_or_waivers": [],
+  "open_blocking_findings": [],
+  "unresolved_circuit_breakers": [],
+  "residual_risks": [
+    {
+      "id": "RR-021-01",
+      "statement": "The current Windows development host cannot start the Docker engine because hardware virtualization is unavailable/enabled later; IMP-001 requires Compose configuration validation, not live container execution, and all required local/CI checks passed.",
+      "owner": "HUMAN_PROGRAM_AUTHORITY",
+      "revisit_gate": "Before any later package whose declared evidence requires live local container execution or NPT-L container runtime."
+    },
+    {
+      "id": "RR-021-02",
+      "statement": "Historical/suspended documentation retains Judging Operations references by design; executable and current-authority surfaces do not treat it as an independent owner.",
+      "owner": "PHASE_021_GOVERNANCE",
+      "revisit_gate": "Only if a future authority audit finds a retained reference being treated as current executable ownership."
+    }
+  ],
+  "integration": {
+    "status": "PENDING_HUMAN_MERGE_DECISION",
+    "integration_sha": null,
+    "post_integration_evidence_status": "NOT_YET_APPLICABLE"
+  },
+  "gatekeeper_preconditions": {
+    "exact_candidate_identity": "PASS",
+    "visible_criteria": "PASS",
+    "public_ci": "PASS",
+    "independent_review": "PASS",
+    "adversarial_review": "PASS",
+    "blocking_findings_closed": "PASS",
+    "traceability": "PASS_WITH_G5_RECORD",
+    "failure_retry_history_visible": "PASS",
+    "residual_risks_owned": "PASS",
+    "circuit_breakers_clear": "PASS"
+  },
+  "gatekeeper_decision": "COMPLETE",
+  "g5": true,
+  "merge_eligible": true,
+  "merge_authorized": false,
+  "next_state": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+  "phase_022_authorized": false,
+  "release_authorized": false,
+  "production_authorized": false
+}
