@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-021 / IMP-001 / 021-I01 G5 COMPLETION RECORD",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "gate": "G5",
+  "decision": "COMPLETE",
+  "candidate_sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+  "candidate_tree": "4bdc870c791f5b014c5d564ee01007d75be06dac",
+  "evidence_bundle_blob_sha": "be14ca2bc12dcf1cc3b9bf439508458857ef5a43",
+  "pull_request": 19,
+  "review": {
+    "independent_code_review": "PASS",
+    "fresh_adversarial_review": "PASS",
+    "open_blocking_findings": 0,
+    "repair_cycles_used": 1,
+    "repair_budget": 3
+  },
+  "required_ci": {
+    "Validate agentic/documentation conformance": {
+      "run_id": 36367297314,
+      "result": "SUCCESS"
+    },
+    "Implementation Verification": {
+      "run_id": 36367297276,
+      "result": "SUCCESS"
+    },
+    "CodeQL JavaScript/TypeScript": {
+      "run_id": 36367297286,
+      "result": "SUCCESS"
+    }
+  },
+  "integration_state": "PENDING_HUMAN_MERGE_DECISION",
+  "merge_eligible": true,
+  "merge_authorized_by_g5": false,
+  "next_state": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+  "phase_022_authorized": false,
+  "release_authorized": false,
+  "production_authorized": false,
+  "immutability": {
+    "candidate_source_frozen": true,
+    "post_g5_source_change_requires_reopen": true,
+    "record_is_content_addressed_by_git_blob": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "record_type": "PHASE_021_IMP_001_FINAL_INTEGRATION_EVIDENCE",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "historical_g5_candidate": {
+    "sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "tree": "4bdc870c791f5b014c5d564ee01007d75be06dac"
+  },
+  "premerge_rebound_candidate": {
+    "sha": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "tree": "62acfc068e568c0ab298b668e9390bc6c5a39adc"
+  },
+  "integration": {
+    "pull_request": 19,
+    "merge_commit_sha": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+    "merge_tree_sha": "62acfc068e568c0ab298b668e9390bc6c5a39adc",
+    "merge_parents": [
+      "087eeddb321fb9cbb2b69669493861e4413e966e",
+      "280c896cde6d2ccebe664b6e1a179c68906f0033"
+    ],
+    "premerge_head_tree_equals_integration_tree": true,
+    "material_delta": "NONE",
+    "integration_classification": "COMMIT_IDENTITY_ONLY_CONTENT_EQUIVALENT"
+  },
+  "premerge_reviews": {
+    "focused_independent_integration_delta": "PASS",
+    "fresh_adversarial_integration_delta": "PASS",
+    "disposition": "G5_IMPLEMENTATION_ACCEPTANCE_REMAINS_VALID_WITH_NEW_INTEGRATION_BINDING"
+  },
+  "premerge_required_ci": [
+    {
+      "workflow": "Knowledge Validation",
+      "run_id": 36368260327,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "Implementation Verification",
+      "run_id": 36368260317,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "CodeQL",
+      "run_id": 36368260400,
+      "result": "SUCCESS"
+    }
+  ],
+  "postmerge_push_ci": [
+    {
+      "workflow": "Implementation Verification",
+      "run_id": 36371028648,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "CodeQL",
+      "run_id": 36371028596,
+      "result": "SUCCESS"
+    }
+  ],
+  "knowledge_validation_postmerge": {
+    "separate_push_run": false,
+    "reason": "workflow is PR-scoped for this evidence path",
+    "carry_forward": "PASS by exact tree equivalence between premerge reviewed head and integrated main"
+  },
+  "closure": {
+    "phase_021": "COMPLETE",
+    "imp_001": "IMPLEMENTED_G5_COMPLETE_INTEGRATED",
+    "open_blocking_findings": [],
+    "unresolved_circuit_breakers": [],
+    "exceptions_or_waivers": []
+  },
+  "next_phase": {
+    "phase": "022",
+    "state": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+    "authorized": false
+  },
+  "release_authorized": false,
+  "production_authorized": false
+}

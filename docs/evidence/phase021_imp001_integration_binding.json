@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "record_type": "PHASE_021_IMP_001_PREMERGE_INTEGRATION_BINDING_EVIDENCE",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "historical_g5_candidate": {
+    "sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "tree": "4bdc870c791f5b014c5d564ee01007d75be06dac"
+  },
+  "current_pr_head": {
+    "pull_request": 19,
+    "sha": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "tree": "62acfc068e568c0ab298b668e9390bc6c5a39adc",
+    "merge_base": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86"
+  },
+  "provenance": {
+    "merge_commit_message": "Merge branch 'main' into work/021/imp-001-topology",
+    "merge_parent_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "merge_parent_main": "087eeddb321fb9cbb2b69669493861e4413e966e",
+    "intervening_commit_count": 7
+  },
+  "net_delta": {
+    "changed_file_count": 4,
+    "files": [
+      {
+        "path": "docs/021-source-topology-implementation-foundation/021-I01-context-manifest.md",
+        "classification": "GOVERNANCE_ONLY"
+      },
+      {
+        "path": "docs/021-source-topology-implementation-foundation/021-g2-authorization.md",
+        "classification": "GOVERNANCE_ONLY"
+      },
+      {
+        "path": "docs/routing/phase021_g2_authorization.json",
+        "classification": "GOVERNANCE_ONLY"
+      },
+      {
+        "path": "scripts/validate_phase021_g2_authorization.py",
+        "classification": "VALIDATION_ONLY"
+      }
+    ],
+    "all_other_paths_content_equivalent_for_imp001": true,
+    "material_implementation_change": false
+  },
+  "equivalence": {
+    "executable_content": "PASS",
+    "five_owner_topology": "PASS",
+    "public_private_seam": "PASS",
+    "test_evidence": "PASS",
+    "g2_authority": "PASS"
+  },
+  "focused_independent_delta_review": {
+    "result": "PASS",
+    "conclusion": "PRIOR IMP-001 IMPLEMENTATION ACCEPTANCE REMAINS VALID SUBJECT TO UPDATED INTEGRATION/G5 RECORD BINDING THE NEW HEAD SHA",
+    "blocking_findings": []
+  },
+  "fresh_adversarial_delta_review": {
+    "result": "PASS",
+    "disposition": "G5_IMPLEMENTATION_ACCEPTANCE_REMAINS_VALID_WITH_NEW_INTEGRATION_BINDING",
+    "blocking_findings": [],
+    "notes": [
+      "Exact tree identity changed and requires a separate binding record.",
+      "Overlay validator declares and validates pinned identities but does not itself compute git content equivalence; this review independently established equivalence.",
+      "G2 machine record historical wording debt remains non-blocking and does not authorize Phase 022, merge, release, or production."
+    ]
+  },
+  "fresh_protected_ci": [
+    {
+      "workflow": "Knowledge Validation",
+      "required_check": "Validate agentic/documentation conformance",
+      "run_id": 36368260327,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "Implementation Verification",
+      "required_check": "Implementation Verification",
+      "run_id": 36368260317,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "CodeQL",
+      "required_check": "CodeQL JavaScript/TypeScript",
+      "run_id": 36368260400,
+      "result": "SUCCESS"
+    }
+  ],
+  "carry_forward": {
+    "historical_g5_record_rewritten": false,
+    "historical_g5_remains_fact": true,
+    "prior_implementation_acceptance_reused_by_content_equivalence": true,
+    "current_head_bound_before_merge": true,
+    "full_imp001_rereview_required": false,
+    "reopen_required": false
+  },
+  "integration_state": {
+    "status": "PRE_MERGE_HEAD_BOUND",
+    "human_merge_decision_required": true,
+    "main_integration_sha": null,
+    "main_integration_tree": null,
+    "post_merge_ci": "PENDING",
+    "pr20_status": "DRAFT"
+  },
+  "authority_state": {
+    "phase022": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+    "release_authorized": false,
+    "production_authorized": false
+  }
+}

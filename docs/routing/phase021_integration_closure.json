@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "authority": "PHASE-021 / IMP-001 FINAL INTEGRATION CLOSURE",
+  "phase": "021",
+  "package_id": "IMP-001",
+  "work_unit_id": "021-I01",
+  "status": "INTEGRATED_COMPLETE",
+  "historical_g5_candidate": {
+    "sha": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+    "tree": "4bdc870c791f5b014c5d564ee01007d75be06dac"
+  },
+  "premerge_binding": {
+    "sha": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "tree": "62acfc068e568c0ab298b668e9390bc6c5a39adc",
+    "independent_delta_review": "PASS",
+    "adversarial_delta_review": "PASS",
+    "g5_disposition": "G5_IMPLEMENTATION_ACCEPTANCE_REMAINS_VALID_WITH_NEW_INTEGRATION_BINDING"
+  },
+  "integration": {
+    "pull_request": 19,
+    "main_sha": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+    "main_tree": "62acfc068e568c0ab298b668e9390bc6c5a39adc",
+    "parent_main_sha": "087eeddb321fb9cbb2b69669493861e4413e966e",
+    "merged_head_sha": "280c896cde6d2ccebe664b6e1a179c68906f0033",
+    "tree_equivalent_to_premerge_head": true,
+    "material_content_delta_at_merge": false
+  },
+  "postmerge_checks": [
+    {
+      "workflow": "Implementation Verification",
+      "run_id": 36371028648,
+      "result": "SUCCESS"
+    },
+    {
+      "workflow": "CodeQL",
+      "run_id": 36371028596,
+      "result": "SUCCESS"
+    }
+  ],
+  "knowledge_validation": {
+    "premerge_head_result": "PASS",
+    "carry_forward_basis": "integrated main tree is identical to the premerge reviewed head tree",
+    "main_push_run_required": false
+  },
+  "phase_021_complete": true,
+  "phase_022": {
+    "state": "NEXT_ELIGIBLE_NOT_AUTHORIZED",
+    "authorized": false
+  },
+  "release_authorized": false,
+  "production_authorized": false
+}
