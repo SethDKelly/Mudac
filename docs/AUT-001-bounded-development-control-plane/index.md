@@ -6,11 +6,12 @@
 PHASE 021 / IMP-001                  COMPLETE / INTEGRATED
 PHASE 021-R RETROSPECTIVE            COMPLETE / PASS
 AUT-001 START GATE                   COMPLETE / PASS
-AUT-001 G1                           READY FOR AUTHORIZATION
-AUT-001 G2                           NOT AUTHORIZED
-AUT-001 IMPLEMENTATION               NOT AUTHORIZED
+AUT-001 CORE G2                      AUTHORIZED — A/B/C/D/E + G CORE
+AUT-001-A                            G5 COMPLETE / MERGED / INTEGRATION PASS
+AUT-001-B START GATE                 PASS / READY FOR IMPLEMENTATION / NOT STARTED
+AUT-001-C                            PREDECESSOR BLOCKED BY B
 AUT-001-F / FULL COMPOSED            DEPENDENCY BLOCKED — 020-D RUNTIME NOT OPERATIONAL
-PHASE 022                            NEXT ELIGIBLE / NOT AUTHORIZED
+PHASE 022                            NOT AUTHORIZED
 RELEASE / PRODUCTION                 NOT AUTHORIZED
 ```
 
@@ -18,14 +19,18 @@ RELEASE / PRODUCTION                 NOT AUTHORIZED
 
 AUT-001 implements the bounded autonomy-control design established by Phase 021-R. It is development-process infrastructure, not application/domain behavior and not a new MUDAC semantic owner.
 
-The package is designed to automate mechanically provable coordination while retaining explicit human/program authority for G2, material scope or architecture changes, protected merge, reopen execution, release, production and next-phase authorization.
+The package automates mechanically provable coordination while retaining explicit human/program authority for G2, material scope or architecture changes, protected merge, reopen execution, release, production and next-phase authorization.
 
 ## Authoritative package records
 
 - [AUT-001 Start Gate](AUT-001-start-gate.md)
+- [AUT-001 G2 authorization](AUT-001-g2-authorization.md)
+- [AUT-001-B Stage Transition / Start Gate](AUT-001-B-start-gate.md)
 - `docs/routing/aut001_start_gate.json`
+- `docs/routing/aut001_g2_authorization.json`
 - `docs/routing/aut001_implementation_package_contract.json`
 - `docs/routing/aut001_material_surface_manifest.json`
+- `docs/routing/aut001_b_stage_transition_start_gate.json`
 
 Inherited machine contracts:
 
@@ -41,28 +46,54 @@ Inherited machine contracts:
 
 | Subphase | Purpose | State |
 |---|---|---|
-| **AUT-001-A** | Control-plane substrate, append-only facts, deterministic replay, lifecycle/evidence core | **G1 READY / NOT AUTHORIZED** |
-| **AUT-001-B** | Live read-only shadow and GitHub reconciliation | PLANNED / NOT AUTHORIZED |
-| **AUT-001-C** | Dispatcher, Cursor/Codex adapters, isolation and provenance | PLANNED / NOT AUTHORIZED |
-| **AUT-001-D** | Development-control MCP query/record and authorization boundary | PLANNED / NOT AUTHORIZED |
-| **AUT-001-E** | Bounded non-human side effects | PLANNED / NOT AUTHORIZED |
+| **AUT-001-A** | Control-plane substrate, append-only facts, deterministic replay, lifecycle/evidence core | **G5 COMPLETE / INTEGRATED** |
+| **AUT-001-B** | Live read-only shadow and GitHub reconciliation | **START GATE PASS / READY FOR IMPLEMENTATION / NOT STARTED** |
+| **AUT-001-C** | Dispatcher, Cursor/Codex adapters, isolation and provenance | PREDECESSOR BLOCKED BY B |
+| **AUT-001-D** | Development-control MCP query/record and authorization boundary | PREDECESSOR BLOCKED |
+| **AUT-001-E** | Bounded non-human side effects | PREDECESSOR BLOCKED |
 | **AUT-001-F** | 020-D nonproduction test-control evidence bridge | **DEPENDENCY BLOCKED / NOT AUTHORIZED** |
-| **AUT-001-G** | Independent exit, executable replay/failure injection, shadow qualification and G5 | PLANNED / NOT AUTHORIZED |
+| **AUT-001-G** | Independent exit, executable replay/failure injection, shadow qualification and G5 | CORE PROFILE AUTHORIZED / PREDECESSOR BLOCKED |
+
+## AUT-001-A integration baseline
+
+AUT-001-A was human-authorized for merge after exact-candidate G5 COMPLETE.
+
+- reviewed candidate: `9133eabeb18dfd10d533ab399dc1c3b3c0ae4c1a`
+- integration: `e69e76398aedfe17bc8a800c235d16548ff42d44`
+- tree: `dff68862e95c2be6a05bc8385b6f4d6df3fe9790`
+- integration classification: `PROVENANCE_ONLY_CHANGE / CONTENT_EQUIVALENT`
+- post-merge Knowledge Validation: `36458789685` — SUCCESS
+
+This satisfies B's predecessor requirement without rebinding historical A review evidence to changed content.
+
+## AUT-001-B boundary
+
+B is the current stage projection within the existing core G2 envelope. It is strictly read-only with respect to GitHub and external coordination.
+
+B observes and reconciles PR/ref/check/workflow truth, feeds trustworthy facts into the A projection core, reconstructs missed/restart state, and records explainable shadow divergence. It may not write GitHub state, dispatch agents, invoke MCP side effects, access production, merge, release, or create Phase-022 authority.
+
+The stage-transition record supersedes only the prior `current_executable_subphase=AUT-001-A` projection. It does not rewrite or expand the original G2 authorization.
 
 ## Acceptance profiles
 
-**CORE_COORDINATION** requires A–E plus core G qualification. It remains disabled until a separate human operational-enablement decision, and it cannot coordinate Phase 022 without a separate Phase-022 G2.
+**CORE_COORDINATION** requires A–E plus core G qualification. It remains operationally disabled until its later enablement boundary, and it cannot coordinate Phase 022 without a separate Phase-022 G2.
 
 **FULL_COMPOSED** additionally requires F and full-composed G evidence after the independent 020-D runtime becomes operationally accepted. No production test-control capability is introduced.
 
 ## Preferred provider/review pattern
 
-The start gate recommends alternating Cursor and Codex between implementer and independent reviewer by subphase, while keeping role identity, session isolation and exact-revision evidence authoritative. Provider diversity is a quality mechanism, not an authority mechanism.
+For AUT-001-B the package preference is:
 
-## Next decision
+- implementation: Cursor
+- independent review: Codex
+- adversarial review: fresh separate session
 
-The start gate has passed but grants no execution authority.
+Role/session/worktree independence and exact-revision evidence are authoritative; provider diversity itself grants no authority.
 
-> **Next action: explicit human/program G2 decision for the initial AUT-001 envelope: A–E plus G CORE qualification.**
+## Next action
 
-AUT-001-F / FULL_COMPOSED remains deferred until the 020-D runtime dependency is independently satisfied.
+AUT-001-B's stage-transition/start gate has passed and its predecessor is satisfied.
+
+> **Next action: create the exact B implementation branch from the final B start-gate head and begin the bounded read-only shadow/reconciliation implementation.**
+
+This does not authorize AUT-001-F, Phase 022, protected merge, release, or production.
