@@ -40,6 +40,24 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
     ).toBe(false);
   });
 
+  it('fails closed on an unknown pull-request state instead of coercing it to closed', async () => {
+    const client = new GitHubRestReadClient(async () =>
+      response({
+        number: 23,
+        state: 'future_state',
+        merged: false,
+        draft: true,
+        merge_commit_sha: null,
+        head: { sha: 'head-1' },
+        base: { ref: 'aut-001/b-start-gate', sha: 'base-1' },
+      }),
+    );
+
+    await expect(client.readPullRequest('SethDKelly/Mudac', 23)).rejects.toThrow(
+      'invalid_github_response:pull_request.state',
+    );
+  });
+
   it('rejects any noncanonical API base instead of becoming a generic HTTP client', () => {
     expect(() => new GitHubRestReadClient(async () => response({}), 'https://example.com')).toThrow(
       'github_api_base_must_be_canonical',
