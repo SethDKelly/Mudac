@@ -1,0 +1,190 @@
+{
+  "schema": "mudac.aut001-b-stage-transition-start-gate/v1",
+  "package_id": "AUT-001",
+  "subphase": "AUT-001-B",
+  "title": "Live Read-Only Shadow & GitHub Reconciliation",
+  "decision": "PASS_READY_FOR_IMPLEMENTATION",
+  "authority": {
+    "existing_g2_record": "docs/routing/aut001_g2_authorization.json",
+    "human_program_instruction": "proceed_to_AUT_001_B_stage_transition_start_gate",
+    "creates_new_g2": false,
+    "expands_scope": false,
+    "weakens_criteria": false,
+    "status_projection_rule": "For current-stage selection only, this record supersedes aut001_g2_authorization.json current_executable_subphase=AUT-001-A after verified AUT-001-A G5 completion and integration. All original G2 scope, exclusions, human stops, repair rules, production denial, Phase-022 denial and predecessor gating remain binding."
+  },
+  "predecessor_evidence": {
+    "aut001_a_g5": "COMPLETE",
+    "reviewed_candidate_sha": "9133eabeb18dfd10d533ab399dc1c3b3c0ae4c1a",
+    "reviewed_candidate_tree": "dff68862e95c2be6a05bc8385b6f4d6df3fe9790",
+    "integration_sha": "e69e76398aedfe17bc8a800c235d16548ff42d44",
+    "integration_tree": "dff68862e95c2be6a05bc8385b6f4d6df3fe9790",
+    "integration_classification": "PROVENANCE_ONLY_CHANGE_CONTENT_EQUIVALENT",
+    "post_merge_knowledge_validation_run": 36458789685,
+    "post_merge_knowledge_validation": "SUCCESS",
+    "predecessor_satisfied": true
+  },
+  "entry_baseline": {
+    "branch": "aut-001/b-start-gate",
+    "base_ref": "aut-001/start-gate",
+    "base_sha": "e69e76398aedfe17bc8a800c235d16548ff42d44",
+    "base_tree": "dff68862e95c2be6a05bc8385b6f4d6df3fe9790",
+    "current_stage_projection": "AUT-001-B",
+    "implementation_started": false
+  },
+  "purpose": "Implement a live read-only GitHub shadow that ingests notification and repository truth, reconciles PR/ref/check/workflow state against authoritative current GitHub/repository facts, projects lifecycle/next-action state through the AUT-001-A deterministic core, and records explainable divergence without performing GitHub writes or agent dispatch.",
+  "scope_in": [
+    "read_only_github_api_truth_queries",
+    "normalized_delivery_envelope_and_semantic_fact_ingestion",
+    "delivery_idempotency_and_conflict_detection",
+    "pr_ref_check_workflow_reconciliation",
+    "exact_head_and_base_drift_detection",
+    "stale_out_of_order_and_missed_event_reconciliation",
+    "startup_or_periodic_read_only_reconciliation",
+    "append_only_shadow_observation_and_processing_attempt_records",
+    "deterministic_projection_using_AUT_001_A_core",
+    "shadow_divergence_recording_explanation_and_disposition",
+    "restart_reconstruction_from_local_append_only_records_plus_current_authoritative_truth",
+    "bounded_live_shadow_evidence_collection_in_AUT_S"
+  ],
+  "scope_out": [
+    "any_github_write_or_mutation",
+    "opening_or_updating_pull_requests",
+    "marking_ready_or_draft",
+    "branch_synchronization",
+    "comment_or_review_writes",
+    "agent_dispatch_or_provider_invocation",
+    "development_control_mcp_runtime",
+    "bounded_non_human_side_effects",
+    "generic_shell_git_github_http_sql_cloud_or_browser_eval_capability",
+    "secret_retrieval_or_secret_value_recording",
+    "production_application_or_database_access",
+    "protected_merge_or_closure_merge",
+    "g2_creation_or_scope_expansion",
+    "release_or_production",
+    "phase022_execution_or_authority",
+    "AUT_001_F_or_020D_bridge"
+  ],
+  "github_boundary": {
+    "events_are_notification_not_truth": true,
+    "arrival_order_is_not_lifecycle_order": true,
+    "consequential_projection_requires_authoritative_reconciliation": true,
+    "webhook_registration_or_configuration_write_authorized": false,
+    "live_webhook_ingress_if_used_requires_signature_verification": true,
+    "polling_or_startup_reconciliation_may_be_used_read_only": true,
+    "github_permissions": "READ_ONLY_MINIMUM_NECESSARY",
+    "github_write_paths": false,
+    "agent_dispatch": false
+  },
+  "visible_criteria": [
+    "AUT-C02",
+    "AUT-C05",
+    "AUT-C11",
+    "AUT-C15"
+  ],
+  "evidence_obligations": [
+    {
+      "id": "AUT-E03",
+      "requirement": "Bounded live read-only GitHub shadow reconciles PR/ref/check/workflow truth, records all divergence, and performs no GitHub mutation.",
+      "required": true
+    },
+    {
+      "id": "AUT-E08-B-SLICE",
+      "source": "AUT-E08",
+      "requirement": "Restart/replay and missed-delivery reconciliation preserve append-only history and reconstruct safe current shadow state without retry-until-green behavior.",
+      "required": true
+    },
+    {
+      "id": "AUT-E09-B-STAGE",
+      "source": "AUT-E09",
+      "requirement": "Fresh independent and adversarial exact-candidate stage reviews find no unresolved blocking authority, evidence, reconciliation or scope defect before B G5.",
+      "required": true
+    }
+  ],
+  "material_surfaces": {
+    "preferred_owned": [
+      "AUT-MS-GITHUB:tools/autonomy-control/src/github/",
+      "AUT-MS-STORAGE-OPS:tools/autonomy-control/src/storage/",
+      "AUT-MS-STORAGE-OPS:tools/autonomy-control/src/observability/",
+      "AUT-MS-STORAGE-OPS:tools/autonomy-control/src/health/",
+      "AUT-MS-HARNESS:tools/autonomy-control/test/",
+      "AUT-MS-HARNESS:tools/autonomy-control/fixtures/"
+    ],
+    "conditionally_serialized": [
+      "AUT-MS-GITHUB-WORKFLOWS:.github/workflows/autonomy-control-shadow.yml"
+    ],
+    "serialized_surface_rule": "Do not modify the optional workflow or other shared/root surfaces unless implementation proves necessity, explicitly reserves the surface, and routes evaluator/governance invalidation through R-C.",
+    "unmatched_changed_path": "INCONCLUSIVE_UNTIL_CLASSIFIED"
+  },
+  "implementation_shape": {
+    "provider_role_preference": {
+      "implementer": "CURSOR",
+      "independent_reviewer": "CODEX",
+      "adversarial_reviewer": "FRESH_SEPARATE_SESSION"
+    },
+    "reuse_AUT_001_A_core": true,
+    "duplicate_lifecycle_or_materiality_engine_forbidden": true,
+    "storage_technology_prescribed": false,
+    "tool_local_simple_storage_preferred_over_new_infrastructure": true,
+    "external_side_effects": false
+  },
+  "required_scenarios": [
+    "duplicate_identical_delivery_is_idempotent",
+    "duplicate_conflicting_delivery_fails_closed",
+    "unknown_event_is_recorded_without_advancement",
+    "late_event_for_superseded_head_is_historical_only",
+    "late_check_for_superseded_candidate_does_not_satisfy_current_ci",
+    "pr_head_change_freezes_optimistic_advancement_and_routes_delta_classification",
+    "base_drift_is_detected_without_synchronization_write",
+    "required_check_missing_running_failed_or_cancelled_does_not_become_ci_pass",
+    "merge_event_alone_does_not_establish_integration_truth",
+    "missed_delivery_is_reconstructed_by_authoritative_reconciliation",
+    "restart_reconstructs_shadow_state_without_history_erasure",
+    "projection_disagreement_with_repository_truth_is_recorded_and_explained",
+    "unsafe_advancement_prediction_is_blocking",
+    "read_only_shadow_performs_zero_github_mutations"
+  ],
+  "circuit_breakers": [
+    "any_github_write_attempt",
+    "agent_dispatch_attempt",
+    "generic_external_capability_request",
+    "production_target_or_credential_use",
+    "event_treated_as_authoritative_without_reconciliation",
+    "notification_order_used_as_lifecycle_order",
+    "unexplained_shadow_divergence",
+    "unsafe_optimistic_advancement_prediction",
+    "conflicting_delivery_identity",
+    "mandatory_truth_unavailable_with_optimistic_fallback",
+    "unmapped_material_change",
+    "scope_or_authority_expansion_required"
+  ],
+  "repair_policy": {
+    "default_cycles": 2,
+    "repeated_identical_mandatory_failure_threshold": 2,
+    "scope_expansion_is_not_repair": true,
+    "human_program_extension_required_after_budget_exhaustion": true,
+    "source_change_creates_new_candidate_generation": true,
+    "affected_evidence_and_reviews_refresh": true
+  },
+  "exit_requirements": [
+    "exact_candidate_sha_tree_bound",
+    "repository_verification_clean",
+    "AUT_C02_C05_C11_C15_satisfied",
+    "AUT_E03_and_AUT_E08_B_slice_satisfied",
+    "bounded_live_shadow_window_recorded",
+    "zero_github_mutation_demonstrated",
+    "all_shadow_divergence_dispositioned",
+    "fresh_independent_review_pass",
+    "fresh_adversarial_review_pass",
+    "no_open_blocking_findings",
+    "B_G5_gatekeeper_complete",
+    "human_merge_integration_separate"
+  ],
+  "next_state": {
+    "AUT_001_B": "READY_FOR_IMPLEMENTATION_NOT_STARTED",
+    "AUT_001_C": "PREDECESSOR_BLOCKED",
+    "AUT_001_F": "DEPENDENCY_BLOCKED_NOT_AUTHORIZED",
+    "PHASE_022": "NOT_AUTHORIZED",
+    "RELEASE": "NOT_AUTHORIZED",
+    "PRODUCTION": "NOT_AUTHORIZED"
+  }
+}
