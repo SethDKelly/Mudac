@@ -1,17 +1,33 @@
 {
-  "schema": "mudac.autonomy-orchestrator-contract/v0.1-draft",
-  "status": "RETROSPECTIVE_DESIGN_DRAFT",
+  "schema": "mudac.autonomy-orchestrator-contract/v0.2-retrospective",
+  "status": "R_B_COMPLETE_DESIGN_ONLY",
   "implementation_status": "NOT_IMPLEMENTED",
   "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
+  "normative_inputs": {
+    "operating_model": "docs/routing/autonomous_implementation_operating_model.json",
+    "exact_revision_evidence": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json"
+  },
   "principles": [
     "more_autonomy_does_not_mean_more_authority",
     "immutable_events_and_evidence_are_authoritative_current_state_is_a_projection",
     "unknown_or_ambiguous_transition_fails_closed",
     "source_change_invalidates_affected_evidence",
     "provider_identity_does_not_replace_role_independence",
+    "transition_eligibility_is_not_transition_authority",
+    "retries_preserve_failure_history",
     "no_event_or_pass_implies_next_phase_release_or_production_authority",
     "hide_the_probe_never_the_requirement"
   ],
+  "state_classes": {
+    "inactive": ["IDLE"],
+    "pre_authorization": ["PLANNING_READY", "START_GATE_READY", "AWAITING_G2"],
+    "authorized_execution": ["G2_AUTHORIZED", "WORKSPACE_PROVISIONING", "IMPLEMENTING", "CANDIDATE_REGISTERED", "VERIFYING"],
+    "independent_evaluation": ["AWAITING_INDEPENDENT_REVIEW", "AWAITING_ADVERSARIAL_REVIEW", "AWAITING_PR_CI", "AWAITING_G5"],
+    "human_integration": ["AWAITING_HUMAN_MERGE", "INTEGRATION_VERIFYING", "AWAITING_CLOSURE_MERGE"],
+    "successful_terminal": ["COMPLETE"],
+    "exception": ["REPAIR_REQUIRED", "BLOCKED", "INCONCLUSIVE", "REOPEN_REQUIRED"]
+  },
   "states": [
     "IDLE",
     "PLANNING_READY",
@@ -35,7 +51,32 @@
     "INCONCLUSIVE",
     "REOPEN_REQUIRED"
   ],
+  "event_envelope": {
+    "required_fields": [
+      "event_id",
+      "event_type",
+      "source",
+      "observed_at",
+      "phase_or_package_id",
+      "subject_id",
+      "actor_role_or_system",
+      "authority_refs",
+      "payload_digest"
+    ],
+    "conditional_fields": [
+      "actor_run_or_session_id",
+      "base_sha",
+      "candidate_sha",
+      "candidate_tree_sha",
+      "integration_sha",
+      "workflow_or_check_identity"
+    ],
+    "duplicate_same_payload": "IDEMPOTENT_NOOP",
+    "duplicate_conflicting_payload": "INCONCLUSIVE_RECONCILIATION_REQUIRED"
+  },
   "event_families": [
+    "planning",
+    "start_gate",
     "authority",
     "workspace",
     "candidate",
@@ -51,66 +92,174 @@
     "integration",
     "closure",
     "circuit_breaker",
-    "reopen"
+    "invalidation",
+    "reopen",
+    "reconciliation"
   ],
-  "human_authority_transitions": [
-    {"from": "AWAITING_G2", "to": "G2_AUTHORIZED", "authority": "EXPLICIT_HUMAN_PROGRAM_G2"},
-    {"from": "REPAIR_REQUIRED", "to": "IMPLEMENTING", "condition": "scope_or_budget_expansion", "authority": "EXPLICIT_HUMAN_OR_GATEKEEPER_DISPOSITION_AND_REAUTH_IF_REQUIRED"},
-    {"from": "AWAITING_HUMAN_MERGE", "to": "INTEGRATION_VERIFYING", "authority": "HUMAN_PROTECTED_MERGE_DECISION_PLUS_OBSERVED_MERGE"},
-    {"from": "AWAITING_CLOSURE_MERGE", "to": "COMPLETE", "authority": "HUMAN_CLOSURE_MERGE_WHEN_PATTERN_REQUIRES"},
-    {"from": "COMPLETE", "to": "START_GATE_READY", "condition": "next_phase", "authority": "EXPLICIT_NEXT_PHASE_AUTHORITY"}
-  ],
+  "guards": {
+    "G_STATE_MATCH": "projected state equals transition source and immutable facts do not contradict it",
+    "G_AUTHORITY_RESOLVED": "current authority resolves uniquely and action remains inside the declared envelope",
+    "G_G2_EXPLICIT": "explicit human/program G2 names the executable phase/package/work unit",
+    "G_REVISION_EXACT": "required SHA/tree identities are known and match the evidence subject",
+    "G_EVIDENCE_COMPLETE": "all prerequisite evidence is present, current, non-invalidated and correctly classified",
+    "G_ROLE_ELIGIBLE": "actor role is declared for the action and incompatible role history is absent",
+    "G_REVIEW_INDEPENDENT": "reviewer run/session is independent of candidate authoring and has not edited the reviewed revision",
+    "G_ADVERSARIAL_FRESH": "adversarial review is a fresh independent run/session against the exact candidate",
+    "G_REPAIR_WITHIN_SCOPE": "repair remains inside original G2, work unit, criteria and declared dependencies",
+    "G_REPAIR_BUDGET": "repair budget and repeated-identical-failure thresholds remain available",
+    "G_SERIALIZED_SURFACES_CLEAR": "no conflicting writer controls a required serialized surface",
+    "G_REQUIRED_CI_PASS": "declared required checks pass for the relevant exact revision and failed history remains retained",
+    "G_G5_COMPLETE": "exact-candidate Gatekeeper COMPLETE record exists and mandatory predicates remain satisfied",
+    "G_HUMAN_MERGE_DECISION": "human protected merge action/approval is observed and automation did not synthesize it",
+    "G_INTEGRATION_CLASSIFIED": "integration SHA is recorded and material delta/evidence impact is classified",
+    "G_CLOSURE_SATISFIED": "declared closure mode and required closure evidence are satisfied",
+    "G_NO_CIRCUIT_BREAKER": "no unresolved hard or engineering-integrity circuit breaker applies",
+    "G_EVENT_IDEMPOTENT": "event identity was not previously applied with conflicting content",
+    "G_EVENT_ORDER_RECONCILED": "late or out-of-order event reconciles against repository and immutable evidence truth",
+    "G_REOPEN_RECORD": "post-completion invalidation record exists without rewriting historical completion",
+    "G_REOPEN_REAUTHORIZED": "explicit human/program reauthorization exists before reopened execution",
+    "G_STAGE_PROFILE_DECLARED": "lifecycle variation was declared before execution and is not inferred ad hoc"
+  },
+  "guard_evaluation": {
+    "missing_guard_value_defaults_true": false,
+    "all_transition_guards_must_pass": true,
+    "unknown_fact_result": "INCONCLUSIVE",
+    "known_prohibition_result": "BLOCKED"
+  },
+  "default_lifecycle_profile": {
+    "declared_before_g2": true,
+    "protected_pr_integration": "REQUIRED",
+    "exact_candidate_verification": "REQUIRED",
+    "independent_code_review": "REQUIRED",
+    "adversarial_conformance_review": "REQUIRED",
+    "g5_exit_gate": "REQUIRED",
+    "integration_verification": "REQUIRED",
+    "closure_mode": "SEPARATE_CLOSURE_PR",
+    "allowed_closure_modes": [
+      "SEPARATE_CLOSURE_PR",
+      "CLOSURE_EVIDENCE_IN_EXISTING_INTEGRATION_FLOW",
+      "NOT_APPLICABLE_WITH_EXPLICIT_AUTHORITY"
+    ],
+    "profile_change_after_g2": "AUTHORITY_DELTA_REVIEW_REQUIRED",
+    "undeclared_optional_stage": "FORBIDDEN"
+  },
   "primary_transitions": [
-    {"from": "PLANNING_READY", "event": "start_gate.ready", "to": "START_GATE_READY"},
-    {"from": "START_GATE_READY", "event": "start_gate.pass", "to": "AWAITING_G2"},
-    {"from": "AWAITING_G2", "event": "authority.g2_granted", "to": "G2_AUTHORIZED", "human_stop": true},
-    {"from": "G2_AUTHORIZED", "event": "workspace.provision_requested", "to": "WORKSPACE_PROVISIONING"},
-    {"from": "WORKSPACE_PROVISIONING", "event": "workspace.provisioned", "to": "IMPLEMENTING"},
-    {"from": "IMPLEMENTING", "event": "candidate.registered", "to": "CANDIDATE_REGISTERED"},
-    {"from": "CANDIDATE_REGISTERED", "event": "verification.started", "to": "VERIFYING"},
-    {"from": "VERIFYING", "event": "verification.pass", "to": "AWAITING_INDEPENDENT_REVIEW"},
-    {"from": "AWAITING_INDEPENDENT_REVIEW", "event": "review.independent.pass", "to": "AWAITING_ADVERSARIAL_REVIEW"},
-    {"from": "AWAITING_ADVERSARIAL_REVIEW", "event": "review.adversarial.pass", "to": "AWAITING_PR_CI"},
-    {"from": "AWAITING_PR_CI", "event": "github.check.required_set_pass", "to": "AWAITING_G5"},
-    {"from": "AWAITING_G5", "event": "gate.g5.pass", "to": "AWAITING_HUMAN_MERGE"},
-    {"from": "AWAITING_HUMAN_MERGE", "event": "github.pull_request.merged_after_human_approval", "to": "INTEGRATION_VERIFYING", "human_stop": true},
-    {"from": "INTEGRATION_VERIFYING", "event": "integration.pass", "to": "AWAITING_CLOSURE_MERGE"},
-    {"from": "AWAITING_CLOSURE_MERGE", "event": "closure.merged_after_human_approval", "to": "COMPLETE", "human_stop": true}
+    {"id":"T01","from":"PLANNING_READY","event":"start_gate.ready","to":"START_GATE_READY","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_EVENT_IDEMPOTENT","G_EVENT_ORDER_RECONCILED"]},
+    {"id":"T02","from":"START_GATE_READY","event":"start_gate.pass","to":"AWAITING_G2","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_STAGE_PROFILE_DECLARED","G_EVENT_IDEMPOTENT"]},
+    {"id":"T03","from":"AWAITING_G2","event":"authority.g2_granted","to":"G2_AUTHORIZED","human_stop":true,"guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_G2_EXPLICIT","G_STAGE_PROFILE_DECLARED","G_NO_CIRCUIT_BREAKER","G_EVENT_IDEMPOTENT"]},
+    {"id":"T04","from":"G2_AUTHORIZED","event":"workspace.provision_requested","to":"WORKSPACE_PROVISIONING","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_G2_EXPLICIT","G_SERIALIZED_SURFACES_CLEAR","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T05","from":"WORKSPACE_PROVISIONING","event":"workspace.provisioned","to":"IMPLEMENTING","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_G2_EXPLICIT","G_REVISION_EXACT","G_SERIALIZED_SURFACES_CLEAR","G_ROLE_ELIGIBLE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T06","from":"IMPLEMENTING","event":"candidate.registered","to":"CANDIDATE_REGISTERED","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_REVISION_EXACT","G_ROLE_ELIGIBLE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T07","from":"CANDIDATE_REGISTERED","event":"verification.started","to":"VERIFYING","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_ROLE_ELIGIBLE","G_EVENT_IDEMPOTENT"]},
+    {"id":"T08","from":"VERIFYING","event":"verification.pass","to":"AWAITING_INDEPENDENT_REVIEW","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_EVIDENCE_COMPLETE","G_NO_CIRCUIT_BREAKER","G_EVENT_IDEMPOTENT"]},
+    {"id":"T09","from":"AWAITING_INDEPENDENT_REVIEW","event":"review.independent.pass","to":"AWAITING_ADVERSARIAL_REVIEW","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_REVIEW_INDEPENDENT","G_EVIDENCE_COMPLETE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T10","from":"AWAITING_ADVERSARIAL_REVIEW","event":"review.adversarial.pass","to":"AWAITING_PR_CI","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_ADVERSARIAL_FRESH","G_EVIDENCE_COMPLETE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T11","from":"AWAITING_PR_CI","event":"github.check.required_set_pass","to":"AWAITING_G5","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_REQUIRED_CI_PASS","G_EVIDENCE_COMPLETE","G_EVENT_ORDER_RECONCILED","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T12","from":"AWAITING_G5","event":"gate.g5.pass","to":"AWAITING_HUMAN_MERGE","guards":["G_STATE_MATCH","G_REVISION_EXACT","G_G5_COMPLETE","G_EVIDENCE_COMPLETE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T13","from":"AWAITING_HUMAN_MERGE","event":"github.pull_request.merged_after_human_approval","to":"INTEGRATION_VERIFYING","human_stop":true,"guards":["G_STATE_MATCH","G_HUMAN_MERGE_DECISION","G_G5_COMPLETE","G_EVENT_ORDER_RECONCILED","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T14","from":"INTEGRATION_VERIFYING","event":"integration.pass","to":"AWAITING_CLOSURE_MERGE","profile_condition":"closure_mode == SEPARATE_CLOSURE_PR","guards":["G_STATE_MATCH","G_INTEGRATION_CLASSIFIED","G_EVIDENCE_COMPLETE","G_REQUIRED_CI_PASS","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T15","from":"INTEGRATION_VERIFYING","event":"closure.satisfied_without_separate_merge","to":"COMPLETE","profile_condition":"closure_mode in [CLOSURE_EVIDENCE_IN_EXISTING_INTEGRATION_FLOW, NOT_APPLICABLE_WITH_EXPLICIT_AUTHORITY]","guards":["G_STATE_MATCH","G_INTEGRATION_CLASSIFIED","G_CLOSURE_SATISFIED","G_EVIDENCE_COMPLETE","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"T16","from":"AWAITING_CLOSURE_MERGE","event":"closure.merged_after_human_approval","to":"COMPLETE","human_stop":true,"guards":["G_STATE_MATCH","G_CLOSURE_SATISFIED","G_HUMAN_MERGE_DECISION","G_EVENT_ORDER_RECONCILED","G_NO_CIRCUIT_BREAKER"]}
   ],
-  "repair_transitions": [
-    {"from": ["VERIFYING", "AWAITING_INDEPENDENT_REVIEW", "AWAITING_ADVERSARIAL_REVIEW", "AWAITING_PR_CI"], "event": "blocking_failure_within_existing_g2", "to": "REPAIR_REQUIRED"},
-    {"from": "REPAIR_REQUIRED", "event": "repair.authorized_within_scope_and_budget", "to": "IMPLEMENTING"},
-    {"from": "REPAIR_REQUIRED", "event": "scope_or_budget_expansion_required", "to": "BLOCKED"}
+  "failure_and_repair_transitions": [
+    {"id":"F01","from":["VERIFYING","AWAITING_INDEPENDENT_REVIEW","AWAITING_ADVERSARIAL_REVIEW","AWAITING_PR_CI","AWAITING_G5"],"event":"failure.changes_required_within_existing_g2","to":"REPAIR_REQUIRED","guards":["G_STATE_MATCH","G_REPAIR_WITHIN_SCOPE","G_REPAIR_BUDGET"]},
+    {"id":"F02","from":"REPAIR_REQUIRED","event":"repair.resume","to":"IMPLEMENTING","guards":["G_STATE_MATCH","G_AUTHORITY_RESOLVED","G_REPAIR_WITHIN_SCOPE","G_REPAIR_BUDGET","G_SERIALIZED_SURFACES_CLEAR","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"F03","from":"REPAIR_REQUIRED","event":"repair.scope_or_budget_expansion_required","to":"BLOCKED","guards":["G_STATE_MATCH"],"human_action_required":"EXPLICIT_DISPOSITION_OR_REAUTHORIZATION"},
+    {"id":"F04","from":"ANY_NONTERMINAL","event":"circuit_breaker.hard","to":"BLOCKED","guards":["G_STATE_MATCH"]},
+    {"id":"F05","from":"ANY_NONTERMINAL","event":"reconciliation.ambiguous_or_evidence_unavailable","to":"INCONCLUSIVE","guards":["G_STATE_MATCH"]}
+  ],
+  "exception_recovery": {
+    "REPAIR_REQUIRED": {
+      "meaning": "known defect may be repairable inside the still-open pre-G5 G2 envelope",
+      "source_change_requires": ["new_candidate_sha", "affected_evidence_rerun", "affected_reviews_rerun"],
+      "old_candidate_evidence_relabel_forbidden": true
+    },
+    "BLOCKED": {
+      "meaning": "current envelope cannot legally or safely advance",
+      "resume_requires": "new immutable disposition or authority resolving the blocker",
+      "resume_rule": "return to earliest state whose guards are satisfied; mandatory stages cannot be skipped"
+    },
+    "INCONCLUSIVE": {
+      "meaning": "required truth cannot be established deterministically",
+      "automatic_retry_until_green_forbidden": true,
+      "resume_requires": "new evidence or successful reconciliation",
+      "resume_rule": "recompute state from immutable facts; no optimistic advancement"
+    },
+    "REOPEN_REQUIRED": {
+      "meaning": "historical completion remains recorded but later evidence invalidates current confidence",
+      "old_g2_restored": false,
+      "execution_authority": false,
+      "resume_requires": ["G_REOPEN_RECORD", "dependency_impact_review", "updated_scope_criteria_evidence_if_needed", "G_REOPEN_REAUTHORIZED"],
+      "reauthorized_execution_target": "G2_AUTHORIZED",
+      "architecture_contradiction_target": "BLOCKED_UPSTREAM_REENTRY_REQUIRED"
+    }
+  },
+  "post_completion_transitions": [
+    {"id":"P01","from":"COMPLETE","event":"invalidation.material_confirmed","to":"REOPEN_REQUIRED","guards":["G_STATE_MATCH","G_REOPEN_RECORD"],"historical_completion_record_mutated":false},
+    {"id":"P02","from":"REOPEN_REQUIRED","event":"authority.reopen_g2_granted","to":"G2_AUTHORIZED","human_stop":true,"guards":["G_STATE_MATCH","G_REOPEN_RECORD","G_REOPEN_REAUTHORIZED","G_STAGE_PROFILE_DECLARED","G_NO_CIRCUIT_BREAKER"]},
+    {"id":"P03","from":"REOPEN_REQUIRED","event":"invalidation.disposition_completion_remains_valid","to":"COMPLETE","guards":["G_STATE_MATCH","G_REOPEN_RECORD","G_EVIDENCE_COMPLETE"],"authorized_disposition_required":true},
+    {"id":"P04","from":"REOPEN_REQUIRED","event":"invalidation.upstream_reentry_required","to":"BLOCKED","guards":["G_STATE_MATCH","G_REOPEN_RECORD"]}
   ],
   "head_drift_classification": {
-    "same_sha": "NO_ACTION",
-    "new_sha_same_tree": "PROVENANCE_BINDING_REFRESH",
-    "new_tree_material_surfaces_equivalent": "DELTA_REVIEW_REQUIRED",
-    "material_surface_changed": "INVALIDATE_AFFECTED_EVIDENCE_AND_RETURN_TO_VERIFICATION",
-    "unknown": "INCONCLUSIVE"
+    "same_sha": {"result":"NO_ACTION","evidence_effect":"NONE"},
+    "new_sha_same_tree": {"result":"PROVENANCE_BINDING_REFRESH","evidence_effect":"REFRESH_REVISION_BINDINGS_ONLY"},
+    "new_tree_material_surfaces_equivalent": {"result":"DELTA_REVIEW_REQUIRED","evidence_effect":"R_C_DETERMINES_REUSABLE_AND_REFRESHED_NODES"},
+    "material_surface_changed": {"result":"INVALIDATE_AFFECTED_EVIDENCE_AND_RETURN_TO_VERIFICATION","evidence_effect":"R_C_GRAPH_CALCULATION_REQUIRED"},
+    "unknown": {"result":"INCONCLUSIVE","evidence_effect":"NO_ADVANCE"}
   },
-  "fail_closed_on": [
-    "authority_not_uniquely_resolvable",
-    "candidate_identity_unknown",
-    "required_evidence_missing",
-    "serialized_writer_conflict",
-    "reviewer_independence_not_proven",
-    "adversarial_freshness_not_proven",
-    "nondeterministic_verification",
-    "unreconciled_event_order",
-    "repair_budget_exhausted",
-    "repeated_identical_failure_threshold_reached",
-    "scope_expansion_required",
-    "accepted_architecture_contradiction",
-    "production_boundary_encountered",
-    "post_g5_material_change_without_reopen_authority",
-    "undeclared_transition"
+  "human_authority_stops": [
+    {"boundary":"AWAITING_G2_TO_G2_AUTHORIZED","authority":"EXPLICIT_HUMAN_PROGRAM_G2"},
+    {"boundary":"SCOPE_EXPANSION","authority":"EXPLICIT_HUMAN_PROGRAM_DISPOSITION_AND_REAUTHORIZATION_IF_EXECUTION_CHANGES"},
+    {"boundary":"ACCEPTED_ARCHITECTURE_CONTRADICTION","authority":"EXPLICIT_CHANGE_OR_REENTRY_AUTHORITY"},
+    {"boundary":"REPAIR_BUDGET_OVERRIDE","authority":"EXPLICIT_HUMAN_PROGRAM_EXTENSION"},
+    {"boundary":"PROTECTED_IMPLEMENTATION_MERGE","authority":"HUMAN_MERGE_DECISION"},
+    {"boundary":"CLOSURE_MERGE_WHEN_REQUIRED","authority":"HUMAN_MERGE_DECISION"},
+    {"boundary":"REOPEN_EXECUTION","authority":"EXPLICIT_HUMAN_PROGRAM_REAUTHORIZATION"},
+    {"boundary":"RELEASE","authority":"EXPLICIT_HUMAN_RELEASE_AUTHORITY"},
+    {"boundary":"PRODUCTION","authority":"EXPLICIT_HUMAN_PRODUCTION_AUTHORITY"},
+    {"boundary":"NEXT_PHASE","authority":"EXPLICIT_NEXT_PHASE_START_AND_G2_AUTHORITY"}
   ],
+  "authority_non_inference_rules": [
+    "review_pass_does_not_grant_merge",
+    "ci_pass_does_not_grant_merge",
+    "g5_does_not_grant_merge_or_next_g2",
+    "merge_does_not_grant_release_or_production",
+    "complete_does_not_grant_next_phase",
+    "github_event_does_not_synthesize_human_approval",
+    "mcp_tool_call_does_not_synthesize_authority"
+  ],
+  "role_independence": {
+    "implementer_may_not_certify_own_candidate": true,
+    "independent_reviewer_same_authoring_run_forbidden": true,
+    "adversarial_reviewer_same_authoring_run_forbidden": true,
+    "reviewer_source_edit_converts_role_to_implementer_for_changed_revision": true,
+    "gatekeeper_candidate_source_write_forbidden": true,
+    "provider_diversity": "PREFERRED_NOT_REQUIRED",
+    "run_session_independence": "REQUIRED"
+  },
   "projection": {
     "rebuildable_from_immutable_records": true,
     "projection_may_not_override_immutable_fact": true,
     "single_current_lifecycle_projection_required": true,
-    "bootstrap_prose_is_not_execution_authority": true
+    "bootstrap_prose_is_not_execution_authority": true,
+    "reconciliation_conflict_result": "INCONCLUSIVE_OR_BLOCKED",
+    "historical_completion_is_append_only": true
   },
-  "shadow_acceptance_seed": "REPLAY_ACTUAL_PHASE021_IMP001_SEQUENCE_THROUGH_FINAL_PR20_CLOSURE_WITH_PHASE022_REMAINING_UNAUTHORIZED"
+  "undeclared_transition": {
+    "state_advance": false,
+    "dynamic_transition_synthesis": false,
+    "result": "BLOCKED_OR_INCONCLUSIVE"
+  },
+  "r_b_exit": {
+    "reconciled_with_020_c": true,
+    "reconciled_with_020_g": true,
+    "reconciled_with_020_h": true,
+    "every_declared_transition_has_guard_set": true,
+    "terminal_and_reopen_semantics_defined": true,
+    "optional_stage_profile_defined": true,
+    "human_authority_non_inference_verified_by_design": true,
+    "status": "COMPLETE_PASS",
+    "next_subphase": "021-R-C"
+  },
+  "shadow_acceptance_seed": "REPLAY_ACTUAL_PHASE021_IMP001_SEQUENCE_THROUGH_FINAL_CLOSURE_WITH_PHASE022_REMAINING_UNAUTHORIZED"
 }

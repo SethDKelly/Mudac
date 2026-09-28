@@ -6,8 +6,9 @@
 PHASE 021 / IMP-001                  COMPLETE / INTEGRATED
 PHASE 021-R RETROSPECTIVE            ACTIVE — PLANNING/DESIGN ONLY
 021-R-A                              COMPLETE
-021-R-B                              STARTED — STATE-MACHINE CONTRACT DRAFTED
-021-R-C..G                           NOT YET COMPLETE
+021-R-B                              COMPLETE — PASS
+021-R-C                              NEXT ELIGIBLE
+021-R-D..G                           NOT YET COMPLETE
 PHASE 022                            NEXT ELIGIBLE / NOT AUTHORIZED
 AUTONOMY RUNTIME IMPLEMENTATION      NOT AUTHORIZED
 RELEASE / PRODUCTION                 NOT AUTHORIZED
@@ -64,12 +65,30 @@ This retrospective does **not** authorize:
 | Subphase | Purpose | State |
 |---|---|---|
 | **021-R-A** | Retrospective authority, observed coordination debt, lifecycle-truth defects & scope boundary | **COMPLETE** |
-| **021-R-B** | Orchestrator state machine, transition guards, human authority stops & fail-closed semantics | **STARTED** |
-| **021-R-C** | Evidence dependency graph, invalidation, content equivalence & evidence reuse | PLANNED |
+| **021-R-B** | Orchestrator state machine, transition guards, human authority stops & fail-closed semantics | **COMPLETE — PASS** |
+| **021-R-C** | Evidence dependency graph, invalidation, content equivalence & evidence reuse | **NEXT ELIGIBLE** |
 | **021-R-D** | Agent dispatcher, role identity, session isolation, context generation & provenance manifests | PLANNED |
 | **021-R-E** | GitHub event integration, deduplication/idempotency, PR/CI choreography & reconciliation | PLANNED |
 | **021-R-F** | Development-control MCP interfaces, authorization, production denial & composition with the 020-D test-control plane | PLANNED |
 | **021-R-G** | Shadow simulation, failure injection, exit review, implementation package recommendation & Phase-022 handoff | PLANNED |
+
+## 021-R-B result
+
+021-R-B reconciled the orchestrator against the existing 020-C operating model, 020-G exact-revision/evidence architecture, and 020-H review/repair/reopen governance.
+
+The resulting state machine now has:
+
+- explicit event envelopes and idempotency expectations;
+- named transition guards;
+- guarded principal, repair, exception, and reopen transitions;
+- precise `BLOCKED`, `INCONCLUSIVE`, `REPAIR_REQUIRED`, `COMPLETE`, and `REOPEN_REQUIRED` semantics;
+- predeclared lifecycle profiles for package-specific stage variation;
+- explicit content/head-drift transition categories for R-C to bind to evidence invalidation; and
+- machine-enforced human stops for G2, scope/architecture escalation, merge, reopen execution, release, production, and next-phase authority.
+
+The state projection remains reconstructable from immutable records and cannot override them. Undeclared transitions cannot be synthesized dynamically.
+
+Machine contract: `docs/routing/autonomy_orchestrator_contract.json`.
 
 ## Architectural layers
 
@@ -100,6 +119,8 @@ At minimum, the autonomy layer must stop for explicit human/program authority at
 - accepted-architecture contradiction or semantic re-entry;
 - repair-budget override;
 - protected implementation merge decision;
+- closure merge when required;
+- reopened implementation execution;
 - release authority;
 - production authority; and
 - next-phase authorization.
@@ -127,3 +148,9 @@ Phase 021-R is expected to leave:
 - `docs/routing/autonomy_control_plane_interfaces.json`
 
 These are design contracts. Their existence does not authorize runtime execution.
+
+## Next eligible work
+
+> **021-R-C — Evidence Dependency Graph, Invalidation, Content Equivalence & Evidence Reuse**
+
+Phase 022 remains eligible but **not authorized**; completing R-B does not alter that boundary.
