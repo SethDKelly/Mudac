@@ -42,6 +42,18 @@ export function evaluateRequiredChecks(
   candidateSha: string,
   requiredNames: readonly string[],
 ): RequiredCheckEvaluation {
+  if (
+    requiredNames.length === 0 ||
+    requiredNames.some((name) => name.trim().length === 0 || name !== name.trim())
+  ) {
+    return {
+      disposition: 'INCONCLUSIVE',
+      reason: 'required_check_set_missing_or_invalid',
+      matched: {},
+      missing: [],
+    };
+  }
+
   const records: readonly CheckLike[] = [...checks, ...workflows];
   const matched: Record<string, { attempt: number; status: string; conclusion: string | null }> =
     {};
