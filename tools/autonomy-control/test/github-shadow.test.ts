@@ -1,13 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import {
-  classifyDeliveryAgainstTruth,
-  collectAuthoritativeGitHubTruth,
-  evaluateRequiredChecks,
-  reconcileShadowTruth,
-  runReadOnlyShadow,
-  ShadowJournal,
-} from '../src/index.js';
+import { evaluateRequiredChecks } from '../src/github/checks.js';
 import type {
   CheckTruth,
   DeliveryEnvelope,
@@ -17,7 +10,10 @@ import type {
   ShadowReadRequest,
   ShadowTarget,
   WorkflowTruth,
-} from '../src/index.js';
+} from '../src/github/model.js';
+import { classifyDeliveryAgainstTruth, reconcileShadowTruth } from '../src/github/reconciliation.js';
+import { collectAuthoritativeGitHubTruth, runReadOnlyShadow } from '../src/github/shadow.js';
+import { ShadowJournal } from '../src/storage/shadow-journal.js';
 
 const candidateSha = 'candidate-123';
 const baseSha = 'base-456';

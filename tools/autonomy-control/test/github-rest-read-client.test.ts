@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { GitHubRestReadClient } from '../src/index.js';
-import type { GitHubFetch } from '../src/index.js';
+import { GitHubRestReadClient } from '../src/github/rest-read-client.js';
+import type { GitHubFetch } from '../src/github/rest-read-client.js';
 
 function response(value: unknown, status = 200) {
   return {

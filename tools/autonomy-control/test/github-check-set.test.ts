@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { evaluateRequiredChecks, reconcileShadowTruth } from '../src/index.js';
+import { evaluateRequiredChecks } from '../src/github/checks.js';
+import { reconcileShadowTruth } from '../src/github/reconciliation.js';
 
 describe('AUT-001-B required-check set authority', () => {
   it('fails inconclusive when the required-check set is empty', () => {

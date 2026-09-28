@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
-import { normalizeGitHubTruth, ShadowJournal } from '../src/index.js';
-import type { GitHubTruthSnapshot } from '../src/index.js';
+import type { GitHubTruthSnapshot } from '../src/github/model.js';
+import { normalizeGitHubTruth } from '../src/github/normalize.js';
+import { ShadowJournal } from '../src/storage/shadow-journal.js';
 
 function snapshot(
   status: 'in_progress' | 'completed',
