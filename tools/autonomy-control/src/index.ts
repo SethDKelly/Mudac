@@ -5,6 +5,7 @@ export * from './github/checks.js';
 export * from './github/model.js';
 export * from './github/normalize.js';
 export * from './github/reconciliation.js';
+export * from './github/rest-read-client.js';
 export * from './github/shadow.js';
 export * from './lifecycle.js';
 export * from './model.js';
