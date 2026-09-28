@@ -1,89 +1,289 @@
 {
-  "schema": "mudac.autonomy-evidence-dependency-contract/v0.1-draft",
-  "status": "RETROSPECTIVE_DESIGN_DRAFT",
+  "schema": "mudac.autonomy-evidence-dependency-contract/v0.2-retrospective",
+  "status": "R_C_COMPLETE_DESIGN_ONLY",
   "implementation_status": "NOT_IMPLEMENTED",
   "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
-  "purpose": "Define how source/governance changes invalidate, preserve or require rebinding of implementation evidence without silently reusing evidence across materially different revisions.",
-  "node_types": [
-    "AUTHORITY",
-    "SOURCE_SURFACE",
-    "MATERIAL_SURFACE_CLASS",
-    "VISIBLE_CRITERION",
-    "VERIFICATION_RESULT",
-    "INDEPENDENT_REVIEW",
-    "ADVERSARIAL_REVIEW",
-    "CI_CHECK",
-    "GATE_DECISION",
-    "CANDIDATE_IDENTITY",
-    "INTEGRATION_IDENTITY",
-    "RESIDUAL_RISK",
-    "CLOSURE_RECORD"
+  "normative_inputs": {
+    "implementation_phase_contract": "docs/routing/phase020_implementation_phase_contract.json",
+    "exact_revision_evidence": "docs/routing/phase020_ci_supplychain_evidence_architecture.json",
+    "review_repair_exit": "docs/routing/phase020_review_repair_exit_gate_governance.json",
+    "orchestrator": "docs/routing/autonomy_orchestrator_contract.json"
+  },
+  "principles": [
+    "evidence_proves_only_the_subject_revision_and_material_boundary_it_names",
+    "reuse_by_reference_never_by_relabeling",
+    "content_equivalence_is_a_proven_fact_not_an_assumption",
+    "unmapped_change_or_unknown_materiality_fails_closed",
+    "invalidation_is_minimal_but_transitive_over_declared_dependencies",
+    "historical_pass_and_failure_records_are_immutable",
+    "a_stronger_evidence_class_may_satisfy_a_floor_only_when_the_same_material_boundary_is_exercised",
+    "governance_or_evaluator_change_may_invalidate_acceptance_without_application_source_change",
+    "g5_and_integration_bindings_are_revision_specific",
+    "hidden_probe_details_may_remain_hidden_but_dependency_and_materiality_requirements_may_not"
   ],
-  "edge_types": [
-    "DEPENDS_ON",
-    "PROVES",
-    "BOUND_TO_SHA_TREE",
-    "INVALIDATES_ON_CHANGE",
-    "CARRIES_FORWARD_IF_CONTENT_EQUIVALENT",
-    "REQUIRES_REVIEW_IF_CHANGED",
-    "SUPERSEDES_WITHOUT_REWRITING_HISTORY",
-    "CLOSES"
-  ],
+  "graph_model": {
+    "directed": true,
+    "immutable_nodes": true,
+    "append_only_edges": true,
+    "current_validity_is_projection": true,
+    "cycles_in_validation_dependency_graph_forbidden": true,
+    "historical_supersession_edges_may_point_backward_in_time": true,
+    "graph_partition_key": ["phase_or_package_id", "work_unit_id_or_null", "candidate_generation_or_null"],
+    "node_identity_required": ["node_id", "node_type", "subject_id", "content_digest_or_external_identity", "created_at_or_observed_at"],
+    "revision_bound_node_fields": ["commit_sha", "tree_sha", "material_boundary_ids", "criteria_refs", "authority_refs"]
+  },
+  "node_types": {
+    "AUTHORITY": "G2, scope, lifecycle-profile, architecture/governance or authorized exception fact",
+    "SOURCE_SURFACE": "specific repository path/blob or declared source selector",
+    "MATERIAL_SURFACE": "stable semantic/evidence boundary composed of source selectors",
+    "VISIBLE_CRITERION": "required visible success criterion",
+    "EVIDENCE_OBLIGATION": "required E1-E7 evidence claim and material boundary",
+    "VERIFICATION_RESULT": "local/exact-candidate verification result",
+    "INDEPENDENT_REVIEW": "independent review result",
+    "ADVERSARIAL_REVIEW": "fresh adversarial result",
+    "CI_CHECK": "public/protected CI or evaluator result",
+    "EQUIVALENCE_PROOF": "proof that declared material surfaces are unchanged or acceptance-equivalent",
+    "BINDING": "new revision binding that reuses immutable earlier evidence by reference",
+    "GATE_DECISION": "G5 or later gate result",
+    "CANDIDATE_IDENTITY": "candidate generation SHA/tree",
+    "INTEGRATION_IDENTITY": "post-merge/integration SHA/tree",
+    "FINDING": "review/evaluator finding",
+    "RESIDUAL_RISK": "owned accepted or deferred risk",
+    "REOPEN_RECORD": "post-completion invalidation/reopen fact",
+    "CLOSURE_RECORD": "integration/closure record"
+  },
+  "edge_types": {
+    "DEPENDS_ON": "target must remain valid for source to remain valid",
+    "PROVES": "evidence supports criterion/claim",
+    "BOUND_TO": "evidence is exact-revision/material-boundary bound",
+    "INVALIDATES_ON_CHANGE": "material source change seeds invalidation",
+    "REQUIRES_REVIEW_IF_CHANGED": "change does not automatically invalidate underlying implementation but requires a new review/disposition",
+    "CARRIES_FORWARD_IF_EQUIVALENT": "reuse allowed only through explicit equivalence proof plus new binding",
+    "SUPERSEDES": "new record supersedes current use without rewriting history",
+    "DERIVED_FROM": "projection or binding derives from immutable prior facts",
+    "CLOSES": "record closes an obligation/finding/lifecycle requirement"
+  },
   "surface_classes": {
     "EXECUTABLE_MATERIAL": {
-      "examples": ["application_source", "module_source", "dependency_rules", "workspace_manifest", "lockfile", "runtime_build_config"],
-      "default_on_change": "INVALIDATE_AFFECTED_VERIFICATION_REVIEWS_CI_AND_G5_BINDING"
+      "examples": ["application_source", "module_source", "dependency_rules", "workspace_manifest", "lockfile", "runtime_build_config", "migration_source"],
+      "default_change_effect": ["affected_verification", "affected_reviews", "affected_ci", "g5_binding"],
+      "default_reuse": "NO_REUSE_UNLESS_BOUNDARY_SPECIFIC_EQUIVALENCE_PROVES_CHANGED_PATH_OUTSIDE_AFFECTED_CLAIM"
     },
     "AUTHORITY_GOVERNANCE_MATERIAL": {
-      "examples": ["g2_record", "scope_contract", "gate_contract", "review_contract", "validator_that_defines_acceptance"],
-      "default_on_change": "AUTHORITY_CONSISTENCY_AND_DELTA_REVIEW_REQUIRED_PLUS_G5_REBINDING"
-    },
-    "EVIDENCE_ONLY": {
-      "examples": ["append_only_review_result", "ci_run_reference", "integration_binding", "closure_evidence"],
-      "default_on_change": "VALIDATE_PROVENANCE_AND_APPEND_ONLY_INTEGRITY"
+      "examples": ["g2_record", "scope_contract", "lifecycle_profile", "gate_contract", "review_contract", "validator_defining_acceptance"],
+      "default_change_effect": ["authority_consistency_review", "adversarial_authority_delta_review", "exact_head_gate_binding"],
+      "default_reuse": "EXECUTABLE_ACCEPTANCE_MAY_REUSE_IF_EXECUTABLE_MATERIAL_EQUIVALENT_AND_AUTHORITY_MEANING_NOT_EXPANDED_OR_WEAKENED"
     },
     "CI_EVALUATOR_MATERIAL": {
-      "examples": ["workflow", "test_harness", "protected_evaluator_configuration"],
-      "default_on_change": "REVERIFY_AFFECTED_CRITERIA_AND_REVIEW_EVALUATOR_INTEGRITY"
+      "examples": ["workflow", "test_harness", "protected_evaluator_configuration", "scanner_policy", "evidence_collector"],
+      "default_change_effect": ["affected_ci_or_evaluator_evidence", "evaluator_integrity_review", "gate_binding"],
+      "default_reuse": "ONLY_UNAFFECTED_EVIDENCE_NODES_REUSE"
+    },
+    "EVIDENCE_ONLY": {
+      "examples": ["append_only_review_result", "ci_run_reference", "equivalence_proof", "integration_binding", "closure_evidence"],
+      "default_change_effect": ["provenance_integrity_check"],
+      "default_reuse": "UNDERLYING_ACCEPTANCE_UNCHANGED_IF_APPEND_ONLY_AND_PROVENANCE_VALID"
+    },
+    "ROUTING_PROJECTION": {
+      "examples": ["current_status_projection", "index_pointer", "generated_routing_surface"],
+      "default_change_effect": ["projection_consistency_check"],
+      "default_reuse": "NO_ACCEPTANCE_EFFECT_UNLESS_ROUTING_CHANGE_ALTERS_AUTHORITY_RESOLUTION_OR_VALIDATOR_INPUT"
     },
     "HISTORICAL_NONCURRENT": {
-      "examples": ["superseded_phase_record", "explicitly_historical_reference"],
-      "default_on_change": "NO_CURRENT_ACCEPTANCE_EFFECT_UNLESS_ROUTING_OR_AUTHORITY_REFERENCES_IT"
+      "examples": ["superseded_phase_record", "historical_evidence", "explicitly_retained_old_candidate"],
+      "default_change_effect": ["historical_integrity_check_if_modified"],
+      "default_reuse": "NO_CURRENT_ACCEPTANCE_EFFECT_UNLESS_CURRENT_AUTHORITY_REFERENCES_IT"
     }
   },
-  "revision_classification": [
-    {"condition": "old_sha_equals_new_sha", "result": "IDENTICAL_REVISION", "evidence_action": "NONE"},
-    {"condition": "old_tree_equals_new_tree", "result": "PROVENANCE_ONLY_CHANGE", "evidence_action": "REFRESH_IDENTITY_BINDING_ONLY"},
-    {"condition": "tree_changed_and_all_protected_material_surface_hashes_equal", "result": "NON_MATERIAL_TREE_CHANGE", "evidence_action": "DELTA_REVIEW_AND_BINDING_REFRESH"},
-    {"condition": "authority_or_validator_surface_changed_but_executable_material_equal", "result": "GOVERNANCE_MATERIAL_DELTA", "evidence_action": "AUTHORITY_DELTA_REVIEW_PLUS_G5_REBINDING"},
-    {"condition": "any_executable_or_evaluator_material_changed", "result": "MATERIAL_CHANGE", "evidence_action": "INVALIDATE_AFFECTED_EVIDENCE_AND_REENTER_VERIFICATION_CHAIN"},
-    {"condition": "classification_not_provable", "result": "INCONCLUSIVE", "evidence_action": "FAIL_CLOSED"}
+  "material_surface_manifest": {
+    "required_before_g2": true,
+    "required_fields": [
+      "surface_id", "surface_class", "selectors", "criterion_refs", "evidence_obligation_refs",
+      "change_effect", "equivalence_method", "owner", "serialized_or_shared"
+    ],
+    "selector_types": ["exact_path", "path_prefix", "glob", "git_tree", "generated_inventory", "external_definition_identity"],
+    "hash_inputs": ["path", "git_object_identity_or_content_digest", "file_mode_when_material", "symlink_target_when_material"],
+    "unmatched_changed_path": "INCONCLUSIVE_UNTIL_CLASSIFIED",
+    "overlapping_surface_classes": "MOST_RESTRICTIVE_EFFECT_WINS_UNLESS_EXPLICIT_RULE_RESOLVES"
+  },
+  "evidence_node_states": [
+    "VALID_EXACT",
+    "VALID_REUSED_BY_EQUIVALENCE",
+    "STALE_BINDING",
+    "REVIEW_REQUIRED",
+    "INVALIDATED",
+    "BLOCKED",
+    "INCONCLUSIVE",
+    "SUPERSEDED_HISTORICAL"
   ],
-  "candidate_generation_rules": {
+  "revision_classification_algorithm": [
+    "establish_old_and_new_commit_and_tree_identity",
+    "establish_merge_base_or_declared_relation",
+    "compute_complete_changed_path_and_git_object_set",
+    "map_every_changed_item_to_declared_material_surface",
+    "fail_inconclusive_on_unmapped_or_ambiguous_materiality",
+    "compare_old_and_new_material_surface_manifests",
+    "classify_authority_and_evaluator_semantic_delta_when_their_content_changed",
+    "seed_evidence_effects_from_changed_surface_rules",
+    "compute_transitive_invalidation_or_review_closure",
+    "produce_equivalence_proof_for_any_reused_evidence",
+    "create_new_binding_nodes_for_reused_evidence",
+    "never_modify_original_evidence_subject_identity"
+  ],
+  "revision_classes": {
+    "IDENTICAL_REVISION": {"condition": "old_sha == new_sha", "action": "NONE"},
+    "PROVENANCE_ONLY_CHANGE": {"condition": "old_sha != new_sha and old_tree == new_tree", "action": "NEW_BINDING_REQUIRED_FOR_REVISION_SPECIFIC_GATE_OR_INTEGRATION_USE"},
+    "NON_MATERIAL_TREE_CHANGE": {"condition": "tree_changed and all acceptance_material_surfaces_equal and changed_paths_are_fully_classified_non_material", "action": "DELTA_PROOF_PLUS_BINDING_REFRESH"},
+    "GOVERNANCE_MATERIAL_DELTA": {"condition": "authority_or_validator_surface_changed and executable_and_evaluator_material_equal", "action": "AUTHORITY_DELTA_REVIEW_PLUS_ADVERSARIAL_DELTA_REVIEW_PLUS_GATE_REBINDING"},
+    "EVALUATOR_MATERIAL_DELTA": {"condition": "ci_or_evaluator_material_changed while subject implementation may be equal", "action": "RERUN_AFFECTED_EVIDENCE_AND_REVIEW_EVALUATOR_INTEGRITY"},
+    "EXECUTABLE_MATERIAL_DELTA": {"condition": "any executable material surface changed", "action": "INVALIDATE_TRANSITIVE_AFFECTED_EVIDENCE_AND_RETURN_TO_EARLIEST_REQUIRED_STAGE"},
+    "MIXED_MATERIAL_DELTA": {"condition": "more_than_one_material_class_changed", "action": "UNION_OF_EFFECTS_MOST_RESTRICTIVE_RULE_WINS"},
+    "INCONCLUSIVE": {"condition": "classification_or_equivalence_not_provable", "action": "FAIL_CLOSED"}
+  },
+  "content_equivalence": {
+    "allowed_levels": [
+      "FULL_TREE_IDENTITY",
+      "DECLARED_SURFACE_OBJECT_IDENTITY",
+      "DECLARED_SURFACE_CONTENT_DIGEST_IDENTITY",
+      "SEMANTIC_EQUIVALENCE_WITH_INDEPENDENT_REVIEW"
+    ],
+    "preferred_order": ["FULL_TREE_IDENTITY", "DECLARED_SURFACE_OBJECT_IDENTITY", "DECLARED_SURFACE_CONTENT_DIGEST_IDENTITY", "SEMANTIC_EQUIVALENCE_WITH_INDEPENDENT_REVIEW"],
+    "semantic_equivalence_not_self_asserting": true,
+    "text_claim_alone_sufficient": false,
+    "changed_authority_meaning_requires_review": true,
+    "changed_evaluator_meaning_requires_rerun_or_review": true,
+    "equivalence_proof_required_fields": [
+      "proof_id", "old_revision", "new_revision", "compared_surface_ids", "comparison_method",
+      "changed_paths", "unmapped_paths", "result", "review_refs_if_semantic", "proof_digest"
+    ],
+    "pass_requires_unmapped_paths_empty": true
+  },
+  "reuse_rules": {
+    "exact_revision": "original evidence remains VALID_EXACT",
+    "new_sha_same_tree": "underlying evidence may be referenced but revision-specific G5/integration use requires a BINDING node",
+    "surface_equivalent": "only evidence whose complete material dependency closure is proven equivalent may be reused",
+    "governance_delta": "implementation evidence may reuse; authority-sensitive reviews and G5 binding refresh",
+    "evaluator_delta": "implementation source acceptance may reuse; affected evaluator results do not",
+    "executable_delta": "affected evidence invalidated; unaffected evidence may survive only if graph proves no dependency path",
+    "historical_records": "never mutated or erased by reuse, invalidation, supersession or reopen"
+  },
+  "minimal_reverification_closure": {
+    "algorithm": [
+      "seed_nodes_from_changed_material_surfaces",
+      "mark_direct_INVALIDATES_ON_CHANGE_targets_INVALIDATED",
+      "mark_REQUIRES_REVIEW_IF_CHANGED_targets_REVIEW_REQUIRED",
+      "traverse_DEPENDS_ON_reverse_dependencies_from_any_invalid_or_review_required_node",
+      "stop_propagation_only_at_edge_with_satisfied_CARRIES_FORWARD_IF_EQUIVALENT_proof",
+      "for_each_reused_node_create_BINDING_node_to_new_revision",
+      "include_revision_specific_gate_and_integration_bindings_even_when_underlying_evidence_reused",
+      "return_earliest_orchestrator_state_required_by_remaining_invalidated_or_review_required_nodes"
+    ],
+    "conservative_fallback": "if_graph_incomplete_or_dependency_path_unknown_return_INCONCLUSIVE_not_full_reuse",
+    "full_rerun_not_default": true,
+    "minimal_rerun_may_never_drop_mandatory_evidence_floor": true
+  },
+  "criterion_and_evidence_mapping": {
+    "visible_criterion_to_material_boundary_required": true,
+    "evidence_obligation_to_material_boundary_required": true,
+    "each_required_criterion_has_at_least_one_required_evidence_obligation": true,
+    "each_evidence_obligation_declares_evidence_class_E1_to_E7": true,
+    "evidence_floor_from_020F_preserved": true,
+    "stronger_class_requires_same_claim_boundary": true,
+    "package_specific_mapping_complete_before_g2": true
+  },
+  "review_and_gate_invalidation": {
+    "independent_review": "invalidated when any material dependency reviewed by that record changes unless exact equivalence closure proves unaffected",
+    "adversarial_review": "same as independent plus freshness must be re-established for any required delta review",
+    "ci_check": "invalidated by subject material or workflow/evaluator material change relevant to the check",
+    "g5": "historical G5 remains immutable; any new candidate SHA/tree used for merge requires exact-head binding or new G5 as dictated by invalidation closure",
+    "integration": "integration SHA/tree always gets a distinct identity node and material-difference classification",
+    "reopen": "post-completion invalidation adds REOPEN_RECORD and never edits completion history"
+  },
+  "generation_and_supersession": {
     "candidate_generation_monotonic": true,
-    "evidence_must_name_generation_and_sha_tree": true,
-    "prior_generation_evidence_may_not_be_relabelled": true,
     "repair_source_change_creates_new_generation": true,
-    "historical_pass_remains_historical_fact_after_supersession": true
+    "evidence_names_generation_and_sha_tree": true,
+    "prior_generation_evidence_relabel_forbidden": true,
+    "superseded_pass_remains_historical_fact": true,
+    "failed_and_inconclusive_attempt_history_retained": true
   },
-  "review_invalidation": {
-    "implementer_source_change": ["VERIFICATION_RESULT", "INDEPENDENT_REVIEW", "ADVERSARIAL_REVIEW", "CI_CHECK", "GATE_DECISION"],
-    "reviewer_edits_source": ["REVIEWER_INDEPENDENCE_FOR_CHANGED_REVISION"],
-    "governance_material_change": ["AUTHORITY_CONSISTENCY_REVIEW", "EXACT_HEAD_GATE_BINDING"],
-    "ci_evaluator_material_change": ["AFFECTED_CI_EVIDENCE", "AFFECTED_REVIEW_OF_EVALUATOR_INTEGRITY"]
-  },
-  "phase021_replay_expectation": {
-    "old_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
+  "phase021_replay_oracle": {
+    "initial_candidate": "dc8d4ddc56c3feb011eb49abc060fdb6980ddfce",
+    "repaired_candidate": "1c36dbedf3897aef9fa0f1c67c4149eb56130b86",
     "rebound_head": "280c896cde6d2ccebe664b6e1a179c68906f0033",
-    "expected_classification": "GOVERNANCE_MATERIAL_DELTA",
-    "expected_reuse": "EXECUTABLE_IMPLEMENTATION_ACCEPTANCE_REUSABLE_AFTER_CONTENT_EQUIVALENCE_PROOF",
-    "expected_invalidated_or_refreshed": ["AUTHORITY_DELTA_REVIEW", "ADVERSARIAL_DELTA_REVIEW", "G5_EXACT_HEAD_BINDING"]
+    "implementation_integration": "a38d9cb3da9dcad70467fef15ebd91743a80bbb3",
+    "final_phase021_main": "29637b92047047f7c1e3a08ff377f4ca68a2997a",
+    "expected_cases": [
+      {
+        "case": "initial_candidate_to_repaired_candidate",
+        "classification": "EXECUTABLE_MATERIAL_DELTA",
+        "expected": ["new_candidate_generation", "affected_verification_rerun", "fresh_independent_review", "fresh_adversarial_review", "old_candidate_evidence_historical"]
+      },
+      {
+        "case": "repaired_candidate_to_rebound_head",
+        "classification": "GOVERNANCE_MATERIAL_DELTA",
+        "expected": ["executable_acceptance_reused_by_equivalence", "independent_authority_delta_review", "fresh_adversarial_delta_review", "new_exact_head_g5_binding"]
+      },
+      {
+        "case": "rebound_head_to_implementation_integration",
+        "classification": "PROVENANCE_ONLY_CHANGE",
+        "expected": ["same_tree_proof", "integration_identity_node", "post_merge_ci_as_declared", "no_silent_relabel"]
+      },
+      {
+        "case": "implementation_integration_to_final_phase021_main",
+        "classification": "EVIDENCE_ONLY_OR_GOVERNANCE_CLOSURE_DELTA",
+        "expected": ["implementation_acceptance_preserved", "closure_evidence_added", "final_current_state_complete", "phase022_unauthorized"]
+      }
+    ]
   },
-  "open_design_work": [
-    "map_each_phase022_package_visible_criterion_to_material_surfaces",
-    "define_stable_content_hash_manifest_format",
-    "define_evidence_graph_storage_and_query_model",
-    "define_minimal_reverification_closure_algorithm",
-    "define_historical_record_retention_and_supersession_links"
-  ]
+  "storage_and_query_design": {
+    "implementation_choice_deferred": true,
+    "required_queries": [
+      "why_is_evidence_node_valid_for_revision",
+      "what_changed_between_revisions",
+      "which_material_surfaces_changed",
+      "which_evidence_is_invalidated",
+      "which_evidence_may_reuse_and_why",
+      "what_is_the_minimal_required_reverification_set",
+      "which_gate_bindings_must_be_refreshed",
+      "what_historical_failures_and_superseded_results_exist"
+    ],
+    "must_be_rebuildable_from_immutable_records": true
+  },
+  "fail_closed_conditions": [
+    "changed_path_not_mapped_to_material_surface",
+    "material_surface_selector_ambiguous",
+    "equivalence_proof_missing_for_reuse",
+    "authority_semantic_delta_unreviewed",
+    "evaluator_semantic_delta_unreviewed",
+    "evidence_dependency_graph_incomplete_for_claim",
+    "revision_or_tree_identity_unknown",
+    "original_evidence_subject_identity_would_need_mutation",
+    "mandatory_evidence_floor_would_be_weakened",
+    "hidden_requirement_needed_to_justify_invalidation"
+  ],
+  "r_c_exit": {
+    "status": "COMPLETE_PASS",
+    "resolved": [
+      "evidence_graph_node_and_edge_semantics",
+      "material_surface_manifest_contract",
+      "revision_classification",
+      "content_equivalence_proof_levels",
+      "minimal_transitive_invalidation_algorithm",
+      "reuse_without_relabeling",
+      "review_ci_g5_integration_invalidation",
+      "phase021_historical_replay_oracle"
+    ],
+    "deferred_to_r_d": [
+      "agent_run_provenance_manifest_and_role_session_binding",
+      "dispatcher_context_pack_generation"
+    ],
+    "deferred_to_r_e": [
+      "github_event_to_evidence_node_mapping",
+      "webhook_deduplication_storage_and_reconciliation"
+    ],
+    "deferred_to_r_f": [
+      "mcp_query_and_action_transport_shapes_for_evidence_graph"
+    ]
+  }
 }
