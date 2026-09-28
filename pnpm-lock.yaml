@@ -90,8 +90,6 @@ importers:
 
   packages/modules/identity-access: {}
 
-  packages/modules/judging-operations: {}
-
   packages/modules/outcomes: {}
 
   packages/projections: {}

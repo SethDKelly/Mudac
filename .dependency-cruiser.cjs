@@ -1,3 +1,13 @@
+// BND-002 / BND-007: consumers may use earlier owners' public contracts.
+// This order permits upstream consumption; it does not require direct imports.
+const owners = [
+  'competition',
+  'identity-access',
+  'evaluation',
+  'outcomes',
+  'external-representation',
+];
+
 module.exports = {
   forbidden: [
     {
@@ -18,40 +28,34 @@ module.exports = {
       from: { path: '^packages/modules/' },
       to: { path: '^packages/(application|projections)/' },
     },
-    {
-      name: 'competition-has-no-downstream-module-dependencies',
+    ...owners.map((owner, index) => ({
+      name: `${owner}-uses-only-upstream-owners`,
       severity: 'error',
-      from: { path: '^packages/modules/competition/' },
+      from: { path: `^packages/modules/${owner}/` },
       to: {
-        path: '^packages/modules/(identity-access|judging-operations|evaluation|outcomes|external-representation)/',
+        path: '^packages/modules/',
+        pathNot: `^packages/modules/(${owners.slice(0, index + 1).join('|')})/`,
       },
-    },
+    })),
     {
-      name: 'identity-access-has-no-downstream-module-dependencies',
+      name: 'undeclared-owners-do-not-depend-on-modules',
       severity: 'error',
-      from: { path: '^packages/modules/identity-access/' },
+      from: {
+        path: '^packages/modules/',
+        pathNot: `^packages/modules/(${owners.join('|')})/`,
+      },
+      to: { path: '^packages/modules/' },
+    },
+    // BND-006: relative imports must not bypass the package export seam.
+    ...owners.map((owner) => ({
+      name: `${owner}-exposes-only-public-contracts`,
+      severity: 'error',
+      from: { pathNot: `^packages/modules/${owner}/` },
       to: {
-        path: '^packages/modules/(judging-operations|evaluation|outcomes|external-representation)/',
+        path: `^packages/modules/${owner}/src/`,
+        pathNot: `^packages/modules/${owner}/src/public\\.ts$`,
       },
-    },
-    {
-      name: 'judging-operations-has-no-downstream-module-dependencies',
-      severity: 'error',
-      from: { path: '^packages/modules/judging-operations/' },
-      to: { path: '^packages/modules/(evaluation|outcomes|external-representation)/' },
-    },
-    {
-      name: 'evaluation-has-no-downstream-module-dependencies',
-      severity: 'error',
-      from: { path: '^packages/modules/evaluation/' },
-      to: { path: '^packages/modules/(outcomes|external-representation)/' },
-    },
-    {
-      name: 'outcomes-has-no-representation-dependency',
-      severity: 'error',
-      from: { path: '^packages/modules/outcomes/' },
-      to: { path: '^packages/modules/external-representation/' },
-    },
+    })),
     {
       name: 'foundation-remains-business-neutral',
       severity: 'error',
