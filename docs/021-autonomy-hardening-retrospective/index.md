@@ -2,7 +2,7 @@
 type: Phase Retrospective Boundary
 title: Phase 021-R — Autonomy-Hardening Retrospective & Pre-022 Control-Plane Design
 description: "Post-completion Phase-021 retrospective that converts the proven IMP-001 operating process into a more autonomous, machine-routed development control plane without reopening IMP-001 or authorizing Phase 022."
-status: active
+status: draft
 tags: [phase-021, retrospective, autonomy, orchestration, evidence, cursor, codex, github, mcp]
 sources:
   - resource: ../021-source-topology-implementation-foundation/index.md
