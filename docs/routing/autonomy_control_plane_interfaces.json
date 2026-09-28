@@ -1,12 +1,13 @@
 {
-  "schema": "mudac.autonomy-control-plane-interfaces/v0.2-retrospective",
-  "status": "R_D_COMPLETE_REMAINDER_DESIGN_DRAFT",
+  "schema": "mudac.autonomy-control-plane-interfaces/v0.3-retrospective",
+  "status": "R_E_COMPLETE_REMAINDER_DESIGN_DRAFT",
   "implementation_status": "NOT_IMPLEMENTED",
   "authority_record": "docs/routing/phase021_autonomy_hardening_retrospective.json",
   "contracts": {
     "orchestrator": "docs/routing/autonomy_orchestrator_contract.json",
     "evidence_graph": "docs/routing/autonomy_evidence_dependency_contract.json",
-    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json"
+    "agent_dispatch": "docs/routing/autonomy_agent_dispatch_contract.json",
+    "github_event_adapter": "docs/routing/autonomy_github_event_contract.json"
   },
   "purpose": "Define the common control-plane interfaces used to automate coordination without increasing semantic or execution authority.",
   "agent_dispatcher": {
@@ -24,26 +25,24 @@
     "secret_values_in_dispatch_or_provenance_forbidden": true
   },
   "github_event_adapter": {
-    "status": "R_E_NOT_YET_COMPLETE",
+    "status": "R_E_COMPLETE_DESIGN_ONLY",
+    "contract": "docs/routing/autonomy_github_event_contract.json",
     "design_mode_only": true,
-    "accepted_event_families": [
-      "pull_request.opened",
-      "pull_request.synchronize",
-      "pull_request.ready_for_review",
-      "pull_request.converted_to_draft",
-      "pull_request.closed",
-      "pull_request.merged",
-      "check_run.completed",
-      "check_suite.completed",
-      "workflow_run.completed",
-      "push"
-    ],
+    "event_is_notification_not_lifecycle_truth": true,
+    "accepted_event_families": ["pull_request", "check_run", "check_suite", "workflow_run", "push"],
+    "delivery_idempotency_required": true,
+    "semantic_fact_idempotency_required": true,
     "event_order_not_trusted": true,
-    "reconcile_against_github_current_truth": true,
-    "duplicate_delivery_must_be_idempotent": true,
-    "unknown_event_may_not_advance_state": true,
-    "must_correlate_dispatch_run_candidate_and_pr_identities": true,
-    "next_design_owner": "021-R-E"
+    "reconcile_against_current_github_and_repository_truth": true,
+    "missed_event_reconciliation_required": true,
+    "must_correlate_dispatch_run_candidate_pr_and_integration_identities": true,
+    "exact_head_required_check_evaluation": true,
+    "legacy_combined_status_is_not_primary_required_check_truth": true,
+    "pr_head_or_base_drift_routes_to_evidence_graph": true,
+    "closure_pr_dependency_choreography_defined": true,
+    "side_effects_require_idempotent_operation_id_and_optimistic_preconditions": true,
+    "serialized_surface_reservations_are_event_backed": true,
+    "github_event_may_grant_human_authority": false
   },
   "development_control_mcp": {
     "status": "R_F_NOT_YET_COMPLETE",
@@ -90,7 +89,7 @@
     "next_design_owner": "021-R-F"
   },
   "phase020_d_composition": {
-    "development_control_plane_role": "coordinates_implementation_lifecycle_agents_and_evidence",
+    "development_control_plane_role": "coordinates_implementation_lifecycle_agents_github_and_evidence",
     "test_control_plane_role": "exercises_nonproduction_application_behavior_and_observability",
     "shared_security_principles": [
       "capability_allowlist",
@@ -104,7 +103,6 @@
     "test_control_must_not_grant_implementation_authority": true
   },
   "remaining_design_work": [
-    "R_E_github_event_ingress_idempotency_reconciliation",
     "R_F_mcp_schema_authorization_error_model_and_security_boundary",
     "R_G_shadow_mode_failure_injection_and_exit_review"
   ],
