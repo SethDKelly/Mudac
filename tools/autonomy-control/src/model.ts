@@ -54,12 +54,7 @@ export interface ProjectionTraceEntry {
   eventType: string;
   stateBefore: LifecycleState;
   stateAfter: LifecycleState;
-  disposition:
-    | 'APPLIED'
-    | 'HISTORICAL_NO_ADVANCE'
-    | 'IDEMPOTENT_NOOP'
-    | 'BLOCKED'
-    | 'INCONCLUSIVE';
+  disposition: 'APPLIED' | 'HISTORICAL_NO_ADVANCE' | 'IDEMPOTENT_NOOP' | 'BLOCKED' | 'INCONCLUSIVE';
   reason: string;
 }
 

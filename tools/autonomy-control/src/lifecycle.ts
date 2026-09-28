@@ -37,7 +37,11 @@ const transitions: readonly Transition[] = [
   transition('candidate.registered', 'IMPLEMENTING', 'CANDIDATE_REGISTERED'),
   transition('verification.started', 'CANDIDATE_REGISTERED', 'VERIFYING'),
   transition('verification.pass', 'VERIFYING', 'AWAITING_INDEPENDENT_REVIEW'),
-  transition('review.independent.pass', 'AWAITING_INDEPENDENT_REVIEW', 'AWAITING_ADVERSARIAL_REVIEW'),
+  transition(
+    'review.independent.pass',
+    'AWAITING_INDEPENDENT_REVIEW',
+    'AWAITING_ADVERSARIAL_REVIEW',
+  ),
   transition('review.adversarial.pass', 'AWAITING_ADVERSARIAL_REVIEW', 'AWAITING_PR_CI'),
   transition('github.check.required_set_pass', 'AWAITING_PR_CI', 'AWAITING_G5'),
   transition('gate.g5.pass', 'AWAITING_G5', 'AWAITING_HUMAN_MERGE'),
@@ -130,7 +134,8 @@ export function projectLifecycle(
   inputFacts: readonly LifecycleFact[],
 ): ProjectionResult {
   const facts = [...inputFacts].sort(
-    (left, right) => left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
+    (left, right) =>
+      left.logicalOrder - right.logicalOrder || left.factId.localeCompare(right.factId),
   );
   const trace: ProjectionTraceEntry[] = [];
   const seenFacts = new Map<string, LifecycleFact>();
@@ -280,7 +285,9 @@ export function projectLifecycle(
       stateBefore,
       stateAfter: state,
       disposition: 'APPLIED',
-      reason: selected.requiredHumanAuthorityKind ? 'matching_human_authority_observed' : 'guards_passed',
+      reason: selected.requiredHumanAuthorityKind
+        ? 'matching_human_authority_observed'
+        : 'guards_passed',
     });
   }
 

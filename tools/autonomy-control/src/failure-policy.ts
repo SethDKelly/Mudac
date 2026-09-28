@@ -5,13 +5,7 @@ import { phase021Identity } from './replay.js';
 import type { GuardDecision, HumanAuthorityKind, LifecycleFact } from './model.js';
 
 export type AutFailureStage =
-  | 'AUT-001-A'
-  | 'AUT-001-B'
-  | 'AUT-001-C'
-  | 'AUT-001-D'
-  | 'AUT-001-E'
-  | 'AUT-001-F'
-  | 'AUT-001-G';
+  'AUT-001-A' | 'AUT-001-B' | 'AUT-001-C' | 'AUT-001-D' | 'AUT-001-E' | 'AUT-001-F' | 'AUT-001-G';
 
 export type FailureCaseId =
   | 'FI-01'
@@ -61,7 +55,11 @@ export interface FailureExecutionResult {
 export const failureCaseMatrix: readonly FailureCaseDefinition[] = [
   { id: 'FI-01', injection: 'duplicate_delivery_same_payload', stageA: 'EXECUTABLE_IN_A' },
   { id: 'FI-02', injection: 'duplicate_delivery_conflicting_payload', stageA: 'EXECUTABLE_IN_A' },
-  { id: 'FI-03', injection: 'late_success_check_for_superseded_candidate', stageA: 'EXECUTABLE_IN_A' },
+  {
+    id: 'FI-03',
+    injection: 'late_success_check_for_superseded_candidate',
+    stageA: 'EXECUTABLE_IN_A',
+  },
   {
     id: 'FI-04',
     injection: 'out_of_order_merge_notification_without_reconciled_current_truth',
@@ -187,7 +185,8 @@ export const failureCaseMatrix: readonly FailureCaseDefinition[] = [
   },
   {
     id: 'FI-28',
-    injection: 'same_provider_used_for_implementer_and_reviews_but_distinct_role_bound_fresh_sessions',
+    injection:
+      'same_provider_used_for_implementer_and_reviews_but_distinct_role_bound_fresh_sessions',
     stageA: 'DEFERRED',
     deferredTo: ['AUT-001-C', 'AUT-001-G'],
   },
@@ -218,7 +217,10 @@ function lifecycleFact(
   };
 }
 
-function executed(definition: FailureCaseDefinition, observedDisposition: string): FailureExecutionResult {
+function executed(
+  definition: FailureCaseDefinition,
+  observedDisposition: string,
+): FailureExecutionResult {
   return {
     id: definition.id,
     injection: definition.injection,
@@ -297,7 +299,11 @@ export function executeStageAFailureCase(id: FailureCaseId): FailureExecutionRes
         oldRevision: phase021Identity.repairedCandidate,
         newRevision: phase021Identity.reboundHead,
         changedSurfaces: [
-          { surfaceId: 'authority-delta', surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL', mapped: true },
+          {
+            surfaceId: 'authority-delta',
+            surfaceClass: 'AUTHORITY_GOVERNANCE_MATERIAL',
+            mapped: true,
+          },
         ],
       });
       const projection = projectLifecycle('AWAITING_HUMAN_MERGE', [
@@ -343,23 +349,26 @@ export function executeStageAFailureCase(id: FailureCaseId): FailureExecutionRes
       ]);
       return executed(
         definition,
-        projection.state === 'BLOCKED' ? 'BLOCKED_HUMAN_PROGRAM_EXTENSION_REQUIRED' : projection.state,
+        projection.state === 'BLOCKED'
+          ? 'BLOCKED_HUMAN_PROGRAM_EXTENSION_REQUIRED'
+          : projection.state,
       );
     }
     case 'FI-20': {
       const projection = projectLifecycle('AWAITING_PR_CI', []);
       return executed(
         definition,
-        projection.state === 'AWAITING_PR_CI'
-          ? 'NO_REQUIRED_CI_PASS_TRANSITION'
-          : projection.state,
+        projection.state === 'AWAITING_PR_CI' ? 'NO_REQUIRED_CI_PASS_TRANSITION' : projection.state,
       );
     }
     case 'FI-22': {
       const projection = projectLifecycle('AWAITING_G5', [
         lifecycleFact('g5-pass', 'gate.g5.pass'),
       ]);
-      return executed(definition, projection.state === 'AWAITING_HUMAN_MERGE' ? 'AWAIT_HUMAN_MERGE' : projection.state);
+      return executed(
+        definition,
+        projection.state === 'AWAITING_HUMAN_MERGE' ? 'AWAIT_HUMAN_MERGE' : projection.state,
+      );
     }
     case 'FI-23': {
       const projection = projectLifecycle('COMPLETE', [

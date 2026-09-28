@@ -191,7 +191,10 @@ describe('AUT-001-A fail-closed lifecycle behavior', () => {
       payloadDigest: 'post-completion-invalidation',
       payload: { eventType: 'invalidation.material_confirmed', guardDecision: 'PASS' },
     };
-    const projection = projectLifecycle('PLANNING_READY', [...phase021LifecycleFacts, invalidation]);
+    const projection = projectLifecycle('PLANNING_READY', [
+      ...phase021LifecycleFacts,
+      invalidation,
+    ]);
     expect(projection.state).toBe('REOPEN_REQUIRED');
     expect(projection.eligibleNextActions).toContain('authority.reopen_g2_granted');
   });
@@ -240,7 +243,8 @@ describe('AUT-001-A revision classification and evidence reuse', () => {
 
   it('covers every revision classification and the same-SHA conflict path', () => {
     expect(
-      classifyRevisionDelta({ oldRevision, newRevision: oldRevision, changedSurfaces: [] }).classification,
+      classifyRevisionDelta({ oldRevision, newRevision: oldRevision, changedSurfaces: [] })
+        .classification,
     ).toBe('IDENTICAL_REVISION');
     expect(
       classifyRevisionDelta({
@@ -326,9 +330,9 @@ describe('AUT-001-A revision classification and evidence reuse', () => {
 
 describe('AUT-001-A R-G failure-case partition and executable subset', () => {
   it('covers every canonical FI identity and injection without reading contract expected/result fields', () => {
-    expect(
-      failureCaseMatrix.map(({ id, injection }) => ({ id, injection })),
-    ).toEqual(replayContract.failure_injection_cases);
+    expect(failureCaseMatrix.map(({ id, injection }) => ({ id, injection }))).toEqual(
+      replayContract.failure_injection_cases,
+    );
     expect(failureCaseMatrix).toHaveLength(28);
   });
 

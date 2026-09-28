@@ -46,7 +46,9 @@ describe('AUT-001-A material-path qualification', () => {
 
   it('binds every qualification to an existing canonical surface with the same material class', () => {
     for (const mapping of qualification.mappings) {
-      const canonical = manifest.surfaces.find((surface) => surface.surface_id === mapping.surface_id);
+      const canonical = manifest.surfaces.find(
+        (surface) => surface.surface_id === mapping.surface_id,
+      );
       expect(canonical, mapping.surface_id).toBeDefined();
       expect(canonical?.surface_class).toBe(mapping.surface_class);
     }
