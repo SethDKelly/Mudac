@@ -27,20 +27,31 @@ describe('AUT-001-B required-check set authority', () => {
       'Implementation Verification',
       'CodeQL JavaScript/TypeScript',
     ],
+    expectedRefNameCondition: {
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [],
+    },
+    stageAuthorityDeltaPath: 'docs/routing/aut001_b_stage_authority_material_delta.json',
+  };
+
+  const authorizedLiveRuleset = {
+    rulesetId: 1,
+    rulesetName: 'main — protected',
+    enforcement: 'active' as const,
+    target: 'branch' as const,
+    requiredContexts: [
+      'CodeQL JavaScript/TypeScript',
+      'Implementation Verification',
+      'Validate agentic/documentation conformance',
+    ],
+    refNameCondition: {
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [] as string[],
+    },
   };
 
   it('agrees when package and live ruleset contexts match exactly', () => {
-    const comparison = compareRequiredCheckAuthority(packageAuthority, {
-      rulesetId: 1,
-      rulesetName: 'main — protected',
-      enforcement: 'active',
-      target: 'branch',
-      requiredContexts: [
-        'CodeQL JavaScript/TypeScript',
-        'Implementation Verification',
-        'Validate agentic/documentation conformance',
-      ],
-    });
+    const comparison = compareRequiredCheckAuthority(packageAuthority, authorizedLiveRuleset);
     expect(comparison.status).toBe('AGREED');
     if (comparison.status === 'AGREED') {
       expect(comparison.requiredContexts).toEqual([
@@ -53,11 +64,44 @@ describe('AUT-001-B required-check set authority', () => {
 
   it('mismatches when package and live contexts differ', () => {
     const comparison = compareRequiredCheckAuthority(packageAuthority, {
-      rulesetId: 1,
-      rulesetName: 'main — protected',
-      enforcement: 'active',
-      target: 'branch',
+      ...authorizedLiveRuleset,
       requiredContexts: ['Implementation Verification', 'CodeQL'],
+    });
+    expect(comparison.status).toBe('MISMATCH');
+  });
+
+  it('mismatches when live ruleset ref_name condition disagrees with authority', () => {
+    const comparison = compareRequiredCheckAuthority(packageAuthority, {
+      ...authorizedLiveRuleset,
+      refNameCondition: {
+        include: ['refs/heads/main'],
+        exclude: [],
+      },
+    });
+    expect(comparison.status).toBe('MISMATCH');
+    if (comparison.status !== 'AGREED') {
+      expect(comparison.reason).toBe('package_and_live_ruleset_ref_name_condition_disagree');
+    }
+  });
+
+  it('mismatches when live ruleset includes unexpected exclusions', () => {
+    const comparison = compareRequiredCheckAuthority(packageAuthority, {
+      ...authorizedLiveRuleset,
+      refNameCondition: {
+        include: ['~DEFAULT_BRANCH'],
+        exclude: ['refs/heads/release/*'],
+      },
+    });
+    expect(comparison.status).toBe('MISMATCH');
+  });
+
+  it('mismatches when live ruleset has multiple include selectors', () => {
+    const comparison = compareRequiredCheckAuthority(packageAuthority, {
+      ...authorizedLiveRuleset,
+      refNameCondition: {
+        include: ['~DEFAULT_BRANCH', 'refs/heads/main'],
+        exclude: [],
+      },
     });
     expect(comparison.status).toBe('MISMATCH');
   });

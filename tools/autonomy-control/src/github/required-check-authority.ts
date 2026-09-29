@@ -2,6 +2,7 @@ import type {
   LiveRulesetRequiredChecks,
   PackageRequiredCheckAuthority,
   RequiredCheckAuthorityComparison,
+  RulesetRefNameCondition,
 } from './model.js';
 
 function sortedUnique(values: readonly string[]): readonly string[] {
@@ -12,6 +13,13 @@ function sameSet(left: readonly string[], right: readonly string[]): boolean {
   const a = sortedUnique(left);
   const b = sortedUnique(right);
   return a.length === b.length && a.every((item, index) => item === b[index]);
+}
+
+function sameRefNameCondition(
+  expected: RulesetRefNameCondition,
+  live: RulesetRefNameCondition,
+): boolean {
+  return sameSet(expected.include, live.include) && sameSet(expected.exclude, live.exclude);
 }
 
 export function compareRequiredCheckAuthority(
@@ -36,6 +44,19 @@ export function compareRequiredCheckAuthority(
     return {
       status: 'INCONCLUSIVE',
       reason: 'ruleset_enforcement_not_active',
+      packageAuthority,
+      liveRuleset,
+      packageContexts,
+      liveContexts,
+    };
+  }
+
+  if (
+    !sameRefNameCondition(packageAuthority.expectedRefNameCondition, liveRuleset.refNameCondition)
+  ) {
+    return {
+      status: 'MISMATCH',
+      reason: 'package_and_live_ruleset_ref_name_condition_disagree',
       packageAuthority,
       liveRuleset,
       packageContexts,

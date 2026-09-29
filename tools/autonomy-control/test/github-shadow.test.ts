@@ -121,6 +121,10 @@ class FakeReadClient implements GitHubReadClient {
     enforcement: 'active',
     target: 'branch',
     requiredContexts: ['Implementation Verification'],
+    refNameCondition: {
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [],
+    },
   };
   ancestor: boolean | 'UNKNOWN' = false;
   failOn?: string;
@@ -206,6 +210,11 @@ const agreedAuthority = {
     rulesetName: 'main — protected',
     rulesetEnforcement: 'active',
     packageRequiredContexts: ['Implementation Verification'],
+    expectedRefNameCondition: {
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [] as string[],
+    },
+    stageAuthorityDeltaPath: 'docs/routing/aut001_b_stage_authority_material_delta.json',
   },
   liveRuleset: {
     rulesetId: 1,
@@ -213,6 +222,10 @@ const agreedAuthority = {
     enforcement: 'active' as const,
     target: 'branch' as const,
     requiredContexts: ['Implementation Verification'],
+    refNameCondition: {
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [] as string[],
+    },
   },
 };
 

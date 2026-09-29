@@ -87,12 +87,18 @@ export interface WorkflowTruth {
     | null;
 }
 
+export interface RulesetRefNameCondition {
+  include: readonly string[];
+  exclude: readonly string[];
+}
+
 export interface LiveRulesetRequiredChecks {
   rulesetId: number;
   rulesetName: string;
   enforcement: 'active';
   target: 'branch';
   requiredContexts: readonly string[];
+  refNameCondition: RulesetRefNameCondition;
 }
 
 export interface PackageRequiredCheckAuthority {
@@ -101,6 +107,8 @@ export interface PackageRequiredCheckAuthority {
   rulesetName: string;
   rulesetEnforcement: string;
   packageRequiredContexts: readonly string[];
+  expectedRefNameCondition: RulesetRefNameCondition;
+  stageAuthorityDeltaPath: string;
 }
 
 export type RequiredCheckAuthorityComparison =

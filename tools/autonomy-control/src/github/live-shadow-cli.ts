@@ -86,11 +86,14 @@ if (authorityComparison.status !== 'AGREED') {
       schema: packageAuthority.packageSchema,
       rulesetName: packageAuthority.rulesetName,
       requiredContexts: packageAuthority.packageRequiredContexts,
+      expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
+      stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
     },
     liveRuleset: {
       rulesetId: liveRuleset.rulesetId,
       rulesetName: liveRuleset.rulesetName,
       requiredContexts: liveRuleset.requiredContexts,
+      refNameCondition: liveRuleset.refNameCondition,
     },
     authoritySetComparison: authorityComparison,
     runtimeBoundary: {
@@ -170,11 +173,14 @@ if (authorityComparison.status !== 'AGREED') {
       schema: packageAuthority.packageSchema,
       rulesetName: packageAuthority.rulesetName,
       requiredContexts: packageAuthority.packageRequiredContexts,
+      expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
+      stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
     },
     liveRuleset: {
       rulesetId: liveRuleset.rulesetId,
       rulesetName: liveRuleset.rulesetName,
       requiredContexts: liveRuleset.requiredContexts,
+      refNameCondition: liveRuleset.refNameCondition,
     },
     authoritySetComparison: {
       status: authorityComparison.status,

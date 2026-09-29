@@ -4,6 +4,7 @@ import type {
   LiveRulesetRequiredChecks,
   PullRequestTruth,
   RefTruth,
+  RulesetRefNameCondition,
   WorkflowTruth,
 } from './model.js';
 
@@ -91,6 +92,39 @@ function repositoryPath(repositoryFullName: string): string {
     throw new Error('invalid_repository_full_name');
   }
   return `${encodeURIComponent(parts[0])}/${encodeURIComponent(parts[1])}`;
+}
+
+function stringList(value: unknown, context: string): readonly string[] {
+  if (!Array.isArray(value)) {
+    throw new Error(`invalid_github_response:${context}`);
+  }
+  return value.map((item, index) => {
+    const entry = text(item, `${context}.${index}`);
+    if (entry !== entry.trim()) {
+      throw new Error(`invalid_github_response:${context}.${index}.whitespace`);
+    }
+    return entry;
+  });
+}
+
+export function parseRulesetRefNameCondition(conditions: unknown): RulesetRefNameCondition {
+  if (conditions === undefined || conditions === null) {
+    throw new Error('github_ruleset_conditions_missing');
+  }
+  const conditionsRecord = record(conditions, 'ruleset_details.conditions');
+  if (!('ref_name' in conditionsRecord) || conditionsRecord.ref_name === undefined) {
+    throw new Error('github_ruleset_ref_name_missing');
+  }
+  const refName = record(conditionsRecord.ref_name, 'ruleset_details.conditions.ref_name');
+  if (!('include' in refName) || !('exclude' in refName)) {
+    throw new Error('github_ruleset_ref_name_malformed');
+  }
+  const include = stringList(refName.include, 'ruleset_details.conditions.ref_name.include');
+  const exclude = stringList(refName.exclude, 'ruleset_details.conditions.ref_name.exclude');
+  if (include.length === 0) {
+    throw new Error('github_ruleset_ref_name_include_empty');
+  }
+  return { include, exclude };
 }
 
 export class GitHubRestReadClient implements GitHubReadClient {
@@ -273,6 +307,8 @@ export class GitHubRestReadClient implements GitHubReadClient {
       throw new Error('github_ruleset_unsupported_target');
     }
 
+    const refNameCondition = parseRulesetRefNameCondition(details.conditions);
+
     const rules = details.rules;
     if (!Array.isArray(rules)) throw new Error('invalid_github_response:ruleset_details.rules');
 
@@ -312,6 +348,7 @@ export class GitHubRestReadClient implements GitHubReadClient {
       enforcement: 'active',
       target: 'branch',
       requiredContexts,
+      refNameCondition,
     };
   }
 

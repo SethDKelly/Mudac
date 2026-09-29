@@ -104,6 +104,13 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
       'Implementation Verification',
       'CodeQL JavaScript/TypeScript',
     ]);
+    expect(authority.expectedRefNameCondition).toEqual({
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [],
+    });
+    expect(authority.stageAuthorityDeltaPath).toBe(
+      'docs/routing/aut001_b_stage_authority_material_delta.json',
+    );
   });
 
   it('reads the named active ruleset and extracts required contexts', async () => {
@@ -124,6 +131,12 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
           name: 'main — protected',
           target: 'branch',
           enforcement: 'active',
+          conditions: {
+            ref_name: {
+              include: ['~DEFAULT_BRANCH'],
+              exclude: [],
+            },
+          },
           rules: [
             {
               type: 'required_status_checks',
@@ -147,6 +160,10 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
       'Implementation Verification',
       'CodeQL JavaScript/TypeScript',
     ]);
+    expect(ruleset.refNameCondition).toEqual({
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [],
+    });
   });
 
   it('fails closed when the named ruleset is missing', async () => {
@@ -189,6 +206,9 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
         name: 'main — protected',
         target: 'branch',
         enforcement: 'active',
+        conditions: {
+          ref_name: { include: ['~DEFAULT_BRANCH'], exclude: [] },
+        },
         rules: [{ type: 'pull_request', parameters: {} }],
       });
     };
@@ -210,6 +230,9 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
         name: 'main — protected',
         target: 'branch',
         enforcement: 'active',
+        conditions: {
+          ref_name: { include: ['~DEFAULT_BRANCH'], exclude: [] },
+        },
         rules: [
           {
             type: 'required_status_checks',
@@ -240,5 +263,110 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
     await expect(
       client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
     ).rejects.toThrow('github_ruleset_list_pagination_incomplete');
+  });
+});
+
+describe('AUT-B-R1-IR-03 ruleset enforcement-scope ref_name validation', () => {
+  function rulesetDetails(overrides: Record<string, unknown> = {}) {
+    return {
+      id: 1,
+      name: 'main — protected',
+      target: 'branch',
+      enforcement: 'active',
+      conditions: {
+        ref_name: { include: ['~DEFAULT_BRANCH'], exclude: [] },
+      },
+      rules: [
+        {
+          type: 'required_status_checks',
+          parameters: {
+            required_status_checks: [{ context: 'Implementation Verification' }],
+          },
+        },
+      ],
+      ...overrides,
+    };
+  }
+
+  function clientForDetails(details: Record<string, unknown>): GitHubRestReadClient {
+    const fetchImpl: GitHubFetch = async (url) => {
+      if (url.includes('?per_page=')) {
+        return response([
+          { id: 1, name: 'main — protected', target: 'branch', enforcement: 'active' },
+        ]);
+      }
+      return response(details);
+    };
+    return new GitHubRestReadClient(fetchImpl);
+  }
+
+  it('accepts the authorized ~DEFAULT_BRANCH include with empty exclusions', async () => {
+    const ruleset = await clientForDetails(rulesetDetails()).readRulesetRequiredChecks(
+      'SethDKelly/Mudac',
+      'main — protected',
+    );
+    expect(ruleset.refNameCondition).toEqual({
+      include: ['~DEFAULT_BRANCH'],
+      exclude: [],
+    });
+  });
+
+  it('records wrong explicit branch selectors without coercing them', async () => {
+    const ruleset = await clientForDetails(
+      rulesetDetails({
+        conditions: {
+          ref_name: { include: ['refs/heads/develop'], exclude: [] },
+        },
+      }),
+    ).readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected');
+    expect(ruleset.refNameCondition.include).toEqual(['refs/heads/develop']);
+  });
+
+  it('fails closed when conditions are missing', async () => {
+    const details = rulesetDetails();
+    delete details.conditions;
+    await expect(
+      clientForDetails(details).readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_conditions_missing');
+  });
+
+  it('fails closed when ref_name is missing', async () => {
+    await expect(
+      clientForDetails(rulesetDetails({ conditions: {} })).readRulesetRequiredChecks(
+        'SethDKelly/Mudac',
+        'main — protected',
+      ),
+    ).rejects.toThrow('github_ruleset_ref_name_missing');
+  });
+
+  it('fails closed on malformed conditions structures', async () => {
+    await expect(
+      clientForDetails(
+        rulesetDetails({
+          conditions: { ref_name: { include: '~DEFAULT_BRANCH', exclude: [] } },
+        }),
+      ).readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('invalid_github_response:ruleset_details.conditions.ref_name.include');
+  });
+
+  it('fails closed when the matching ruleset is inactive even if ref_name is correct', async () => {
+    const fetchImpl: GitHubFetch = async () =>
+      response([{ id: 1, name: 'main — protected', target: 'branch', enforcement: 'disabled' }]);
+    const client = new GitHubRestReadClient(fetchImpl);
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_inactive');
+  });
+
+  it('fails closed when duplicate same-name rulesets are returned', async () => {
+    const client = new GitHubRestReadClient(async () =>
+      response([
+        { id: 1, name: 'main — protected', target: 'branch', enforcement: 'active' },
+        { id: 2, name: 'main — protected', target: 'branch', enforcement: 'active' },
+      ]),
+    );
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_name_not_unique');
   });
 });
