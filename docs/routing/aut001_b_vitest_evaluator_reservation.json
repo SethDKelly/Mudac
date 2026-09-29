@@ -1,19 +1,24 @@
 {
-  "schema": "mudac.aut001-b-vitest-evaluator-reservation/v1",
+  "schema": "mudac.aut001-b-vitest-evaluator-reservation/v2",
   "package_id": "AUT-001",
   "subphase": "AUT-001-B",
   "reservation_id": "AUT001-B-SR-002",
-  "repair_cycle": "Repair Cycle 1",
-  "finding": "AUT-B-IR-02",
+  "repair_cycle": "Repair Cycle 2",
+  "findings": ["AUT-B-IR-02", "AUT-B-R1-IR-02"],
   "decision": "RESERVED_FOR_STAGE_B_HARNESS_INCLUSION_IN_CANONICAL_PNPM_TEST",
   "authority": {
     "g2_record": "docs/routing/aut001_g2_authorization.json",
     "b_start_gate": "docs/routing/aut001_b_stage_transition_start_gate.json",
+    "immutable_g1_package_contract": "docs/routing/aut001_implementation_package_contract.json",
+    "immutable_g1_material_surface_manifest": "docs/routing/aut001_material_surface_manifest.json",
+    "stage_b_authority_material_delta": "docs/routing/aut001_b_stage_authority_material_delta.json",
     "creates_new_g2": false,
     "scope_expansion": false,
     "criteria_weakening": false,
     "writable_application_or_domain_expansion": false,
-    "production_authority": false
+    "production_authority": false,
+    "phase022_authority": false,
+    "g1_selector_set_rewritten": false
   },
   "necessity": {
     "evidence_obligation": "AUT-E03",
@@ -22,7 +27,10 @@
   },
   "surface": {
     "path": "vitest.config.ts",
-    "mapped_material_surface": "AUT-MS-ROOT-WORKSPACE",
+    "mapped_material_surface": "AUT-MS-ROOT-WORKSPACE-B-EXT",
+    "classification_authority": "docs/routing/aut001_b_stage_authority_material_delta.json",
+    "immutable_g1_surface_does_not_select_path": true,
+    "immutable_g1_related_surface": "AUT-MS-ROOT-WORKSPACE",
     "surface_class": "CI_EVALUATOR_MATERIAL",
     "serialized": true,
     "reservation_state": "ACQUIRED",
@@ -35,8 +43,10 @@
     "fresh_exact_head_repository_verification_required": true,
     "fresh_independent_review_required": true,
     "fresh_adversarial_review_required": true,
+    "g5_rebinding_required": true,
     "no_criteria_weakening": true,
     "no_production_authority": true,
     "unmapped_path_disposition": "INCONCLUSIVE_UNTIL_CLASSIFIED"
-  }
+  },
+  "review_answer": "vitest.config.ts is classified because the additive Stage-B authority/material delta AUT-MS-ROOT-WORKSPACE-B-EXT explicitly selects it as shared/serialized CI_EVALUATOR_MATERIAL for canonical Stage-B harness inclusion. The immutable pre-G2 AUT-MS-ROOT-WORKSPACE selector set is unchanged and does not itself claim this path."
 }
