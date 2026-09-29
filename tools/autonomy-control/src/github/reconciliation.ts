@@ -5,6 +5,7 @@ import type { LifecycleFact, LifecycleState } from '../model.js';
 import { evaluateRequiredChecks } from './checks.js';
 import type {
   DeliveryEnvelope,
+  GitHubEventFamily,
   GitHubTruthSnapshot,
   ShadowDivergence,
   ShadowObservation,
@@ -13,6 +14,23 @@ import type {
 
 export type DeliveryTruthDisposition =
   'CURRENT_NOTIFICATION' | 'HISTORICAL_NO_ADVANCE' | 'RECORD_NO_ADVANCE';
+
+const acceptedActionsByFamily: Readonly<
+  Record<Exclude<GitHubEventFamily, 'unknown'>, readonly (string | null)[]>
+> = {
+  pull_request: [
+    'opened',
+    'reopened',
+    'synchronize',
+    'ready_for_review',
+    'converted_to_draft',
+    'closed',
+  ],
+  check_run: ['created', 'completed', 'rerequested', 'requested_action'],
+  check_suite: ['completed', 'requested', 'rerequested'],
+  workflow_run: ['requested', 'in_progress', 'completed'],
+  push: [null],
+};
 
 const lifecycleRank: Readonly<Partial<Record<LifecycleState, number>>> = {
   IDLE: 0,
@@ -52,11 +70,23 @@ function nextLogicalOrder(facts: readonly LifecycleFact[]): number | undefined {
   return Math.floor(max) + 1;
 }
 
+export function isAcceptedEventAction(
+  eventFamily: GitHubEventFamily,
+  action: string | null,
+): boolean {
+  if (eventFamily === 'unknown') return false;
+  const accepted = acceptedActionsByFamily[eventFamily];
+  return accepted.some((item) => item === action);
+}
+
 export function classifyDeliveryAgainstTruth(
   delivery: DeliveryEnvelope,
   truth: GitHubTruthSnapshot,
 ): DeliveryTruthDisposition {
   if (delivery.eventFamily === 'unknown') return 'RECORD_NO_ADVANCE';
+  if (!isAcceptedEventAction(delivery.eventFamily, delivery.action)) {
+    return 'RECORD_NO_ADVANCE';
+  }
   if (delivery.pullRequestNumber && delivery.pullRequestNumber !== truth.pullRequest.number) {
     return 'HISTORICAL_NO_ADVANCE';
   }
@@ -97,7 +127,6 @@ export function reconcileShadowTruth(
 
   const requiredChecks = evaluateRequiredChecks(
     truth.checks,
-    truth.workflows,
     target.candidateSha,
     target.requiredCheckNames,
   );
