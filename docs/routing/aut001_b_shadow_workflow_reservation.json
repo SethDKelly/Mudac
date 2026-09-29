@@ -4,6 +4,13 @@
   "subphase": "AUT-001-B",
   "reservation_id": "AUT001-B-SR-001",
   "decision": "RESERVED_FOR_AUT_E03_LIVE_READ_ONLY_EVALUATION",
+  "repair_cycle_1": {
+    "consumes_ordinary_repair_cycle": true,
+    "findings": ["AUT-B-IR-01", "AUT-B-IR-05"],
+    "material_effect": "workflow_no_longer_hardcodes_required_checks_and_retains_bounded_window_artifact",
+    "fresh_exact_head_verification_required": true,
+    "fresh_independent_and_adversarial_review_required": true
+  },
   "authority": {
     "g2_record": "docs/routing/aut001_g2_authorization.json",
     "b_start_gate": "docs/routing/aut001_b_stage_transition_start_gate.json",
@@ -37,7 +44,10 @@
     "protected_merge": false,
     "required_status_check_created": false,
     "merge_authority_created": false,
-    "phase022_authority_created": false
+    "phase022_authority_created": false,
+    "required_checks_source": "PACKAGE_CONTRACT_AND_LIVE_REPOSITORY_RULESET",
+    "workflow_env_is_not_required_check_authority": true,
+    "retained_artifact_required": true
   },
   "material_effect": {
     "fresh_exact_head_repository_verification_required": true,
