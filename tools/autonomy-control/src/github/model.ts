@@ -56,7 +56,6 @@ export interface CheckTruth {
   id: number;
   name: string;
   headSha: string;
-  attempt: number;
   status: 'queued' | 'in_progress' | 'completed';
   conclusion:
     | 'success'
@@ -67,6 +66,8 @@ export interface CheckTruth {
     | 'neutral'
     | 'skipped'
     | null;
+  startedAt: string | null;
+  completedAt: string | null;
 }
 
 export interface WorkflowTruth {
@@ -85,6 +86,38 @@ export interface WorkflowTruth {
     | 'skipped'
     | null;
 }
+
+export interface LiveRulesetRequiredChecks {
+  rulesetId: number;
+  rulesetName: string;
+  enforcement: 'active';
+  target: 'branch';
+  requiredContexts: readonly string[];
+}
+
+export interface PackageRequiredCheckAuthority {
+  packageContractPath: string;
+  packageSchema: string;
+  rulesetName: string;
+  rulesetEnforcement: string;
+  packageRequiredContexts: readonly string[];
+}
+
+export type RequiredCheckAuthorityComparison =
+  | {
+      status: 'AGREED';
+      requiredContexts: readonly string[];
+      packageAuthority: PackageRequiredCheckAuthority;
+      liveRuleset: LiveRulesetRequiredChecks;
+    }
+  | {
+      status: 'MISMATCH' | 'INCONCLUSIVE';
+      reason: string;
+      packageAuthority: PackageRequiredCheckAuthority;
+      liveRuleset?: LiveRulesetRequiredChecks;
+      packageContexts: readonly string[];
+      liveContexts: readonly string[];
+    };
 
 export interface GitHubTruthSnapshot {
   repositoryId: number;
@@ -110,6 +143,10 @@ export interface GitHubReadClient {
   readRef(repositoryFullName: string, ref: string): Promise<RefTruth>;
   readChecks(repositoryFullName: string, headSha: string): Promise<readonly CheckTruth[]>;
   readWorkflows(repositoryFullName: string, headSha: string): Promise<readonly WorkflowTruth[]>;
+  readRulesetRequiredChecks(
+    repositoryFullName: string,
+    rulesetName: string,
+  ): Promise<LiveRulesetRequiredChecks>;
   isAncestor(
     repositoryFullName: string,
     ancestorSha: string,
@@ -132,7 +169,18 @@ export type RequiredCheckDisposition = 'PASS' | 'NOT_READY' | 'FAILED' | 'INCONC
 export interface RequiredCheckEvaluation {
   disposition: RequiredCheckDisposition;
   reason: string;
-  matched: Readonly<Record<string, { attempt: number; status: string; conclusion: string | null }>>;
+  matched: Readonly<
+    Record<
+      string,
+      {
+        checkRunId: number;
+        status: string;
+        conclusion: string | null;
+        startedAt: string | null;
+        completedAt: string | null;
+      }
+    >
+  >;
   missing: readonly string[];
 }
 
@@ -146,7 +194,8 @@ export type ShadowDivergenceKind =
   | 'UNSAFE_ADVANCEMENT_PREDICTION'
   | 'NOTIFICATION_TRUTH_DIVERGENCE'
   | 'MANDATORY_TRUTH_UNAVAILABLE'
-  | 'AMBIGUOUS_REQUIRED_CHECK_TRUTH';
+  | 'AMBIGUOUS_REQUIRED_CHECK_TRUTH'
+  | 'REQUIRED_CHECK_AUTHORITY_MISMATCH';
 
 export interface ShadowDivergence {
   kind: ShadowDivergenceKind;

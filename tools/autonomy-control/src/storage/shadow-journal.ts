@@ -107,7 +107,12 @@ export class ShadowJournal {
   appendSemanticFact(fact: GitHubSemanticFact): SemanticFactAppendResult {
     const existing = this.#semanticFacts.get(fact.factId);
     if (existing) {
-      if (isDeepStrictEqual(existing, fact)) {
+      const sameSemanticPayload =
+        existing.factType === fact.factType &&
+        existing.payloadDigest === fact.payloadDigest &&
+        isDeepStrictEqual(existing.payload, fact.payload);
+      if (sameSemanticPayload) {
+        // Observation metadata (observedAt) is not part of semantic identity.
         return { status: 'IDEMPOTENT_NOOP', factId: fact.factId };
       }
       return {

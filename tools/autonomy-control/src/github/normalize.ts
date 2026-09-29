@@ -59,14 +59,15 @@ export function normalizeGitHubTruth(snapshot: GitHubTruthSnapshot): readonly Gi
 
   for (const check of snapshot.checks) {
     facts.push(
-      fact(`CHECK:${repo}:${check.id}:${check.attempt}`, 'CHECK', snapshot.observedAt, {
+      fact(`CHECK:${repo}:${check.id}`, 'CHECK', snapshot.observedAt, {
         repositoryId: repo,
         checkRunId: check.id,
         name: check.name,
-        attempt: check.attempt,
         headSha: check.headSha,
         status: check.status,
         conclusion: check.conclusion,
+        startedAt: check.startedAt,
+        completedAt: check.completedAt,
       }),
     );
   }
