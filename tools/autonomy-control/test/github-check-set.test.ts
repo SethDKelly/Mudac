@@ -216,3 +216,274 @@ describe('AUT-001-B required check-run identity', () => {
     expect(evaluation.missing).toEqual(['Implementation Verification']);
   });
 });
+
+describe('AUT-B-R1-IR-01 required-check currentness fail-closed', () => {
+  const required = ['Implementation Verification'];
+
+  it('rejects malformed success that sorts after a valid failure (no PASS)', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: 'not-an-iso-timestamp',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+    expect(evaluation.disposition).not.toBe('PASS');
+  });
+
+  it('rejects malformed failure that sorts after a valid success (no PASS)', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: 'zzz-later-than-iso',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+    expect(evaluation.disposition).not.toBe('PASS');
+  });
+
+  it('rejects a sole run with a malformed completion timestamp', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          completedAt: 'yesterday-ish',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+  });
+
+  it('rejects an invalid started timestamp', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          startedAt: 'not-started',
+          completedAt: '2026-09-28T18:01:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+    expect(evaluation.reason).toContain('malformed_startedAt');
+  });
+
+  it('rejects an invalid completed timestamp', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          completedAt: '2026-99-99T99:99:99Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+    expect(evaluation.reason).toContain('malformed_completedAt');
+  });
+
+  it('rejects completion earlier than start', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          startedAt: '2026-09-28T18:05:00Z',
+          completedAt: '2026-09-28T18:01:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+    expect(evaluation.reason).toContain('completedAt_before_startedAt');
+  });
+
+  it('rejects equal latest instants with competing conclusions', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:05:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:05:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('INCONCLUSIVE');
+  });
+
+  it('selects newer valid failure over older success', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:10:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('FAILED');
+    expect(evaluation.matched['Implementation Verification']?.checkRunId).toBe(2);
+  });
+
+  it('selects newer valid success over older failure', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:10:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('PASS');
+    expect(evaluation.matched['Implementation Verification']?.checkRunId).toBe(2);
+  });
+
+  it('treats a newer in-progress run as not ready rather than PASS', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          status: 'in_progress',
+          conclusion: null,
+          startedAt: '2026-09-28T18:10:00Z',
+          completedAt: null,
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('NOT_READY');
+    expect(evaluation.disposition).not.toBe('PASS');
+  });
+
+  it('ignores wrong-candidate SHA runs when selecting currentness', () => {
+    const evaluation = evaluateRequiredChecks(
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          headSha: 'other-candidate',
+          conclusion: 'success',
+          completedAt: '2026-09-28T19:00:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:00:00Z',
+        }),
+      ],
+      'candidate',
+      required,
+    );
+    expect(evaluation.disposition).toBe('FAILED');
+    expect(evaluation.matched['Implementation Verification']?.checkRunId).toBe(2);
+  });
+
+  it('never yields PASS from uncertain currentness truth', () => {
+    const uncertainCases: CheckTruth[][] = [
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          completedAt: 'not-an-iso-timestamp',
+        }),
+      ],
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          status: 'completed',
+          conclusion: 'success',
+          completedAt: null,
+        }),
+      ],
+      [
+        check({
+          id: 1,
+          name: 'Implementation Verification',
+          conclusion: 'success',
+          completedAt: '2026-09-28T18:05:00Z',
+        }),
+        check({
+          id: 2,
+          name: 'Implementation Verification',
+          conclusion: 'failure',
+          completedAt: '2026-09-28T18:05:00Z',
+        }),
+      ],
+    ];
+
+    for (const checks of uncertainCases) {
+      expect(evaluateRequiredChecks(checks, 'candidate', required).disposition).not.toBe('PASS');
+    }
+  });
+});

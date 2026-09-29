@@ -1,9 +1,117 @@
 import type { CheckTruth, RequiredCheckEvaluation } from './model.js';
 
-function currentnessTimestamp(check: CheckTruth): string | null {
-  if (check.completedAt) return check.completedAt;
-  if (check.startedAt) return check.startedAt;
-  return null;
+/**
+ * Parse an authoritative GitHub check timestamp into a comparable instant.
+ * Rejects malformed, non-instant, or non-finite values fail-closed.
+ * Lexical string ordering is never authority for currentness.
+ */
+export function parseComparableInstant(
+  value: string | null,
+  field: 'startedAt' | 'completedAt',
+): { kind: 'OK'; ms: number } | { kind: 'INVALID'; reason: string } | { kind: 'MISSING' } {
+  if (value === null) return { kind: 'MISSING' };
+  if (typeof value !== 'string' || value.trim().length === 0 || value !== value.trim()) {
+    return { kind: 'INVALID', reason: `malformed_${field}` };
+  }
+
+  const match =
+    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{1,9}))?(Z|[+-]\d{2}:\d{2})$/.exec(
+      value,
+    );
+  if (!match) {
+    return { kind: 'INVALID', reason: `malformed_${field}` };
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const hour = Number(match[4]);
+  const minute = Number(match[5]);
+  const second = Number(match[6]);
+  if (
+    month < 1 ||
+    month > 12 ||
+    day < 1 ||
+    day > 31 ||
+    hour > 23 ||
+    minute > 59 ||
+    second > 59
+  ) {
+    return { kind: 'INVALID', reason: `malformed_${field}` };
+  }
+
+  const ms = Date.parse(value);
+  if (!Number.isFinite(ms)) {
+    return { kind: 'INVALID', reason: `malformed_${field}` };
+  }
+
+  // Reject Date.parse overflow of impossible calendar days (e.g. Feb 30).
+  const utc = new Date(ms);
+  if (
+    utc.getUTCFullYear() !== year ||
+    utc.getUTCMonth() + 1 !== month ||
+    utc.getUTCDate() !== day ||
+    utc.getUTCHours() !== hour ||
+    utc.getUTCMinutes() !== minute ||
+    utc.getUTCSeconds() !== second
+  ) {
+    // Offset timestamps are compared in absolute ms; only enforce UTC component
+    // identity for explicit Z forms. Offset forms still require finite parse.
+    if (match[8] === 'Z') {
+      return { kind: 'INVALID', reason: `malformed_${field}` };
+    }
+  }
+
+  return { kind: 'OK', ms };
+}
+
+function currentnessInstant(
+  check: CheckTruth,
+):
+  | { kind: 'OK'; ms: number; source: 'completedAt' | 'startedAt' }
+  | { kind: 'INVALID'; reason: string }
+  | { kind: 'MISSING'; reason: string } {
+  const started = parseComparableInstant(check.startedAt, 'startedAt');
+  const completed = parseComparableInstant(check.completedAt, 'completedAt');
+
+  if (started.kind === 'INVALID') {
+    return { kind: 'INVALID', reason: started.reason };
+  }
+  if (completed.kind === 'INVALID') {
+    return { kind: 'INVALID', reason: completed.reason };
+  }
+
+  if (check.status === 'completed') {
+    if (completed.kind === 'MISSING') {
+      return {
+        kind: 'INVALID',
+        reason: 'completed_status_without_completedAt',
+      };
+    }
+    if (started.kind === 'OK' && completed.ms < started.ms) {
+      return {
+        kind: 'INVALID',
+        reason: 'completedAt_before_startedAt',
+      };
+    }
+    return { kind: 'OK', ms: completed.ms, source: 'completedAt' };
+  }
+
+  // Non-terminal runs may use startedAt for currentness ordering among peers.
+  if (completed.kind === 'OK') {
+    // A non-completed status with a completion timestamp is contradictory.
+    return {
+      kind: 'INVALID',
+      reason: 'contradictory_timestamp_envelope',
+    };
+  }
+  if (started.kind === 'OK') {
+    return { kind: 'OK', ms: started.ms, source: 'startedAt' };
+  }
+  return {
+    kind: 'MISSING',
+    reason: 'currentness_timestamp_missing',
+  };
 }
 
 function selectCurrentCheckRun(
@@ -16,34 +124,48 @@ function selectCurrentCheckRun(
   | { kind: 'FOUND'; record: CheckTruth } {
   const matching = checks.filter((item) => item.name === name && item.headSha === candidateSha);
   if (matching.length === 0) return { kind: 'MISSING' };
-  if (matching.length === 1) {
-    const only = matching[0];
-    if (!only) return { kind: 'MISSING' };
-    return { kind: 'FOUND', record: only };
+
+  const resolved = matching.map((item) => ({
+    item,
+    instant: currentnessInstant(item),
+  }));
+
+  const invalid = resolved.find((entry) => entry.instant.kind === 'INVALID');
+  if (invalid && invalid.instant.kind === 'INVALID') {
+    return {
+      kind: 'AMBIGUOUS',
+      reason: `ambiguous_check_run_currentness_${invalid.instant.reason}:${name}`,
+    };
   }
 
-  const withTimestamps = matching.map((item) => ({
-    item,
-    timestamp: currentnessTimestamp(item),
-  }));
-  if (withTimestamps.some((entry) => entry.timestamp === null)) {
+  if (matching.length === 1) {
+    const only = resolved[0];
+    if (!only) return { kind: 'MISSING' };
+    if (only.instant.kind === 'MISSING') {
+      return {
+        kind: 'AMBIGUOUS',
+        reason: `ambiguous_check_run_currentness_${only.instant.reason}:${name}`,
+      };
+    }
+    return { kind: 'FOUND', record: only.item };
+  }
+
+  if (resolved.some((entry) => entry.instant.kind === 'MISSING')) {
     return {
       kind: 'AMBIGUOUS',
       reason: `ambiguous_check_run_currentness_missing_timestamp:${name}`,
     };
   }
 
-  const sorted = [...withTimestamps].sort((left, right) => {
-    const leftTs = left.timestamp ?? '';
-    const rightTs = right.timestamp ?? '';
-    if (leftTs < rightTs) return 1;
-    if (leftTs > rightTs) return -1;
-    return 0;
+  const withInstants = resolved.map((entry) => {
+    if (entry.instant.kind !== 'OK') {
+      throw new Error('unreachable_currentness_state');
+    }
+    return { item: entry.item, ms: entry.instant.ms };
   });
 
-  const newest = sorted[0];
-  if (!newest) return { kind: 'MISSING' };
-  const tied = sorted.filter((entry) => entry.timestamp === newest.timestamp);
+  const newestMs = Math.max(...withInstants.map((entry) => entry.ms));
+  const tied = withInstants.filter((entry) => entry.ms === newestMs);
   if (tied.length !== 1) {
     return {
       kind: 'AMBIGUOUS',
@@ -51,6 +173,8 @@ function selectCurrentCheckRun(
     };
   }
 
+  const newest = tied[0];
+  if (!newest) return { kind: 'MISSING' };
   return { kind: 'FOUND', record: newest.item };
 }
 
