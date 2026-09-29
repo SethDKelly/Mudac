@@ -26,9 +26,7 @@ describe('AUT-001-B Repair Cycle 3 timestamp and reconciliation falsification', 
   });
 
   it('rejects February 30 and non-leap February 29 under strict UTC-Z grammar', () => {
-    expect(parseComparableInstant('2026-02-30T10:00:00+00:00', 'completedAt').kind).toBe(
-      'INVALID',
-    );
+    expect(parseComparableInstant('2026-02-30T10:00:00+00:00', 'completedAt').kind).toBe('INVALID');
     expect(parseComparableInstant('2026-02-30T10:00:00Z', 'completedAt').kind).toBe('INVALID');
     expect(parseComparableInstant('2025-02-29T10:00:00Z', 'completedAt').kind).toBe('INVALID');
   });
