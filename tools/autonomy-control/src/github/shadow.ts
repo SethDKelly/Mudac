@@ -167,7 +167,6 @@ export async function runBoundedReadOnlyShadowWindow(input: {
   let terminalDisposition: string | null = null;
   let finalObservationId: string | undefined;
   let sawTerminal = false;
-  let confirmationDone = false;
 
   if (input.authorityComparison.status !== 'AGREED') {
     return {
@@ -301,7 +300,6 @@ export async function runBoundedReadOnlyShadowWindow(input: {
             };
           }
         } else {
-          confirmationDone = true;
           return {
             journal,
             result: {
@@ -320,7 +318,7 @@ export async function runBoundedReadOnlyShadowWindow(input: {
       }
     }
 
-    if (attempt < input.config.maxAttempts && !(sawTerminal && confirmationDone)) {
+    if (attempt < input.config.maxAttempts) {
       const remaining = input.config.timeoutMs - (input.clock.now().getTime() - startedMs);
       if (remaining <= 0) break;
       await input.clock.sleep(Math.min(input.config.intervalMs, remaining));
