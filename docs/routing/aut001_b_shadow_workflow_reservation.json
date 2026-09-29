@@ -1,0 +1,70 @@
+{
+  "schema": "mudac.aut001-b-shadow-workflow-reservation/v1",
+  "package_id": "AUT-001",
+  "subphase": "AUT-001-B",
+  "reservation_id": "AUT001-B-SR-001",
+  "decision": "RESERVED_FOR_AUT_E03_LIVE_READ_ONLY_EVALUATION",
+  "repair_cycle_1": {
+    "consumes_ordinary_repair_cycle": true,
+    "findings": ["AUT-B-IR-01", "AUT-B-IR-05"],
+    "material_effect": "workflow_no_longer_hardcodes_required_checks_and_retains_bounded_window_artifact",
+    "fresh_exact_head_verification_required": true,
+    "fresh_independent_and_adversarial_review_required": true
+  },
+  "authority": {
+    "g2_record": "docs/routing/aut001_g2_authorization.json",
+    "b_start_gate": "docs/routing/aut001_b_stage_transition_start_gate.json",
+    "creates_new_g2": false,
+    "scope_expansion": false,
+    "criteria_weakening": false
+  },
+  "necessity": {
+    "evidence_obligation": "AUT-E03",
+    "reason": "AUT-001-B must execute its bounded GitHub reader against live repository truth on an exact candidate. A dedicated non-mutating evaluator is required so live evidence is produced by the implemented runtime rather than inferred from fixtures or connector observations.",
+    "existing_required_workflows_modified": false
+  },
+  "surface": {
+    "surface_id": "AUT-MS-GITHUB-WORKFLOWS",
+    "path": ".github/workflows/autonomy-control-shadow.yml",
+    "surface_class": "CI_EVALUATOR_MATERIAL",
+    "serialized": true,
+    "reservation_state": "ACQUIRED",
+    "owner": "AUT-001-B",
+    "acquired_on_source_head": "aafc5d49f696831edb868c36ca6496f8d19858fa",
+    "release_condition": "AUT-001-B integration complete or explicit abandonment with reconciliation"
+  },
+  "evaluator_constraints": {
+    "repository_mutation": false,
+    "github_api_method": "GET_ONLY",
+    "runtime_credentials": "NOT_PASSED_TO_SHADOW_ADAPTER",
+    "checkout_persist_credentials": false,
+    "production_access": false,
+    "agent_dispatch": false,
+    "mcp_actions": false,
+    "protected_merge": false,
+    "required_status_check_created": false,
+    "merge_authority_created": false,
+    "phase022_authority_created": false,
+    "required_checks_source": "PACKAGE_CONTRACT_AND_LIVE_REPOSITORY_RULESET",
+    "workflow_env_is_not_required_check_authority": true,
+    "retained_artifact_required": true,
+    "retained_artifact_contents": ["evidence.json", "evidence.manifest.json"],
+    "actions_artifact_retention_days": 90,
+    "aut_e03_reference_contract": "docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json",
+    "green_workflow_means_terminal_pass_only": true
+  },
+  "repair_cycle_2": {
+    "consumes_ordinary_repair_cycle": true,
+    "findings": ["AUT-B-R1-IR-04", "AUT-B-R1-IR-05"],
+    "material_effect": "exit_semantics_mean_terminal_PASS_only_and_AUT_E03_reference_retention_surface_established",
+    "fresh_exact_head_verification_required": true,
+    "fresh_independent_and_adversarial_review_required": true
+  },
+  "material_effect": {
+    "fresh_exact_head_repository_verification_required": true,
+    "workflow_integrity_review_required": true,
+    "AUT_E03_must_bind_to_exact_candidate": true,
+    "independent_and_adversarial_reviews_must_include_workflow": true,
+    "unmapped_path_disposition": "INCONCLUSIVE_UNTIL_CLASSIFIED"
+  }
+}
