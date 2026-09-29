@@ -8,7 +8,7 @@
 - implementation branch: `aut-001/b-read-only-shadow`
 - historical independently reviewed candidate: `a000d58bb310f797e92d8f9c2bcc0f9afa147b5f` (immutable; `CHANGES_REQUIRED`)
 - repair cycle: `1 / 2`
-- exact verification/review candidate: the branch head after Repair Cycle 1 commits; bind CI/reviews to that exact SHA/tree.
+- exact verification/review candidate: bind CI/reviews to the current Repair Cycle 1 branch head SHA/tree after the lint stabilization commit; do not rebind historical `a000d58…` or intermediate failed-head evidence.
 
 Finding closure requires refreshed independent review. Code edits alone do not close `AUT-B-IR-01` through `AUT-B-IR-06`.
 
