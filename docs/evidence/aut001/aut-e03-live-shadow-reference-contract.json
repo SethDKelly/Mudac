@@ -48,7 +48,10 @@
     "artifact_name": true,
     "artifact_archive_sha256": true,
     "evidence_json_sha256": "required_when_retrievable",
-    "evidence_manifest_sha256": "required_when_manifest_present"
+    "evidence_manifest_sha256": "required_when_manifest_present",
+    "evaluator_source_checkout_sha": true,
+    "evaluator_source_checkout_must_equal_candidate_sha": true,
+    "workflow_event_sha_distinguished_from_evaluator_source_checkout": true
   },
   "required_evidence_fields": {
     "subject": [
@@ -56,8 +59,15 @@
       "repositoryFullName",
       "pullRequestNumber",
       "candidateSha",
+      "evaluatorSourceCheckoutSha",
       "baseSha",
       "baseRef"
+    ],
+    "evaluator_identity": [
+      "evaluatorIdentity.sourceCheckoutSha",
+      "evaluatorIdentity.matchesCandidateSha",
+      "evaluatorIdentity.workflowEventSha",
+      "evaluatorIdentity.workflowEventRef"
     ],
     "bounded_window": [
       "status",
@@ -89,6 +99,11 @@
       "schema",
       "subject",
       "workflow",
+      "workflow.eventSha",
+      "workflow.eventRef",
+      "evaluatorIdentity",
+      "evaluatorIdentity.sourceCheckoutSha",
+      "evaluatorIdentity.matchesCandidateSha",
       "evidenceSchema",
       "evidenceSha256",
       "producedAt",
@@ -102,6 +117,9 @@
   "retrieval_and_verification": [
     "Identify the exact candidate SHA under review.",
     "Locate the producer workflow run bound only to that SHA.",
+    "Verify the producer checked out the exact pull_request.head.sha as evaluator source (not the pull_request merge ref by default).",
+    "Verify evidence.subject.candidateSha equals evaluatorIdentity.sourceCheckoutSha and matchesCandidateSha is true.",
+    "Distinguish workflow event/ref identity (workflow.eventSha / workflow.eventRef) from evaluator source checkout SHA and evidence subject candidate SHA.",
     "Download the Actions artifact named by the deterministic convention for that SHA.",
     "Record artifact id, name, archive digest, and workflow/run identity.",
     "Verify evidence.json schema, subject identity, authority agreement including ref_name condition, bounded-window fields, and GET-only call ledger.",
