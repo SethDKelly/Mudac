@@ -6,6 +6,7 @@ export default defineConfig({
       'apps/**/*.{test,spec}.{ts,tsx}',
       'packages/**/*.{test,spec}.{ts,tsx}',
       'tests/**/*.{test,spec}.{ts,tsx}',
+      'tools/autonomy-control/test/**/*.{test,spec}.{ts,tsx}',
     ],
   },
 });

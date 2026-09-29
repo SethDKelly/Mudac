@@ -1,0 +1,42 @@
+{
+  "schema": "mudac.aut001-b-vitest-evaluator-reservation/v1",
+  "package_id": "AUT-001",
+  "subphase": "AUT-001-B",
+  "reservation_id": "AUT001-B-SR-002",
+  "repair_cycle": "Repair Cycle 1",
+  "finding": "AUT-B-IR-02",
+  "decision": "RESERVED_FOR_STAGE_B_HARNESS_INCLUSION_IN_CANONICAL_PNPM_TEST",
+  "authority": {
+    "g2_record": "docs/routing/aut001_g2_authorization.json",
+    "b_start_gate": "docs/routing/aut001_b_stage_transition_start_gate.json",
+    "creates_new_g2": false,
+    "scope_expansion": false,
+    "criteria_weakening": false,
+    "writable_application_or_domain_expansion": false,
+    "production_authority": false
+  },
+  "necessity": {
+    "evidence_obligation": "AUT-E03",
+    "criterion_refs": ["AUT-C02", "AUT-C05", "AUT-C11"],
+    "reason": "Stage-B harness under tools/autonomy-control/test/ was excluded from root Vitest discovery, so pnpm test / pnpm verify did not execute AUT-001-B tests. Including the harness path in the root evaluator configuration is required so canonical repository verification retains Stage-B coverage."
+  },
+  "surface": {
+    "path": "vitest.config.ts",
+    "mapped_material_surface": "AUT-MS-ROOT-WORKSPACE",
+    "surface_class": "CI_EVALUATOR_MATERIAL",
+    "serialized": true,
+    "reservation_state": "ACQUIRED",
+    "owner": "AUT-001-B",
+    "change_classification": "STRENGTHENS_EVALUATOR_COVERAGE_NO_NEW_EXECUTION_AUTHORITY",
+    "release_condition": "AUT-001-B integration complete or explicit abandonment with reconciliation"
+  },
+  "material_effect": {
+    "evaluator_evidence_invalidated": true,
+    "fresh_exact_head_repository_verification_required": true,
+    "fresh_independent_review_required": true,
+    "fresh_adversarial_review_required": true,
+    "no_criteria_weakening": true,
+    "no_production_authority": true,
+    "unmapped_path_disposition": "INCONCLUSIVE_UNTIL_CLASSIFIED"
+  }
+}
