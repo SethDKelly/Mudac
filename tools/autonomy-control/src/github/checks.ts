@@ -1,9 +1,27 @@
 import type { CheckTruth, RequiredCheckEvaluation } from './model.js';
 
 /**
+ * Authoritative GitHub check-run timestamps are accepted only as canonical UTC
+ * instants: YYYY-MM-DDTHH:mm:ss[.fraction]Z. Numeric-offset forms are rejected
+ * so the control plane never reimplements general ISO-8601 offset normalization.
+ */
+const AUTHORITATIVE_UTC_INSTANT =
+  /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{1,9}))?Z$/;
+
+function daysInMonth(year: number, month: number): number {
+  if (month === 2) {
+    const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+    return leap ? 29 : 28;
+  }
+  if (month === 4 || month === 6 || month === 9 || month === 11) return 30;
+  return 31;
+}
+
+/**
  * Parse an authoritative GitHub check timestamp into a comparable instant.
- * Rejects malformed, non-instant, or non-finite values fail-closed.
- * Lexical string ordering is never authority for currentness.
+ * Rejects malformed, non-instant, non-UTC-Z, impossible-calendar, or non-finite
+ * values fail-closed. Lexical string ordering is never authority for currentness.
+ * Do not use Date.parse alone for calendar validity.
  */
 export function parseComparableInstant(
   value: string | null,
@@ -14,10 +32,7 @@ export function parseComparableInstant(
     return { kind: 'INVALID', reason: `malformed_${field}` };
   }
 
-  const match =
-    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{1,9}))?(Z|[+-]\d{2}:\d{2})$/.exec(
-      value,
-    );
+  const match = AUTHORITATIVE_UTC_INSTANT.exec(value);
   if (!match) {
     return { kind: 'INVALID', reason: `malformed_${field}` };
   }
@@ -28,16 +43,36 @@ export function parseComparableInstant(
   const hour = Number(match[4]);
   const minute = Number(match[5]);
   const second = Number(match[6]);
-  if (month < 1 || month > 12 || day < 1 || day > 31 || hour > 23 || minute > 59 || second > 59) {
+  const fraction = match[7] ?? '';
+
+  if (
+    !Number.isInteger(year) ||
+    !Number.isInteger(month) ||
+    !Number.isInteger(day) ||
+    !Number.isInteger(hour) ||
+    !Number.isInteger(minute) ||
+    !Number.isInteger(second) ||
+    month < 1 ||
+    month > 12 ||
+    day < 1 ||
+    day > daysInMonth(year, month) ||
+    hour > 23 ||
+    minute > 59 ||
+    second > 59
+  ) {
     return { kind: 'INVALID', reason: `malformed_${field}` };
   }
 
-  const ms = Date.parse(value);
+  const millisecond = fraction.length === 0 ? 0 : Number(fraction.padEnd(3, '0').slice(0, 3));
+  if (!Number.isInteger(millisecond) || millisecond < 0 || millisecond > 999) {
+    return { kind: 'INVALID', reason: `malformed_${field}` };
+  }
+
+  const ms = Date.UTC(year, month - 1, day, hour, minute, second, millisecond);
   if (!Number.isFinite(ms)) {
     return { kind: 'INVALID', reason: `malformed_${field}` };
   }
 
-  // Reject Date.parse overflow of impossible calendar days (e.g. Feb 30).
   const utc = new Date(ms);
   if (
     utc.getUTCFullYear() !== year ||
@@ -45,13 +80,10 @@ export function parseComparableInstant(
     utc.getUTCDate() !== day ||
     utc.getUTCHours() !== hour ||
     utc.getUTCMinutes() !== minute ||
-    utc.getUTCSeconds() !== second
+    utc.getUTCSeconds() !== second ||
+    utc.getUTCMilliseconds() !== millisecond
   ) {
-    // Offset timestamps are compared in absolute ms; only enforce UTC component
-    // identity for explicit Z forms. Offset forms still require finite parse.
-    if (match[8] === 'Z') {
-      return { kind: 'INVALID', reason: `malformed_${field}` };
-    }
+    return { kind: 'INVALID', reason: `malformed_${field}` };
   }
 
   return { kind: 'OK', ms };
