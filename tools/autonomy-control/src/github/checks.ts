@@ -1,44 +1,61 @@
-import type { CheckTruth, RequiredCheckEvaluation, WorkflowTruth } from './model.js';
+import type { CheckTruth, RequiredCheckEvaluation } from './model.js';
 
-interface CheckLike {
-  name: string;
-  headSha: string;
-  attempt: number;
-  status: 'queued' | 'in_progress' | 'completed';
-  conclusion:
-    | 'success'
-    | 'failure'
-    | 'cancelled'
-    | 'timed_out'
-    | 'action_required'
-    | 'neutral'
-    | 'skipped'
-    | null;
+function currentnessTimestamp(check: CheckTruth): string | null {
+  if (check.completedAt) return check.completedAt;
+  if (check.startedAt) return check.startedAt;
+  return null;
 }
 
-function selectLatestForName(
-  records: readonly CheckLike[],
+function selectCurrentCheckRun(
+  checks: readonly CheckTruth[],
   name: string,
   candidateSha: string,
-): { kind: 'MISSING' } | { kind: 'AMBIGUOUS' } | { kind: 'FOUND'; record: CheckLike } {
-  const matching = records.filter((item) => item.name === name && item.headSha === candidateSha);
+):
+  | { kind: 'MISSING' }
+  | { kind: 'AMBIGUOUS'; reason: string }
+  | { kind: 'FOUND'; record: CheckTruth } {
+  const matching = checks.filter((item) => item.name === name && item.headSha === candidateSha);
   if (matching.length === 0) return { kind: 'MISSING' };
-
-  const maxAttempt = Math.max(...matching.map((item) => item.attempt));
-  const latest = matching.filter((item) => item.attempt === maxAttempt);
-  const first = latest[0];
-  if (!first) return { kind: 'MISSING' };
-
-  if (latest.some((item) => item.status !== first.status || item.conclusion !== first.conclusion)) {
-    return { kind: 'AMBIGUOUS' };
+  if (matching.length === 1) {
+    const only = matching[0];
+    if (!only) return { kind: 'MISSING' };
+    return { kind: 'FOUND', record: only };
   }
 
-  return { kind: 'FOUND', record: first };
+  const withTimestamps = matching.map((item) => ({
+    item,
+    timestamp: currentnessTimestamp(item),
+  }));
+  if (withTimestamps.some((entry) => entry.timestamp === null)) {
+    return {
+      kind: 'AMBIGUOUS',
+      reason: `ambiguous_check_run_currentness_missing_timestamp:${name}`,
+    };
+  }
+
+  const sorted = [...withTimestamps].sort((left, right) => {
+    const leftTs = left.timestamp ?? '';
+    const rightTs = right.timestamp ?? '';
+    if (leftTs < rightTs) return 1;
+    if (leftTs > rightTs) return -1;
+    return 0;
+  });
+
+  const newest = sorted[0];
+  if (!newest) return { kind: 'MISSING' };
+  const tied = sorted.filter((entry) => entry.timestamp === newest.timestamp);
+  if (tied.length !== 1) {
+    return {
+      kind: 'AMBIGUOUS',
+      reason: `ambiguous_check_run_currentness_tie:${name}`,
+    };
+  }
+
+  return { kind: 'FOUND', record: newest.item };
 }
 
 export function evaluateRequiredChecks(
   checks: readonly CheckTruth[],
-  workflows: readonly WorkflowTruth[],
   candidateSha: string,
   requiredNames: readonly string[],
 ): RequiredCheckEvaluation {
@@ -54,17 +71,24 @@ export function evaluateRequiredChecks(
     };
   }
 
-  const records: readonly CheckLike[] = [...checks, ...workflows];
-  const matched: Record<string, { attempt: number; status: string; conclusion: string | null }> =
-    {};
+  const matched: Record<
+    string,
+    {
+      checkRunId: number;
+      status: string;
+      conclusion: string | null;
+      startedAt: string | null;
+      completedAt: string | null;
+    }
+  > = {};
   const missing: string[] = [];
 
   for (const name of [...new Set(requiredNames)].sort()) {
-    const selected = selectLatestForName(records, name, candidateSha);
+    const selected = selectCurrentCheckRun(checks, name, candidateSha);
     if (selected.kind === 'AMBIGUOUS') {
       return {
         disposition: 'INCONCLUSIVE',
-        reason: `ambiguous_latest_required_check:${name}`,
+        reason: selected.reason,
         matched,
         missing,
       };
@@ -76,15 +100,25 @@ export function evaluateRequiredChecks(
 
     const { record } = selected;
     matched[name] = {
-      attempt: record.attempt,
+      checkRunId: record.id,
       status: record.status,
       conclusion: record.conclusion,
+      startedAt: record.startedAt,
+      completedAt: record.completedAt,
     };
 
     if (record.status !== 'completed') {
       return {
         disposition: 'NOT_READY',
         reason: `required_check_not_terminal:${name}`,
+        matched,
+        missing,
+      };
+    }
+    if (record.conclusion === 'skipped') {
+      return {
+        disposition: 'INCONCLUSIVE',
+        reason: `required_check_incompatibly_skipped:${name}`,
         matched,
         missing,
       };
@@ -114,4 +148,10 @@ export function evaluateRequiredChecks(
     matched,
     missing,
   };
+}
+
+export function isTerminalRequiredCheckDisposition(
+  disposition: RequiredCheckEvaluation['disposition'],
+): boolean {
+  return disposition === 'PASS' || disposition === 'FAILED';
 }
