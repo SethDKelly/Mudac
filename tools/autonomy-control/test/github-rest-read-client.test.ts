@@ -323,8 +323,20 @@ describe('AUT-B-R1-IR-03 ruleset enforcement-scope ref_name validation', () => {
   });
 
   it('fails closed when conditions are missing', async () => {
-    const details = rulesetDetails();
-    delete details.conditions;
+    const details = {
+      id: 1,
+      name: 'main — protected',
+      target: 'branch',
+      enforcement: 'active',
+      rules: [
+        {
+          type: 'required_status_checks',
+          parameters: {
+            required_status_checks: [{ context: 'Implementation Verification' }],
+          },
+        },
+      ],
+    };
     await expect(
       clientForDetails(details).readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
     ).rejects.toThrow('github_ruleset_conditions_missing');

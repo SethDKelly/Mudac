@@ -3,7 +3,7 @@ import type { RequiredCheckDisposition } from './model.js';
 export type LiveShadowWindowStatus = 'TERMINAL' | 'FAILED_CLOSED' | 'INCONCLUSIVE' | string;
 
 export interface LiveShadowExitDecisionInput {
-  terminalDisposition: RequiredCheckDisposition | null;
+  terminalDisposition: RequiredCheckDisposition | string | null;
   windowTerminatedNormally: boolean;
   timedOut: boolean;
   blockingDivergence: boolean;
