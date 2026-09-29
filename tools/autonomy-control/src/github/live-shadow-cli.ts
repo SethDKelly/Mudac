@@ -59,6 +59,10 @@ function writeEvidenceArtifacts(
     typeof evidence.runtimeBoundary === 'object' && evidence.runtimeBoundary !== null
       ? (evidence.runtimeBoundary as Record<string, unknown>)
       : {};
+  const evaluatorIdentity =
+    typeof evidence.evaluatorIdentity === 'object' && evidence.evaluatorIdentity !== null
+      ? (evidence.evaluatorIdentity as Record<string, unknown>)
+      : {};
 
   const manifest = {
     schema: 'mudac.aut001-b-live-shadow-evidence-manifest/v1',
@@ -69,7 +73,13 @@ function writeEvidenceArtifacts(
       runId: process.env.GITHUB_RUN_ID ?? null,
       runAttempt: process.env.GITHUB_RUN_ATTEMPT ?? null,
       workflowRef: process.env.GITHUB_WORKFLOW_REF ?? null,
-      sha: process.env.GITHUB_SHA ?? null,
+      // Workflow event/ref identity (may be the pull_request merge SHA under GITHUB_SHA).
+      eventSha: process.env.GITHUB_SHA ?? null,
+      eventRef: process.env.GITHUB_REF ?? null,
+    },
+    evaluatorIdentity: {
+      sourceCheckoutSha: evaluatorIdentity.sourceCheckoutSha ?? null,
+      matchesCandidateSha: evaluatorIdentity.matchesCandidateSha ?? null,
     },
     evidenceSchema: evidence.schema,
     evidencePath: 'evidence.json',
@@ -97,6 +107,7 @@ function writeEvidenceArtifacts(
 const repositoryFullName = requiredEnvironment('AUT001_REPOSITORY');
 const pullRequestNumber = requiredPositiveInteger('AUT001_PR_NUMBER');
 const candidateSha = requiredEnvironment('AUT001_CANDIDATE_SHA');
+const evaluatorSourceCheckoutSha = requiredEnvironment('AUT001_EVALUATOR_SOURCE_SHA');
 const baseSha = requiredEnvironment('AUT001_BASE_SHA');
 const baseRef = requiredEnvironment('AUT001_BASE_REF');
 const repositoryId = requiredPositiveInteger('AUT001_REPOSITORY_ID');
@@ -105,6 +116,23 @@ const evidencePath = requiredEnvironment('AUT001_EVIDENCE_PATH');
 const maxAttempts = optionalPositiveInteger('AUT001_SHADOW_MAX_ATTEMPTS', 24);
 const intervalMs = optionalPositiveInteger('AUT001_SHADOW_INTERVAL_MS', 30_000);
 const timeoutMs = optionalPositiveInteger('AUT001_SHADOW_TIMEOUT_MS', 1_200_000);
+
+const evaluatorMatchesCandidate = evaluatorSourceCheckoutSha === candidateSha;
+const subjectIdentity = {
+  repositoryId,
+  repositoryFullName,
+  pullRequestNumber,
+  candidateSha,
+  evaluatorSourceCheckoutSha,
+  baseSha,
+  baseRef,
+};
+const evaluatorIdentity = {
+  sourceCheckoutSha: evaluatorSourceCheckoutSha,
+  matchesCandidateSha: evaluatorMatchesCandidate,
+  workflowEventSha: process.env.GITHUB_SHA ?? null,
+  workflowEventRef: process.env.GITHUB_REF ?? null,
+};
 
 const calls: Array<{ method: string; url: string }> = [];
 const boundedFetch: GitHubFetch = async (url, init) => {
@@ -122,54 +150,25 @@ const systemClock: ShadowClock = {
   },
 };
 
-const packageAuthority = loadPackageRequiredCheckAuthority(packageContractPath);
-const client = new GitHubRestReadClient(boundedFetch);
-const liveRuleset = await client.readRulesetRequiredChecks(
-  repositoryFullName,
-  packageAuthority.rulesetName,
-);
-const authorityComparison = compareRequiredCheckAuthority(packageAuthority, liveRuleset);
-
-if (authorityComparison.status !== 'AGREED') {
+if (!evaluatorMatchesCandidate) {
   const evidence = {
     schema: 'mudac.aut001-b-live-shadow-evidence/v2',
-    subject: {
-      repositoryId,
-      repositoryFullName,
-      pullRequestNumber,
-      candidateSha,
-      baseSha,
-      baseRef,
-    },
-    packageAuthorityRecord: {
-      path: packageAuthority.packageContractPath,
-      schema: packageAuthority.packageSchema,
-      rulesetName: packageAuthority.rulesetName,
-      requiredContexts: packageAuthority.packageRequiredContexts,
-      expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
-      stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
-    },
-    liveRuleset: {
-      rulesetId: liveRuleset.rulesetId,
-      rulesetName: liveRuleset.rulesetName,
-      requiredContexts: liveRuleset.requiredContexts,
-      refNameCondition: liveRuleset.refNameCondition,
-    },
-    authoritySetComparison: authorityComparison,
+    subject: subjectIdentity,
+    evaluatorIdentity,
     runtimeBoundary: {
       adapter: 'GitHubRestReadClient',
       apiBase: 'https://api.github.com',
       credentialsPassedToAdapter: false,
-      callCount: calls.length,
-      nonGetCallCount: calls.filter((call) => call.method !== 'GET').length,
-      calls,
+      callCount: 0,
+      nonGetCallCount: 0,
+      calls: [],
     },
     terminalDisposition: null,
     windowTerminatedNormally: false,
     timedOut: false,
     result: {
       status: 'FAILED_CLOSED',
-      reason: authorityComparison.reason,
+      reason: 'evaluator_source_checkout_sha_does_not_equal_candidate_sha',
     },
   };
   const exitCode = decideLiveShadowProcessExitCode({
@@ -177,128 +176,178 @@ if (authorityComparison.status !== 'AGREED') {
     windowTerminatedNormally: false,
     timedOut: false,
     blockingDivergence: true,
-    nonGetCallCount: calls.filter((call) => call.method !== 'GET').length,
+    nonGetCallCount: 0,
     status: 'FAILED_CLOSED',
   });
   writeEvidenceArtifacts(evidencePath, evidence, exitCode);
   process.exitCode = exitCode;
 } else {
-  const requiredCheckNames = authorityComparison.requiredContexts;
-  const initialJournal = new ShadowJournal();
-  const { result, journal } = await runBoundedReadOnlyShadowWindow({
-    client,
-    journal: initialJournal,
-    baseRequest: {
-      repositoryId,
-      repositoryFullName,
-      pullRequestNumber,
-      baseRef,
-    },
-    target: {
-      candidateSha,
-      expectedBaseSha: baseSha,
-      requiredCheckNames,
-      initialLifecycleState: 'AWAITING_PR_CI',
-      lifecycleFacts: [],
-    },
-    authorityComparison,
-    clock: systemClock,
-    config: {
-      maxAttempts,
-      intervalMs,
-      timeoutMs,
-      confirmAfterTerminal: true,
-    },
-    candidateSha,
-  });
+  const packageAuthority = loadPackageRequiredCheckAuthority(packageContractPath);
+  const client = new GitHubRestReadClient(boundedFetch);
+  const liveRuleset = await client.readRulesetRequiredChecks(
+    repositoryFullName,
+    packageAuthority.rulesetName,
+  );
+  const authorityComparison = compareRequiredCheckAuthority(packageAuthority, liveRuleset);
 
-  const snapshot = journal.snapshot();
-  const observations = snapshot.observations.map((observation) => ({
-    observationId: observation.observationId,
-    observedAt: observation.observedAt,
-    requiredChecks: observation.requiredChecks,
-    projectionBefore: observation.projectionBeforeReconciliation,
-    projectionAfter: observation.projectionAfterReconciliation,
-    divergences: observation.divergences,
-    blocking: observation.blocking,
-  }));
-  const nonGetCalls = calls.filter((call) => call.method !== 'GET');
-  const blockingDivergence = observations.some((item) => item.blocking);
-
-  const evidence = {
-    schema: 'mudac.aut001-b-live-shadow-evidence/v2',
-    subject: {
-      repositoryId,
-      repositoryFullName,
-      pullRequestNumber,
+  if (authorityComparison.status !== 'AGREED') {
+    const evidence = {
+      schema: 'mudac.aut001-b-live-shadow-evidence/v2',
+      subject: subjectIdentity,
+      evaluatorIdentity,
+      packageAuthorityRecord: {
+        path: packageAuthority.packageContractPath,
+        schema: packageAuthority.packageSchema,
+        rulesetName: packageAuthority.rulesetName,
+        requiredContexts: packageAuthority.packageRequiredContexts,
+        expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
+        stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
+      },
+      liveRuleset: {
+        rulesetId: liveRuleset.rulesetId,
+        rulesetName: liveRuleset.rulesetName,
+        requiredContexts: liveRuleset.requiredContexts,
+        refNameCondition: liveRuleset.refNameCondition,
+      },
+      authoritySetComparison: authorityComparison,
+      runtimeBoundary: {
+        adapter: 'GitHubRestReadClient',
+        apiBase: 'https://api.github.com',
+        credentialsPassedToAdapter: false,
+        callCount: calls.length,
+        nonGetCallCount: calls.filter((call) => call.method !== 'GET').length,
+        calls,
+      },
+      terminalDisposition: null,
+      windowTerminatedNormally: false,
+      timedOut: false,
+      result: {
+        status: 'FAILED_CLOSED',
+        reason: authorityComparison.reason,
+      },
+    };
+    const exitCode = decideLiveShadowProcessExitCode({
+      terminalDisposition: null,
+      windowTerminatedNormally: false,
+      timedOut: false,
+      blockingDivergence: true,
+      nonGetCallCount: calls.filter((call) => call.method !== 'GET').length,
+      status: 'FAILED_CLOSED',
+    });
+    writeEvidenceArtifacts(evidencePath, evidence, exitCode);
+    process.exitCode = exitCode;
+  } else {
+    const requiredCheckNames = authorityComparison.requiredContexts;
+    const initialJournal = new ShadowJournal();
+    const { result, journal } = await runBoundedReadOnlyShadowWindow({
+      client,
+      journal: initialJournal,
+      baseRequest: {
+        repositoryId,
+        repositoryFullName,
+        pullRequestNumber,
+        baseRef,
+      },
+      target: {
+        candidateSha,
+        expectedBaseSha: baseSha,
+        requiredCheckNames,
+        initialLifecycleState: 'AWAITING_PR_CI',
+        lifecycleFacts: [],
+      },
+      authorityComparison,
+      clock: systemClock,
+      config: {
+        maxAttempts,
+        intervalMs,
+        timeoutMs,
+        confirmAfterTerminal: true,
+      },
       candidateSha,
-      baseSha,
-      baseRef,
-    },
-    packageAuthorityRecord: {
-      path: packageAuthority.packageContractPath,
-      schema: packageAuthority.packageSchema,
-      rulesetName: packageAuthority.rulesetName,
-      requiredContexts: packageAuthority.packageRequiredContexts,
-      expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
-      stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
-    },
-    liveRuleset: {
-      rulesetId: liveRuleset.rulesetId,
-      rulesetName: liveRuleset.rulesetName,
-      requiredContexts: liveRuleset.requiredContexts,
-      refNameCondition: liveRuleset.refNameCondition,
-    },
-    authoritySetComparison: {
-      status: authorityComparison.status,
-      requiredContexts: authorityComparison.requiredContexts,
-    },
-    runtimeBoundary: {
-      adapter: 'GitHubRestReadClient',
-      apiBase: 'https://api.github.com',
-      credentialsPassedToAdapter: false,
-      callCount: calls.length,
-      nonGetCallCount: nonGetCalls.length,
-      calls,
-    },
-    boundedWindow: {
-      maxAttempts,
-      intervalMs,
-      timeoutMs,
-      confirmAfterTerminal: true,
-      status: result.status,
-      reason: result.reason,
+    });
+
+    const snapshot = journal.snapshot();
+    const observations = snapshot.observations.map((observation) => ({
+      observationId: observation.observationId,
+      observedAt: observation.observedAt,
+      requiredChecks: observation.requiredChecks,
+      projectionBefore: observation.projectionBeforeReconciliation,
+      projectionAfter: observation.projectionAfterReconciliation,
+      divergences: observation.divergences,
+      blocking: observation.blocking,
+    }));
+    const nonGetCalls = calls.filter((call) => call.method !== 'GET');
+    const blockingDivergence = observations.some((item) => item.blocking);
+
+    const evidence = {
+      schema: 'mudac.aut001-b-live-shadow-evidence/v2',
+      subject: subjectIdentity,
+      evaluatorIdentity,
+      packageAuthorityRecord: {
+        path: packageAuthority.packageContractPath,
+        schema: packageAuthority.packageSchema,
+        rulesetName: packageAuthority.rulesetName,
+        requiredContexts: packageAuthority.packageRequiredContexts,
+        expectedRefNameCondition: packageAuthority.expectedRefNameCondition,
+        stageAuthorityDeltaPath: packageAuthority.stageAuthorityDeltaPath,
+      },
+      liveRuleset: {
+        rulesetId: liveRuleset.rulesetId,
+        rulesetName: liveRuleset.rulesetName,
+        requiredContexts: liveRuleset.requiredContexts,
+        refNameCondition: liveRuleset.refNameCondition,
+      },
+      authoritySetComparison: {
+        status: authorityComparison.status,
+        requiredContexts: authorityComparison.requiredContexts,
+      },
+      runtimeBoundary: {
+        adapter: 'GitHubRestReadClient',
+        apiBase: 'https://api.github.com',
+        credentialsPassedToAdapter: false,
+        callCount: calls.length,
+        nonGetCallCount: nonGetCalls.length,
+        calls,
+      },
+      boundedWindow: {
+        maxAttempts,
+        intervalMs,
+        timeoutMs,
+        confirmAfterTerminal: true,
+        status: result.status,
+        reason: result.reason,
+        terminalDisposition: result.terminalDisposition,
+        windowTerminatedNormally: result.windowTerminatedNormally,
+        timedOut: result.timedOut,
+        observationCount: result.observationCount,
+        restartReconstructionCount: result.restartReconstructionCount,
+      },
+      observations,
+      appendOnlyEvidence: {
+        deliveryCount: snapshot.deliveries.length,
+        semanticFactCount: snapshot.semanticFacts.length,
+        observationCount: snapshot.observations.length,
+        runAttemptCount: snapshot.runAttempts.length,
+        runAttempts: snapshot.runAttempts,
+      },
       terminalDisposition: result.terminalDisposition,
       windowTerminatedNormally: result.windowTerminatedNormally,
       timedOut: result.timedOut,
-      observationCount: result.observationCount,
-      restartReconstructionCount: result.restartReconstructionCount,
-    },
-    observations,
-    appendOnlyEvidence: {
-      deliveryCount: snapshot.deliveries.length,
-      semanticFactCount: snapshot.semanticFacts.length,
-      observationCount: snapshot.observations.length,
-      runAttemptCount: snapshot.runAttempts.length,
-      runAttempts: snapshot.runAttempts,
-    },
-    terminalDisposition: result.terminalDisposition,
-    windowTerminatedNormally: result.windowTerminatedNormally,
-    timedOut: result.timedOut,
-    result,
-    exitCodeSemantics:
-      'green_means_terminal_PASS_only; FAILED_INCONCLUSIVE_timeout_mutation_structural_failure_exit_nonzero',
-    evidenceReferenceContract: 'docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json',
-  };
+      result,
+      exitCodeSemantics:
+        'green_means_terminal_PASS_only; FAILED_INCONCLUSIVE_timeout_mutation_structural_failure_exit_nonzero',
+      evidenceReferenceContract: 'docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json',
+    };
 
-  const exitCode = decideLiveShadowProcessExitCode({
-    terminalDisposition: result.terminalDisposition,
-    windowTerminatedNormally: result.windowTerminatedNormally,
-    timedOut: result.timedOut,
-    blockingDivergence,
-    nonGetCallCount: nonGetCalls.length,
-    status: result.status,
-  });
-  writeEvidenceArtifacts(evidencePath, evidence, exitCode);
-  process.exitCode = exitCode;
+    const exitCode = decideLiveShadowProcessExitCode({
+      terminalDisposition: result.terminalDisposition,
+      windowTerminatedNormally: result.windowTerminatedNormally,
+      timedOut: result.timedOut,
+      blockingDivergence,
+      nonGetCallCount: nonGetCalls.length,
+      status: result.status,
+    });
+    writeEvidenceArtifacts(evidencePath, evidence, exitCode);
+    process.exitCode = exitCode;
+  }
 }
