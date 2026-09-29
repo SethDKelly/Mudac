@@ -1,6 +1,7 @@
 import type {
   CheckTruth,
   GitHubReadClient,
+  LiveRulesetRequiredChecks,
   PullRequestTruth,
   RefTruth,
   WorkflowTruth,
@@ -18,6 +19,8 @@ export type GitHubFetch = (
 ) => Promise<JsonResponse>;
 
 const defaultFetch: GitHubFetch = async (url, init) => fetch(url, init);
+
+const RULESET_PAGE_SIZE = 100;
 
 function record(value: unknown, context: string): Record<string, unknown> {
   if (typeof value !== 'object' || value === null || Array.isArray(value)) {
@@ -170,14 +173,14 @@ export class GitHubRestReadClient implements GitHubReadClient {
 
     return raw.map((item, index) => {
       const entry = record(item, `check_runs.${index}`);
-      const id = numberValue(entry.id, `check_runs.${index}.id`);
       return {
-        id,
+        id: numberValue(entry.id, `check_runs.${index}.id`),
         name: text(entry.name, `check_runs.${index}.name`),
         headSha: text(entry.head_sha, `check_runs.${index}.head_sha`),
-        attempt: id,
         status: status(entry.status),
         conclusion: conclusion(entry.conclusion),
+        startedAt: nullableText(entry.started_at ?? null, `check_runs.${index}.started_at`),
+        completedAt: nullableText(entry.completed_at ?? null, `check_runs.${index}.completed_at`),
       };
     });
   }
@@ -209,6 +212,107 @@ export class GitHubRestReadClient implements GitHubReadClient {
         conclusion: conclusion(entry.conclusion),
       };
     });
+  }
+
+  async readRulesetRequiredChecks(
+    repositoryFullName: string,
+    rulesetName: string,
+  ): Promise<LiveRulesetRequiredChecks> {
+    if (rulesetName.trim().length === 0 || rulesetName !== rulesetName.trim()) {
+      throw new Error('invalid_ruleset_name');
+    }
+
+    const listed = await this.#get(repositoryFullName, `/rulesets?per_page=${RULESET_PAGE_SIZE}`);
+    if (!Array.isArray(listed)) {
+      throw new Error('invalid_github_response:rulesets.list');
+    }
+    if (listed.length >= RULESET_PAGE_SIZE) {
+      throw new Error('github_ruleset_list_pagination_incomplete');
+    }
+
+    const matching: Array<{ id: number; name: string; enforcement: string; target: string }> = [];
+    for (const [index, item] of listed.entries()) {
+      const entry = record(item, `rulesets.${index}`);
+      const name = text(entry.name, `rulesets.${index}.name`);
+      if (name !== rulesetName) continue;
+      matching.push({
+        id: numberValue(entry.id, `rulesets.${index}.id`),
+        name,
+        enforcement: text(entry.enforcement, `rulesets.${index}.enforcement`),
+        target: text(entry.target, `rulesets.${index}.target`),
+      });
+    }
+
+    if (matching.length === 0) {
+      throw new Error('github_ruleset_not_found');
+    }
+    if (matching.length > 1) {
+      throw new Error('github_ruleset_name_not_unique');
+    }
+
+    const selected = matching[0];
+    if (!selected) throw new Error('github_ruleset_not_found');
+    if (selected.enforcement !== 'active') {
+      throw new Error('github_ruleset_inactive');
+    }
+    if (selected.target !== 'branch') {
+      throw new Error('github_ruleset_unsupported_target');
+    }
+
+    const details = record(
+      await this.#get(repositoryFullName, `/rulesets/${selected.id}`),
+      'ruleset_details',
+    );
+    if (text(details.name, 'ruleset_details.name') !== rulesetName) {
+      throw new Error('github_ruleset_detail_name_mismatch');
+    }
+    if (text(details.enforcement, 'ruleset_details.enforcement') !== 'active') {
+      throw new Error('github_ruleset_inactive');
+    }
+    if (text(details.target, 'ruleset_details.target') !== 'branch') {
+      throw new Error('github_ruleset_unsupported_target');
+    }
+
+    const rules = details.rules;
+    if (!Array.isArray(rules)) throw new Error('invalid_github_response:ruleset_details.rules');
+
+    const requiredStatusRules = rules.filter((item, index) => {
+      const entry = record(item, `ruleset_details.rules.${index}`);
+      return entry.type === 'required_status_checks';
+    });
+    if (requiredStatusRules.length === 0) {
+      throw new Error('github_ruleset_required_status_checks_missing');
+    }
+    if (requiredStatusRules.length > 1) {
+      throw new Error('github_ruleset_required_status_checks_ambiguous');
+    }
+
+    const rule = record(requiredStatusRules[0], 'ruleset_details.required_status_checks');
+    const parameters = record(rule.parameters, 'ruleset_details.required_status_checks.parameters');
+    const required = parameters.required_status_checks;
+    if (!Array.isArray(required) || required.length === 0) {
+      throw new Error('github_ruleset_required_contexts_incomplete');
+    }
+
+    const requiredContexts = required.map((item, index) => {
+      const entry = record(item, `ruleset_details.required_status_checks.${index}`);
+      const context = text(
+        entry.context,
+        `ruleset_details.required_status_checks.${index}.context`,
+      );
+      if (context !== context.trim()) {
+        throw new Error('github_ruleset_required_context_malformed');
+      }
+      return context;
+    });
+
+    return {
+      rulesetId: selected.id,
+      rulesetName: selected.name,
+      enforcement: 'active',
+      target: 'branch',
+      requiredContexts,
+    };
   }
 
   async isAncestor(
