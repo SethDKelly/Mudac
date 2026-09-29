@@ -47,7 +47,18 @@
     "phase022_authority_created": false,
     "required_checks_source": "PACKAGE_CONTRACT_AND_LIVE_REPOSITORY_RULESET",
     "workflow_env_is_not_required_check_authority": true,
-    "retained_artifact_required": true
+    "retained_artifact_required": true,
+    "retained_artifact_contents": ["evidence.json", "evidence.manifest.json"],
+    "actions_artifact_retention_days": 90,
+    "aut_e03_reference_contract": "docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json",
+    "green_workflow_means_terminal_pass_only": true
+  },
+  "repair_cycle_2": {
+    "consumes_ordinary_repair_cycle": true,
+    "findings": ["AUT-B-R1-IR-04", "AUT-B-R1-IR-05"],
+    "material_effect": "exit_semantics_mean_terminal_PASS_only_and_AUT_E03_reference_retention_surface_established",
+    "fresh_exact_head_verification_required": true,
+    "fresh_independent_and_adversarial_review_required": true
   },
   "material_effect": {
     "fresh_exact_head_repository_verification_required": true,

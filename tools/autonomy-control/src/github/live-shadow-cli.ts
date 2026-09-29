@@ -1,7 +1,10 @@
-import { writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { dirname } from 'node:path';
 import process from 'node:process';
 
 import { ShadowJournal } from '../storage/shadow-journal.js';
+import { decideLiveShadowProcessExitCode } from './live-shadow-exit.js';
 import { loadPackageRequiredCheckAuthority } from './package-authority.js';
 import { compareRequiredCheckAuthority } from './required-check-authority.js';
 import type { GitHubFetch } from './rest-read-client.js';
@@ -32,6 +35,63 @@ function optionalPositiveInteger(name: string, fallback: number): number {
     throw new Error(`invalid_optional_integer:${name}`);
   }
   return parsed;
+}
+
+function sha256Hex(value: string): string {
+  return createHash('sha256').update(value, 'utf8').digest('hex');
+}
+
+function writeEvidenceArtifacts(
+  evidencePath: string,
+  evidence: Record<string, unknown>,
+  exitCode: number,
+): void {
+  mkdirSync(dirname(evidencePath), { recursive: true });
+  const evidenceBody = `${JSON.stringify(evidence, null, 2)}\n`;
+  writeFileSync(evidencePath, evidenceBody, 'utf8');
+
+  const subject = evidence.subject;
+  const boundedWindow =
+    typeof evidence.boundedWindow === 'object' && evidence.boundedWindow !== null
+      ? (evidence.boundedWindow as Record<string, unknown>)
+      : {};
+  const runtimeBoundary =
+    typeof evidence.runtimeBoundary === 'object' && evidence.runtimeBoundary !== null
+      ? (evidence.runtimeBoundary as Record<string, unknown>)
+      : {};
+
+  const manifest = {
+    schema: 'mudac.aut001-b-live-shadow-evidence-manifest/v1',
+    subject,
+    workflow: {
+      name: 'AUT-001 Read-Only Shadow',
+      path: '.github/workflows/autonomy-control-shadow.yml',
+      runId: process.env.GITHUB_RUN_ID ?? null,
+      runAttempt: process.env.GITHUB_RUN_ATTEMPT ?? null,
+      workflowRef: process.env.GITHUB_WORKFLOW_REF ?? null,
+      sha: process.env.GITHUB_SHA ?? null,
+    },
+    evidenceSchema: evidence.schema,
+    evidencePath: 'evidence.json',
+    evidenceSha256: sha256Hex(evidenceBody),
+    producedAt: new Date().toISOString(),
+    terminalDisposition: evidence.terminalDisposition ?? null,
+    windowTerminatedNormally: evidence.windowTerminatedNormally ?? false,
+    timedOut: evidence.timedOut ?? false,
+    observationCount: boundedWindow.observationCount ?? null,
+    restartReconstructionCount: boundedWindow.restartReconstructionCount ?? null,
+    callCount: runtimeBoundary.callCount ?? null,
+    nonGetCallCount: runtimeBoundary.nonGetCallCount ?? null,
+    exitCode,
+    exitCodeSemantics:
+      'green_means_terminal_PASS_only; FAILED_INCONCLUSIVE_timeout_mutation_structural_failure_exit_nonzero',
+    referenceContract: 'docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json',
+  };
+
+  const manifestPath = evidencePath.replace(/evidence\.json$/u, 'evidence.manifest.json');
+  writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  console.log(JSON.stringify(evidence, null, 2));
+  console.log(JSON.stringify({ evidenceManifest: manifest }, null, 2));
 }
 
 const repositoryFullName = requiredEnvironment('AUT001_REPOSITORY');
@@ -112,9 +172,16 @@ if (authorityComparison.status !== 'AGREED') {
       reason: authorityComparison.reason,
     },
   };
-  writeFileSync(evidencePath, `${JSON.stringify(evidence, null, 2)}\n`, 'utf8');
-  console.log(JSON.stringify(evidence, null, 2));
-  process.exitCode = 1;
+  const exitCode = decideLiveShadowProcessExitCode({
+    terminalDisposition: null,
+    windowTerminatedNormally: false,
+    timedOut: false,
+    blockingDivergence: true,
+    nonGetCallCount: calls.filter((call) => call.method !== 'GET').length,
+    status: 'FAILED_CLOSED',
+  });
+  writeEvidenceArtifacts(evidencePath, evidence, exitCode);
+  process.exitCode = exitCode;
 } else {
   const requiredCheckNames = authorityComparison.requiredContexts;
   const initialJournal = new ShadowJournal();
@@ -219,19 +286,19 @@ if (authorityComparison.status !== 'AGREED') {
     windowTerminatedNormally: result.windowTerminatedNormally,
     timedOut: result.timedOut,
     result,
+    exitCodeSemantics:
+      'green_means_terminal_PASS_only; FAILED_INCONCLUSIVE_timeout_mutation_structural_failure_exit_nonzero',
+    evidenceReferenceContract: 'docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json',
   };
 
-  writeFileSync(evidencePath, `${JSON.stringify(evidence, null, 2)}\n`, 'utf8');
-  console.log(JSON.stringify(evidence, null, 2));
-
-  if (
-    nonGetCalls.length > 0 ||
-    result.status !== 'TERMINAL' ||
-    result.timedOut ||
-    !result.windowTerminatedNormally ||
-    blockingDivergence ||
-    result.terminalDisposition === null
-  ) {
-    process.exitCode = 1;
-  }
+  const exitCode = decideLiveShadowProcessExitCode({
+    terminalDisposition: result.terminalDisposition,
+    windowTerminatedNormally: result.windowTerminatedNormally,
+    timedOut: result.timedOut,
+    blockingDivergence,
+    nonGetCallCount: nonGetCalls.length,
+    status: result.status,
+  });
+  writeEvidenceArtifacts(evidencePath, evidence, exitCode);
+  process.exitCode = exitCode;
 }

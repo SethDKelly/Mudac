@@ -1,0 +1,127 @@
+{
+  "schema": "mudac.aut001-e03-live-shadow-reference-contract/v1",
+  "obligation_id": "AUT-E03",
+  "package_id": "AUT-001",
+  "subphase": "AUT-001-B",
+  "title": "AUT-E03 live read-only shadow evidence reference and retention contract",
+  "status": "ACTIVE_REFERENCE_CONTRACT",
+  "bound_authority": {
+    "g2_authorization": "docs/routing/aut001_g2_authorization.json",
+    "g1_package_contract": "docs/routing/aut001_implementation_package_contract.json",
+    "b_start_gate": "docs/routing/aut001_b_stage_transition_start_gate.json",
+    "stage_b_authority_material_delta": "docs/routing/aut001_b_stage_authority_material_delta.json",
+    "shadow_workflow": ".github/workflows/autonomy-control-shadow.yml",
+    "creates_new_g2": false,
+    "production_authority": false,
+    "phase022_authority": false,
+    "criteria_weakening": false
+  },
+  "obligation": {
+    "claim": "Read-only live GitHub shadow correctly reconciles PR/ref/check/workflow truth and produces no GitHub mutation while divergence is fully recorded.",
+    "criterion_refs": ["AUT-C05", "AUT-C15"],
+    "environment_tier": "AUT-S",
+    "exact_sha_required": true,
+    "producer": "shadow_runtime",
+    "producer_workflow_name": "AUT-001 Read-Only Shadow",
+    "producer_workflow_path": ".github/workflows/autonomy-control-shadow.yml",
+    "retention_or_reference": "docs/evidence/aut001/"
+  },
+  "artifact": {
+    "schema": "mudac.aut001-b-live-shadow-evidence/v2",
+    "naming_convention": "aut001-b-live-shadow-evidence-<exact-candidate-sha>",
+    "naming_key": "exact candidate SHA from pull_request.head.sha",
+    "contents": [
+      "evidence.json",
+      "evidence.manifest.json"
+    ],
+    "actions_retention_days": 90,
+    "actions_retention_note": "Maximum bounded GitHub Actions artifact retention used by the producer workflow for this obligation. Actions retention does not replace this repository reference contract."
+  },
+  "acceptance_identity_requirements": {
+    "exact_candidate_sha": true,
+    "exact_base_sha": true,
+    "pull_request_number": true,
+    "repository_full_name": true,
+    "workflow_run_id": true,
+    "workflow_run_attempt": true,
+    "artifact_id": true,
+    "artifact_name": true,
+    "artifact_archive_sha256": true,
+    "evidence_json_sha256": "required_when_retrievable",
+    "evidence_manifest_sha256": "required_when_manifest_present"
+  },
+  "required_evidence_fields": {
+    "subject": [
+      "repositoryId",
+      "repositoryFullName",
+      "pullRequestNumber",
+      "candidateSha",
+      "baseSha",
+      "baseRef"
+    ],
+    "bounded_window": [
+      "status",
+      "reason",
+      "terminalDisposition",
+      "windowTerminatedNormally",
+      "timedOut",
+      "observationCount",
+      "restartReconstructionCount"
+    ],
+    "authority": [
+      "packageAuthorityRecord",
+      "liveRuleset",
+      "liveRuleset.refNameCondition",
+      "authoritySetComparison"
+    ],
+    "read_only_call_ledger": [
+      "runtimeBoundary.adapter",
+      "runtimeBoundary.apiBase",
+      "runtimeBoundary.credentialsPassedToAdapter",
+      "runtimeBoundary.callCount",
+      "runtimeBoundary.nonGetCallCount",
+      "runtimeBoundary.calls"
+    ]
+  },
+  "manifest_requirements": {
+    "schema": "mudac.aut001-b-live-shadow-evidence-manifest/v1",
+    "required_fields": [
+      "schema",
+      "subject",
+      "workflow",
+      "evidenceSchema",
+      "evidenceSha256",
+      "producedAt",
+      "terminalDisposition",
+      "windowTerminatedNormally",
+      "timedOut",
+      "nonGetCallCount",
+      "exitCodeSemantics"
+    ]
+  },
+  "retrieval_and_verification": [
+    "Identify the exact candidate SHA under review.",
+    "Locate the producer workflow run bound only to that SHA.",
+    "Download the Actions artifact named by the deterministic convention for that SHA.",
+    "Record artifact id, name, archive digest, and workflow/run identity.",
+    "Verify evidence.json schema, subject identity, authority agreement including ref_name condition, bounded-window fields, and GET-only call ledger.",
+    "When evidence.manifest.json is present, verify its digests and subject fields against evidence.json.",
+    "Workflow conclusion alone cannot qualify AUT-E03.",
+    "Missing, expired, or unretrievable retained evidence is INCONCLUSIVE, not PASS."
+  ],
+  "qualification_rules": {
+    "workflow_conclusion_alone_cannot_qualify": true,
+    "missing_or_unretrievable_evidence": "INCONCLUSIVE",
+    "self_referential_candidate_sha_embedding_forbidden_in_committed_contract": true,
+    "exact_candidate_artifact_identity_bound_externally_after_final_sha_exists": true,
+    "read_only_github_behavior_mandatory": true,
+    "no_repository_write_permission_granted_to_shadow_runtime_for_retention": true
+  },
+  "exit_code_semantics": {
+    "green_workflow_means": "bounded window reached terminal PASS with no blocking divergence, timeout, mutation, or structural failure",
+    "terminal_PASS_exit": 0,
+    "terminal_FAILED_exit": "nonzero",
+    "INCONCLUSIVE_timeout_structural_blocking_or_non_GET_exit": "nonzero",
+    "artifact_retained_on_failure": true
+  }
+}

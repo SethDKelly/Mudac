@@ -46,19 +46,49 @@ jobs:
           AUT001_SHADOW_TIMEOUT_MS: '1200000'
         run: |
           mkdir -p /tmp/aut001-shadow
+          set +e
           pnpm exec tsx tools/autonomy-control/src/github/live-shadow-cli.ts
+          exit_code=$?
+          set +e
           {
             echo '## AUT-001-B live read-only shadow evidence'
+            echo
+            echo "- candidate_sha: \`${{ github.event.pull_request.head.sha }}\`"
+            echo "- base_sha: \`${{ github.event.pull_request.base.sha }}\`"
+            echo "- workflow_run_id: \`${{ github.run_id }}\`"
+            echo "- workflow_run_attempt: \`${{ github.run_attempt }}\`"
+            echo "- artifact_name: \`aut001-b-live-shadow-evidence-${{ github.event.pull_request.head.sha }}\`"
+            echo "- process_exit_code: \`$exit_code\`"
+            echo "- exit_code_semantics: green means terminal PASS only"
+            echo "- reference_contract: \`docs/evidence/aut001/aut-e03-live-shadow-reference-contract.json\`"
+            echo
+            echo '### evidence.manifest.json'
             echo '```json'
-            cat /tmp/aut001-shadow/evidence.json
+            if [ -f /tmp/aut001-shadow/evidence.manifest.json ]; then
+              cat /tmp/aut001-shadow/evidence.manifest.json
+            else
+              echo '{"missing":true}'
+            fi
+            echo '```'
+            echo
+            echo '### evidence.json'
+            echo '```json'
+            if [ -f /tmp/aut001-shadow/evidence.json ]; then
+              cat /tmp/aut001-shadow/evidence.json
+            else
+              echo '{"missing":true}'
+            fi
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+          exit "$exit_code"
 
       - name: Retain AUT-E03 bounded-window evidence artifact
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: aut001-b-live-shadow-evidence-${{ github.event.pull_request.head.sha }}
-          path: /tmp/aut001-shadow/evidence.json
+          path: |
+            /tmp/aut001-shadow/evidence.json
+            /tmp/aut001-shadow/evidence.manifest.json
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90
