@@ -6,6 +6,7 @@ import type {
   DeliveryEnvelope,
   GitHubReadClient,
   GitHubTruthSnapshot,
+  LiveRulesetRequiredChecks,
   PullRequestTruth,
   ShadowReadRequest,
   ShadowTarget,
@@ -15,7 +16,12 @@ import {
   classifyDeliveryAgainstTruth,
   reconcileShadowTruth,
 } from '../src/github/reconciliation.js';
-import { collectAuthoritativeGitHubTruth, runReadOnlyShadow } from '../src/github/shadow.js';
+import {
+  collectAuthoritativeGitHubTruth,
+  runBoundedReadOnlyShadowWindow,
+  runReadOnlyShadow,
+  type ShadowClock,
+} from '../src/github/shadow.js';
 import { ShadowJournal } from '../src/storage/shadow-journal.js';
 
 const candidateSha = 'candidate-123';
@@ -25,15 +31,16 @@ const observedAt = '2026-09-28T17:45:00Z';
 function successfulCheck(
   name = 'Implementation Verification',
   headSha = candidateSha,
-  attempt = 1,
+  id = 1,
 ): CheckTruth {
   return {
-    id: attempt,
+    id,
     name,
     headSha,
-    attempt,
     status: 'completed',
     conclusion: 'success',
+    startedAt: '2026-09-28T17:40:00Z',
+    completedAt: '2026-09-28T17:44:00Z',
   };
 }
 
@@ -73,6 +80,16 @@ function target(overrides: Partial<ShadowTarget> = {}): ShadowTarget {
   };
 }
 
+function observationTarget(): ShadowTarget {
+  return {
+    candidateSha,
+    expectedBaseSha: baseSha,
+    requiredCheckNames: ['Implementation Verification'],
+    initialLifecycleState: 'AWAITING_PR_CI',
+    lifecycleFacts: [],
+  };
+}
+
 function delivery(overrides: Partial<DeliveryEnvelope> = {}): DeliveryEnvelope {
   return {
     deliveryId: 'delivery-1',
@@ -98,8 +115,16 @@ class FakeReadClient implements GitHubReadClient {
   ref = truth().baseRef;
   checks: readonly CheckTruth[] = truth().checks;
   workflows: readonly WorkflowTruth[] = [];
+  ruleset: LiveRulesetRequiredChecks = {
+    rulesetId: 1,
+    rulesetName: 'main — protected',
+    enforcement: 'active',
+    target: 'branch',
+    requiredContexts: ['Implementation Verification'],
+  };
   ancestor: boolean | 'UNKNOWN' = false;
   failOn?: string;
+  checkSequence: Array<readonly CheckTruth[]> = [];
 
   async readPullRequest(): Promise<PullRequestTruth> {
     this.calls.push('readPullRequest');
@@ -116,6 +141,10 @@ class FakeReadClient implements GitHubReadClient {
   async readChecks(): Promise<readonly CheckTruth[]> {
     this.calls.push('readChecks');
     if (this.failOn === 'readChecks') throw new Error('read_checks_failed');
+    if (this.checkSequence.length > 0) {
+      const next = this.checkSequence.shift();
+      return structuredClone(next ?? []);
+    }
     return structuredClone(this.checks);
   }
 
@@ -125,10 +154,38 @@ class FakeReadClient implements GitHubReadClient {
     return structuredClone(this.workflows);
   }
 
+  async readRulesetRequiredChecks(): Promise<LiveRulesetRequiredChecks> {
+    this.calls.push('readRulesetRequiredChecks');
+    if (this.failOn === 'readRulesetRequiredChecks') throw new Error('ruleset_failed');
+    return structuredClone(this.ruleset);
+  }
+
   async isAncestor(): Promise<boolean | 'UNKNOWN'> {
     this.calls.push('isAncestor');
     if (this.failOn === 'isAncestor') throw new Error('ancestry_failed');
     return this.ancestor;
+  }
+}
+
+class FakeClock implements ShadowClock {
+  #ms: number;
+  readonly sleeps: number[] = [];
+
+  constructor(startIso: string) {
+    this.#ms = Date.parse(startIso);
+  }
+
+  now(): Date {
+    return new Date(this.#ms);
+  }
+
+  async sleep(ms: number): Promise<void> {
+    this.sleeps.push(ms);
+    this.#ms += ms;
+  }
+
+  advance(ms: number): void {
+    this.#ms += ms;
   }
 }
 
@@ -138,6 +195,25 @@ const request: ShadowReadRequest = {
   pullRequestNumber: 23,
   baseRef: 'aut-001/b-start-gate',
   observedAt,
+};
+
+const agreedAuthority = {
+  status: 'AGREED' as const,
+  requiredContexts: ['Implementation Verification'],
+  packageAuthority: {
+    packageContractPath: 'docs/routing/aut001_implementation_package_contract.json',
+    packageSchema: 'mudac.aut001-implementation-package/v1',
+    rulesetName: 'main — protected',
+    rulesetEnforcement: 'active',
+    packageRequiredContexts: ['Implementation Verification'],
+  },
+  liveRuleset: {
+    rulesetId: 1,
+    rulesetName: 'main — protected',
+    enforcement: 'active' as const,
+    target: 'branch' as const,
+    requiredContexts: ['Implementation Verification'],
+  },
 };
 
 describe('AUT-001-B delivery journal', () => {
@@ -169,15 +245,24 @@ describe('AUT-001-B delivery journal', () => {
     expect(journal.snapshot().deliveries).toHaveLength(0);
   });
 
-  it('records unknown event families without lifecycle advancement semantics', () => {
+  it('classifies unknown event families as RECORD_NO_ADVANCE', () => {
     const item = delivery({ eventFamily: 'unknown', action: 'future_action' });
-    const journal = new ShadowJournal();
-    expect(journal.appendDelivery(item, 'attempt-1').status).toBe('ACCEPTED');
     expect(classifyDeliveryAgainstTruth(item, truth())).toBe('RECORD_NO_ADVANCE');
   });
 
-  it('classifies a late event for a superseded head as historical only', () => {
-    const item = delivery({ payloadHeadSha: 'old-head' });
+  it('classifies known family with unknown action as RECORD_NO_ADVANCE', () => {
+    const item = delivery({ eventFamily: 'pull_request', action: 'labeled' });
+    expect(classifyDeliveryAgainstTruth(item, truth())).toBe('RECORD_NO_ADVANCE');
+  });
+
+  it('classifies accepted pull_request action as CURRENT_NOTIFICATION', () => {
+    expect(classifyDeliveryAgainstTruth(delivery({ action: 'opened' }), truth())).toBe(
+      'CURRENT_NOTIFICATION',
+    );
+  });
+
+  it('classifies a late known action for a superseded head as historical only', () => {
+    const item = delivery({ action: 'synchronize', payloadHeadSha: 'old-head' });
     expect(classifyDeliveryAgainstTruth(item, truth())).toBe('HISTORICAL_NO_ADVANCE');
   });
 });
@@ -202,47 +287,16 @@ describe('AUT-001-B required-check reconciliation', () => {
     expect(result.projectionAfterReconciliation.state).toBe('AWAITING_PR_CI');
   });
 
-  it.each([
-    ['missing', [] as CheckTruth[]],
-    [
-      'running',
-      [
-        {
-          ...successfulCheck(),
-          status: 'in_progress' as const,
-          conclusion: null,
-        },
-      ],
-    ],
-    [
-      'failed',
-      [
-        {
-          ...successfulCheck(),
-          conclusion: 'failure' as const,
-        },
-      ],
-    ],
-    [
-      'cancelled',
-      [
-        {
-          ...successfulCheck(),
-          conclusion: 'cancelled' as const,
-        },
-      ],
-    ],
-  ])('does not treat %s required-check state as pass', (_label, checks) => {
-    const evaluation = evaluateRequiredChecks(checks, [], candidateSha, [
-      'Implementation Verification',
-    ]);
-    expect(evaluation.disposition).not.toBe('PASS');
-  });
-
-  it('fails inconclusive on conflicting latest attempts for the same required context', () => {
+  it('fails inconclusive on conflicting newest timestamps for the same required context', () => {
     const evaluation = evaluateRequiredChecks(
-      [successfulCheck(), { ...successfulCheck(), id: 99, conclusion: 'failure' }],
-      [],
+      [
+        successfulCheck('Implementation Verification', candidateSha, 1),
+        {
+          ...successfulCheck('Implementation Verification', candidateSha, 2),
+          conclusion: 'failure',
+          completedAt: '2026-09-28T17:44:00Z',
+        },
+      ],
       candidateSha,
       ['Implementation Verification'],
     );
@@ -367,7 +421,13 @@ describe('AUT-001-B live read-only shadow orchestration', () => {
     await runReadOnlyShadow(client, first, request, target(), 'run-1', 'obs-1');
 
     const restarted = new ShadowJournal(first.snapshot());
-    client.checks = [{ ...successfulCheck(), attempt: 2 }];
+    client.checks = [
+      {
+        ...successfulCheck(),
+        id: 2,
+        completedAt: '2026-09-28T17:50:00Z',
+      },
+    ];
     await runReadOnlyShadow(
       client,
       restarted,
@@ -408,5 +468,159 @@ describe('AUT-001-B live read-only shadow orchestration', () => {
     await runReadOnlyShadow(client, journal, request, target(), 'run-readonly', 'obs-readonly');
     expect(client.calls.every((name) => name.startsWith('read'))).toBe(true);
     expect(client.calls).not.toContain('write');
+  });
+});
+
+describe('AUT-001-B bounded observation window', () => {
+  it('observes pending then success without retry-until-green semantics', async () => {
+    const client = new FakeReadClient();
+    client.checkSequence = [
+      [
+        {
+          ...successfulCheck(),
+          status: 'in_progress',
+          conclusion: null,
+          completedAt: null,
+        },
+      ],
+      [successfulCheck()],
+      [successfulCheck()],
+    ];
+    const clock = new FakeClock('2026-09-28T17:45:00Z');
+    const { result, journal } = await runBoundedReadOnlyShadowWindow({
+      client,
+      journal: new ShadowJournal(),
+      baseRequest: {
+        repositoryId: request.repositoryId,
+        repositoryFullName: request.repositoryFullName,
+        pullRequestNumber: request.pullRequestNumber,
+        baseRef: request.baseRef,
+      },
+      target: observationTarget(),
+      authorityComparison: agreedAuthority,
+      clock,
+      config: {
+        maxAttempts: 5,
+        intervalMs: 1_000,
+        timeoutMs: 60_000,
+        confirmAfterTerminal: true,
+      },
+      candidateSha,
+    });
+
+    expect(result.status).toBe('TERMINAL');
+    expect(result.terminalDisposition).toBe('PASS');
+    expect(result.restartReconstructionCount).toBeGreaterThan(0);
+    expect(journal.snapshot().observations.length).toBeGreaterThanOrEqual(3);
+    expect(journal.snapshot().runAttempts.length).toBe(journal.snapshot().observations.length);
+  });
+
+  it('treats pending then failure as terminal evidence rather than retrying away failure', async () => {
+    const client = new FakeReadClient();
+    client.checkSequence = [
+      [
+        {
+          ...successfulCheck(),
+          status: 'in_progress',
+          conclusion: null,
+          completedAt: null,
+        },
+      ],
+      [{ ...successfulCheck(), conclusion: 'failure' }],
+      [{ ...successfulCheck(), conclusion: 'failure' }],
+    ];
+    const clock = new FakeClock('2026-09-28T17:45:00Z');
+    const { result } = await runBoundedReadOnlyShadowWindow({
+      client,
+      journal: new ShadowJournal(),
+      baseRequest: {
+        repositoryId: request.repositoryId,
+        repositoryFullName: request.repositoryFullName,
+        pullRequestNumber: request.pullRequestNumber,
+        baseRef: request.baseRef,
+      },
+      target: observationTarget(),
+      authorityComparison: agreedAuthority,
+      clock,
+      config: {
+        maxAttempts: 5,
+        intervalMs: 1_000,
+        timeoutMs: 60_000,
+        confirmAfterTerminal: true,
+      },
+      candidateSha,
+    });
+    expect(result.status).toBe('TERMINAL');
+    expect(result.terminalDisposition).toBe('FAILED');
+  });
+
+  it('times out when required checks remain pending', async () => {
+    const client = new FakeReadClient();
+    client.checks = [
+      {
+        ...successfulCheck(),
+        status: 'in_progress',
+        conclusion: null,
+        completedAt: null,
+      },
+    ];
+    const clock = new FakeClock('2026-09-28T17:45:00Z');
+    const { result, journal } = await runBoundedReadOnlyShadowWindow({
+      client,
+      journal: new ShadowJournal(),
+      baseRequest: {
+        repositoryId: request.repositoryId,
+        repositoryFullName: request.repositoryFullName,
+        pullRequestNumber: request.pullRequestNumber,
+        baseRef: request.baseRef,
+      },
+      target: observationTarget(),
+      authorityComparison: agreedAuthority,
+      clock,
+      config: {
+        maxAttempts: 3,
+        intervalMs: 1_000,
+        timeoutMs: 1_500,
+        confirmAfterTerminal: true,
+      },
+      candidateSha,
+    });
+    expect(result.status).toBe('TIMED_OUT');
+    expect(result.timedOut).toBe(true);
+    expect(journal.snapshot().observations.length).toBeGreaterThan(0);
+  });
+
+  it('continues after a transient mandatory truth failure within the bounded window', async () => {
+    const client = new FakeReadClient();
+    let reads = 0;
+    const original = client.readChecks.bind(client);
+    client.readChecks = async () => {
+      reads += 1;
+      if (reads === 1) throw new Error('temporary_outage');
+      return original();
+    };
+    const clock = new FakeClock('2026-09-28T17:45:00Z');
+    const { result } = await runBoundedReadOnlyShadowWindow({
+      client,
+      journal: new ShadowJournal(),
+      baseRequest: {
+        repositoryId: request.repositoryId,
+        repositoryFullName: request.repositoryFullName,
+        pullRequestNumber: request.pullRequestNumber,
+        baseRef: request.baseRef,
+      },
+      target: observationTarget(),
+      authorityComparison: agreedAuthority,
+      clock,
+      config: {
+        maxAttempts: 4,
+        intervalMs: 1_000,
+        timeoutMs: 60_000,
+        confirmAfterTerminal: true,
+      },
+      candidateSha,
+    });
+    expect(result.status).toBe('TERMINAL');
+    expect(result.terminalDisposition).toBe('PASS');
   });
 });

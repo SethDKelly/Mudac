@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { loadPackageRequiredCheckAuthority } from '../src/github/package-authority.js';
 import { GitHubRestReadClient } from '../src/github/rest-read-client.js';
 import type { GitHubFetch } from '../src/github/rest-read-client.js';
 
@@ -75,6 +76,8 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
             head_sha: 'head-1',
             status: 'completed',
             conclusion: 'success',
+            started_at: '2026-09-28T17:40:00Z',
+            completed_at: '2026-09-28T17:44:00Z',
           },
         ],
       });
@@ -89,5 +92,153 @@ describe('AUT-001-B bounded GitHub REST read client', () => {
     await expect(client.readPullRequest('SethDKelly/Mudac', 23)).rejects.toThrow(
       'github_read_failed:403',
     );
+  });
+
+  it('loads package required-check authority from the versioned package contract', () => {
+    const authority = loadPackageRequiredCheckAuthority(
+      'docs/routing/aut001_implementation_package_contract.json',
+    );
+    expect(authority.rulesetName).toBe('main — protected');
+    expect(authority.packageRequiredContexts).toEqual([
+      'Validate agentic/documentation conformance',
+      'Implementation Verification',
+      'CodeQL JavaScript/TypeScript',
+    ]);
+  });
+
+  it('reads the named active ruleset and extracts required contexts', async () => {
+    const fetchImpl: GitHubFetch = async (url) => {
+      if (url.endsWith('/rulesets?per_page=100')) {
+        return response([
+          {
+            id: 24024518,
+            name: 'main — protected',
+            target: 'branch',
+            enforcement: 'active',
+          },
+        ]);
+      }
+      if (url.endsWith('/rulesets/24024518')) {
+        return response({
+          id: 24024518,
+          name: 'main — protected',
+          target: 'branch',
+          enforcement: 'active',
+          rules: [
+            {
+              type: 'required_status_checks',
+              parameters: {
+                required_status_checks: [
+                  { context: 'Validate agentic/documentation conformance' },
+                  { context: 'Implementation Verification' },
+                  { context: 'CodeQL JavaScript/TypeScript' },
+                ],
+              },
+            },
+          ],
+        });
+      }
+      return response({}, 404);
+    };
+    const client = new GitHubRestReadClient(fetchImpl);
+    const ruleset = await client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected');
+    expect(ruleset.requiredContexts).toEqual([
+      'Validate agentic/documentation conformance',
+      'Implementation Verification',
+      'CodeQL JavaScript/TypeScript',
+    ]);
+  });
+
+  it('fails closed when the named ruleset is missing', async () => {
+    const client = new GitHubRestReadClient(async () => response([]));
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_not_found');
+  });
+
+  it('fails closed when duplicate same-name rulesets are returned', async () => {
+    const client = new GitHubRestReadClient(async () =>
+      response([
+        { id: 1, name: 'main — protected', target: 'branch', enforcement: 'active' },
+        { id: 2, name: 'main — protected', target: 'branch', enforcement: 'active' },
+      ]),
+    );
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_name_not_unique');
+  });
+
+  it('fails closed when the matching ruleset is inactive', async () => {
+    const client = new GitHubRestReadClient(async () =>
+      response([{ id: 1, name: 'main — protected', target: 'branch', enforcement: 'disabled' }]),
+    );
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_inactive');
+  });
+
+  it('fails closed when required-status-check rule is absent', async () => {
+    const fetchImpl: GitHubFetch = async (url) => {
+      if (url.includes('?per_page=')) {
+        return response([
+          { id: 1, name: 'main — protected', target: 'branch', enforcement: 'active' },
+        ]);
+      }
+      return response({
+        id: 1,
+        name: 'main — protected',
+        target: 'branch',
+        enforcement: 'active',
+        rules: [{ type: 'pull_request', parameters: {} }],
+      });
+    };
+    const client = new GitHubRestReadClient(fetchImpl);
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_required_status_checks_missing');
+  });
+
+  it('fails closed on malformed required context entries', async () => {
+    const fetchImpl: GitHubFetch = async (url) => {
+      if (url.includes('?per_page=')) {
+        return response([
+          { id: 1, name: 'main — protected', target: 'branch', enforcement: 'active' },
+        ]);
+      }
+      return response({
+        id: 1,
+        name: 'main — protected',
+        target: 'branch',
+        enforcement: 'active',
+        rules: [
+          {
+            type: 'required_status_checks',
+            parameters: {
+              required_status_checks: [{ context: ' Implementation Verification' }],
+            },
+          },
+        ],
+      });
+    };
+    const client = new GitHubRestReadClient(fetchImpl);
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_required_context_malformed');
+  });
+
+  it('fails closed when ruleset list completeness cannot be established', async () => {
+    const client = new GitHubRestReadClient(async () =>
+      response(
+        Array.from({ length: 100 }, (_, index) => ({
+          id: index + 1,
+          name: `ruleset-${index}`,
+          target: 'branch',
+          enforcement: 'active',
+        })),
+      ),
+    );
+    await expect(
+      client.readRulesetRequiredChecks('SethDKelly/Mudac', 'main — protected'),
+    ).rejects.toThrow('github_ruleset_list_pagination_incomplete');
   });
 });

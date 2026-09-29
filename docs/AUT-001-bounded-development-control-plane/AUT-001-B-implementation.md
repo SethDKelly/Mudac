@@ -1,40 +1,38 @@
 # AUT-001-B — Live Read-Only Shadow & GitHub Reconciliation
 
-**State:** IMPLEMENTATION CANDIDATE CREATED / VERIFICATION PENDING
+**State:** REPAIR CYCLE 1 IMPLEMENTED / NEW CANDIDATE AWAITING EXACT-HEAD CI + RETAINED LIVE SHADOW
 
-## Candidate generation 1
+## Repair Cycle 1 candidate
 
 - start-gate base: `f87f57fa42edd1ec81fc79626f6c93091793d71f`
 - implementation branch: `aut-001/b-read-only-shadow`
-- source implementation commit: `4ed158a21d1584e604202a18eb83b8be5dbccb44`
-- source implementation tree: `a54fa669c29c48bf2eef4d7c6db2980ada4da40e`
-- exact verification/review candidate: the reconciled branch head containing both the source implementation and this candidate record; bind CI/reviews to that exact SHA/tree rather than rebinding the source commit.
+- historical independently reviewed candidate: `a000d58bb310f797e92d8f9c2bcc0f9afa147b5f` (immutable; `CHANGES_REQUIRED`)
+- repair cycle: `1 / 2`
+- exact verification/review candidate: the branch head after Repair Cycle 1 commits; bind CI/reviews to that exact SHA/tree.
 
-The source and candidate-record commits were created as sibling commits from the same exact start-gate baseline and are intentionally reconciled without history rewriting before verification.
+Finding closure requires refreshed independent review. Code edits alone do not close `AUT-B-IR-01` through `AUT-B-IR-06`.
+
+## Repair Cycle 1 scope
+
+Repairs accepted independent-review findings inside the existing AUT-001-B G2 envelope:
+
+- `AUT-B-IR-01` — bind required-check truth to package contract + live repository ruleset enforcement
+- `AUT-B-IR-02` — execute Stage-B harness under canonical `pnpm test` / `pnpm verify`
+- `AUT-B-IR-03` — separate semantic-fact identity from observation timestamps
+- `AUT-B-IR-04` — unknown action under known event family → `RECORD_NO_ADVANCE`
+- `AUT-B-IR-05` — bounded observation window with retained AUT-E03 artifact evidence
+- `AUT-B-IR-06` — separate check-run context satisfaction from workflow provenance; no check-run ID attempt ordinal
+
+Shared evaluator surface reservation for Vitest inclusion:
+
+- `docs/routing/aut001_b_vitest_evaluator_reservation.json`
 
 ## Implemented boundary
 
 AUT-001-B implements the read-only reconciliation substrate only. It introduces no GitHub write capability, no agent dispatch, no MCP action surface, no branch synchronization, no merge authority, and no production or Phase-022 authority.
 
-Implemented mechanics:
-
-- immutable verified webhook-delivery journal with delivery-idempotency and conflicting-digest detection;
-- append-only normalized GitHub semantic facts for PR head/state/merge, refs, checks and workflow runs;
-- exact-head required-check evaluation with late/superseded evidence rejection and ambiguous-attempt fail-closed behavior;
-- bounded read-only GitHub truth client interface exposing only PR/ref/check/workflow/ancestry reads;
-- authoritative truth collection and identity reconciliation;
-- head/base drift detection;
-- deterministic reuse of AUT-001-A lifecycle projection;
-- reconciled `github.check.required_set_pass` derivation only when exact candidate/base/current required-check truth permits it;
-- no synthesis of human merge or other human-authority transitions;
-- divergence recording with blocking unsafe-advancement treatment;
-- merge-truth ancestry/identity reconciliation;
-- restart reconstruction from append-only journal snapshots plus fresh authoritative reads;
-- fail-closed handling when mandatory GitHub truth is unavailable;
-- mandatory Stage-B scenario harness under canonical `tools/autonomy-control/test/` evaluator surface.
-
 ## Verification boundary
 
-This record does not claim AUT-E03 live-shadow completion yet. Repository CI must first qualify the exact reconciled candidate. A bounded live read-only shadow evidence window must then be recorded against an exact candidate generation before independent/adversarial review and B G5.
+Repository CI and retained live-shadow artifact evidence must qualify the exact Repair Cycle 1 candidate before independent/adversarial review and B G5.
 
-Any source repair creates a new candidate generation and invalidates affected exact-revision evidence.
+Any further source repair creates a new candidate generation and consumes remaining repair budget.
