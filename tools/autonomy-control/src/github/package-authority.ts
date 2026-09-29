@@ -38,9 +38,7 @@ function optionalStringArray(value: unknown, context: string): readonly string[]
   return items;
 }
 
-function loadExpectedRefNameCondition(
-  stageAuthorityDeltaPath: string,
-): RulesetRefNameCondition {
+function loadExpectedRefNameCondition(stageAuthorityDeltaPath: string): RulesetRefNameCondition {
   const raw = JSON.parse(readFileSync(stageAuthorityDeltaPath, 'utf8')) as unknown;
   const root = record(raw, 'stage_delta.root');
   const expectation = record(

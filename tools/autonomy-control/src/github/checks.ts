@@ -28,15 +28,7 @@ export function parseComparableInstant(
   const hour = Number(match[4]);
   const minute = Number(match[5]);
   const second = Number(match[6]);
-  if (
-    month < 1 ||
-    month > 12 ||
-    day < 1 ||
-    day > 31 ||
-    hour > 23 ||
-    minute > 59 ||
-    second > 59
-  ) {
+  if (month < 1 || month > 12 || day < 1 || day > 31 || hour > 23 || minute > 59 || second > 59) {
     return { kind: 'INVALID', reason: `malformed_${field}` };
   }
 
